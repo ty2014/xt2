@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>排序</title>
+</head>
+<body style="min-width: 400px;height: auto;">
+
+
+<div class="account-cont account-sort">
+    <div class="trsansfer-form">
+        <div class="trsansfer-box">
+            <div class="trsansfer-head">
+                <label for="tl" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="tl" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">排序字段</span>
+                </label>
+            </div>
+            <ul class="trsansfer-data">
+                <li>
+                    <label for="tl1" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="tl1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">订单编号</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="tl2" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="tl2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">日期</span>
+                    </label>
+                </li>
+                <!-- 默认隐藏，当没有数据的时候就显示。 -->
+                <p class="trsansfer-none" style="display: none">无数据</p>
+            </ul>
+        </div>
+        <div class="transfer-active">
+            <!--默认都不添加‘btn-active’， 点了左边的排序字段后，第一个button 添加 ‘ btn-active ’，第二个不添加；同理，点击右边的排序方法后，第二个button添加 ‘btn-active’，第一个不添加 -->
+            <button type="button" class="btn-active"><i class="layui-icon layui-icon-next"></i></button>
+            <button type="button" ><i class="layui-icon layui-icon-prev"></i></button>
+        </div>
+        <div class="trsansfer-box trsansfer-box-r">
+            <div class="trsansfer-head">
+                <label for="tr" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="tr" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">排序方法</span>
+                </label>
+            </div>
+            <ul class="trsansfer-data">
+                <li>
+                    <label for="tr1" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="tr1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">总价</span>
+                    </label>
+                    <div class="slide-select">
+                        <select>
+                            <option>升序</option>
+                            <option>降序</option>
+                        </select>
+                        <img src="../../images/bottom-icon.jpg" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="search_btn">
+        <span class="sure">确定</span>
+        <span>清除排序</span>
+    </div>
+</div>
+
+</body>
+</html>

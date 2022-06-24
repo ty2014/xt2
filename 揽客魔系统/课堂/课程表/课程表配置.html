@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程表配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .set_times{}
+        .set_times li{display: flex;align-items: center;margin: 10px 0;}
+        .set_times li label{min-width: 100px;}
+        .set_times li div{font-size: 13px;color: #888;}
+        .normal-table table td{overflow: unset;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="page-title">课程表配置</div>
+<div class="activity_set activity_set3">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">页面入口:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper ">
+                    <input type="checkbox" id="ds-fy" class="toggle-button" name="switch">
+                    <label for="ds-fy" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*关闭则不能打开该页面</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">主页链接:</span>
+            <div class="a_list_r">http://cshtml.lkmsxy.com/<span class="copy-btn">复制</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">模块标题:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" placeholder="模块的标题命名" maxlength="8" value="课程表">
+                    <span class="num">0/8</span>
+                </div>
+                <p class="tishi">* 不填即为默认标题，<a class="title_img_btn1">点击查看效果图</a></p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">页面标题:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" placeholder="页面的标题命名" maxlength="64" value="课程表" class="w-620">
+                    <span class="num">0/64</span>
+                </div>
+                <a class="tishi title_img_btn2" style="margin-left: 16px;">点击查看效果图</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享简介:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <textarea class="w-620" style="height: 80px;padding: 2px 4px;resize: none" placeholder="选填，摘要会在订阅号消息、转发链接等文章外的场景显露，帮助读者快速了解内容，如不填写则默认抓取正文前54字"></textarea>
+                    <span class="num">0/120</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享图标:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <span class="tishi mgL-0">*建议图片尺寸为80px*80px，比例1：1 ，JPG、PNG格式，图片小于50KB</span>
+            </div>
+        </div>
+    </div>
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <span class="a_list_l">首页模板:</span>
+            <div class="a_list_r">
+                <label for="type1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="type" id="type1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">默认模板</span>
+                </label>
+                <label for="type2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="type" id="type2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">自定义样式</span>
+                </label>
+                <a class="tishi title_img_btn3" style="margin-left: 16px;">点击查看效果图</a>
+            </div>
+        </div>
+        <div class="a_list m1">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 23px;">轮播图:</span>
+            <div class="a_list_r">
+                <div class="normal-table" style="width: 700px">
+                    <!--  提示内容只在个人中心编辑资料的时候显示，其它地方不展示  -->
+                    <table>
+                        <thead>
+                        <tr>
+                            <th style="width: 50px">序号</th>
+                            <th style="width: 100px">上传图片</th>
+                            <th style="width: 200px">跳转链接</th>
+                            <th style="width: 80px">排序</th>
+                            <th style="width: 80px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <ul class="FraUpload_imglist layer-photos-demo">
+                                    <li class="img_item" style="display: none">
+                                        <img src="">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn"></li>
+                                </ul>
+                            </td>
+                            <td><input type="text" placeholder="" class="max_width"></td>
+                            <td>
+                                <div class="select-text" style="width: 80px;min-width: 80px;margin: 0 auto">
+                                    <span class="select-txt">1</span>
+                                    <ul>
+                                        <li class="active">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <ul class="FraUpload_imglist layer-photos-demo">
+                                    <li class="img_item" style="display: none">
+                                        <img src="">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn"></li>
+                                </ul>
+                            </td>
+                            <td><input type="text" placeholder="" class="max_width"></td>
+                            <td>
+                                <div class="select-text" style="width: 80px;min-width: 80px;margin: 0 auto">
+                                    <span class="select-txt">2</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li class="active">2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="text-align: left"></td>
+                            <td><button>添加</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="a_list m2" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <textarea style="width: 100%;height: 400px;">此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<img src="images/img4.png" alt="" id="concat_img1" style="height: 520px;display: none;">
+<img src="images/img6.png" alt="" id="concat_img2" style="height: 520px;display: none;">
+<img src="images/img5.png" alt="" id="concat_img3" style="height: 520px;display: none;">
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    layer.photos({
+        photos: '.layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+    $('#chutiyan .title_img_btn1').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img1")
+        });
+    });
+    $('#chutiyan .title_img_btn2').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img2")
+        });
+    });
+    $('#chutiyan .title_img_btn3').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img3")
+        });
+    });
+
+    $('#type1').click(function () {
+        $('.m1').show();
+        $('.m2').hide();
+    })
+    $('#type2').click(function () {
+        $('.m2').show();
+        $('.m1').hide();
+    })
+
+
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('删除该设置项？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                title:'提示',
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('操作成功', {time: 1000});
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>

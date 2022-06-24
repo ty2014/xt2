@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>搜索</title>
+</head>
+<body style="min-width: 400px;height: auto;">
+
+<div class="account-cont">
+    <div class="account">
+        <p class="account-l">姓名：</p>
+        <div class="account-r"><input type="text" placeholder="请输入"/></div>
+    </div>
+    <div class="account">
+        <p class="account-l">手机：</p>
+        <div class="account-r"><input type="text" placeholder="请输入"/></div>
+    </div>
+    <div class="account">
+        <p class="account-l">邀请人：</p>
+        <div class="account-r"><input type="text" placeholder="请输入"/></div>
+    </div>
+    <div class="account">
+        <p class="account-l">活动名称：</p>
+        <div class="account-r"><input type="text" placeholder="请输入"/></div>
+    </div>
+    <div class="account">
+        <p class="account-l">奖品阶段：</p>
+        <div class="account-r chose_item">
+            <label for="pu1" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="pu1" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">第一阶段</span>
+            </label>
+            <label for="pu2" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="pu2" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">第二阶段</span>
+            </label>
+        </div>
+    </div>
+    <div class="account">
+        <p class="account-l">会员等级：</p>
+        <div class="account-r chose_item">
+            <label for="ps1" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="ps1" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">金牌会员</span>
+            </label>
+            <label for="ps2" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="ps2" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">银牌会员</span>
+            </label>
+            <label for="ps3" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="ps3" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">铜牌会员</span>
+            </label>
+            <label for="ps4" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="ps4" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">铁牌会员</span>
+            </label>
+        </div>
+    </div>
+    <div class="account">
+        <p class="account-l">活动状态：</p>
+        <div class="account-r">
+            <div class="slide-select">
+                <select>
+                    <option value="">全部</option>
+                    <option value="">待开始</option>
+                    <option value="">已完成</option>
+                </select>
+                <img src="../../images/bottom-icon.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <p class="account-l">裂变层级：</p>
+        <div class="account-r">
+            <div class="slide-select">
+                <select>
+                    <option value="">全部</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                </select>
+                <img src="../../images/bottom-icon.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <p class="account-l">活动时间：</p>
+        <div class="account-r">
+            <div><input type="text" class="demo-input" placeholder="请选择日期" id="test1"/></div>
+            <em></em>
+            <div><input type="text" class="demo-input" placeholder="请选择日期" id="test2"/></div>
+        </div>
+    </div>
+
+    <div class="search_btn">
+        <span class="sure">搜索</span>
+        <span>清除搜索</span>
+    </div>
+</div>
+
+<script src="../../js/plugins/laydate/laydate.js"></script>
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        type: 'datetime'
+    });
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test2', //指定元素
+        type: 'datetime'
+    });
+</script>
+
+
+</body>
+</html>

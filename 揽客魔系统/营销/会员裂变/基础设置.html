@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>模块配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan" style="height: auto">
+
+
+<div class="page-title">模块配置</div>
+
+<div class="activity_set activity_set3 w-7">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">基本信息</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">活动申请网址:</span>
+            <div class="a_list_r">http：//lankemo.com<span class="copy-btn">复制</span></div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">活动创建网址:</span>
+            <div class="a_list_r">http：//lankemo.com<span class="copy-btn">复制</span></div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">商家-创建活动</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">创建活动:</span>
+            <div class="a_list_r chose_item">
+                <label for="cj1" class="radio" style="width: 84px">
+                    <div class="chose">
+                        <input type="radio" checked name="cj" id="cj1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">申请方式</span>
+                </label>
+                <label for="cj2" class="radio mgR-0" style="width: 84px">
+                    <div class="chose">
+                        <input type="radio"  name="cj" id="cj2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">付费创建</span>
+                </label>
+                <span class="tishi">*申请方式：需商家申请，后台授权使用；付费创建：商家付费即可使用。</span>
+            </div>
+        </div>
+        <div class="active1">
+            <div class="a_list" style="align-items: flex-start">
+                <span class="a_list_l" style="padding-top: 18px;">活动申请背景图:</span>
+                <div class="a_list_r checked_chose flex-column">
+                    <!--  选择默认图时，不展示  图片上传  -->
+                    <div class="chose-bg">
+                        <label for="ps1" class="radio active" style="width: 84px">
+                            <div class="chose">
+                                <input type="radio" checked name="ps" id="ps1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">默认图</span>
+                        </label>
+                        <label for="ps2" class="radio" style="width: 84px">
+                            <div class="chose">
+                                <input type="radio" name="ps" id="ps2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">自定义</span>
+                        </label>
+                    </div>
+                    <div class="zdy-pic" style="display: flex;align-items: center;margin-top: 20px;">
+                        <div class="file-cont file-cont2">
+                            <!--  存放已上传图片，默认隐藏  -->
+                            <div class="file-pics"></div>
+                            <!--  上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <div class="file-btn"></div>
+                        </div>
+                        <p class="tishi mgL-0">*建议图片尺寸为750px*297px，比例为2.5：1，JPG、PNG格式，图片小于500KB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list" style="align-items: flex-start">
+                <span class="a_list_l" style="padding-top: 18px;">活动申请提示语:</span>
+                <div class="a_list_r">
+                    <textarea name="" id="" style="height: 200px;width: 620px;padding: 5px 10px" placeholder="活动申请提交成功后，将展示该提示语给用户"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="active2">
+            <div class="a_list">
+                <span class="a_list_l">付费顺序:</span>
+                <div class="a_list_r checked_chose">
+                    <div class="chose-bg" style="margin-bottom: 0">
+                        <label for="ff1" class="radio">
+                            <div class="chose">
+                                <input type="radio" checked name="ff" id="ff1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">创建活动前，要求付费</span>
+                        </label>
+                        <label for="ff2" class="radio">
+                            <div class="chose">
+                                <input type="radio"  name="ff" id="ff2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">建好活动-查看报名记录/核销时，要求付费</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">付费介绍:</span>
+                <div class="a_list_r"><span class="set-user ffzdy">付费页面-自定义</span><span class="tishi">*代码自定义页面，介绍创建活动的好处，吸引用户付费升级</span></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">排除创建用户:</span>
+            <div class="a_list_r"><span class="set-user" style="margin-right: 16px">设置指定用户</span>已包含0人<span class="tishi">*指定的用户，无法创建活动</span></div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">活动-推荐邀请</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">佣金到账方式:</span>
+            <div class="a_list_r">用户推广商家活动的推荐佣金，
+                <div class="select-text fontSize" style="margin: 0 8px;min-width: 200px">
+                    <span class="select-txt"  style="color: #0c99e2">先到佣金账户再个人提现</span>
+                    <ul style="display: none;">
+                        <li style="color: #0c99e2">先到佣金账户再个人提现</li>
+                        <li style="color: #0c99e2">立即到账微信零钱</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">排行榜顶部图:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="tishi mgL-0">*选填，建议尺寸为 750px * 150px，比例为1：1，大小不超过5M，上传的图片将在活动邀请的排行榜页面顶部展示。<a class="phb_img_btn" style="margin-left: 10px;">点击查看效果图</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">客服-投诉建议</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">客服二维码:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="tishi mgL-0">*选填，用户对平台有投诉建议即加微信咨询。<a class="concat_img_btn" style="margin-left: 10px;">点击查看效果图</a><br>
+                    建议图片尺寸为80px*80px，比例为1：1，JPG、PNG格式，图片小于500KB
+                </span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">客服微信号:</span>
+            <div class="a_list_r"><input type="text" placeholder="选填"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">客服电话号:</span>
+            <div class="a_list_r"><input type="text" placeholder="选填"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<!--  付费页自定义  -->
+<div class="activity_set activity_set2 w-120" id="zdy-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">介绍网址:</span>
+            <div class="a_list_r">http：//lankemo.com</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">付费网址:</span>
+            <div class="a_list_r">
+                <div class="normal-table">
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 80px">支付价格</th>
+                            <th style="width: 80px">使用天数</th>
+                            <th style="width: 200px">活动权限</th>
+                            <th style="width: 120px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="line-tr"><input type="number" class="s_width center"></td>
+                            <td class="line-tr"><input type="number" class="s_width center"></td>
+                            <td class="line-tr">
+                                <div style="display: flex;flex-wrap: wrap">
+                                    <label for="act1" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="act" id="act1">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">分销</span>
+                                    </label>
+                                    <label for="act2" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="act" id="act2">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">拼团</span>
+                                    </label>
+                                    <label for="act3" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="act" id="act3">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">定金</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="line-tr"><button class="copy-btn mgR-8">复制链接</button><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr"><input type="number" class="s_width center"></td>
+                            <td class="line-tr"><input type="number" class="s_width center"></td>
+                            <td class="line-tr">
+                                <div style="display: flex;flex-wrap: wrap">
+                                    <label for="act1" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="act" id="act1">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">分销</span>
+                                    </label>
+                                    <label for="act2" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="act" id="act2">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">拼团</span>
+                                    </label>
+                                    <label for="act3" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="act" id="act3">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">定金</span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="line-tr"><button class="copy-btn mgR-8">复制链接</button><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td class="line-tr"><button>添加</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">页面标题:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享简介:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享简介:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi mgL-0">*建议图片尺寸为50px*50px，比例为1：1，大小不超过100KB</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">付费介绍:</span>
+            <div class="a_list_r"><textarea style="width:620px;height: 320px;padding: 10px;resize: none" >富文本编辑器</textarea></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<img src="http://cshtml.lkmsxy.com/csimg/yskImg1.png" alt="" id="concat_img" style="height: 580px;display: none;">
+<img src="http://cshtml.lkmsxy.com/csimg/yskImg3.png" alt="" id="phb_img" style="height: 580px;display: none;">
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#chutiyan .free-card-btn').on('click', function(){
+        layer.confirm('<div style="text-align: center">免赠张数：<input type="text" class="m_width"/><p class="tishi">*可免费赠送好友的卡券张数<br>赠送成功将不扣自己的卡券</p></div>', {
+            btn: ['取消','确定'] //按钮
+        }, function(index){
+            layer.close(index);
+        }, function(){
+
+        });
+    });
+    $('.zdy-pic').hide();
+    $("#ps1").on("click",function(){
+        $('.chose-bg').siblings('.zdy-pic').hide();
+    });
+    $("#ps2").on("click",function(){
+        $('.chose-bg').siblings('.zdy-pic').show();
+    });
+    $("#cj1").on("click",function(){
+        $('.active1').show();
+        $('.active2').hide();
+    });
+    $("#cj2").on("click",function(){
+        $('.active1').hide();
+        $('.active2').show();
+    });
+    if($("#cj1").is(':checked')){
+        $('.active1').show();
+        $('.active2').hide();
+    }else{
+        $('.active1').hide();
+        $('.active2').show();
+    }
+    if($("#cj2").is(':checked')){
+        $('.active1').hide();
+        $('.active2').show();
+    }else{
+        $('.active1').show();
+        $('.active2').hide();
+    }
+
+    $('#chutiyan .ffzdy').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '付费页面-自定义',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['900px', '610px'],
+            skin: 'activity_set',
+            content: $("#zdy-sure")
+        });
+        $('.activity_set').css('padding-top','0')
+    });
+    $('#chutiyan .concat_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img")
+        });
+    });
+    $('#chutiyan .phb_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#phb_img")
+        });
+    });
+</script>
+
+
+</body>
+</html>

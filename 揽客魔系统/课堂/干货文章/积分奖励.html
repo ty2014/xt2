@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>积分奖励</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan" >
+
+<div class="activity_set" style="padding-top:24px;">
+    <form class="yjpz">
+        <table class="list_content">
+            <tr>
+                <td class="tab-2 pz-title" colspan="4"><img src="../../images/yjpz-2.png" alt="">锁定积分奖励</td>
+            </tr>
+            <tr>
+                <td class="tab-1"><em class="importantTip">*</em>锁定积分开关:</td>
+                <td class="tab-2" colspan="3">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="togglebtn1" class="toggle-button" name="switch">
+                            <label for="togglebtn1" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                            <span class="switch_status">默认：关闭，在设置时若不填写或设置为0则不会产生积分奖励</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tab-1">奖励标准:</td>
+                <td class="tab-2">
+                    <div class="select-text">
+                        <span class="select-txt">按固定值</span>
+                        <ul>
+                            <li>按固定值</li>
+                            <li>按比例</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="tab-1">低等级提成高等级:</td>
+                <td class="tab-2">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" checked id="togglebtn2" class="toggle-button" name="switch">
+                            <label for="togglebtn2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                            <span class="switch_status">默认：开启</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tab-1">锁定奖励:</td>
+                <td class="tab-2" colspan="3">
+                    <ul class="ticheng_set">
+                        <li>
+                            <div class="tc_1">
+                                <span>会员等级1</span>
+                                <span class="tc_num">提成值（元）:<input type="text"/></span>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <span class="switch_status" style="color: #666;margin-left: 0;margin-right: 18px">高级设置:</span>
+                                        <input type="checkbox" id="togglebtn3" class="toggle-button" name="switch">
+                                        <label for="togglebtn3" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tc_2">
+                                <div class="gj-setting">
+                                    <span>奖励积分：每单固定奖励</span>
+                                    <input type="text" style="margin: 0 16px;"/>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tc_1">
+                                <span>会员等级2</span>
+                                <span class="tc_num">提成值（元）:<input type="text"/></span>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <span class="switch_status" style="color: #666;margin-left: 0;margin-right: 18px">高级设置:</span>
+                                        <input type="checkbox" id="togglebtn4" class="toggle-button" name="switch">
+                                        <label for="togglebtn4" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tc_2">
+                                <div class="gj-setting">
+                                    <span>奖励积分：每笔订单金额的</span>
+                                    <input type="text" style="margin: 0 16px;"/>%
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tc_1">
+                                <span>非会员</span>
+                                <span class="tc_num">提成值（元）:<input type="text"/></span>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <form class="yjpz" style="margin-bottom: 40px;">
+        <table class="list_content">
+            <tr>
+                <td class="tab-2 pz-title" colspan="4"><img src="../../images/yjpz-1.png" alt="">推荐积分奖励</td>
+            </tr>
+            <tr>
+                <td class="tab-1"><em class="importantTip">*</em>推荐积分开关:</td>
+                <td class="tab-2" colspan="3">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="togglebtn9" class="toggle-button" name="switch">
+                            <label for="togglebtn9" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                            <span class="switch_status">默认：关闭，在设置时若不填写或设置为0则不会产生积分奖励</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tab-1">分享预计积分:</td>
+                <td class="tab-2" colspan="3">
+                    <div style="display: flex;align-items: center">
+                        <label for="live21" class="radio">
+                            <div class="chose">
+                                <input type="radio" checked="" name="live2" id="live21">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">不展示</span>
+                        </label>
+                        <label for="live22" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="live2" id="live22">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">展示</span>
+                        </label>
+                        <span class="tishi">*是否在分享处提示会员预计积分收入</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tab-1">奖励标准:</td>
+                <td class="tab-2">
+                    <div class="select-text">
+                        <span class="select-txt">按比例</span>
+                        <ul>
+                            <li>按固定值</li>
+                            <li>按比例</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="tab-1">低等级提成高等级:</td>
+                <td class="tab-2">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" checked id="togglebtn5" class="toggle-button" name="switch">
+                            <label for="togglebtn5" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                            <span class="switch_status">默认：开启</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tab-1">推荐奖励:</td>
+                <td class="tab-2" colspan="3">
+                    <ul class="ticheng_set">
+                        <li>
+                            <div class="tc_1">
+                                <span>会员等级1</span>
+                                <span class="tc_num">提成比例（%）:<input type="text"/></span>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <span class="switch_status" style="color: #666;margin-left: 0;margin-right: 18px">高级设置:</span>
+                                        <input type="checkbox" id="togglebtn6" class="toggle-button" name="switch">
+                                        <label for="togglebtn6" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tc_2">
+                                <div class="gj-setting">
+                                    <span>奖励积分：每单固定奖励</span>
+                                    <input type="text" style="margin: 0 16px;"/>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tc_1">
+                                <span>会员等级2</span>
+                                <span class="tc_num">提成比例（%）:<input type="text"/></span>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <span class="switch_status" style="color: #666;margin-left: 0;margin-right: 18px">高级设置:</span>
+                                        <input type="checkbox" id="togglebtn7" class="toggle-button" name="switch">
+                                        <label for="togglebtn7" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tc_2">
+                                <div class="gj-setting">
+                                    <span>奖励积分：每笔订单金额的</span>
+                                    <input type="text" style="margin: 0 16px;"/>%
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tc_1">
+                                <span>非会员</span>
+                                <span class="tc_num">提成比例（%）:<input type="text"/></span>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test3' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test4' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('.toggle-button').click(function () {
+        if($(this).is(':checked')){
+            $(this).parent().parent().parent().next('.tc_2').show()
+        }else{
+            $(this).parent().parent().parent().next('.tc_2').hide()
+        }
+    });
+
+
+
+</script>
+
+</body>
+</html>

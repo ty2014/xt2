@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>确定发货</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan" style="min-width: auto;background: #fff;padding: 0">
+
+<div class="top-p-detail">
+    <!--  自提点/收货地址是2选1展示  -->
+    <div class="detail-list">
+        <div><div>收货人：蒋雨133500024525</div></div>
+        <div><div>收货地址：四川省成都市武侯区-武兴五路77号</div></div>
+        <div><div>自提点：爱达乐-吾悦广场店 | 四川省成都市武侯-吾悦广场1楼 | 0816-6567894</div></div>
+        <div><div>买家留言：亲，协商好的顺丰不要忘记了哦！</div></div>
+    </div>
+</div>
+
+<div class="activity_set">
+
+    <div class="a_list flex-start">
+        <span class="a_list_l top5">快递公司：</span>
+        <div class="a_list_r">
+            <div class="slide-select" style="margin-right: 10px">
+                <select>
+                    <option value="">其它</option>
+                    <option value="">顺丰</option>
+                    <option value="">邮政</option>
+                </select>
+                <img src="../../images/bottom-icon.jpg" alt="">
+            </div>
+            <!-- 默认隐藏，当选了其它快递时就显示 -->
+            <input type="text" placeholder="未在列表的可自行录入">
+        </div>
+    </div>
+    <div class="a_list">
+        <span class="a_list_l">快递单号：</span>
+        <div class="a_list_r"><input type="text" class="l_width"></div>
+    </div>
+    <div class="a_list">
+        <span class="a_list_l"></span>
+        <div class="a_list_r"><span class="tishi mgL-0">*快递信息选填，未走物流不填即可；自行录入快递公司或单号填写错误，将无物流详情</span></div>
+    </div>
+
+    <div class="btn-list"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+</body>
+</html>

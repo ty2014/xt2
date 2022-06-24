@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系列课目录</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff">
+
+<div class="content">
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search kcgl-search"><i class="search-tips"></i>搜索</span>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn addMl_btn mgR-10"><i class="plus-tips"></i>添加目录</span>
+            <span class="tab-tips add_btn ">保存</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="200px" class="left">目录名称</th>
+                        <th width="100px" class="left">顺序</th>
+                        <th width="100px">状态</th>
+                        <th width="200px" class="left">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table class="table_body2">
+                    <!--
+                        二级菜单：
+                                tree-pack（控制左侧间距，必需）
+                                tree-line（左侧竖线和横线，必需）
+                                tree-entry（控制展开的那一项补充下面的竖线，一般放在展开后的第一项上）
+                         三级菜单：
+                                外层嵌套一层相同容器，目的是同步前面结构样式叠加使用
+                                tree-line-bef（控制展开后前面的横线隐藏）
+                         最后一项菜单
+                                tree-setLineShort（控制左侧竖线只保留上部分，作为结束效果展示）不论在第几级，只要是最后一项，都需加此类名
+
+                        子菜单中使用
+                        tree-line-all（控制最左侧竖线、横线隐藏）
+
+                        只有一个子级菜单情况下
+                        tree-entry-last（控制左侧竖线只保留上部分）
+                     -->
+                    <tbody>
+                    <tr>
+                        <td width="200px" class="tree-set">
+                            <div class="tree-main">
+                                <span class="tree-iconClick tree-icon treeId-01"><i class="layui-icon layui-icon-subtraction"></i></span>
+                                <em>第一章：图形</em>
+                            </div>
+                        </td>
+                        <td width="100px" class="sort-code">01</td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="200px" class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                            <button type="button" class="btn-type1 editMl_btn">编辑</button>
+                            <button type="button" class="btn-type1">添加子目录</button>
+                            <button type="button" class="btn-type1">选择课程</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="200px" class="tree-set">
+                            <div class="tree-main">
+                                <span class="tree-iconClick tree-icon treeId-01"><i class="layui-icon layui-icon-subtraction"></i></span>
+                                <em>第一章：图形</em>
+                            </div>
+                        </td>
+                        <td width="100px" class="sort-code">01</td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="200px" class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                            <button type="button" class="btn-type1 editMl_btn">编辑</button>
+                            <button type="button" class="btn-type1">添加子目录</button>
+                        </td>
+                    </tr>
+                    <tr class="treeId-01-cont">
+                        <td class="tree-set">
+                            <div class="tree-main tree-pack tree-line tree-entry">
+                                <span class="tree-iconClick tree-icon treeId-0101"><i class="layui-icon layui-icon-subtraction"></i></span>
+                                <em>第一节：几何图形</em>
+                            </div>
+                        </td>
+                        <td class="sort-code">0101</td>
+                        <td class="statu statu1"><span>启用</span></td>
+                        <td class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                            <button type="button" class="btn-type1 editMl_btn">编辑</button>
+                            <button type="button" class="btn-type1">选择课程</button>
+                        </td>
+                    </tr>
+                    <tr class="treeId-01-cont treeId-0101-cont">
+                        <td class="tree-set">
+                            <div class="tree-main tree-pack tree-line tree-line-bef tree-entry">
+                                <div class="tree-main tree-pack tree-line ">
+                                    <span class="tree-iconClick"><i class="layui-icon layui-icon-file"></i></span>
+                                    <em>三角形</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="sort-code">0101<input type="number" class="s_width mgL-8" value="01"></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr class="treeId-01-cont treeId-0101-cont">
+                        <td class="tree-set">
+                            <div class="tree-main tree-pack tree-line tree-line-bef">
+                                <div class="tree-main tree-pack tree-line tree-setLineShort">
+                                    <span class="tree-iconClick"><i class="layui-icon layui-icon-file"></i></span>
+                                    <em>正方形？</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="sort-code">0101<input type="number" class="s_width mgL-8" value="02"></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr class="treeId-01-cont">
+                        <td class="tree-set">
+                            <div class="tree-main tree-pack tree-line tree-entry tree-entry-last">
+                                <span class="tree-iconClick tree-icon treeId-0102"><i class="layui-icon layui-icon-subtraction"></i></span>
+                                <em>第二节：非几何图形</em>
+                            </div>
+                        </td>
+                        <td class="sort-code">0102</td>
+                        <td class="statu statu1"><span>启用</span></td>
+                        <td class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                            <button type="button" class="btn-type1 editMl_btn">编辑</button>
+                            <button type="button" class="btn-type1">选择课程</button>
+                        </td>
+                    </tr>
+                    <tr class="treeId-01-cont treeId-0102-cont">
+                        <td class="tree-set">
+                            <div class="tree-main tree-pack tree-line tree-line-all tree-entry">
+                                <div class="tree-main tree-pack tree-line tree-setLineShort">
+                                    <span class="tree-iconClick"><i class="layui-icon layui-icon-file"></i></span>
+                                    <em>不规则体</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="sort-code">0102<input type="number" class="s_width mgL-8" value="01"></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tree-set">
+                            <div class="tree-main ">
+                                <span class="tree-iconClick tree-icon treeId-02"><i class="layui-icon layui-icon-subtraction"></i></span>
+                                <em>第二章：函数</em>
+                            </div>
+                        </td>
+                        <td class="sort-code">02</td>
+                        <td class="statu statu1"><span>启用</span></td>
+                        <td class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                            <button type="button" class="btn-type1 editMl_btn">编辑</button>
+                            <button type="button" class="btn-type1">添加子目录</button>
+                        </td>
+                    </tr>
+                    <tr class="treeId-02-cont">
+                        <td class="tree-set">
+                            <div class="tree-main tree-pack tree-line tree-entry tree-entry-last">
+                                <span class="tree-iconClick tree-icon treeId-0201"><i class="layui-icon layui-icon-subtraction"></i></span>
+                                <em>第一节：一次函数</em>
+                            </div>
+                        </td>
+                        <td class="sort-code">0201</td>
+                        <td class="statu statu1"><span>启用</span></td>
+                        <td class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                            <button type="button" class="btn-type1 editMl_btn">编辑</button>
+                            <button type="button" class="btn-type1">选择课程</button>
+                        </td>
+                    </tr>
+                    <tr class="treeId-02-cont treeId-0201-cont">
+                        <td class="tree-set">
+                            <div class="tree-main tree-pack tree-line tree-line-all tree-entry">
+                                <div class="tree-main tree-pack tree-line ">
+                                    <span class="tree-iconClick"><i class="layui-icon layui-icon-file"></i></span>
+                                    <em>一次函数定义</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="sort-code">0201<input type="number" class="s_width mgL-8" value="01"></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr class="treeId-02-cont treeId-0201-cont">
+                        <td class="tree-set">
+                            <div class="tree-main tree-pack tree-line tree-line-all ">
+                                <div class="tree-main tree-pack tree-line tree-setLineShort">
+                                    <span class="tree-iconClick"><i class="layui-icon layui-icon-file"></i></span>
+                                    <em>一次函数的应用</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="sort-code">0201<input type="number" class="s_width mgL-8" value="02"></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td class="cz_btn left">
+                            <button type="button" class="btn-type2 delMl_btn">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">目录名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-120" id="ml-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">目录名称:</div>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" class="w-620">
+                    <span class="num">0/50</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">顺序:</div>
+            <div class="a_list_r">
+                <input type="text" class="s_width center">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    // 课程目录
+    $('#chutiyan .addMl_btn,.editMl_btn').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '添加目录',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'activity_set2 activity_set w-120',
+            content: $("#ml-sure").html()
+        });
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .delMl_btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('确定删除该条数据？',{
+                skin: 'failureskin',
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('操作成功', {time: 1000});
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

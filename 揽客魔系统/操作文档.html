@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作文档</title>
+    <link rel="stylesheet" href="js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        .activity_set3 .b-line{margin: 0 24px;padding: 12px 0;}
+        .docitem_cont{width: 100%;display: flex;align-items: center;background: #f9fbff;border-radius: 8px;border: 1px solid #e9eaf2;padding: 24px;}
+        .docitem_cont img{width: 80px;height: 80px;border-radius: 8px;margin-right: 24px;}
+        .docitem_cont div{font-size: 14px;color: #666;line-height: 150%;flex: 1;padding-right: 10%}
+        .docitem_cont div p:first-child{font-size: 18px;color: #333;margin-bottom: 10px;font-weight: bold;}
+        .useBtn{font-size: 16px;color: #fff;background: linear-gradient(90deg,rgb(79,124,251),rgb(83,153,252));border-radius: 4px;min-width: 104px;height: 40px;line-height: 40px;text-align: center;cursor: pointer;margin-left: 16px;}
+
+        #contBody img{max-width: 100%;}
+    </style>
+</head>
+<body id="chutiyan">
+
+    <div class="doc_cont">
+        <div class="activity_set activity_set3">
+            <div class="b-line">
+                <div class="a_list">
+                    <div class="a_list_r">
+                        <div class="docitem_cont">
+                            <!--                        <img src="images/null2.jpg" alt="">-->
+                            <div>
+                                <p>会员裂变拓客系统</p>
+                                <p>功能简述：它是一款适用于单店、连锁店、联盟、总代理、厂家、以及执行方等各类线上快速引流锁客裂变的增长工具。</p>
+                            </div>
+                            <span class="useBtn layui-layer-close">开始使用</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <div class="a_list_r r-title">详细介绍</div>
+                </div>
+                <div class="a_list">
+                    <div class="a_list_r">
+                        <div id="contBody">
+                            自定义内容
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <!-- iframe弹框 -->
+    <script src="js/layui/lay/modules/layer.js"></script>
+    <script src="js/layui/layui.js"></script>
+    <script src="js/myjs.js"></script>
+    <script>
+        $('#chutiyan .useBtn').on('click', function(){
+            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+            parent.layer.close(index); //再执行关闭
+
+            console.log(index)
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户sop</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+
+        .eis-horizontal-steps .eis-form-steps .eis-form-step:nth-child(2) {
+            flex-grow: 0;
+        }
+        .eis-horizontal-steps .eis-form-steps .eis-form-step:nth-child(2) .eis-step-head{justify-content: center}
+
+
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content" style="padding-bottom: 100px">
+    <div class="step-box">
+        <div class="eis-stepContents">
+            <div class="eis-stepContent">
+                <div class="activity_set activity_set3 w-100">
+                    <div class="b-line">
+                        <div class="a_list">
+                            <span class="a_list_l">SOP名称:</span>
+                            <div class="a_list_r">
+                                <div class="showNumBox w-620">
+                                    <input type="text" placeholder="请输入SOP名称" maxlength="32">
+                                    <span class="num">0/32</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">选择成员:</span>
+                            <div class="a_list_r">
+                                <div>
+                                    <div class="flex alignItemC">
+                                        <span class="set-user addU">添加成员</span>
+                                        <i class="tips tip1 mgL-10"></i>
+                                        <a class="tishi addU">已添加2个</a>
+                                    </div>
+                                    <ul class="hasChoseList">
+                                        <li><img src="../../images/null.jpg" alt="">若水【华厚】社群运营官<i></i></li>
+                                        <li><img src="../../images/null.jpg" alt="">蒋宇工作号<i></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">选择标签:</span>
+                            <div class="a_list_r">
+                                <span class="set-user addTip">添加标签</span><a class="tishi addTip">已添加2个</a>
+                            </div>
+                        </div>
+                        <div class="a_list ">
+                            <span class="a_list_l"></span>
+                            <div class="a_list_r">
+                                <span class="mgR-10">[消费分类]:</span>
+                                <div class="qwTips">
+                                    <span class="tiem on">战略帮扶</span>
+                                    <span class="tiem on">联创帮扶</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">新人SOP:</span>
+                            <div class="a_list_r">
+                                <div class="button-label-m mgR-10">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont1-togg2" class="toggle-button" name="switch">
+                                        <label for="cont1-togg2" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                开启后，即日起新加入的客户也会收到该处设置的SOP
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <div class="a_list_r">
+                                存量用户（已添加的客户）开始执行时间<input type="text" placeholder="选择时间" class="layui-input mg-8" id="test1" lay-key="1">
+                                ，新添加的客户将以添加时间开始执行
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eis-stepContent">
+                <div class="activity_set activity_set3">
+                    <div class="b-line">
+                        <div class="a_list">
+                            <div class="a_list_r r-title">推送规则设置</div>
+                        </div>
+                        <div class="a_list">
+                            <div class="a_list_r">
+                                <div class="tsmsgLists">
+                                    <div class="item">
+                                        <div class="head">
+                                            <div class="flex alignItemC">
+                                                <p class="date"><span>2</span>天后，<span>09:00</span>发送</p>
+                                                <span class="typeTip1">场景：一对一私聊</span>
+                                                <span class="typeTip3">自动打标签、改变用户旅程、用户加入新sop</span>
+                                            </div>
+                                            <div class="btns">
+                                                <button class="del"><i class="layui-icon layui-icon-delete"></i>删除</button>
+                                                <button class="edit"><i class="layui-icon layui-icon-edit"></i>编辑</button>
+                                            </div>
+                                        </div>
+                                        <p class="tp"><span>触达形式：</span>群发任务下发</p>
+                                        <div class="cont">
+                                            <span>内容&nbsp;&nbsp;[文本]：</span>
+                                            <p>测试文本内容</p>
+                                        </div>
+                                        <div class="cont">
+                                            <span>内容&nbsp;&nbsp;[图片]：</span>
+                                            <ul class="FraUpload_imglist auto layer-photos-demo">
+                                                <li class="img_item">
+                                                    <img src="https://img2.baidu.com/it/u=3388619540,1510804301&fm=26&fmt=auto" layer-src="https://img2.baidu.com/it/u=3388619540,1510804301&fm=26&fmt=auto" >
+                                                </li>
+                                                <li class="img_item">
+                                                    <img src="https://img2.baidu.com/it/u=2835891596,3054666893&fm=26&fmt=auto" layer-src="https://img2.baidu.com/it/u=2835891596,3054666893&fm=26&fmt=auto" >
+                                                </li>
+                                                <li class="img_item">
+                                                    <img src="https://img2.baidu.com/it/u=2317629700,1848281201&fm=26&fmt=auto" layer-src="https://img2.baidu.com/it/u=2317629700,1848281201&fm=26&fmt=auto" >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="head">
+                                            <div class="flex alignItemC">
+                                                <p class="date"><span>4</span>天后，<span>18:00</span>发送</p>
+                                                <span class="typeTip1">场景：一对一私聊</span>
+                                                <span class="typeTip3">用户加入新sop</span>
+                                            </div>
+                                            <div class="btns">
+                                                <button class="del"><i class="layui-icon layui-icon-delete"></i>删除</button>
+                                                <button class="edit"><i class="layui-icon layui-icon-edit"></i>编辑</button>
+                                            </div>
+                                        </div>
+                                        <p class="tp"><span>触达形式：</span>API全员群发</p>
+                                        <div class="cont">
+                                            <span>内容&nbsp;&nbsp;[图文]：</span>
+                                            <div class="cont_href">
+                                                <p class="href_tit line1">重要通知！黄码人员核酸检测定点医院公布</p>
+                                                <div>
+                                                    <p class="txt line4">为切实做好疫情防控工作，方便黄码人员及时、就近进行核酸检测。</p>
+                                                    <img src="https://img2.baidu.com/it/u=2317629700,1848281201&fm=26&fmt=auto" alt="" class="icon">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="head">
+                                            <div class="flex alignItemC">
+                                                <p class="date"><span>2</span>天后，<span>09:00</span>发送</p>
+                                                <span class="typeTip2">场景：朋友圈</span>
+                                                <span class="typeTip3">自动打标签</span>
+                                            </div>
+                                            <div class="btns">
+                                                <button class="del"><i class="layui-icon layui-icon-delete"></i>删除</button>
+                                                <button class="edit"><i class="layui-icon layui-icon-edit"></i>编辑</button>
+                                            </div>
+                                        </div>
+                                        <p class="tp"><span>触达形式：</span>企业发表</p>
+                                        <div class="cont">
+                                            <span>内容&nbsp;&nbsp;[文本]：</span>
+                                            <p>测试文本内容</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="head">
+                                            <div class="flex alignItemC">
+                                                <p class="date"><span>3</span>天后，<span>12:00</span>发送</p>
+                                                <span class="typeTip2">场景：朋友圈</span>
+                                                <span class="typeTip3">改变用户旅程</span>
+                                            </div>
+                                            <div class="btns">
+                                                <button class="del"><i class="layui-icon layui-icon-delete"></i>删除</button>
+                                                <button class="edit"><i class="layui-icon layui-icon-edit"></i>编辑</button>
+                                            </div>
+                                        </div>
+                                        <p class="tp"><span>触达形式：</span>个人发表</p>
+                                        <div class="cont">
+                                            <span>内容&nbsp;&nbsp;[图片]：</span>
+                                            <ul class="FraUpload_imglist auto layer-photos-demo">
+                                                <li class="img_item">
+                                                    <img src="https://img2.baidu.com/it/u=3388619540,1510804301&fm=26&fmt=auto" layer-src="https://img2.baidu.com/it/u=3388619540,1510804301&fm=26&fmt=auto" >
+                                                </li>
+                                                <li class="img_item">
+                                                    <img src="https://img2.baidu.com/it/u=2835891596,3054666893&fm=26&fmt=auto" layer-src="https://img2.baidu.com/it/u=2835891596,3054666893&fm=26&fmt=auto" >
+                                                </li>
+                                                <li class="img_item">
+                                                    <img src="https://img2.baidu.com/it/u=2317629700,1848281201&fm=26&fmt=auto" layer-src="https://img2.baidu.com/it/u=2317629700,1848281201&fm=26&fmt=auto" >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="head">
+                                            <div class="flex alignItemC">
+                                                <p class="date"><span>5</span>天后，<span>09:00</span>发送</p>
+                                                <span class="typeTip2">场景：朋友圈</span>
+                                                <span class="typeTip3">自动打标签</span>
+                                            </div>
+                                            <div class="btns">
+                                                <button class="del"><i class="layui-icon layui-icon-delete"></i>删除</button>
+                                                <button class="edit"><i class="layui-icon layui-icon-edit"></i>编辑</button>
+                                            </div>
+                                        </div>
+                                        <p class="tp"><span>触达形式：</span>企业发表</p>
+                                        <div class="cont">
+                                            <span>内容&nbsp;&nbsp;[文本]：</span>
+                                            <p>测试文本内容</p>
+                                        </div>
+                                        <div class="cont">
+                                            <span>内容&nbsp;&nbsp;[视频]：</span>
+                                            <div class="video">
+                                                <video id="my-video" class="video-js" controls="" preload="auto" width="100%" height="100%" poster="//puui.qpic.cn/qqvideo_ori/0/p0703okprqf_496_280/0" data-setup="{}">
+                                                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sure addTs"><i class="layui-icon layui-icon-add-circle-fine mgR-4"></i>新增内容推送</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/step.js"></script>
+<script src="../../js/emoji.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    var url = location.search.replace('?',''); //获取url中"?"符后的字串，动态更新
+    $('.step-box').step({
+        stepDirection:'x',
+        showStepButton:true,
+        stepCount:2,
+        initStep: url,
+        stepTitles:['选择客户','设置推送内容及规则']
+    });
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    layer.photos({
+        photos: '.layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '添加SOP',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['90%', '90%'],
+            skin: 'activity_set activity_set2',
+            content: $("#tip-sure")
+        });
+    });
+    $('#chutiyan .addU').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加成员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['990px', '650px'],
+            content: '../添加成员.html' //iframe的url
+        });
+    });
+    $('#chutiyan .addTip').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '436px'],
+            content: '../选择标签.html' //iframe的url
+        });
+    });
+
+    $('#chutiyan .addTs,.edit').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: '新增内容推送',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['80%', '90%'],
+            content: '企微私域/互动留存/客户sop-添加规则.html' //iframe的url
+        });
+    });
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('删除该条数据？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+
+    $('#chutiyan .tip1').on('mouseenter',function(){
+        this.index =layer.tips('当用户非企业微信好友时，将会生成获客成员的活码（引导用户随机添加一名获客成员）', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:280
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+</script>
+</body>
+</html>

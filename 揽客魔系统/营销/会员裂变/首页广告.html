@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商家广告</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+
+    </style>
+</head>
+<body id="chutiyan" style="height: auto">
+
+
+<div class="page-title">商家广告</div>
+
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 13px">自定义区:</span>
+            <div class="a_list_r" style="align-items: flex-start">
+                <div style="width: 100%">
+                    <p class="mgB-10">广告将在商家‘创建活动’页面展示，<a class="concat_img_btn ">点击查看示例</a></p>
+                    <textarea style="width: 50%;height: 400px;">富文本编辑器</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<img src="http://cshtml.lkmsxy.com/csimg/yskImg4.png" alt="" id="concat_img" style="height: 580px;display: none;">
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .concat_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img")
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

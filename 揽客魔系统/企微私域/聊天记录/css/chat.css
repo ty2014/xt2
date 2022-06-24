@@ -1,0 +1,102 @@
+.chatContent{background: #fff;overflow: hidden;}
+/* 空状态 */
+.chatContent .null-msg img{width: 120px;}
+/* 搜索块 */
+.chatContent .search{border-bottom: 1px solid #e8e8e8;padding: 12px;position: relative;}
+.searchType1{position: relative;}
+.searchType1 .searchBox input{width: 100%;padding-right: 32px;}
+.searchType1 .searchBox i{font-size: 14px;color: #333;position: absolute;right: 6px;top: 50%;transform: translateY(-50%);}
+/* 顶部导航-块状 */
+.blockNav{display: flex;}
+.blockNav li{flex: 1;background: #fff;color: #333;height: 49px;line-height: 49px;font-size: 14px;text-align: center;cursor: pointer;}
+.blockNav li.on{background: #f80;color: #fff;}
+
+.dateChose{padding: 12px 12px 0;display: none}
+
+
+.chatContent .chatBox1{overflow: auto;min-width: 280px;width: 280px;border-right: 1px solid #e8e8e8;}
+.chatContent .chatBox1 .head{display: flex;align-items: center;justify-content: space-between;height: 49px;font-size: 16px;font-weight: 600;border-bottom: 1px solid #e8e8e8;padding: 12px;}
+.chatContent .chatBox1 .head a{background: #cbd7f8;
+    padding: 4px 6px;
+    border-radius: 24px;
+    color: #0b4cff;
+    transform: scale(.9) translateX(7px);
+    display: block;position: absolute;
+    right: 0;
+}
+.chatContent .chatBox1 .head a i{margin-right: 8px;}
+
+.chatContent .chatBox2{overflow: auto;min-width: 240px;max-width: 280px;border-right: 1px solid #e8e8e8;}
+.chatContent .chatBox3{overflow: auto;background: #fff;}
+
+.scrollBar::-webkit-scrollbar {/*滚动条整体样式*/width: 6px;     /*高宽分别对应横竖滚动条的尺寸*/height: 4px;padding: 0 2px;}
+.scrollBar::-webkit-scrollbar-thumb {/*滚动条里面小方块*/border-radius: 5px;-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);background: rgba(0,0,0,0.2);}
+.scrollBar::-webkit-scrollbar-track {/*滚动条里面轨道*/-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);border-radius: 0;background: rgba(0,0,0,0.1);}
+.scrollBar::-webkit-scrollbar-thumb:hover{background: rgba(0,0,0,0.5);}
+
+/* 沟通列表 */
+.chatLists{}
+.chatLists .chatItem{display: flex;align-items: center;padding: 10px;cursor: pointer;}
+.chatLists .chatItem:hover{background: #f5f5f5;}
+.chatLists .chatItem.active{background: #ddd;}
+.chatLists .chatItem.active .msg1 span{color: #999;}
+.chatLists .itemPic{width: 44px;height: 44px;overflow: hidden;position: relative;border-radius: 4px;margin-right: 10px;font-size: 0;}
+.chatLists .itemPic img{width: 100%;height: 100%;object-fit: cover;}
+.chatLists .qlChat img{border: 1px solid #fff;width: 33%;height: 33%;}
+.chatLists .itemMsg{flex: 1;overflow: hidden;white-space: nowrap;}
+.chatLists .itemMsg .msg1{display: flex;align-items: center;}
+.chatLists .itemMsg .msg1 p{font-size: 13px;color: #000;overflow: hidden;text-overflow: ellipsis;margin-right: 10px;}
+.chatLists .itemMsg .msg1 span{font-size: 12px;color: #ccc;margin-left: auto;}
+.chatLists .itemMsg .msg2{display: flex;align-items: center;margin-top: 5px;}
+.chatLists .itemMsg .msg2 p{font-size: 12px;color: #999;overflow: hidden;text-overflow: ellipsis;}
+
+/* 消息列表 */
+.chatContainer{padding: 10px;}
+.chatContainer .newMsgTip{background: #fff;border: 1px solid #ddd;border-radius: 24px;padding: 4px 8px;font-size: 12px;color: #0a80e5;cursor: pointer;position: absolute;right: 20px;bottom: 20px;z-index: 10;}
+.chatContainer .newMsgTip i{transform: rotate(90deg);display: inline-block;font-size: 10px;margin-right: 4px;}
+.chatContainer .msgTip,.chatContainer .dateTip{text-align: center;font-size: 12px;color: #828c99;margin: 15px auto;}
+.chatContainer .msgTip{background: #eaeef3;width: max-content;max-width: 60%;padding: 5px 10px;}
+.chatUser{display: flex;align-items: flex-start;margin: 20px 0;}
+.chatUser .chatTime{font-size: 10px;color: #999;transform: scale(.8);position: absolute;left: -20px;top: 18px;width: 200px;}
+.chatUser .uPic{width: 35px;height: 35px;min-width: 35px;border-radius: 4px;overflow: hidden;position: relative;margin-right: 10px;}
+.chatUser .uPic img{width: 100%;height: 100%;object-fit: cover;}
+.chatUser .uMsg{flex: 1;display: flex;flex-direction: column;max-width: 500px;position: relative;}
+.chatUser .uName{display: flex;align-items: center;margin: -2px 0 24px;font-size: 12px;color: #333;width: 100%;}
+.chatUser .uName p{max-width: 60%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-right: 20px;}
+.chatUser .msg_txt{max-width: 100%;}
+.chatUser .msg_txt pre{font-size: 13px;background: #e0e3e9;padding: 6px 10px;border-radius: 4px;line-height: 165%;display: inline-block;}
+.chatUser .msg_pics{position: relative;overflow: hidden;}
+.chatUser .msg_pics img{max-width: 400px;max-height: 200px;display: block;border: 1px solid #efefef;}
+.chatUser .shadow{width: 100%;height: 60px;position: absolute;bottom: 0;left: 0;z-index: 8;display: none;}
+.chatUser .shadow:before{content: "";display: block;height: 100%;background: linear-gradient(0deg,rgba(255,255,255,1) 10%,rgba(255,255,255,.8) 40%,rgba(255,255,255,0));}
+.chatUser .shadow i{display: inline-block;width: 40px;height: 24px;line-height: 24px;text-align: center;border-radius: 24px;background: rgba(0,0,0,.5);color: #fff;font-size: 12px;position: absolute;left: 50%;bottom: 10px;z-index: 10;cursor: pointer;}
+.chatUser .txtPics{background: #fff;padding: 8px;border-radius: 2px;overflow: hidden;max-width: 100%;}
+.chatUser .txtPics .msg_pics{width: max-content;max-width: 100%;}
+.chatUser .txtPics .msg_pics img:not(:first-child){margin-top: 8px;}
+.chatUser .txtPics .msg_txt pre{background: none;padding: 0;line-height: 150%;margin-top: 8px;}
+.chatUser .msg_files{background: #fff;width: 250px;border-radius: 4px;padding: 8px;display: flex;align-items: flex-start;}
+.chatUser .msg_files div{flex: 1;}
+.chatUser .msg_files div p{font-size: 13px;color: #000;}
+.chatUser .msg_files div span{font-size: 12px;color: #999;margin-top: 4px;}
+.chatUser .msg_files img{width: 40px;height: 40px;min-width: 40px;border-radius: 4px;margin-left: 10px;}
+.chatUser .voice{display: flex;align-items: flex-end;font-size: 13px;color: #999;}
+.chatUser .voice span{color: #333;background: #e0e3e9;padding: 6px 10px;border-radius: 4px;width: max-content;cursor: pointer;display: flex;align-items: center;}
+.chatUser .voice em{font-style: normal;margin: 0 6px;}
+.chatUser .voice img{margin: 3px 8px 3px 0;width: 15px;}
+.chatUser .video video{max-width: 240px;}
+.chatUser .video iframe{max-width: 240px;}
+/* 右侧 */
+.chatUserR{justify-content: flex-end;}
+.chatUserR .chatTime{left: unset;right: -20px;text-align: right;}
+.chatUserR .uMsg{align-items: flex-end;}
+.chatUserR .uName{justify-content: flex-end;}
+.chatUserR .uName p{margin-right: 0;margin-left: 20px;}
+.chatUserR .uPic{margin-right: 0;margin-left: 10px;}
+.chatUserR .voice{justify-content: flex-end;}
+.chatUserR .voice span{justify-content: flex-end;}
+.chatUserR .voice span img{transform: rotate(180deg);margin: 3px 0 3px 8px;}
+
+
+
+
+

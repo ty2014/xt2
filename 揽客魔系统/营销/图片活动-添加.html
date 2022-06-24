@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图文管理-添加</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0;background: #fff">
+
+<div class="account-cont" style="padding: 0">
+    <div class="account-title"><span class="title">活动基本信息</span></div>
+    <div class="account">
+        <span class="account-l">活动名称：</span>
+        <div class="account-r"><input type="text" class="w-620"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">启用状态：</span>
+        <div class="account-r">
+            <div class="htmleaf-content">
+                <div class="checkbox">
+                    <input type="checkbox"/>
+                    <label></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">系列课主图：</span>
+        <div class="account-r">
+            <div class="file-cont">
+                <div class="file-btn"></div>
+                <p class="tishi2">*建议宽度不超过800px；大小不超过1000KB</p>
+            </div>
+        </div>
+    </div>
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">虚拟观看人数：</span>
+            <div class="account-r"><input type="text" class="m_width"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">按钮名称：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+
+    <div class="account flex-start">
+        <span class="account-l">按钮链接：</span>
+        <div class="account-r"><input type="text" class="w-620"></div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">活动时间：</span>
+        <div class="account-r"><input type="text"></div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">活动地址：</span>
+        <div class="account-r"><input type="text" class="w-620"></div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">分享模板：</span>
+        <div class="account-r">
+            <div class="remin_end_txt w-620">
+                <div class="cont_label">
+                    <span class="kc_btn" data-toggle="tooltip" data-placement="top" title="活动名称"></span>
+                    <span class="userPic_btn" data-toggle="tooltip" data-placement="top" title="用户头像"></span>
+                    <span class="person_btn" data-toggle="tooltip" data-placement="top" title="用户昵称"></span>
+                    <span class="eq_btn" data-toggle="tooltip" data-placement="top" title="公众号二维码"></span>
+                </div>
+                <div class="txt_cont" contenteditable="true"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="account-title"><span class="title">支付信息</span></div>
+    <div class="account">
+        <span class="account-l">是否启用支付功能：</span>
+        <div class="account-r">
+            <div class="htmleaf-content">
+                <div class="checkbox">
+                    <input type="checkbox"/>
+                    <label></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="account_btn">
+    <span class="btn btn-sure">确定</span><span class="btn btn-cancel">取消</span>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../js/dist/js/bootstrap.min.js"></script>
+<script src="../js/index.js"></script>
+
+</body>
+</html>

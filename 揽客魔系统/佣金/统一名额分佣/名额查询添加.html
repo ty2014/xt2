@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>名额查询添加</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0;background: #fff">
+
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">销售对象:</span>
+            <div class="a_list_r">任一系列课</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分佣比例:</span>
+            <div class="a_list_r"><input type="number" class="s_width center" value="10" style="margin-right: 12px;">%</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">名额操作:</span>
+            <div class="a_list_r">
+                <div class="select-text" style="min-width: 80px">
+                    <span class="select-txt">增加</span>
+                    <ul>
+                        <li>增加</li>
+                        <li>减少</li>
+                    </ul>
+                </div>
+                <span class="tishi">*增加：在原基础上新增名额；减少：在原基础上减少名额。</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">名额数量:</span>
+            <div class="a_list_r"><input type="text" class="s_width center" value="0"><span class="tishi">*只能填写大于等于 0 的数字，减少数量不能大于剩余名额数量。</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">修改说明:</span>
+            <div class="a_list_r"><input type="number" style="width: 500px;" placeholder="*选填"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('.select-text2').click(function (e) {
+        e.stopPropagation();
+        $(this).toggleClass('on');
+    });
+    $(document).click(function () {
+        $('.select-text2').removeClass('on');
+    });
+
+
+
+</script>
+
+
+</body>
+</html>

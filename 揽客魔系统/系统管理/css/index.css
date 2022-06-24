@@ -1,0 +1,47 @@
+/* 权限管理 */
+.permiss{width: 100%;border: 1px solid #eee;}
+.permiss-head{background: #f6f6f6;}
+.permiss-head th{font-size: 14px;color: #333;font-weight: 600;height: 47px;text-align: left;padding: 0 14px;}
+.permiss-head th div{display: flex;align-items: center}
+.permiss-head th div label{margin-left: 20px!important;margin-top: 0!important;}
+#head-radio .msg_set_txt{margin-left: 0!important;margin-right: 6px;font-weight: 600!important;color: #333;}
+.permiss-body{border-bottom: 1px solid #eee;}
+.permiss-body td{font-size: 12px;color: #333;padding: 20px 14px 4px;}
+.permiss-body td.p-second{padding-left: 38px;}
+.permiss-body td.p-third{padding-left: 62px;}
+.permiss-body .p-first span,.permiss-body .p-second span,.permiss-body .p-third span{cursor: pointer}
+.permiss-body td img{margin-right: 8px;cursor: pointer;margin-bottom: 1px}
+.permiss-body td div{display: flex;align-items: center;}
+.permiss-body td div .radio:first-child{margin-left: 124px!important;}
+.permiss-body td div .radio:last-child{margin-left: 55px!important;margin-top: 0!important;}
+.permiss-body td div .checked{margin-left: 77px;}
+
+
+/* 用户管理 */
+.slideMore{padding: 0 15px;}
+.slideMore li a{height: 30px;line-height: 30px;display: flex;align-items: center;margin: 5px 0;font-size: 14px;color: #333;width: 100%;cursor: pointer}
+.slideMore li.active a{background: rgba(255,181,96,.3);}
+.slideMore li a i{margin-right: 6px;color: #f00;}
+.slideMore li a .layui-icon-add-circle{margin-right: 0;color: #f00;font-weight: bold;margin-left: auto;}
+.slideMore .second-nav > li > a{padding-left: 26px;}
+
+
+.zdyId{margin-top: 20px;}
+.zdyId .layui-icon-group,.zdyId .layui-icon-friends{color: #f80}
+
+
+.powerItem{height: 100%;flex: 1;border-right: 1px solid #ddd;}
+.powerItem > div{margin: 10px 0;}
+
+
+.contBlock{background: #fff;padding: 24px;margin-bottom: 16px;}
+.contBlock .msg{display: flex;align-items: center;justify-content: space-between;}
+.contBlock .msg .msgL{display: flex;align-items: center;font-size: 14px;color: #333;}
+.contBlock .msg .msgL > i{color: #f80;margin-right: 8px;}
+.contBlock .msg .msgL .icons{margin-left: 10px;}
+.contBlock .msg .msgL .icons i{cursor: pointer;margin-right: 4px}
+.contBlock .msg .msgR{cursor: pointer;}
+.contBlock .msg .msgR i{color: #f00;font-weight: bold;margin-right: 10px;}
+.contBlock .txt{font-size: 14px;color: #888;margin: 7px 0 14px;}
+
+

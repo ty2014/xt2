@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff">
+
+<div class="activity_set activity_set2">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r r-title">基础设置</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">图书名称:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" class="w-620">
+                    <span class="num">0/25</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">图书作者:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" style="width: 280px">
+                    <span class="num">0/16</span>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">图书分类:</span>
+                <div class="a_list_r">
+                    <div class="select-text" style="min-width: 120px">
+                        <span class="select-txt">请选择</span>
+                        <ul>
+                            <li>分类1</li>
+                            <li>分类2</li>
+                            <li>分类3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">图书标签:</span>
+                <div class="a_list_r">
+                    <input type="text">
+                    <div class="bq-items">
+                        <p>已有标签:</p>
+                        <ul>
+                            <li style="width: 92px">92</li>
+                            <li style="width: 92px">92</li>
+                            <li style="width: 92px">92</li>
+                            <li style="width: 143px">143</li>
+                            <li style="width: 143px">143</li>
+                            <li style="width: 143px">143</li>
+                            <li style="width: 144px">144</li>
+                            <li>44</li>
+                            <li style="width: 243px">243</li>
+                            <li style="width: 243px">243</li>
+                            <li>4</li>
+                            <li>装饰装修装饰装修装饰装修装饰装修装饰装修</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">图书封面:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <p class="tishi">*建议尺寸150px*200px；大小不超过500KB；</p>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">图书售价:</span>
+                <div class="a_list_r">
+                    <input type="number" class="s_width mgR-8" placeholder="￥">元
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">优先级:</span>
+                <div class="a_list_r">
+                    <input type="number" class="s_width center">
+                    <span class="tishi">* 数字越大，越靠前</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">划线价:</span>
+            <div class="a_list_r">
+                <input type="number" class="s_width mgR-8" placeholder="￥">元
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">会员特惠购:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="vipPrice" class="toggle-button" name="switch">
+                        <label for="vipPrice" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*选填，不填会员将按‘图书售价’购买</span>
+            </div>
+        </div>
+        <div class="a_list vipPriceCont" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r" style="max-width: 640px;">
+                <div class="normal-table">
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 100px">会员等级</th>
+                            <th style="width: 100px">会员特价</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="line-tr">联创人</td>
+                            <td class="line-tr"><input type="number" class="center" placeholder="选填"></td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">VIP会员</td>
+                            <td class="line-tr"><input type="number" class="center" placeholder="选填"></td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">普通会员</td>
+                            <td class="line-tr"><input type="number" class="center" placeholder="选填"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="a_list">
+            <span class="a_list_l">图书介绍:</span>
+            <div class="a_list_r">
+                <textarea placeholder="" class="w-620" style="height: 80px;padding: 10px;resize: none">此处放富文本编辑器</textarea>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">图书简介:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <textarea placeholder="填写图书简介，不填则调用介绍前50个文字" class="w-620" style="height: 80px;padding: 10px;resize: none"></textarea>
+                    <span class="num">0/50</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="a_list">
+            <span class="a_list_l">海报设置:</span>
+            <div class="a_list_r">
+                <a class="showHbset">展开更多∨</a>
+                <span class="tishi">*选填，不设置系统将生成默认海报</span>
+            </div>
+        </div>
+        <div class="hbset_cont" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l">分享海报模板:</span>
+                <div class="a_list_r">
+                    <span class="set-user hb_chose mgR-8">选择</span>
+                    <div class="set_user_box">
+                        <span class="set-user2">模板一</span>
+                        <em class="clear_icon"></em>
+                    </div>
+                    <span class="tishi">*选填，若不选择模板，将调用图片生成默认海报</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">海报图片:</span>
+                <div class="a_list_r">
+                    <div class="file-cont file-cont2">
+                        <!--  存放已上传图片，默认隐藏  -->
+                        <div class="file-pics">
+                            <ul class="FraUpload_imglist layer-photos-demo">
+                                <li class="img_item">
+                                    <img src="https://img0.baidu.com/it/u=1846612820,2961979268&fm=26&fmt=auto&gp=0.jpg">
+                                    <span class="icon-delete img_del"></span>
+                                </li>
+                                <li class="img_item">
+                                    <img src="https://img2.baidu.com/it/u=1135371069,1434682937&fm=26&fmt=auto&gp=0.jpg">
+                                    <span class="icon-delete img_del"></span>
+                                </li>
+                                <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                <li class="file-btn"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="tishi mgL-0">*图片大小建议不超过200KB</p>
+                        <p class="tishi2 mgL-0">*选填，最多10张；用于分享海报处展示，不填默认使用主图</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="a_list">
+                <span class="a_list_l">转赠海报模板:</span>
+                <div class="a_list_r">
+                    <span class="set-user hb_chose mgR-8">选择</span>
+                    <div class="set_user_box">
+                        <span class="set-user2">模板一</span>
+                        <em class="clear_icon"></em>
+                    </div>
+                    <span class="tishi">*选填，若不选择模板，将调用图片生成默认海报</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">海报图片:</span>
+                <div class="a_list_r">
+                    <div class="file-cont file-cont2">
+                        <!--  存放已上传图片，默认隐藏  -->
+                        <div class="file-pics">
+                            <ul class="FraUpload_imglist layer-photos-demo">
+                                <li class="img_item">
+                                    <img src="https://img0.baidu.com/it/u=1846612820,2961979268&fm=26&fmt=auto&gp=0.jpg">
+                                    <span class="icon-delete img_del"></span>
+                                </li>
+                                <li class="img_item">
+                                    <img src="https://img2.baidu.com/it/u=1135371069,1434682937&fm=26&fmt=auto&gp=0.jpg">
+                                    <span class="icon-delete img_del"></span>
+                                </li>
+                                <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                <li class="file-btn"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="tishi mgL-0">*图片大小建议不超过200KB</p>
+                        <p class="tishi2 mgL-0">*选填，最多10张；用于分享海报处展示，不填默认使用主图</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="a_list">
+            <span class="a_list_l">状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg4" checked class="toggle-button" name="switch">
+                        <label for="u-togg4" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">立即上架</span>
+                            <span class="text off">待上架</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#vipPrice').click(function () {
+        $('.vipPriceCont').toggle()
+    })
+    $('.showHbset').click(function () {
+        $('.hbset_cont').toggle()
+    })
+
+
+    // 选择海报
+    $('#chutiyan .shareChose').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '恩格斯与我们的时代',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../海报模板/海报模板选择.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .sendChose').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '恩格斯与我们的时代',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../转赠模板/转赠模板选择.html#tab1' //iframe的url
+        });
+    });
+
+
+    layer.photos({
+        photos: '.layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

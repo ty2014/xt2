@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打卡列表</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+
+
+    </style>
+
+</head>
+<body id="chutiyan">
+
+<!--
+
+回收：已领用户，将不能再使用，也不能看到
+
+-->
+
+
+<div class="content">
+    <div class="page-title">打卡列表</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">已发布</a></li>
+                    <li><a href="#">未发布</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_2">
+            <a href="添加打卡.html" class="tab-tips add_btn"><i class="plus-tips"></i>新建打卡</a>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="60px">序号</th>
+                        <th width="200px" class="left">打卡名称</th>
+                        <th width="100px">类型</th>
+                        <th width="100px">参与方式</th>
+                        <th width="100px">作业管理</th>
+                        <th width="100px">成员管理</th>
+                        <th width="100px">打卡次数</th>
+                        <th width="100px">状态</th>
+                        <th width="100px">链接</th>
+                        <th width="250px" class="stickyHR shadow right">操作</th>
+                        <th class="stickyHR table-patch"></th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="60px">1</td>
+                        <td width="200px" class="left"><a href="打卡数据.html#tab1">《裂变引流》训练营作业</a></td>
+                        <td width="100px">学习打卡</td>
+                        <td width="100px">任何人</td>
+                        <td width="100px"><a href="打卡数据.html#tab2">1</a></td>
+                        <td width="100px"><a href="打卡数据.html#tab3">52</a></td>
+                        <td width="100px"><a href="打卡次数总.html">12</a></td>
+                        <td width="100px" class="statu statu2"><span>未发布</span></td>
+                        <td width="100px" class="m-pic">
+                            <div class="m-doub-pic">
+                                <img src="../../images/1.png" alt="">
+                                <img src="../../images/2.png" alt="">
+                            </div>
+                        </td>
+                        <td width="250px" class="stickyBR shadow cz_btn right">
+                            <button type="button" class="send-btn">发布</button>
+                            <button type="button" class="del-btn">删除</button>
+                            <a href="添加打卡.html" class="edit-btn">编辑</a>
+                            <a href="打卡数据.html#tab1" class="detail-btn">详情</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left"></td>
+                        <td>长期打卡</td>
+                        <td>需审核</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu1"><span>已发布</span></td>
+                        <td></td>
+                        <td class="stickyBR shadow cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left"></td>
+                        <td></td>
+                        <td>需审核</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu1"><span>已发布</span></td>
+                        <td></td>
+                        <td class="stickyBR shadow cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left"></td>
+                        <td></td>
+                        <td>需审核</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu1"><span>已发布</span></td>
+                        <td></td>
+                        <td class="stickyBR shadow cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left"></td>
+                        <td></td>
+                        <td>需审核</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu1"><span>已发布</span></td>
+                        <td></td>
+                        <td class="stickyBR shadow cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left"></td>
+                        <td></td>
+                        <td>需审核</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu1"><span>已发布</span></td>
+                        <td></td>
+                        <td class="stickyBR shadow cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left"></td>
+                        <td></td>
+                        <td>需审核</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu1"><span>已发布</span></td>
+                        <td></td>
+                        <td class="stickyBR shadow cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="left"><a href="打卡数据.html#tab1" class="detail_btn1">《裂变引流》训练营作业</a></td>
+                        <td>长期打卡</td>
+                        <td>任何人</td>
+                        <td><a href="打卡数据.html#tab2" class="detail_btn2">1</a></td>
+                        <td><a href="打卡数据.html#tab3" class="detail_btn3">52</a></td>
+                        <td><a href="打卡次数总.html">12</a></td>
+                        <td class="statu statu1"><span>已发布</span></td>
+                        <td class="m-pic">
+                            <div class="m-doub-pic">
+                                <img src="../../images/1.png" alt="">
+                                <img src="../../images/2.png" alt="">
+                            </div>
+                        </td>
+                        <td class="stickyBR shadow cz_btn right">
+                            <button type="button" class="del-btn">删除</button>
+                            <a href="添加打卡.html" class="edit-btn">编辑</a>
+                            <a href="打卡数据.html#tab1" class="detail-btn">详情</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>
+                条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">打卡名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">参与方式:</span>
+            <div class="account-r chose_item">
+                <label for="dx1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="dx" id="dx1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">任何人</span>
+                </label>
+                <label for="dx2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="dx" id="dx2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">需审核</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="type1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">未发布</span>
+                </label>
+                <label for="type2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">已发布</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">类型:</span>
+            <div class="account-r chose_item">
+                <label for="price1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="price" id="price1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">学习打卡</span>
+                </label>
+                <label for="price2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="price" id="price2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">长期打卡</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+
+    //  动态表格二维码弹框展示； 参数： 元素，二维码地址，链接地址
+    mDoubPic('.m-doub-pic','http://cshtml.lkmsxy.com/eq.jpg','http://cshtml.lkmsxy.com/404.html')
+
+
+</script>
+
+
+</body>
+</html>

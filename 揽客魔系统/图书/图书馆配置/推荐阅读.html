@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>推荐阅读</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">推荐阅读</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+        </div>
+        <div class="tab_type_2">
+            <a class="zdyList" style="margin-right: 20px">自定义-猜你喜欢规则设置</a>
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>个性化强推设置</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="60px">序号</th>
+                        <th width="200px" class="left">图书名称</th>
+                        <th width="100px">作者</th>
+                        <th width="100px">分类</th>
+                        <th width="100px">图书格式</th>
+                        <th width="100px">价格</th>
+                        <th width="100px">是否支持朗读</th>
+                        <th width="100pz">是否试读</th>
+                        <th width="100pz">状态</th>
+                        <th width="100pz">优先级</th>
+                        <th width="100px" class="stickyHR shadow">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="60px">1</td>
+                        <td width="200px" class="left"><a class="listBtn">恩格斯与我们的时代</a></td>
+                        <td width="100px">恩格斯</td>
+                        <td width="100px">心灵</td>
+                        <td width="100px">PDF</td>
+                        <td width="100px">9.9</td>
+                        <td width="100px">是</td>
+                        <td width="100px">是</td>
+                        <td width="100px" class="statu statu1"><span>已上架</span></td>
+                        <td width="100px">99</td>
+                        <td width="100px" class="stickyBR shadow cz_btn">
+                            <button type="button" class="btn-type2 del_btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>epub</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu2"><span>已下架</span></td>
+                        <td></td>
+                        <td class="stickyBR shadow cz_btn"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">图书名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">图书格式:</span>
+            <div class="account-r chose_item">
+                <label for="gs1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gs" id="gs1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">PDF</span>
+                </label>
+                <label for="gs2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gs" id="gs2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">epub</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<div class="activity_set activity_set2" id="list-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <!--   标签、分类必须有一个开启     -->
+        <div class="a_list">
+            <span class="a_list_l">标签推荐:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg" checked class="toggle-button" name="switch">
+                        <label for="u-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <p class="tishi">开启：则按所属标签向用户推荐图书<!-- <br>关闭，系统则根据用户的浏览记录推荐同类图书--></p>
+            </div>
+        </div>
+        <div class="a_list toggCont1">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">在页面上按
+                <div class="select-text mg-8">
+                    <span class="select-txt">请选择</span>
+                    <ul>
+                        <li>优先级</li>
+                        <li>销量</li>
+                        <li>上新</li>
+                    </ul>
+                </div>
+                展示前<input type="number" class="s_width center mg-8">几个
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分类推荐:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg2" checked class="toggle-button" name="switch">
+                        <label for="u-togg2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <p class="tishi">开启，则按所属分类向用户推荐图书<!-- <br>关闭，系统则根据用户的浏览记录推荐同类图书--></p>
+            </div>
+        </div>
+        <div class="a_list toggCont2">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">在页面上按
+                <div class="select-text mg-8">
+                    <span class="select-txt">请选择</span>
+                    <ul>
+                        <li>优先级</li>
+                        <li>销量</li>
+                        <li>上新</li>
+                    </ul>
+                </div>
+                展示前<input type="number" class="s_width center mg-8">几个
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#u-togg').click(function () {
+        $('.toggCont1').toggle()
+    })
+    $('#u-togg2').click(function () {
+        $('.toggCont2').toggle()
+    })
+
+
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    //
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .add_btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('强推荐会在所有详情页面展示该处选择的图书，确定要继续选择吗？',{
+                skin: 'failureskin',    //类名
+                icon:3,
+                title:'提示',
+                btn: ['确定','取消'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+                layer.open({
+                    type: 2,
+                    title: '选择图书',        //
+                    shadeClose: true,
+                    shade: 0.3,
+                    maxmin: true, //开启最大化最小化按钮
+                    area: ['95%', '95%'],
+                    content: '选择推荐阅读.html#tab2' //iframe的url
+                });
+            }, function(index){
+                layer.close(index);
+            });
+        });
+    });
+
+    $('#chutiyan .zdyList').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '设置<span style="color: red;font-size: 14px">（至少有一个开关开启）</span>',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'activity_set2 activity_set w-120',
+            content: $("#list-sure")
+        });
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del_btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定删除该条数据？',{
+                skin: 'failureskin',
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('操作成功', {time: 1000});
+            });
+        });
+    });
+
+
+
+
+</script>
+</body>
+</html>

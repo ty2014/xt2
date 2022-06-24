@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="css/handl.css">
+</head>
+<body style="padding: 0;background: #fff;">
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">分组名称:</div>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" class="w-620" placeholder="请输入分组名称">
+                    <span class="num">0/30</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">分组成员:</div>
+            <div class="a_list_r">
+                <div>
+                    <div class="flex alignItemC">
+                        <span class="set-user addU ">添加成员</span>
+                        <a class="tishi addU">已添加2个</a>
+                    </div>
+                    <ul class="hasChoseList">
+                        <li><img src="../../images/null.jpg" alt="">若水【华厚】社群运营官<i></i></li>
+                        <li><img src="../../images/null.jpg" alt="">蒋宇工作号<i></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('.addU').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: '添加成员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['990px', '650px'],
+            content: '营销/打卡/添加成员.html' //iframe的url
+        });
+    });
+</script>
+
+</body>
+</html>

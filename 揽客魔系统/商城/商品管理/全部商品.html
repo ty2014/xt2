@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>全部商品</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan">
+
+<!--
+
+    商家登入，只展示商家的商品，无“全部、自营、商家”筛选项
+
+    再次上架，需判断
+    ①“商品分类”“商品品牌”是否停用或删除
+    ②勾选了“自提点”“分店邮寄”的，是否因为“删除”而使其关联为0。
+    以上两种情况需提示上架失败，对应问题位置去修改。
+
+-->
+
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>全部商品</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span class="sort"><i class="fa fa-sort"></i>排序</span>
+            <div class="top_tit">
+                <a href="#"><i class="filter-icon"></i><span>全部</span><em class="fa fa-caret-down"></em></a>
+                <ul>
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">自营</a></li>
+                    <li><a href="#">商家</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="60px">主图</th>
+                    <th width="250px">商品名称</th>
+                    <th width="150px">店铺</th>
+                    <th width="80px">分类</th>
+                    <th width="140px">售价（元）<i class="sort-icon"></i></th>
+                    <th width="100px">库存<i class="sort-icon"></i></th>
+                    <th width="100px">销量<i class="sort-icon"></i></th>
+                    <th width="140px">更新时间<i class="sort-icon"></i></th>
+                    <th width="80px">状态</th>
+                    <th width="80px">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="squ-pic"><img src="../../images/head.jpg" alt=""></td>
+                    <td class="left"><a href="" class="wrap-noml">纪梵希2019新款范冰冰力荐渐变果冻口红</a></td>
+                    <td class="left"><a href="">苏菲的小店</a> <span class="s-btn">自营</span></td>
+                    <td>美妆</td>
+                    <td class="right"><span class="s-btn">多价位</span>199.00</td>   <!-- 如果是区间价位，则展示最低价 -->
+                    <td>125</td>
+                    <td>20</td>
+                    <td class="date">2019-10-01 10:00:01</td>
+                    <td class="statu3">出售中</td>
+                    <td class="cz_btn">
+                        <button type="button">下架</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="squ-pic"><img src="../../images/head.jpg" alt=""></td>
+                    <td class="left"><a href="" class="wrap-noml">韩都衣舍轻薄羽绒服装</a></td>
+                    <td class="left"><a href="">变美服饰</a></td>
+                    <td>服饰</td>
+                    <td class="right"><span class="s-btn">+积分购</span>1999.00</td>
+                    <td>0</td>
+                    <td>259</td>
+                    <td class="date">2019-10-01 10:00:01</td>
+                    <td class="statu2">已售罄</td>
+                    <td class="cz_btn">
+                        <button type="button">下架</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="squ-pic"><img src="../../images/head.jpg" alt=""></td>
+                    <td class="left"><a href="" class="wrap-noml">【范冰冰同款】亮钻裸分圆头高跟鞋</a></td>
+                    <td class="left"><a href="">掌柜高跟鞋</a></td>
+                    <td>女鞋</td>
+                    <td class="right">899.90</td>
+                    <td>10</td>
+                    <td>19</td>
+                    <td class="date">2019-10-01 10:00:01</td>
+                    <td class="statu4">仓库中</td>
+                    <td class="cz_btn">
+                        <button type="button">上架</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="btm_page">
+            <div class="pages">
+                <div class="pages_num">
+                    <span>1</span>
+                    <span class="active">2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>99</span>
+                </div>
+                <div class="now_page">
+                    到第<input type="text" value="1">页<span class="sure">确定</span>
+                </div>
+                <select>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div>
+                <span><b>1 - 10</b></span>
+                <span>共<b>10</b>条</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            skin: 'layui-layer-rim', //加上边框
+            area: ['420px', '240px'], //宽高
+            content: '搜索字段：商品名称、分类、品牌、商品编码、自提点名称、配送方式（快递邮寄、到店自提）、筛选（多价位、+积分购、会员特权、周期限购、身份限购）、店铺【仅平台账号可搜索】'
+        });
+    });
+    $('#chutiyan .cz_btn button').on('click', function(){
+        layer.confirm('您确定要将此商品下架？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){}, function(){});
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义信息</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .slectList li{display: flex;align-items: center;margin-bottom: 10px;}
+        .slectList li .tishi2{cursor: pointer}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;">
+
+
+<div class="activity_set activity_set2 w-150">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">字段名称:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" class="" maxlength="8" placeholder="请输入名称，不超过8个字">
+                    <span class="num">0/8</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">字段属性:</span>
+            <div class="a_list_r chose_item">
+                <label for="type1" class="radio ">
+                    <div class="chose">
+                        <input type="radio" checked="" name="type" id="type1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">文本</span>
+                </label>
+                <label for="type2" class="radio ">
+                    <div class="chose">
+                        <input type="radio" name="type" id="type2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">选择</span>
+                </label>
+                <label for="type3" class="radio ">
+                    <div class="chose">
+                        <input type="radio" name="type" id="type3">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">日期</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list type2-cont" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div>
+                    <ul class="slectList">
+                        <li>
+                            <div class="showNumBox">
+                                <input type="text" maxlength="10" class="" placeholder="选项1">
+                                <span class="num">0/10</span>
+                            </div>
+                            <span class="tishi2">删除</span>
+                        </li>
+                        <li>
+                            <div class="showNumBox">
+                                <input type="text" maxlength="10" class="" placeholder="选项1">
+                                <span class="num">0/10</span>
+                            </div>
+                            <span class="tishi2">删除</span>
+                        </li>
+                    </ul>
+                    <span class="expired cursor mgT-10"><i class="layui-icon layui-icon-add-circle mgR-4 "></i>添加选项</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#type1,#type3').click(function (){
+        $('.type2-cont').hide();
+    })
+    $('#type2').click(function (){
+        $('.type2-cont').show();
+    })
+
+</script>
+</body>
+</html>

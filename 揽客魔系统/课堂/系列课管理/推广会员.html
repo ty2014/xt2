@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>推广会员</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">推广会员</div>
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line" style="display: flex;justify-content: space-between;align-items: flex-start;">
+        <div style="flex: 1;">
+            <div class="a_list">
+                <span class="a_list_l">推广会员:</span>
+                <div class="a_list_r">
+                    <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                            <label for="u-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    <span class="tishi">*开启则在系列课详情页面、课程页面引导用户加入会员</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">会员等级:</span>
+                <div class="a_list_r">引导用户加入
+                    <div class="select-text" style="margin: 0 8px;">
+                        <span class="select-txt">会员等级</span>
+                        <ul>
+                            <li>会员等级</li>
+                            <li>VIP</li>
+                            <li>合伙人</li>
+                            <li>联创人</li>
+                        </ul>
+                    </div>
+                    <span class="tishi">*仅给低于该会员等级的用户展示“加入会员”</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">引导话术:</span>
+                <div class="a_list_r">
+                    <input type="text" value="邀请你加入会员 跟我们一起学习" placeholder="" style="width: 300px;" maxlength="16">
+                    <span class="tishi">*不超过16个字符</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">跳转链接:</span>
+                <div class="a_list_r">
+                    <input type="text" placeholder="*默认跳转会员介绍页面" style="flex: 1;">
+                    <span class="tishi">*用户点击“加入会员”将跳转的页面</span>
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 40px;white-space: nowrap;">
+            <img src="http://cshtml.lkmsxy.com/csimg/xlk_tg1.png" alt="" style="width: 220px;;">
+            <img src="http://cshtml.lkmsxy.com/csimg/xlk_tg2.png" alt="" style="width: 220px;margin-left: 20px;">
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '506px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .add_key').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '渠道优惠',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '渠道优惠价-添加.html' //iframe的url
+        });
+    });
+    $('#chutiyan .edit_tips').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '渠道优惠',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '渠道优惠价-编辑.html' //iframe的url
+        });
+    });
+    $('#chutiyan .ff_num').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '发券记录：营销6个步骤',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '渠道优惠价-配置-发券记录.html' //iframe的url
+        });
+    });
+
+</script>
+
+</body>
+</html>

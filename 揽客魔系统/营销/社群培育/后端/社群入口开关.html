@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>社群入口开关</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+
+</head>
+<body id="chutiyan" style="background: #f8f8f8!important;">
+
+<div class="gz-content">
+    <p class="title">社群入口开关</p>
+    <div class="head-content w-100">
+
+        <div class="cont_list">
+            <!--    默认是关；开启后个人中心才显示入口。    -->
+            <span class="list_tit">个人中心入口：</span>
+            <div class="list_cont">
+                <div class="htmleaf-content">
+                    <div class="checkbox" id="u-togg">
+                        <input type="checkbox"/>
+                        <label></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont_list xz-cont">
+            <!--   按分组和人，只有指定的等级人才显示入口 ；   -->
+            <span class="list_tit">无限制显示：</span>
+            <div class="list_cont">
+                <div class="htmleaf-content">
+                    <div class="checkbox" id="togg">
+                        <input type="checkbox" checked/>
+                        <label></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="xz-cont2">
+            <div class="cont_list">
+                <span class="list_tit">可显示等级：</span>
+                <div class="list_cont chose_item">
+                    <label for="vip1" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">普通会员</span>
+                    </label>
+                    <label for="vip2" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">白银会员</span>
+                    </label>
+                    <label for="vip3" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip3" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">铂金会员</span>
+                    </label>
+                    <label for="vip4" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip4" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">钻石会员</span>
+                    </label>
+                </div>
+            </div>
+            <div class="cont_list">
+                <span class="list_tit">可显示会员：</span>
+                <div class="list_cont"><input type="text" readonly placeholder="设置指定用户">&nbsp;已包含4人</div>
+            </div>
+        </div>
+
+
+        <div class="cont_list">
+            <span class="list_tit">我的社群URL：</span>
+            <div class="list_cont">http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/index.html</div>
+        </div>
+
+        <div class="btn-list align-left"><span class="btn btn-sure">保存</span></div>
+    </div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script>
+    //   请完善一下 js 开关联动问题。
+
+
+    $('.xz-cont,.xz-cont2').hide();
+    $(function () {
+        if($('#u-togg > input').is(':checked')){$('.xz-cont').show();}else{
+            $('.xz-cont').hide();
+            $('.xz-cont2').hide();
+        }
+        if($('#togg > input').is(':checked')){$('.xz-cont2').hide()}else{
+            $('.xz-cont2').show()
+        }
+    });
+
+    $('#u-togg').click(function () {$('.xz-cont').toggle();});
+    $('#togg').click(function () {$('.xz-cont2').toggle();});
+</script>
+
+</body>
+</html>

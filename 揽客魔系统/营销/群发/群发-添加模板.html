@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加模板</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/qf.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">新建项目</div>
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">项目名称:</span>
+            <div class="a_list_r"><input type="text"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">选择人群:</span>
+            <div class="a_list_r">
+                <div class="select-text select-user">
+                    <span class="select-txt">请选择</span>
+                    <ul>
+                        <li>等级</li>
+                        <li>系列课</li>
+                        <li>文章</li>
+                        <li>商品</li>
+                        <li>标签</li>
+                    </ul>
+                </div>
+                <span class="tishi">*对勾选的用户发送信息</span>
+            </div>
+        </div>
+        <!--  选择了‘等级’，则此内容显示，默认隐藏  -->
+        <div class="a_list dj-cont" style="display: none">
+            <span class="a_list_l">等级:</span>
+            <div class="a_list_r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">学员</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">VIP</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">合伙</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">联创</span>
+                </label>
+                <label for="vip5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <!--  选择了‘系列课、文章、商品’，则此内容显示 ，默认隐藏 -->
+        <div class="a_list list-cont" style="display: none">
+            <!--  span 标签内容是可变动的，如果选的是‘系列课’，则这里显示‘系列课’，其它同样  -->
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">系列课:</span>
+            <div class="a_list_r">
+                <div style="font-size: 0">
+                    <span class="set-user xlk-sxbtn">筛选</span>
+                    <div class="filter-content w-620">
+                        <div class="filter-top">
+                            <span class="top-l">已选择<em>4</em>节系列课</span>
+                            <p class="top-r"><span class="lists-edit">编辑</span></p>
+                        </div>
+                        <ul class="filter-lists">
+                            <li>直播疯狂掘金：后端变现：怎么从后端赚到100倍利润直播疯狂掘金：后端变现：怎么从后端赚到100倍利润</li>
+                            <li>直播疯狂掘金：后端变现：怎么从后端赚到100倍利润直播疯狂掘金：后端变现：怎么从后端赚到100倍利润</li>
+                            <li>直播疯狂掘金：后端变现：怎么从后端赚到100倍利润直播疯狂掘金：后端变现：怎么从后端赚到100倍利润</li>
+                            <li>直播疯狂掘金：后端变现：怎么从后端赚到100倍利润直播疯狂掘金：后端变现：怎么从后端赚到100倍利润</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  选择了‘标签’，则此内容显示，默认隐藏  -->
+        <div class="a_list tips-cont" style="display: none">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">标签:</span>
+            <div class="a_list_r">
+                <div style="font-size: 0">
+                    <span class="set-user bq-sxbtn">筛选</span>
+                    <div class="filter-content w-620">
+                        <div class="filter-top">
+                            <span class="top-l">已选择<em>16</em>个标签</span>
+                            <p class="top-r"><span class="tips-edit">编辑</span></p>
+                        </div>
+                        <ul class="filter-tips">
+                            <li>家装建材</li>
+                            <li>互联网营销</li>
+                            <li>抖音</li>
+                            <li>直播疯狂掘金</li>
+                            <li>裂变拓客</li>
+                            <li>直播疯狂掘金</li>
+                            <li>家装建材</li>
+                            <li>家装建材</li>
+                            <li>家装建材</li>
+                            <li>家装建材</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">指定发送:</span>
+            <div class="a_list_r"><span class="set-user zd-user" style="margin-right: 16px;">设置指定用户</span>已包含10人<span class="tishi">*发送信息给指定用户</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">排除对象:</span>
+            <div class="a_list_r"><span class="set-user pc-user" style="margin-right: 16px;">设置指定用户</span>已排除0人<span class="tishi">*指定用户不发送信息，包括黑名单用户</span></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('.select-user li').click(function () {
+        var txt=$(this).text();
+        console.log(txt);
+        if(txt==='等级'){
+            $('.dj-cont').show();
+            $('.list-cont').hide();
+            $('.tips-cont').hide();
+        }else if(txt==='标签'){
+            $('.tips-cont').show();
+            $('.dj-cont').hide();
+            $('.list-cont').hide();
+        }else if(txt==='系列课'){
+            $('.list-cont').show();
+            $('.dj-cont').hide();
+            $('.tips-cont').hide();
+            $('.list-cont .a_list_l').text('系列课');
+        }else if(txt==='文章'){
+            $('.list-cont').show();
+            $('.dj-cont').hide();
+            $('.tips-cont').hide();
+            $('.list-cont .a_list_l').text('文章');
+        }else if(txt==='商品'){
+            $('.list-cont').show();
+            $('.dj-cont').hide();
+            $('.tips-cont').hide();
+            $('.list-cont .a_list_l').text('商品');
+        }
+    });
+
+    $('.filter-tips li').addClass('hover');
+    // 系列课
+    $('body').on('click','.lists-edit',function () {
+        $(this).parents('.filter-top').siblings('.filter-lists').children('li').prepend('<span class="del-lists"><i class="fa fa-trash"></i>删除</span>');
+        $(this).parent('.top-r').html('<span class="lists-cancel">取消</span><span class="lists-sure">完成</span>')
+    });
+    $('body').on('click','.lists-cancel,.lists-sure',function () {
+        $(this).parents('.filter-top').siblings('.filter-lists').find('.del-lists').remove();
+        $(this).parent('.top-r').html('<span class="lists-edit">编辑</span>')
+    });
+    //  标签
+    $('body').on('click','.tips-edit',function () {
+        $(this).parents('.filter-top').siblings('.filter-tips').children('li').append('<span class="del-tips">×</span>');
+        $(this).parent('.top-r').html('<span class="tips-cancel">取消</span><span class="tips-sure">完成</span>')
+    });
+    $('body').on('click','.tips-cancel,.tips-sure',function () {
+        $(this).parents('.filter-top').siblings('.filter-tips').find('.del-tips').remove();
+        $(this).parent('.top-r').html('<span class="tips-edit">编辑</span>')
+    });
+    $('#chutiyan').on('click',' .del-lists', function(){
+        layer.confirm('是否确定删除该条系列课？', {
+            btn: ['取消','确定']
+        }, function(index){
+            layer.close(index);
+        }, function(){
+            layer.msg('删除成功', {time: 1000});
+        });
+    });
+    $('#chutiyan').on('click',' .del-tips', function(){
+        layer.confirm('是否确定删除该标签？', {
+            btn: ['取消','确定']
+        }, function(index){
+            layer.close(index);
+        }, function(){
+            layer.msg('删除成功', {time: 1000});
+        });
+    });
+
+    $('#chutiyan .xlk-sxbtn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '系列课',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '系列课筛选.html' //iframe的url
+        });
+    });
+    $('#chutiyan .bq-sxbtn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '../../标签筛选.html' //iframe的url
+        });
+    });
+    $('#chutiyan .zd-user,#chutiyan .pc-user').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '会员选择',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '选择用户.html' //iframe的url
+        });
+    });
+
+</script>
+
+</body>
+</html>

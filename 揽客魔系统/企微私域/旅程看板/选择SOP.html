@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅程SOP</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .activity_set .a_list{transition: unset;}
+        .toggBtn i{margin-left: 10px;}
+        .r-title{position: sticky;top: 0;left: 0;z-index: 2;background: #fff;}
+        .r-title .addSOP{font-size: 14px;margin-left: 20px;}
+        .null-msg img{width: 150px;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="activity_set activity_set3">
+    <div class="b-line">
+        <div class="a_list sticky top0">
+            <div class="a_list_r r-title">
+                <span class="toggBtn cursor">客户认识阶段<i class="layui-icon layui-icon-up"></i></span>
+                <a class="addSOP">添加SOP</a>
+            </div>
+        </div>
+        <div class="a_list toggBtnCont">
+            <div class="a_list_r">
+                <div class="tsmsgLists">
+                    <div class="item">
+                        <div class="head">
+                            <p class="date">联创人文案辅导群</p>
+                            <div class="btns">
+                                <button class="del"><i class="layui-icon layui-icon-delete"></i>删除</button>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <span>创建时间：</span>
+                            <p>2020-12-20 14:45:25</p>
+                        </div>
+                        <div class="cont">
+                            <span>状态：</span>
+                            <p class="notExpired">执行中</p>
+                        </div>
+                        <div class="center"><span class="tishi mgL-0 cursor sopDetail">点击查看详情 ></span></div>
+                    </div>
+                    <div class="item">
+                        <div class="head">
+                            <p class="date">联创人文案辅导群2</p>
+                            <div class="btns">
+                                <button class="del"><i class="layui-icon layui-icon-delete"></i>删除</button>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <span>创建时间：</span>
+                            <p>2020-12-20 14:45:25</p>
+                        </div>
+                        <div class="cont">
+                            <span>状态：</span>
+                            <p class="expired">已暂停</p>
+                        </div>
+                        <div class="center"><span class="tishi mgL-0 cursor sopDetail">点击查看详情 ></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list sticky top0">
+            <div class="a_list_r r-title">
+                <span class="toggBtn cursor">客户了解阶段<i class="layui-icon layui-icon-up"></i></span>
+                <a class="addSOP">添加SOP</a>
+            </div>
+        </div>
+        <div class="a_list toggBtnCont">
+            <div class="a_list_r">
+                <div class="null-msg max_width"><img src="../../images/null-msg.png" alt=""><p>暂无SOP，<a class="tip_btn addSOP">去添加</a></p></div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list sticky top0">
+            <div class="a_list_r r-title">
+                <span class="toggBtn cursor">客户认可阶段<i class="layui-icon layui-icon-up"></i></span>
+                <a class="addSOP">添加SOP</a>
+            </div>
+        </div>
+        <div class="a_list toggBtnCont">
+            <div class="a_list_r">
+                <div class="null-msg max_width"><img src="../../images/null-msg.png" alt=""><p>暂无SOP，<a class="tip_btn addSOP">去添加</a></p></div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list sticky top0">
+            <div class="a_list_r r-title">
+                <span class="toggBtn cursor">客户购买阶段<i class="layui-icon layui-icon-up"></i></span>
+                <a class="addSOP">添加SOP</a>
+            </div>
+        </div>
+        <div class="a_list toggBtnCont">
+            <div class="a_list_r">
+                <div class="null-msg max_width"><img src="../../images/null-msg.png" alt=""><p>暂无SOP，<a class="tip_btn addSOP">去添加</a></p></div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list sticky top0">
+            <div class="a_list_r r-title">
+                <span class="toggBtn cursor">客户复购阶段<i class="layui-icon layui-icon-up"></i></span>
+                <a class="addSOP">添加SOP</a>
+            </div>
+        </div>
+        <div class="a_list toggBtnCont">
+            <div class="a_list_r">
+                <div class="null-msg max_width"><img src="../../images/null-msg.png" alt=""><p>暂无SOP，<a class="tip_btn addSOP">去添加</a></p></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layer.photos({
+        photos: '.layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+    $('.toggBtn').on('click',function (){
+        var icon = $(this).find('.layui-icon');
+        $(this).toggleClass('on');
+        if($(this).hasClass('on')){
+            icon.removeClass('layui-icon-up').addClass('layui-icon-down')
+        }else{
+            icon.removeClass('layui-icon-down').addClass('layui-icon-up')
+        }
+        $(this).parent().parent().siblings('.toggBtnCont').slideToggle('fast')
+    })
+    $('.addSOP').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: '旅程名称1',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '企微私域/SOP列表.html' //iframe的url
+        });
+    });
+    $('.sopDetail').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: 'SOP：联创人文案辅导群',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '企微私域/互动留存/SOP推送详情.html' //iframe的url
+        });
+    });
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>课程安排</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">活动安排</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+        </div>
+        <div class="tab_type_2"><span class="tab-tips add_btn"><i class="fa fa-plus"></i>添加</span></div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="450px">操作</th>
+                        <th width="250px">线下活动名称</th>
+                        <th width="100px">线下活动状态</th>
+                        <th width="250px">活动安排名称</th>
+                        <th width="100px">上课人数限制</th>
+                        <th width="100px">预约次数</th>
+                        <th width="120px">预约上课人数</th>
+                        <th width="140px">课程开始时间</th>
+                        <th width="140px">课程截止时间</th>
+                        <th width="140px">签到开始时间</th>
+                        <th width="140px">签到截止时间</th>
+                        <th width="100px">状态</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="450px" class="cz_btn">
+                            <button type="button" class="btn-type1 edit-btn">编辑</button>
+                            <button type="button" class="bm-person">报名人</button>
+                            <button type="button" class="class-list">上课名单</button>
+                            <button type="button" class="submit-list">未提交名单</button>
+                            <button type="button" class="dx-send">发送短信</button>
+                        </td>
+                        <td width="250px"><div class="wrap-noml">揽客魔.百万客流爆破营</div></td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="250px"><a href="">百万客流爆破营第二十期</a></td>
+                        <td width="100px">2</td>
+                        <td width="100px"><a >1</a></td>
+                        <td width="120px"><a >0</a></td>
+                        <td width="140px" class="date"><div>2019-09-15 00:00:00</div></td>
+                        <td width="140px" class="date"><div>2019-09-15 00:00:00</div></td>
+                        <td width="140px" class="date"><div>2019-09-15 00:00:00</div></td>
+                        <td width="140px" class="date"><div>2019-09-15 00:00:00</div></td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="btm_page2">
+        <div class="pages">
+            <div class="pages_num">
+                <span class="prev">上一页</span>
+                <span>1</span>
+                <span class="page-default">...</span>
+                <span>50</span>
+                <span class="active">51</span>
+                <span>52</span>
+                <span class="page-default">...</span>
+                <span>100</span>
+                <span class="next">下一页</span>
+            </div>
+            <!--  当输入好多页后，确定按钮才添加类名 active  -->
+            <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+        </div>
+        <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+            <div class="select-text">
+                <span class="select-txt">10</span>
+                <ul>
+                    <li>10</li>
+                    <li>20</li>
+                    <li>50</li>
+                    <li>100</li>
+                </ul>
+            </div>条
+        </div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '课程安排管理',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '90%'],
+            content: '课程安排管理.html' //iframe的url
+        });
+    });
+    $('#chutiyan .dx-send').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '短信管理',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '90%'],
+            content: '短信管理.html' //iframe的url
+        });
+    });
+    $('#chutiyan .edit-btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '课程安排管理',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '课程安排-编辑.html' //iframe的url
+        });
+    });
+    $('#chutiyan .bm-person').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '报名人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '90%'],
+            content: '报名人.html' //iframe的url
+        });
+    });
+    $('#chutiyan .class-list').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '上课名单',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '90%'],
+            content: '上课名单.html' //iframe的url
+        });
+    });
+    $('#chutiyan .submit-list').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '未提交名单',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '90%'],
+            content: '未提交名单.html' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

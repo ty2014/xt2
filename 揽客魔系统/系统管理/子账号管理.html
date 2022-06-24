@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子账号管理</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+        .zhList{display: flex;flex-wrap: wrap;margin: -8px;}
+        .zhList li{transition: all linear .2s;width: 320px;height: 150px;border-radius: 2px;padding: 24px;background: #fff;border: 1px solid #efefef;margin: 8px;cursor: pointer;font-size: 14px;color: #333;position: relative;}
+        .zhList.type1 li.active{border-color: #f00}
+        .zhList.type2 li.active{border-color: #f80}
+        .zhList li.active:after{content: "\e605";display: block;position: absolute;top: 0;right: 0;z-index: 2;padding: 2px 2px 14px 16px;background: #f80;color: #fff;}
+        .zhList li.active:before{content: "";display: block;position: absolute;top: 0;right: 0;z-index: 3;border-bottom: 32px solid #fff;border-right: 32px solid transparent;}
+        .zhList.type1 li.active:after{background: #f00}
+        .zhList.type2 li.active:after{background: #f80}
+
+        .zhList li i{font-size: 14px;margin-right: 10px;}
+        .zhList.type1 li i{color: #f00;}
+        .zhList.type2 li i{color: #f80;}
+        .zhList li p:last-child{margin-top: 20px;white-space: normal !important; display: -webkit-box !important; -webkit-line-clamp: 3; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical;}
+
+
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<div class="content">
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="fa fa-search"></i>搜索</span>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>新增子账号</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="100px">账号</th>
+                        <th width="200px" class="left">成员信息</th>
+                        <th width="100px">角色</th>
+                        <th width="100px">是否启用</th>
+                        <th width="150px" class="left">描述</th>
+                        <th width="150px">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="100px">18328049763</td>
+                        <td width="200px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../images/null.jpg" alt="">
+                                <a class="wrap-noml">郑先生</a>
+                            </div>
+                        </td>
+                        <td width="100px">管理员（子账号）</td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="150px" class="left">全功能使用</td>
+                        <td width="150px" class="cz_btn">
+                            <button type="button" class="">编辑</button>
+                            <button type="button" class="btn-type2 del_btn">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" style="display: none">
+    <div class="account-cont account-cont2 w-100">
+        <div class="account">
+            <span class="account-l">账号:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">成员昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">角色:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="statu1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="statu2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $(".account-box")
+        });
+    });
+
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '添加子账号',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../../系统管理/子账号管理-添加.html' //iframe的url
+        });
+    });
+
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del_btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('删除该条数据？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px',
+                title:'提醒'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+
+</script>
+</body>
+</html>

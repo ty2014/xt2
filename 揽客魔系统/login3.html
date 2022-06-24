@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欢迎登录</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/7f7b5fa9f2.js" crossorigin="anonymous"></script>
+    <style>
+        body, html {width: 100%;height: 100%;}
+        .loginContainer{height: 100%;}
+        .logo{position: absolute;top: 3%;left: 2%;z-index: 1;width: 160px;cursor: pointer;}
+        .login-wrapper{display: flex;align-items: center;justify-content: center;height: 100%;}
+        .login-bg{background-image: url(https://wechatapppro-1252524126.file.myqcloud.com/appPYtT9SmK6848/image/b_u_5b2225aa46488_oGKN7IvA/kvm6v93g068t.png);-webkit-background-size: cover;background-size: cover;background-position: center;position: absolute;min-height: 730px;width: 100%;height: 100%;top: 0;left: 0;z-index: -1;}
+        .login-bg-content{z-index: 8;width: 680px;min-width: 680px;margin-right: 88px;}
+        .login-bg-content img{width: 100%;height: 100%;}
+
+        .login-container,.register-container,.forgot-container,.bindPhone-container{width: 408px;min-width: 408px;height: 496px;border-radius: 8px;padding: 64px 40px 40px 40px;background: #fff;position: relative;-webkit-box-shadow: 0 8px 24px 0 rgba(42,94,173,.06);box-shadow: 0 8px 24px 0 rgba(42,94,173,.06);}
+        .picture-tag {position: absolute;right: 0;top: 0;display: flex;justify-content: flex-start;}
+        .picture-tag .picture-icon {position: relative;top: 0;width: 72px;height: 72px;cursor: pointer;}
+        .btn-wx-tips {position: absolute;right: 72px;top: 22px;height: 28px;background: url(https://wechatapppro-1252524126.file.myqcloud.com/appAKLWLitn7978/image/b_u_5b2225aa46488_oGKN7IvA/ky2mz4yl0px8.png) no-repeat 0 0;-webkit-background-size: 100% 100%;background-size: 100% 100%;line-height: 28px;font-size: 14px;color: #1472FF;padding: 0 16px 0 8px}
+        .login-nav{display: flex;position: relative;}
+        .login-nav p{position: relative;margin-right: 40px;cursor: pointer;font-weight: 700;font-family: "PingFang SC";color: #666;font-size: 20px;}
+        .login-nav p.active{color: #333;}
+        .login-nav p span{
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            display: inline-block;
+            width: 0;
+            height: 3px;
+            -webkit-border-radius: 7px;
+            border-radius: 7px;
+            -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+            background-color: #1472FF;
+        }
+        .login-nav p.active span{width: 100%}
+        .login-nav a{position: absolute;top: 4px;right: 0;margin-left: 160px;color: #1472FF;font-size: 14px;}
+
+        .account-login-wrapper,.verify-login-wrapper,.verify-register-wrapper{margin-top: 40px;}
+
+        .form-cont{}
+        .form-cont .item{margin-bottom: 32px;position: relative;height: 40px;}
+        .form-cont .item input{
+            font-size: 14px;
+            outline: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            width: 100%;
+            line-height: 40px;
+            height: 40px;
+            display: block;
+            padding: 0 0 0 12px;
+            border-radius: 4px;
+            border: 1px solid #d4d9e2;
+            background: transparent;
+            color: #333;
+            transition: all 0.2s linear;
+        }
+        .form-cont .item .deleteInput-icon{position: absolute;right: 16px;top: 50%;transform: translateY(-50%);line-height: 1;}
+        .form-cont .item .deleteInput-icon a{font-size: 14px;color: #1472ff;cursor: pointer;}
+        .form-cont .item .deleteInput-icon i{font-size: 16px;color: #B2B2B2;cursor: pointer;}
+        .form-cont .item .deleteInput-icon .fa-xmark{margin-left: 10px;}
+        .form-cont .item .inputAlert{color: #ff2929;font-size: 14px;margin: 0;line-height: 12px;position: absolute;bottom: -20px;}
+        /* 当填充的时候展示红色，所以这里默认是校验失败 */
+        .form-cont .item input:valid{
+            /*border-color: hsl(120, 33%, 35%);*/
+        }
+        /* 当验证成功的时候，采用这个样式 */
+        .form-cont .item input:invalid{
+            border-color: hsl(0, 76%, 50%);
+        }
+
+        .account-operate{display: flex;align-items: center;}
+        .account-operate a{font-size: 14px;color: #999;}
+
+        .checked{color: #999;}
+        .checked .chose, .checked .checked-bg, .checked input:checked+.checked-bg{height: 16px;width: 16px;}
+        .checked .msg_set_txt {margin-left: 4px;}
+
+        .account-foot{position: absolute;bottom: 40px;text-align: center;left: 40px;right: 40px;}
+        .login-btn{line-height: 40px;height: 40px;font-size: 16px;color: #fff;text-align: center;cursor: pointer;border-radius: 4px;background: #1472ff;margin-top: 16px;}
+        .account-des {color: #666;font-size: 14px;margin-top: 16px;}
+        .account-des a{color: #1472FF;}
+
+        .qrcode-wrapper .login-qrcode-back-Img-box {
+            margin: 30px auto 0;
+            width: 200px;
+            height: 200px;
+            display: block;
+            position: relative;
+        }
+        .qrcode-wrapper .login-qrcode-back-Img-box .qrcode-img{
+            width: 188px;
+            height: 188px;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+        }
+        .qrcode-wrapper .wx-tip {
+            color: #999999;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: "PingFang SC";
+            text-align: center;
+            margin: 0;
+            margin-top: 56px;
+        }
+
+        .register-container .wx-tip{margin-top: 24px;}
+        .register-operate{display: flex;align-items: center;color: #999999;font-size: 14px;}
+        .register-operate a{color: #1472FF;}
+
+        .fa-eye{display: none}
+    </style>
+</head>
+<body style="padding: 0">
+
+<div class="lkmui-message lkmui-message--error" style="">
+    <p class="lkmui-message_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</p>
+</div>
+
+<div class="loginContainer">
+    <!--  LOGO  -->
+    <img src="images/LOGO4.png" alt="" title="" class="logo">
+    <!--  主体  -->
+    <div class="login-wrapper">
+        <!--  背景图  -->
+        <div class="login-bg"></div>
+        <!--  左侧背景  -->
+        <div class="login-bg-content">
+            <img src="images/bg-login.png" class="login-backGround-img-logo">
+        </div>
+        <!--  登录主体  -->
+        <div class="login-container">
+            <!--  账号登录  -->
+            <div class="account-wrapper txt-login-wrapper">
+                <!--  右上角切换图标  -->
+                <div class="picture-tag">
+                    <img src="https://wechatapppro-1252524126.file.myqcloud.com/appPYtT9SmK6848/image/b_u_5b2225aa46488_oGKN7IvA/kurqwzw10sp5.png" class="picture-icon wx-icon">
+                </div>
+                <div class="btn-wx-tips">
+                    <span>微信扫码登录</span>
+                </div>
+                <!--  切换内容  -->
+                <div class="login-nav">
+                    <p class="account-title-item active">密码登录<span></span></p>
+                    <p class="verify-title-item">验证码登录<span></span></p>
+                </div>
+                <div>
+                    <div class="account-login-wrapper">
+                        <div class="form-cont">
+                            <div class="item">
+                                <input placeholder="手机号/帐号" type="text" pattern="^1[3456789]\d{9}$" required>
+                                <div class="deleteInput-icon">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <p class="inputAlert">请输入正确的手机号</p>
+                            </div>
+                            <div class="item">
+                                <input placeholder="密码" type="password" value="123456">
+                                <div class="deleteInput-icon">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <p class="inputAlert hide">请输入密码</p>
+                            </div>
+                        </div>
+                        <div class="account-operate">
+                            <label for="statu1" class="checked">
+                                <div class="chose">
+                                    <input type="checkbox" name="statu" id="statu1" />
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">记住密码</span>
+                            </label>
+                            <a class="forgot_pwd" style="margin-left: auto">忘记密码</a>
+                        </div>
+                        <div class="account-foot">
+                            <div class="login-btn" onclick="javaScript:window.location.href = 'index4.html'">登录</div>
+                            <p class="account-des"><a class="registerBtn">免费注册</a></p>
+                        </div>
+                    </div>
+                    <div class="verify-login-wrapper hide">
+                        <div class="form-cont">
+                            <div class="item">
+                                <input placeholder="请输入手机号" type="text" required>
+                                <div class="deleteInput-icon">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <p class="inputAlert">请输入手机号</p>
+                            </div>
+                            <div class="item">
+                                <input placeholder="验证码" type="password" required>
+                                <div class="deleteInput-icon">
+                                    <a href="#">获取验证码</a>
+                                </div>
+                                <p class="inputAlert ">请输入验证码</p>
+                            </div>
+                        </div>
+                        <div class="account-foot">
+                            <div class="login-btn" onclick="javaScript:window.location.href = 'index4.html'">登录</div>
+                            <p class="account-des"><a class="registerBtn">免费注册</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  微信扫码登录  -->
+            <div class="account-wrapper wx-login-wrapper hide">
+                <!--  右上角切换图标  -->
+                <div class="picture-tag">
+                    <img src="https://wechatapppro-1252524126.file.myqcloud.com/appPYtT9SmK6848/image/b_u_5b2225aa46488_oGKN7IvA/kurqwzw408p6.png" class="picture-icon account-icon">
+                </div>
+                <div class="btn-wx-tips">
+                    <span>账号登录</span>
+                </div>
+                <!--  切换内容  -->
+                <div class="login-nav">
+                    <p class="wx-title-item active">微信扫码登录</p>
+                </div>
+                <div>
+                    <div class="qrcode-wrapper">
+                        <div class="login-qrcode-back-Img-box">
+                            <img src="images/kuw0obq60e6q.png" class="login-qrcode-back-Img">
+                            <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="" class="qrcode-img">
+                        </div>
+                        <p class="wx-tip">微信扫码登录知识店铺</p>
+                        <div class="account-foot">
+                            <p class="account-des"><a class="registerBtn">免费注册</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  忘记密码  -->
+        <div class="forgot-container hide">
+            <div class="account-wrapper">
+                <div class="login-nav">
+                    <p class="wxQe-title-item active">重设密码</p>
+                </div>
+                <div>
+                    <div class="verify-register-wrapper ">
+                        <div class="form-cont">
+                            <div class="item">
+                                <input placeholder="请输入手机号" type="text" required>
+                                <div class="deleteInput-icon">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <p class="inputAlert">请输入手机号</p>
+                            </div>
+                            <div class="item">
+                                <input placeholder="验证码" type="password" required>
+                                <div class="deleteInput-icon">
+                                    <a href="#">获取验证码</a>
+                                </div>
+                                <p class="inputAlert ">请输入验证码</p>
+                            </div>
+                            <div class="item">
+                                <input placeholder="新密码：6-16字，同时包含数字和字母" type="password">
+                                <div class="deleteInput-icon">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <p class="inputAlert hide">请输入密码</p>
+                            </div>
+                        </div>
+                        <div class="account-foot">
+                            <div class="login-btn">保存</div>
+                            <p class="account-des"><a class="loginBtn">返回密码登录</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  注册主体  -->
+        <div class="register-container hide">
+            <div class="account-wrapper qeRgCont">
+                <div class="login-nav">
+                    <p class="wxQe-title-item active">微信扫码注册</p>
+                    <a class="loginBtn">登录></a>
+                </div>
+                <div>
+                    <!--  扫码注册  -->
+                    <div class="qrcode-wrapper wx-register-wrapper">
+                        <div class="login-qrcode-back-Img-box">
+                            <img src="images/kuw0obq60e6q.png" class="login-qrcode-back-Img">
+                            <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="" class="qrcode-img">
+                        </div>
+                        <p class="wx-tip">微信扫码创建知识店铺</p>
+                        <div class="account-foot">
+                            <p class="account-des"><a class="changePhoneRg" style="color: #999;">切换至手机号注册></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account-wrapper phoneRgCont hide">
+                <div class="login-nav">
+                    <p class="wxQe-title-item active">手机号注册</p>
+                    <a class="changeQeRg" style="color: #999;">微信扫码注册></a>
+                </div>
+                <div>
+                    <div class="verify-register-wrapper ">
+                        <div class="form-cont">
+                            <div class="item">
+                                <input placeholder="请输入手机号" type="text" required>
+                                <div class="deleteInput-icon">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <p class="inputAlert">请输入手机号</p>
+                            </div>
+                            <div class="item">
+                                <input placeholder="验证码" type="password" required>
+                                <div class="deleteInput-icon">
+                                    <a href="#">获取验证码</a>
+                                </div>
+                                <p class="inputAlert ">请输入验证码</p>
+                            </div>
+                        </div>
+                        <div class="account-foot">
+                            <div class="register-operate">
+                                <label for="statu2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="statu" id="statu2" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">已阅读并同意</span>
+                                </label>
+                                <a href="https://admin.xiaoe-tech.com/charge_protocol_page" target="_blank">客流猫服务协议</a>及
+                                <a href="https://admin.xiaoe-tech.com/privacy_protocol_page" target="_blank">个人信息保护政策</a>
+                            </div>
+                            <div class="login-btn">创建知识店铺</div>
+                            <p class="account-des"><a class="loginBtn">登录</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  绑定手机号  -->
+        <div class="bindPhone-container hide">
+            <div class="account-wrapper phoneRgCont">
+                <div class="login-nav">
+                    <p class="wxQe-title-item active">绑定手机号</p>
+                </div>
+                <div>
+                    <div class="verify-register-wrapper ">
+                        <div class="form-cont">
+                            <div class="item">
+                                <input placeholder="请输入手机号" type="text" required>
+                                <div class="deleteInput-icon">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <p class="inputAlert">请输入手机号</p>
+                            </div>
+                            <div class="item">
+                                <input placeholder="验证码" type="password" required>
+                                <div class="deleteInput-icon">
+                                    <a href="#">获取验证码</a>
+                                </div>
+                                <p class="inputAlert ">请输入验证码</p>
+                            </div>
+                        </div>
+                        <div class="account-foot">
+                            <div class="register-operate">
+                                <label for="statu2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="statu" id="statu2" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">已阅读并同意</span>
+                                </label>
+                                <a href="https://admin.xiaoe-tech.com/charge_protocol_page" target="_blank">客流猫服务协议</a>及
+                                <a href="https://admin.xiaoe-tech.com/privacy_protocol_page" target="_blank">个人信息保护政策</a>
+                            </div>
+                            <div class="login-btn">立即注册</div>
+                            <p class="account-des"><a class="loginBtn">登录</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script>
+
+    $('.fa-eye').click(function (){
+        $(this).hide();
+        $(this).siblings('.fa-eye-slash').show();
+        $(this).parent().siblings('input').attr('type','password')
+    })
+    $('.fa-eye-slash').click(function (){
+        $(this).hide();
+        $(this).siblings('.fa-eye').show();
+        $(this).parent().siblings('input').attr('type','text')
+    })
+
+    // 密码、验证码登录切换
+    $('.account-title-item').click(function (){
+        $('.account-login-wrapper').show();
+        $('.verify-login-wrapper').hide();
+        $(this).addClass('active');
+        $('.verify-title-item').removeClass('active')
+    })
+    $('.verify-title-item').click(function (){
+        $('.account-login-wrapper').hide();
+        $('.verify-login-wrapper').show();
+        $(this).addClass('active');
+        $('.account-title-item').removeClass('active')
+    })
+
+    // 登录方式切换
+    $('.wx-icon').click(function (){
+        $('.txt-login-wrapper').hide();
+        $('.wx-login-wrapper').show();
+    })
+    $('.account-icon').click(function (){
+        $('.wx-login-wrapper,.verify-login-wrapper').hide();
+        $('.txt-login-wrapper,.account-login-wrapper').show();
+        $('.account-title-item').addClass('active');
+        $('.verify-title-item').removeClass('active');
+    })
+
+    // 忘记密码
+    $('.forgot_pwd').click(function (){
+        $('.forgot-container').show();
+        $('.login-container').hide();
+    })
+
+    // 注册
+    $('.registerBtn').click(function (){
+        $('.login-container,.phoneRgCont').hide();
+        $('.register-container,.qeRgCont').show();
+    })
+
+    // 切换登录按钮
+    $('.loginBtn').click(function (){
+        $('.login-container,.txt-login-wrapper,.account-login-wrapper').show();
+        $('.register-container,.forgot-container,.wx-login-wrapper,.verify-login-wrapper').hide();
+        $('.account-title-item').addClass('active');
+        $('.verify-title-item').removeClass('active')
+    })
+    // 切换手机号注册
+    $('.changePhoneRg').click(function (){
+        $('.phoneRgCont').show();
+        $('.qeRgCont').hide();
+    })
+    // 切换扫码注册
+    $('.changeQeRg').click(function (){
+        $('.phoneRgCont').hide();
+        $('.qeRgCont').show();
+    })
+
+
+
+</script>
+
+
+</body>
+</html>

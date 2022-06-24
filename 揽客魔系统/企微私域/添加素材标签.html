@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加标签</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/newStyle.css"/>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<div class="activity_set activity_set2">
+    <div class="b-line" style="border-bottom: none">
+        <div class="a_list ">
+            <div class="a_list_r">
+                <div class="qwTips">
+                    <span class="addTipBtn"><i class="layui-icon layui-icon-addition"></i>添加</span>
+                    <div class="showNumBox hide">
+                        <input type="text" placeholder="输入后回车确认" maxlength="10">
+                        <span class="num">0/10</span>
+                    </div>
+                    <span class="tiem ">战略帮扶</span>
+                    <span class="tiem ">联创帮扶</span>
+                    <span class="tiem ">讲师变现</span>
+                    <span class="tiem ">合伙人</span>
+                    <span class="tiem ">百万客流</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list ">
+            <div class="a_list_r">
+                <span class="expired cursor addGroup"><i class="layui-icon layui-icon-add-circle mgR-4 "></i>新建标签</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+    $('.addTipBtn').click(function (e) {
+        e.stopPropagation();
+        $(this).siblings('.showNumBox').show();
+        $(this).siblings('.showNumBox').find('input').focus();
+        $(this).hide();
+    })
+    $('body').click(function () {
+        $('.addTipBtn').show().siblings('.showNumBox').hide();
+    })
+
+    $('.qwTips .tiem').on('click',function () {
+        $(this).toggleClass('on')
+    })
+
+    $('#chutiyan .addGroup').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '新建标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['600px', '80%'],
+            content: '../素材标签管理.html' //iframe的url
+        });
+    });
+
+</script>
+</body>
+</html>

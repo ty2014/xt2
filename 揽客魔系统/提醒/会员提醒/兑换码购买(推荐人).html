@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兑换码购买提醒</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="head-tab2">
+    <li class="active current"><a>微信提醒</a></li>
+    <li><a>短信提醒</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-body-b" style="padding: 0">
+    <div class="tab-content activity_set activity_set3 w-4">
+        <div class="tab-pane active">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l">提醒推荐人:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg" checked class="toggle-button" name="switch">
+                            <label for="u-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*用户在“团队学习”板块下购买会员兑换码，提醒推荐人（推客推荐分佣为0时不提醒）</span>
+                    </div>
+                </div>
+                <div class="a_list" style="align-items: flex-start">
+                    <span class="a_list_l" style="padding-top: 25px">微信模板:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt">
+                            <div class="cont_label">
+                                <div class="href_cont href_cont1">
+                                    <p>文本<input type="text" placeholder="链接名字"></p>
+                                    <p>链接<input type="text"><span>确定</span></p>
+                                </div>
+                                <span class="href_btn href_btn1" data-toggle="tooltip" data-placement="top" title="链接"></span>
+                                <span class="emoji_btn" data-toggle="tooltip" data-placement="top" title="表情"></span>
+                                <div class="faceDiv"></div>
+                                <span class="line"></span>
+                                <em class="label-tips">[购买人]</em>
+                                <em class="label-tips">[推荐人]</em>
+                                <em class="label-tips">[会员等级]</em>
+                                <em class="label-tips">[兑换码个数]</em>
+                                <em class="label-tips">[购买时间]</em>
+                                <div style="position: relative">
+                                    <em class="label-tips href_btn2">[会员商品网址]</em>
+                                    <div class="href_cont href_cont2" style="top: -122px">
+                                        <p>文本<input type="text" value="会员商品网址"></p>
+                                        <p>链接<input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx" disabled><span>确定</span></p>
+                                    </div>
+                                </div>
+                                <div style="position: relative">
+                                    <em class="label-tips href_btn2">[个人中心网址]</em>
+                                    <div class="href_cont href_cont2" style="top: -122px">
+                                        <p>文本<input type="text" value="个人中心网址"></p>
+                                        <p>链接<input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx" disabled><span>确定</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="txt_cont Input_text" contenteditable="true"></div>
+                            <p class="nums-tip2">还可输入<span>600</span>字</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div class="tab-pane">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l">提醒推荐人:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg2" checked class="toggle-button" name="switch">
+                            <label for="u-togg2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*用户在“团队学习”板块下购买会员兑换码，提醒推荐人（推客推荐分佣为0时不提醒）</span>
+                    </div>
+                </div>
+                <div class="a_list" style="align-items: flex-start">
+                    <span class="a_list_l"  style="padding-top: 25px">短信模板:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt">
+                            <div class="cont_label">
+                                <em class="label-tips">[购买人]</em>
+                                <em class="label-tips">[锁定人]</em>
+                                <em class="label-tips">[会员等级]</em>
+                                <em class="label-tips">[兑换码个数]</em>
+                                <em class="label-tips">[购买时间]</em>
+                                <em class="label-tips">[会员商品网址]</em>
+                                <em class="label-tips">[个人中心网址]</em>
+                            </div>
+                            <textarea class="txt_cont Input_text" contenteditable="true"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/emoji.js"></script>
+<script src="../../js/myjs.js"></script>
+
+
+</body>
+</html>

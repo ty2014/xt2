@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模块配置</title>
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">模块配置</div>
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <span class="a_list_l">协议主页-URL:</span>
+            <div class="a_list_r">http://lkm.com<span class="copy-btn">复制</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">协议签署-入口:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                    <label for="u-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*开启则在个人中心处展示“协议签署”入口，关闭则不展示</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">协议生成-频率:</span>
+            <div class="a_list_r">
+                <div class="space-toggle">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                        <label for="u-togg2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">调用第一次协议</span>
+                            <span class="text off">每次生成新协议</span>
+                        </label>
+                    </div>
+                </div>
+                <div style="font-size: 12px;color: #999;margin-left: 12px;line-height: 150%">
+                    <p><b>【每次生成新协议】</b>同一业务，用户每次点击提交都会生成新的协议进行签署;使用协议<a style="color: #fe6d44">成本会增加</a>；</p>
+                    <p><b>【调用第一次协议】</b>同一业务，在协议未发生变化时，无论用户提交多少次，始终都调用用户第一次生成的协议进行签署；使用协议<a style="color: #fe6d44">成本会降低</a>；</p>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">协议编号-前缀:</span>
+            <div class="a_list_r"><input type="text" placeholder="选填，需为字母"><span class="tishi">*签署协议将自动生成协议编号，可自定义协议前缀</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">协议数量-份数:</span>
+            <div class="a_list_r">总数：1000份，已用：500份；<a href="签署记录.html" style="margin-left: 16px;">查看签署记录</a></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/myjs.js"></script>
+
+
+</body>
+</html>

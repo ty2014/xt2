@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>付费文章</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>付费文章</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+        </div>
+        <div class="tab_type_l"><span class="add_btn"><i class="fa fa-plus "></i>添加</span></div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table class="table_body">
+                <thead>
+                <tr>
+                    <th width="60px">序号</th>
+                    <th width="80px">封面图</th>
+                    <th width="300px">标题</th>
+                    <th width="80px">分类</th>
+                    <th width="80px">作者</th>
+                    <th width="140px">更新时间</th>
+                    <th width="80px">点击量</th>
+                    <th width="80px">标签</th>
+                    <th width="100px">付费金额</th>
+                    <th width="100px">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="squ-pic"><img src="../../images/head.jpg" alt=""></td>
+                    <td>5秒信任系统：瞬间成为行业专家，顾客首次接触，信</td>
+                    <td>干货</td>
+                    <td>安兔兔</td>
+                    <td class="date"><div>2019-10-10 14:00:00</div></td>
+                    <td>50</td>
+                    <td>营销</td>
+                    <td>39.00</td>
+                    <td class="cz_btn">
+                        <span class="edit_tips" data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑"></span>
+                        <span class="del_tips" data-toggle="tooltip" data-placement="top" title="删除"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="btm_page">
+            <div class="pages">
+                <div class="pages_num">
+                    <span>1</span>
+                    <span class="active">2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>99</span>
+                </div>
+                <div class="now_page">
+                    到第<input type="text" value="1">页<span class="sure">确定</span>
+                </div>
+                <select>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div>
+                <span><b>1 - 10</b></span>
+                <span>共<b>10</b>条</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加文章',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['1000px', '90%'],
+            content: '付费文章-添加.html' //iframe的url
+        });
+    });
+    $('#chutiyan .del_tips').on('click', function(){
+        layer.confirm('您确定要删除此条吗？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){}, function(){});
+    });
+
+</script>
+</body>
+</html>

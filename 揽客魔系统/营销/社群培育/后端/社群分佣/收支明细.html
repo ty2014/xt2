@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收支明细</title>
+    <link rel="stylesheet" href="../../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../css/style.css">
+</head>
+<body style="min-width: auto">
+
+<!--
+
+搜索字段：购买人昵称、购买人姓名、购买人电话、锁定人昵称、推荐人昵称、支付时间、本群昵称
+排序字段：支付金额、锁定人昵称、锁定人分佣、推荐人昵称、推荐人分佣
+
+-->
+
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>收支明细</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="80px">购买人头像</th>
+                    <th width="120px">购买人昵称</th>
+                    <th width="80px">购买人姓名</th>
+                    <th width="100px">购买人手机</th>
+                    <th width="120px">本群昵称</th>
+                    <th width="100px">支付金额</th>
+                    <th width="140px">支付时间</th>
+                    <th width="80px">锁定人头像</th>
+                    <th width="120px">锁定人昵称</th>
+                    <th width="100px">锁定人分佣</th>
+                    <th width="80px">推荐人头像</th>
+                    <th width="120px">推荐人昵称</th>
+                    <th width="100px">推荐人分佣</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                    <td><a href="">小土豆</a></td>
+                    <td>蒋雨</td>
+                    <td>13350078952</td>
+                    <td>小土豆</td>
+                    <td>99.00</td>
+                    <td>2019-08-22 10:00:00</td>
+                    <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                    <td><a href="">啊啊啊</a></td>
+                    <td>18.88</td>
+                    <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                    <td><a href="">啊啊啊</a></td>
+                    <td>18.88</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                    <td><a href="">小土豆</a></td>
+                    <td>蒋雨</td>
+                    <td>13350078952</td>
+                    <td>小土豆</td>
+                    <td>99.00</td>
+                    <td>2019-08-22 10:00:00</td>
+                    <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                    <td><a href="">啊啊啊</a></td>
+                    <td>18.88</td>
+                    <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                    <td><a href="">啊啊啊</a></td>
+                    <td>18.88</td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>拍摄照片</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;height: auto;">
+
+<div class="content">
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">姓名</th>
+                        <th width="100px">拍摄图片</th>
+                        <th width="150px">拍摄时间</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px">小土豆</td>
+                        <td width="100px" class="squ-pic layer-photos-demo"><img src="../../images/head.jpg" layer-src="../../images/head.jpg" alt=""></td>
+                        <td width="150pz"><div>2020-06-18 16:03:56</div></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>小土豆</td>
+                        <td class="squ-pic layer-photos-demo"><img src="../../images/head.jpg" layer-src="../../images/head.jpg" alt=""></td>
+                        <td><div>2020-06-18 16:03:56</div></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layer.photos({
+        photos: '.layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+</script>
+</body>
+</html>

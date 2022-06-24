@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问明细</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan">
+
+<!--
+
+搜索字段：昵称、姓名、会员等级、是否客户
+
+排序字段：累计访问时长、访问次数、浏览量、访问深度
+
+-->
+
+<section class="head-slide">
+    <div class="head-slide-item">
+        <span>时间：</span>
+        <div class="slide-span"><span class="active">今天</span><span>昨天</span><span>最近7天</span><span>最近30天</span></div>
+        <div class="slide-input"><input type="text" class="demo-input" id="test1"></div>
+    </div>
+</section>
+<section class="table-content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span><i class="fa fa-sort"></i>排序</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+    </div>
+    <form action="" class="table_cont">
+        <table border="0" class="table_body">
+            <thead>
+            <tr>
+                <th width="50px">序号</th>
+                <th width="50px">头像</th>
+                <th width="200px">昵称</th>
+                <th width="80px">姓名</th>
+                <th width="80px">会员等级</th>
+                <th width="80px">是否客户</th>
+                <th width="100px">累计访问时长<i class="sort-icon"></i></th>
+                <th width="80px">访问次数<i class="sort-icon"></i></th>
+                <th width="80px">浏览量<i class="sort-icon"></i></th>
+                <th width="80px">访问深度<i class="sort-icon"></i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                <td>郑传华【揽客魔】创始人4号</td>
+                <td>郑传华</td>
+                <td>VIP会员</td>
+                <td>是</td>
+                <td>00:02:16</td>
+                <td><a href="访问次数.html">50</a></td>
+                <td><a href="浏览量.html">1,540</a></td>
+                <td><a href="访问深度.html">48</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</section>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/plugins/laydate/laydate.js"></script>
+<script src="../../../js/index.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<!-- 时间 -->
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        value: '2019-06-30 至 2019-08-15',
+        range: '至'
+    });
+</script>
+</body>
+</html>

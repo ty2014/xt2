@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图文管理-添加</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0">
+
+<div class="account-cont">
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">所属分类：</span>
+            <div class="account-r">
+                <div class="slide-select">
+                    <select>
+                        <option value="">-请选择-</option>
+                    </select>
+                    <img src="../../images/bottom-icon.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">推荐：</span>
+            <div class="account-r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox"  id="ds-fy" class="toggle-button" name="switch">
+                    <label for="ds-fy" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">是</span>
+                        <span class="text off">否</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">优先级：</span>
+            <div class="account-r"><input type="text" class="m_width center"><span class="tishi">*优先级越高，文章就越靠前</span></div>
+        </div>
+        <div class="account">
+            <span class="account-l">作者：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+
+    <div class="account">
+        <span class="account-l">标题：</span>
+        <div class="account-r"><input type="text" class="w-620"></div>
+    </div>
+
+    <div class="account">
+        <span class="account-l">跳转链接：</span>
+        <div class="account-r"><input type="text" class="w-620"></div>
+    </div>
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">点击量：</span>
+            <div class="account-r"><input type="text" class="m_width"><span class="tishi">*文章点击量</span></div>
+        </div>
+        <div class="account">
+            <span class="account-l">标签：</span>
+            <div class="account-r"><input type="text"><span class="tishi">*多个标签用‘,’隔开</span></div>
+        </div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">封面图：</span>
+        <div class="account-r">
+            <div class="file-cont">
+                <div class="file-btn"></div>
+                <p class="tishi2">*建议宽高尺寸 500*500像素；大小不超过1000KB</p>
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">描述：</span>
+        <div class="account-r"><input type="text" class="w-620"></div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">内容：</span>
+        <div class="account-r">
+            <!-- 此处放编辑器 -->
+            <textarea style="width: 620px;height: 400px;padding: 10px"></textarea>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">阅读权限：</span>
+        <div class="account-r">
+            <div class="toggle-button-wrapper">
+                <input type="checkbox"  id="is_vip" class="toggle-button" name="switch">
+                <label for="is_vip" class="button-label">
+                    <span class="circle"></span>
+                    <span class="text on">开</span>
+                    <span class="text off">关</span>
+                </label>
+            </div>
+            <span class="tishi">*仅选中的会员等级，有阅读本文的权限。</span>
+        </div>
+    </div>
+    <div class="account vip-items" style="display: none">
+        <span class="account-l">会员等级：</span>
+        <div class="account-r chose_item">
+            <label for="vip1" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="vip1" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">普通会员</span>
+            </label>
+            <label for="vip2" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="vip2" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">白银会员</span>
+            </label>
+            <label for="vip3" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="vip3" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">铂金会员</span>
+            </label>
+            <label for="vip4" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="vip4" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">钻石会员</span>
+            </label>
+            <label for="vip5" class="checked">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="vip5" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">非会员</span>
+            </label>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">倒计时：</span>
+        <div class="account-r">
+            <div class="toggle-button-wrapper">
+                <input type="checkbox"  id="is_time" class="toggle-button" name="switch">
+                <label for="is_time" class="button-label">
+                    <span class="circle"></span>
+                    <span class="text on">开</span>
+                    <span class="text off">关</span>
+                </label>
+            </div>
+            <span class="tishi">*设置文章开放时间。</span>
+        </div>
+    </div>
+    <div class="account time-items" style="display: none">
+        <span class="account-l">阅读到期时间：</span>
+        <div class="account-r"><input type="text"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">打赏赠品：</span>
+        <div class="account-r">
+            <div class="toggle-button-wrapper">
+                <input type="checkbox"  id="dszp" class="toggle-button" name="switch">
+                <label for="dszp" class="button-label">
+                    <span class="circle"></span>
+                    <span class="text on">开</span>
+                    <span class="text off">关</span>
+                </label>
+            </div>
+            <span class="tishi">*此处为单独配置，权限大于统一配置。</span>
+        </div>
+    </div>
+    <div class="account ds-items flex-start" style="display: none">
+        <span class="account-l">打赏内容：</span>
+        <div class="account-r"><textarea style="width: 620px;height: 400px;padding: 10px;margin-bottom: 10px;">此处放编辑器</textarea></div>
+    </div>
+</div>
+<div class="account_btn"><span class="btn btn-sure">确定</span></div>
+
+<script src="../../js/jquery.min.js"></script>
+<script>
+    $('#is_vip').click(function () {
+        $('.vip-items').toggle();
+    });
+    $('#is_time').click(function () {
+        $('.time-items').toggle();
+    });
+    $('#dszp').click(function () {
+        $('.ds-items').toggle();
+    });
+</script>
+
+</body>
+</html>

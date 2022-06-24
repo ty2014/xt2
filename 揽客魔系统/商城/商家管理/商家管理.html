@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商家管理</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan">
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>商家管理</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span class="sort"><i class="fa fa-sort"></i>排序</span>
+            <div class="top_tit">
+                <a href="#"><i class="filter-icon"></i><span>全部</span><em class="fa fa-caret-down"></em></a>
+                <ul>
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">有效</a></li>
+                    <li><a href="#">失效</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="100px">店铺编号</th>
+                    <th width="80px">店铺logo</th>
+                    <th width="100px">店铺</th>
+                    <th width="100px">负责人</th>
+                    <th width="100px">负责人电话</th>
+                    <!--  上架商品：出售中、已售罄  -->
+                    <th width="100px">上架商品<i class="sort-icon"></i></th>
+                    <th width="100px">全部订单<i class="sort-icon"></i></th>
+                    <th width="100px">待结算货款<i class="sort-icon"></i></th>
+                    <th width="100px">已结算货款<i class="sort-icon"></i></th>
+                    <th width="100px">待提现<i class="sort-icon"></i></th>
+                    <th width="140px">有效期至</th>
+                    <th width="100px">状态</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>00001</td>
+                    <td class="squ-pic"><img src="../../images/head.jpg" alt=""></td>
+                    <td class="left"><a class="tab1">变美服饰</a></td>  <!-- 基本信息 -->
+                    <td><a>小土豆</a></td>
+                    <td>13350024525</td>
+                    <td><a class="tab2">5</a></td>     <!-- 全部商品 -->
+                    <td><a class="tab3">15</a></td>        <!-- 全部订单 -->
+                    <td><a class="tab4">1589.00</a></td>       <!-- 财务详情 -->
+                    <td><a class="tab4">1678.25</a></td>       <!-- 财务详情 -->
+                    <td><a class="tab4">8800.00</a></td>       <!-- 财务详情 -->
+                    <td class="date tab5">2019-10-01 10:00:01</td>     <!-- 有效期记录 -->
+                    <td>有效</td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            skin: 'layui-layer-rim', //加上边框
+            area: ['420px', '240px'], //宽高
+            content: '搜索字段：店铺编号、店铺名称、负责人昵称、负责人电话、是否自营、有效期至（起~止）'
+        });
+    });
+    $('#chutiyan .tab1').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '店铺名称（店铺编号）',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '商家信息.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .tab2').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '店铺名称（店铺编号）',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '商家信息.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .tab3').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '店铺名称（店铺编号）',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '商家信息.html#tab3' //iframe的url
+        });
+    });
+    $('#chutiyan .tab4').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '店铺名称（店铺编号）',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '商家信息.html#tab4' //iframe的url
+        });
+    });
+    $('#chutiyan .tab5').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '店铺名称（店铺编号）',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '商家信息.html#tab5' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

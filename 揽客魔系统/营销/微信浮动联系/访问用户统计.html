@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问用户统计</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body  id="chutiyan">
+
+<!--
+   搜索字段：访问人昵称
+   排序字段：联系页面、联系人、扫描二维码、复制电话号、复制微信号
+
+-->
+
+<section class="head-slide">
+    <div class="head-slide-item">
+        <span>时间：</span>
+        <div class="slide-span"><span>今天</span><span class="active">昨天</span><span>最近7天</span><span>最近30天</span></div>
+        <div class="slide-input"><input type="text" class="demo-input" id="test1"></div>
+    </div>
+</section>
+<section>
+    <ul class="num-view">
+        <li>
+            <div>
+                <p>扫描二维码<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="用户扫描联系人“微信二维码”的次数，每长按一次计数+1。" data-original-title="1"></i></p>
+                <span>1,526</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>复制电话号<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="用户复制联系人“电话号”的次数，每长按一次计数+1。" data-original-title="1"></i></p>
+                <span>568</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>复制微信号<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="用户复制联系人“微信号”的次数，每长按一次计数+1。" data-original-title="1"></i></p>
+                <span>895</span>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="charts double-chart" style="height: 50%;min-height: 350px">
+    <div class="charts-item charts-table" style="width: 60%">
+        <p class="charts-tit">联系频次<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="所选时间内，用户联系的总次数。" data-original-title="1"></i></p>
+        <div id="main" style="width: 100%;height:100%;"></div>
+    </div>
+    <div class="charts-item charts-table" style="width: 40%">
+        <p class="charts-tit">联系人数<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="所选时间内，用户联系的不同人数。" data-original-title="1"></i></p>
+        <div id="main2" style="width: 100%;height:100%;"></div>
+    </div>
+</section>
+<section class="table-content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span><i class="fa fa-sort"></i>排序</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+    </div>
+    <form action="" class="table_cont">
+        <table border="0" class="table_body">
+            <thead>
+            <tr>
+                <th width="50px">序号</th>
+                <th width="80px">访问人头像</th>
+                <th width="80px">访问人昵称</th>
+                <th width="80px">联系页面<i class="sort-icon"></i></th>
+                <th width="80px">联系人<i class="sort-icon"></i></th>
+                <th width="80px">扫描二维码<i class="sort-icon"></i></th>
+                <th width="80px">复制电话号<i class="sort-icon"></i></th>
+                <th width="80px">复制微信号<i class="sort-icon"></i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- 最多展示5条数据 -->
+            <tr>
+                <td>01</td>
+                <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                <td><a href="">小土豆</a></td>
+                <td>1</td>
+                <td>2</td>
+                <td class="statu">1</td>
+                <td class="statu">2</td>
+                <td class="statu">3</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                <td><a href="">小土豆</a></td>
+                <td>2</td>
+                <td>3</td>
+                <td class="statu">3</td>
+                <td class="statu">4</td>
+                <td class="statu">5</td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</section>
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/plugins/laydate/laydate.js"></script>
+<script src="../../js/echarts.js"></script>
+<script src="../../js/index.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<!-- 时间 -->
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        value: '2019-06-30 至 2019-08-15',
+        range: '至'
+    });
+</script>
+
+<!-- 弹框 -->
+<script>
+    $('#chutiyan .statu').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '联系明细',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '90%'],
+            content: '访问用户统计明细.html' //iframe的url
+        });
+    });
+
+</script>
+
+<!-- 图表 -->
+<script>
+    var charts=[];
+    var myChart = echarts.init(document.getElementById('main'));
+    var myChart2 = echarts.init(document.getElementById('main2'));
+
+    var data=[709, 1917, 2455, 2610, 1719, 1433];
+    option = {
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                type: 'none'    // 移除悬浮时坐标系中的竖线
+            },
+            formatter: function (params) {
+                var sum=0;
+                for(let i=0;i<data.length;i++){
+                    sum+=data[i]
+                }
+                console.log(sum);
+                console.log(params);
+                let html='<div style="display: flex;justify-content: space-between;width: 200px;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;color:#666"><div><span style="display: inline-block;width: 8px;height: 8px;margin-right: 4px;border-radius: 50%;background: #6ba0f5"></span>' + '联系' +  params[0].name + '</div></div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-top:7px;"><span>用户数量</span>' + params[0].value + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-bottom:7px;"><span>占比</span>' + (params[0].value/sum*100).toFixed(2) + '%' + '</div>';
+                return html;
+            },
+            textStyle: {
+                color: '#666',
+                fontStyle: 'normal',
+                fontFamily: '微软雅黑',
+                fontSize: 12,
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        grid: {
+            borderWidth: 0,
+            top: 30,
+            bottom: 40,
+            calculable: true,
+        },
+        xAxis: [
+            {
+                type: "category",
+                nameTextStyle: {
+                    color: '#999',
+                },
+                axisLabel: { //坐标轴刻度标签的相关设置。
+                    show: true,
+                    interval: 0,//设置为 1，表示『隔一个标签显示一个标签』
+                    textStyle: {
+                        color: '#999',
+                        interval: 1,
+                        backgroundColor: "#fff",
+                        fontSize: 12,
+                    }
+                },
+                axisTick:{//坐标轴刻度相关设置。
+                    show: false,
+                },
+                axisLine:{//坐标轴轴线相关设置
+                    show: false,
+                    lineStyle:{
+                        color:'#fff',
+                    }
+                },
+                splitLine: { //坐标轴在 grid 区域中的分隔线。
+                    show: false,
+                },
+                offset:4,
+                data: ['1次','2次','3次','4次','5次','6次及以上'],
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                nameTextStyle: {
+                    color: '#999'
+                },
+                nameGap:20,
+                position: 'left',
+                axisLine: {
+                    show:true,
+                    lineStyle: {
+                        color: '#f0f2f3'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: "#f0f2f3",
+                    }
+                },
+                axisTick:{
+                    show:false
+                },
+                axisLabel: {
+                    show:true,
+                    color: '#999',
+                    fontSize: 12,
+                },
+            }
+        ],
+        series: [
+            {
+                name: "联系频次",
+                type: "bar",
+                stack:'总数',
+                barMaxWidth: 24,
+                barGap: "10%",
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 1, color: 'rgba(116, 221, 255, 1)'
+                        }, {
+                            offset: 0, color: 'rgba(54, 153, 225, 1)'
+                        }], false),
+                        label: {
+                            show: false,
+                            textStyle: {
+                                color: "#666",
+                                fontSize:12
+                            },
+                            position: "top",
+                            formatter: function(p) {
+                                return p.value > 0 ? (p.value) : '';
+                            }
+                        }
+                    }
+                },
+                data: data,
+            }
+        ]
+    };
+
+    var data2 = [
+        {'name': '1人', 'value': 675},
+        {'name': '2人', 'value': 1397},
+        {'name': '3人', 'value': 560},
+        {'name': '4人及以上', 'value': 560}
+    ];
+    option2 = {
+        color: ['#3699ff', '#ff693b','#fee142','#e4007f'],
+        legend: {
+            bottom: "5%",
+            right:'5%',
+            textStyle: {
+                color: '#999',
+                fontSize: 12,
+                rich:{
+                    a:{
+                        verticalAlign:'top',
+                        align:'center',
+                        height:15,
+                        lineHeight:15,
+                    }
+                }
+            },
+            itemGap:10,
+            itemWidth:8,
+            itemHeight:8,
+            align:'auto',
+            orient:'vertical',
+            icon: 'square',
+            data:data2
+        },
+        tooltip: {
+            formatter: function(param){
+                let res ='<div style="width: 200px;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding:8px 10px;border-radius:5px 5px 0 0"><span style="display: inline-block;margin-right: 8px;width: 8px;height: 8px;">'+ param.marker + '</span>' + '联系' + param.name +'</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-top: 7px"><span>用户数量</span>' + param.value + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-bottom: 7px"><span>占比</span>' + param.percent.toFixed(1)+ '%</div>';
+                return res;
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)'
+        },
+        series: [
+            // 主要展示层的
+            {
+                radius: ['35%', '60%'],
+                center: ['50%', '50%'],
+                type: 'pie',
+                label: {
+                    normal: {
+                        show: true,
+                        formatter: "{d}%",
+                        textStyle: {
+                            fontSize: 12,
+                            color: '#999',
+                        },
+                        position: 'outside'
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: true,
+                        length: 15,
+                        length2: 25,
+                        lineStyle:{
+                            color:'#c9cfd8'
+                        }
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                name: "信息统计",
+                data: data2,
+            },
+            // 边框的设置
+            {
+                type: 'pie',
+                radius: ['52%', '60%'],
+                center: ['50%', '50%'],
+                label: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: false
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: false
+                    }
+                },
+                animation: false,
+                tooltip: {
+                    show: false
+                },
+                data: [{
+                    value: 1,
+                    itemStyle: {
+                        color: "rgba(250,250,250,0.2)",
+                    },
+                }],
+            }, {
+                type: 'pie',
+                radius: ['60%', '60%'],
+                center: ['50%', '50%'],
+                hoverAnimation: false, //鼠标移入变大
+                label: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: false
+                    }
+                },
+                data: [{
+                    value: 1,
+                    itemStyle: {
+                        normal: {
+                            borderWidth: 10,
+                            borderColor: 'rgba(250,250,250,0.5)'
+                        }
+                    }
+                }],
+                tooltip: {
+                    show: false
+                },
+            },
+        ]
+    };
+
+
+    myChart.setOption(option);
+    myChart2.setOption(option2);
+
+    charts.push(myChart,myChart2);
+
+    setTimeout(function (){
+        window.onresize = function () {
+            myChart.resize();
+            myChart2.resize();
+        }
+    },200);
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+        for(var i = 0; i < charts.length; i++) {
+            charts[i].resize();
+        }
+    });
+
+
+</script>
+
+</body>
+</html>

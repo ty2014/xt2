@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通讯录</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .set_times{}
+        .set_times li{display: flex;align-items: center;margin: 10px 0;}
+        .set_times li label{min-width: 100px;}
+        .set_times li div{font-size: 13px;color: #888;}
+        .normal-table table td{overflow: unset;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="page-title">通讯录配置</div>
+<div class="activity_set activity_set3">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">模块入口:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper ">
+                    <input type="checkbox" id="ds-fy" class="toggle-button" name="switch">
+                    <label for="ds-fy" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*个人中心是否展示“通讯录”的入口</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">主页链接:</span>
+            <div class="a_list_r">http://cshtml.lkmsxy.com/<span class="copy-btn">复制</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">页面标题:</span>
+            <div class="a_list_r">
+                <input type="text" placeholder="页面的标题命名" value="通讯录" class="w-620"><a class="title_img_btn" style="margin-left: 16px;">点击查看效果图</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享简介:</span>
+            <div class="a_list_r"><input type="text" class="w-620" placeholder="用于分享时展示"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享图标:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="tishi mgL-0">*建议图片尺寸为80px*80px，比例1：1 ，JPG、PNG格式，图片小于50KB</span>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">启用名片:</span>
+            <div class="a_list_r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip1" id="vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip1" id="vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip1" id="vip3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip1" id="vip4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="vip5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip1" id="vip5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+                <span class="tishi">*指定的等级才有权限启用名片功能（展示和隐藏）</span>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 23px;">查看名片设置:</span>
+            <div class="a_list_r">
+                <ul class="set_times">
+                    <li><span class="tishi mgL-0">*设置该等级每天可以免费查看的次数，默认5次；若不勾选，则该等级用户就不能查看名片详情</span></li>
+                    <li>
+                        <label for="vip2-1" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="vip2" id="vip2-1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">普通会员</span>
+                        </label>
+                        <div>免费查看：<input type="text" value="5" class="s_width center m-height" style="margin-right: 8px;">次/天</div>
+                    </li>
+                    <li>
+                        <label for="vip2-2" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="vip2" id="vip2-2" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">白银会员</span>
+                        </label>
+                        <div>免费查看：<input type="text" value="5" class="s_width center m-height" style="margin-right: 8px;">次/天</div>
+                    </li>
+                    <li>
+                        <label for="vip2-3" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="vip2" id="vip2-3" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">铂金会员</span>
+                        </label>
+                        <div>免费查看：<input type="text" value="5" class="s_width center m-height" style="margin-right: 8px;">次/天</div>
+                    </li>
+                    <li>
+                        <label for="vip2-4" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="vip2" id="vip2-4" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">钻石会员</span>
+                        </label>
+                        <div>免费查看：<input type="text" value="5" class="s_width center m-height" style="margin-right: 8px;">次/天</div>
+                    </li>
+                    <li>
+                        <label for="vip2-5" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="vip2" id="vip2-5" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">非会员</span>
+                        </label>
+                        <div>免费查看：<input type="text" value="5" class="s_width center m-height" style="margin-right: 8px;">次/天</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 23px;">名片内容设置:</span>
+            <div class="a_list_r">
+                <div class="normal-table">
+                    <!--  提示内容只在个人中心编辑资料的时候显示，其它地方不展示  -->
+                    <table>
+                        <thead>
+                        <tr>
+                            <th style="width: 50px">序号</th>
+                            <th style="width: 100px">字段名</th>
+                            <th style="width: 150px">填写提示</th>
+                            <th style="width: 100px">数据类型</th>
+                            <th style="width: 200px;">选项</th>
+                            <th style="width: 80px">排序</th>
+                            <th style="width: 80px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" value="自我介绍" disabled></td>
+                            <td><input type="text" placeholder="*选填"></td>
+                            <td>单行文本</td>
+                            <td>-</td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">2</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li class="active">2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td><a class="hideBtn">展示中</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" value="职位" disabled></td>
+                            <td><input type="text" placeholder="*选填"></td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">单选</span>
+                                    <ul style="text-align: left">
+                                        <li class="active">单行文本</li>
+                                        <li>多行文本</li>
+                                        <li>单选</li>
+                                        <li>图片</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="display: flex;flex-wrap: wrap;align-items: center;justify-content: center">
+                                    <a class="edit_checked" style="margin-right: 8px">编辑</a>
+                                    <label for="sx1" class="checked" style="margin-right: 12px">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="sx" id="sx1">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">筛选</span>
+                                    </label>
+                                    <i class="tips sx_btn"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">3</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li class="active">3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td><a class="hideBtn">展示中</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" value="行业" disabled></td>
+                            <td><input type="text" placeholder="*选填"></td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">单选</span>
+                                    <ul style="text-align: left">
+                                        <li class="active">单行文本</li>
+                                        <li>多行文本</li>
+                                        <li>单选</li>
+                                        <li>图片</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="display: flex;flex-wrap: wrap;align-items: center;justify-content: center">
+                                    <a class="edit_checked" style="margin-right: 8px">编辑</a>
+                                    <label for="sx2" class="checked" style="margin-right: 12px">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="sx" id="sx2">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">筛选</span>
+                                    </label>
+                                    <i class="tips sx_btn"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">4</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li class="active">4</li>
+                                        <li>5</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td><a class="hideBtn">展示中</a></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" value="提示" placeholder="*最多12个字符"></td>
+                            <td><input type="text" placeholder="*选填"></td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">单行文本</span>
+                                    <ul style="text-align: left">
+                                        <li class="active">单行文本</li>
+                                        <li>多行文本</li>
+                                        <li>单选</li>
+                                        <li>图片</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>-</td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">1</span>
+                                    <ul>
+                                        <li class="active">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="text" value="执业证"></td>
+                            <td><input type="text" placeholder="*选填"></td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">图片</span>
+                                    <ul style="text-align: left">
+                                        <li>单行文本</li>
+                                        <li>多行文本</li>
+                                        <li>单选</li>
+                                        <li class="active">图片</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="display: flex;align-items: center;justify-content: center;flex-wrap: wrap;padding: 6px 0;">
+                                    最多上传：
+                                    <div class="select-text">
+                                        <span class="select-txt">2</span>
+                                        <ul>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>5</li>
+                                            <li>6</li>
+                                        </ul>
+                                    </div>
+                                    &nbsp;张
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">5</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li class="active">5</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="text-align: left"></td>
+                            <td><button>添加</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">首页顶部自定义:</span>
+            <div class="a_list_r"><a class="zdyCont_btn1">编辑内容</a></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">说明:</span>
+            <div class="a_list_r">
+                <a class="zdyCont_btn2">编辑内容</a>
+                <a class="smmsg_btn" style="margin-left: 16px;">点击查看效果图</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">说明图标:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo">
+                    <li class="img_item">
+                        <img src="http://cshtml.lkmsxy.com/my/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E9%80%9A%E8%AE%AF%E5%BD%95/images/1.png">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <li class="file-btn" style="display: none"></li>
+                </ul>
+                <div>
+                    <span class="tishi mgL-0">*建议图片尺寸为80px*80px，比例1：1 ，JPG、PNG格式，图片小于50KB</span>
+                    <p><a class="sm_btn ">点击查看效果图</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-120" id="checked-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">添加选项:</div>
+            <div class="a_list_r">
+                <div class="normal-table">
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 50px">序号</th>
+                            <th style="width: 100px">选项名称</th>
+                            <th style="width: 80px">优先级</th>
+                            <th style="width: 100px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" value="职员"></td>
+                            <td><input type="number" value="100" placeholder="数字越大，排序越前"></td>
+                            <td>
+                                <button class="del">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" value="组长"></td>
+                            <td><input type="number" value="100" placeholder="数字越大，排序越前"></td>
+                            <td>
+                                <button class="del">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" value="经理"></td>
+                            <td><input type="number" value="100" placeholder="数字越大，排序越前"></td>
+                            <td>
+                                <button class="del">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" value="部长"></td>
+                            <td><input type="number" value="100" placeholder="数字越大，排序越前"></td>
+                            <td>
+                                <button class="del">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="text" value="主管"></td>
+                            <td><input type="number" value="100" placeholder="数字越大，排序越前"></td>
+                            <td>
+                                <button class="del">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><input type="text" value="总经理"></td>
+                            <td><input type="number" value="100" placeholder="数字越大，排序越前"></td>
+                            <td>
+                                <button class="del">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><input type="text" value="副总经理"></td>
+                            <td><input type="number" value="100" placeholder="数字越大，排序越前"></td>
+                            <td>
+                                <button class="del">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><input type="text" value="董事长"></td>
+                            <td><input type="number" value="100" placeholder="数字越大，排序越前"></td>
+                            <td>
+                                <button class="del">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: left"></td>
+                            <td><button>添加</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-120" id="zdyCont-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r">
+                <textarea style="width: 100%;height: 400px;">此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+<div class="activity_set activity_set2 w-120" id="zdyCont-sure2" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r">
+                <textarea style="width: 100%;height: 400px;">此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+
+<img src="http://cshtml.lkmsxy.com/csimg/txlPic.png" alt="" id="title_img" style="height: 580px;display: none;">
+<img src="http://cshtml.lkmsxy.com/csimg/txlPic2.png" alt="" id="sx_img" style="height: 580px;display: none;">
+<img src="http://cshtml.lkmsxy.com/csimg/txlPic3.png" alt="" id="sm_img" style="height: 580px;display: none;">
+<img src="http://cshtml.lkmsxy.com/csimg/txlPic4.png" alt="" id="smmsg_img" style="height: 580px;display: none;">
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layer.photos({
+        photos: '.layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+    $('#chutiyan .edit_checked').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '添加/编辑选项',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#checked-sure")
+        });
+    });
+    $('#chutiyan .title_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#title_img")
+        });
+    });
+    $('#chutiyan .sx_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#sx_img")
+        });
+    });
+    $('#chutiyan .sm_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#sm_img")
+        });
+    });
+    $('#chutiyan .smmsg_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#smmsg_img")
+        });
+    });
+
+    $('#chutiyan .zdyCont_btn1').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '自定义内容',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#zdyCont-sure")
+        });
+    });
+    $('#chutiyan .zdyCont_btn2').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '自定义内容',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#zdyCont-sure2")
+        });
+    });
+
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .hideBtn').on('click', function(){
+            layer.config({
+                extend: 'myskin/success.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定在用户端隐藏该设置项？',{
+                skin: 'successskin',    //类名
+                icon:3,
+                title:'提示',
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('操作成功', {time: 1000});
+            });
+        });
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .showBtn').on('click', function(){
+            layer.config({
+                extend: 'myskin/success.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定在用户端展示该设置项？',{
+                skin: 'successskin',    //类名
+                icon:3,
+                title:'提示',
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('操作成功', {time: 1000});
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>

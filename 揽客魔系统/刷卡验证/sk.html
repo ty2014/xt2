@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>刷卡验证</title>
+    <link rel="stylesheet" href="css/style2.css?12">
+</head>
+<body style="overflow:hidden">
+    <div v-cloak class="all">
+        <img src="images/bg2.jpg" alt="" id="bg">
+
+        <div class="head-msg">
+            <div class="msg-l">
+                <div><img v-bind:src="usertx" alt=""></div>
+                <p>{{usernc}}</p>
+            </div>
+            <ul class="msg-r">
+                <li class="btnlogout">切换账号</li>
+            </ul>
+        </div>
+
+        <div class="type-content">
+            <div class="mx-btn"><span>会员身份验证</span></div>
+            <div class="btn-3980">
+                <span>上课名单签到</span><img src="images/more.png" alt="">
+                <ul><li v-for="item in datakc" v-on:click="kcqd(item.KCAPID,$event)">{{item.MC}}</li></ul>
+            </div>
+            <div class="btn-3980">
+                <span>上课进场验证</span><img src="images/more.png" alt="">
+                <ul><li v-for="item in datakc" v-on:click="kcyz(item.KCAPID,$event)">{{item.MC}}</li></ul>
+            </div>
+        </div>
+        <div class="id-card">
+            <div><span class="top-l"></span><span class="top-r"></span><span class="bottom-l"></span><span class="bottom-r"></span><p class="line"></p></div>
+            <span>请刷证件，查看信息</span>
+        </div>
+        <!--  刷卡验证-密训  -->
+        <div class="model-msg mx-model divyhqd" style="display: none;">
+            <span class="cancel"></span>
+            <p class="model-title model-title2">参会人信息</p>
+            <div class="model-item">
+                <div class="item-l">
+                    <div><img class="imgyhqd" src="" alt=""></div>
+                    <span class="team-num">{{ptyhdl.XB}}</span>
+                </div>
+                <div class="item-r">
+                    <p><span>姓名：</span>{{ptyhdl.XM}}</p>
+                    <p><span>手机：</span>{{ptyhdl.SJ}}</p>
+                    <p><span>身份证：</span>{{ptyhdl.SFZH}}</p>
+                    <p><span>公司：</span>{{ptyhdl.GSMC}}</p>
+                    <p class="name"><span>微信：</span><img v-bind:src="ptyhdl.TX" alt="">{{ptyhdl.NC}}</p>
+                </div>
+            </div>
+            <div class="model-foot2">
+                <div>团队：{{ptyhdl.TD}}</div>
+                <div>{{ptyhdl.PXLX}}</div>
+            </div>
+        </div>
+        <!--  刷卡验证-3980   -->
+        <div class="model-msg model-3980 divkcqd" style="display: none;">
+            <div class="m-tips"><span>{{kcdl.PXLX}}</span></div>
+            <span class="cancel"></span>
+            <p class="model-title">参会人信息</p>
+            <div class="model-item" style="justify-content: flex-end">
+                <div class="item-l">
+                    <div><img class="imgkcqd" src="" style="width:102px; height:126px" alt=""></div>
+                    <span class="team-num">第{{kcdl.ZB}}组</span>
+
+                </div>
+                <div class="item-r">
+                    <p><span>姓名：</span>{{kcdl.XM}}<em></em></p>
+                    <p><span>性别：</span>{{kcdl.XB}}</p>
+                    <p><span>手机：</span>{{kcdl.SJ}}</p>
+                    <p><span>身份证：</span>{{kcdl.SFZH}}</p>
+
+                </div>
+            </div>
+
+            <div class="model-foot">
+                <div>场地费：<span>￥{{kcdl.CLF}}</span></div>
+                <div>餐费：<span>￥{{kcdl.CF}}</span></div>
+                <div>尾款：<span>￥{{kcdl.WK}}</span></div>
+                <div class="pay-succ" v-if="kcdl.FYISPAY==1">已付：<p>￥{{kcdl.ZFJE}}</p></div>
+                <div class="pay-succ" v-if="kcdl.FYISPAY!=1">已付：<p>￥0</p></div>
+            </div>
+        </div>
+
+        <!--刷卡失败 -->
+        <div class="model-msg null-msg divsksb" style="display: none;">
+            <span class="cancel2"></span>
+        </div>
+
+        <!--  刷卡后出现多个人员信息（同名、其它情况）  -->
+        <div class="more-msg divkcqd_mul" style="display: none">
+            <div class="model-msg model-3980" v-for="(onekcdl,index) in kcdl_mul" style=" cursor:pointer;" v-on:click="toQD(onekcdl.YYMXID,onekcdl.XM,onekcdl.XB,onekcdl.SJ)">
+                <div class="m-tips"><span>{{onekcdl.PXLX}}</span></div>
+                <span class="chose2"></span>
+                <p class="model-title">参会人信息</p>
+                <div class="model-item" style="justify-content: flex-end">
+                    <div class="item-l">
+                        <div><img src="http://ci.xiaohongshu.com/08899c14-881e-451f-aa56-ff49ab8a54a7@r_640w_640h.jpg" alt=""></div>
+                        <span class="team-num">第{{onekcdl.ZB}}组</span>
+                    </div>
+                    <div class="item-r">
+                        <p><span>姓名：</span>{{onekcdl.XM}}<em></em></p>
+                        <p><span>性别：</span>{{onekcdl.XB}}</p>
+                        <p><span>手机：</span>{{onekcdl.SJ}}</p>
+                        <p><span>身份证：</span>{{onekcdl.SFZH}}</p>
+                        </div>
+                </div>
+                <div class="model-foot">
+                    <div>场地费：<span>￥{{onekcdl.CLF}}</span></div>
+                    <div>餐费：<span>￥{{onekcdl.CF}}</span></div>
+                    <div>尾款：<span>￥{{onekcdl.WK}}</span></div>
+                    <div class="pay-succ" v-if="onekcdl.FYISPAY==1">已付：<p>￥{{onekcdl.ZFJE}}</p></div>
+                    <div class="pay-succ" v-if="onekcdl.FYISPAY!=1">已付：<p>￥0</p></div>
+                </div>
+            </div>
+         
+       </div>
+
+        <!--  名单展示  -->
+        <div class="userMsg-scroll">
+            <ul class="userMsg-show">
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+                <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            </ul>
+        </div>
+    </div>
+
+        <form id="form1">
+
+            <OBJECT classid="clsid:10946843-7507-44FE-ACE8-2B3483D179B7"
+                    id="CVR_IDCard" name="CVR_IDCard" width="0" height="0"></OBJECT>
+        </form>
+
+        <script src="../../Themes/js/jquery.min.js"></script>
+        <script src="../../Themes/js/StringHelper.js"></script>
+        <script src="../../Themes/js/geturlpara.js"></script>
+        <script src="../Themes/js/index.js"></script>
+        <script src="../../Themes/js/vue.js"></script>
+        <script src="../../Themes/layer_mobile/layer.js"></script>
+        <script src="../../Themes/js/config.js?20200606"></script>
+        <script src="../../Themes/js/AJAX.js"></script>
+        <script>
+
+            var msgindex = msgloading();
+            var issaving = false; //操作中，防止重复操作
+            var dpid = getpara('dpid')//店铺ID
+            var myyhid = "";
+            var mytitle = "";  //标题
+            var myFXSM = mytitle;  //分享说明
+            var myFXimg = ""; //分享图片
+            var list = new Array();
+            var DL = new Object();
+            var QDLX = ""; //签到类型 1用户签到 2课程签到
+            var KCAPID;
+            //渲染列表
+            var kclb = new Vue({ //新建vue实例
+                el: ".all", //实例化的地方
+                data: {
+                    datakc: [], //用户信息
+                    ptyhdl: {}, //数据容器
+                    kcdl: {},//导航栏
+                    kcdl_mul:[],
+                    usernc: "",
+                    usertx: ""
+                },
+                mounted: function () { //初始化事件
+                    this.load()
+                },
+                methods: { //私有方法
+                    load: function () { //载入
+                        if (issaving == true) {
+                            return;
+                        }
+                        issaving = true;
+                        msgloading();
+                        AjaxInterface(URL_API_KT + 'QD_QDCSH', '', function (data) {//导航栏数据(系列课分类)
+                            console.log(data)
+                            if (data.success == "1") {
+                                myFXimg = data.dplogo;
+                                myyhid = data.userid;
+                                kclb.datakc = data.datakc;
+                                kclb.usernc = data.usernc;
+                                kclb.usertx = data.usertx;
+                            }
+                            issaving = false;
+                            msgclose();
+                        });
+                    },
+                    kcqd: function (kcapid, e) { //点击导航栏
+                        var obj = $(e.target)
+                        $('.id-card').fadeIn();
+                        obj.parent().parent().find('span').text(obj.text());
+                        obj.addClass('active').siblings().removeClass('active');
+
+                        QDLX = 2;
+                        KCAPID = kcapid;
+                    },
+                    kcyz: function (kcapid, e) { //点击导航栏
+                        window.location = getTrueURL('skmdyz.html?kcapid=' + kcapid);
+                    },
+                    toQD: function (YYMXID, XM, XB,SJ) { //课程签到--多个用户时签到
+                        msgconfirm("确定要将手机号为" + SJ+"的用户签到吗？", function () {
+                            list = new Array();
+                            DL = new Object();
+                     
+                            DL.yymxid = YYMXID;
+                            DL.xm = XM;
+                            DL.xb = XB;
+                            DL.sfzh = sfzh;
+                            DL.kcapid = KCAPID;
+                            list.push(DL);
+                            var jsonstr_DL = JSON.stringify(list);
+                            AjaxInterface(URL_API_KT + 'QD_KCQD_YYMXID', { jsonstr: jsonstr_DL }, function (data) {//导航栏数据(系列课分类)
+                                issaving = false;
+          
+                                if (data.zt == 1 || data.zt == -2) { //签到成功或重复签到
+                                    $(".imgkcqd").attr("src", "data:image/jpg;base64," + zp)
+                                    $(".divkcqd_mul").hide();
+                                    $(".divkcqd").show();
+                                    if (data.datayh[0].SJ.length >= 11) {
+                                        data.datayh[0].SJ = data.datayh[0].SJ.substr(0, 9) + "**";
+                                    }
+                                    if (data.datayh[0].SFZH.length >= 18) {
+                                        data.datayh[0].SFZH = data.datayh[0].SFZH.substr(0, 16) + "**";
+                                    }
+                                    if (data.datayh[0].PXLX == 1) {
+                                        data.datayh[0].PXLX = "初训";
+                                    }
+                                    else {
+                                        data.datayh[0].PXLX = "复训";
+                                    }
+                                    kclb.kcdl = data.datayh[0];
+                              
+                                    if (data.zt == -2) //重复签到
+                                    {
+                                        msgalert(data.msg, 3)
+                                    }
+                                }
+                                else {
+                                    $(".divkcqd_mul").hide();
+                                    $(".divsksb").show();
+                                    //msgalert(data.msg, 3)
+                                }
+                            });
+                        });
+                       
+                    }
+                }
+            });
+
+            setTimeout(function () {
+                qd();
+            }, 500);  //必须延时1.5秒，才能判断是否小程序
+
+
+            var zp = "";
+            var sfzh = "";
+            function qd() {
+              
+                if (QDLX == "" || (QDLX == "2" && KCAPID == "") || $(".divyhqd").css("display") != "none" || $(".divkcqd").css("display") != "none" || $(".divsksb").css("display") != "none" || $(".divkcqd_mul").css("display") != "none") {
+                    setTimeout(function () {
+                        qd();
+                    }, 500);  //必须延时1.5秒，才能判断是否小程序
+                    return;
+                }
+                if (myyhid == "" || myyhid == "-1") {
+                    window.location = getTrueURL('sklogin.html');
+                }
+
+                if (issaving == true) {
+                    return;
+                }
+                issaving = true;
+
+                var xm = "";
+                var xb = "";
+             
+                zp = "";
+                sfzh = "";
+                var CVR_IDCard = document.getElementById("CVR_IDCard");
+                try {
+                    var strReadResult = CVR_IDCard.ReadCard();
+
+                    //alert(strReadResult);
+
+
+                    if (strReadResult == "0") {//读卡成功
+
+
+
+                        //document.all['Name'].value = CVR_IDCard.Name;
+                        //document.all['Sex'].value = CVR_IDCard.Sex;
+                        //document.all['Nation'].value = CVR_IDCard.Nation;
+                        //document.all['Born'].value = CVR_IDCard.Born;
+                        //document.all['Address'].value = CVR_IDCard.Address;
+                        //document.all['CardNo'].value = CVR_IDCard.CardNo;
+                        //document.all['IssuedAt'].value = CVR_IDCard.IssuedAt;
+                        //document.all['EffectedDate'].value = CVR_IDCard.EffectedDate;
+                        //document.all['ExpiredDate'].value = CVR_IDCard.ExpiredDate;
+                        //document.all['SAMID'].value = CVR_IDCard.SAMID;
+                        //document.all['pic'].src = CVR_IDCard.Pic;
+                        //document.all['Picture'].value = CVR_IDCard.Picture;
+                        //document.all['PictureLen'].value = CVR_IDCard.PictureLen
+                        xm = CVR_IDCard.Name;
+                        xb = CVR_IDCard.Sex;
+                        sfzh = CVR_IDCard.CardNo;
+                        zp = CVR_IDCard.Picture;
+                    }
+                    else {
+                        //alert(strReadResult);
+                    }
+                }
+                catch (e) {
+                }
+                //sfzh = "510321198201045796";
+                //xb = "男";
+                //xm = "zhuzhu";
+                if (sfzh == "") {
+                    setTimeout(function () {
+                        qd();
+                    }, 500);  //必须延时1.5秒，才能判断是否小程序
+                    issaving = false;
+                    return;
+                }
+
+
+                if (QDLX == "1") //用户签到
+                {
+                    list = new Array();
+                    DL = new Object();
+                    DL.xm = xm;
+                    DL.xb = xb;
+                    DL.sfzh = sfzh;
+                    list.push(DL);
+                    //转化为json
+                    var jsonstr_DL = JSON.stringify(list);
+                    AjaxInterface(URL_API_KT + 'QD_YHQD', { jsonstr: jsonstr_DL }, function (data) {//导航栏数据(系列课分类)
+                        issaving = false;
+                        if (data.success == "1") {
+                            myyhid = data.userid;
+                            if (data.zt == 1 || data.zt == -2) { //签到成功或重复签到
+
+                                $(".imgyhqd").attr("src", "data:image/jpg;base64," + zp)
+                                $(".divyhqd").show();
+                                if (data.datayh[0].SJ.length >= 11) {
+                                    data.datayh[0].SJ = data.datayh[0].SJ.substr(0, 9) + "**";
+                                }
+                                if (data.datayh[0].SFZH.length >= 18) {
+                                    data.datayh[0].SFZH = data.datayh[0].SFZH.substr(0, 16) + "**";
+                                }
+                                if (data.qdcs == 1) {
+                                    data.datayh[0].PXLX = "初训";
+                                }
+                                else {
+                                    data.datayh[0].PXLX = "复训";
+                                }
+                                kclb.ptyhdl = data.datayh[0];
+                                if (data.zt == -2) //重复签到
+                                {
+                                    msgalert(data.msg, 3)
+                                }
+                            }
+                            else {
+
+                                $(".divsksb").show();
+                                //msgalert(data.msg, 3)
+                            }
+
+                        }
+
+                        setTimeout(function () {
+                            qd();
+                        }, 500);  //必须延时1.5秒，才能判断是否小程序
+                        issaving = false;
+
+                        return;
+                    });
+                }
+                else {
+
+                    list = new Array();
+                    DL = new Object();
+                    DL.xm = xm;
+                    DL.xb = xb;
+                    DL.sfzh = sfzh;
+                    DL.kcapid = KCAPID;
+                    list.push(DL);
+                    //转化为json
+                    var jsonstr_DL = JSON.stringify(list);
+                    AjaxInterface(URL_API_KT + 'QD_KCQD', { jsonstr: jsonstr_DL }, function (data) {//导航栏数据(系列课分类)
+                        issaving = false;
+                        if (data.success == "1") {
+                            if (data.lx == 1) {   //只有单个用户
+                                if (data.zt == 1 || data.zt == -2) { //签到成功或重复签到
+                                    $(".imgkcqd").attr("src", "data:image/jpg;base64," + zp)
+                                    $(".divkcqd").show();
+                                    if (data.datayh[0].SJ.length>=11) {
+                                        data.datayh[0].SJ = data.datayh[0].SJ.substr(0, 9) + "**";        
+                                    }
+                                    if (data.datayh[0].SFZH.length >= 18) {
+                                        data.datayh[0].SFZH = data.datayh[0].SFZH.substr(0,16) + "**";
+                                    }
+                                    if (data.datayh[0].PXLX == 1) {
+                                        data.datayh[0].PXLX = "初训";
+                                    }
+                                    else {
+                                        data.datayh[0].PXLX = "复训";
+                                    }
+                                    kclb.kcdl = data.datayh[0];
+
+                                    if (data.zt == -2) //重复签到
+                                    {
+                                        msgalert(data.msg, 3)
+                                    }
+                                }
+                                else {
+
+                                    $(".divsksb").show();
+                                    //msgalert(data.msg, 3)
+                                }
+                            }
+                            else {
+
+                                if (data.datayh.length > 0) {
+                                    if (data.zt == 1 || data.zt == -2) { //签到成功或重复签到
+                                        $(".divkcqd_mul").show();
+                                        for (var i = 0; i < data.datayh.length; i++) {
+
+                                            if (data.datayh[i].SJ.length >= 11) {
+                                                data.datayh[i].SJ = data.datayh[i].SJ.substr(0, 9) + "**";
+                                            }
+                                            data.datayh[i].SFZH_YS = data.datayh[i].SFZH;
+                                            if (data.datayh[i].SFZH.length >= 18) {
+                                                data.datayh[i].SFZH = data.datayh[i].SFZH.substr(0, 16) + "**";
+                                            }
+                                            
+
+                                            if (data.datayh[i].PXLX == 0 || (data.datayh[i].PXLX == 1 && data.zt == -2)) {
+                                                data.datayh[i].PXLX = "初训";
+                                            }
+                                            else {
+
+                                                data.datayh[i].PXLX = "复训";
+
+                                            }
+                                        }
+                                    }
+                                    else {
+
+                                        $(".divsksb").show();
+                                        //msgalert(data.msg, 3)
+                                    }
+                                }
+
+                                kclb.kcdl_mul = data.datayh;
+                            }
+
+                        }
+
+                        setTimeout(function () {
+                            qd();
+                        }, 500);  //必须延时1.5秒，才能判断是否小程序
+                        issaving = false;
+
+                        return;
+                    });
+
+                }
+            }
+
+        </script>
+        <script>
+            $('.cancel,.cancel2').click(function () {
+                $(this).parent().hide();
+            });
+            $('.type-content > div').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+            $('.mx-btn').click(function () {
+                $('.btn-3980 ul').fadeOut();
+                $('.btn-3980 > span').text('上课名单验证');
+                $('.btn-3980 li').removeClass('active');
+                QDLX = 1;
+                KCAPID = "";
+            });
+
+            $('.btn-3980').click(function () {
+                $(this).find('ul').fadeToggle();
+            });
+
+            $('.mx-btn').click(function () {
+                $('.id-card').fadeIn();
+            });
+
+            $('.btn-3980 ul').click(function (e) {
+                e.stopPropagation();
+                $(this).show();
+            });
+
+            $(".btnlogout").click(function () {
+                window.location = getTrueURL('sklogin.html');
+            });
+
+            /* 补充轮播名单 */
+            var timer  = null;
+            var wrapBox = document.querySelector(".userMsg-scroll");
+            var wrapBox2 = document.querySelector(".userMsg-show");
+            var h1 = wrapBox.offsetHeight;
+            var h2 = wrapBox2.offsetHeight;
+            if(h2 > h1){
+                playTime();
+            }else{
+                clearInterval(timer);
+            }
+            function playTime() {
+                timer = setInterval(function () {
+                    $(".userMsg-scroll .userMsg-show").animate({
+                        marginTop: "-20px"
+                    }, 500, function () {
+                        $(this).css({ marginTop: "0px" }).find(".list:first").appendTo(this);
+                    });
+                }, 2000)
+            }
+            wrapBox.onmouseenter = function () {
+                clearInterval(timer);
+                console.log('111')
+            };
+            wrapBox.onmouseleave = function () {
+                playTime();
+            };
+
+
+
+
+        </script>
+</body>
+</html>

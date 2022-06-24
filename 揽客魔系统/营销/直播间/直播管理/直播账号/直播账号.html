@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直播账号</title>
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!--
+
+管理员的作用主要就是在观看端发送消息时，有身份标记，可以在观看端上下架商品
+
+账号规则=店铺ID+zb+手机号
+
+-->
+
+
+<div class="content">
+    <div class="page-title">直播账号</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">上架</a></li>
+                    <li><a href="#">下架</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">用户ID</th>
+                        <th width="200px" class="left">主播</th>
+                        <th width="100pz">主播姓名</th>
+                        <th width="150pz">登录账号</th>
+                        <th width="100pz">管理员</th>
+                        <th width="100pz">直播话题</th>
+                        <th width="100pz">状态</th>
+                        <th width="100pz">更新人</th>
+                        <th width="200pz">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px">57487</td>
+                        <td width="200px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../../images/head.jpg" alt="">
+                                <a class="wrap-noml">小土豆</a>
+                            </div>
+                        </td>
+                        <td width="100px">蒋雨</td>
+                        <td width="150px">29zb15928804425</td>
+                        <td width="100px"><a class="admin-num">2</a></td>
+                        <td width="100px"><a class="live-num">10</a></td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="100px">同创小课</td>
+                        <td width="200px" class="cz_btn">
+                            <button type="button" class="btn-type2 reset-pwd">重置密码</button>
+                            <button type="button" class="btn-type1 gl-btn">管理</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>45781</td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../../images/head.jpg" alt="">
+                                <a class="wrap-noml">郑传华</a>
+                            </div>
+                        </td>
+                        <td>郑传华</td>
+                        <td>29zb15928804425</td>
+                        <td><a class="admin-num">5</a></td>
+                        <td><a class="live-num">10</a></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td>同创小课</td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type2 reset-pwd">重置密码</button>
+                            <button type="button" class="btn-type1 gl-btn">管理</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box " id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">主播昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">主播姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">登录账号:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">更新人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="cj1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="cj2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<!--  添加  -->
+<div class="activity_set activity_set2 w-120" id="add-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">主播微信:</div>
+                <div class="a_list_r">
+                    <span class="set-user chose-zb" style="margin-right: 16px">选择</span>
+                    <img src="../../../../images/head.jpg" alt="" class="user-pic">
+                    <a href="">小土豆</a>
+                </div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">账号状态:</div>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                            <label for="u-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">主播姓名:</div>
+                <div class="a_list_r"><input type="text" placeholder="默认实名认证的姓名"></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">登录账号:</div>
+                <div class="a_list_r">29zb15928804425</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">主播手机:</div>
+                <div class="a_list_r"><input type="text" placeholder="默认注册的手机号"></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">初始密码:</div>
+                <div class="a_list_r">123456</div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l"><i class="tips"></i>管理员:</div>
+            <div class="a_list_r">
+                <span class="set-user chose-admin" style="margin-right: 16px">选择</span>
+                <a class="ischose-admin">已选择0人</a>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  重置密码  -->
+<div class="activity_set activity_set2 w-120" id="reset-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">主播微信:</div>
+            <div class="a_list_r">
+                <img src="../../../../images/head.jpg" alt="" class="user-pic">
+                <a href="">小土豆</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">登录账号:</div>
+            <div class="a_list_r">29zb15928804425</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">登录密码:</div>
+            <div class="a_list_r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../../../js/jquery.min.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/myjs.js"></script>
+<script>
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .add_btn,#chutiyan .gl-btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '直播账号-编辑',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['900px', '404px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#add-sure")
+        });
+    });
+    $('#chutiyan .tips').on('mouseenter',function(){
+        this.index =layer.tips('管理员的作用主要就是在观看端发送消息时，有身份标记，可以在观看端上下架商品', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:680
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+    $('#chutiyan .reset-pwd').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '直播账号-编辑',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '327px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#reset-sure")
+        });
+    });
+
+    $('#chutiyan .admin-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '管理员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../../管理员.html' //iframe的url
+        });
+    });
+    $('#chutiyan .live-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '直播话题',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '直播话题.html' //iframe的url
+        });
+    });
+
+
+    $('#chutiyan .chose-zb').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '主播微信',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '主播微信.html' //iframe的url
+        });
+    });
+    $('#chutiyan .chose-admin').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '管理员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../../管理员.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .ischose-admin').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '管理员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../../管理员.html#tab2' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

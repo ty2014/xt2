@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>裂变明细</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="css/index.css"/>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body id="chutiyan">
+<div class="content2">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>裂变明细列表</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span class="sort"><i class="fa fa-sort"></i>排序</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="100px">被邀人头像</th>
+                    <th width="100px">被邀人昵称</th>
+                    <th width="100px">被邀人姓名</th>
+                    <th width="100px">被邀人手机</th>
+                    <th width="80px">会员等级</th>
+                    <th width="80px">被谁拉</th>
+                    <th width="100px">裂变层级<i class="sort-icon"></i></th>
+                    <th width="100px">邀请人数</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="cover-pic"><img src="images/head.jpg" alt=""/></td>
+                    <td>小呀么小西几</td>
+                    <td>鸡屎糖</td>
+                    <td>13546467979</td>
+                    <td>普通会员</td>
+                    <td>啦啦啦</td>
+                    <td>3</td>
+                    <td>12</td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/index.js"></script>
+<script>
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '高级搜索',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['60%', '80%'],
+            content: '搜索.html' //iframe的url
+        });
+    });
+    $('#chutiyan .sort').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '分享人数排序',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['60%', '80%'],
+            content: '排序.html' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>四川梦想科技</title>
+    <link rel="stylesheet" href="css/index.css?v=1.0.0"/>
+    <script src="js/rem.js"></script>
+</head>
+<body>
+
+<div class="content">
+    <div class="zytd-head">
+        <img src="images/left2.png" alt="" onclick="window.history.back(-1)">
+        <ul>
+            <li class="active">直营团队</li>
+            <li>直营业绩</li>
+        </ul>
+    </div>
+
+    <div class="scroll-cont box_content" style="background: #fff">
+        <div class="box active" id="tab1">
+            <div class="search">
+                <div><form action=""><input type="search" placeholder="昵称/姓名"><span>搜索</span></form></div>
+            </div>
+            <div class="yg-msg-list zytd-list">
+                <a href="直营团队-成交情况.html" class="list-href">
+                    <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-20/f17accc9f9af9567129ac1d7b2495253.jpeg" alt=""></div>
+                    <div class="list-item">
+                        <div class="list-txt"><p class="item-tit">小土豆</p><span class="name">蒋雨<img src="images/tel.png"></span></div>
+                        <div class="item-msg">业绩：15,289.00 <span>10笔</span></div>
+                    </div>
+                </a>
+                <a href="直营团队-成交情况.html" class="list-href">
+                    <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-20/f17accc9f9af9567129ac1d7b2495253.jpeg" alt=""></div>
+                    <div class="list-item">
+                        <div class="list-txt"><p class="item-tit">揽客魔联创人【刘强】52号</p><span class="name">蒋雨<img src="images/tel.png"></span></div>
+                        <div class="item-msg">业绩：15,289.00 <span>10笔</span></div>
+                    </div>
+                </a>
+                <a href="直营团队-成交情况.html" class="list-href">
+                    <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-20/f17accc9f9af9567129ac1d7b2495253.jpeg" alt=""></div>
+                    <div class="list-item">
+                        <div class="list-txt"><p class="item-tit">袁琳莉【揽客魔】联创人66...</p><span class="name">蒋雨<img src="images/tel.png"></span></div>
+                        <div class="item-msg">业绩：15,289.00 <span>10笔</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="box" id="tab2">
+            <ul class="index-tab index-tab-nhref">
+                <li>
+                    <div>
+                        <p class="number">10</p>
+                        <p class="text">成交笔数</p>
+                    </div>
+                    <div>
+                        <p class="number">897,852.00</p>
+                        <p class="text">业绩（元）</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="yg-msg-list">
+                <a href="直营业绩-成交情况.html" class="list-href">
+                    <div class="list-item">
+                        <div class="list-txt"><p class="item-tit">2019-12</p></div>
+                        <div class="item-msg">业绩：15,289.00<span>251笔</span></div>
+                    </div>
+                </a>
+                <a href="直营业绩-成交情况.html" class="list-href">
+                    <div class="list-item">
+                        <div class="list-txt"><p class="item-tit">2019-11</p></div>
+                        <div class="item-msg">业绩：15,289.00 <span>10笔</span></div>
+                    </div>
+                </a>
+                <a href="直营业绩-成交情况.html" class="list-href">
+                    <div class="list-item">
+                        <div class="list-txt"><p class="item-tit">2019-10</p></div>
+                        <div class="item-msg">业绩：15,289.00 <span>10笔</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.zytd-head li');
+    var con = $('.box_content .box');
+    console.log(con);
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active');
+            $(con[i]).addClass('active');
+        }
+    }
+
+
+    $('.list-txt .name').click(function (e) {
+        e.preventDefault();
+        window.location.href = 'tel://18328049763';
+    });
+
+    $(".zytd-head li").on("click", function () {
+        var index = $(this).index();
+        $(this).parent().parent().siblings().find(".box").hide().eq(index).show();
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+
+
+</script>
+
+
+</body>
+</html>

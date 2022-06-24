@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>业务签署</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!--
+
+总签记录= 有效+作废+未付款       单位：签约条数
+
+-->
+
+<div class="content">
+    <div class="page-title">业务签署</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">启用</a></li>
+                    <li><a href="#">停用</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">项目类型</th>
+                        <th width="150px">项目名称</th>
+                        <th width="150px">协议模板</th>
+                        <th width="100px">总签记录<i class="sort-icon"></i></th>
+                        <th width="80px">有效<i class="sort-icon"></i></th>
+                        <th width="80px">作废<i class="sort-icon"></i></th>
+                        <th width="80px">未付款<i class="sort-icon"></i></th>
+                        <th width="80px">未签无效<i class="sort-icon"></i></th>
+                        <th width="100px">状态</th>
+                        <th width="140px">更新时间</th>
+                        <th width="100px">更新人</th>
+                        <th width="100px">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px">购买会员</td>
+                        <td width="150px" class="left"><a href="">事业合伙人</a></td>
+                        <td width="150px" class="left"><a href="">5000合伙人</a></td>
+                        <td width="100px"><a class="zq-num">180</a></td>
+                        <td width="80px"><a class="yx-num">72</a></td>
+                        <td width="80px"><a class="zf-num">8</a></td>
+                        <td width="80px"><a class="wfk-num">100</a></td>
+                        <td width="80px"><a class="wqwx-num">20</a></td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="140px" class="date">2019-10-01 10:00:00</td>
+                        <td width="100px">lkm</td>
+                        <td width="100px" class="cz_btn">
+                            <button type="button" class="btn-type1 gl-btn">管理</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>课程动态</td>
+                        <td class="left"><a href="">百万客流爆破营</a></td>
+                        <td class="left"><a href="">3980联创</a></td>
+                        <td><a class="zq-num">230</a></td>
+                        <td><a class="yx-num">200</a></td>
+                        <td><a class="zf-num">0</a></td>
+                        <td><a class="wfk-num">30</a></td>
+                        <td><a class="wqwx-num">0</a></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td class="date">2019-10-01 10:00:00</td>
+                        <td>lkm</td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1 gl-btn">管理</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>
+                条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">项目名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">协议模板:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">项目类型:</span>
+            <div class="account-r chose_item">
+                <label for="type1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">购买会员</span>
+                </label>
+                <label for="type2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">课程动态</span>
+                </label>
+                <label for="type3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">系列课</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="statu1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="statu2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">更新人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">更新时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1"><span class="date-line"></span><input type="text" class="layui-input" id="test2"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="sort-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">总签记录:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">有效:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">作废:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">未付款:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">未签无效:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<!--  添加  -->
+<div class="activity_set activity_set2 w-120" id="add-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">项目类型:</div>
+            <div class="a_list_r chose_item">
+                <label for="xmstatu1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked name="xmstatu" id="xmstatu1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">购买会员</span>
+                </label>
+                <label for="xmstatu2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="xmstatu" id="xmstatu2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">课程动态</span>
+                </label>
+                <label for="xmstatu3" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="xmstatu" id="xmstatu3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">系列课</span>
+                </label>
+            </div>
+        </div>
+        <!--  购买会员  -->
+        <div class="a_list xmtype1">
+            <div class="a_list_l">项目名称:</div>
+            <div class="a_list_r"><span class="set-user set-vip" style="margin-right: 16px;">选择需签协议的商品</span></div>
+        </div>
+        <!--  课程动态  -->
+        <div class="a_list xmtype2" style="display: none">
+            <div class="a_list_l">项目名称:</div>
+            <div class="a_list_r"><span class="set-user set-kc" style="margin-right: 16px;">选择需签协议的商品</span></div>
+        </div>
+        <!--  系列课  -->
+        <div class="a_list xmtype3" style="display: none">
+            <div class="a_list_l">项目名称:</div>
+            <div class="a_list_r"><span class="set-user set-xlk" style="margin-right: 16px;">选择需签协议的商品</span></div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">协议模板:</div>
+            <div class="a_list_r"><span class="set-user set-mb" style="margin-right: 16px;">模板选择</span></div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">启用状态:</div>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                        <label for="u-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*开启，则需签协议后购买；关闭，则不签协议直接购买。</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $("#xmstatu1").on("click",function(){
+        $('.xmtype1').show();
+        $('.xmtype2,.xmtype3').hide();
+    });
+    $("#xmstatu2").on("click",function(){
+        $('.xmtype2').show();
+        $('.xmtype1,.xmtype3').hide();
+    });
+    $("#xmstatu3").on("click",function(){
+        $('.xmtype3').show();
+        $('.xmtype1,.xmtype2').hide();
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '500px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .sort').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '排序',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '460px'],
+            skin: 'account-box',
+            content: $("#sort-account")
+        });
+    });
+
+    $('#chutiyan .add_btn,#chutiyan .gl-btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '业务签署',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['600px', '394px'],
+            skin: 'activity_set',
+            content: $("#add-sure")
+        });
+        $('.activity_set').css('padding-top','0')
+    });
+    $('#chutiyan .zq-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '百万客流爆破营',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '签署数据.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .yx-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '百万客流爆破营',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '签署数据.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .zf-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '百万客流爆破营',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '签署数据.html#tab3' //iframe的url
+        });
+    });
+    $('#chutiyan .wfk-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '百万客流爆破营',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '签署数据.html#tab4' //iframe的url
+        });
+    });
+    $('#chutiyan .wqwx-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '百万客流爆破营',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '签署数据.html#tab5' //iframe的url
+        });
+    });
+    $('#chutiyan .set-xlk').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '系列课',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '系列课选择.html' //iframe的url
+        });
+    });
+    $('#chutiyan .set-vip').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '购买会员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '等级选择.html' //iframe的url
+        });
+    });
+    $('#chutiyan .set-kc').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '课程动态',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '课程动态选择.html' //iframe的url
+        });
+    });
+    $('#chutiyan .set-mb').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '模板选择',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '../模板选择.html' //iframe的url
+        });
+    });
+
+</script>
+</body>
+</html>

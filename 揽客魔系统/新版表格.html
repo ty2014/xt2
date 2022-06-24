@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <link rel="stylesheet" href="css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!--
+
+竖向滚动条：
+    当表格出现竖向滚动条时，表头的 table-patch 要显示出来占位，宽度等于滚动条的宽度（10px）
+
+固定列：
+情形一：只有横向滚动条，没有竖向滚动条
+    则：固定列 ‘table-tbody’的高度 = 原表格的 ‘table-tbody’高度
+
+情形二： 横向和竖向都要滚动条
+    则：固定列 ‘table-tbody’的高度 = 原表格的 ‘table-tbody’高度 - 10（滚动条的宽度）
+        且：固定列右侧 ‘table-fixed-r’ 要往左移动 10px（滚动条的宽度）
+-->
+
+<div class="lkmui-message lkmui-message--success">
+    <p class="lkmui-message_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</p>
+    <i class="icon-remove"></i>
+</div>
+<div class="lkmui-message lkmui-message--warning" style="top:70px">
+    <p class="lkmui-message_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</p>
+</div>
+<div class="lkmui-message lkmui-message--info" style="top:120px">
+    <p class="lkmui-message_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</p>
+</div>
+<div class="lkmui-message lkmui-message--error" style="top:170px">
+    <p class="lkmui-message_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</p>
+</div>
+
+
+<div class="lkmui-alert lkmui-alert--success is-light">
+    <div class="lkmui-alert_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</div>
+    <i class="alert-closeBtn icon-remove"></i>
+</div>
+<div class="lkmui-alert lkmui-alert--warning is-light">
+    <div class="lkmui-alert_content">推荐使用以下浏览器，保证视图效果正常展示：谷歌、搜狗、火狐、QQ、360安全浏览器</div>
+    <i class="alert-closeBtn icon-customed">我知道了</i>
+</div>
+<div class="lkmui-alert lkmui-alert--info is-light">
+    <div class="lkmui-alert_content">推荐使用以下浏览器，保证视图效果正常展示：谷歌、搜狗、火狐、QQ、360安全浏览器</div>
+    <i class="alert-closeBtn icon-remove"></i>
+</div>
+<div class="lkmui-alert lkmui-alert--error is-light">
+    <div class="lkmui-alert_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</div>
+    <i class="alert-closeBtn icon-remove"></i>
+</div>
+<div class="lkmui-alert lkmui-alert--success is-dark">
+    <div class="lkmui-alert_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</div>
+    <i class="alert-closeBtn icon-remove"></i>
+</div>
+<div class="lkmui-alert lkmui-alert--warning is-dark">
+    <div class="lkmui-alert_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</div>
+    <i class="alert-closeBtn icon-customed">我知道了</i>
+</div>
+<div class="lkmui-alert lkmui-alert--info is-dark">
+    <div class="lkmui-alert_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</div>
+    <i class="alert-closeBtn icon-remove"></i>
+</div>
+<div class="lkmui-alert lkmui-alert--error is-dark">
+    <div class="lkmui-alert_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</div>
+    <i class="alert-closeBtn icon-remove"></i>
+</div>
+
+
+
+<div id="app">
+    <div class="content">
+        <div class="page-title">表格
+            <div class="notisTip">
+                <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="fa fa-file-word-o"></i>功能说明</a>
+                <a href="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" target="_blank"><i class="fa fa-file-movie-o"></i>视频教程</a>
+            </div>
+        </div>
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+                <span class="tab-tips export"><i class="export-tips"></i>导出</span>
+                <span class="tab-tips"><i class="del-tips2"></i>清空排序</span>
+                <span class="tab-tips update"><i class="update-tips"></i>更新</span>
+                <div class="tab-tips column">
+                    <span><i class="column-tips"></i>筛选列</span>
+                    <ul class="table-tool">
+                        <li class="tool-item" v-for = "(list,index) in arr" :key="index">
+                            <label :for="list.id" class="checked">
+                                <div class="chose">
+                                    <input type="checkbox" :checked="list.checked" :name="list.name" :id="list.id" />
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">{{list.txt}}</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="search-input"><i class="fa fa-search"></i><input type="text"></li>
+                        <li class="search-null">没有任何结果</li>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">有效</a></li>
+                        <li><a href="#">无效</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab_type_2">
+                <span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2" id="demo">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="60px"><div>序号</div></th>
+                            <th width="60px">
+                                <label for="check0" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="check0">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </th>
+                            <th width="300px"><div>操作</div></th>
+                            <th width="80px">主图</th>
+                            <th width="200px" class="left">用户</th>
+                            <th width="80px">姓名</th>
+                            <th width="120px">手机</th>
+                            <th width="100px">会员等级<i class="sort-icon"></i></th>
+                            <th width="100px">创建状态<i class="sort-icon sort-asc"></i></th>
+                            <th width="100px">创建活动<i class="sort-icon sort-desc"></i></th>
+                            <th width="100px">升级记录</th>
+                            <!--  当表格出现竖向滚动条时，表头添加此 th ，用来占位，宽度等于表体的滚动条宽度（10px）  -->
+                            <th class="table-patch"></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!--  控制tbody的高度就可以出现竖向滚动条  -->
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="60px"><div>1</div></td>
+                            <td width="60px">
+                                <div>
+                                    <label for="check1" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="pic2" id="check1">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td width="300px"><div></div></td>
+                            <td width="80px" class="squ-pic"><img src="images/null2.jpg" alt=""></td>
+                            <td width="200px" class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td width="80px"><div>蒋雨</div></td>
+                            <td width="120px"><div>13350021234</div></td>
+                            <td width="100px"><div>vip</div></td>
+                            <td width="100px" class="statu statu1"><div><span>有效</span></div></td>
+                            <td width="100px"><a >2</a></td>
+                            <td width="100px"><a class="sj-list">2</a></td>
+                        </tr>
+                        <tr>
+                            <td><div>2</div></td>
+                            <td>
+                                <div>
+                                    <label for="check2" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="pic2" id="check2">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="cz_btn">
+                                <div>
+                                    <button type="button" class="btn-type1 anser-btn">回复</button>
+                                    <button type="button" class="btn-type2 del-btn">删除</button>
+                                    <button type="button" class="normal-btn">添加下级</button>
+                                </div>
+                            </td>
+                            <td class="squ-pic"><img src="images/null2.jpg" alt=""></td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td><div>蒋雨</div></td>
+                            <td><div>13350021234</div></td>
+                            <td><div>-</div></td>
+                            <td class="statu statu2"><div><span>无效</span></div></td>
+                            <td><a >1</a></td>
+                            <td><a class="sj-list">1</a></td>
+                        </tr>
+                        <tr>
+                            <td><div>3</div></td>
+                            <td>
+                                <div><label for="check3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="check3">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label></div>
+                            </td>
+                            <td class="cz_btn">
+                                <div>
+                                    <button type="button" class="btn-type1 anser-btn">回复</button>
+                                    <button type="button" class="btn-type2 del-btn">删除</button>
+                                    <button type="button" class="normal-btn">添加下级</button>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td><div>蒋雨</div></td>
+                            <td><div>13350021234</div></td>
+                            <td><div>-</div></td>
+                            <td class="statu statu3"><div><span>待审核</span></div></td>
+                            <td><a >1</a></td>
+                            <td><a class="sj-list">1</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--    总计        -->
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr class="total">
+                            <td colspan="11" style="text-align: left">总计</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--    空状态       -->
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td colspan="11">
+                                <div class="null-msg"><img src="images/null-msg.png" alt="">暂无数据</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--  分页  -->
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--  出现情况，表格中列数很多  -->
+    <div class="content">
+        <div class="page-title">固定表格</div>
+        <div class="tab_content2" style="width: 1000px">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+                <span class="tab-tips export"><i class="export-tips"></i>导出</span>
+                <span class="tab-tips"><i class="del-tips2"></i>清空排序</span>
+                <div class="tab-tips column">
+                    <span><i class="column-tips"></i>筛选列</span>
+                    <ul class="table-tool">
+                        <li class="tool-item" v-for = "(list2,index) in arr2" :key="index">
+                            <label :for="list2.id" class="checked">
+                                <div class="chose">
+                                    <input type="checkbox" :checked="list2.checked" :name="list2.name" :id="list2.id" />
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">{{list2.txt}}</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top_tit2 center">
+                    <a ><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="search-input"><i class="fa fa-search"></i><input type="text"></li>
+                        <li class="search-null">没有任何结果</li>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">有效</a></li>
+                        <li><a href="#">无效</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab_type_2">
+                <span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span>
+            </div>
+        </div>
+        <!--  固定列  -->
+        <div class="edit_table2" style="width: 1000px">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="60px">
+                                <label for="check1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="check1">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </th>
+                            <th width="80px">主图</th>
+                            <th width="200px" class="left">用户</th>
+                            <th width="80px">姓名</th>
+                            <th width="120px">手机</th>
+                            <th width="100px">会员等级<i class="sort-icon"></i></th>
+                            <th width="100px">创建状态<i class="sort-icon sort-asc"></i></th>
+                            <th width="100px">创建活动<i class="sort-icon sort-desc"></i></th>
+                            <th width="100px">升级记录</th>
+                            <th width="300px">操作</th>
+                            <!--  当表格出现竖向滚动条时，表头添加此 th ，用来占位，宽度等于表体的滚动条宽度（10px）  -->
+                            <th class="table-patch" style="display: block"></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody" style="height: 150px">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px"><div>1</div></td>
+                            <td width="60px">
+                                <div>
+                                    <label for="check1" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="pic2" id="check1">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td width="80px" class="squ-pic"><img src="images/null2.jpg" alt=""></td>
+                            <td width="200px" class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td width="80px"><div>蒋雨</div></td>
+                            <td width="120px"><div>13350021234</div></td>
+                            <td width="100px"><div>vip</div></td>
+                            <td width="100px" class="statu statu1"><div><span>有效</span></div></td>
+                            <td width="100px"><a >2</a></td>
+                            <td width="100px"><a class="sj-list">2</a></td>
+                            <td width="300px"><div></div></td>
+                        </tr>
+                        <tr>
+                            <td><div>2</div></td>
+                            <td>
+                                <div>
+                                    <label for="check2" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="pic2" id="check2">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="squ-pic"><img src="images/null2.jpg" alt=""></td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td><div>蒋雨</div></td>
+                            <td><div>13350021234</div></td>
+                            <td><div>-</div></td>
+                            <td class="statu statu2"><div><span>无效</span></div></td>
+                            <td><a >1</a></td>
+                            <td><a class="sj-list">1</a></td>
+                            <td class="cz_btn">
+                                <div>
+                                    <button type="button" class="btn-type1 anser-btn">回复</button>
+                                    <button type="button" class="btn-type2 del-btn">删除</button>
+                                    <button type="button" class="normal-btn">添加下级</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div>3</div></td>
+                            <td>
+                                <div><label for="check3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="check3">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label></div>
+                            </td>
+                            <td></td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td><div>蒋雨</div></td>
+                            <td><div>13350021234</div></td>
+                            <td><div>-</div></td>
+                            <td class="statu statu3"><div><span>待审核</span></div></td>
+                            <td><a >1</a></td>
+                            <td><a class="sj-list">1</a></td>
+                            <td class="cz_btn">
+                                <div>
+                                    <button type="button" class="btn-type1 anser-btn">回复</button>
+                                    <button type="button" class="btn-type2 del-btn">删除</button>
+                                    <button type="button" class="normal-btn">添加下级</button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--  分页  -->
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l"><em class="importantTip">*</em>有效时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1"><span class="date-line"></span><input type="text" class="layui-input" id="test2"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>无效</li>
+                        <li>有效</li>
+                        <li>待审核</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员等级:</span>
+            <div class="account-r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="vip5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">性别:</span>
+            <div class="account-r chose_item">
+                <label for="fix1" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="fix" id="fix1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">女</span>
+                </label>
+                <label for="fix2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="fix" id="fix2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">男</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="sort-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">总签记录:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">有效:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">作废:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">未付款:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-120" id="edit-sure" style="display: none">
+
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">活码名称:</span>
+            <div class="a_list_r"><input type="text"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">启用状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                        <label for="u-togg2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*关闭即不可用，访问活码将不再展示上传的二维码</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">切换模式:</span>
+            <div class="a_list_r chose_item">
+                <div>
+                    <div style="display: flex;align-items: center">
+                        <label for="cj2-1" class="radio">
+                            <div class="chose">
+                                <input type="radio" checked name="cj" id="cj2-1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">顺序切换</span>
+                        </label>
+                        <label for="cj2-2" class="radio mgR-0">
+                            <div class="chose">
+                                <input type="radio"  name="cj" id="cj2-2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">循环切换</span>
+                        </label>
+                    </div>
+                    <p class="tishi" style="margin: 0">*顺序切换：所有码切换完后，页面将显示活动暂停；适用于群二维码，加满人后切换下一群</p>
+                    <p class="tishi" style="margin: 0">*循环切换：所有码切换完后，又从第一个码开始切换；适用于客服码分配，给客服均匀分流</p>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">切换值:</span>
+            <div class="a_list_r">每<input type="text" class="s_width center" style="margin: 0 8px;">人访问，自动切换二维码</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">提醒引导:</span>
+            <div class="a_list_r"><input type="text" class="w-620" placeholder="最多20字，引导用户扫码，例如：添加老师微信领取课程资料"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="padding-top: 18px;">上传二维码:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist">
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--  上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <div class="file-btn"></div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div class="viewPhone_cont">
+                    <div class="viewPhone_head"><span></span><span></span></div>
+                    <div class="viewPhone_box viewbox-contetn">
+                        <img src="http://cshtml.lkmsxy.com/phoneTop.jpg" alt="" class="phone_topTab">
+                        内容
+                    </div>
+                    <div class="viewPhone_foot"><span></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            arr:[
+                {id:'1',name:'sx',txt:'主图',checked:'checked'},
+                {id:'2',name:'sx',txt:'用户',checked:'checked'},
+                {id:'3',name:'sx',txt:'姓名',checked:'checked'},
+                {id:'4',name:'sx',txt:'手机',checked:'checked'},
+                {id:'5',name:'sx',txt:'会员等级',checked:'checked'},
+                {id:'6',name:'sx',txt:'创建状态',checked:'checked'},
+                {id:'7',name:'sx',txt:'创建活动',checked:'checked'},
+                {id:'8',name:'sx',txt:'升级记录',checked:'checked'},
+            ],
+            arr2:[
+                {id:'2-1',name:'sx2',txt:'主图',checked:'checked'},
+                {id:'2-2',name:'sx2',txt:'用户',checked:'checked'},
+                {id:'2-3',name:'sx2',txt:'姓名',checked:'checked'},
+                {id:'2-4',name:'sx2',txt:'手机',checked:'checked'},
+                {id:'2-5',name:'sx2',txt:'会员等级',checked:'checked'},
+                {id:'2-6',name:'sx2',txt:'创建状态',checked:'checked'},
+                {id:'2-7',name:'sx2',txt:'创建活动',checked:'checked'},
+                {id:'2-8',name:'sx2',txt:'升级记录',checked:'checked'},
+            ]
+        },
+        methods:{
+
+        }
+    })
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/layui/lay/modules/layer.js"></script>
+<script src="js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .sort').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '排序',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#sort-account")
+        });
+    });
+
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '付费页面-自定义',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#edit-sure")
+        });
+    });
+    // 删除等操作弹框样式
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del-btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定删除该条消息？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+    // 通过、成功弹框样式
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .anser-btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/success.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定删除该条消息？',{
+                skin: 'successskin',    //类名
+                icon:1,
+                btn: ['确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+    // 普通弹框样式
+    $('#chutiyan .normal-btn').on('click', function(){
+        layer.confirm('是否确定删除该条消息？',{
+            btn: ['取消','确定'],
+            area: '416px'
+        }, function(index){
+            layer.close(index);
+        }, function(){
+            layer.msg('删除成功', {time: 1000});
+        });
+    });
+
+</script>
+</body>
+</html>

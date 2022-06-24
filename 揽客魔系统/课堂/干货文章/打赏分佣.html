@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打赏分佣</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+<body id="chutiyan">
+
+<div class="gz-content">
+    <p class="title">打赏分佣</p>
+    <div class="head-content w-120">
+        <div class="cont_list">
+            <span class="list_tit">是否启用：</span>
+            <div class="list_cont">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox"  id="ds-fy" class="toggle-button" name="switch">
+                    <label for="ds-fy" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">是</span>
+                        <span class="text off">否</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="fy-set">
+            <div class="cont_list">
+                <span class="list_tit">
+                    <i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="" data-original-title="设置打赏自定义金额"></i>打赏金额：
+                </span>
+                <div class="list_cont">
+                    <input type="number" class="s_width m-height center">元&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" class="s_width m-height center">元&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" class="s_width m-height center">元&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" class="s_width m-height center">元&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" class="s_width m-height center">元&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" class="s_width m-height center">元
+                </div>
+            </div>
+            <div class="cont_list flex-start ">
+                <span class="list_tit" style="padding-top: 10px;">分佣设置：</span>
+                <div class="list_cont">
+                    <form style="width: 100%">
+                        <table class="list_content">
+                            <tr>
+                                <td class="tab-2" colspan="4">锁定提成</td>
+                            </tr>
+                            <tr>
+                                <td class="tab-1">锁定佣金开关:</td>
+                                <td class="tab-2" colspan="3">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" checked id="togglebtn1" class="toggle-button" name="switch">
+                                        <label for="togglebtn1" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                        <span class="switch_status">默认：关闭，在设置时若不填写或设置为0则不会产生分佣</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tab-1">提成标准:</td>
+                                <td class="tab-2">
+                                    <select>
+                                        <option value="">按固定值</option>
+                                        <option value="">按比例</option>
+                                    </select>
+                                </td>
+                                <td class="tab-1">低等级提成高等级:</td>
+                                <td class="tab-2">
+                                    <div>
+                                        <input type="checkbox" checked id="togglebtn2" class="toggle-button" name="switch">
+                                        <label for="togglebtn2" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">能</span>
+                                            <span class="text off">不能</span>
+                                        </label>
+                                        <span class="switch_status">默认：开启</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tab-1">锁定提成设置</td>
+                                <td class="tab-2" colspan="3">
+                                    <ul class="ticheng_set">
+                                        <li>
+                                            <div>
+                                                <div class="tc_1">
+                                                    <span>会员等级1</span>
+                                                    <span class="tc_num">提成值（元）：<input type="text"/></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <div class="tc_1">
+                                                    <span>会员等级2</span>
+                                                    <span class="tc_num">提成值（元）：<input type="text"/></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <div class="tc_1">
+                                                    <span>非会员</span>
+                                                    <span class="tc_num">提成值（元）：<input type="text"/></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tab-2" colspan="4">推荐提成</td>
+                            </tr>
+                            <tr>
+                                <td class="tab-1">推荐佣金开关:</td>
+                                <td class="tab-2" colspan="3">
+                                    <div style="position: relative">
+                                        <input type="checkbox" checked id="togglebtn9" class="toggle-button" name="switch">
+                                        <label for="togglebtn9" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                        <span class="switch_status">默认：关闭，在设置时若不填写或设置为0则不会产生分佣</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tab-1">提成标准:</td>
+                                <td class="tab-2">
+                                    <select>
+                                        <option value="">按比例</option>
+                                        <option value="">按固定值</option>
+                                    </select>
+                                </td>
+                                <td class="tab-1">低等级提成高等级:</td>
+                                <td class="tab-2">
+                                    <div>
+                                        <input type="checkbox" checked id="togglebtn5" class="toggle-button" name="switch">
+                                        <label for="togglebtn5" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">能</span>
+                                            <span class="text off">不能</span>
+                                        </label>
+                                        <span class="switch_status">默认：开启</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tab-1">推荐提成设置</td>
+                                <td class="tab-2" colspan="3">
+                                    <ul class="ticheng_set">
+                                        <li>
+                                            <div>
+                                                <div class="tc_1">
+                                                    <span>会员等级1</span>
+                                                    <span class="tc_num">提成比例（%）：<input type="text"/></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <div class="tc_1">
+                                                    <span>会员等级2</span>
+                                                    <span class="tc_num">提成比例（%）：<input type="text"/></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <div class="tc_1">
+                                                    <span>非会员</span>
+                                                    <span class="tc_num">提成比例（%）：<input type="text"/></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+    $(function () {
+        if($('#ds-fy').is(':checked')){
+            $('.fy-set').show()
+        }else{
+            $('.fy-set').hide()
+        }
+        $('#ds-fy').click(function () {
+            $('.fy-set').toggle()
+        });
+    });
+
+</script>
+
+</body>
+</html>

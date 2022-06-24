@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>获赠卡券</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff">
+
+
+<div class="content">
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="80px">卡券主图</th>
+                        <th width="100px">卡券名称</th>
+                        <th width="80px">购买人头像</th>
+                        <th width="100px">购买人昵称</th>
+                        <th width="80px">预留姓名</th>
+                        <th width="100px">预留电话</th>
+                        <th width="80px">领取人头像</th>
+                        <th width="100px">领取人昵称</th>
+                        <th width="80px">预留姓名(领)</th>
+                        <th width="100px">预留电话(领)</th>
+                        <th width="140px">领取时间</th>
+                        <th width="80px">是否消费</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="80px" class="squ-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                        <td width="100px" class="left"><a href="">装修款抵用金</a></td>
+                        <td width="80px" class="cover-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                        <td width="100px"><a href="">小土豆</a></td>
+                        <td width="80px">蒋雨</td>
+                        <td width="100px">13546467979</td>
+                        <td width="80px" class="cover-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                        <td width="100px"><a href="">啊啊啊</a></td>
+                        <td width="80px">陈晨</td>
+                        <td width="100px">13546467979</td>
+                        <td width="140px" class="date">2019-10-20 10:00:00</td>
+                        <td width="80px">否</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="squ-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                        <td class="left"><a href="">装修款抵用金</a></td>
+                        <td class="cover-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                        <td><a href="">小土豆</a></td>
+                        <td>蒋雨</td>
+                        <td>13546467979</td>
+                        <td class="cover-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                        <td><a href="">啊啊啊</a></td>
+                        <td>陈晨</td>
+                        <td>13546467979</td>
+                        <td class="date">2019-10-20 10:00:00</td>
+                        <td>是</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">卡券名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">购买人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留电话:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">领取人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留姓名（领）:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留电话（领）:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">是否消费:</span>
+            <div class="account-r chose_item">
+                <label for="fix1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fix" id="fix1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="fix2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fix" id="fix2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">领取时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1"><span class="date-line"></span><input type="text" class="layui-input" id="test2"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '506px'],
+            skin: 'account-box',
+            content: $("#search-account").html()
+        });
+    });
+</script>
+</body>
+</html>

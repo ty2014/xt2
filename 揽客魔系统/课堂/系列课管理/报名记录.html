@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报名记录</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">报名记录</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="250px">系列课标题</th>
+                        <th width="80px">报名人头像</th>
+                        <th width="100px">报名人昵称</th>
+                        <th width="100px">姓名</th>
+                        <th width="100px">手机</th>
+                        <th width="80px">推荐人头像</th>
+                        <th width="100px">推荐人昵称</th>
+                        <th width="80px">渠道商头像</th>
+                        <th width="100px">渠道商昵称</th>
+                        <th width="100px">支付状态</th>
+                        <th width="100px">支付金额</th>
+                        <th width="140px">录入时间</th>
+                        <th width="140px">报名时间</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="250px"><div class="wrap-noml">社群核裂变发售模型</div></td>
+                        <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                        <td width="100px" class="left"><a >手机用户466941</a></td>
+                        <td width="100px" class="left">手机用户466941</td>
+                        <td width="100px">13350024525</td>
+                        <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                        <td width="100px"><a ></a></td>
+                        <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                        <td width="100px"><a></a></td>
+                        <td width="100px" class="statu statu3"><span>未支付</span></td>
+                        <td width="100px">199.00</td>
+                        <td width="140px" class="date"><div>2019-08-13 15:17:41</div></td>
+                        <td width="140px" class="date"><div>2019-08-13 15:17:41</div></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>
+                条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">系列课标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">报名人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">报名人姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">报名人手机:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">推荐人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">渠道商昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">报名时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1"><span style="color: #999;margin: 0 10px;">—</span><input type="text" class="layui-input" id="test2"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">支付状态:</span>
+            <div class="account-r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">已支付</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">未支付</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '564px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+</script>
+
+</body>
+</html>

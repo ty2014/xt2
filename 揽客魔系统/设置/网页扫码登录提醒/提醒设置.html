@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>群发</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+
+<div class="page-title">网页扫码登录提醒</div>
+<div class="activity_set activity_set3 w-5">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">登录提示:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg2" checked class="toggle-button" name="switch">
+                        <label for="u-togg2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">发送提示</span>
+                            <span class="text off">不发送提示</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*‘发送提示’则用户扫码后发送提示语，‘不发送提示’则一样可以登录，只是不发送提示语</span>
+            </div>
+        </div>
+        <div class="a_list" style="align-items: flex-start">
+            <span class="a_list_l" style="padding-top: 23px;">发送内容:</span>
+            <div class="a_list_r flex-column">
+                <div class="remin_end_txt">
+                    <div class="cont_label">
+                        <div class="href_cont href_cont1">
+                            <p>文本<input type="text" placeholder="链接名字"></p>
+                            <p>链接<input type="text"><span>确定</span></p>
+                        </div>
+                        <span class="href_btn href_btn1" data-toggle="tooltip" data-placement="top" title="链接"></span>
+                        <span class="emoji_btn" data-toggle="tooltip" data-placement="top" title="表情"></span>
+                        <div class="faceDiv"></div>
+                        <span class="line"></span>
+                        <em class="label-tips">[扫码时间]</em>
+                        <em class="label-tips">[扫码人昵称]</em>
+                        <em class="label-tips">[扫码人姓名]</em>
+                        <em class="label-tips">[扫码人等级]</em>
+                    </div>
+                    <div class="txt_cont Input_text" contenteditable="true"></div>
+                    <p class="nums-tip2">还可输入<span>600</span>字</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/emoji.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('.send-type li').click(function () {
+        var txt=$(this).text();
+        if(txt==='模板群发'){
+            $('.mb-cont,.mb-tishi').show();
+            $('.kf-cont,.kf-tishi').hide();
+        }else if(txt==='客服群发'){
+            $('.mb-cont,.mb-tishi').hide();
+            $('.kf-cont,.kf-tishi').show();
+        }
+    });
+    $('.mb-type li').click(function () {
+        var txt=$(this).text();
+        if(txt==='请选择'){
+            $('.mb-cont-show').hide();
+        }else{
+            $('.mb-cont-show').show();
+        }
+    });
+
+
+    $('.send-time-check').click(function () {
+        $('.send-time').show();
+    });
+    $('.send-time-check').siblings().click(function () {
+        $('.send-time').hide();
+    });
+    $('.send-time-check2').click(function () {
+        $('.send-time2').show();
+    });
+    $('.send-time-check2').siblings().click(function () {
+        $('.send-time2').hide();
+    });
+
+    $('.code-write input[type="text"]').keyup(function(){
+        var remain = $(this).val().length;
+        if(remain > 0){
+            $(this).siblings('.color').append('<input type="color" id="colortxt">');
+        }else{
+            $(this).siblings('.color').find('input').remove();
+        }
+    });
+
+
+</script>
+
+</body>
+</html>

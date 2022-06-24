@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账户信息</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../css/style.css"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+</head>
+<body style="min-width: auto">
+
+<div class="head_nav">
+    <!-- Nav tabs -->
+    <ul class="nav nav-pills nav-second" role="tablist">
+        <li role="presentation" class="active"><a href="#account" aria-controls="account" role="tab" data-toggle="tab">账户信息</a></li>
+        <li role="presentation"><a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">基础信息</a></li>
+        <li role="presentation"><a href="#card" aria-controls="card" role="tab" data-toggle="tab">名片信息</a></li>
+        <li role="presentation" class="show"><a href="#detail" aria-controls="detail" role="tab" data-toggle="tab">修改等级记录信息</a></li>
+    </ul>
+    <div class="tab_type_l rh">
+        <!-- 默认隐藏，当选择到 ‘修改等级记录信息’时才显示 -->
+        <span class="search"><i class="fa fa-search"></i>搜索</span>
+    </div>
+</div>
+<!-- Tab panes -->
+<div class="tab-content nav-second-content">
+    <div role="tabpanel" class="tab-pane active" id="account">
+        <div class="account-cont">
+            <div class="account">
+                <span class="account-l">昵称：</span>
+                <div class="account-r">小土豆</div>
+            </div>
+            <div class="account">
+                <span class="account-l">openid：</span>
+                <div class="account-r">o4UPksvfWC5hmTanQlttZ2Jyx0Mk</div>
+            </div>
+            <div class="account">
+                <span class="account-l">姓名：</span>
+                <div class="account-r"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">姓名验证：</span>
+                <div class="account-r">
+                    <div class="htmleaf-content">
+                        <div class="checkbox">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account">
+                <span class="account-l">上级昵称：</span>
+                <div class="account-r">手机用户466941</div>
+            </div>
+            <div class="account">
+                <span class="account-l">顶级昵称：</span>
+                <div class="account-r">手机用户466941</div>
+            </div>
+            <div class="account">
+                <span class="account-l">状态：</span>
+                <div class="account-r">有效</div>
+            </div>
+            <div class="account">
+                <span class="account-l">入库时间：</span>
+                <div class="account-r">2019-7-31 00:00:00</div>
+            </div>
+            <div class="account">
+                <span class="account-l">是否客户：</span>
+                <div class="account-r">
+                    <div class="htmleaf-content">
+                        <div class="checkbox">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account">
+                <span class="account-l">用户来源：</span>
+                <div class="account-r">公众号注册</div>
+            </div>
+            <div class="account">
+                <span class="account-l">上下级锁定方式：</span>
+                <div class="account-r">公众号链接锁定</div>
+            </div>
+            <div class="account">
+                <span class="account-l">上下级锁定时间：</span>
+                <div class="account-r">2019-06-08 14:22:54</div>
+            </div>
+            <div class="account">
+                <span class="account-l">锁定URL：</span>
+                <div class="account-r"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">获得会员方式：</span>
+                <div class="account-r"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">会员等级：</span>
+                <div class="account-r"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">会员开始时间：</span>
+                <div class="account-r"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">会员到期时间：</span>
+                <div class="account-r"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">关注时间：</span>
+                <div class="account-r">2019-06-08 14:22:54</div>
+            </div>
+            <div class="account">
+                <span class="account-l">区（市）县：</span>
+                <div class="account-r"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">性别：</span>
+                <div class="account-r chose_item">
+                    <label for="pu1" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="pic2" id="pu1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">男</span>
+                    </label>
+                    <label for="pu2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="pic2" id="pu2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">女</span>
+                    </label>
+                </div>
+            </div>
+            <div class="account">
+                <span class="account-l">头像：</span>
+                <div class="account-r"><img src="../images/head.jpg" alt="" class="user_pic"></div>
+            </div>
+        </div>
+        <div class="account_btn"><span class="btn btn-sure">同步微信头像和昵称</span></div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="basic">
+        <div class="account-cont w-150">
+            <div class="account">
+                <span class="account-l">姓名：</span>
+                <div class="account-r"><input type="text" value="微信用户468478"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">手机：</span>
+                <div class="account-r"><input type="text"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">详细地址：</span>
+                <div class="account-r"><input type="text" class="l_width"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">QQ号：</span>
+                <div class="account-r"><input type="text"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">微信号：</span>
+                <div class="account-r"><input type="text"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">电子邮箱：</span>
+                <div class="account-r"><input type="text"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">生日：</span>
+                <div class="account-r"><input type="text" class="demo-input" id="test1"></div>
+            </div>
+        </div>
+        <div class="account_btn"><span class="btn btn-sure">保存</span></div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="card">
+        <div class="account-cont w-150">
+            <div class="account">
+                <span class="account-l">公司：</span>
+                <div class="account-r"><input type="text"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">职务：</span>
+                <div class="account-r"><input type="text"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">行业：</span>
+                <div class="account-r"><input type="text"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">手机号：</span>
+                <div class="account-r"><input type="text"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">微信号：</span>
+                <div class="account-r"><input type="text"></div>
+            </div>
+            <div class="account flex-start">
+                <span class="account-l">个人签名：</span>
+                <div class="account-r"><textarea style="width: 60%;min-height: 200px"></textarea></div>
+            </div>
+            <div class="account flex-start">
+                <span class="account-l">个人简介：</span>
+                <div class="account-r"><textarea style="width: 60%;min-height: 400px"></textarea></div>     <!-- 此处放富文本编辑器 -->
+            </div>
+            <div class="account">
+                <span class="account-l">公开手机号：</span>
+                <div class="account-r chose_item">
+                    <label for="sj1" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="sj2" id="sj1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">对外公开</span>
+                    </label>
+                    <label for="sj2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="sj2" id="sj2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">对外保密</span>
+                    </label>
+                </div>
+            </div>
+            <div class="account">
+                <span class="account-l">公开名片：</span>
+                <div class="account-r chose_item">
+                    <label for="mp1" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="mp2" id="mp1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">对外公开</span>
+                    </label>
+                    <label for="mp2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="mp2" id="mp2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">对外保密</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="account_btn"><span class="btn btn-sure">保存</span></div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="detail">
+        <div class="account-table">
+            <div class="edit_table">
+                <form action="" class="table_cont">
+                    <table border="0" class="table_body">
+                        <thead>
+                        <tr>
+                            <th width="80px">序号</th>
+                            <th width="60px">会员头像</th>
+                            <th width="140px">会员昵称</th>
+                            <th width="100px">会员姓名</th>
+                            <th width="100px">会员手机</th>
+                            <th width="140px">类型</th>
+                            <th width="140pz">是否手动变更</th>
+                            <th width="140px">变更时间</th>
+                            <th width="140px">会员等级名称（新）</th>
+                            <th width="140px">会员开始时间（新）</th>
+                            <th width="140px">会员到期时间（新）</th>
+                            <th width="140px">会员等级名称（原）</th>
+                            <th width="140px">会员开始时间（原）</th>
+                            <th width="140px">会员到期时间（原）</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="cover-pic"><img src="../images/head.jpg" alt=""/></td>
+                            <td>小呀么小西几</td>
+                            <td>鸡屎糖</td>
+                            <td>13546467979</td>
+                            <td></td>
+                            <td>是</td>
+                            <td class="date"><div>2019-04-26 14:20:41</div></td>
+                            <td>二</td>
+                            <td class="date"><div>2019-04-26 14:20:41</div></td>
+                            <td class="date"><div>2020-04-26 14:20:41</div></td>
+                            <td>三</td>
+                            <td class="date"><div>2019-04-26 14:20:41</div></td>
+                            <td class="date"><div>2020-04-26 14:20:41</div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<!-- iframe弹框 -->
+<script src="../js/dist/js/bootstrap.min.js"></script>
+<script src="../js/plugins/laydate/laydate.js"></script>
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        type: 'datetime'
+    });
+    $(function () {
+        $('.rh').hide();
+        $('.nav li').click(function () {
+            $('.rh').hide();
+        });
+        $('.nav li.show').click(function () {
+            $('.rh').show();
+        })
+
+    })
+
+
+</script>
+
+
+
+</body>
+</html>

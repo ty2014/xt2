@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加优惠券</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .set_times{}
+        .set_times li{display: flex;align-items: center;margin: 10px 0;}
+        .set_times li label{min-width: 100px;}
+        .set_times li div{font-size: 13px;color: #888;}
+
+
+        /* 抽奖 */
+        .lottery { overflow: hidden; padding: 117px 15px 0; width: 100%;position: absolute; z-index: 9;top: 0;left: 0;right: 0;bottom: 0;}
+        .lottery .lottery-item { position: absolute; top: 205px; left: 68px; right: 68px; }
+        .lottery .lottery-item ul li { width: 78px; height: 56px; position: absolute; }
+        .lottery .lottery-item ul li:nth-child(2) { left: 80px; }
+        .lottery .lottery-item ul li:nth-child(3) { left: 160px; }
+        .lottery .lottery-item ul li:nth-child(4) { left: 160px; top: 62px; }
+        .lottery .lottery-item ul li:nth-child(5) { left: 160px; top: 124px; }
+        .lottery .lottery-item ul li:nth-child(6) { left: 80px; top: 124px; }
+        .lottery .lottery-item ul li:nth-child(7) { left: 0; top: 124px; }
+        .lottery .lottery-item ul li:nth-child(8) { left: 0; top: 62px; }
+        .lottery .lottery-item ul li .item-box { height: 100%; position: relative; overflow: hidden; background: url(images/itemBg1.png) no-repeat center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .lottery .lottery-item ul li .item-box .price { position: relative; margin: 0 auto 7px; }
+        .lottery .lottery-item ul li .item-box .price img { display: block; height: 24px;}
+        .lottery .lottery-item ul li .item-box .price span { font-size: 14px; color: #fff;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 2;white-space: nowrap;}
+        .lottery .lottery-item ul li .item-box .price span em { font-size: 10px;font-style: normal;}
+        .lottery .lottery-item ul li .item-box .price.random span { display: none; }
+        .lottery .lottery-item ul li .item-box .price.thanks span { display: none; }
+        .lottery .lottery-item ul li .item-box .tit { font-size: 12px; color: #cc8b2d; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        .lottery .lottery-item ul li .item-box .price.random + .tit span { display: none; }
+        .lottery .lottery-item ul li .item-box .price.thanks + .tit span { display: none; }
+
+        .lottery .lottery-item ul li.on .item-box { background: url(images/itemBg2.png) no-repeat center/cover; }
+        .lottery .lottery-item .lottery-start { width: 78px; height: 59px; position: absolute; left: 80px; top: 62px;}
+        .lottery .lottery-item .lottery-start .item-box { font-size: 19px; color: #fff; height: 100%; cursor: pointer; padding: 4px 16px 0; text-align: center; overflow: hidden; background: url(images/itemBg3.png) no-repeat center/cover; line-height: 130%; }
+        .lottery .lottery-item .lottery-start .item-box:active { opacity: 0.7; }
+        .lottery .reward { text-align: center; position: absolute; top: 134px; left: 50%; transform: translateX(-50%); }
+        .lottery .reward p { font-size: 13px; color: #ffdf49; }
+        .lottery .reward a { font-size: 10px; color: #fff!important;margin-top: 2px; display: inline-block; }
+        .lottery .playNum { font-size: 13px; color: #da0c06; text-align: center; position: absolute; top: 406px; left: 50%; transform: translateX(-50%); }
+        .lottery .playNum span { color: #ffdf49; background: #ed5145; border-radius: 4px; width: 28px; height: 14px; text-align: center; line-height: 14px; margin-left: 4px; }
+        .lottery .addNum { font-size: 14px; color: #d13939; text-align: center; position: absolute; top: 495px; left: 50%; transform: translateX(-50%); }
+        .lottery .addNum span { width: 168px; height: 44px; cursor: pointer; border-radius: 22px; background-image: linear-gradient(-180deg, #ffc38d, #f6a161); box-shadow: inset 0 3px 5px 0 rgba(218, 12, 6, 0.8);display: flex;align-items: center;justify-content: center;}
+        .lottery .addNum::before,.lottery .addNum::after { content: ""; display: block; width: 56px; border-bottom: 7px double #f8ae70; position: absolute; top: 50%; transform: translateY(-50%); }
+        .lottery .addNum::before { left: -60px; }
+        .lottery .addNum::after { right: -60px; }
+
+        .showsx{display: flex;flex-wrap: wrap;width: 120px;margin-top: 10px;}
+        .showsx span{border: 1px solid #ddd;width: 40px;height: 40px;line-height: 40px;text-align: center;margin: -1px -1px 0 0;}
+
+        .normal-table table td{overflow: unset;}
+
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0">
+
+
+<div class="activity_set activity_set2 w-120" id="app">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">自定义背景:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo1">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"><input id="f" type="file" onchange="chooseImg(this)" style="opacity: 0;"></li>
+                </ul>
+                <div class="tishi mgL-0">
+                    <p>*建议像素750*1334，大小不超过1000KB</p>
+                </div>
+            </div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">奖励设置:</span>
+            <div class="a_list_r flex-start">
+                <div style="position: relative;border: 1px solid #ddd;overflow: hidden;width: 375px;height: 667px;">
+                    <img src="images/bg.png" alt="" id="Img" class="filter">
+                    <div class="lottery">
+                        <img src="images/bg5.png" alt="" class="cont_bg filter">
+                        <div class="lottery-item">
+                            <div class="lottery-start">
+                                <!---->
+                                <div class="item-box"><b>开始抽奖</b></div>
+                                <!---->
+                            </div>
+                            <ul>
+                                <li v-for="(item,index) in cjList" :key="index">
+                                    <div class="item-box">
+                                        <p class="price" :class="item.class">
+                                            <img :src='item.src' alt="">
+                                            <span><em>￥</em>{{item.price}}{{items[index]}}</span>
+                                        </p>
+                                        <p class="tit"><span>{{item.price}}{{items[index]}}</span>{{item.txt}}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="reward filter">
+                            <p>我的奖励：15元</p>
+                            <a href="">查看优惠券&gt;</a>
+                        </div>
+                        <p class="playNum filter">剩余抽奖次数<span>1</span></p>
+                        <p class="addNum share-btn filter"><span>再加1次机会</span></p>
+                    </div>
+                </div>
+                <div style="margin-left: 40px;">
+                    <p class="tishi mgL-0">奖励位置示例：</p>
+                    <div class="showsx">
+                        <span>1</span><span>2</span><span>3</span>
+                        <span>8</span><span></span><span>4</span>
+                        <span>7</span><span>6</span><span>5</span>
+                    </div>
+                    <p class="tishi mgL-0" style="margin-top: 40px;">编辑内容，左侧可实时同步：</p>
+                    <div class="normal-table" style="margin-top: 10px;">
+                        <table style="width: auto">
+                            <thead>
+                            <tr>
+                                <th style="width: 80px">序号</th>
+                                <th style="width: 150px">选择类型</th>
+                                <th style="width: 150px">编辑内容</th>
+                                <th style="width: 100px">替换图片</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="(tabL,index) in tabList" :key="index">
+                                <td>{{tabL.num}}</td>
+                                <td>
+                                    <div class="select-text">
+                                        <span class="select-txt">{{tabL.showTxt}}</span>
+                                        <ul >
+                                            <li v-for="(sel,list) in tabList[index].select" :key="list">{{sel.txt}}</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><input type="number" value="" placeholder="￥" v-show="tabL.show" v-model="items[index]"></td>
+                                <td>
+                                    <ul class="FraUpload_imglist layer-photos-demo1">
+                                        <li class="img_item" style="display: none">
+                                            <img src="">
+                                            <span class="icon-delete img_del"></span>
+                                        </li>
+                                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                        <li class="file-btn"><input id="f" type="file" onchange="chooseImg(this)" style="opacity: 0;"></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">抽奖次数:</span>
+            <div class="a_list_r">
+                <ul class="set_times">
+                    <li><span class="tishi mgL-0">*设置各等级每天可以免费抽奖的次数，默认1次；</span></li>
+                    <li>
+                        <label for="vip2-1" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" checked name="vip2" id="vip2-1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">普通会员</span>
+                        </label>
+                        <div>抽奖次数：<input type="text" value="1" class="s_width center m-height" style="margin-right: 8px;">次/天</div>
+                    </li>
+                    <li>
+                        <label for="vip2-2" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" checked name="vip2" id="vip2-2" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">白银会员</span>
+                        </label>
+                        <div>抽奖次数：<input type="text" value="1" class="s_width center m-height" style="margin-right: 8px;">次/天</div>
+                    </li>
+                    <li>
+                        <label for="vip2-3" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" checked name="vip2" id="vip2-3" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">铂金会员</span>
+                        </label>
+                        <div>抽奖次数：<input type="text" value="1" class="s_width center m-height" style="margin-right: 8px;">次/天</div>
+                    </li>
+                    <li>
+                        <label for="vip2-4" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" checked name="vip2" id="vip2-4" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">钻石会员</span>
+                        </label>
+                        <div>抽奖次数：<input type="text" value="1" class="s_width center m-height" style="margin-right: 8px;">次/天</div>
+                    </li>
+                    <li>
+                        <label for="vip2-5" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" checked name="vip2" id="vip2-5" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">非会员</span>
+                        </label>
+                        <div>抽奖次数：<input type="text" value="1" class="s_width center m-height" style="margin-right: 8px;">次/天</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">抽奖规则:</span>
+            <div class="a_list_r">
+                <textarea style="padding: 10px;width: 600px;height: 200px;min-width: 320px;min-height: 32px;">此处放编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            cjList:[
+                {src:'images/j1.png',price:'',txt:'元优惠券'},
+                {src:'images/j3.png',price:'',txt:'随机券',class:'random'},
+                {src:'images/j4.png',price:'',txt:'谢谢参与',class:'thanks',},
+                {src:'images/j1.png',price:'',txt:'元优惠券'},
+                {src:'images/j1.png',price:'',txt:'元优惠券'},
+                {src:'images/j4.png',price:'',txt:'谢谢参与',class:'thanks',},
+                {src:'images/j1.png',price:'',txt:'元优惠券'},
+                {src:'images/j3.png',price:'',txt:'随机券',class:'random',},
+            ],
+            items:{
+                inpMsg1:'',
+                inpMsg2:'',
+                inpMsg3:'',
+                inpMsg4:'',
+                inpMsg5:'',
+                inpMsg6:'',
+                inpMsg7:'',
+                inpMsg8:'',
+            },
+            tabList:[
+                {num:'1',show:true,showTxt:'价格优惠券',val:'5',
+                    select:[
+                        {id:1,txt:'价格优惠券'},
+                        {id:2,txt:'随机券'},
+                        {id:3,txt:'谢谢参与'},
+                    ]
+                },
+                {num:'2',show:false,showTxt:'随机券',val:'5',
+                    select:[
+                        {id:1,txt:'价格优惠券'},
+                        {id:2,txt:'随机券'},
+                        {id:3,txt:'谢谢参与'},
+                    ]
+                },
+                {num:'3',show:false,showTxt:'谢谢参与',val:'5',
+                    select:[
+                        {id:1,txt:'价格优惠券'},
+                        {id:2,txt:'随机券'},
+                        {id:3,txt:'谢谢参与'},
+                    ]
+                },
+                {num:'4',show:true,showTxt:'价格优惠券',val:'10',
+                    select:[
+                        {id:1,txt:'价格优惠券'},
+                        {id:2,txt:'随机券'},
+                        {id:3,txt:'谢谢参与'},
+                    ]
+                },
+                {num:'5',show:true,showTxt:'价格优惠券',val:'20',
+                    select:[
+                        {id:1,txt:'价格优惠券'},
+                        {id:2,txt:'随机券'},
+                        {id:3,txt:'谢谢参与'},
+                    ]
+                },
+                {num:'6',show:false,showTxt:'谢谢参与',val:'5',
+                    select:[
+                        {id:1,txt:'价格优惠券'},
+                        {id:2,txt:'随机券'},
+                        {id:3,txt:'谢谢参与'},
+                    ]
+                },
+                {num:'7',show:true,showTxt:'价格优惠券',val:'5',
+                    select:[
+                        {id:1,txt:'价格优惠券'},
+                        {id:2,txt:'随机券'},
+                        {id:3,txt:'谢谢参与'},
+                    ]
+                },
+                {num:'8',show:false,showTxt:'随机券',val:'5',
+                    select:[
+                        {id:1,txt:'价格优惠券'},
+                        {id:2,txt:'随机券'},
+                        {id:3,txt:'谢谢参与'},
+                    ]
+                }
+            ]
+        },
+        methods:{
+
+        }
+    })
+</script>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    layer.photos({
+        photos: '.layer-photos-demo2'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+    var item = $('.normal-table tbody tr');
+    item.each(function(index,element){
+        $(element).children().find('li').on('click',function () {
+            var ind = $(this).parents('tr').index();
+            var txt = $(this).text();
+            var lotteryItem = $('.lottery-item li');
+            switch (txt) {
+                case '价格优惠券' :
+                    item.eq(ind).find('input').show();
+                    lotteryItem.eq(ind).find('.price').removeClass('random thanks');
+                    lotteryItem.eq(ind).find('img').attr('src','images/j1.png');
+                    lotteryItem.eq(ind).find('.tit').text('元优惠券')
+                    break
+                case '随机券' :
+                    item.eq(ind).find('input').hide();
+                    lotteryItem.eq(ind).find('.price').addClass('random').removeClass('thanks');
+                    lotteryItem.eq(ind).find('img').attr('src','images/j3.png');
+                    lotteryItem.eq(ind).find('.tit').text('随机券')
+                    break
+                case '谢谢参与' :
+                    item.eq(ind).find('input').hide();
+                    lotteryItem.eq(ind).find('.price').addClass('thanks').removeClass('random');
+                    lotteryItem.eq(ind).find('img').attr('src','images/j4.png');
+                    lotteryItem.eq(ind).find('.tit').text('谢谢参与')
+                    break
+            }
+        })
+    })
+
+    function chooseImg(file){
+        var file=file.files[0];
+        var reader=new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload=function(){
+            var img=document.getElementById('Img');
+            img.src=this.result;
+        };
+    }
+
+</script>
+</body>
+</html>

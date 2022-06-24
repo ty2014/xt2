@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单聊记录</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <style>
+        html,body{height: 100%;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="flex flexColumn" style="height: 100%">
+    <div class="page-title" style="margin-bottom: 10px;">单聊记录</div>
+    <div class="chatContent flex flex1">
+        <!--  成员列表  -->
+        <div class="chatBox1 flex flexColumn">
+            <div class="head">
+                成员列表
+                <a href=""><i class="layui-icon layui-icon-play"></i>视频演示</a>
+            </div>
+            <div class="search">
+                <div class="searchType1">
+                    <div class="searchBox">
+                        <input type="search" placeholder="请输入成员名称">
+                        <i class="layui-icon layui-icon-search"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="flex1 scrollBar" style="overflow: auto">
+                <div class="chatLists">
+                    <div class="chatItem">
+                        <div class="itemPic"><img src="https://img0.baidu.com/it/u=2921152502,3192807308&fm=26&fmt=auto" alt=""></div>
+                        <div class="itemMsg">
+                            <div class="msg1">
+                                <p>蔡侑麟</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatItem active">
+                        <div class="itemPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                        <div class="itemMsg">
+                            <div class="msg1">
+                                <p>华厚【私人1号】</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatItem">
+                        <div class="itemPic"><img src="https://img2.baidu.com/it/u=2858217817,3858532297&fm=26&fmt=auto" alt=""></div>
+                        <div class="itemMsg">
+                            <div class="msg1">
+                                <p>寇玉斌【揽客魔】服务官7号</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatItem">
+                        <div class="itemPic"><img src="https://img0.baidu.com/it/u=1688292217,847503673&fm=26&fmt=auto" alt=""></div>
+                        <div class="itemMsg">
+                            <div class="msg1">
+                                <p>温樵</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="null-msg">
+                    <img src="../../images/null-msg.png" alt="">
+                    <p>暂无数据</p>
+                </div>
+            </div>
+        </div>
+        <!--  客户列表  -->
+        <div class="chatBox2 flex flexColumn">
+            <div class="lineNav">
+                <span class="on">客户</span>
+                <span>客户群</span>
+                <span>同事</span>
+            </div>
+            <ul class="blockNav">
+                <li class="on">近7天</li>
+                <li>近30天</li>
+                <li>自定义</li>
+            </ul>
+            <div class="dateChose">
+                <input type="text" class="layui-input" id="test1" style="width: 100%;">
+            </div>
+            <div class="search">
+                <div class="searchType1">
+                    <div class="searchBox">
+                        <input type="search" placeholder="请输入成员名称">
+                        <i class="layui-icon layui-icon-search"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="flex1 scrollBar" style="overflow: auto">
+                <div class="chatLists">
+                    <div class="chatItem active">
+                        <!--  群聊：添加类名 qlChat ，且图片最多展示9个，顺序是群成员列表最前面的9个  -->
+                        <div class="itemPic qlChat">
+                            <img src="https://img0.baidu.com/it/u=1079959710,2776870030&fm=26&fmt=auto" alt="">
+                            <img src="https://img1.baidu.com/it/u=3988894411,24839006&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500" alt="">
+                            <img src="https://img0.baidu.com/it/u=1429175118,2649084526&fm=26&fmt=auto" alt="">
+                            <img src="https://img2.baidu.com/it/u=1560188145,3975303613&fm=26&fmt=auto" alt="">
+                            <img src="https://img1.baidu.com/it/u=187222037,605864959&fm=26&fmt=auto" alt="">
+                            <img src="https://img1.baidu.com/it/u=19766716,3349517949&fm=26&fmt=auto" alt="">
+                            <img src="https://img0.baidu.com/it/u=1940408069,674091792&fm=26&fmt=auto" alt="">
+                            <img src="https://img2.baidu.com/it/u=2801519102,320030020&fm=26&fmt=auto" alt="">
+                            <img src="https://img0.baidu.com/it/u=2578159972,3391751657&fm=26&fmt=auto" alt="">
+                        </div>
+                        <div class="itemMsg">
+                            <div class="msg1">
+                                <p>[华厚·技术部]</p>
+                                <span>15:45</span>
+                            </div>
+                            <div class="msg2">
+                                <p>蒋土豆：[图片]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatItem ">
+                        <div class="itemPic"><img src="https://img2.baidu.com/it/u=3506375773,1672626667&fm=26&fmt=auto" alt=""></div>
+                        <div class="itemMsg">
+                            <div class="msg1">
+                                <p>SegmenFault助手</p>
+                                <span>昨天</span>
+                            </div>
+                            <div class="msg2">
+                                <p>关于后端架构的疑惑可以来这里找答案吧！</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatItem">
+                        <div class="itemPic"><img src="https://img2.baidu.com/it/u=85486227,3280558367&fm=26&fmt=auto" alt=""></div>
+                        <div class="itemMsg">
+                            <div class="msg1">
+                                <p>开课吧</p>
+                                <span>星期四</span>
+                            </div>
+                            <div class="msg2">
+                                <p>已未来之名，邀你开启人生副本！</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatItem">
+                        <div class="itemPic"><img src="https://img0.baidu.com/it/u=333377022,4291650310&fm=26&fmt=auto" alt=""></div>
+                        <div class="itemMsg">
+                            <div class="msg1">
+                                <p>臻蟹坊大闸蟹（成都店）</p>
+                                <span>21/9/10</span>
+                            </div>
+                            <div class="msg2">
+                                <p>你好！这边是需要订购大闸蟹蟹卡吗</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="null-msg">
+                    <img src="../../images/null-msg.png" alt="">
+                    <p>暂无数据</p>
+                </div>
+            </div>
+        </div>
+        <!--  消息详情  -->
+        <div class="chatBox3 flex1 flex flexColumn">
+            <div style="height: 49px;border-bottom: 1px solid #e8e8e8;display: flex;align-items: center;padding: 0 15px;">
+                <p style="font-size: 16px;color: #333;font-weight: bold;">[华厚·技术部]</p>
+            </div>
+            <div class="flex1 scrollBar" style="overflow: auto;background: #f3f3f3;">
+                <!-- 聊天记录界面 -->
+                <div class="chatContainer">
+                    <!--  各种提示语  -->
+                    <p class="msgTip">某某加入了群聊</p>
+                    <!--  回到当前位置  -->
+                    <span class="newMsgTip"><i class="layui-icon layui-icon-next"></i>回到最新位置</span>
+                    <!--  纯文本  -->
+                    <div class="chatUser">
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=459661462,3303803249&fm=26&fmt=auto" alt=""></div>
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>寇玉斌【揽客魔】服务官7号</p></div>
+                            <!--  文本  -->
+                            <div class="msg_txt"><pre>一般的面板通常是指一个独立的容器，而折叠面板则能有效地节省页面的可视面积，非常适合应用于：QA说明、帮助文档等
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur commodi culpa, eveniet exercitationem explicabo fugiat ipsa ipsam itaque libero maxime perspiciatis quidem quo quos, sit, totam velit? Consectetur, totam!</pre></div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <!--  文本  -->
+                            <div class="msg_txt"><pre>一般的面板通常是指一个独立的容器，而折叠面板则能有效地节省页面的可视面积，非常适合应用于：QA说明、帮助文档等
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur commodi culpa, eveniet exercitationem explicabo fugiat ipsa ipsam itaque libero maxime perspiciatis quidem quo quos, sit, totam velit? Consectetur, totam!</pre></div>
+                        </div>
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                    <div class="chatUser">
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=459661462,3303803249&fm=26&fmt=auto" alt=""></div>
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>寇玉斌【揽客魔】服务官7号</p></div>
+                            <!--  文本  -->
+                            <div class="msg_txt"><pre>一般</pre></div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <!--  文本  -->
+                            <div class="msg_txt"><pre>一般</pre></div>
+                        </div>
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                    <!--  语音  -->
+                    <div class="chatUser">
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=459661462,3303803249&fm=26&fmt=auto" alt=""></div>
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>寇玉斌【揽客魔】服务官7号</p></div>
+                            <div class="voice">
+                                <!-- <img src="../../images/voice.gif" alt="">-->
+                                <span class="voice_b"><img src="../../images/voice.png" alt=""></span><em>3"</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser">
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=459661462,3303803249&fm=26&fmt=auto" alt=""></div>
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>寇玉斌【揽客魔】服务官7号</p></div>
+                            <div class="voice">
+                                <!-- <img src="../../images/voice.gif" alt="">-->
+                                <span class="voice_b"><img src="../../images/voice.png" alt=""></span><em>8"</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser">
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=459661462,3303803249&fm=26&fmt=auto" alt=""></div>
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>寇玉斌【揽客魔】服务官7号</p></div>
+                            <div class="voice">
+                                <!-- <img src="../../images/voice.gif" alt="">-->
+                                <span class="voice_b"><img src="../../images/voice.png" alt=""></span><em>15"</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser">
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=459661462,3303803249&fm=26&fmt=auto" alt=""></div>
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>寇玉斌【揽客魔】服务官7号</p></div>
+                            <div class="voice">
+                                <!-- <img src="../../images/voice.gif" alt="">-->
+                                <span class="voice_b"><img src="../../images/voice.png" alt=""></span><em>24"</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser">
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=459661462,3303803249&fm=26&fmt=auto" alt=""></div>
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>寇玉斌【揽客魔】服务官7号</p></div>
+                            <div class="voice">
+                                <!-- <img src="../../images/voice.gif" alt="">-->
+                                <span class="voice_b"><img src="../../images/voice.png" alt=""></span><em>32"</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <div class="voice">
+                                <!-- <img src="../../images/voice.gif" alt="">-->
+                                <em>32"</em><span class="voice_b"><img src="../../images/voice.png" alt=""></span>
+                            </div>
+                        </div>
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                    <p class="dateTip">2020年9月23 17:45</p>
+                    <!--  视频  -->
+                    <div class="chatUser">
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=459661462,3303803249&fm=26&fmt=auto" alt=""></div>
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>寇玉斌【揽客魔】服务官7号</p></div>
+                            <div class="video">
+                                <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=e0040x0welo" allowFullScreen="true"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <!--  发送内容  -->
+                        <div class="uMsg">
+                            <!--  昵称  -->
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <div class="video">
+                                <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=e0040x0welo" allowFullScreen="true"></iframe>
+                            </div>
+                        </div>
+                        <!--  头像  -->
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                    <p class="dateTip">2020年9月23 17:45</p>
+                    <!--  单张图片  -->
+                    <div class="chatUser">
+                        <div class="uPic"><img src="https://img0.baidu.com/it/u=236005480,318721088&fm=26&fmt=auto" alt=""></div>
+                        <div class="uMsg">
+                            <div class="uName"><p>蔡侑麟</p></div>
+                            <!--  图片（多张、单张）,超过2张就默认隐藏剩余的，单击可展开全部  -->
+                            <div class="msg_pics layer-photos-demo1">
+                                <img src="https://img2.baidu.com/it/u=603736051,1103222198&fm=26&fmt=auto" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <div class="uMsg">
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <!--  图片（多张、单张）,超过2张就默认隐藏剩余的，单击可展开全部  -->
+                            <div class="msg_pics layer-photos-demo1">
+                                <img src="https://img2.baidu.com/it/u=603736051,1103222198&fm=26&fmt=auto" alt="">
+                            </div>
+                        </div>
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                    <p class="dateTip">9月23 17:45</p>
+                    <!--  多张图片  -->
+                    <div class="chatUser">
+                        <div class="uPic"><img src="https://img0.baidu.com/it/u=4190924204,1529449080&fm=15&fmt=auto" alt=""></div>
+                        <div class="uMsg">
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <!--  图片（多张、单张）,超过2张就默认隐藏剩余的，单击可展开全部  -->
+                            <div class="txtPics">
+                                <div class="msg_pics layer-photos-demo1">
+                                    <img src="https://img2.baidu.com/it/u=603736051,1103222198&fm=26&fmt=auto" alt="">
+                                    <img src="https://img0.baidu.com/it/u=3244460882,2086599540&fm=26&fmt=auto" alt="">
+                                    <div class="shadow"><i class="layui-icon layui-icon-down"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <div class="uMsg">
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <!--  图片（多张、单张）,超过2张就默认隐藏剩余的，单击可展开全部  -->
+                            <div class="txtPics">
+                                <div class="msg_pics layer-photos-demo1">
+                                    <img src="https://img2.baidu.com/it/u=603736051,1103222198&fm=26&fmt=auto" alt="">
+                                    <img src="https://img0.baidu.com/it/u=3244460882,2086599540&fm=26&fmt=auto" alt="">
+                                    <div class="shadow"><i class="layui-icon layui-icon-down"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                    <p class="dateTip">星期五 17:45</p>
+                    <!--  文本+图片  -->
+                    <div class="chatUser">
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=3078638306,2109902451&fm=26&fmt=auto" alt=""></div>
+                        <div class="uMsg">
+                            <div class="uName"><p>温樵</p></div>
+                            <!--  文本 + 图片  -->
+                            <div class="txtPics">
+                                <div class="msg_pics layer-photos-demo1">
+                                    <img src="https://img2.baidu.com/it/u=603736051,1103222198&fm=26&fmt=auto" alt="">
+                                    <img src="https://img0.baidu.com/it/u=3244460882,2086599540&fm=26&fmt=auto" alt="">
+                                    <div class="shadow"><i class="layui-icon layui-icon-down"></i></div>
+                                </div>
+                                <div class="msg_txt">
+                                    <pre>一般的面板通常是指一个独立的容器，而折叠面板则能有效地节省页面的可视面积，非常适合应用于：QA说明、帮助文档等</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <div class="uMsg">
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <!--  文本 + 图片  -->
+                            <div class="txtPics">
+                                <div class="msg_pics layer-photos-demo1">
+                                    <img src="https://img2.baidu.com/it/u=603736051,1103222198&fm=26&fmt=auto" alt="">
+                                    <img src="https://img0.baidu.com/it/u=3244460882,2086599540&fm=26&fmt=auto" alt="">
+                                    <div class="shadow"><i class="layui-icon layui-icon-down"></i></div>
+                                </div>
+                                <div class="msg_txt">
+                                    <pre>一般的面板通常是指一个独立的容器，而折叠面板则能有效地节省页面的可视面积，非常适合应用于：QA说明、帮助文档等</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                    <!--  上传文件  -->
+                    <div class="chatUser">
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=1439350369,1091642900&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt=""></div>
+                        <div class="uMsg">
+                            <div class="uName"><p>静心🇨🇳Eco design🇮🇹</p></div>
+                            <!--  文件  -->
+                            <div class="msg_files">
+                                <div>
+                                    <p>后台统一规范后台统一规范后台统一规范.docx</p>
+                                    <span>1.37M</span>
+                                </div>
+                                <img src="../../images/word.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <div class="uMsg">
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <!--  文件  -->
+                            <div class="msg_files">
+                                <div>
+                                    <p>后台统一规范后台统一规范后台统一规范.docx</p>
+                                    <span>1.37M</span>
+                                </div>
+                                <img src="../../images/word.png" alt="">
+                            </div>
+                        </div>
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                    <div class="chatUser">
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=1439350369,1091642900&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt=""></div>
+                        <div class="uMsg">
+                            <div class="uName"><p>静心🇨🇳Eco design🇮🇹</p></div>
+                            <!--  文件  -->
+                            <div class="msg_files">
+                                <div>
+                                    <p>后台统一规范后台统一规范后台统一规范.pdf</p>
+                                    <span>1.37M</span>
+                                </div>
+                                <img src="../../images/pdf.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <div class="uMsg">
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <!--  文件  -->
+                            <div class="msg_files">
+                                <div>
+                                    <p>后台统一规范后台统一规范后台统一规范.pdf</p>
+                                    <span>1.37M</span>
+                                </div>
+                                <img src="../../images/pdf.png" alt="">
+                            </div>
+                        </div>
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                    <div class="chatUser">
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=1439350369,1091642900&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt=""></div>
+                        <div class="uMsg">
+                            <div class="uName"><p>静心🇨🇳Eco design🇮🇹</p></div>
+                            <!--  文件  -->
+                            <div class="msg_files">
+                                <div>
+                                    <p>后台统一规范后台统一规范后台统一规范.psd</p>
+                                    <span>1.37M</span>
+                                </div>
+                                <img src="../../images/ps.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <div class="uMsg">
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <!--  文件  -->
+                            <div class="msg_files">
+                                <div>
+                                    <p>后台统一规范后台统一规范后台统一规范.psd</p>
+                                    <span>1.37M</span>
+                                </div>
+                                <img src="../../images/ps.png" alt="">
+                            </div>
+                        </div>
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                    <div class="chatUser">
+                        <div class="uPic"><img src="https://img1.baidu.com/it/u=1439350369,1091642900&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt=""></div>
+                        <div class="uMsg">
+                            <div class="uName"><p>静心🇨🇳Eco design🇮🇹</p></div>
+                            <!--  文件  -->
+                            <div class="msg_files">
+                                <div>
+                                    <p>后台统一规范后台统一规范后台统一规范.excel</p>
+                                    <span>1.37M</span>
+                                </div>
+                                <img src="../../images/excel.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatUser chatUserR">
+                        <div class="uMsg">
+                            <div class="uName"><p>华厚【私人1号】</p></div>
+                            <!--  文件  -->
+                            <div class="msg_files">
+                                <div>
+                                    <p>后台统一规范后台统一规范后台统一规范.excel</p>
+                                    <span>1.37M</span>
+                                </div>
+                                <img src="../../images/excel.png" alt="">
+                            </div>
+                        </div>
+                        <div class="uPic"><img src="https://img2.baidu.com/it/u=900776045,1933449382&fm=26&fmt=auto" alt=""></div>
+                    </div>
+                </div>
+
+                <div class="null-msg">
+                    <img src="../../images/null-msg.png" alt="">
+                    <p>暂无数据</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,range: '~'
+            ,trigger: 'click'
+        });
+    });
+
+    layer.photos({
+        photos: '.layer-photos-demo1'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+
+    $('.chatItem').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+    $('.lineNav span').click(function () {
+        $(this).addClass('on').siblings().removeClass('on')
+    })
+    $('.blockNav li').click(function () {
+        $(this).addClass('on').siblings().removeClass('on');
+        var txt = $(this).text();
+        if(txt === '自定义'){
+            $('.dateChose').show();
+        }else{
+            $('.dateChose').hide();
+        }
+    })
+
+    // 聊天记录图片展开
+    $('.msg_pics').each(function () {
+        var that =this;
+        setTimeout(function () {
+            var h = $(that).height();
+            if(h>300){
+                $(that).height('300px')
+                $(that).find('.shadow').show();
+            }else{
+                $(that).height('auto')
+                $(that).find('.shadow').hide();
+            }
+        },200)
+    })
+    $('.shadow i').click(function () {
+        $(this).parent().hide();
+        $(this).parents('.msg_pics').height('auto')
+    })
+
+    // 播放语音
+    $('.voice .voice_b').on('click',function () {
+        var that = $(this);
+        var num = that.siblings('em').text().replace(' ','').replace('"','')*1000;
+
+        that.toggleClass('on');
+        if(that.hasClass('on')){
+            that.find('img').attr('src','../../images/voice.gif')
+            setTimeout(function () {
+                that.find('img').attr('src','../../images/voice.png');
+                that.removeClass('on')
+            },num)
+        }else{
+            that.find('img').attr('src','../../images/voice.png')
+        }
+
+        that.parents('.chatUser').siblings().find('.voice_b').removeClass('on');
+        that.parents('.chatUser').siblings().find('.voice_b').children('img').attr('src','../../images/voice.png');
+    })
+    // 判断语音时长，设置语音块样式的宽度
+    $('.voice').each(function () {
+        var that = $(this);
+        var num = that.find('em').text().replace(' ','').replace('"','');
+        var item = that.find('span');
+
+        // 区间化，通过时长来设置宽度
+        if(num<6){
+            //item.width('30px')
+        }
+        if(num>6){
+            item.width('50px')
+        }
+        if(num>11){
+            item.width('80px')
+        }
+        if(num>20){
+            item.width('130px')
+        }
+        if(num>30){
+            item.width('180px')
+        }
+
+    })
+
+
+
+</script>
+</body>
+</html>

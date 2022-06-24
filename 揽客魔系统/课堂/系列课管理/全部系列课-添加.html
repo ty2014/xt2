@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全部系列课-添加</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff">
+
+<div class="activity_set activity_set2">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">系列课标题:</span>
+                <div class="a_list_r"><input type="text" style="width: 100%;"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">状态:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg4" class="toggle-button" name="switch">
+                            <label for="u-togg4" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">系列课分类:</span>
+            <div class="a_list_r">
+                <div class="select-text" style="margin-right: 16px;">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>干货</li>
+                        <li>视频</li>
+                    </ul>
+                </div>
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>干货</li>
+                        <li>视频</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">主讲师:</span>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">系列课标签:</span>
+                <div class="a_list_r">
+                    <input type="text">
+                    <div class="bq-items">
+                        <p>已有标签:</p>
+                        <ul>
+                            <li style="width: 92px">92</li>
+                            <li style="width: 92px">92</li>
+                            <li style="width: 92px">92</li>
+                            <li style="width: 143px">143</li>
+                            <li style="width: 143px">143</li>
+                            <li style="width: 143px">143</li>
+                            <li style="width: 144px">144</li>
+                            <li>44</li>
+                            <li style="width: 243px">243</li>
+                            <li style="width: 243px">243</li>
+                            <li>4</li>
+                            <li>装饰装修装饰装修装饰装修装饰装修装饰装修</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">课程提供商:</span>
+            <div class="a_list_r">
+                <span class="set-user chose-tgs" style="margin-right: 16px">选择</span>
+                <div class="user-pic"><img src="../../images/null2.jpg" alt=""></div>
+                <a href="">揽客魔商学院</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">系列课主图:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮  -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi">*建议尺寸750px*500px；大小不超过1M</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">系列课简介:</span>
+            <div class="a_list_r">
+                <!-- 此处放文本域 -->
+                <textarea placeholder="简述课程内容及价值，该简介常用于分享课程时展示" style="height: 60px;padding: 10px;width: 620px;resize: none"></textarea>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">系列课介绍:</span>
+            <div class="a_list_r">
+                <!-- 此处放编辑器 -->
+                <textarea style="height: 400px;padding: 10px;width: 620px">编辑器</textarea>
+            </div>
+        </div>
+
+
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">价格:</span>
+                <div class="a_list_r"><input type="text" class="m_width center" style="margin-right: 16px">元</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">优惠价格:</span>
+                <div class="a_list_r">
+                    <input type="text" class="m_width center" style="margin-right: 16px">元
+                    <span class="tishi">*选填，填写将按该价格执行售卖</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">学习有效期:</span>
+            <div class="a_list_r">
+                <div class="select-text selectDate" style="min-width: 150px;margin-right: 20px;">
+                    <span class="select-txt">长期有效</span>
+                    <ul style="display: none;">
+                        <li class="active">长期有效</li>
+                        <li>按购买时间到期</li>
+                        <li>固定时间到期</li>
+                    </ul>
+                </div>
+                <div class="date-togg-cont1 flex alignItemC" style="display: none">
+                    用户支付时间 + <input type="number" class="mg-8 s_width center">天后到期
+                    <p class="tishi">* 以用户支付时间+指定时间周期为到期时间；</p>
+                </div>
+                <div class="date-togg-cont2 flex alignItemC" style="display: none">
+                    固定<input type="text" class="layui-input mg-8" id="test1" placeholder="选择时间">后到期
+                    <p class="tishi">* 用户无论什么时间购买，都是指定时间到期；</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">预计章节:</span>
+                <div class="a_list_r"><input type="text" class="s_width center" style="margin-right:16px">节<span class="tishi">*实际讲课次数可以超过此数字</span></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">优先级:</span>
+                <div class="a_list_r"><input type="text" class="s_width center"><span class="tishi">*数字越大，显示越前</span></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">苹果系统支付:</span>
+            <div class="a_list_r" style="flex-wrap: nowrap;">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="apple_pay" class="toggle-button" name="switch">
+                        <label for="apple_pay" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">是</span>
+                            <span class="text off">否</span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <span class="tishi">*是否可允许苹果系统用户购买该课程。请谨慎使用，使用将有被微信处罚、限制公众号功能的风险</span>
+                    <p class="tishi2">风险提示：课程为虚拟商品，微信要求不可在苹果系统内支付购买虚拟商品，被查到将作出处罚。详细参考微信公告<a href="https://mp.weixin.qq.com/cgi-bin/announce?action=getannouncement&announce_id=11590748689LGlxz&version=&lang=zh_CN&token=" target="_blank">《关于规范公众号内虚拟支付行为的公告》</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">支付有礼内容:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper paytoggle">
+                        <input type="checkbox" id="u-togg3" class="toggle-button" name="switch">
+                        <label for="u-togg3" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*在系列课介绍上方提示，常用于付费后提示加客服微信、进群等</span>
+            </div>
+        </div>
+        <div class="a_list paycont" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <textarea style="height: 60px;padding: 10px;width: 620px"></textarea>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">付费后联系开关:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper paytips">
+                        <input type="checkbox" id="concat" class="toggle-button" name="switch">
+                        <label for="concat" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*用户付费成功后，在详情介绍上方展示联系人的联系方式</span>
+            </div>
+        </div>
+        <div class="a_list paytips_cont" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <span class="set-user zd_person">指定联系人</span>
+                <div class="mgL-20">
+                    <p class="flex alignItemC"><a class="yx_person mgR-4">已指定10人</a><i class="tips person_tip"></i></p>
+                    <p class="mgT-10"><a class="mr_person">设置默认联系人</a><span class="tishi">*不指定即使用默认联系人，点击去设置</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">推荐:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                            <label for="u-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="tishi">*是否在其他系列课详情页面推荐该课程</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">热门:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                            <label for="u-togg2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  报名成为会员  -->
+        <div class="a_list">
+            <span class="a_list_l">报名成为会员:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper bm_vip">
+                        <input type="checkbox" id="bm-togg" class="toggle-button" name="switch">
+                        <label for="bm-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="bmvip-cont" style="display: none;margin-left: 20px;">
+                    <div style="display: flex;align-items: center;">
+                        报名成为
+                        <div class="select-text" style="margin: 0 10px;">
+                            <span class="select-txt"></span>
+                            <ul style="display: none;">
+                                <li>VIP</li>
+                                <li>合伙人</li>
+                                <li>联创人</li>
+                            </ul>
+                        </div>
+                        会员，会员有效期为<input type="text" class="s_width center" style="margin:0 8px">
+                        <div class="select-text" style="margin: 0 10px;min-width: 60px;">
+                            <span class="select-txt">天</span>
+                            <ul style="display: none;text-align: center">
+                                <li>天</li>
+                                <li>月</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 21px;">会员免费学本课:</span>
+            <div class="a_list_r">
+                <div>
+                    <span class="tishi mgL-0" style="margin-bottom: 10px;">*勾选的会员可免费学习该系列课</span>
+                    <div class="chose_item">
+                        <label for="vip1" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="vip1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">学员</span>
+                        </label>
+                        <label for="vip2" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" checked name="pic2" id="vip2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">VIP</span>
+                        </label>
+                        <label for="vip3" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" checked name="pic2" id="vip3">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">合伙</span>
+                        </label>
+                        <label for="vip4" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="vip4">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">联创</span>
+                        </label>
+                        <label for="vip5" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="vip5">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">非会员</span>
+                        </label>
+                    </div>
+                    <div style="display: flex;align-items: center;margin-top: 10px">
+                        同时引导去购买会员：
+                        <div class="select-text yd-chose" style="margin-right: 8px;">
+                            <span class="select-txt">默认不引导</span>
+                            <ul>
+                                <li>默认不引导</li>
+                                <li>合伙人</li>
+                                <li>联创人</li>
+                            </ul>
+                        </div>
+                        <p class="yd-cont" style="display: none">，引导价（365元）；</p>
+                    </div>
+                    <div class="yd-cont" style="margin-top: 10px;display: none">
+                        <p style="margin-top: 10px">引导话术：<input type="text" class="m-height" value="开通会员免费学" maxlength="8" placeholder="不超过8个字符"><a class="tishi concat_img_btn">查看示例</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">报名成功后提醒:</span>
+            <div class="a_list_r">
+                <!-- 此处放文本域 -->
+                <textarea placeholder="选填，在【提醒-系列课提醒-报名成功提醒购买人】处可引用本处“话术”，用户购买该课程后进行公众号/短信提醒" style="height: 60px;padding: 10px;width: 620px;resize: none"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<img src="http://cshtml.lkmsxy.com/csimg/xlk_ydvip.png" alt="" id="concat_img" style="height: 520px;display: none;">
+
+<!--    -->
+<div class="activity_set activity_set2 w-120" id="concat-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">头像:</div>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo3">
+                    <li class="img_item" style="display: none">
+                        <img src="" layer-index="0">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <span class="tishi">*建议尺寸：1:1，小于1M，支持jpg、png、jpeg格式</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">昵称:</div>
+            <div class="a_list_r">
+                <input type="text" class="w-620">
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">二维码:</div>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo3">
+                    <li class="img_item" style="display: none">
+                        <img src="" layer-index="0">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <span class="tishi">*建议尺寸：1:1，小于1M，支持jpg、png、jpeg格式</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+
+    $('.selectDate li').click(function (){
+        var ind = $(this).index();
+        switch (ind) {
+            case 0:
+                $('.date-togg-cont1,.date-togg-cont2').hide();
+                break;
+            case 1:
+                $('.date-togg-cont1').show();
+                $('.date-togg-cont2').hide();
+                break;
+            case 2:
+                $('.date-togg-cont1').hide();
+                $('.date-togg-cont2').show();
+                break;
+        }
+    })
+
+    $('#chutiyan .concat_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img")
+        });
+    });
+
+    $('#chutiyan .mr_person').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '编辑联系人',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#concat-sure")
+        });
+    });
+
+    $('.pay-content-togg label').click(function () {
+        $('.pay-content').toggle();
+    });
+    $('.bm_vip label').click(function () {
+        $('.bmvip-cont').toggle();
+    });
+    $('.paytoggle label').click(function () {
+        $('.paycont').toggle();
+    });
+    $('.paytips label').click(function () {
+        $('.paytips_cont').toggle();
+    });
+    $('.vip-tq label').click(function () {
+        $('.viptq-cont').toggle();
+    });
+    $('#chutiyan .chose-tgs').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择提供商',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '选择提供商.html' //iframe的url
+        });
+    });
+    $('#chutiyan .zd_person').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择联系人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '指定人员.html' //iframe的url
+        });
+    });
+    $('#chutiyan .yx_person').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择联系人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '指定人员.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .person_tip').on('mouseenter',function(){
+        this.index =layer.tips('联系人展示规则：</br>' +
+            '①报名该系列课，取推荐人/锁定人中拿有分佣的人A，从A至A的顶级，找第一个在“指定可联系人”内的用户，即为该报名人的“联系人”；（锁定人/推荐人都拿有分佣时，推荐人算作A）</br>' +
+            '②若未找到联系人或联系人未在个人中心处上传“二维码/微信/手机号”，则默认展示“默认联系人”；</br>' +
+            '③注意：分公司开启时，分公司员工算作“拿分佣”的有效占位。', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:500
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+    $('.yd-chose li').click(function () {
+        if($(this).text() === '默认不引导'){
+            $('.yd-cont').hide()
+        }else{
+            $('.yd-cont').show()
+        }
+    })
+</script>
+
+</body>
+</html>

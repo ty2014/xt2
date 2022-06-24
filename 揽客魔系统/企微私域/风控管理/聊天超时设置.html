@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天超时设置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="page-title">聊天超时设置
+    <div class="notisTip">
+        <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="fa fa-file-word-o"></i>功能说明</a>
+        <a href="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" target="_blank"><i class="fa fa-file-movie-o"></i>视频教程</a>
+    </div>
+</div>
+
+<div class="activity_set activity_set3 w-100">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">是否开启检测:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper ">
+                        <input type="checkbox" id="cont1-togg1" class="toggle-button" name="switch">
+                        <label for="cont1-togg1" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont1" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l">聊天超时时长:</span>
+                <div class="a_list_r">
+                    <input type="number" class="s_width center mgR-10">分钟
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">通知触发成员:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper ">
+                            <input type="checkbox" id="cont1-togg2" class="toggle-button" name="switch">
+                            <label for="cont1-togg2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">通知监管成员:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper ">
+                            <input type="checkbox" id="cont1-togg3" class="toggle-button" name="switch">
+                            <label for="cont1-togg3" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont2" style="display: none">
+                <div class="a_list">
+                    <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">选择监管成员:</span>
+                    <div class="a_list_r">
+                        <div>
+                            <div class="flex alignItemC">
+                                <span class="set-user addU">添加成员</span>
+                                <a class="tishi addU">已添加2个</a>
+                            </div>
+                            <ul class="hasChoseList">
+                                <li>若水【华厚】社群运营官<i></i></li>
+                                <li>蒋宇工作号<i></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#cont1-togg1').click(function () {
+        $('.cont1').toggle()
+    })
+    $('#cont1-togg3').click(function () {
+        $('.cont2').toggle()
+    })
+
+    $('#chutiyan .addU').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加成员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['990px', '650px'],
+            content: '../添加成员.html' //iframe的url
+        });
+    });
+
+</script>
+</body>
+</html>

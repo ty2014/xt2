@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义信息</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+
+<div class="content">
+    <div class="page-title">自定义信息
+        <div class="notisTip">
+            <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="layui-icon layui-icon-t"></i>功能说明</a>
+            <a href="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" target="_blank"><i class="layui-icon layui-icon-v"></i>视频教程</a>
+        </div>
+    </div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>新增自定义字段</span>
+        </div>
+    </div>
+    <div class="edit_table2 flex">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="150px" class="left">字段名称</th>
+                        <th width="100px" class="left">字段类型</th>
+                        <th width="100px" class="left">字段属性</th>
+                        <th width="100px" class="left">是否显示</th>
+                        <th width="240px" class="right">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="150px" class="left">职位</td>
+                        <td width="100px" class="left">基础字段</td>
+                        <td width="100px" class="left">-</td>
+                        <td width="100px" class="left">
+                            <div class="button-label-s mgL-4">
+                                <div class="toggle-button-wrapper">
+                                    <input type="checkbox" id="togg1" checked class="toggle-button" name="switch">
+                                    <label for="togg1" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">显示</span>
+                                        <span class="text off">隐藏</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="240px" class="cz_btn right">
+                            <button type="button" class="disabled">上移</button>
+                            <button type="button" class="">下移</button>
+                            <button type="button" class="disabled">编辑</button>
+                            <button type="button" class="disabled btn-type2">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150px" class="left">公司地址</td>
+                        <td width="100px" class="left">自定义字段</td>
+                        <td width="100px" class="left">文本</td>
+                        <td width="100px" class="left">
+                            <div class="button-label-s mgL-4">
+                                <div class="toggle-button-wrapper">
+                                    <input type="checkbox" id="togg2" checked class="toggle-button" name="switch">
+                                    <label for="togg2" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">显示</span>
+                                        <span class="text off">隐藏</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="240px" class="cz_btn right">
+                            <button type="button" class="">上移</button>
+                            <button type="button" class="disabled">下移</button>
+                            <button type="button" class="">编辑</button>
+                            <button type="button" class=" btn-type2">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="mgL-20" id="poster">
+            <img src="../images/wx_20220406095514.png" alt="">
+        </div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/slideFixed.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#poster').slideFixed();
+
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: '添加自定义字段',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '50%'],
+            content: '企微私域/企业微信/添加自定义字段.html' //iframe的url
+        });
+    });
+
+
+</script>
+</body>
+</html>

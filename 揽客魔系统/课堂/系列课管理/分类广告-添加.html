@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分类广告添加</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0;background: #fff">
+
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">分类：</span>
+            <div class="a_list_r"><span class="set-user" style="margin-right: 16px">点击选择</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">标题：</span>
+            <div class="a_list_r"><input type="text"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">广告图：</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮  -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi">*图片像素须为 750px*236px，大小不超过100KB</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">广告链接：</span>
+            <div class="a_list_r"><input type="text" class="w-620" placeholder="*选填，点击广告图跳转的网址"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">开始时间：</span>
+            <div class="a_list_r">
+                <input type="text" class="layui-input" id="test1">
+                <span class="tishi">*到时间点再开始展示该广告</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">优先级：</span>
+            <div class="a_list_r"><input type="text" class="s_width center"><span class="tishi">*数字越大，排序越前</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">状态：</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                        <label for="u-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*开启则启用，关闭则停用</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+</script>
+
+</body>
+</html>

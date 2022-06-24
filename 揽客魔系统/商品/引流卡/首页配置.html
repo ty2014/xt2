@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页配置</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/ylk.css">
+    <style>
+        .activity_set3 .a_list .a_list_r{padding: 8px 0;}
+        .select-text{min-width: 90px;}
+        .select-text .select-txt{padding: 0 20px 0 8px;}
+        .radio{color: #333;}
+        .set-user{display: none}
+        .articl-cont div{position: relative;}
+        .type-bg{position: absolute;top: 13px;left: 12px;right: 12px;width: 273px;height: 70px;border-radius: 6px 6px 0 0;}
+
+    </style>
+</head>
+<body id="chutiyan">
+
+<div style="height: 100%">
+    <div class="page-title">
+        首页配置<a class="tishi m-doub-pic">首页链接</a>
+        <!--  草稿模式提示语  -->
+        <div class="tishi-bg" style="display: flex;align-items: center;margin-left: 20px">*当前为草稿模式：最近编辑时间2021-10-20 10:00:00，草稿预览效果：
+            <div class="ylicon-btn" style="cursor: pointer">
+                <img src="../../images/1.png" alt=""><img src="../../images/2.png" alt="">
+            </div>。您也可以<a class="sync">点此拉取“正在使用的内容”进行编辑</a>
+        </div>
+        <!--  正式提示语  -->
+        <div class="tishi-bg" style="display: none;margin-left: 20px;background: #f3feff;color: #44a0fe;border: 1px solid #94d9fe;">
+            *当前为正稿模式，最近保存为“正式使用页面”的时间为2021-10-20 10:00:00，您可以修改内容保存为草稿进行预览，也可以修改后直接保存使用~
+        </div>
+    </div>
+    <div class="scpz-body">
+        <div class="scpz-body-l">
+            <img src="images/pz3.png" alt="">
+            <span id="page_title">首页</span>
+            <!--  模板一  -->
+            <div class="box-cont" style="background: #f6f5f5;">
+                <img src="images/topbg.png" alt="" id="topBg">
+                <!-- 搜索栏 -->
+                <div class="search-cont">
+                    <input type="text" readonly>
+                    <p>请输入关键进行搜索</p>
+                </div>
+                <!--  搜索栏自定义  -->
+                <div class="zdyContent demo1_zdy_1" style="height: 80px;line-height: 80px;text-align: center;background: #ddd;">搜索栏自定义</div>
+                <!--  顶部自定义  -->
+                <div class="zdyContent demo1_zdy_2" style="height: 80px;line-height: 80px;text-align: center;background: #ddd;">顶部自定义</div>
+                <!-- 商品样式一 -->
+                <div>
+                    <div class="blockTitle">样式一</div>
+                    <div class="index_cardList">
+                        <img src="images/pzlist1.png" alt="">
+                        <img src="images/pzlist1.png" alt="">
+                    </div>
+                </div>
+
+
+                <!-- 商品样式二 -->
+                <div>
+                    <div class="blockTitle">样式二</div>
+                    <div class="index_cardList index_cardList_dub">
+                        <img src="images/pzlist2.png" alt="">
+                        <img src="images/pzlist2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="zdyContent demo1_zdy_4"  style="display: block;height: 80px;line-height: 80px;text-align: center;background: #ddd;">自定义内容</div>
+
+                <!--  底部自定义  -->
+                <div class="zdyContent demo1_zdy_3"  style="height: 80px;line-height: 80px;text-align: center;background: #ddd;">底部自定义</div>
+            </div>
+            <div id="footBar">
+                <ul id="footer" style="background-image: url();">
+                    <li class="tab-item foot_icon1 active">
+                        <a href="" style="background-image: url(images/foot1-2.png);" backimg="background-image: url(../images/foot1-2.png);" backimg_active="background-image: url(../images/foot1-2.jpg);"></a>
+                    </li>
+                    <li class="tab-item foot_icon2">
+                        <a href="" style="background-image: url(images/foot2.png);" backimg="background-image: url(../images/foot2.png);" backimg_active="background-image: url(../images/foot2-2.jpg);"></a>
+                    </li>
+                    <li class="tab-item foot_icon3">
+                        <a href="" style="background-image: url(images/foot3.png);" backimg="background-image: url(../images/foot3.png);" backimg_active="background-image: url(../images/foot3-2.jpg);"></a>
+                    </li>
+                    <li class="tab-item foot_icon4">
+                        <a href="" style="background-image: url(images/foot4.png);" backimg="background-image: url(../images/foot4.png);" backimg_active="background-image: url(../images/foot4-2.jpg);"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="scpz-body-r">
+            <!--    -->
+            <div class="activity_set activity_set3 w-4" style="padding: 0;">
+                <div class="b-line">
+                    <div class="dub-list">
+                        <div class="a_list">
+                            <span class="a_list_l">页面命名:</span>
+                            <!--  输入内容后，左侧示例图对应位置实时响应展示  -->
+                            <div class="a_list_r"><input type="text" value="首页"></div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">分享图标:</span>
+                            <div class="a_list_r">
+                                <ul class="FraUpload_imglist">
+                                    <li class="img_item" style="display: none">
+                                        <img src="">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn"></li>
+                                </ul>
+                                <p class="tishi mgL-0">*建议像素100*100，比例1:1，大小不超过100KB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="a_list">
+                        <span class="a_list_l">分享简介:</span>
+                        <div class="a_list_r"><input type="text" style="width: 60%" value="精彩好物等你来"></div>
+                    </div>
+                </div>
+            </div>
+            <!--    -->
+            <div class="setBox normal-form">
+                <div class="set_list">
+                    <span class="setList_num">1</span>
+                    <div class="setList_cont">
+                        <div class="item1 checked_chose">
+                            <span class="txtL">搜索栏:</span>
+                            <label for="cd1" class="radio">
+                                <div class="chose">
+                                    <input type="radio" checked="" name="cd" id="cd1">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">默认</span>
+                            </label>
+                            <label for="cd2" class="radio">
+                                <div class="chose">
+                                    <input type="radio" name="cd" id="cd2">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">自定义</span>
+                            </label>
+                            <label for="cd3" class="radio">
+                                <div class="chose">
+                                    <input type="radio" name="cd" id="cd3">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">不展示</span>
+                            </label>
+                        </div>
+                        <div class="item1 search-cont2" style="display: none">
+                            <span class="txtL">自定义区:</span>
+                            <button class="zdy-btn zdy-btn1" style="display: block;margin-left: 0;">自定义内容</button>
+                        </div>
+                        <div class="item1">
+                            <span class="txtL">顶部背景图:</span>
+                            <div class="button-label-m" style="margin-right: 10px;">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="cont1-toggbg" checked class="toggle-button" name="switch">
+                                    <label for="cont1-toggbg" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">展示</span>
+                                        <span class="text off">不展示</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="bgset-togg" style="display: flex;align-items: center;">
+                                <ul class="FraUpload_imglist layer-photos-demo">
+                                    <li class="img_item">
+                                        <img src="images/topbg.png" layer-src="images/topbg.png">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn" style="display: none"></li>
+                                </ul>
+                                <p class="tishi mgL-0">*建议像素750*520，比例1.4:1，大小不超过200KB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="set_list">
+                    <span class="setList_num">2</span>
+                    <div class="setList_cont">
+                        <div class="dub-list">
+                            <div class="item1">
+                                <span class="txtL">顶部自定义:</span>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont2-togg1" class="toggle-button" name="switch">
+                                        <label for="cont2-togg1" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">展示</span>
+                                            <span class="text off">不展示</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="zdy-btn zdy-btn2">自定义内容</button>
+                            </div>
+                            <div class="item1">
+                                <span class="txtL">底部自定义:</span>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont2-togg2" class="toggle-button" name="switch">
+                                        <label for="cont2-togg2" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">展示</span>
+                                            <span class="text off">不展示</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="zdy-btn zdy-btn3">自定义内容</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fl-settins">
+                <div class="settins-item">
+                    <div class="item-list">
+                        <span class="del">删除</span>
+                        <div class="list-cont">
+                            <span class="txtL">选择分类:</span>
+                            <div class="select-text">
+                                <span class="select-txt">分类一</span>
+                                <ul style="display: none;">
+                                    <li class="active">分类一</li>
+                                    <li>分类二</li>
+                                    <li>自定义</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list-cont">
+                            <span class="txtL">展示样式:</span>
+                            <div class="select-text">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li class="active">样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="prev disab">上移一层</span>
+                        <div class="list-cont">
+                            <!--  不填即不展示标题  -->
+                            <span class="txtL">标题名称:</span>
+                            <div class="list-text"><input type="text" value="样式一" placeholder="选填，不填即不展示标题"></div>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next">下移一层</span>
+                        <div class="list-cont msgTip">
+                            <span class="txtL">展示方法:</span>
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="edit-togg1" class="toggle-button" name="switch">
+                                    <label for="edit-togg1" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">指定</span>
+                                        <span class="text off">默认</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="edit1" style="display: flex;align-items: center;">
+                                <a class="xlk_chose">已选择10个</a>，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="edit2" style="display: flex;align-items: center;">
+                                全部数据里，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                                展示前<input type="number" class="s_width center" value="4" style="margin: 0 8px">个
+                            </div>
+                        </div>
+                        <div class="list-cont zdyTip" style="display: none">
+                            <span class="txtL">自定义内容:</span>
+                            <span class="fl-btn zdyCont-btn1">代码定义</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="settins-item">
+                    <div class="item-list">
+                        <span class="del">删除</span>
+                        <div class="list-cont">
+                            <span class="txtL">选择分类:</span>
+                            <div class="select-text">
+                                <span class="select-txt">分类一</span>
+                                <ul style="display: none;">
+                                    <li class="active">分类一</li>
+                                    <li>分类二</li>
+                                    <li>自定义</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list-cont">
+                            <span class="txtL">展示样式:</span>
+                            <div class="select-text">
+                                <span class="select-txt">样式二</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li class="active">样式二</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="prev">上移一层</span>
+                        <div class="list-cont">
+                            <!--  不填即不展示标题  -->
+                            <span class="txtL">标题名称:</span>
+                            <div class="list-text"><input type="text" value="样式二" placeholder="选填，不填即不展示标题"></div>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next">下移一层</span>
+                        <div class="list-cont msgTip">
+                            <span class="txtL">展示方法:</span>
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="edit-togg3" class="toggle-button" name="switch">
+                                    <label for="edit-togg3" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">指定</span>
+                                        <span class="text off">默认</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="edit1" style="display: flex;align-items: center;">
+                                <a class="xlk_chose">已选择10个</a>，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="edit2" style="display: flex;align-items: center;">
+                                全部数据里，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                                展示前<input type="number" class="s_width center" value="4" style="margin: 0 8px">个
+                            </div>
+                        </div>
+                        <div class="list-cont zdyTip" style="display: none">
+                            <span class="txtL">自定义内容:</span>
+                            <span class="fl-btn zdyCont-btn1">代码定义</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="settins-item">
+                    <div class="item-list">
+                        <span class="del">删除</span>
+                        <div class="list-cont">
+                            <span class="txtL">选择分类:</span>
+                            <div class="select-text">
+                                <span class="select-txt">自定义</span>
+                                <ul style="display: none;">
+                                    <li>分类一</li>
+                                    <li>分类二</li>
+                                    <li class="active">自定义</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="prev">上移一层</span>
+                        <div class="list-cont">
+                            <span class="txtL">标题名称:</span>
+                            <div class="list-text"><input type="text" value="自定义"></div>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next disab">下移一层</span>
+                        <div class="list-cont msgTip" style="display: none">
+                            <span class="txtL">展示方法:</span>
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="edit-togg4" class="toggle-button" name="switch">
+                                    <label for="edit-togg4" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">指定</span>
+                                        <span class="text off">默认</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="edit1" style="display: flex;align-items: center;">
+                                <a class="xlk_chose">已选择10个</a>，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="edit2" style="display: flex;align-items: center;">
+                                全部数据里，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                                展示前<input type="number" class="s_width center"  style="margin: 0 8px">个
+                            </div>
+                        </div>
+                        <div class="list-cont zdyTip" style="display: block">
+                            <span class="txtL">自定义内容:</span>
+                            <span class="fl-btn zdyCont-btn1">代码定义</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="set_save" style="margin: 20px 0 10px;display: flex;justify-content: space-between;align-items: center;">
+                    <span class="scpz-save-btn">添加</span>
+                </div>
+            </div>
+
+            <div class="fl-settins">
+                <div class="set_save" style="margin: 10px 0;display: flex;align-items: center;">
+                    <span class="scpz-save-btn2">保存并使用</span>
+                    <!--  还原默认设置后：左侧及右侧设置项全都初始化；
+                                          顶部分享设置不用还原
+                      -->
+                    <span class="scpz-save-btn3">恢复默认配置</span>
+                    <span class="scpz-save-btn yl-btn" style="background: #1dccd8;">保存草稿并预览</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  预览二维码链接  -->
+<div id="pvw" class="model pvw" style="display: none;">
+    <div class="mark"></div>
+    <div class="content">
+        <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+        <p class="cont-msg"><input type="text" value="http://cshtml.lkmsxy.com"><span class="copy-btn">复制</span></p>
+        <p class="tishi left" style="margin-top: 10px;">*已为你生成预览效果，微信扫码或复制链接打开查看，确认无误后记得点击“保存并使用”</p>
+    </div>
+</div>
+
+<!--  自定义区  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure1" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">自定义内容:</div>
+            <div class="a_list_r">
+                <!--  此处放富文本编辑器  -->
+                <textarea placeholder="自定义区" style="width: 100%;height: 66vh;padding: 10px;resize: none">顶部搜索自定义 此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+<div class="activity_set activity_set2 w-120" id="cont-sure2" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">自定义内容:</div>
+            <div class="a_list_r">
+                <!--  此处放富文本编辑器  -->
+                <textarea placeholder="自定义区" style="width: 100%;height: 66vh;padding: 10px;resize: none">顶部自定义 此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+<div class="activity_set activity_set2 w-120" id="cont-sure3" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">自定义内容:</div>
+            <div class="a_list_r">
+                <!--  此处放富文本编辑器  -->
+                <textarea placeholder="自定义区" style="width: 100%;height: 66vh;padding: 10px;resize: none">底部自定义 此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+<div class="activity_set activity_set2 w-120" id="cont-sure4" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">自定义内容:</div>
+            <div class="a_list_r">
+                <!--  此处放富文本编辑器  -->
+                <textarea placeholder="自定义区" style="width: 100%;height: 66vh;padding: 10px;resize: none">自定义内容 此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('.m-doub-pic').on('click',function (e) {
+        e.stopPropagation();
+        console.log(e.pageX + '--' + e.pageY);
+        var html="";
+        html+=`<div class="table-eq">
+                <div class="show-pic">
+                    <em></em>
+                    <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    <div>
+                        <input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx"><span>复制</span>
+                        <p>*微信扫一扫，或复制链接打开</p>
+                    </div>
+                </div>
+            </div>`;
+        $('.table-eq').remove();
+        $('body').append(html);
+        $(".table-eq").css({
+            "left": e.pageX-150,
+            "top": e.pageY+20,
+        });
+        $('.show-pic').click(function (e) {
+            e.stopPropagation();
+            $(this).show();
+        });
+    });
+    $(function () {
+        // 自定义按钮
+        $('#chutiyan .zdy-btn1').on('click', function(){
+            layer.open({
+                type: 1,
+                title: '自定义内容',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['90%', '90%'],
+                skin: 'account-box',
+                content: $("#cont-sure1")
+            });
+        });
+        $('#chutiyan .zdy-btn2').on('click', function(){
+            layer.open({
+                type: 1,
+                title: '自定义内容',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['90%', '90%'],
+                skin: 'account-box',
+                content: $("#cont-sure2")
+            });
+        });
+        $('#chutiyan .zdy-btn3').on('click', function(){
+            layer.open({
+                type: 1,
+                title: '自定义内容',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['90%', '90%'],
+                skin: 'account-box',
+                content: $("#cont-sure3")
+            });
+        });
+        $('#chutiyan .zdyCont-btn1').on('click', function(){
+            layer.open({
+                type: 1,
+                title: '自定义内容',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['90%', '90%'],
+                skin: 'account-box',
+                content: $("#cont-sure4")
+            });
+        });
+        // 各自定义编辑器弹框保存后左侧对应位置内容同步处理事件
+        $('#cont-sure1').find('.btn-sure').on('click',function () {
+            let html =$(this).parents('.activity_set').find('textarea').html();
+            $('.demo1_zdy_1').html(html);
+        });
+        $('#cont-sure2').find('.btn-sure').on('click',function () {
+            let html =$(this).parents('.activity_set').find('textarea').html();
+            $('.demo1_zdy_2').html(html);
+        });
+        $('#cont-sure3').find('.btn-sure').on('click',function () {
+            let html =$(this).parents('.activity_set').find('textarea').html();
+            $('.demo1_zdy_3').html(html);
+        });
+
+        //
+
+        // 搜索栏
+        $('.item1 label').click(function () {
+            var txt=$(this).find('.msg_set_txt').text();
+            if($(this).find('input').is(':checked')){
+                switch (txt) {
+                    case '默认':
+                        $('.search-cont').show();
+                        $('.search-cont2,.demo1_zdy_1').hide();
+                        break;
+                    case '自定义':
+                        $('.search-cont').hide();
+                        $('.search-cont2,.demo1_zdy_1').show();
+                        break;
+                    case '不展示':
+                        $('.search-cont').hide();
+                        $('.search-cont2,.demo1_zdy_1').hide();
+                        break;
+                }
+            }
+        });
+        //
+        $('#cont1-toggbg').click(function () {
+            $('#topBg,.bgset-togg').toggle();
+        });
+        $('.toggle-button').click(function () {
+            $(this).parents('.button-label-m').siblings('.zdy-btn').toggle();
+        });
+        $('#cont2-togg1').click(function () {
+            $('.demo1_zdy_2').toggle();
+        });
+        $('#cont2-togg2').click(function () {
+            $('.demo1_zdy_3').toggle();
+        });
+
+
+        $('.xlk_chose').click(function () {
+            layer.open({
+                type: 2,
+                title: '选择商品',        //
+                shadeClose: true,
+                shade: 0.3,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['95%', '95%'],
+                content: '选择商品.html#tab2' //iframe的url
+            });
+        });
+
+        layer.photos({
+            photos: '.layer-photos-demo'
+            ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+        });
+        // 按钮提示弹框
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .scpz-save-btn2').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定使用该样式？<p style="color: #999">确定后，将保存草稿并直接同步正在使用的“首页呈现”</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    title:'提示',
+                    btn: ['取消','确定'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('使用成功', {time: 1000});
+                });
+            });
+        });
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .scpz-save-btn3').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定还原到默认设置？<p style="color: #999">确定后，以上配置内容将全部重置到初始状态</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    title:'提示',
+                    btn: ['取消','确定'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('操作成功', {time: 1000});
+                });
+            });
+        });
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .del').on('click', function(){
+                layer.config({
+                    extend: 'myskin/failure.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定删除该项设置？',{
+                    skin: 'failureskin ',    //类名
+                    icon:2,
+                    title:'提示',
+                    btn: ['取消','确定'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('删除成功', {time: 1000});
+                });
+            });
+        });
+
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .yl-btn').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定保存到草稿？<p style="color: #999">保存后，可预览草稿效果，不影响正在使用的“首页呈现”</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    title:'提示',
+                    btn: ['取消','确定并预览'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.open({
+                        type: 1,
+                        title: false,
+                        shadeClose: true,
+                        shade: 0.3,
+                        closeBtn: 0,
+                        area: ['100%', '100%'],
+                        skin: 'pvw',
+                        content: $("#pvw")
+                    });
+                    //layer.msg('操作成功', {time: 1000});
+                });
+            });
+        });
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .sync').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定覆盖“当前草稿”，拉取“在用页面”来编辑？<p style="color: #999">当前草稿被覆盖后不可恢复</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    title:'提示',
+                    btn: ['取消','确定并同步'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('操作成功', {time: 1000});
+                });
+            });
+        });
+        $('.ylicon-btn').click(function () {
+            layer.open({
+                type: 1,
+                title: false,
+                shadeClose: true,
+                shade: 0.3,
+                closeBtn: 0,
+                area: ['100%', '100%'],
+                skin: 'pvw',
+                content: $("#pvw")
+            });
+        })
+
+
+        $('.edit1').hide();
+        for(var i=1;i<=$('.settins-item').length;i++){
+            var id = '#edit-togg'+i;
+            $(id).each(function () {
+                $(this).click(function () {
+                    let par = $(this).parents('.button-label-m');
+                    if($(this).is(':checked')){
+                        par.siblings('.edit1').show();
+                        par.siblings('.edit2').hide()
+                    }else{
+                        par.siblings('.edit1').hide();
+                        par.siblings('.edit2').show()
+                    }
+                });
+            })
+        }
+
+
+
+    })
+</script>
+
+
+</body>
+</html>

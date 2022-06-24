@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>新建活动</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.0">
+    <link rel="stylesheet" href="../css/index.css?v=1.0.0"/>
+
+</head>
+<body id="chutiyan" style="height: auto;">
+
+
+<div class="content" style="padding-bottom: 100px">
+    <div class="step-box">
+        <div class="eis-stepContents">
+            <div class="eis-stepContent">
+                <div class="activity_set">
+                    <div class="a_list">
+                        <span class="a_list_l">商品类型：</span>
+                        <div class="a_list_r checked_chose">
+                            <label for="fs1" class="radio">
+                                <div class="chose">
+                                    <input type="radio" checked name="fs" id="fs1" />
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">实物商品（需要物流）</span>
+                            </label>
+                            <label for="fs2" class="radio">
+                                <div class="chose">
+                                    <input type="radio" name="fs" id="fs2" />
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">虚拟商品（不需物流）</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="a_list ">
+                        <!--  此功能只有平台才有，商家登入不显示；只能选择自营店铺，   -->
+                        <span class="a_list_l">所属店铺：</span>
+                        <!-- 例 变美服饰-自营 -->
+                        <div class="a_list_r"><input type="text" readonly placeholder="点击选择（单选）" class="dpxz" style="width: 314px;"/></div>
+                    </div>
+                    <div class="dub-list">
+                        <div class="a_list">
+                            <span class="a_list_l">商品分类：</span>
+                            <div class="a_list_r">
+                                <!-- 如果有多级分类，选择后在后面继续选择子级分类  -->
+                                <div class="slide-select">
+                                    <select>
+                                        <option>企业采购</option>
+                                        <option>促销礼品</option>
+                                    </select>
+                                    <img src="../../images/bottom-icon.jpg" alt="">
+                                </div>
+                                <div class="slide-select">
+                                    <select>
+                                        <option>企业采购</option>
+                                        <option>促销礼品</option>
+                                    </select>
+                                    <img src="../../images/bottom-icon.jpg" alt="">
+                                </div>
+                                <div class="slide-select">
+                                    <select>
+                                        <option>企业采购</option>
+                                        <option>促销礼品</option>
+                                    </select>
+                                    <img src="../../images/bottom-icon.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a_list ">
+                            <span class="a_list_l">所属品牌：</span>
+                            <div class="a_list_r"><input type="text" readonly placeholder="点击选择"/><span class="tishi">*选填</span></div>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">商品名称：</span>
+                        <div class="a_list_r"><input type="text" placeholder="建议字数不超过25个字" class="w-620"/></div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">商品卖点：</span>
+                        <div class="a_list_r"><input type="text" placeholder="建议字数不超过50个字" class="w-620"/></div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">商品编码：</span>
+                        <div class="a_list_r">
+                            <input type="text"><span class="tishi">*选填，方便管理及搜索</span>
+                        </div>
+                    </div>
+                    <div class="a_list flex-start">
+                        <span class="a_list_l">商品图集：</span>
+                        <div class="a_list_r replay_list flex-dir">
+                            <div class="list_item w-620">
+                                <div class="item_content" id="imageChange">
+                                    <ul>
+                                        <li>
+                                            <div class="item"><img src=""><span class="del-item">×</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="item"><img src=""><span class="del-item">×</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="item"><img src=""><span class="del-item">×</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="item"><img src=""><span class="del-item">×</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="item"><img src=""><span class="del-item">×</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="item"><img src=""><span class="del-item">×</span></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item_cont item_add">
+                                    <img src="../../images/file.png" alt=""/>
+                                </div>
+                            </div>
+                            <p class="tishi mgL-0">建议尺寸：800*800像素；单张图片不超过1000KB，最多可上传6张；第一张默认为主图，拖动图片可进行排序；</p>
+                        </div>
+                    </div>
+                    <div class="a_list flex-start">
+                        <span class="a_list_l">商品介绍：</span>
+                        <div class="a_list_r">
+                            <textarea name="" id="" style="width: 100%;height: 400px;max-width: 720px">富文本编辑器</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eis-stepContent">
+                <div class="activity_set product-lab">
+                    <div class="a_list">
+                        <span class="a_list_l">商品规格：</span>
+                        <div class="a_list_r checked_chose">
+                            <label for="gg1" class="radio active">
+                                <div class="chose">
+                                    <input type="radio" checked name="gg" id="gg1" />
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">单规格</span>
+                            </label>
+                            <label for="gg2" class="radio">
+                                <div class="chose">
+                                    <input type="radio" name="gg" id="gg2" />
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">多规格</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div class="box">
+                            <div class="a_list ">
+                                <span class="a_list_l">市场指导价：</span>
+                                <div class="a_list_r">
+                                    <input type="text" class="m_width center"/><span class="inp-next">元</span>
+                                    <span class="tishi">*选填，填写将在商品详情按划线形式展示</span>
+                                </div>
+                            </div>
+                            <div class="a_list ">
+                                <span class="a_list_l"><span class="stips">*</span>售价：</span>
+                                <div class="a_list_r">
+                                    <input type="text" class="m_width center"/> <span class="inp-next">+积分</span>
+                                    <input type="text" class="m_width center"/>
+                                    <span class="tishi">*售价为必填，积分为选填；如果设置了售价+积分，用户<b>积分不足</b>则无法购买</span>
+                                </div>
+                            </div>
+                            <div class="a_list flex-start" style="margin-bottom: 20px">
+                                <span class="a_list_l top5">会员特权：</span>
+                                <div class="a_list_r">
+                                    <!-- 必须输入 >0 的整数 -->
+                                    <div class="list-column">
+                                         <div class="htmleaf-content">
+                                             <div class="checkbox" id="vip-btn">
+                                                 <input type="checkbox"/>
+                                                 <label></label>
+                                             </div>
+                                         </div>
+                                         <div class="vip-cont">
+                                             <table>
+                                                 <thead>
+                                                 <tr>
+                                                     <th width="120px">会员等级</th>
+                                                     <th width="120px">售价</th>
+                                                     <th width="50px">+</th>
+                                                     <th width="120px">积分</th>
+                                                 </tr>
+                                                 </thead>
+                                                 <tbody>
+                                                 <tr>
+                                                     <td>联创人</td>
+                                                     <td><input type="text" class="center m-height"></td>
+                                                     <td>+</td>
+                                                     <td><input type="text" class="center m-height"></td>
+                                                 </tr>
+                                                 <tr>
+                                                     <td>VIP会员</td>
+                                                     <td><input type="text" class="center m-height"></td>
+                                                     <td>+</td>
+                                                     <td><input type="text" class="center m-height"></td>
+                                                 </tr>
+                                                 <tr>
+                                                     <td>普通会员</td>
+                                                     <td><input type="text" class="center m-height"></td>
+                                                     <td>+</td>
+                                                     <td><input type="text" class="center m-height"></td>
+                                                 </tr>
+                                                 </tbody>
+                                             </table>
+                                         </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="a_list ">
+                                <span class="a_list_l"><span class="stips">*</span>库存：</span>
+                                <div class="a_list_r">
+                                    <input type="text" class="m_width center"/><span class="inp-next">已售：0</span>
+                                    <span class="tishi">*此处库存为商品的可售卖库存，可以直接进行修改，修改后，买家看到的商品库存数量会进行变化</span>
+                                </div>
+                            </div>
+                            <div class="a_list ">
+                                <span class="a_list_l">单价重量：</span>
+                                <div class="a_list_r">
+                                    <input type="text" class="m_width center"/>
+                                    <span class="tishi">*选填，单件商品重量，以重量计算邮费时使用</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="a_list flex-start">
+                                <span class="a_list_l">规格定义：</span>
+                                <div class="a_list_r gg-content">
+                                    <!--  最多追加3个规格名,最少有一个规格展示,且第一个不能删除  -->
+                                    <div class="gg-item">
+                                        <div class="gg-item-list">
+                                             <div class="item-head">
+                                                 <div>颜色</div>
+                                                 <span class="del-gg"></span>
+                                             </div>
+                                             <div class="item-body">
+                                                 <span>规格值</span>
+                                                 <div>
+                                                     <label for="gg1-1" class="checked">
+                                                         <div class="chose">
+                                                             <input type="checkbox" checked name="gg1" id="gg1-1" />
+                                                             <span class="checked-bg"></span>
+                                                         </div>
+                                                         <span class="msg_set_txt">红色</span>
+                                                     </label>
+                                                     <label for="gg1-2" class="checked">
+                                                         <div class="chose">
+                                                             <input type="checkbox" checked name="gg1" id="gg1-2" />
+                                                             <span class="checked-bg"></span>
+                                                         </div>
+                                                         <span class="msg_set_txt">蓝色</span>
+                                                     </label>
+                                                     <label for="gg1-3" class="checked">
+                                                         <div class="chose">
+                                                             <input type="checkbox" name="gg1" id="gg1-3" />
+                                                             <span class="checked-bg"></span>
+                                                         </div>
+                                                         <span class="msg_set_txt">绿色</span>
+                                                     </label>
+                                                     <label for="gg1-4" class="checked">
+                                                         <div class="chose">
+                                                             <input type="checkbox" name="gg1" id="gg1-4" />
+                                                             <span class="checked-bg"></span>
+                                                         </div>
+                                                         <span class="msg_set_txt">黄色</span>
+                                                     </label>
+                                                     <span class="add-ggz">添加规格值</span>
+                                                 </div>
+                                             </div>
+                                        </div>
+                                        <div class="gg-item-list">
+                                            <div class="item-head">
+                                                <div>尺寸</div>
+                                                <span class="del-gg"></span>
+                                            </div>
+                                            <div class="item-body">
+                                                <span>规格值</span>
+                                                <div>
+                                                    <label for="gg2-1" class="checked">
+                                                        <div class="chose">
+                                                            <input type="checkbox" checked name="gg1" id="gg2-1" />
+                                                            <span class="checked-bg"></span>
+                                                        </div>
+                                                        <span class="msg_set_txt">S</span>
+                                                    </label>
+                                                    <label for="gg2-2" class="checked">
+                                                        <div class="chose">
+                                                            <input type="checkbox" checked name="gg1" id="gg2-2" />
+                                                            <span class="checked-bg"></span>
+                                                        </div>
+                                                        <span class="msg_set_txt">M</span>
+                                                    </label>
+                                                    <label for="gg2-3" class="checked">
+                                                        <div class="chose">
+                                                            <input type="checkbox" checked name="gg1" id="gg2-3" />
+                                                            <span class="checked-bg"></span>
+                                                        </div>
+                                                        <span class="msg_set_txt">L</span>
+                                                    </label>
+                                                    <label for="gg2-4" class="checked">
+                                                        <div class="chose">
+                                                            <input type="checkbox" name="gg1" id="gg2-4" />
+                                                            <span class="checked-bg"></span>
+                                                        </div>
+                                                        <span class="msg_set_txt">SL</span>
+                                                    </label>
+                                                    <span class="add-ggz">添加规格值</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-gg">
+                                            <div class="slide-select">
+                                                <select>
+                                                    <option value="">请选择</option>
+                                                    <option value="">颜色</option>
+                                                    <option value="">尺寸</option>
+                                                </select>
+                                                <img src="../../images/bottom-icon.jpg" alt="">
+                                            </div>
+                                            <span class="add-gg-btn">追加</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="a_list flex-start">
+                                <span class="a_list_l">规格明细：</span>
+                                <div class="a_list_r gg-content">
+                                    <!-- 需校验：*为必填，售价>0,积分>0的整数，重量>=0且只保留小数后一位 -->
+                                     <table border="0">
+                                         <thead>
+                                         <tr>
+                                             <th style="width: 60px">颜色</th>
+                                             <th style="width: 80px">尺码</th>
+                                             <th style="width: 80px">款式</th>
+                                             <th style="width: 100px">市场指导价<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="选填，填写将在商品详情按划线形式展示" data-original-title="1"></i></th>
+                                             <th style="width: 100px"><span class="stips">*</span>售价（元）</th>
+                                             <th style="width: 100px"><span class="stips">*</span>库存<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="此处库存为商品的可售卖库存，可以直接进行修改，修改后，买家看到的商品库存数量会进行变化" data-original-title="1"></i></th>
+                                             <th style="width: 100px">重量（Kg）<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="按重量计算邮费时使用" data-original-title="1"></i></th>
+                                             <th style="width: 80px">已售</th>
+                                         </tr>
+                                         </thead>
+                                         <tbody>
+                                         <tr>
+                                             <td rowspan="3" class="line-tr">红色</td>
+                                             <td class="line-tr">S</td>
+                                             <td>1</td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td>0</td>
+                                         </tr>
+                                         <tr>
+                                             <td class="line-tr">M</td>
+                                             <td>2</td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td>0</td>
+                                         </tr>
+                                         <tr>
+                                             <td class="line-tr">L</td>
+                                             <td>3</td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td>0</td>
+                                         </tr>
+                                         <tr>
+                                             <td rowspan="3" class="line-tr">蓝色</td>
+                                             <td class="line-tr">S</td>
+                                             <td>1</td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td>0</td>
+                                         </tr>
+                                         <tr>
+                                             <td class="line-tr">M</td>
+                                             <td>2</td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td>0</td>
+                                         </tr>
+                                         <tr>
+                                             <td class="line-tr">L</td>
+                                             <td>3</td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td>0</td>
+                                         </tr>
+                                         <tr>
+                                             <td colspan="3">*批量填充数据将覆盖原始数据</td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><input type="text"></td>
+                                             <td><button type="button">批量填充</button></td>
+                                         </tr>
+                                         </tbody>
+                                     </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eis-stepContent">
+                <div class="activity_set">
+                    <!--
+                    虚拟商品，不设置物流信息
+                    -->
+                    <div class="a_list product-lab">
+                         <span class="a_list_l">配送方式：</span>
+                        <div class="a_list_r checked_chose">
+                             <label for="ps1" class="radio active">
+                                 <div class="chose">
+                                     <input type="radio" checked name="ps" id="ps1" />
+                                     <span class="checked-bg"></span>
+                                 </div>
+                                 <span class="msg_set_txt">快递邮寄</span>
+                             </label>
+                             <label for="ps2" class="radio">
+                                 <div class="chose">
+                                     <input type="radio" name="ps" id="ps2" />
+                                     <span class="checked-bg"></span>
+                                 </div>
+                                 <span class="msg_set_txt">到店自提</span>
+                             </label>
+                            <!-- 没有自提点就跳转到 新建自提点；如果有，就跳转到 已选自提点 -->
+                             <a  class="ztd">自提点：0</a>
+                             <span class="tishi">*到店自提需设置自提点</span>
+                         </div>
+                    </div>
+                    <div class="box-content" style="border-bottom: 1px dashed #e8e8e8;margin-bottom: 20px">
+                         <div class="box">
+                             <div class="a_list">
+                                 <span class="a_list_l">
+                                     <i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="按商品件数累加运费" data-original-title=""></i>快递运费：
+                                 </span>
+                                 <div class="a_list_r checked_chose">
+                                     <div class="list-column">
+                                         <div>
+                                             <label for="yf1" class="radio active" style="display: none!important;">
+                                                 <div class="chose">
+                                                     <input type="radio" checked name="yf" id="yf1" />
+                                                     <span class="checked-bg"></span>
+                                                 </div>
+                                                 <span class="msg_set_txt">统一邮费</span>
+                                             </label>
+                                             首件&nbsp;<input type="text" class="m_width center">&nbsp;元，续件&nbsp;<input type="text" class="m_width center">&nbsp;元/件
+                                         </div>
+                                         <div style="display: none">
+                                             <label for="yf2" class="radio">
+                                                 <div class="chose">
+                                                     <input type="radio" name="yf" id="yf2" />
+                                                     <span class="checked-bg"></span>
+                                                 </div>
+                                                 <span class="msg_set_txt">运费模板</span>
+                                             </label>
+                                             <input type="text" readonly placeholder="点击选择">
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="box"></div>
+                    </div>
+                    <div class="a_list flex-start">
+                        <span class="a_list_l top5">是否限购：</span>
+                        <div class="a_list_r">
+                             <!-- 必须输入 >0 的整数 -->
+                            <div class="list-column">
+                                 <div class="htmleaf-content">
+                                     <div class="checkbox" id="xg-btn">
+                                         <input type="checkbox" checked/>
+                                         <label></label>
+                                     </div>
+                                 </div>
+                                 <div class="xg-cont">
+                                     <div>
+                                         <label for="xg1" class="radio active">
+                                             <div class="chose">
+                                                 <input type="radio" checked name="xg" id="xg1" />
+                                                 <span class="checked-bg"></span>
+                                             </div>
+                                             <span class="msg_set_txt">周期限购,</span>
+                                         </label>
+                                         <div class="slide-select">
+                                             <select>
+                                                 <option>每天</option>
+                                                 <option>每周</option>
+                                                 <option>每月</option>
+                                             </select>
+                                             <img src="../../images/bottom-icon.jpg" alt="">
+                                         </div>
+                                         <input type="text" class="s_width center">&nbsp;件
+                                     </div>
+                                     <div class="flex-start">
+                                         <label for="xg2" class="radio top5">
+                                             <div class="chose">
+                                                 <input type="radio" name="xg" id="xg2" />
+                                                 <span class="checked-bg"></span>
+                                             </div>
+                                             <span class="msg_set_txt">身份限购</span>
+                                         </label>
+                                         <div class="xg-user">
+                                             <p><span>新客户，可购买</span><input type="text" class="s_width center">件</p>
+                                             <p><span>非会员，可购买</span><input type="text" class="s_width center">件</p>
+                                             <p><span>VIP会员，可购买</span><input type="text" class="s_width center">件</p>
+                                             <p><span>xxx会员，可购买</span><input type="text" class="s_width center">件</p>
+                                         </div>
+                                         <span class="tishi">*新客户：第一次商城平台消费的用户，当用户会员身份与新客户身份重复时，按新客户身份限购</span>
+                                     </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">满减优惠：</span>
+                        <div class="a_list_r">
+                            <div class="htmleaf-content">
+                                 <div class="checkbox">
+                                     <input type="checkbox"/>
+                                     <label></label>
+                                 </div>
+                             </div>
+                            <!-- 此处显示弹框中设置的优惠内容 -->
+                            <a class="yh">店铺优惠：满199减20，满299减40，满399减60</a>
+                            <span class="tishi">*该商品不参与店内满减优惠在此关闭即可</span>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">商品上架：</span>
+                        <div class="a_list_r checked_chose">
+                            <label for="sp1" class="radio active">
+                                <div class="chose">
+                                    <input type="radio" checked name="sp" id="sp1" />
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">立即上架</span>
+                            </label>
+                            <label for="sp2" class="radio">
+                                <div class="chose">
+                                    <input type="radio" name="sp" id="sp2" />
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">暂不上架，放入仓库</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/step.js"></script>
+<script src="../js/drag-move.js"></script>
+<script>
+    $('.step-box').step({
+        stepDirection:'x',
+        showStepButton:true,
+        stepCount:3,
+        stepTitles:['基本信息','价格库存','其它信息']
+    });
+</script>
+<script>
+    $('#chutiyan .dpxz').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '选择店铺',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '选择店铺.html' //iframe的url
+        });
+    });
+    $('#chutiyan .ztd').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '新建自提点',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '已选自提点.html' //iframe的url
+        });
+    });
+    $('#chutiyan .fd').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '新建分店',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '新建分店.html' //iframe的url
+        });
+    });
+    $('#chutiyan .yh').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '优惠设置',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['550px', '500px'],
+            content: '店内优惠.html' //iframe的url
+        });
+    });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+    $(".product-lab label").each(function(index){
+        $(this).click(function(){
+            $(".product-lab label").removeClass("active");
+            $(".product-lab label").eq(index).addClass("active");
+            $(this).parent().parent().siblings('.box-content').children().eq($(this).index()).show().siblings().hide();
+        });
+        if($(this).hasClass('active')){
+            $(this).parent().parent().siblings('.box-content').children().eq($(this).index()).show().siblings().hide();
+        }
+    });
+    $(function () {
+        if($('#xg-btn > input').is(':checked')){
+            $('.xg-cont').show()
+        }else{
+            $('.xg-cont').hide()
+        }
+        $('#xg-btn').click(function () {
+            $('.xg-cont').toggle()
+        });
+
+        if($('#vip-btn > input').is(':checked')){
+            $('.vip-cont').show()
+        }else{
+            $('.vip-cont').hide()
+        }
+        $('#vip-btn').click(function () {
+            $('.vip-cont').toggle()
+        })
+    });
+
+
+    $('p span').map(function(){
+        console.log($(this).text());
+
+    });
+
+
+
+</script>
+
+
+</body>
+</html>

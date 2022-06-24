@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页配置</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/xlk.css">
+    <style>
+        .activity_set3 .a_list .a_list_r{padding: 8px 0;}
+        .select-text{min-width: 90px;}
+        .select-text .select-txt{padding: 0 20px 0 8px;}
+        .set-user{display: none}
+        .radio{color: #333;}
+        .articl-cont div{position: relative;}
+        .type-bg{position: absolute;top: 13px;left: 12px;right: 12px;width: 273px;height: 70px;border-radius: 6px 6px 0 0;}
+
+    </style>
+</head>
+<body id="chutiyan">
+
+<div style="height: 100%">
+    <div class="page-title">
+        首页配置<a class="tishi m-doub-pic">首页链接</a>
+        <!--  草稿模式提示语  -->
+        <div class="tishi-bg" style="display: flex;align-items: center;margin-left: 20px">*当前为草稿模式：最近编辑时间2021-10-20 10:00:00，草稿预览效果：
+            <div class="ylicon-btn" style="cursor: pointer">
+                <img src="../../images/1.png" alt=""><img src="../../images/2.png" alt="">
+            </div>。您也可以<a class="sync">点此拉取“正在使用的内容”进行编辑</a>
+        </div>
+        <!--  正式提示语  -->
+        <div class="tishi-bg" style="display: none;margin-left: 20px;background: #f3feff;color: #44a0fe;border: 1px solid #94d9fe;">
+            *当前为正稿模式，最近保存为“正式使用页面”的时间为2021-10-20 10:00:00，您可以修改内容保存为草稿进行预览，也可以修改后直接保存使用~
+        </div>
+    </div>
+    <div class="scpz-body">
+        <div class="scpz-body-l">
+            <img src="images/pz3.png" alt="">
+            <span id="page_title">首页</span>
+            <!--  模板一  -->
+            <div class="box-cont cont_type1" style="background: rgb(245, 245, 245);">
+                <!-- 搜索栏 -->
+                <div class="index-top search-cont1">
+                    <a href="#" class="top-icon1" style="display: none"></a>
+                    <input type="text" placeholder="请输入关键词进行搜索">
+                    <a href="#" class="top-icon2" style="display: none"></a>
+                    <a href="" class="top-bm-btn" style="display: none">我要报名</a>
+                </div>
+                <div class="zdyContent demo1_zdy_1" style="height: 80px;line-height: 80px;text-align: center;background: #ddd;">自定义区</div>
+                <!-- 课程导航 -->
+                <div class="top-nav" style="display: none">
+                    <div class="find_nav">
+                        <div class="find_nav_left">
+                            <div class="find_nav_list" id="pagenavi1">
+                                <ul>
+                                    <li class=""><a href="#">推荐</a></li>
+                                    <li><a href="#">VIP课程</a></li>
+                                    <li><a href="#">分类1</a></li>
+                                    <li class="sideline"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="fl-icon"  style="display: none"></a>
+                </div>
+                <!-- 广告图 -->
+                <div class="swiper-container index-banner" style="position: absolute;opacity: 0;z-index: -1;top: 0;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1695030419,4130963951&fm=26&gp=0.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3603358467,768121566&fm=26&gp=0.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1897743502,3048267740&fm=26&gp=0.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="zdyContent demo1_zdy_2" style="height: 80px;line-height: 80px;text-align: center;background: #ddd;">自定义区</div>
+                <!-- 功能导航 -->
+                <div class="lkkt_nav" style="display: none">
+                    <!--
+                        默认展示4个，没有类名
+                        row_5 ：一行5个的时候添加类名
+                        row_6 ：一行6个的时候添加类名
+                        每个li的宽度：100/个数
+
+                        前端页面位置也是添加对应类名
+                      -->
+                    <ul class="">
+                        <li><a href="#"><img src="images/icon1.png">金刚区1</a></li>
+                        <li><a href="#"><img src="images/icon2.png">金刚区2</a></li>
+                        <li><a href="#"><img src="images/icon3.png">金刚区3</a></li>
+                        <li><a href="#"><img src="images/icon4.png">金刚区4</a></li>
+                        <li><a href="#"><img src="images/icon5.png">金刚区5</a></li>
+                        <li><a href="#"><img src="images/icon6.png">金刚区6</a></li>
+                        <li><a href="#"><img src="images/icon7.png">金刚区7</a></li>
+                        <li><a href="#"><img src="images/icon8.png">金刚区8</a></li>
+                    </ul>
+                </div>
+                <div class="zdyContent demo1_zdy_3" style="height: 80px;line-height: 80px;text-align: center;background: #ddd;margin-bottom: 10px">自定义区</div>
+
+                <div class="articl-cont">
+                    <div class="artic-tit"><span>课程样式一</span><a href="#">更多</a></div>
+                    <div class="kcList1">
+                        <img src="images/pzkc_icon1.png" alt="">
+                    </div>
+                </div>
+                <div class="zdyContent demo1_zdy_3" style="height: 80px;line-height: 80px;text-align: center;background: #ddd;margin-bottom: 10px">自定义区</div>
+                <div class="articl-cont">
+                    <div class="artic-tit"><span>课程样式二</span><a href="#">更多</a></div>
+                    <div class="kcList2">
+                        <img src="images/pzkc_icon2.png" alt="">
+                        <img src="images/pzkc_icon2.png" alt="">
+                    </div>
+                </div>
+                <div class="articl-cont">
+                    <div class="artic-tit"><span>文章样式一</span><a href="#">更多</a></div>
+                    <div>
+                        <img src="images/pzwz_icon1.png" alt="">
+                    </div>
+                </div>
+                <div class="articl-cont">
+                    <div class="artic-tit"><span>文章样式二</span><a href="#">更多</a></div>
+                    <div>
+                        <img src="images/pzwz_icon2.png" alt="">
+                    </div>
+                </div>
+
+                <div style="background: #fff">
+                    <div class="artic-tit" style="border-bottom: none;padding-bottom: 0;"><span>专栏样式一</span><a href="#">更多</a></div>
+                    <div>
+                        <img src="images/pzzl_icon1.png" alt="">
+                    </div>
+                </div>
+                <div style="margin: 0 10px 10px;">
+                    <div class="artic-tit" style="margin: 0;border-bottom: none;"><span>专栏样式二</span><a href="#">更多</a></div>
+                    <div style="position: relative;">
+                        <img src="images/bg.jpg" alt="" class="type-bg">
+                        <img src="images/pzzl_icon2.png" alt="">
+                    </div>
+                </div>
+
+                <div>自定义内容</div>
+
+                <!-- 广告图 -->
+                <div class="swiper-container foot-banner" style="position: absolute;opacity: 0;z-index: -1;top: 0;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1695030419,4130963951&fm=26&gp=0.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3603358467,768121566&fm=26&gp=0.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1897743502,3048267740&fm=26&gp=0.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="zdyContent demo1_zdy_4" style="height: 80px;line-height: 80px;text-align: center;background: #ddd;margin-bottom: 10px">自定义区</div>
+
+                <p style="text-align: center;color: #999;margin: 10px 0;">底部版权</p>
+            </div>
+            <div id="footBar"><img src="images/footBra3.png" alt=""></div>
+        </div>
+        <div class="scpz-body-r">
+            <!--    -->
+            <div class="activity_set activity_set3 w-4" style="padding: 0;">
+                <div class="b-line">
+                    <div class="dub-list">
+                        <div class="a_list">
+                            <span class="a_list_l">页面命名:</span>
+                            <!--  输入内容后，左侧示例图对应位置实时响应展示  -->
+                            <div class="a_list_r"><input type="text" value="首页"></div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">分享图标:</span>
+                            <div class="a_list_r">
+                                <ul class="FraUpload_imglist layer-photos-demo">
+                                    <li class="img_item" style="display: none">
+                                        <img src="">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn"></li>
+                                </ul>
+                                <p class="tishi mgL-0">*建议像素200*200，比例1:1，大小不超过100KB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="a_list">
+                        <span class="a_list_l">分享简介:</span>
+                        <div class="a_list_r"><input type="text" style="width: 60%" value="精彩好课等你来"></div>
+                    </div>
+                </div>
+            </div>
+            <!--  默认菜单编辑区域  -->
+            <div class="setBox normal-form">
+                <div class="set_list">
+                    <span class="setList_num">1</span>
+                    <div class="setList_cont">
+                        <div class="item1 checked_chose">
+                            <span class="txtL">搜索栏:</span>
+                            <label for="cd1" class="radio">
+                                <div class="chose">
+                                    <input type="radio" checked="" name="cd" id="cd1">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">默认</span>
+                            </label>
+                            <label for="cd2" class="radio">
+                                <div class="chose">
+                                    <input type="radio" name="cd" id="cd2">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">自定义</span>
+                            </label>
+                            <label for="cd3" class="radio">
+                                <div class="chose">
+                                    <input type="radio" name="cd" id="cd3">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">不展示</span>
+                            </label>
+                        </div>
+
+                        <div class="item1 search-cont1">
+                            <span class="txtL">客服信息:</span>
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="cont1-togg2" class="toggle-button" name="switch">
+                                    <label for="cont1-togg2" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">展示</span>
+                                        <span class="text off">不展示</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item1 search-cont1">
+                            <span class="txtL">快捷导航:</span>
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="cont1-togg3" class="toggle-button" name="switch">
+                                    <label for="cont1-togg3" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">展示</span>
+                                        <span class="text off">不展示</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div style="display: none;flex: 1;margin-left: 8px;">
+                                <!--  输入内容后，左侧示例图对应位置实时响应展示  -->
+                                <input type="text" placeholder="导航名，最多6个字符" value="我要报名" style="width: 150px;" maxlength="6">
+                                <input type="text" placeholder="跳转链接" style="width: 50%" value="https://cswx.lkmsxy.com/kt/kcdt/kecheng_ap.html?dpid=27&tjr=504443&dkly=1">
+                            </div>
+                        </div>
+                        <div class="item1 search-cont2" style="display: none">
+                            <span class="txtL">自定义区:</span>
+                            <button class="zdy-btn zdy-btn1" style="display: block;margin-left: 0;">自定义内容</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="set_list">
+                    <span class="setList_num">2</span>
+                    <div class="setList_cont">
+                        <div class="dub-list">
+                            <div class="item1">
+                                <span class="txtL">课程导航:</span>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont1-togg4"  class="toggle-button" name="switch">
+                                        <label for="cont1-togg4" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">展示</span>
+                                            <span class="text off">不展示</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <span class="set-user kcBar">已设置3个</span>
+                            </div>
+                            <div class="item1" style="display: none">
+                                <span class="txtL">课程分类:</span>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont1-togg5" class="toggle-button" name="switch">
+                                        <label for="cont1-togg5" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">展示</span>
+                                            <span class="text off">不展示</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dub-list">
+                            <div class="item1">
+                                <span class="txtL">顶部广告:</span>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont2-togg1" class="toggle-button" name="switch">
+                                        <label for="cont2-togg1" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">展示</span>
+                                            <span class="text off">不展示</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <span class="set-user adBanner">已设置3个</span>
+                            </div>
+                            <div class="item1">
+                                <span class="txtL">自定义区:</span>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont2-togg2" class="toggle-button" name="switch">
+                                        <label for="cont2-togg2" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">展示</span>
+                                            <span class="text off">不展示</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="zdy-btn zdy-btn2">自定义内容</button>
+                            </div>
+                        </div>
+                        <div class="dub-list">
+                            <div class="item1">
+                                <span class="txtL">功能导航:</span>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont2-togg3" class="toggle-button" name="switch">
+                                        <label for="cont2-togg3" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">展示</span>
+                                            <span class="text off">不展示</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <span class="set-user blockBar">已设置8个</span>
+                            </div>
+                            <div class="item1">
+                                <span class="txtL">自定义区:</span>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont2-togg4" class="toggle-button" name="switch">
+                                        <label for="cont2-togg4" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">展示</span>
+                                            <span class="text off">不展示</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="zdy-btn zdy-btn3">自定义内容</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fl-settins">
+                <div class="settins-item">
+                    <div class="item-list">
+                        <span class="del">删除</span>
+                        <div class="list-cont">
+                            <span class="txtL">展示内容:</span>
+                            <div class="select-text type-chose">
+                                <span class="select-txt">系列课</span>
+                                <ul style="display: none;">
+                                    <li>系列课</li>
+                                    <li>干货文章</li>
+                                    <li>干货专栏</li>
+                                    <li>自定义</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list-cont msgTip">
+                            <span class="txtL">展示样式:</span>
+                            <div class="select-text style-chose-kt">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                            <div class="select-text style-chose-wz" style="display: none">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                            <div class="select-text style-chose-zl" style="display: none">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="prev disab">上移一层</span>
+                        <div class="list-cont">
+                            <span class="txtL">标题名称:</span>
+                            <div class="list-text"><input type="text" value="热门课程" class="fl-chose"></div>
+                        </div>
+                        <div class="list-cont bgTip">
+                            <span class="txtL">背景图:</span>
+                            <div class="file-cont file-cont2">
+                                <!--  存放已上传图片，默认隐藏  -->
+                                <div class="file-pics"></div>
+                                <!--  上传图片按钮  -->
+                                <div class="file-btn"></div>
+                            </div>
+                            <p class="tishi mgL-0">*建议像素690*172，比例4:1，大小不超过200KB</p>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next">下移一层</span>
+                        <div class="list-cont msgTip">
+                            <span class="txtL">展示方法:</span>
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="edit-togg1" class="toggle-button" name="switch">
+                                    <label for="edit-togg1" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">指定</span>
+                                        <span class="text off">默认</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="edit1" style="display: flex;align-items: center;">
+                                <a class="xlk_chose">已选择10个</a>，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="edit2" style="display: flex;align-items: center;">
+                                全部数据里，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                                展示前<input type="number" class="s_width center" value="4" style="margin: 0 8px">个
+                            </div>
+                        </div>
+                        <div class="list-cont zdyTip" style="display: none">
+                            <span class="txtL">自定义内容:</span>
+                            <span class="fl-btn zdyCont-btn1">代码定义</span>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next"></span>
+                        <div class="list-cont">
+                            <span class="txtL">更多引导:</span>
+                            <input type="text" style="width: 40%;" placeholder="选填，填引导去的页面链接">
+                        </div>
+                    </div>
+                </div>
+                <div class="settins-item">
+                    <div class="item-list">
+                        <span class="del">删除</span>
+                        <div class="list-cont">
+                            <span class="txtL">展示内容:</span>
+                            <div class="select-text type-chose">
+                                <span class="select-txt">干货文章</span>
+                                <ul style="display: none;">
+                                    <li>系列课</li>
+                                    <li>干货文章</li>
+                                    <li>干货专栏</li>
+                                    <li>自定义</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list-cont msgTip">
+                            <span class="txtL">展示样式:</span>
+                            <div class="select-text style-chose-kt" style="display: none">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                            <div class="select-text style-chose-wz">
+                                <span class="select-txt">样式二</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                            <div class="select-text style-chose-zl" style="display: none">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="prev">上移一层</span>
+                        <div class="list-cont">
+                            <span class="txtL">标题名称:</span>
+                            <div class="list-text"><input type="text" value="精品文章" class="fl-chose"></div>
+                        </div>
+                        <div class="list-cont bgTip">
+                            <span class="txtL">背景图:</span>
+                            <div class="file-cont file-cont2">
+                                <!--  存放已上传图片，默认隐藏  -->
+                                <div class="file-pics"></div>
+                                <!--  上传图片按钮  -->
+                                <div class="file-btn"></div>
+                            </div>
+                            <p class="tishi mgL-0">*建议像素690*172，比例4:1，大小不超过200KB</p>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next">下移一层</span>
+                        <div class="list-cont msgTip">
+                            <span class="txtL">展示方法:</span>
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="edit-togg2" class="toggle-button" name="switch">
+                                    <label for="edit-togg2" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">指定</span>
+                                        <span class="text off">默认</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="edit1" style="display: flex;align-items: center;">
+                                <a class="wz_chose">已选择10个</a>，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="edit2" style="display: flex;align-items: center;">
+                                全部数据里，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                                展示前<input type="number" class="s_width center" value="6" style="margin: 0 8px">个
+                            </div>
+                        </div>
+                        <div class="list-cont zdyTip" style="display: none">
+                            <span class="txtL">自定义内容:</span>
+                            <span class="fl-btn zdyCont-btn1">代码定义</span>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next"></span>
+                        <div class="list-cont">
+                            <span class="txtL">更多引导:</span>
+                            <input type="text" style="width: 40%;" placeholder="选填，填引导去的页面链接">
+                        </div>
+                    </div>
+                </div>
+                <div class="settins-item">
+                    <div class="item-list">
+                        <span class="del">删除</span>
+                        <div class="list-cont">
+                            <span class="txtL">展示内容:</span>
+                            <div class="select-text type-chose">
+                                <span class="select-txt">干货专栏</span>
+                                <ul style="display: none;">
+                                    <li>系列课</li>
+                                    <li>干货文章</li>
+                                    <li>干货专栏</li>
+                                    <li>自定义</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list-cont msgTip">
+                            <span class="txtL">展示样式:</span>
+                            <div class="select-text style-chose-kt" style="display: none">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                            <div class="select-text style-chose-wz" style="display: none">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                            <div class="select-text style-chose-zl">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="prev">上移一层</span>
+                        <div class="list-cont">
+                            <span class="txtL">标题名称:</span>
+                            <div class="list-text"><input type="text" value="干货专栏" class="fl-chose"></div>
+                        </div>
+                        <div class="list-cont bgTip">
+                            <span class="txtL">背景图:</span>
+                            <ul class="FraUpload_imglist layer-photos-demo">
+                                <li class="img_item">
+                                    <img src="images/bg.jpg" layer-src="images/bg.jpg">
+                                    <span class="icon-delete img_del"></span>
+                                </li>
+                                <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                <li class="file-btn" style="display: none"></li>
+                            </ul>
+                            <p class="tishi mgL-0">*建议像素690*172，比例4:1，大小不超过200KB</p>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next">下移一层</span>
+                        <div class="list-cont msgTip">
+                            <span class="txtL">展示方法:</span>
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="edit-togg3" class="toggle-button" name="switch">
+                                    <label for="edit-togg3" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">指定</span>
+                                        <span class="text off">默认</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="edit1" style="display: flex;align-items: center;">
+                                <a class="zl_chose">已选择10个</a>，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="edit2" style="display: flex;align-items: center;">
+                                全部数据里，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                                展示前<input type="number" class="s_width center" value="3" style="margin: 0 8px">个
+                            </div>
+                        </div>
+                        <div class="list-cont zdyTip" style="display: none">
+                            <span class="txtL">自定义内容:</span>
+                            <span class="fl-btn zdyCont-btn1">代码定义</span>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next"></span>
+                        <div class="list-cont">
+                            <span class="txtL">更多引导:</span>
+                            <input type="text" style="width: 40%;" placeholder="选填，填引导去的页面链接">
+                        </div>
+                    </div>
+                </div>
+                <div class="settins-item">
+                    <div class="item-list">
+                        <span class="del">删除</span>
+                        <div class="list-cont">
+                            <span class="txtL">展示内容:</span>
+                            <div class="slide-select">
+                                <select name="" id="">
+                                    <option value="" >系列课</option>
+                                    <option value="">干货文章</option>
+                                    <option value="">干货专栏</option>
+                                    <option value="" selected>自定义</option>
+                                </select>
+                                <img src="../../images/bottom-icon.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="list-cont msgTip" style="display: none">
+                            <span class="txtL">展示样式:</span>
+                            <div class="select-text style-chose-kt">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                            <div class="select-text style-chose-wz">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                            <div class="select-text style-chose-zl">
+                                <span class="select-txt">样式一</span>
+                                <ul style="display: none;">
+                                    <li>样式一</li>
+                                    <li>样式二</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="prev">上移一层</span>
+                        <div class="list-cont">
+                            <span class="txtL">标题名称:</span>
+                            <div class="list-text"><input type="text" value="自定义" class="fl-chose"></div>
+                        </div>
+                        <div class="list-cont bgTip">
+                            <span class="txtL">背景图:</span>
+                            <ul class="FraUpload_imglist">
+                                <li class="img_item">
+                                    <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                    <span class="icon-delete img_del"></span>
+                                </li>
+                                <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                <!--<li class="file-btn"></li>-->
+                            </ul>
+                            <p class="tishi mgL-0">*建议像素690*172，比例4:1，大小不超过200KB</p>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next disab">下移一层</span>
+                        <div class="list-cont msgTip" style="display: none">
+                            <span class="txtL">展示方法:</span>
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="edit-togg4" class="toggle-button" name="switch">
+                                    <label for="edit-togg4" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">指定</span>
+                                        <span class="text off">默认</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="edit1" style="display: flex;align-items: center;">
+                                <a class="xlk_chose">已选择10个</a>，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="edit2" style="display: flex;align-items: center;">
+                                全部数据里，排序按
+                                <div class="select-text" style="margin: 0 8px">
+                                    <span class="select-txt">优先级</span>
+                                    <ul style="display: none;">
+                                        <li>优先级</li>
+                                        <li>销量</li>
+                                        <li>上新</li>
+                                    </ul>
+                                </div>
+                                展示前<input type="number" class="s_width center"  style="margin: 0 8px">个
+                            </div>
+                        </div>
+                        <div class="list-cont zdyTip" style="display: block">
+                            <span class="txtL">自定义内容:</span>
+                            <span class="fl-btn zdyCont-btn1">代码定义</span>
+                        </div>
+                    </div>
+                    <div class="item-list">
+                        <span class="next"></span>
+                        <div class="list-cont">
+                            <span class="txtL">更多引导:</span>
+                            <input type="text" style="width: 40%;" placeholder="选填，填引导去的页面链接">
+                        </div>
+                    </div>
+                </div>
+                <div class="set_save" style="margin: 20px 0 10px;display: flex;justify-content: space-between;align-items: center;">
+                    <span class="scpz-save-btn">添加</span>
+                </div>
+            </div>
+
+            <div class="setBox normal-form">
+                <div class="set_list">
+                    <span class="setList_num">4</span>
+                    <div class="setList_cont">
+                        <div class="dub-list">
+                            <div class="item1">
+                                <span class="txtL">底部广告:</span>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont3-togg1" class="toggle-button" name="switch">
+                                        <label for="cont3-togg1" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">展示</span>
+                                            <span class="text off">不展示</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <span class="set-user adBanner">已设置3个</span>
+                            </div>
+                            <div class="item1">
+                                <span class="txtL">自定义区:</span>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="cont3-togg2" class="toggle-button" name="switch">
+                                        <label for="cont3-togg2" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">展示</span>
+                                            <span class="text off">不展示</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="zdy-btn zdy-btn2-3">自定义内容</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fl-settins">
+                <div class="set_save" style="margin: 10px 0;display: flex;align-items: center;">
+                    <span class="scpz-save-btn2">保存并使用</span>
+                    <!--  还原默认设置后：左侧及右侧设置项全都初始化；
+                                          顶部分享设置不用还原
+                      -->
+                    <span class="scpz-save-btn3">恢复默认配置</span>
+                    <span class="scpz-save-btn yl-btn" style="background: #1dccd8;">保存草稿并预览</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!--  预览二维码链接  -->
+<div id="pvw" class="model pvw" style="display: none;">
+    <div class="mark"></div>
+    <div class="content">
+        <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+        <p class="cont-msg"><input type="text" value="http://cshtml.lkmsxy.com"><span class="copy-btn">复制</span></p>
+        <p class="tishi left" style="margin-top: 10px;">*已为你生成预览效果，微信扫码或复制链接打开查看，确认无误后记得点击“保存并使用”</p>
+    </div>
+</div>
+
+
+<!--
+    msgTip: 类型，选择系列课、文章、专栏 后显示元素添加此类名
+    zdyTip: 类型，选择自定义后显示元素添加此类名
+    bgTip:  样式，文章样式三、专栏样式二选择后显示元素添加此类名
+-->
+
+<!--  设置项  -->
+<div class="activity_set activity_set2 w-120" id="blockBar-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">展示个数:</div>
+            <div class="a_list_r">
+                <input type="number" class="s_width center" value="4" style="margin-right: 8px;">个
+                <span class="tishi">* 一行展示几个，建议4-6个</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="padding-top: 25px">设置详情:</span>
+            <div class="a_list_r">
+                <div class="normal-table">
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 50px">序号</th>
+                            <th style="width: 80px">图片</th>
+                            <th style="width: 100px">名称</th>
+                            <th style="width: 200px">链接</th>
+                            <th style="width: 200px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="line-tr">1</td>
+                            <td class="line-tr">
+                                <ul class="FraUpload_imglist">
+                                    <li class="img_item">
+                                        <img src="images/icon1.png">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn" style="display: none"></li>
+                                </ul>
+                            </td>
+                            <td class="line-tr"><input type="text" value="金刚区1"></td>
+                            <td class="line-tr"><input type="text"></td>
+                            <td>
+                                <button class="del">删除</button>
+                                <button class="disabled">上移</button>
+                                <button>下移</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">2</td>
+                            <td class="line-tr">
+                                <ul class="FraUpload_imglist">
+                                    <li class="img_item">
+                                        <img src="images/icon2.png">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn" style="display: none"></li>
+                                </ul>
+                            </td>
+                            <td class="line-tr"><input type="text" value="金刚区2"></td>
+                            <td class="line-tr"><input type="text"></td>
+                            <td>
+                                <button class="del">删除</button>
+                                <button>上移</button>
+                                <button>下移</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">3</td>
+                            <td class="line-tr">
+                                <ul class="FraUpload_imglist">
+                                    <li class="img_item">
+                                        <img src="images/icon3.png">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn" style="display: none"></li>
+                                </ul>
+                            </td>
+                            <td class="line-tr"><input type="text" value="金刚区3"></td>
+                            <td class="line-tr"><input type="text"></td>
+                            <td>
+                                <button class="del">删除</button>
+                                <button>上移</button>
+                                <button>下移</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">4</td>
+                            <td class="line-tr">
+                                <ul class="FraUpload_imglist">
+                                    <li class="img_item">
+                                        <img src="images/icon4.png">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn" style="display: none"></li>
+                                </ul>
+                            </td>
+                            <td class="line-tr"><input type="text" value="金刚区4"></td>
+                            <td class="line-tr"><input type="text"></td>
+                            <td>
+                                <button class="del">删除</button>
+                                <button>上移</button>
+                                <button>下移</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">5</td>
+                            <td class="line-tr">
+                                <ul class="FraUpload_imglist">
+                                    <li class="img_item">
+                                        <img src="images/icon5.png">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn" style="display: none"></li>
+                                </ul>
+                            </td>
+                            <td class="line-tr"><input type="text" value="金刚区5"></td>
+                            <td class="line-tr"><input type="text"></td>
+                            <td>
+                                <button class="del">删除</button>
+                                <button>上移</button>
+                                <button>下移</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">6</td>
+                            <td class="line-tr">
+                                <ul class="FraUpload_imglist">
+                                    <li class="img_item">
+                                        <img src="images/icon6.png">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn" style="display: none"></li>
+                                </ul>
+                            </td>
+                            <td class="line-tr"><input type="text" value="金刚区6"></td>
+                            <td class="line-tr"><input type="text"></td>
+                            <td>
+                                <button class="del">删除</button>
+                                <button>上移</button>
+                                <button>下移</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">7</td>
+                            <td class="line-tr">
+                                <ul class="FraUpload_imglist">
+                                    <li class="img_item">
+                                        <img src="images/icon7.png">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn" style="display: none"></li>
+                                </ul>
+                            </td>
+                            <td class="line-tr"><input type="text" value="金刚区7"></td>
+                            <td class="line-tr"><input type="text"></td>
+                            <td>
+                                <button class="del">删除</button>
+                                <button>上移</button>
+                                <button>下移</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">8</td>
+                            <td class="line-tr">
+                                <ul class="FraUpload_imglist">
+                                    <li class="img_item">
+                                        <img src="images/icon8.png">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn" style="display: none"></li>
+                                </ul>
+                            </td>
+                            <td class="line-tr"><input type="text" value="金刚区8"></td>
+                            <td class="line-tr"><input type="text"></td>
+                            <td>
+                                <button class="del">删除</button>
+                                <button>上移</button>
+                                <button>下移</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">9</td>
+                            <td class="line-tr">
+                                <ul class="FraUpload_imglist">
+                                    <li class="img_item" style="display: none">
+                                        <img src="images/icon1.png">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn"></li>
+                                </ul>
+                            </td>
+                            <td class="line-tr"><input type="text" value=""></td>
+                            <td class="line-tr"><input type="text"></td>
+                            <td>
+                                <button class="del">删除</button>
+                                <button>上移</button>
+                                <button class="disabled">下移</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr" colspan="4" style="text-align: left" title="">
+                                <span class="tishi mgL-0">*建议像素宽高为 100px*100px 或比例 1：1 ，JPG、PNG格式，图片小于50Kb</span>
+                            </td>
+                            <td title="">
+                                <button class="on add_btn">添加</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+<!--  自定义区  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure1" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">自定义内容:</div>
+            <div class="a_list_r">
+                <!--  此处放富文本编辑器  -->
+                <textarea placeholder="自定义区" style="width: 100%;height: 66vh;padding: 10px;resize: none">顶部搜索自定义 此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+<div class="activity_set activity_set2 w-120" id="cont-sure2" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">自定义内容:</div>
+            <div class="a_list_r">
+                <!--  此处放富文本编辑器  -->
+                <textarea placeholder="自定义区" style="width: 100%;height: 66vh;padding: 10px;resize: none">自定义区1 此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+<div class="activity_set activity_set2 w-120" id="cont-sure3" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">自定义内容:</div>
+            <div class="a_list_r">
+                <!--  此处放富文本编辑器  -->
+                <textarea placeholder="自定义区" style="width: 100%;height: 66vh;padding: 10px;resize: none">自定义区2 此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+<!--  自定义内容  -->
+<div class="activity_set activity_set2 w-120" id="contTable-sure1" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">自定义内容:</div>
+            <div class="a_list_r">
+                <!--  此处放富文本编辑器  -->
+                <textarea placeholder="自定义区" style="width: 100%;height: 66vh;padding: 10px;resize: none">自定义内容 此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/touchSwiper.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('.m-doub-pic').on('click',function (e) {
+        e.stopPropagation();
+        console.log(e.pageX + '--' + e.pageY);
+        var html="";
+        html+=`<div class="table-eq">
+                <div class="show-pic">
+                    <em></em>
+                    <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    <div>
+                        <input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx"><span>复制</span>
+                        <p>*微信扫一扫，或复制链接打开</p>
+                    </div>
+                </div>
+            </div>`;
+        $('.table-eq').remove();
+        $('body').append(html);
+        $(".table-eq").css({
+            "left": e.pageX-150,
+            "top": e.pageY+20,
+        });
+        $('.show-pic').click(function (e) {
+            e.stopPropagation();
+            $(this).show();
+        });
+    });
+    $(function(){
+        var mySwiper = new Swiper('.index-banner',{
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable :true,
+            },
+        });
+        var mySwiper = new Swiper('.foot-banner',{
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable :true,
+            },
+        });
+    });
+    $(function () {
+        $('.bgTip').hide();
+        // 展示方式开关
+        $('.edit1').hide();
+        for(var i=1;i<=$('.settins-item').length;i++){
+            var id = '#edit-togg'+i;
+            $(id).each(function () {
+                $(this).click(function () {
+                    let par = $(this).parents('.button-label-m');
+                    if($(this).is(':checked')){
+                        par.siblings('.edit1').show();
+                        par.siblings('.edit2').hide()
+                    }else{
+                        par.siblings('.edit1').hide();
+                        par.siblings('.edit2').show()
+                    }
+                });
+            })
+        }
+
+        // 自定义开关
+        $('#cont2-togg2').click(function () {
+            $('.zdy-btn2,.demo1_zdy_2').toggle();
+        });
+        $('#cont2-togg4').click(function () {
+            $('.zdy-btn3,.demo1_zdy_3').toggle();
+        });
+        $('#cont3-togg2').click(function () {
+            $('.zdy-btn2-3,.demo1_zdy_4').toggle();
+        });
+        // 自定义按钮
+        $('#chutiyan .zdy-btn1').on('click', function(){
+            layer.open({
+                type: 1,
+                title: '自定义内容',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['90%', '90%'],
+                skin: 'account-box',
+                content: $("#cont-sure1")
+            });
+        });
+        $('#chutiyan .zdy-btn2').on('click', function(){
+            layer.open({
+                type: 1,
+                title: '自定义内容',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['90%', '90%'],
+                skin: 'account-box',
+                content: $("#cont-sure2")
+            });
+        });
+        $('#chutiyan .zdy-btn3').on('click', function(){
+            layer.open({
+                type: 1,
+                title: '自定义内容',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['90%', '90%'],
+                skin: 'account-box',
+                content: $("#cont-sure3")
+            });
+        });
+        // 各自定义编辑器弹框保存后左侧对应位置内容同步处理事件
+        $('#cont-sure1').find('.btn-sure').on('click',function () {
+            let html =$(this).parents('.activity_set').find('textarea').html();
+            $('.demo1_zdy_1').html(html);
+        });
+        $('#cont-sure2').find('.btn-sure').on('click',function () {
+            let html =$(this).parents('.activity_set').find('textarea').html();
+            $('.demo1_zdy_2').html(html);
+        });
+        $('#cont-sure3').find('.btn-sure').on('click',function () {
+            let html =$(this).parents('.activity_set').find('textarea').html();
+            $('.demo1_zdy_3').html(html);
+        });
+
+        // 按钮设置
+        $('.toggle-button').click(function () {
+            $(this).parents('.button-label-m').siblings('.set-user').toggle();
+        });
+        $('.kcBar').click(function () {
+            layer.open({
+                type: 2,
+                title: '课程导航',
+                shadeClose: true,
+                shade: 0.3,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['95%', '95%'],
+                content: '课程导航.html' //iframe的url
+            });
+        });
+        $('.adBanner').click(function () {
+            layer.open({
+                type: 2,
+                title: '首页焦点图',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['95%', '95%'],
+                content: '动态广告.html'
+            });
+        });
+        $('.blockBar').click(function () {
+            layer.open({
+                type: 1,
+                title: '自定义功能导航',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['900px', '85%'],
+                skin: 'account-box',
+                content: $("#blockBar-sure")
+            });
+        });
+
+        // 搜索栏
+        $('.item1 label').click(function () {
+            var txt=$(this).find('.msg_set_txt').text();
+            if($(this).find('input').is(':checked')){
+                switch (txt) {
+                    case '默认':
+                        $('.search-cont1').show();
+                        $('.search-cont2,.demo1_zdy_1').hide();
+                        break;
+                    case '自定义':
+                        $('.search-cont1').hide();
+                        $('.search-cont2,.demo1_zdy_1').show();
+                        break;
+                    case '不展示':
+                        $('.search-cont1').hide();
+                        $('.search-cont2,.demo1_zdy_1').hide();
+                        break;
+                }
+            }
+        });
+        // 客服信息
+        $('#cont1-togg2').click(function () {
+            $('.top-icon1').toggle();
+        });
+        // 快捷导航
+        $('#cont1-togg3').click(function () {
+            $(this).parents('.button-label-m').siblings('div').toggle();
+            $('.top-bm-btn').toggle();
+        });
+        // 功能导航
+        $('#cont1-togg4').click(function () {
+            $('.top-nav').toggle();
+            $(this).parents('.item1').siblings().toggle();
+        });
+        $('#cont1-togg5').click(function () {
+            $('.fl-icon').toggle();
+        });
+        // 广告图
+        $('#cont2-togg1').click(function () {
+            if($(this).is(':checked')){
+                $('.index-banner').css({
+                    'position':'relative',
+                    'opacity':'1',
+                    'z-index':'1',
+                    'top':'unset'
+                })
+            }else{
+                $('.index-banner').css({
+                    'position':'absolute',
+                    'opacity':'0',
+                    'z-index':'-1',
+                    'top':'0'
+                })
+            }
+        });
+        $('#cont3-togg1').click(function () {
+            if($(this).is(':checked')){
+                $('.foot-banner').css({
+                    'position':'relative',
+                    'opacity':'1',
+                    'z-index':'1',
+                    'top':'unset'
+                })
+            }else{
+                $('.foot-banner').css({
+                    'position':'absolute',
+                    'opacity':'0',
+                    'z-index':'-1',
+                    'top':'0'
+                })
+            }
+        });
+
+        // 干货导航
+        $('#cont2-togg3').click(function () {
+            $('.lkkt_nav').toggle();
+        });
+
+        // 文章、课程、专栏选择
+        $('#chutiyan .xlk_chose').on('click', function(){
+            //iframe层
+            layer.open({
+                type: 2,
+                title: '系列课',
+                shadeClose: true,
+                shade: 0.3,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['95%', '95%'],
+                content: '/my/揽客魔系统/佣金/统一名额分佣/系列课选择.html#tab2' //iframe的url
+            });
+        });
+        $('#chutiyan .wz_chose').on('click', function(){
+            //iframe层
+            layer.open({
+                type: 2,
+                title: '干货文章',
+                shadeClose: true,
+                shade: 0.3,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['95%', '95%'],
+                content: '/my/揽客魔系统/课堂/干货文章/干货专栏/文章数.html#tab2' //iframe的url
+            });
+        });
+        $('#chutiyan .zl_chose').on('click', function(){
+            //iframe层
+            layer.open({
+                type: 2,
+                title: '干货专栏',
+                shadeClose: true,
+                shade: 0.3,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['95%', '95%'],
+                content: '干货专栏数.html#tab2' //iframe的url
+            });
+        });
+
+        // 自定义内容
+        $('#chutiyan .zdyCont-btn1').on('click', function(){
+            layer.open({
+                type: 1,
+                title: '自定义内容',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['90%', '90%'],
+                skin: 'account-box',
+                content: $("#contTable-sure1")
+            });
+        });
+
+        // 类型选择
+        $('.select-text ul li').on('click',function () {
+            var txt = $(this).text(),
+                clas = $(this).parents('.item-list').siblings(),
+                parent = $(this).parents('.item-list'),
+                type = $(this).parents('.list-cont').siblings();
+            switch (txt) {
+                case '系列课':
+                    parent.find('.msgTip').show();
+                    clas.find('.msgTip').show();
+                    clas.find('.bgTip,.zdyTip').hide();
+                    type.find('.style-chose-wz,.style-chose-zl').hide();
+                    type.find('.style-chose-kt').show();
+                    break;
+                case '干货文章':
+                    parent.find('.msgTip').show();
+                    clas.find('.msgTip').show();
+                    clas.find('.bgTip,.zdyTip').hide();
+                    type.find('.style-chose-kt,.style-chose-zl').hide();
+                    type.find('.style-chose-wz').show();
+                    break;
+                case '干货专栏':
+                    parent.find('.msgTip').show();
+                    clas.find('.msgTip').show();
+                    clas.find('.bgTip,.zdyTip').hide();
+                    type.find('.style-chose-wz,.style-chose-kt').hide();
+                    type.find('.style-chose-zl').show();
+                    break;
+                case '自定义':
+                    clas.find('.msgTip,.bgTip').hide();
+                    parent.find('.msgTip').hide();
+                    clas.find('.zdyTip').show();
+                    break;
+            }
+        });
+
+        // 样式选择
+        $('.style-chose-zl ul li').on('click',function () {
+            var txt = $(this).text(),
+                clas = $(this).parents('.item-list').siblings();
+            if(txt === '样式二'){
+                clas.find('.bgTip').show();
+            }else{
+                clas.find('.bgTip').hide();
+            }
+        });
+
+
+        layer.photos({
+            photos: '.layer-photos-demo'
+            ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+        });
+        // 按钮提示弹框
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .scpz-save-btn2').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定使用该样式？<p style="color: #999">确定后，将保存草稿并直接同步正在使用的“首页呈现”</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    title:'提示',
+                    btn: ['取消','确定'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('使用成功', {time: 1000});
+                });
+            });
+        });
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .scpz-save-btn3').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定还原到默认设置？<p style="color: #999">确定后，以上配置内容将全部重置到初始状态</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    title:'提示',
+                    btn: ['取消','确定'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('操作成功', {time: 1000});
+                });
+            });
+        });
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .del').on('click', function(){
+                layer.config({
+                    extend: 'myskin/failure.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定删除该项设置？',{
+                    skin: 'failureskin ',    //类名
+                    icon:2,
+                    title:'提示',
+                    btn: ['取消','确定'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('删除成功', {time: 1000});
+                });
+            });
+        });
+
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .yl-btn').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定保存到草稿？<p style="color: #999">保存后，可预览草稿效果，不影响正在使用的“首页呈现”</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    title:'提示',
+                    btn: ['取消','确定并预览'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.open({
+                        type: 1,
+                        title: false,
+                        shadeClose: true,
+                        shade: 0.3,
+                        closeBtn: 0,
+                        area: ['100%', '100%'],
+                        skin: 'pvw',
+                        content: $("#pvw")
+                    });
+                    //layer.msg('操作成功', {time: 1000});
+                });
+            });
+        });
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .sync').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定覆盖“当前草稿”，拉取“在用页面”来编辑？<p style="color: #999">当前草稿被覆盖后不可恢复</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    title:'提示',
+                    btn: ['取消','确定并同步'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('操作成功', {time: 1000});
+                });
+            });
+        });
+        $('.ylicon-btn').click(function () {
+            layer.open({
+                type: 1,
+                title: false,
+                shadeClose: true,
+                shade: 0.3,
+                closeBtn: 0,
+                area: ['100%', '100%'],
+                skin: 'pvw',
+                content: $("#pvw")
+            });
+        })
+    })
+</script>
+
+
+</body>
+</html>

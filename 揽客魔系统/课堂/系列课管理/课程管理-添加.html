@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程管理-添加</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+    <div class="activity_set activity_set2">
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l r-title">课程信息</span>
+                <div class="a_list_r"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">系列课:</span>
+                <div class="a_list_r"><input type="text" placeholder="选择系列课" class="xlk-chose w-620"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">课程名称:</span>
+                <div class="a_list_r"><input type="text" class="w-620"></div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">课程分类:</span>
+                    <div class="a_list_r">
+                        <div class="select-text">
+                            <span class="select-txt"></span>
+                            <ul>
+                                <li>装修</li>
+                                <li>微商</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">讲师:</span>
+                    <div class="a_list_r"><input type="text" class="m_width"></div>
+                </div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">排序码:</span>
+                    <div class="a_list_r"><input type="text" class="s_width center"><span class="tishi">*数字越大，排序越前</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">课程标签:</span>
+                    <div class="a_list_r"><input type="text"></div>
+                </div>
+            </div>
+
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">课程状态:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="u-togg1" class="toggle-button" name="switch">
+                                <label for="u-togg1" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">开启</span>
+                                    <span class="text off">关闭</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">允许转赠:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper yxtogg">
+                                <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                                <label for="u-togg2" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">允许</span>
+                                    <span class="text off">不允许</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">免费:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="u-togg3" class="toggle-button" name="switch">
+                                <label for="u-togg3" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">免费</span>
+                                    <span class="text off">不免费</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list yx-cont" style="display: none">
+                    <span class="a_list_l">单人最大转赠数量:</span>
+                    <div class="a_list_r"><input type="text" class="s_width center"></div>
+                </div>
+            </div>
+
+            <div class="a_list">
+                <span class="a_list_l">课程主图:</span>
+                <div class="a_list_r">
+                    <div class="file-cont file-cont2">
+                        <!--  存放已上传图片，默认隐藏  -->
+                        <div class="file-pics"></div>
+                        <!--  上传图片按钮  -->
+                        <div class="file-btn"></div>
+                    </div>
+                    <p class="tishi">*建议尺寸750px*500px；大小不超过50KB</p>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">虚拟观看次数:</span>
+                <div class="a_list_r"><input type="text" class="s_width center" style="margin-right: 16px">次</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">课程时长:</span>
+                <div class="a_list_r"><input type="text" class="s_width center" style="margin-right: 16px">分<input type="text" class="s_width center" style="margin: 0 16px">秒</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">课程内容类型:</span>
+                <div class="a_list_r chose_item">
+                    <!-- 对应下面4个信息内容，点击某一个按钮就显示对应内容 -->
+                    <label for="vip1" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">文稿信息</span>
+                    </label>
+                    <label for="vip2" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">音频信息</span>
+                    </label>
+                    <label for="vip3" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip3" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">视频信息</span>
+                    </label>
+                    <label for="vip4" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip4" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">直播间信息</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- 一下4个信息内容 默认 隐藏，当点击上方的对应按钮后就显示 -->
+        <div class="b-line kcType1" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l">文稿内容:</span>
+                <div class="a_list_r">
+                    <!-- 此处放编辑器 -->
+                    <textarea style="width: 620px;height: 400px;padding: 10px"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="b-line kcType2" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l">音频内容:</span>
+                <div class="a_list_r"><input type="text" class="w-620" placeholder="请先在第三方网站上传音频内容，再填写网址"></div>
+            </div>
+        </div>
+        <div class="b-line kcType3" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l">视频内容:</span>
+                <div class="a_list_r"><input type="text" class="w-620" placeholder="请先在第三方网站上传视频内容，再填写网址"></div>
+            </div>
+        </div>
+        <div class="b-line kcType4" style="display: none;border-bottom: 0">
+            <div class="a_list">
+                <span class="a_list_l">弹幕:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg4" class="toggle-button" name="switch">
+                            <label for="u-togg4" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">直播开始时间:</span>
+                <div class="a_list_r"><input type="text" class="layui-input" id="test1"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">直播结束时间:</span>
+                <div class="a_list_r"><input type="text" class="layui-input" id="test2"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">群员免费邀请类型:</span>
+                <div class="a_list_r chose_item">
+                    <label for="type1" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="pic2" id="type1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">仅老师</span>
+                    </label>
+                    <label for="type2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="pic2" id="type2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">所有成员</span>
+                    </label>
+                    <p class="tishi">（群员/嘉宾限邀人数<input type="text" class="s_width m-height center" style="margin: 0 10px" placeholder="不限">）</p>
+                </div>
+            </div>
+        </div>
+        <div class="dkset" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l">作业打卡:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="txt-togg" class="toggle-button" name="switch">
+                            <label for="txt-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="tishi">*开启后，学员需要上传笔记作业，作业类型为图片、文字、图文</span>
+                </div>
+            </div>
+            <div class="txt-togg-cont" style="display: none">
+                <div class="a_list">
+                    <span class="a_list_l">作业标题:</span>
+                    <div class="a_list_r">
+                        <input type="text" class="w-620">
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">作业内容:</span>
+                    <div class="a_list_r">
+                        <textarea name="" class="w-620" style="height: 80px">此处放富文本编辑器</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+    </div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .xlk-chose').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '系列课选择',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '系列课选择.html' //iframe的url
+        });
+    });
+
+    $('.yxtogg label').click(function () {
+        $('.yx-cont').toggle();
+    });
+    $('#txt-togg').click(function () {
+        $('.txt-togg-cont').toggle();
+    });
+
+    $('.chose_item label').click(function () {
+        var txt=$(this).find('.msg_set_txt').text();
+        if($(this).find('input').is(':checked')){
+            switch (txt) {
+                case '文稿信息':
+                    $('.kcType1').show();
+                    break;
+                case '音频信息':
+                    $('.kcType2').show();
+                    break;
+                case '视频信息':
+                    $('.kcType3').show();
+                    break;
+                case '直播间信息':
+                    $('.kcType4').show();
+                    break;
+            }
+        }else{
+            switch (txt) {
+                case '文稿信息':
+                    $('.kcType1').hide();
+                    break;
+                case '音频信息':
+                    $('.kcType2').hide();
+                    break;
+                case '视频信息':
+                    $('.kcType3').hide();
+                    break;
+                case '直播间信息':
+                    $('.kcType4').hide();
+                    break;
+            }
+        }
+
+        if($('.chose_item label input').is(':checked')){
+            $('.dkset').show()
+        }else{
+            $('.dkset').hide()
+        }
+    })
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>群详情</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/newStyle.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+
+        .qDetailCont{padding: 6px;}
+        .qDetailCont .contItem{background: #fff;padding: 24px;font-size: 12px;color: #666;margin: 6px;display: flex;flex-direction: column;}
+        .qDetailCont .contItem b{font-size: 16px;margin-right: 10px;color: #333;}
+        .qDetailCont .contItem .itemTit{background: #fff;}
+
+        .qDetailCont .qMsg{display: flex;align-items: center;}
+        .qDetailCont .qMsg img{width: 50px;height: 50px;margin-right: 10px;}
+        .qDetailCont .qMsg p:first-child{font-size: 18px;color: #333;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-weight: bold}
+        .qDetailCont .qMsg p:last-child{font-size: 14px;margin-top: 4px;}
+        .qDetailCont .qMsg p span:not(:last-child){border-right: 1px solid #eee;margin-right: 10px;padding-right: 10px;}
+
+        .qDetailCont .qTotal{display: flex;margin: 24px -12px 0;color: #333;font-size: 14px;}
+        .qDetailCont .qTotal li{border-radius: 2px;background: #fff;flex: 1;margin: 0 12px;padding: 24px;box-shadow: 0 0 15px #eee;transition: all linear .2s;}
+        .qDetailCont .qTotal li p{font-weight: 600;display: flex;align-items: center;justify-content: space-between;}
+        .qDetailCont .qTotal li p span{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 90%;}
+        .qDetailCont .qTotal li p i{width: 14px;height: 14px;margin-top: -2px;filter: brightness(.4);}
+        .qDetailCont .qTotal li > span{font-size: 24px;margin-top: 10px;}
+        .qDetailCont .qTotal li:hover{box-shadow: 0 0 15px #ddd;}
+
+        .qDetailCont .qNotis{font-size: 14px;color: #666;margin-top: 20px;height: 160px;min-height: 160px;overflow: auto;}
+
+        .qDetailCont .null-msg{padding: 10px 0;font-size: 14px;color: #999;}
+        .qDetailCont .null-msg img{width: 130px;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;">
+
+    <div class="qDetailCont">
+        <div class="flex">
+            <div class="contItem" style="width: 70%">
+                <div class="qMsg">
+                    <img src="../images/null2.jpg" alt="">
+                    <div>
+                        <p>群名称：激活粉丝 微信变现</p>
+                        <p><span>群主：盛丽萍共</span><span>105 位群成员</span></p>
+                    </div>
+                </div>
+                <ul class="qTotal">
+                    <li>
+                        <p><span>总人数</span><i class="tips tip1"></i></p>
+                        <span>105</span>
+                    </li>
+                    <li>
+                        <p><span>今日入群</span><i class="tips tip2"></i></p>
+                        <span>0</span>
+                    </li>
+                    <li>
+                        <p><span>今日退群</span><i class="tips tip3"></i></p>
+                        <span>0</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="contItem" style="width: 30%">
+                <div class="itemTit"><b>群公告</b></div>
+                <div class="qNotis scrollBar">
+                    热烈欢迎各位老板们来到本群！ 《激活粉丝 微信变现》开营仪式在今晚20:00开始！请您准时参加！ 明天开始，每天学习时间为上午11:00，请您做好时间安排！ 一起学习，一起加油💪
+                </div>
+                <div class="null-msg">
+                    <img src="../images/null-msg.png" alt="">
+                    <p>暂无公告</p>
+                </div>
+            </div>
+        </div>
+        <div class="contItem" >
+            <div class="itemTit"><b>群成员列表</b></div>
+            <div class="tab_content2 pd-0 mgT-10">
+                <div class="tab_type_2">
+                    <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+                    <span class="tab-tips export"><i class="export-tips"></i>导出</span>
+                </div>
+                <div class="tab_type_2">
+                    <span class="mgL-20 mgR-10">已选 10 条</span>  <!--  当已选 0 条时，隐藏该标签  -->
+                    <div class="pane-tip">
+                        <span>一键全选</span>
+                        <span>清空所选</span>
+                    </div>
+                    <span class="tab-tips del_btn mgL-10"><i class="del-tips"></i>批量删标签</span>
+                    <span class="tab-tips add_btn mgL-10"><i class="plus-tips"></i>批量打标签</span>
+                </div>
+            </div>
+            <div class="edit_table2 mg-0">
+                <div class="table_cont2">
+                    <div class="table-thead">
+                        <table border="0" class="table_body2">
+                            <thead>
+                            <tr>
+                                <th width="50px">
+                                    <label for="tab0" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="gz" id="tab0">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </th>
+                                <th width="300px" class="left">群成员</th>
+                                <th width="150px">入群时间</th>
+                                <th width="150px">入群方式</th>
+                                <th width="300px" class="left">标签</th>
+                                <th width="100px">操作</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table-tbody">
+                        <table border="0" class="table_body2">
+                            <tbody>
+                            <tr>
+                                <td width="50px">
+                                    <label for="tab1" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="gz" id="tab1">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td width="300px" class="cover-pic">
+                                    <div class="user_picName">
+                                        <img src="../images/head2.jpg" alt="">
+                                        <span class="wrap-noml">乔田润【华厚】研习导师</span><span class="mgL-8 wxcolor">@微信</span>
+                                    </div>
+                                </td>
+                                <td width="150px" class="date"><div>2019-04-26 14:20:41</div></td>
+                                <td width="150px">成员邀请入群</td>
+                                <td width="300px">
+                                    <div class="newTable_cont">
+                                        <div class="cont_box">
+                                            <div class="cont_top">
+                                                <div class="userTips">
+                                                    <span>新人标签</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="100px" class="cz_btn">内部成员</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="tab2" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="gz" id="tab2">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td class="cover-pic">
+                                    <div class="user_picName">
+                                        <img src="../images/head2.jpg" alt="">
+                                        <span class="wrap-noml">王文君</span><span class="mgL-8 qywxcolor">@企业微信</span>
+                                    </div>
+                                </td>
+                                <td class="date"><div>2019-04-26 14:20:41</div></td>
+                                <td>扫码入群</td>
+                                <td>
+                                    <div class="newTable_cont">
+                                        <div class="cont_box">
+                                            <div class="cont_top">
+                                                <div class="userTips">
+                                                    <span>新人标签</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="cz_btn">
+                                    <button type="button" class="detail_btn">客户详情</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btm_page2">
+                    <div class="pages">
+                        <div class="pages_num">
+                            <span class="prev">上一页</span>
+                            <span>1</span>
+                            <span class="page-default">...</span>
+                            <span>50</span>
+                            <span class="active">51</span>
+                            <span>52</span>
+                            <span class="page-default">...</span>
+                            <span>100</span>
+                            <span class="next">下一页</span>
+                        </div>
+                        <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                        <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                    </div>
+                    <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                        <div class="select-text">
+                            <span class="select-txt">10</span>
+                            <ul>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>50</li>
+                                <li>100</li>
+                            </ul>
+                        </div>条
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  搜索/排序  -->
+    <div class="account-box" id="search-account" style="display: none">
+        <div class="account-cont account-cont2">
+            <div class="account">
+                <span class="account-l">成员昵称:</span>
+                <div class="account-r"><input type="text"></div>
+            </div>
+            <div class="account">
+                <span class="account-l">入群时间:</span>
+                <div class="account-r">
+                    <input type="text" class="layui-input" id="test1" placeholder="起">
+                    <span class="date-line"></span>
+                    <input type="text" class="layui-input" id="test1" placeholder="止">
+                </div>
+            </div>
+        </div>
+        <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+    </div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: '批量打标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '436px'],
+            content: '企微私域/批量添加标签.html' //iframe的url
+        });
+    });
+    $('#chutiyan .del_btn').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: '批量删除标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '436px'],
+            content: '企微私域/批量删除标签.html' //iframe的url
+        });
+    });
+
+
+    $('#chutiyan .detail_btn').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: '客户详情',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '企微私域/账户信息.html' //iframe的url
+        });
+    });
+
+
+
+
+
+    $('#chutiyan .tip1').on('mouseenter',function(){
+        this.index =layer.tips('群聊总人数', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:280
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+    $('#chutiyan .tip2').on('mouseenter',function(){
+        this.index =layer.tips('今日入群人数', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:280
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+    $('#chutiyan .tip3').on('mouseenter',function(){
+        this.index =layer.tips('今日退群人数', this, {
+            tips: [1, '#000'], time: 0 ,maxWidth:280,
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>奖励设置</title>
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <style>
+        .view_cont{transform: scale(.7);position: absolute;right: 0;top: -40px;}
+        .reward_cont{position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 999;
+            width: 324px;
+            text-align: center;
+            padding: 71px 0 11px;
+            border-radius: 25px;
+            background: -webkit-gradient(linear, left bottom, left top, from(#ff4e01), to(#ff8e01));
+            background: linear-gradient(0deg, #ff4e01, #ff8e01);}
+        .reward_cont::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: -75px;
+            left: 26%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background: url(http://cshtml.lkmsxy.com/my/%E7%9B%B4%E6%92%AD-%E7%94%A8%E6%88%B7%E7%AB%AF/images/15-2.png) no-repeat center;
+            background-size: contain;
+            -webkit-animation: rotate360 10s linear infinite;
+            animation: rotate360 10s linear infinite;
+        }
+        .reward_cont::after {
+            content: "";
+            display: block;
+            height: 250px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background: #fff;
+            border-radius: 50px 50px 25px 25px;
+            -webkit-box-shadow: inset 0 2px 5px 0 rgba(233, 116, 0, 0.5);
+            box-shadow: inset 0 2px 5px 0 rgba(233, 116, 0, 0.5);
+        }
+        @keyframes rotate360 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .reward_cont .cont_icon{
+            width: 80px;
+            position: absolute;
+            left: 50%;
+            top: -37px;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+        .reward_cont .txt1{
+            font-size: 15px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .reward_cont .txt1 span{color: #ffe01b;}
+        .reward_cont .tip{
+            font-size: 12px;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+            width: 48px;
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            border-radius: 15px 0 15px 0;
+            background: linear-gradient(-30deg, #246cff, #33a1ff);
+            position: absolute;
+            left: -7px;
+            top: 15px;
+        }
+        .reward_cont .tip::after {
+            content: "";
+            display: inline-block;
+            background: #1361ff;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            z-index: -1;
+            width: 7px;
+            height: 4px;
+            border-bottom-left-radius: 15px;
+        }
+        .reward_cont .ht_pic{
+            width: 190px;
+            height: 160px;
+            margin: 52px auto 0;display: flex;align-items: center;justify-content: center
+        }
+        .reward_cont .ht_pic img{
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: auto;
+        }
+        .reward_cont .txt2{
+            font-size: 15px;
+            color: #ff5e21;
+            margin-top: 16px;
+        }
+        .reward_cont .txt3{
+            font-size: 12px;
+            color: #bbb;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body id="chutiyan">
+
+
+<ul class="head-tab2">
+    <li class="active current"><a>分享奖励</a></li>
+    <li><a>订阅奖励</a></li>
+    <li><a>粉丝团奖励</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-body-b" style="padding: 0">
+    <div class="tab-content activity_set activity_set3 w-4">
+        <div class="tab-pane active">
+            <div class="b-line">
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">直播主题:</span>
+                        <div class="a_list_r">怎样打造鱼塘？</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">主播:</span>
+                        <div class="a_list_r">
+                            <img src="../../../../images/head.jpg" alt="" class="user-pic">
+                            <a href="">小土豆</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">开始时间:</span>
+                        <div class="a_list_r">2020-10-25 10:20:30</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">观看权限:</span>
+                        <div class="a_list_r">公开免费</div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-line">
+                <div class="a_list">
+                    <span class="a_list_l">分享人奖励:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                            <label for="u-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*用户成功邀请1人首次进入直播间，即可领取以下奖励</span>
+                    </div>
+                </div>
+                <div class="toog-cont" style="position: relative">
+                    <div class="a_list">
+                        <span class="a_list_l">奖励名称:</span>
+                        <div class="a_list_r">
+                            <input type="text" id="jlName" placeholder="对该奖励命名" maxlength="18" style="width: 300px">
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">领奖内容:</span>
+                        <div class="a_list_r">
+                            <div class="file-cont file-cont2">
+                                <!--  存放已上传图片，默认隐藏  -->
+                                <div class="file-pics"></div>
+                                <!--  上传图片按钮  -->
+                                <div class="file-btn"></div>
+                            </div>
+                            <p class="tishi mgL-0">*通过图片给用户呈现奖励内容，JPG、PNG格式，图片小于5M</p>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">文字描述:</span>
+                        <div class="a_list_r" style="display: block">
+                            <input type="text" id="txtCont" placeholder="将向用户展示" maxlength="18" style="width: 300px">
+                            <p class="tishi" style="margin: 6px 0 0 0;">*选填，可填写微信号、手机号等联系方式方便用户复制；也可填写其他需强调的内容</p>
+                        </div>
+                    </div>
+                    <div class="model view_cont">
+                        <div class="mark"></div>
+                        <div class="reward_cont">
+                            <img src="http://cshtml.lkmsxy.com/my/%E7%9B%B4%E6%92%AD-%E7%94%A8%E6%88%B7%E7%AB%AF/images/15.png" alt="" class="cont_icon">
+                            <p class="txt1">恭喜你获得<span>奖励</span></p>
+                            <span class="tip">分享</span>
+                            <div class="ht_pic"><img src="http://cshtml.lkmsxy.com/my/%E7%9B%B4%E6%92%AD-%E7%94%A8%E6%88%B7%E7%AB%AF/images/null.jpg" alt=""></div>
+                            <p class="txt2">加微信15108438354领取</p>
+                            <!--  随机码后台自动生成  -->
+                            <p class="txt3">*随机码：YSUANY7868，用于核实用户身份</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l">被邀人奖励:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                            <label for="u-togg2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*首次被邀请进入直播间，可领取以下奖励</span>
+                    </div>
+                </div>
+                <div class="toog2-cont" style="position: relative">
+                    <div class="a_list">
+                        <span class="a_list_l">奖励名称:</span>
+                        <div class="a_list_r">
+                            <input type="text" id="jlName2" placeholder="对该奖励命名" maxlength="18" style="width: 300px">
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">领奖内容:</span>
+                        <div class="a_list_r">
+                            <div class="file-cont file-cont2">
+                                <!--  存放已上传图片，默认隐藏  -->
+                                <div class="file-pics"></div>
+                                <!--  上传图片按钮  -->
+                                <div class="file-btn"></div>
+                            </div>
+                            <p class="tishi mgL-0">*通过图片给用户呈现奖励内容，JPG、PNG格式，图片小于5M</p>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">文字描述:</span>
+                        <div class="a_list_r" style="display: block">
+                            <input type="text" id="txtCont2" placeholder="将向用户展示" maxlength="18" style="width: 300px">
+                            <p class="tishi" style="margin: 6px 0 0 0;">*选填，可填写微信号、手机号等联系方式方便用户复制；也可填写其他需强调的内容</p>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">无邀请人:</span>
+                        <div class="a_list_r chose_item">
+                            <label for="live1" class="radio">
+                                <div class="chose">
+                                    <input type="radio" checked name="live" id="live1">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">不获奖励</span>
+                            </label>
+                            <label for="live2" class="radio mgR-0">
+                                <div class="chose">
+                                    <input type="radio" name="live" id="live2">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">也可获得“被邀请人奖励”</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="model view_cont" style="top:-20px">
+                        <div class="mark"></div>
+                        <div class="reward_cont">
+                            <img src="http://cshtml.lkmsxy.com/my/%E7%9B%B4%E6%92%AD-%E7%94%A8%E6%88%B7%E7%AB%AF/images/15.png" alt="" class="cont_icon">
+                            <p class="txt1">恭喜你获得<span>奖励</span></p>
+                            <span class="tip">被邀</span>
+                            <div class="ht_pic"><img src="http://cshtml.lkmsxy.com/my/%E7%9B%B4%E6%92%AD-%E7%94%A8%E6%88%B7%E7%AB%AF/images/null.jpg" alt=""></div>
+                            <p class="txt2">加微信15108438354领取</p>
+                            <!--  随机码后台自动生成  -->
+                            <p class="txt3">*随机码：YSUANY7868，用于核实用户身份</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div class="tab-pane">
+            <div class="b-line">
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">直播主题:</span>
+                        <div class="a_list_r">怎样打造鱼塘？</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">主播:</span>
+                        <div class="a_list_r">
+                            <img src="../../../../images/head.jpg" alt="" class="user-pic">
+                            <a href="">小土豆</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">开始时间:</span>
+                        <div class="a_list_r">2020-10-25 10:20:30</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">观看权限:</span>
+                        <div class="a_list_r">公开免费</div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-line">
+                <div class="a_list">
+                    <span class="a_list_l">订阅奖励:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg3" class="toggle-button" name="switch">
+                            <label for="u-togg3" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*用户首次订阅关注直播，可领取以下奖励</span>
+                    </div>
+                </div>
+                <div class="toog3-cont" style="position: relative;">
+                    <div class="a_list">
+                        <span class="a_list_l">奖励名称:</span>
+                        <div class="a_list_r">
+                            <input type="text" id="jlName3" placeholder="对该奖励命名" maxlength="18" style="width: 300px">
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">领奖内容:</span>
+                        <div class="a_list_r">
+                            <div class="file-cont file-cont2">
+                                <!--  存放已上传图片，默认隐藏  -->
+                                <div class="file-pics"></div>
+                                <!--  上传图片按钮  -->
+                                <div class="file-btn"></div>
+                            </div>
+                            <p class="tishi mgL-0">*通过图片给用户呈现奖励内容，JPG、PNG格式，图片小于5M</p>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">文字描述:</span>
+                        <div class="a_list_r" style="display: block">
+                            <input type="text" id="txtCont3" placeholder="将向用户展示" maxlength="18" style="width: 300px">
+                            <p class="tishi" style="margin: 6px 0 0 0;">*选填，可填写微信号、手机号等联系方式方便用户复制；也可填写其他需强调的内容</p>
+                        </div>
+                    </div>
+                    <div class="model view_cont">
+                        <div class="mark"></div>
+                        <div class="reward_cont">
+                            <img src="http://cshtml.lkmsxy.com/my/%E7%9B%B4%E6%92%AD-%E7%94%A8%E6%88%B7%E7%AB%AF/images/15.png" alt="" class="cont_icon">
+                            <p class="txt1">恭喜你获得<span>奖励</span></p>
+                            <span class="tip">订阅</span>
+                            <div class="ht_pic"><img src="http://cshtml.lkmsxy.com/my/%E7%9B%B4%E6%92%AD-%E7%94%A8%E6%88%B7%E7%AB%AF/images/null.jpg" alt=""></div>
+                            <p class="txt2">加微信15108438354领取</p>
+                            <!--  随机码后台自动生成  -->
+                            <p class="txt3">*随机码：YSUANY7868，用于核实用户身份</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div class="tab-pane">
+            <div class="b-line">
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">直播主题:</span>
+                        <div class="a_list_r">怎样打造鱼塘？</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">主播:</span>
+                        <div class="a_list_r">
+                            <img src="../../../../images/head.jpg" alt="" class="user-pic">
+                            <a href="">小土豆</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">开始时间:</span>
+                        <div class="a_list_r">2020-10-25 10:20:30</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">观看权限:</span>
+                        <div class="a_list_r">公开免费</div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-line">
+                <div class="a_list">
+                    <span class="a_list_l">粉丝团奖励:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg4" class="toggle-button" name="switch">
+                            <label for="u-togg4" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*本场直播，主播的粉丝团成员可以领取以下奖励</span><i class="tips" style="margin-left: 8px;"></i>
+                    </div>
+                </div>
+                <div class="toog4-cont" style="position: relative;">
+                    <div class="a_list">
+                        <span class="a_list_l">奖励名称:</span>
+                        <div class="a_list_r">
+                            <input type="text" id="jlName4" placeholder="对该奖励命名" maxlength="18" style="width: 300px">
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">领奖内容:</span>
+                        <div class="a_list_r">
+                            <div class="file-cont file-cont2">
+                                <!--  存放已上传图片，默认隐藏  -->
+                                <div class="file-pics"></div>
+                                <!--  上传图片按钮  -->
+                                <div class="file-btn"></div>
+                            </div>
+                            <p class="tishi mgL-0">*通过图片给用户呈现奖励内容，JPG、PNG格式，图片小于5M</p>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">文字描述:</span>
+                        <div class="a_list_r" style="display: block">
+                            <input type="text" id="txtCont4" placeholder="将向用户展示" maxlength="18" style="width: 300px">
+                            <p class="tishi" style="margin: 6px 0 0 0;">*选填，可填写微信号、手机号等联系方式方便用户复制；也可填写其他需强调的内容</p>
+                        </div>
+                    </div>
+                    <div class="model view_cont" style="top: -12px;right: -40px">
+                        <div class="mark"></div>
+                        <div class="reward_cont">
+                            <img src="http://cshtml.lkmsxy.com/my/%E7%9B%B4%E6%92%AD-%E7%94%A8%E6%88%B7%E7%AB%AF/images/15.png" alt="" class="cont_icon">
+                            <p class="txt1">恭喜你获得<span>奖励</span></p>
+                            <span class="tip">粉丝团</span>
+                            <div class="ht_pic"><img src="http://cshtml.lkmsxy.com/my/%E7%9B%B4%E6%92%AD-%E7%94%A8%E6%88%B7%E7%AB%AF/images/null.jpg" alt=""></div>
+                            <p class="txt2">加微信15108438354领取</p>
+                            <!--  随机码后台自动生成  -->
+                            <p class="txt3">*随机码：YSUANY7868，用于核实用户身份</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../../../js/jquery.min.js"></script>
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/myjs.js"></script>
+<script>
+    $('#chutiyan .tips').on('mouseenter',function(){
+        this.index =layer.tips('粉丝团：邀请一个用户首次进入该直播间，即可申请加入主播的粉丝团', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:600
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+    $(function () {
+        if($('#u-togg').is(':checked')){
+            $('.toog-cont').show()
+        }else{
+            $('.toog-cont').hide()
+        }
+        if($('#u-togg2').is(':checked')){
+            $('.toog2-cont').show()
+        }else{
+            $('.toog2-cont').hide()
+        }
+        if($('#u-togg3').is(':checked')){
+            $('.toog3-cont').show()
+        }else{
+            $('.toog3-cont').hide()
+        }
+        if($('#u-togg4').is(':checked')){
+            $('.toog4-cont').show()
+        }else{
+            $('.toog4-cont').hide()
+        }
+    });
+    $('#u-togg').click(function () {$('.toog-cont').toggle();});
+    $('#u-togg2').click(function () {$('.toog2-cont').toggle()});
+    $('#u-togg3').click(function () {$('.toog3-cont').toggle()});
+    $('#u-togg4').click(function () {$('.toog4-cont').toggle()});
+
+    $("#jlName").bind("input propertychange",function(event){
+        $(this).parent().parent().siblings('.view_cont').find('.txt1').text($("#jlName").val())
+    });
+    $("#jlName2").bind("input propertychange",function(event){
+        $(this).parent().parent().siblings('.view_cont').find('.txt1').text($("#jlName2").val())
+    });
+    $("#jlName3").bind("input propertychange",function(event){
+        $(this).parent().parent().siblings('.view_cont').find('.txt1').text($("#jlName3").val())
+    });
+    $("#jlName4").bind("input propertychange",function(event){
+        $(this).parent().parent().siblings('.view_cont').find('.txt1').text($("#jlName4").val())
+    });
+    $("#txtCont").bind("input propertychange",function(event){
+        $(this).parent().parent().siblings('.view_cont').find('.txt2').text($("#txtCont").val())
+    });
+    $("#txtCont2").bind("input propertychange",function(event){
+        $(this).parent().parent().siblings('.view_cont').find('.txt2').text($("#txtCont2").val())
+    });
+    $("#txtCont3").bind("input propertychange",function(event){
+        $(this).parent().parent().siblings('.view_cont').find('.txt2').text($("#txtCont3").val())
+    });
+    $("#txtCont4").bind("input propertychange",function(event){
+        $(this).parent().parent().siblings('.view_cont').find('.txt2').text($("#txtCont4").val())
+    });
+
+</script>
+
+</body>
+</html>

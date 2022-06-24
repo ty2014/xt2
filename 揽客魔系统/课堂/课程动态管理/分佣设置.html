@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>分佣设置</title>
+
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan" style="background: #f8f8f8;">
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>分佣设置</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <p class="tishi"><img src="../../images/3.jpg" alt="">注意：设置过程中注意各开关及比例，以免出现亏损</p>
+        </div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="60px">操作</th>
+                    <th width="140px">系列课分类</th>
+                    <th width="200px">系列课标题</th>
+                    <th width="80px">价格</th>
+                    <th width="80px">优惠价格</th>
+                    <th width="80px">锁定提成</th>
+                    <th width="80px">推荐提成</th>
+                    <th width="60px">状态</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="cz_btn">
+                        <button type="button" class="btn-blue">佣金配置</button>
+                    </td>
+                    <td>免费课程</td>
+                    <td><a >如何不推销、不打价格战， 让顾客源源不断主动上门？</a></td>
+                    <td>199.00</td>
+                    <td>99.00</td>
+                    <td>开启</td>
+                    <td>开启</td>
+                    <td class="statu">启用</td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script>
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['50%', '60%'],
+            content: '搜索.html' //iframe的url
+        });
+    });
+
+
+</script>
+</body>
+</html>

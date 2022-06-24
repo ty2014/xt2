@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../商城/css/index.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        .table_cont tbody tr{border-bottom: none;}
+        .table_cont tbody tr:last-child{border-top: 1px solid #eee;}
+    </style>
+</head>
+<body id="chutiyan" style="min-width: auto;height: auto">
+
+<div style="background: #fff">
+    <div class="activity_set">
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">所属渠道:</span>
+                <div class="a_list_r">蒋雨</div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l">订单编号:</span>
+                <div class="a_list_r">12345678910</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">订单状态:</span>
+                <div class="a_list_r">待收货</div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l">配送方式:</span>
+                <div class="a_list_r">快递邮寄</div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">实付金额:</span>
+            <div class="a_list_r">
+                <span>110.00</span>
+                <ul class="price-detail">
+                    <li class="ptip"></li>
+                    <li>商品总价：200.00</li>
+                    <li>卡片优惠：-100.00</li>
+                    <li>快递运费：10.00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">卡号:</span>
+                <div class="a_list_r">202011160312</div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l">卡片批号:</span>
+                <div class="a_list_r">202011161101</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="80px">主图</th>
+                    <th width="150px">商品名称</th>
+                    <th width="80px">单价</th>
+                    <th width="80px">数量</th>
+                    <th width="100px">商品消费</th>
+                    <th width="100px">快递运费</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="squ-pic"><img src="../../../images/head.jpg" alt=""></td>
+                    <td class="left wrap-noml"><a href="">纪梵希2019新款范冰冰力荐渐变果冻口红</a></td>
+                    <td>200.00</td>
+                    <td>1</td>
+                    <td>100.00</td>
+                    <td>10.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <div class="activity_set" style="padding-top: 0">
+        <div class="b-line">
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">购买人:</span>
+                    <div class="a_list_r"><a class="user_msg">小土豆</a></div>
+                </div>
+                <div class="a_list ">
+                    <span class="a_list_l">买家留言:</span>
+                    <div class="a_list_r">亲，协商好的顺丰不要忘记了哦！</div>
+                </div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">收货人:</span>
+                    <div class="a_list_r">蒋雨 133500024525</div>
+                </div>
+                <div class="a_list ">
+                    <span class="a_list_l">收货地址:</span>
+                    <div class="a_list_r">四川省成都市武侯区-武兴五路77号</div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">发货人:</span>
+                <div class="a_list_r"><a>蒋雨</a></div>
+            </div>
+        </div>
+        <div class="b-line">
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">下单时间:</span>
+                    <div class="a_list_r">2019-10-10 10:00:00</div>
+                </div>
+                <div class="a_list ">
+                    <span class="a_list_l">支付时间:</span>
+                    <div class="a_list_r">2019-10-10 10:00:30</div>
+                </div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">发货时间:</span>
+                    <div class="a_list_r">2019-10-10 10:00:30</div>
+                </div>
+                <div class="a_list ">
+                    <span class="a_list_l">成交时间:</span>
+                    <!-- 交易完成/交易关闭时间 -->
+                    <div class="a_list_r">
+                        2019-10-10 10:00:30
+                        <span class="tishi">*交易完成/交易关闭时间</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-line">
+            <div class="dub-list">
+                <div class="a_list ">
+                    <span class="a_list_l">快递公司:</span>
+                    <div class="a_list_r">顺丰</div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">快递单号:</span>
+                    <div class="a_list_r">1254879245635622</div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">物流跟踪:</span>
+                <div class="a_list_r">
+                    <a class="wl-msgs mgL-0">运输中:【北京市】已离开北京分拨中心；发往成都分拨中心</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="activity_set activity_set2 w-120" id="user-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">用户头像:</div>
+                <div class="a_list_r"><img src="../../../images/head.jpg" alt="" class="user-pic"></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">用户昵称:</div>
+                <div class="a_list_r">小土豆</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">用户手机:</div>
+                <div class="a_list_r">13546879513</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">会员等级:</div>
+                <div class="a_list_r">铂金会员</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">下单笔数:</div>
+                <div class="a_list_r">12</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">商城消费:</div>
+                <div class="a_list_r">15589.00</div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script>
+
+    $('#chutiyan .user_msg').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '用户信息',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['900px', 'auto'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#user-sure").html()
+        });
+    });
+    $('#chutiyan .wl-msgs').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '物流信息',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '60%'],
+            content: '物流.html' //iframe的url
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报课码配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+
+<div class="page-title">报课码配置</div>
+<div class="activity_set activity_set3">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">报课码入口:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper ">
+                    <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                    <label for="u-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="xz-cont">
+            <div class="a_list xz-cont2">
+                <!--   按分组和人，只有指定的等级人才显示入口 ；   -->
+                <span class="a_list_l">无限制显示:</span>
+                <div class="a_list_r">
+                    <div class="toggle-button-wrapper ">
+                        <input type="checkbox" id="togg" class="toggle-button" name="switch">
+                        <label for="togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="xz-cont3">
+                <div class="a_list">
+                    <span class="a_list_l">可显示等级:</span>
+                    <div class="a_list_r chose_item">
+                        <label for="vip1" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="vip1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">普通会员</span>
+                        </label>
+                        <label for="vip2" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="vip2" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">白银会员</span>
+                        </label>
+                        <label for="vip3" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="vip3" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">铂金会员</span>
+                        </label>
+                        <label for="vip4" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="vip4" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">钻石会员</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">可显示会员:</span>
+                    <div class="a_list_r"><input type="text" readonly placeholder="选入用户">&nbsp;已包含0人</div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享赚提示:</span>
+            <div class="a_list_r">
+                在报课码海报详情页下方
+                <div class="select-text type-chose" style="min-width: 90px;margin: 0 8px">
+                    <span class="select-txt">提醒</span>
+                    <ul style="display: none;">
+                        <li class="active">提醒</li>
+                        <li>不提醒</li>
+                    </ul>
+                </div>
+                分享可赚多少钱<a class="concat_img_btn" style="margin-left: 16px">查看示例</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">报课码URL:</span>
+            <div class="a_list_r">http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/index.html</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">报课码背景图:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <p class="tishi">*建议像素640*1080，大小不超过500KB</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">报课码宣传语:</span>
+            <div class="a_list_r"><input type="text" value="专属报课码" maxlength="20" style="width:300px"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<img src="http://cshtml.lkmsxy.com/csimg/bkmhb.png" alt="" id="concat_img" style="height: 580px;display: none;">
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('.xz-cont').hide();
+    $(function (){
+        if($('#u-togg').is(':checked')){
+            $('.xz-cont').show();
+        }else{
+            $('.xz-cont').hide();
+        }
+        if($('#togg input').is(':checked')){
+            $('.xz-cont3').hide()
+        }else{
+            $('.xz-cont3').show()
+        }
+    });
+
+    $('#u-togg').click(function () {$('.xz-cont').toggle();});
+    $('#togg').click(function () {$('.xz-cont3').toggle();});
+
+    $('#chutiyan .concat_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img")
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

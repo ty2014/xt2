@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<p class="tishi-bg tishi-bg-wram mgB-20">
+    当企业成员被客户从微信联系人中删除时，会在客户流失列表中产生一条记录，开启[被删除通知]后，被删除的成员会收到一条推送<br>
+    客户流失功能只会记录配置客户联系和客户群使用范围的成员，未被配置客户联系和客户群使用范围的成员信息将不会展示在列表中。<a href="">如何配置客户联系和客户群使用范围</a>
+</p>
+
+<div class="content">
+    <div class="page-title">删除提醒
+        <div class="notisTip">
+            <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="fa fa-file-word-o"></i>功能说明</a>
+            <a href="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" target="_blank"><i class="fa fa-file-movie-o"></i>视频教程</a>
+        </div>
+    </div>
+    <div class="activity_set activity_set3 w-4">
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">被删除提醒:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper ">
+                            <input type="checkbox" id="cont1-togg1" class="toggle-button" name="switch">
+                            <label for="cont1-togg1" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">提醒</span>
+                                <span class="text off">不提醒</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="tishi">*开启后，当企业微信被客户删除时，被删除的企业成员将收到一条消息提醒</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">提醒上级:</span>
+                <div class="a_list_r">
+                    当企业微信被<input type="number" class="s_width center m-height mg-8">个客户删除时，
+                    <div class="button-label-m mgR-8">
+                        <div class="toggle-button-wrapper ">
+                            <input type="checkbox" id="cont1-togg2" class="toggle-button" name="switch">
+                            <label for="cont1-togg2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">提醒</span>
+                                <span class="text off">不提醒</span>
+                            </label>
+                        </div>
+                    </div>被删除的企业成员的上级
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips export"><i class="export-tips"></i>导出</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="400px" class="left">客户名称</th>
+                        <th width="200px" class="left">所属成员</th>
+                        <th width="300px" class="left">标签</th>
+                        <th width="150px" class="left">渠道来源</th>
+                        <th width="200px" class="left">流失时间</th>
+                        <th width="100px" class="stickyHR shadow">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="400px">
+                            <div class="newTable_cont">
+                                <div class="cover-pic">
+                                    <img src="../../images/null.jpg" alt="">
+                                    <i class="sex_icon sex_icon_woman"></i>
+                                    <!--<i class="sex_icon sex_icon_man"></i>-->
+                                </div>
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <a class="line1 user_nc">小呀么小西几</a>&nbsp;/&nbsp;<span class="line1">蒋小雨</span><span class="mgL-8 wxcolor">@微信</span>
+                                    </div>
+                                    <div class="cont_foot">
+                                        <div class="statu statu2 mgR-8"><span>未身份验证</span></div>
+                                        <span class="statu_id">ID:123456</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="200px" class="cover-pic">
+                            <div class="newTable_cont">
+                                <div class="cover-pic">
+                                    <img src="../../images/null.jpg" alt="">
+                                </div>
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <span class="line1 user_nc">乔田润【华厚】研习导师</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="300px">
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <div class="userTips">
+                                            <span>新人标签</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="150px">
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        欢迎语
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="200px">
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <div>2019-04-26 14:20:41</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="100px" class="stickyBR shadow cz_btn">
+                            <button type="button" class="detail_btn">详情</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cover-pic">
+                                    <img src="../../images/null.jpg" alt="">
+                                    <i class="sex_icon sex_icon_man"></i>
+                                </div>
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <a class="line1 user_nc">国家一级保护废物</a>&nbsp;/&nbsp;<span class="line1">蒋小雨</span><span class="mgL-8 qywxcolor">@企业微信</span>
+                                    </div>
+                                    <div class="cont_foot">
+                                        <div class="statu statu1 mgR-8"><span>已身份验证</span></div>
+                                        <span class="statu_id">ID:123456</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="cover-pic">
+                            <div class="newTable_cont">
+                                <div class="cover-pic">
+                                    <img src="../../images/null.jpg" alt="">
+                                </div>
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        王文君
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        欢迎语
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <div>2019-04-26 14:20:41</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="stickyBR shadow cz_btn">
+                            <button type="button" class="detail_btn">详情</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">客户名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">所属成员:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">流失时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test1" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .detail_btn,.user_nc').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '客户信息',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../账户信息.html' //iframe的url
+        });
+    });
+
+</script>
+
+</body>
+</html>

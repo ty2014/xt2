@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统一提醒</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="head-tab2">
+    <li class="active current"><a>微信提醒</a></li>
+    <li><a>模板提醒</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-body-b" style="padding: 0">
+    <div class="tab-content activity_set activity_set3 w-4">
+        <div class="tab-pane active">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l">提醒商家:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                            <label for="u-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*用户购买“商户活动”成功，提醒商家</span>
+                    </div>
+                </div>
+                <div class="a_list" style="align-items: flex-start">
+                    <span class="a_list_l" style="padding-top: 20px">微信模板:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt">
+                            <div class="cont_label">
+                                <div class="href_cont href_cont1">
+                                    <p>文本<input type="text" placeholder="链接名字"></p>
+                                    <p>链接<input type="text"><span>确定</span></p>
+                                </div>
+                                <span class="href_btn href_btn1" data-toggle="tooltip" data-placement="top" title="链接"></span>
+                                <span class="emoji_btn" data-toggle="tooltip" data-placement="top" title="表情"></span>
+                                <div class="faceDiv"></div>
+                                <span class="line"></span>
+                                <em class="label-tips">[商家名称]</em>
+                                <em class="label-tips">[活动名称]</em>
+                                <em class="label-tips">[总订单数]</em>
+                                <em class="label-tips">[意向订单]</em>
+                                <em class="label-tips">[多少人浏览]</em>
+                                <div style="position: relative">
+                                    <em class="label-tips href_btn2">[活动列表]</em>
+                                    <div class="href_cont href_cont2" style="top: -122px">
+                                        <p>文本<input type="text" value="活动列表"></p>
+                                        <p>链接<input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx" disabled><span>确定</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="txt_cont Input_text" contenteditable="true"><span>[商家名称]</span>，您好~
+你创建的<span>[活动名称]</span>刚刚有人购买成功了！
+----------------------------
+总计订单：<span>总订单数</span>，
+意向订单：<span>意向订单</span>，
+浏览量：<span>多少人浏览</span>，
+点击查看活动详情：<span>活动列表</span>
+                            </div>
+                            <p class="nums-tip2">还可输入<span>600</span>字</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div class="tab-pane">
+            <div class="b-line" style="display: flex;align-items: flex-start;border-bottom: 0">
+                <div>
+                    <div class="a_list">
+                        <span class="a_list_l">提醒商家:</span>
+                        <div class="a_list_r">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="u-togg0" checked class="toggle-button" name="switch">
+                                <label for="u-togg0" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">开启</span>
+                                    <span class="text off">关闭</span>
+                                </label>
+                            </div>
+                            <span class="tishi">*用户购买“商户活动”成功，提醒商家</span>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">消息模板:</span>
+                        <div class="a_list_r">
+                            <span class="set-user mb-user" style="max-width: 400px;">选择模板</span>
+                        </div>
+                    </div>
+                    <div class="a_list" style="align-items: flex-start">
+                        <span class="a_list_l" style="padding-top: 23px;">发送内容:</span>
+                        <div class="a_list_r flex-column">
+                            <div class="send-tips">
+                                <em>商家名称</em>
+                                <em>活动名称</em>
+                                <em>总订单数</em>
+                                <em>意向订单</em>
+                                <em>多少人浏览</em>
+                                <em>活动列表</em>
+                                <p class="tishi mgL-0" style="display: inline-block"><img src="../../../images/3.png" alt="">注意：单击左侧标签即可插入输入框光标位置</p>
+                            </div>
+                            <div class="qfmb_content">
+                                <div class="code-cont">
+                                    <ul class="code-demo">
+                                        <li>{{first.DATA}}</li>
+                                        <li><span>课程:</span>{{keyword1.DATA}}</li>
+                                        <li><span>地点:</span>{{keyword2.DATA}}</li>
+                                        <li><span>讲师:</span>{{keyword3.DATA}}</li>
+                                        <li><span>时间:</span>{{keyword4.DATA}}</li>
+                                        <li>{{remark.DATA}}</li>
+                                    </ul>
+                                    <p class="code-btn">查看详情<img src="../../../images/right.png" alt=""></p>
+                                </div>
+                                <div class="code-cont">
+                                    <ul class="code-write">
+                                        <li><input type="text" value="123123"><div class="color"><input type="color" id="colortxt"></div></li>
+                                        <li><input type="text"><div class="color"></div></li>
+                                        <li><input type="text"><div class="color"></div></li>
+                                        <li><input type="text"><div class="color"></div></li>
+                                        <li><input type="text"><div class="color"></div></li>
+                                        <li><input type="text"><div class="color"></div></li>
+                                    </ul>
+                                    <p class="code-btn">查看详情<img src="../../../images/right.png" alt=""></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="http://cshtml.lkmsxy.com/csimg/hylb1.jpg" alt="" style="width: 260px;margin-left: 40px;margin-top: 10px;">
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/emoji.js"></script>
+<script src="../../../js/myjs.js"></script>
+
+
+</body>
+</html>

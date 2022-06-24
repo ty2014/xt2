@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>模块设置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan" style="height: auto">
+
+
+<div class="page-title">模块配置</div>
+
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">接力活码入口:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg" checked class="toggle-button" name="switch">
+                        <label for="u-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*个人中心是否开启“接力活码”入口；仅针对被选中的上传人（非上传人始终不展示）</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">接力活码主页:</span>
+            <div class="a_list_r chose_item">http：lkm.huoma.com<span class="copy-btn">复制</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">客服二维码图:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <div class="file-btn"></div>
+                </div>
+                <span class="tishi">*通用活码/分类活码页面，用户遇见问题联系该客服（接力活码的客服为“上传人”的二维码）</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+
+</body>
+</html>

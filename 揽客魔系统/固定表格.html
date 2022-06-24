@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <link rel="stylesheet" href="css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+
+    </style>
+</head>
+<body id="chutiyan">
+
+<!--
+
+.stickyHL：控制表头左侧固定的项
+.stickyHR：控制表头右侧固定的项
+.stickyBL：控制表体左侧固定的项
+.stickyBR：控制表体左侧固定的项
+
+在左侧表头、表体的最右侧固定项上面增加类名 shadow
+在右侧表头、表体的最左侧固定项上面增加类名 shadow
+
+如果同侧有多个固定项，那么就要判断位置再赋值，例：
+左侧有2个固定项，那么第二个固定项的 left = 第一个固定项的宽度
+左侧有n个固定项，那么第n个固定项的 left = 第(n-1)个固定项的宽度
+
+同理，右侧一样 right = 后一项的宽度
+如果有竖向滚动条，则 right = 后一项的宽度 +滚动条的宽度
+
+
+
+
+竖向滚动条：
+    当表格出现竖向滚动条时，表头的 table-patch 要显示出来占位，宽度等于滚动条的宽度（10px）
+
+固定列：
+情形一：只有横向滚动条，没有竖向滚动条
+    则：固定列 ‘table-tbody’的高度 = 原表格的 ‘table-tbody’高度
+
+情形二： 横向和竖向都要滚动条
+    则：固定列 ‘table-tbody’的高度 = 原表格的 ‘table-tbody’高度 - 10（滚动条的宽度）
+        且：固定列右侧 ‘table-fixed-r’ 要往左移动 10px（滚动条的宽度）
+-->
+
+
+    <div class="content">
+        <div class="page-title">固定表格</div>
+        <!--  固定列  -->
+        <div class="edit_table2" style="width: 700px">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="60px" class="stickyHL">序号</th>
+                            <th width="60px" class="stickyHL shadow" style="left: 60px">
+                                <label for="check0" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="check0">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </th>
+                            <th width="80px">主图</th>
+                            <th width="200px" class="left">用户</th>
+                            <th width="80px">姓名</th>
+                            <th width="120px">手机</th>
+                            <th width="100px">会员等级<i class="sort-icon"></i></th>
+                            <th width="100px">创建状态<i class="sort-icon sort-asc"></i></th>
+                            <th width="100px">创建活动<i class="sort-icon sort-desc"></i></th>
+                            <th width="100px">升级记录</th>
+                            <th width="300px" class="stickyHR shadow" style="right: 0">操作</th>
+                            <!--  当表格出现竖向滚动条时，表头添加此 th ，用来占位，宽度等于表体的滚动条宽度（10px）  -->
+                            <th class="stickyHR table-patch" style="display: block"></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="60px" class="stickyBL"><div>1</div></td>
+                            <td width="60px" class="stickyBL shadow" style="left: 60px">
+                                <div>
+                                    <label for="check1" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="pic2" id="check1">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td width="80px" class="squ-pic"><img src="images/null2.jpg" alt=""></td>
+                            <td width="200px" class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td width="80px"><div>蒋雨</div></td>
+                            <td width="120px"><div>13350021234</div></td>
+                            <td width="100px"><div>vip</div></td>
+                            <td width="100px" class="statu statu1"><div><span>有效</span></div></td>
+                            <td width="100px"><a >2</a></td>
+                            <td width="100px"><a class="sj-list">2</a></td>
+                            <td width="300px" class="stickyBR shadow"><div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="stickyBL"><div>2</div></td>
+                            <td class="stickyBL shadow" style="left: 60px">
+                                <div>
+                                    <label for="check2" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="pic2" id="check2">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="squ-pic"><img src="images/null2.jpg" alt=""></td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td><div>蒋雨</div></td>
+                            <td><div>13350021234</div></td>
+                            <td><div>-</div></td>
+                            <td class="statu statu2"><div><span>无效</span></div></td>
+                            <td><a >1</a></td>
+                            <td><a class="sj-list">1</a></td>
+                            <td class="cz_btn stickyBR shadow">
+                                <div>
+                                    <button type="button" class="btn-type1 anser-btn">回复</button>
+                                    <button type="button" class="btn-type2 del-btn">删除</button>
+                                    <button type="button" class="normal-btn">添加下级</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="stickyBL"><div>3</div></td>
+                            <td class="stickyBL shadow" style="left: 60px">
+                                <div><label for="check3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="check3">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label></div>
+                            </td>
+                            <td></td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td><div>蒋雨</div></td>
+                            <td><div>13350021234</div></td>
+                            <td><div>-</div></td>
+                            <td class="statu statu3"><div><span>待审核</span></div></td>
+                            <td><a >1</a></td>
+                            <td><a class="sj-list">1</a></td>
+                            <td class="cz_btn stickyBR shadow">
+                                <div>
+                                    <button type="button" class="btn-type1 anser-btn">回复</button>
+                                    <button type="button" class="btn-type2 del-btn">删除</button>
+                                    <button type="button" class="normal-btn">添加下级</button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<br>
+
+    <div class="content">
+        <div class="page-title">固定表格2</div>
+        <!--  固定列  -->
+        <div class="edit_table2" style="width: 1000px">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead class="">
+                        <tr>
+                            <th width="60px" class="stickyHL">序号</th>
+                            <th width="60px" class="stickyHL shadow" style="left: 60px">
+                                <label for="check0" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="check0">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </th>
+                            <th width="80px">主图</th>
+                            <th width="200px" class="left">用户</th>
+                            <th width="80px">姓名</th>
+                            <th width="120px">手机</th>
+                            <th width="100px">会员等级<i class="sort-icon"></i></th>
+                            <th width="100px">创建状态<i class="sort-icon sort-asc"></i></th>
+                            <th width="100px">创建活动<i class="sort-icon sort-desc"></i></th>
+                            <th width="100px">升级记录</th>
+                            <th width="300px" class="stickyHR shadow" style="right: 10px">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody" style="overflow: auto;height: 150px;">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="60px" class="stickyBL"><div>1</div></td>
+                            <td width="60px" class="stickyBL shadow" style="left: 60px">
+                                <div>
+                                    <label for="check1" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="pic2" id="check1">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td width="80px" class="squ-pic"><img src="images/null2.jpg" alt=""></td>
+                            <td width="200px" class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td width="80px"><div>蒋雨</div></td>
+                            <td width="120px"><div>13350021234</div></td>
+                            <td width="100px"><div>vip</div></td>
+                            <td width="100px" class="statu statu1"><div><span>有效</span></div></td>
+                            <td width="100px"><a >2</a></td>
+                            <td width="100px"><a class="sj-list">2</a></td>
+                            <td width="300px" class="stickyBR shadow"><div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="stickyBL"><div>2</div></td>
+                            <td class="stickyBL shadow" style="left: 60px">
+                                <div>
+                                    <label for="check2" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="pic2" id="check2">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="squ-pic"><img src="images/null2.jpg" alt=""></td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td><div>蒋雨</div></td>
+                            <td><div>13350021234</div></td>
+                            <td><div>-</div></td>
+                            <td class="statu statu2"><div><span>无效</span></div></td>
+                            <td><a >1</a></td>
+                            <td><a class="sj-list">1</a></td>
+                            <td class="cz_btn stickyBR shadow">
+                                <div>
+                                    <button type="button" class="btn-type1 anser-btn">回复</button>
+                                    <button type="button" class="btn-type2 del-btn">删除</button>
+                                    <button type="button" class="normal-btn">添加下级</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="stickyBL"><div>3</div></td>
+                            <td class="stickyBL shadow" style="left: 60px">
+                                <div><label for="check3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="check3">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label></div>
+                            </td>
+                            <td></td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑先生</a>
+                                </div>
+                            </td>
+                            <td><div>蒋雨</div></td>
+                            <td><div>13350021234</div></td>
+                            <td><div>-</div></td>
+                            <td class="statu statu3"><div><span>待审核</span></div></td>
+                            <td><a >1</a></td>
+                            <td><a class="sj-list">1</a></td>
+                            <td class="cz_btn stickyBR shadow">
+                                <div>
+                                    <button type="button" class="btn-type1 anser-btn">回复</button>
+                                    <button type="button" class="btn-type2 del-btn">删除</button>
+                                    <button type="button" class="normal-btn">添加下级</button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/layui/lay/modules/layer.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/myjs.js"></script>
+<script>
+
+
+
+    $(function(){
+
+    });
+
+
+</script>
+</body>
+</html>

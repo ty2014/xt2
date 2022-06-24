@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>概况</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/zfglcss.css">
+</head>
+<body id="chutiyan" style="padding: 0;">
+
+<div class="page-title">概况</div>
+<div class="zfgl-content">
+    <div class="zfgl-box">
+        <div class="zf-title"><span>图片扩容</span></div>
+        <div class="dub-list">
+            <div class="zf-item" style="width: 67.1506%">
+                <div class="item-head">图片使用情况<a href="图片使用详情.html">使用详情 ></a></div>
+                <div class="msg-progress">
+                    <div class="progress-txt">
+                        <p><b>9.3GB</b>/10GB&nbsp;&nbsp;(93%)</p>
+                        <span>注: 1GB=1024M</span>
+                    </div>
+                    <div class="progress-line"><div class="progress-show" style="width: 93%"></div></div>
+                </div>
+            </div>
+            <div class="zf-item" style="width: 32.83951%;margin-left: 16px;">
+                <div class="item-head">空间构成及有效期<a href="充值记录.html">扩容记录 ></a></div>
+                <!--  只显示最近5条数据  -->
+                <ul class="zfcz-list">
+                    <li>10GB免费空间<span>2020-04-15</span></li>
+                    <li>20GB扩展空间<span>2020-02-15</span></li>
+                </ul>
+            </div>
+        </div>
+        <span class="zfkr-btn">扩容<img src="images/1.png" alt=""></span>
+        <div class="zf-item" style="margin-top: 16px;display: none">
+            <div class="item-head">空间容量扩充<a href="充值记录.html">扩容记录 ></a></div>
+            <div class="zfkr-chose">
+                <div class="kr-list">
+                    <span class="num">10GB</span>
+                    <p class="price"><span>&yen;99</span>元/年</p>
+                    <a class="buy-btn">立即购买</a>
+                </div>
+                <div class="kr-list">
+                    <span class="num">20GB</span>
+                    <p class="price"><span>&yen;199</span>元/年</p>
+                    <a class="buy-btn">立即购买</a>
+                </div>
+                <div class="kr-list">
+                    <span class="num">50GB</span>
+                    <p class="price"><span>&yen;499</span>元/年</p>
+                    <a  class="buy-btn">立即购买</a>
+                </div>
+                <div class="kr-list">
+                    <span class="num">200GB</span>
+                    <p class="price"><span>&yen;699</span>元/年</p>
+                    <a class="buy-btn">立即购买</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zfgl-box">
+        <div class="zf-title"><span>短信扩容</span></div>
+        <div class="dub-list">
+            <div class="zf-item" style="width: 67.1506%">
+                <div class="item-head">短信使用情况<a href="短信使用详情.html">使用详情 ></a></div>
+                <div class="msg-progress">
+                    <div class="progress-txt">
+                        <p><b>50条</b>/100条&nbsp;&nbsp;(50%)</p>
+                    </div>
+                    <div class="progress-line"><div class="progress-show" style="width: 50%"></div></div>
+                </div>
+            </div>
+            <div class="zf-item" style="width: 32.83951%;margin-left: 16px;">
+                <div class="item-head">空间构成及有效期<a href="充值记录.html">扩容记录 ></a></div>
+                <!--  只显示最近5条数据  -->
+                <ul class="zfcz-list">
+                    <li>100条免费短信<span>长期有效</span></li>
+                </ul>
+            </div>
+        </div>
+        <span class="zfkr-btn">扩容<img src="images/1.png" alt=""></span>
+        <div class="zf-item" style="margin-top: 16px;display: none">
+            <div class="item-head">空间容量扩充<a href="充值记录.html">扩容记录 ></a></div>
+            <div class="zfkr-chose">
+                <div class="kr-list">
+                    <span class="num">100条</span>
+                    <p class="price"><span>&yen;99</span>元/年</p>
+                    <a class="buy-btn">立即购买</a>
+                </div>
+                <div class="kr-list">
+                    <span class="num">200条</span>
+                    <p class="price"><span>&yen;199</span>元/年</p>
+                    <a class="buy-btn">立即购买</a>
+                </div>
+                <div class="kr-list">
+                    <span class="num">500条</span>
+                    <p class="price"><span>&yen;499</span>元/年</p>
+                    <a class="buy-btn">立即购买</a>
+                </div>
+                <div class="kr-list">
+                    <span class="num">2000条</span>
+                    <p class="price"><span>&yen;699</span>元/年</p>
+                    <a class="buy-btn">立即购买</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  支付弹框，弹框中扩容选项内容跟外面对应，图片点进去，为多少‘GB’；短信点进去，为多少‘条’   -->
+<div class="activity_set activity_set2" id="add-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">充值账户:</div>
+            <div class="a_list_r">123456789</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l" style="align-items: flex-start">空间容量扩充:</div>
+            <div class="a_list_r">
+                <div>
+                    <p><span style="color: #00818a">2020-05-11</span> 至 <span style="color: #00818a">2021-05-11</span></p>
+                    <div class="num-chose">
+                        <label for="cj1" class="radio active">
+                            <div class="chose">
+                                <input type="radio" checked name="cj" id="cj1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <div class="msg_set_txt">10GB<span><em>￥99</em>元/年</span></div>
+                        </label>
+                        <label for="cj2" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="cj" id="cj2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <div class="msg_set_txt">20GB<span><em>￥199</em>元/年</span></div>
+                        </label>
+                        <label for="cj3" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="cj" id="cj3">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <div class="msg_set_txt">50GB<span><em>￥499</em>元/年</span></div>
+                        </label>
+                        <label for="cj4" class="radio">
+                            <div class="chose">
+                                <input type="radio"  name="cj" id="cj4">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <div class="msg_set_txt">200GB<span><em>￥699</em>元/年</span></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">支付金额:</div>
+            <div class="a_list_r" style="color: #ff8800">99元</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l" style="align-items: flex-start;padding-top: 30px">支付方式:</div>
+            <!--  支付方式不同，下方二维码也不一样  -->
+            <div class="a_list_r flex-column">
+                <div class="num-chose" style="margin-top: 0">
+                    <label for="pay1" class="radio zhb-pay">
+                        <div class="chose">
+                            <input type="radio" name="pay" id="pay1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <div class="pay-way"><img src="images/zfb.png" alt="">支付宝</div>
+                    </label>
+                    <label for="pay2" class="radio wx-pay active">
+                        <div class="chose">
+                            <input type="radio" checked name="pay" id="pay2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <div class="pay-way"><img src="images/wx.png" alt="">微信</div>
+                    </label>
+                </div>
+                <div class="eq-show">
+                    <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    <p>使用<span>微信APP</span>，扫码支付</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script>
+    $('.zfkr-btn').click(function () {
+        $(this).siblings('.zf-item').show();
+        $(this).hide();
+    });
+    $('.num-chose .radio').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    $('.wx-pay').click(function () {
+        $('.eq-show p span').text('微信APP');
+    });
+    $('.zhb-pay').click(function () {
+        $('.eq-show p span').text('支付宝APP');
+    });
+
+    $('#chutiyan .buy-btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '空间购买',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['800px', '612px'],
+            skin: 'activity_set',
+            content: $("#add-sure")
+        });
+        $('.activity_set').css('padding-top','0')
+    });
+
+</script>
+
+
+</body>
+</html>

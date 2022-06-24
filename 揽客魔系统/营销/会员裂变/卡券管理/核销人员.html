@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>核销人员</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<div class="content">
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="60px">序号</th>
+                        <th width="100px">用户ID</th>
+                        <th width="200px" class="left">用户</th>
+                        <th width="100px">姓名</th>
+                        <th width="100px">会员等级</th>
+                        <th width="100px">已核销</th>
+
+                        <!--  当表格出现竖向滚动条时，表头添加此 th ，用来占位，宽度等于表体的滚动条宽度（10px）  -->
+                        <th class="table-patch"></th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="60px">1</td>
+                        <td width="100px">10356</td>
+                        <td width="200px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/head2.jpg" alt="">
+                                <span class="wrap-noml">小土豆</span>
+                            </div>
+                        </td>
+                        <td width="100px">小土豆</td>
+                        <td width="100px">VIP</td>
+                        <td width="100px"><a class="hxNum">5</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .hxNum').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '已核销人员',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '已核销.html' //iframe的url
+        });
+    });
+</script>
+
+
+</body>
+</html>

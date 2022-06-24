@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>快速建店</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan">
+
+<div class="gz-content">
+    <p class="title font20">快速建店</p>
+    <div class="activity_set">
+        <p class="title">基本信息</p>
+        <div class="b-line">
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">店铺名称：</span>
+                    <div class="a_list_r"><input type="text" placeholder="最多输入15个字符"/></div>
+                </div>
+                <div class="a_list ">
+                    <span class="a_list_l">启用状态：</span>
+                    <div class="a_list_r">
+                        <div class="htmleaf-content">
+                            <div class="checkbox" id="vip-btn">
+                                <input type="checkbox"/>
+                                <label></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">是否自营：</span>
+                <div class="a_list_r">
+                    <div class="htmleaf-content">
+                        <div class="checkbox" id="vip-btn">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                    <span class="tishi">*店铺标识，自营店铺请开启</span>
+                </div>
+            </div>   
+            <div class="a_list">
+                <span class="a_list_l">店铺简介：</span>
+                <div class="a_list_r"><input type="text" placeholder="分享店铺时，展示此简介" class="w-620"/></div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">负责人：</span>
+                    <div class="a_list_r"><input type="text" readonly placeholder="点击选择（单选）"/></div>
+                </div>
+                <!--  根据选择的账户，调出其手机号  -->
+                <div class="a_list">
+                    <span class="a_list_l">负责人手机：</span>
+                    <div class="a_list_r"><input type="text"></div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">客服/运营：</span>
+                <div class="a_list_r"><input type="text" readonly placeholder="点击选择（单选）"/><span class="tishi">*用户咨询信息、订单信息将提示该账户</span></div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">运营手机：</span>
+                    <div class="a_list_r"><input type="text"></div>
+                </div>
+                
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">有效期至：</span>
+                <div class="a_list_r"><input type="text" class="layui-input" id="test1"><span class="tishi">*过完有效期，该店铺账号后台将无法登入</span></div>
+            </div>
+        </div>
+        <p class="title">银行账户</p>
+        <div class="b-line">
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">银行：</span>
+                    <div class="a_list_r">
+                        <div class="slide-select">
+                            <select>
+                                <option value="">中国银行</option>
+                                <option value="">工商银行</option>
+                                <option value="">邮政银行</option>
+                                <option value="">农业银行</option>
+                                <option value="">建设银行</option>
+                                <option value="">招商银行</option>
+                                <option value="">交通银行</option>
+                            </select>
+                            <img src="../../images/bottom-icon.jpg" alt="">
+                        </div>
+                        <span class="tishi">*用于货款结算</span>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">开户行名：</span>
+                    <div class="a_list_r"><input type="text"/></div>
+                </div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">卡号：</span>
+                    <div class="a_list_r"><input type="text" /></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">持卡人：</span>
+                    <div class="a_list_r"><input type="text" placeholder="持卡人姓名/对公账户名"/></div>
+                </div>
+            </div>
+        </div>
+        <p class="title">公司信息</p>
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">公司名称：</span>
+                <div class="a_list_r"><input type="text" class="w-620"/></div>
+            </div>
+            <div class="a_list flex-start">
+                <span class="a_list_l top5">联系地址：</span>
+                <div class="a_list_r">
+                    <div class="list-column">
+                        <div class="layui-form">
+                            <div class="layui-form-item" id="area-picker">
+                                <div class="layui-input-inline" style="width: 200px;">
+                                    <select name="province" class="province-selector" data-value="四川省" lay-filter="province-1">
+                                        <option value="">请选择省</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline" style="width: 200px;">
+                                    <select name="city" class="city-selector" data-value="成都市" lay-filter="city-1">
+                                        <option value="">请选择市</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline" style="width: 200px;">
+                                    <select name="county" class="county-selector" data-value="武侯区" lay-filter="county-1">
+                                        <option value="">请选择区</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- 退货地址，每个店调用上次输入结果 -->
+                            <input type="text" placeholder="详细地址" class="w-620">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list flex-start">
+                <span class="a_list_l">营业执照：</span>
+                <div class="a_list_r flex-column">
+                    <div class="file-cont">
+                        <!-- 给 file-btn 添加上传图片功能，  -->
+                        <div class="file-btn"></div>
+                        <p class="tishi2">*上传规范：证件照需完整、清晰，为彩色</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="title">店铺信息</p>
+        <div class="b-line">
+            <div class="dub-list">
+                <div class="a_list flex-start">
+                    <span class="a_list_l">店铺logo：</span>
+                    <div class="a_list_r flex-column">
+                        <div class="file-cont">
+                            <!-- 给 file-btn 添加上传图片功能，  -->
+                            <div class="file-btn"></div>
+                            <p class="tishi2">*建议尺寸：20px*20px</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list flex-start">
+                    <span class="a_list_l">店铺主图：</span>
+                    <div class="a_list_r flex-column">
+                        <div class="file-cont">
+                            <!-- 给 file-btn 添加上传图片功能，  -->
+                            <div class="file-btn"></div>
+                            <p class="tishi2">*建议尺寸：520px*280px</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list flex-start">
+                <span class="a_list_l">店铺介绍：</span>
+                <div class="a_list_r">
+                    <textarea name="" id="" style="width: 100%;height: 400px;max-width: 720px">富文本编辑器</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script>
+    //配置插件目录
+    layui.config({
+        base: '../../js/mods/'
+        , version: '1.0'
+    });
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form', 'layarea'], function () {
+        var layer = layui.layer
+            , form = layui.form
+            , layarea = layui.layarea;
+
+        layarea.render({
+            elem: '#area-picker',
+            change: function (res) {
+                //选择结果
+                console.log(res);
+            }
+        });
+    });
+</script>
+<!-- 时间 -->
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+        });
+    });
+</script>
+</body>
+</html>

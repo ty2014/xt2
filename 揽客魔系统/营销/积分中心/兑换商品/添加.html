@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加商品</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body id="chutiyan" style="height: auto;padding: 0;background: #fff">
+
+<!--
+注意：是否邮寄
+1、选择’是‘，则前端页面支付成功后，跳转  ’交易成功.html‘
+2、选择’否‘，则前端页面支付成功后，跳转  ’兑换成功.html‘
+-->
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">基本信息</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">商品主图:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="tishi mgL-0">*建议像素750*750，比例为1:1，jpg、png格式，图片小于500kb</p>
+            </div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">商品名称:</span>
+            <div class="a_list_r"><input type="text" placeholder="分享活动展示该简介" class="w-620"></div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">商品卖点:</span>
+            <div class="a_list_r"><input type="text" placeholder="简介，介绍商品卖点，常用于分享展示" class="w-620"></div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">商品介绍:</span>
+            <div class="a_list_r">
+                <textarea style="width: 620px;height: 400px;">这里放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">价格库存</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">市场价:</span>
+            <div class="a_list_r"><input type="text" class="m_width center" style="margin-right: 8px;">元<span class="tishi">*选填，填写将在商品详情按画线形式展示</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">售价:</span>
+            <div class="a_list_r">
+                <input type="number" class="m_width center" placeholder="选填" style="margin-right: 8px;">元+
+                <input type="number" class="m_width center" placeholder="必填" style="margin-right: 8px;">积分
+                <span class="tishi">*用户兑换1件该商品需支付的价格和积分，所需积分必须>0</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">库存:</span>
+            <div class="a_list_r"><input type="text" class="m_width center" style="margin-right: 8px;">已售：0<span class="tishi">*此处库存为商品的可售卖/兑换库存，可以直接修改，修改后商品库存数量会进行变化</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">默认销量:</span>
+            <div class="a_list_r"><input type="text" class="m_width center" style="margin-right: 8px;"><span class="tishi">*已售+默认销量=用户端展示销量</span></div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">其他信息</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">是否邮寄:</span>
+                <div class="a_list_r sfkd">
+<!--
+1、选择’是‘，则前端页面支付成功后，跳转  ’交易成功.html‘
+2、选择’否‘，则前端页面支付成功后，跳转  ’兑换成功.html‘
+-->
+                    <div class="select-text">
+                        <span class="select-txt">是</span>
+                        <ul>
+                            <li class="active">是</li>
+                            <li>否</li>
+                        </ul>
+                    </div>
+                    <i class="tips" style="margin-left: 10px;"></i>
+                    <a class="hide_cont demoTip" style="display: none;margin-left: 10px;">点击查看示例</a>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">快递运费:</span>
+                <div class="a_list_r">
+                    <input type="text" class="m_width center" style="margin-right: 8px;">元/件
+                    <span class="tishi">*商品售价+运费=应支付价格</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hide_cont" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l">微信头像:</span>
+                <div class="a_list_r">
+                    <ul class="FraUpload_imglist layer-photos-demo">
+                        <li class="img_item" style="border-radius: 50%;display: none">
+                            <img src="">
+                            <span class="icon-delete img_del"></span>
+                        </li>
+                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                        <li class="file-btn" style="border-radius: 50%"></li>
+                    </ul>
+                    <p class="tishi" style="margin-left: 0">*建议像素80*80或比例1:1 ，JPG、PNG格式，图片小于50KB</p>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">微信二维码:</span>
+                <div class="a_list_r">
+                    <ul class="FraUpload_imglist layer-photos-demo">
+                        <li class="img_item" style="display: none">
+                            <img src="">
+                            <span class="icon-delete img_del"></span>
+                        </li>
+                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                        <li class="file-btn"></li>
+                    </ul>
+                    <p class="tishi" style="margin-left: 0">*建议像素200*200或比例1:1 ，JPG、PNG格式，图片小于100KB</p>
+                </div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">微信昵称:</span>
+                    <div class="a_list_r">
+                        <input type="text" value="">
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">微信号:</span>
+                    <div class="a_list_r">
+                        <input type="text" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">手机号:</span>
+                <div class="a_list_r">
+                    <input type="number" value="">
+                </div>
+            </div>
+        </div>
+
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">是否推荐:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper ">
+                            <input type="checkbox" id="cont1-togg1"  class="toggle-button" name="switch">
+                            <label for="cont1-togg1" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">是</span>
+                                <span class="text off">否</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="tishi">*推荐将在其他兑换的商品详情页下方出现</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">优先级:</span>
+                <div class="a_list_r">
+                    <input type="number" class="m_width center">
+                    <span class="tishi">*数字越大，排序越前</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">兑换限制:</span>
+            <div class="a_list_r dhxz_btn">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper ">
+                        <input type="checkbox" id="cont1-togg2" checked class="toggle-button" name="switch">
+                        <label for="cont1-togg2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">限购</span>
+                            <span class="text off">不限购</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="dhxz_cont">每个用户累计最多可兑换<input type="number" class="s_width center" style="margin: 0 8px;">件</div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">积分抵现:</span>
+            <div class="a_list_r jfdx_btn">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper ">
+                        <input type="checkbox" id="cont1-togg3" checked class="toggle-button" name="switch">
+                        <label for="cont1-togg3" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">启用</span>
+                            <span class="text off">停用</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="jfdx_cont" style="display: flex;align-items: center;flex-wrap: wrap;">
+                    <div class="select-text" style="margin-right: 16px;min-width: 90px;">
+                        <span class="select-txt">比例抵扣</span>
+                        <ul>
+                            <li class="active">比例抵扣</li>
+                            <li>固定金额</li>
+                        </ul>
+                    </div>
+                    <div class="cont1">抵扣应支付金额的<input type="number" class="s_width center" style="margin: 0 8px;">%</div>
+                    <div class="cont2" style="display: none">最多可抵扣<input type="number" class="m_width center" style="margin: 0 8px;">元 <span class="tishi2">*抵扣金额若大于用户应付价，则只需支付0元并扣除对应积分，邮费不可抵扣</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">商品上架:</span>
+            <div class="a_list_r">
+                <label for="cj1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="cj" id="cj1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">立即上架</span>
+                </label>
+                <label for="cj2" class="radio mgR-0">
+                    <div class="chose">
+                        <input type="radio" name="cj" id="cj2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">暂不上架，放入仓库中</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+<img src="../images/demoPic.png" alt="" id="demo_img" style="height: 580px;display: none;">
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    $('#chutiyan .sfkd .tips').on('mouseenter',function(){
+        this.index =layer.tips('选择“否”，则需要填写联系人信息', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:680
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+    $('.dhxz_btn label').click(function () {
+        $('.dhxz_cont').toggle();
+    });
+    $('.jfdx_btn label').click(function () {
+        $('.jfdx_cont').toggle();
+    });
+
+    $('#chutiyan .demoTip').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#demo_img")
+        });
+    });
+    $('.sfkd .select-text li').click(function () {
+        var txt = $(this).text();
+        if(txt === '是'){
+            $('.hide_cont').hide();
+        }else{
+            $('.hide_cont').show();
+        }
+    });
+    $('.jfdx_btn .select-text li').click(function () {
+        var txt = $(this).text();
+        if(txt === '比例抵扣'){
+            $('.jfdx_cont .cont1').show();
+            $('.jfdx_cont .cont2').hide();
+        }else{
+            $('.jfdx_cont .cont2').show();
+            $('.jfdx_cont .cont1').hide();
+        }
+    });
+
+</script>
+
+</body>
+</html>

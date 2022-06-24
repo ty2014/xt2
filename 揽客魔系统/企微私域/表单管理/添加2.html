@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.1">
+    <style>
+        .fa-bars{cursor: all-scroll}
+        .normal-table table thead{border-bottom: 1px solid #ededed;background: #f7f7f7;}
+
+
+        .resever-msg-type2{background: #fff;}
+        .resever-msg-type2 .resever-list{padding: 14px 10px;}
+        .resever-msg-type2 .resever-list .list_cont{display: flex;flex-direction: column;position: relative;align-items: flex-start}
+        .resever-msg-type2 .resever-list .list-tip{font-size: 16px;color: #111;display: flex;align-items: center;min-width: 80px;transition: all linear .2s;overflow: hidden;margin-bottom: 5px; font-weight:bold}
+        .resever-msg-type2 .resever-list .list-tip i{font-style: normal;font-size: 12px;color: #f00;display: block;margin-left: 6px;}
+        .resever-msg-type2 .resever-list .list-tip em{font-style: normal;font-size: 13px;color: #999;margin-left: 6px;}
+        .resever-msg-type2 .resever-list .list_tips{font-size:13px;color: #666;margin-bottom: 10px; line-height:160%}
+        .resever-msg-type2 .resever-list .list-msg{flex: 1;position: relative;width: 100%;}
+        .resever-msg-type2 .resever-list .list-msg img{width: 16px;position: absolute;left: 4px;top: 50%;transform: translateY(-50%);}
+        .resever-msg-type2 .resever-list input{flex: 1;font-size:16px;color: #111;background: transparent;}
+        .resever-msg-type2 .resever-list input,.resever-list select,.express-area{height: 18px;line-height: 18px;border-radius: 2px;vertical-align: middle;}
+        .resever-msg-type2 .resever-list input,.resever-list select,.resever-list .bz-cont,.express-area{width: 100%;outline: none;border: none;transition: all linear .2s;}
+        .resever-msg-type2 .resever-list input::-webkit-input-placeholder,.resever-list .bz-cont::-webkit-input-placeholder{font-size: 13px;color: #c0c0c2;}
+        .resever-msg-type2 .resever-list input[type='date'],.resever-msg-type2 .resever-list input[type='time']{padding-right: 0}
+        .resever-msg-type2 .resever-list .input-area{padding: 4px 24px 0 4px}
+        .resever-msg-type2 .resever-list select{padding: 2px 4px 0;background: #fff;}
+        .resever-msg-type2 .resever-list .bz-cont{font-size:14px;height: 60px;overflow: auto;resize: none;background: transparent;padding: 5px;}
+        .resever-msg-type2 .clear-input-txt{display: none;width: 18px;height: 18px;background: url(images/icon16.png)no-repeat center/contain;position: absolute;right: 4px;bottom: 8px;cursor: pointer;}
+        .resever-msg-type2 .resever-list .file-area{width: 100%;display: flex;flex-wrap: wrap;}
+        .resever-msg-type2 .resever-list .file-area li{width: 60px;height: 60px;margin: 10px 10px 0 0;border-radius: 3px;overflow: hidden;position: relative;}
+        .resever-msg-type2 .resever-list .file-area li:last-child{margin-right: 0}
+        .resever-msg-type2 .resever-list .file-area li img{width: 100%;height: 100%;vertical-align: top;object-fit: cover;}
+        .resever-msg-type2 .resever-list .file-area li span{font-size: 12px;color: #fff;background: rgba(0,0,0,.5);border-radius: 10px;display: inline-block;position: absolute;right: 4px;top: 4px;padding: 2px 10px;cursor: pointer;}
+        .resever-msg-type2 .resever-list .file-area .file-btn{background: #f8f8f8 url("images/add.png")no-repeat center/20px;cursor: pointer;margin-right: 0}
+        .resever-msg-type2 .resever-list .vertical{flex-direction: column;align-items: flex-start;}
+        .resever-msg-type2 .resever-list .vertical .list-tip{width: auto;}
+        .resever-msg-type2 .resever-list .vertical + .list_tips{padding-left: 0;}
+        .resever-msg-type2 .resever-list input,.resever-msg-type2 .resever-list select,.resever-msg-type2 .express-area{height:38px;min-height: 38px;}
+        .resever-msg-type2 .resever-list input,.resever-msg-type2 .resever-list select,.resever-msg-type2 .resever-list .bz-cont,.resever-msg-type2 .express-area{
+            width: 100%;outline: none;
+            border-top: 1px solid #d4d4d4;
+            border-bottom: 1px solid #f1f1f1;
+            border-left: 1px solid #d4d4d4;
+            border-right: 1px solid #f1f1f1;
+            transition: all linear .2s;
+        }
+        .resever-msg-type2 .express-area dl dt,.resever-msg-type2 .express-area dl dd{line-height: 34px;}
+        .resever-msg-type2 .resever-list .input-area,.resever-msg-type2 .resever-list select{padding-top: 0;}
+        .resever-msg-type2 .checked_list{margin-top: 0;}
+
+        /*选择地区*/
+        .express-area {flex: 1;font-size: 13px;padding: 0 6px 0 4px;}
+        #expressArea{background: url("images/bottom.png")no-repeat right/12px;display: block;}
+        .express-area dl dt {color: #c0c0c2;}
+        .express-area dl dd {color: #666;font-weight: bold;}
+        /*选择地区弹层*/
+        .express-area-box { position: fixed; bottom: -100%; left:0; z-index: 115; width: 100%;background-color: #fff; color: #4d525d;font-size: 14px;}
+        .express-area-box header {height: 45px;line-height: 45px;background: #fff;text-align: center;position: relative; border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2; }
+        .express-area-box header h3 {font-size: 14px;margin: 0;}
+        .express-area-box header .back,.express-area-box header .close { position: absolute; top: 0; width: 44px; height: 100%; }
+        .express-area-box header .back { display: none; left: 0; background: url(images/back.png) no-repeat center/8px;}
+        .express-area-box header .close { right: 0; background: url(images/close.png) no-repeat center/16px;}
+        .express-area-box article { height: 250px; overflow-y: scroll; }
+        .express-area-box .area-list li {display: flex;align-items: center;justify-content: space-between;border-bottom: 1px solid #f3f3f3;padding: 16px 12px;position: relative;}
+
+
+        /* 单选 */
+        .resever-msg-type2 .radio .chose,.resever-msg-type2 .radio .checked-bg,.resever-msg-type2 .radio input:checked + span.checked-on + span.checked-on-bg{height: 16px;width: 16px;min-width: 16px;}
+        .resever-msg-type2 .radio{position: relative;display: flex;align-items: center;font-size:15px;color: #333}
+        .resever-msg-type2 .radio .chose{position: relative;}
+        .resever-msg-type2 .radio input{display: none;}
+        .resever-msg-type2 .radio .chose-txt{margin-left: 8px;}
+        .resever-msg-type2 .radio .checked-bg{display: inline-block;border: 1px solid #ddd;border-radius: 50%;position: absolute;top: 0;}
+        .resever-msg-type2 .radio .checked-on{display: none;vertical-align: middle;}
+        .resever-msg-type2 .radio input:checked + span.checked-on + span.checked-on-bg{animation: RadioClick .3s linear;position: absolute;background:url("images/check.png")no-repeat center/contain;border-radius: 50%;top: 0;left: 0;display: inline-block;}
+        @keyframes RadioClick{
+            0%{transform:scale(1.2);opacity: 0.8;}
+            50%{transform:scale(1.4);opacity: 0.4;}
+            100%{transform:scale(1.6);opacity: 0.1;}
+        }
+        /* 多选 */
+        .resever-msg-type2 .checked .chose,.resever-msg-type2 .checked .checked-bg,.resever-msg-type2 .checked input:checked + span.checked-on + span.checked-on-bg{height: 16px;width: 16px;min-width: 16px;}
+        .resever-msg-type2 .checked{position: relative;display: flex;align-items: center;font-size:15px;color: #333}
+        .resever-msg-type2 .checked .chose{position: relative;}
+        .resever-msg-type2 .checked input{display: none;}
+        .resever-msg-type2 .checked .chose-txt{margin-left: 8px;}
+        .resever-msg-type2 .checked .checked-bg{display: inline-block;border: 1px solid #ddd;border-radius: 4px;position: absolute;top: 0;}
+        .resever-msg-type2 .checked .checked-on{display: none;vertical-align: middle;}
+        .resever-msg-type2 .checked input:checked + span.checked-on + span.checked-on-bg{animation: RadioClick .3s linear;position: absolute;background:url("images/check.png")no-repeat center/contain;border-radius: 4px;top: 0;left: 0;display: inline-block;}
+        @keyframes RadioClick{
+            0%{transform:scale(1.2);opacity: 0.8;}
+            50%{transform:scale(1.4);opacity: 0.4;}
+            100%{transform:scale(1.6);opacity: 0.1;}
+        }
+        .resever-msg-type2 .checked_list{width: 100%;margin-top: 10px;}
+        .resever-msg-type2 .checked_list li{padding: 4px 0;}
+
+        /**/
+        .diary_files {display: flex;align-items: center;background: #f6f6f6; border-radius: 5px; padding: 10px 14px 14px; margin-top: 7.5px; position: relative; }
+        .diary_files .file_pic {width: 24px;height: 24px;margin-right: 10px;}
+        .diary_files .file_pic img{width: 100%!important;height: 100%;position: unset!important;transform: unset!important}
+        .diary_files .file_txt{flex: 1;}
+        .diary_files .file_txt p { font-size: 13px; line-height: normal; }
+        .diary_files .file_txt span { font-size: 12px; color: #8f8f8f; margin-top: 5px; }
+        .diary_files .close_tip { width: 15px; height: 15px; background: #969696; right: -5px; top: -5px; transform: none; left: unset; bottom: unset;border: 1px solid #fff;display: block;border-radius: 50%;overflow: hidden;position: absolute;z-index: 2;cursor: pointer;}
+        .diary_files .close_tip::before, .diary_files .close_tip::after {content: "";display: inline-block;width: 8px; height: 1px;    background: #fff;border-radius: 5px;position: absolute;left: 25%; top: 48%;}
+        .diary_files .close_tip::before{transform: rotate(45deg);}
+        .diary_files .close_tip::after{transform: rotate(-45deg);}
+
+        .line{border-top: 1px dashed #ddd;margin: 10px 0;}
+
+
+    </style>
+</head>
+<body>
+
+<div class="content" style="position: relative;overflow: auto;">
+    <div class="activity_set activity_set3 w-4">
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">表单名称:</span>
+                <div class="a_list_r">
+                    <div class="showNumBox w-620">
+                        <input type="text" maxlength="40" placeholder="请输入表单名称，将会在手机填写页面作为标题展示">
+                        <span class="num">0/40</span>
+                    </div>
+                </div>
+            </div>
+            <!--  上传的封面图会在右侧的可视化区域展示  -->
+            <div class="a_list">
+                <span class="a_list_l">上传封面图:</span>
+                <div class="a_list_r">
+                    <ul class="FraUpload_imglist auto">
+                        <li class="img_item" style="display: none">
+                            <img src="">
+                            <span class="icon-delete img_del"></span>
+                        </li>
+                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                        <li class="file-btn"></li>
+                    </ul>
+                    <p class="tishi mgL-0">*建议图片尺寸为240px*200px，大小不超过500KB</p>
+                </div>
+            </div>
+
+            <div class="a_list">
+                <span class="a_list_l">表单类型:</span>
+                <div class="a_list_r">
+                    <div>
+                        <span class="set-user">添加表单信息<i class="layui-icon layui-icon-down layui-font-12 mgL-4"></i></span>
+                    </div>
+                    <span class="tishi">*可上下拖动排序</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <div class="normal-table" style="min-width: 600px">
+                        <table border="0" style="table-layout: unset;">
+                            <thead>
+                            <tr>
+                                <th style="width: 80px">类型</th>
+                                <th style="width: 120px">字段名</th>
+                                <th style="width: 150px">填写提示</th>
+                                <th style="width: 50px">必填</th>
+                                <th style="width: 120px">选项</th>
+                                <th style="width: 60px">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody  id="example2">
+                            <tr>
+                                <td class="left">手机号</td>
+                                <td><input type="text" value="手机号" ></td>
+                                <td><input type="text" placeholder="请输入手机号"></td>
+                                <td>
+                                    <label for="check1" class="checked disabled mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check1" disabled>
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td></td>
+                                <td><a class="expired del">删除</a></td>
+                            </tr>
+                            <tr>
+                                <td class="left">身份证</td>
+                                <td><input type="text" value="身份证" ></td>
+                                <td><input type="text" placeholder="请输入身份证"></td>
+                                <td>
+                                    <label for="check2" class="checked disabled mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check2" disabled>
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td></td>
+                                <td><a class="expired del">删除</a></td>
+                            </tr>
+                            <tr>
+                                <td class="left">性别</td>
+                                <td><input type="text" value="性别" placeholder="请输入标题"></td>
+                                <td><input type="text" value="" placeholder="请输入提示语"></td>
+                                <td>
+                                    <label for="check3" class="checked mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check3" >
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td><a class="edit_checked">编辑</a></td>
+                                <td>
+                                    <a class="expired del">删除</a>
+                                </td>
+                            </tr>
+                            <tr class="errorTip">
+                                <td class="left">地址</td>
+                                <td><input type="text" value="地址" placeholder="请输入标题"></td>
+                                <td><input type="text" placeholder="请输入提示语"></td>
+                                <td>
+                                    <label for="check4" class="checked mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check4" >
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <div style="display: flex;align-items: center;justify-content: center;flex-wrap: wrap;padding: 6px 0;">
+                                        <div class="select-text" style="margin-right: 10px;min-width: 86px;">
+                                            <span class="select-txt">省-市-区</span>
+                                            <ul style="display: none;">
+                                                <li class="">省</li>
+                                                <li class="">省-市</li>
+                                                <li class="active">省-市-区</li>
+                                            </ul>
+                                        </div>+&nbsp;
+                                        <label for="addr1" class="checked">
+                                            <div class="chose">
+                                                <input type="checkbox" checked="" name="addr" id="addr1">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">详细地址</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a class="expired del">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">时间</td>
+                                <td><input type="text" value="时间" placeholder="请输入标题"></td>
+                                <td><input type="text" value="" placeholder="请输入提示语"></td>
+                                <td>
+                                    <label for="check3" class="checked mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check3" >
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <a class="expired del">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">日期</td>
+                                <td><input type="text" value="日期" placeholder="请输入标题"></td>
+                                <td><input type="text" value="" placeholder="请输入提示语"></td>
+                                <td>
+                                    <label for="check3" class="checked mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check3" >
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <a class="expired del">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">数字</td>
+                                <td><input type="text" value="数字" placeholder="请输入标题"></td>
+                                <td><input type="text" value="" placeholder="请输入提示语"></td>
+                                <td>
+                                    <label for="check3" class="checked mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check3" >
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <div style="display: flex;align-items: center;justify-content: center;flex-wrap: wrap;padding: 6px 0;">
+                                        <div class="select-text" style="min-width: 120px;">
+                                            <span class="select-txt">整数</span>
+                                            <ul style="display: none;">
+                                                <li class="active">整数</li>
+                                                <li>最多1位小数</li>
+                                                <li>最多2位小数</li>
+                                                <li>最多3位小数</li>
+                                                <li>最多4位小数</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a class="expired del">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">图片</td>
+                                <td><input type="text" value="图片" placeholder="请输入标题"></td>
+                                <td><input type="text" value="" placeholder="请输入提示语"></td>
+                                <td>
+                                    <label for="check3" class="checked mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check3" >
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <div style="display: flex;align-items: center;justify-content: center;flex-wrap: wrap;padding: 6px 0;">
+                                        最多上传：
+                                        <div class="select-text" style="min-width: 60px;">
+                                            <span class="select-txt">3</span>
+                                            <ul style="display: none;">
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                            </ul>
+                                        </div>
+                                        &nbsp;张
+                                    </div>
+                                </td>
+                                <td>
+                                    <a class="expired del">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">单选</td>
+                                <td><input type="text" value="单选" placeholder="请输入标题"></td>
+                                <td><input type="text" value="" placeholder="请输入提示语"></td>
+                                <td>
+                                    <label for="check3" class="checked mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check3" >
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <a class="edit_checked">编辑</a>
+                                </td>
+                                <td>
+                                    <a class="expired del">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">多选</td>
+                                <td><input type="text" value="多选" placeholder="请输入标题"></td>
+                                <td><input type="text" value="" placeholder="请输入提示语"></td>
+                                <td>
+                                    <label for="check3" class="checked mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check3" >
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <a class="edit_checked">编辑</a>
+                                </td>
+                                <td>
+                                    <a class="expired del">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">上传附件</td>
+                                <td><input type="text" value="上传附件" placeholder="请输入标题"></td>
+                                <td><input type="text" value="" placeholder="请输入提示语"></td>
+                                <td>
+                                    <label for="check3" class="checked mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check3" >
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <span class="tishi">*仅支持Word、TXT格式文件</span>
+                                </td>
+                                <td>
+                                    <a class="expired del">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">分割线</td>
+                                <td><input type="text" value="分割线" placeholder="请输入标题"></td>
+                                <td><input type="text" value="" placeholder="请输入提示语"></td>
+                                <td>
+                                    <label for="check3" class="checked mg-auto">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="check" id="check3" >
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <span class="tishi">*用来分隔内容的虚线</span>
+                                </td>
+                                <td>
+                                    <a class="expired del">删除</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="a_list">
+                <span class="a_list_l">截止日期:</span>
+                <div class="a_list_r chose_item">
+                    <label for="time1" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked="" name="time" id="time1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">永久有效</span>
+                    </label>
+                    <label for="time2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="time" id="time2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">自定义时间</span>
+                    </label>
+                    <span class="tishi">*表单截止后，用户打开表单会提示此表单已结束哦</span>
+                </div>
+            </div>
+            <div class="a_list time_cont" style="display: none">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <input type="text" class="layui-input" id="test1" placeholder="起">
+                    <span class="date-line"></span>
+                    <input type="text" class="layui-input" id="test1" placeholder="止">
+                </div>
+            </div>
+
+        </div>
+        <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+    </div>
+    <div id="Rview"  style="width: 375px;min-width: 375px;height: 667px;background: url(../images/pz3.png)no-repeat top/contain;position: absolute;overflow: hidden;transform: scale(.7);top: -60px;left: 740px;">
+        <div class="resever-msg-type2" style="position: absolute;top: 125px;left: 43px;right: 43px;bottom: 74px;background: #fff;overflow-y: auto;overflow-x: hidden;">
+            <img src="https://img0.baidu.com/it/u=4281860672,1981139753&fm=253&fmt=auto&app=138&f=JPEG?w=480&h=320" alt="">
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">姓名<i>*</i></span>
+                    <div class="list_tips">请输入姓名</div>
+                    <div class="list-msg">
+                        <input type="text" class="input-area" placeholder="请填写">
+                        <em class="clear-input-txt"></em>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">电话<i>*</i></span>
+                    <div class="list_tips">请输入手机号码</div>
+                    <div class="list-msg">
+                        <input type="number" class="input-area" placeholder="请填写" oninput="if(value.length>11)value=value.slice(0,11)">
+                        <em class="clear-input-txt"></em>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">身份证<i>*</i></span>
+                    <div class="list_tips">请输入身份证号码</div>
+                    <div class="list-msg">
+                        <input type="tel" class="input-area" placeholder="请填写">
+                        <em class="clear-input-txt"></em>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">性别</span>
+                    <div class="list_tips">请选择</div>
+                    <div class="list-msg">
+                        <select>
+                            <option value="">男</option>
+                            <option value="">女</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">数字</span>
+                    <div class="list_tips">请填写整数</div>
+                    <div class="list-msg">
+                        <input type="number" class="input-area" placeholder="请填写">
+                        <em class="clear-input-txt"></em>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">日期<i>*</i></span>
+                    <div class="list_tips">请选择日期</div>
+                    <div class="list-msg">
+                        <input type="date" class="input-area" placeholder="请选择">
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">时间<i>*</i></span>
+                    <div class="list_tips">请选择时间</div>
+                    <div class="list-msg">
+                        <input type="time" class="input-area" placeholder="请选择">
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">地址<i>*</i></span>
+                    <div class="list_tips">请选择省/市/区</div>
+                    <div class="list-msg">
+                        <!--选择地区-->
+                        <section class="express-area">
+                            <a id="expressArea">
+                                <dl>
+                                    <dt>请选择</dt>
+                                    <dd></dd>
+                                </dl>
+                            </a>
+                        </section>
+                        <!--选择地区弹层-->
+                        <section id="areaLayer" class="express-area-box">
+                            <header>
+                                <h3>选择地区</h3>
+                                <a id="backUp" class="back" href="javascript:void(0)" title="返回" style="display: none;"></a>
+                                <a id="closeArea" class="close" href="javascript:void(0)" title="关闭"></a>
+                            </header>
+                            <article id="areaBox">
+                                <ul id="areaList" class="area-list"><li onclick="selectP(0);">北京市</li><li onclick="selectP(1);">天津市</li><li onclick="selectP(2);">河北省</li><li onclick="selectP(3);">河南省</li><li onclick="selectP(4);">山西省</li><li onclick="selectP(5);">山东省</li><li onclick="selectP(6);">内蒙古自治区</li><li onclick="selectP(7);">辽宁省</li><li onclick="selectP(8);">吉林省</li><li onclick="selectP(9);">黑龙江省</li><li onclick="selectP(10);">上海市</li><li onclick="selectP(11);">江苏省</li><li onclick="selectP(12);">浙江省</li><li onclick="selectP(13);">福建省</li><li onclick="selectP(14);">江西省</li><li onclick="selectP(15);">安徽省</li><li onclick="selectP(16);">湖北省</li><li onclick="selectP(17);">湖南省</li><li onclick="selectP(18);">广东省</li><li onclick="selectP(19);">广西壮族自治区</li><li onclick="selectP(20);">海南省</li><li onclick="selectP(21);">重庆市</li><li onclick="selectP(22);">四川省</li><li onclick="selectP(23);">贵州省</li><li onclick="selectP(24);">云南省</li><li onclick="selectP(25);">西藏自治区</li><li onclick="selectP(26);">陕西省</li><li onclick="selectP(27);">甘肃省</li><li onclick="selectP(28);">青海省</li><li onclick="selectP(29);">宁夏回族自治区</li><li onclick="selectP(30);">新疆维吾尔自治区</li><li onclick="selectP(31);">台湾省</li><li onclick="selectP(32);">香港特别行政区</li><li onclick="selectP(33);">澳门特别行政区</li></ul>
+                            </article>
+                        </section>
+                        <!--遮罩层-->
+                        <div id="areaMask" class="model"><div class="mark"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">详细地址<i>*</i></span>
+                    <div class="list_tips">如道路、小区、楼栋号、门牌号等</div>
+                    <div class="list-msg">
+                        <input type="text" class="input-area" placeholder="请填写">
+                        <em class="clear-input-txt"></em>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont vertical">
+                    <span class="list-tip">备注<i>*</i></span>
+                    <div class="list_tips">填写备注</div>
+                    <div class="list-msg">
+                        <textarea class="bz-cont" placeholder="请填写"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <!--  最多上传张数由后台控制  -->
+                    <span class="list-tip">上传照片<i>*</i></span>
+                    <div class="list_tips">最多上传3张图片</div>
+                    <div class="list-msg">
+                        <ul class="file-area">
+                            <li><img src="http://goss.cfp.cn/creative/vcg/nowarter800/new/VCG41672216915.jpg" alt=""><span>删除</span></li>
+                            <li><img src="http://goss.cfp.cn/creative/vcg/nowarter800/new/VCG41672216915.jpg" alt=""><span>删除</span></li>
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">勾选选项<i>*</i></span>
+                    <div class="list_tips">单选</div>
+                    <div class="list-msg">
+                        <ul class="checked_list">
+                            <li>
+                                <label for="r1" class="radio">
+                                    <div class="chose">
+                                        <span class="checked-bg"></span>
+                                        <input type="radio" name="radio" id="r1">
+                                        <span class="checked-on"></span>
+                                        <span class="checked-on-bg"></span>
+                                    </div>
+                                    <span class="chose-txt">选项一</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="r2" class="radio">
+                                    <div class="chose">
+                                        <span class="checked-bg"></span>
+                                        <input type="radio" name="radio" id="r2">
+                                        <span class="checked-on"></span>
+                                        <span class="checked-on-bg"></span>
+                                    </div>
+                                    <span class="chose-txt">选项二</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <span class="list-tip">勾选选项<i>*</i></span>
+                    <div class="list_tips">可多选</div>
+                    <div class="list-msg">
+                        <ul class="checked_list">
+                            <li>
+                                <label for="c1" class="checked">
+                                    <div class="chose">
+                                        <span class="checked-bg"></span>
+                                        <input type="checkbox" name="checked" id="c1">
+                                        <span class="checked-on"></span>
+                                        <span class="checked-on-bg"></span>
+                                    </div>
+                                    <span class="chose-txt">选项一</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="c2" class="checked">
+                                    <div class="chose">
+                                        <span class="checked-bg"></span>
+                                        <input type="checkbox" name="checked" id="c2">
+                                        <span class="checked-on"></span>
+                                        <span class="checked-on-bg"></span>
+                                    </div>
+                                    <span class="chose-txt">选项二</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--  新增：上传附件、分割线  -->
+            <div class="resever-list">
+                <div class="list_cont">
+                    <!--  最多上传张数由后台控制  -->
+                    <span class="list-tip">上传附件<i>*</i></span>
+                    <div class="list_tips">仅支持Word、TXT格式文件</div>
+                    <div class="list-msg">
+                        <ul class="file-area">
+                            <li class="file-btn"></li>
+                        </ul>
+                        <div class="diary_files flex_center">
+                            <div class="file_pic"><img src="images/file/word.png" alt="" class="imgCover"></div>
+                            <div class="file_txt flex1">
+                                <p>后台统一规范后台统范后台统一规范.pdf</p>
+                                <span>4.67MB</span>
+                            </div>
+                            <span class="close_tip"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resever-list">
+                <p class="line"></p>
+            </div>
+            <div class="resever-list">
+                <div class="list_cont">
+                    <!--  最多上传张数由后台控制  -->
+                    <span class="list-tip">上传附件<i>*</i></span>
+                    <div class="list_tips">仅支持Word、TXT格式文件</div>
+                    <div class="list-msg">
+                        <ul class="file-area">
+                            <li class="file-btn"></li>
+                        </ul>
+                        <div class="diary_files flex_center">
+                            <div class="file_pic"><img src="images/file/txt.png" alt="" class="imgCover"></div>
+                            <div class="file_txt flex1">
+                                <p>后台统一规范.txt</p>
+                                <span>6KB</span>
+                            </div>
+                            <span class="close_tip"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/Sortable.min.js"></script>
+<script src="../../js/slideFixed.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $(function() {
+        // 右侧跟随滑动
+        $('#Rview').slideFixed();
+    });
+
+    var example2Left = document.getElementById('example2');
+    new Sortable(example2Left, {
+        group: 'shared', // set both lists to same group
+        animation: 150,
+    });
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    layui.use(['dropdown', 'util', 'layer', 'table'], function(){
+        var dropdown = layui.dropdown
+            ,util = layui.util
+            ,layer = layui.layer
+            ,table = layui.table
+            ,$ = layui.jquery;
+
+        dropdown.render({
+            elem: '.set-user'
+            ,data: [{
+                title: '手机号'
+                ,id: 100
+            },{
+                title: '身份证'
+                ,id: 101
+            },{
+                title: '单行文本'
+                ,id: 102
+            },{
+                title: '多行文本'
+                ,id: 103
+            },{
+                title: '下拉框'
+                ,id: 104
+            },{
+                title: '区域选择'
+                ,id: 105
+            }]
+            ,click: function(obj){
+                //layer.tips('点击了：'+ obj.title, this.elem, {tips: [1, '#5FB878']})
+            }
+        });
+
+    })
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('.del').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定删除该项设置？',{
+                skin: 'failureskin ',    //类名
+                icon:2,
+                title:'提示',
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+
+
+    $('.edit_checked').on('click', function(){
+        top.layer.open({
+            type: 2,
+            title: '编辑',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['800px', '80%'],
+            content: '企微私域/表单管理/添加下拉选项.html' //iframe的url
+        });
+    });
+    $('.addTip').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '436px'],
+            content: '../添加标签.html' //iframe的url
+        });
+    });
+
+    $('#time1').click(function () {$('.time_cont').hide()});
+    $('#time2').click(function () {$('.time_cont').show()});
+
+
+
+</script>
+
+</body>
+</html>

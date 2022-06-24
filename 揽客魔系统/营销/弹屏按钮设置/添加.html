@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        .showArea label{width: 112px;margin-right: 15px!important;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff">
+
+
+<div class="activity_set activity_set2">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r r-title">基础设置</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">活动名称:</span>
+            <div class="a_list_r">
+                <input type="text" class="w-620">
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">出现场景:</span>
+            <div class="a_list_r chose_item showArea" style="max-width: 560px;">
+                <label for="area1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="area" id="area1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">课堂首页</span>
+                </label>
+                <label for="area2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="area" id="area2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">系列课</span>
+                </label>
+                <label for="area3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="area" id="area3">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">线下活动</span>
+                </label>
+                <label for="area4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="area" id="area4">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">干货专栏</span>
+                </label>
+                <label for="area5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="area" id="area5">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">图文</span>
+                </label>
+                <label for="area6" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="area" id="area6">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">专题表单</span>
+                </label>
+                <label for="area7" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="area" id="area7">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">引流卡</span>
+                </label>
+                <label for="area8" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="area" id="area8">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">通讯录</span>
+                </label>
+                <label for="area9" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="area" id="area9">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">直播</span>
+                </label>
+                <span class="tishi mgL-0">*勾选后，对应页面就会出现浮动按钮</span>
+            </div>
+        </div>
+
+        <!--   右侧可视化区域     -->
+        <div id="Rview" style="background-color: #f0f0f0;background-image: url(‘’);background-position: center;background-repeat: no-repeat;background-size:100% 100%;position: absolute;left: 800px;top: 53px;z-index: 9;border: 1px solid #ddd;overflow: hidden">
+            <img src="images/yhqImg2.png" alt="" class="type1_img" style="width: 228px;min-width: 228px;">
+            <!--  浮动按钮  -->
+            <a class="showAd" style="display: block;width: 24px;min-height: 24px;max-height: 180px;overflow: hidden;position: absolute;right: 6px;bottom: 120px;z-index: 9">
+                <img src="https://img1.baidu.com/it/u=193017633,3104028607&fm=26&fmt=auto&gp=0.jpg" alt="" style="width: 100%;">
+            </a>
+            <!--  广告图  -->
+            <div class="adModel" style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 9;background: rgba(0,0,0,.7);">
+                <div style="position: absolute;top: 0;left: 0;z-index: 9;width: 100%;height: 100%;overflow: hidden;display: flex;align-items: center;justify-content: center;">
+                    <div style="position: relative">
+                        <i class="close_tip" style="background: url(http://cshtml.lkmsxy.com/csimg/close5.png)no-repeat center/contain;display: block;width: 12px;height: 12px;border-radius: 50%;position: absolute;top: -19px;right: 6px;z-index: 2;cursor: pointer;"></i>
+                        <a href="" style="position: relative;display: block">
+                            <img src="https://img2.baidu.com/it/u=2801474973,1777662573&fm=11&fmt=auto&gp=0.jpg" alt="" style="max-width: 100%;max-height: 100%;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--   广告图设置     -->
+        <div class="type_adCont">
+            <div class="a_list">
+                <div class="a_list_r r-title">弹屏广告设置</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">是否展示:</span>
+                <div class="a_list_r">
+                    <div class="select-text showType">
+                        <span class="select-txt">展示</span>
+                        <ul>
+                            <li class="active">展示</li>
+                            <li>不展示</li>
+                        </ul>
+                    </div>
+                    <span class="tishi">*设置为“展示”时，每个用户每天仅弹一次</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">添加广告图:</span>
+                <div class="a_list_r">
+                    <ul class="FraUpload_imglist layer-photos-demo">
+                        <li class="img_item" style="display: none">
+                            <img src="">
+                            <span class="icon-delete img_del"></span>
+                        </li>
+                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                        <li class="file-btn"></li>
+                    </ul>
+                    <div class="tishi mgL-0">
+                        <p>*建议像素400*400，大小不超过500KB</p>
+                        <p>用户打开页面时直接展示的广告图</p>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">广告跳转链接:</span>
+                <div class="a_list_r">
+                    <input type="text" class="w-620">
+                </div>
+            </div>
+        </div>
+
+        <!--   按钮设置     -->
+        <div class="type_btnCont">
+            <div class="a_list">
+                <div class="a_list_r r-title">浮动按钮设置</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">是否展示:</span>
+                <div class="a_list_r">
+                    <div class="select-text showType2">
+                        <span class="select-txt">展示</span>
+                        <ul>
+                            <li class="active">展示</li>
+                            <li>不展示</li>
+                        </ul>
+                    </div>
+                    <span class="tishi">*设置为“展示”时，浮动按钮一直显示</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">按钮背景:</span>
+                <div class="a_list_r">
+                    <ul class="FraUpload_imglist layer-photos-demo">
+                        <li class="img_item" style="display: none">
+                            <img src="">
+                            <span class="icon-delete img_del"></span>
+                        </li>
+                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                        <li class="file-btn"></li>
+                    </ul>
+                    <p class="tishi mgL-0">*建议像素100*100，大小不超过100KB</p>
+                </div>
+            </div>
+
+            <div class="a_list">
+                <span class="a_list_l">按钮位置:</span>
+                <div class="a_list_r">
+                    <div class="select-text btnType1" style="margin: 0 8px 0 0;">
+                        <span class="select-txt">居右</span>
+                        <ul>
+                            <li>居左</li>
+                            <li class="active">居右</li>
+                        </ul>
+                    </div>
+                    <div class="select-text btnType2" style="margin: 0 8px 0 0;">
+                        <span class="select-txt">居上</span>
+                        <ul>
+                            <li>居上</li>
+                            <li class="active">居下</li>
+                        </ul>
+                    </div>
+                    <input type="number" class="m_width btnTypeVal" placeholder="px" value="120" style="margin: 0 8px 0 0;">px
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">按钮样式:</span>
+                <div class="a_list_r">
+                    宽度：<input type="number" class="m_width center btnTypeVal_w" placeholder="px" value="40" style="margin: 0 8px 0 0;">px
+                </div>
+            </div>
+
+            <div class="a_list">
+                <span class="a_list_l">点击按钮操作:</span>
+                <div class="a_list_r lqType">
+                    <label for="lq1" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked="" name="lq" id="lq1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">弹出弹屏广告</span>
+                    </label>
+                    <label for="lq2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="lq" id="lq2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">跳转页面</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list lqType_cont1">
+                <span class="a_list_l">添加广告图:</span>
+                <div class="a_list_r">
+                    <ul class="FraUpload_imglist layer-photos-demo">
+                        <li class="img_item" style="display: none">
+                            <img src="">
+                            <span class="icon-delete img_del"></span>
+                        </li>
+                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                        <li class="file-btn"></li>
+                    </ul>
+                    <div class="tishi mgL-0">
+                        <p>*建议像素400*400，大小不超过500KB</p>
+                        <p>用户点击浮动按钮后展示的广告图</p>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list lqType_cont1">
+                <span class="a_list_l">广告跳转链接:</span>
+                <div class="a_list_r">
+                    <input type="text" class="w-620">
+                </div>
+            </div>
+            <div class="a_list lqType_cont2" style="display: none">
+                <span class="a_list_l">跳转页面地址:</span>
+                <div class="a_list_r">
+                    <input type="text" class="w-620">
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <div class="a_list_l">活动状态:</div>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="ad-togg" checked class="toggle-button" name="switch">
+                        <label for="ad-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">立即投放</span>
+                            <span class="text off">暂不投放</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/slideFixed.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $(function() {
+        $('#Rview').slideFixed();
+
+        // 等比设置弹屏图片大小
+        setTimeout(function () {
+            $('.adModel a').width($('.adModel img').width()*.6)
+        },10)
+    });
+
+    // 展示方式
+    $('.showType li').on('click',function () {
+        let index = $(this).index();
+        switch (index) {
+            case 0:
+                $('.adModel').show();
+                break;
+            case 1:
+                $('.adModel').hide();
+                break;
+        }
+    })
+    $('.showType2 li').on('click',function () {
+        let index = $(this).index();
+        switch (index) {
+            case 0:
+                $('.showAd').show();
+                break;
+            case 1:
+                $('.showAd').hide();
+                break;
+        }
+    })
+
+    // 按钮：点击后的操作
+    $('.lqType label').on('click',function () {
+        let i = $(this).index();
+        if(i === 0){
+            $('.lqType_cont1').show();
+            $('.lqType_cont2').hide();
+        }else if(i === 1){
+            $('.lqType_cont2').show();
+            $('.lqType_cont1').hide();
+        }
+    })
+
+    // 按钮点击展示广告
+    $('.showAd').click(function () {
+        $('.adModel').show();
+    })
+    // 关闭广告
+    $('.close_tip').click(function () {
+        $('.adModel').hide();
+    })
+
+
+
+    // 按钮位置
+    $('.btnType1 li').on('click',function () {
+        let index = $(this).text();
+        switch (index) {
+            case '居左':
+                $('.showAd').css({
+                    'left':'6px',
+                    'right':'unset'
+                });
+                break;
+            case '居右':
+                $('.showAd').css({
+                    'right':'6px',
+                    'left':'unset'
+                });
+                break;
+        }
+    })
+    $('.btnType2 li').on('click',function () {
+        let txt = $(this).text();
+        let val = $(".btnTypeVal").val();
+        if(val.length < 0){
+
+        }else{
+            if(txt === '居上'){
+                $('.showAd').css({
+                    'top':val*.6+'px',
+                    'bottom':'unset'
+                });
+            }else if(txt === '居下'){
+                $('.showAd').css({
+                    'top':'unset',
+                    'bottom':val*.6+'px'
+                });
+            }
+        }
+    })
+
+    var timer ='';
+    $(".btnTypeVal").bind("input propertychange",function(event){
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            let num = $(".btnTypeVal").val();
+            let txt = $('.btnType2 .select-txt').text();
+            if(txt === '居上'){
+                $('.showAd').css({
+                    'top':num*.6+'px',
+                    'bottom':'unset'
+                });
+            }else if(txt === '居下'){
+                $('.showAd').css({
+                    'top':'unset',
+                    'bottom':num*.6+'px'
+                });
+            }
+        },500)
+    });
+
+    var timer2 ='';
+    $(".btnTypeVal_w").bind("input propertychange",function(event){
+        clearTimeout(timer2);
+        timer2 = setTimeout(function () {
+            let num = $(".btnTypeVal_w").val();
+            let txt = $('.showAd').width(num*.6);
+        },500)
+    });
+
+
+</script>
+</body>
+</html>

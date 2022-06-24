@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活码授权</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/style.css?v=1.0.0">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto;width: auto">
+
+<ul class="head-tab3">
+    <li class="active current3"><a href="#tab1">单独授权</a></li>
+    <li><a href="#tab2">批量授权</a></li>
+</ul>
+
+
+<div class="tab-content3 content2" style="min-width: auto">
+    <div class="tab-pane active" id="tab1">
+        <div class="activity_set activity_set2 w-120 activity_set-normal">
+            <div class="b-line">
+                <div class="a_list">
+                    <span class="a_list_l">授权对象:</span>
+                    <div class="a_list_r">
+                        <span class="set-user chose_user" style="margin-right: 10px">选择</span>
+                        <img src="../images/head.jpg" alt="" class="user-pic"><a href="">小土豆</a>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">使用时间:</span>
+                    <div class="a_list_r">2020-06-25 10:00:00 ~ 2020-07-25 10:00:00<span class="tishi2">*使用中</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">授权天数:</span>
+                    <div class="a_list_r">
+                        2020-06-25 10:00:00
+                        <div class="select-text" style="width: 80px;min-width: 80px;margin-left: 8px">
+                            <span class="select-txt">增加</span>
+                            <ul>
+                                <li>增加</li>
+                                <li>扣减</li>
+                            </ul>
+                        </div>
+                        <input type="text" class="s_width center" style="margin-right: 8px">天
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">操作说明:</span>
+                    <div class="a_list_r"><textarea style="width: 400px;height: 60px;padding: 10px;resize: none"></textarea></div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+        <div class="activity_set activity_set2 w-120 activity_set-normal">
+            <div class="b-line">
+                <div class="a_list">
+                    <span class="a_list_l">授权对象:</span>
+                    <div class="a_list_r">
+                        <span class="set-user chose_users" style="margin-right: 10px">选择</span><a class="chose_users2">已选择100人</a>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">授权天数:</span>
+                    <div class="a_list_r">
+                        <div>
+                            <div>增加使用<input type="text" class="s_width center m-height" style="margin:0 8px">天</div>
+                            <p class="tishi2" style="margin-left: 0;margin-top: 10px">若用户已在“使用中”，将从“截止时间”上累加使用天数</p>
+                            <p class="tishi2" style="margin-left: 0">若用户当前“未使用”，将默认从“当前时间”可开始使用</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">操作说明:</span>
+                    <div class="a_list_r"><textarea style="width: 400px;height: 60px;padding: 10px;resize: none"></textarea></div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../js/layui/layui.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .chose_user').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择对象',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '选择对象.html' //iframe的url
+        });
+    });
+    $('#chutiyan .chose_users').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择对象',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '选择对象批量.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .chose_users2').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择对象',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '选择对象批量.html#tab2' //iframe的url
+        });
+    });
+</script>
+
+</body>
+</html>

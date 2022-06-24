@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>社群详情</title>
+    <link rel="stylesheet" href="../../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan" style="min-width: auto;padding: 0">
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs head-tab fixed-nav" role="tablist">
+    <li role="presentation" class="active"><a href="#one" aria-controls="one" role="tab" data-toggle="tab">基本信息</a></li>
+    <li role="presentation"><a href="#two" aria-controls="two" role="tab" data-toggle="tab">老师/嘉宾</a></li>
+    <li role="presentation"><a href="#thr" aria-controls="thr" role="tab" data-toggle="tab">群员</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content nav-kt-msg">
+    <div role="tabpanel" class="tab-pane active" id="one">
+        <iframe src="基本信息.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="two">
+        <iframe src="老师嘉宾.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="thr">
+        <iframe src="群员.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+</div>
+
+
+<script src="../../../../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<!-- iframe弹框 -->
+<script src="../../../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/index.js"></script>
+<script>
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加角色',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['100%', '100%'],
+            content: '添加角色.html' //iframe的url
+        });
+    });
+    $('#chutiyan .chenage-role').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '更换角色',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '400px'],
+            content: '更换角色.html' //iframe的url
+        });
+    });
+    $('#chutiyan .button1').on('click', function(){
+        var that=this;
+        if($(that).text()==='加入黑名单'){
+            layer.confirm('是否将该用户加入黑名单？', {
+                btn: ['确定','取消'] //按钮
+            }, function(){
+                $(that).removeClass('button1').addClass('button2').text('移出黑名单');
+                layer.msg('操作成功', {time: 500,});
+            }, function(){
+            });
+        }else{
+            layer.confirm('是否将该用户移出黑名单？', {
+                btn: ['确定','取消'] //按钮
+            }, function(){
+                $(that).removeClass('button2').addClass('button1').text('加入黑名单');
+                layer.msg('操作成功', {time: 500,});
+            }, function(){
+            });
+        }
+    });
+</script>
+</body>
+</html>

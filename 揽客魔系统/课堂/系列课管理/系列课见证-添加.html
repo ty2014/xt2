@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系列课分类-添加</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/video-js.min.css">
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="padding: 0;background: #fff">
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">昵称:</div>
+            <div class="a_list_r"><input type="text" placeholder="见证者的艺名/姓名"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">头像:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮  -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi">*见证人头像,图片尺寸80px*80px，大小不超过20KB</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">文案:</div>
+            <div class="a_list_r"><textarea placeholder="见证描述" style="width: 620px;height: 60px;padding: 10px;resize: none"></textarea></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">附件:</span>
+            <div class="a_list_r chose_item">
+                <label for="cj1" class="radio pic-radio">
+                    <div class="chose">
+                        <input type="radio" checked name="cj" id="cj1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">图片</span>
+                </label>
+                <label for="cj2" class="radio video-radio">
+                    <div class="chose">
+                        <input type="radio" name="cj" id="cj2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">视频</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list pic-cont">
+            <span class="a_list_l">图片上传:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮  -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi">*图片尺寸160px*160px，大小不超过50KB</p>
+            </div>
+        </div>
+        <div class="a_list video-cont" style="display: none">
+            <span class="a_list_l">视频上传:</span>
+            <div class="a_list_r">
+                <div class="file-video">
+                    <!--  上传视频按钮 ,上传视频成功后隐藏 -->
+                    <div class="file-video-btn"><input type="file"><img src="../../images/yjpz-6.png" alt="">点击上传视频</div>
+                    <!--  视频上传成功区域  -->
+                    <div class="file-video-cont">
+                        <span class="del-video">删除</span>
+                        <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%" poster="//puui.qpic.cn/qqvideo_ori/0/p0703okprqf_496_280/0" data-setup="{}">
+                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                        </video>
+                        <script type="text/javascript">
+                            //设置中文
+                            videojs.addLanguage('zh-CN', {
+                                "Play": "播放",
+                                "Pause": "暂停",
+                                "Current Time": "当前时间",
+                                "Duration": "时长",
+                                "Remaining Time": "剩余时间",
+                                "Stream Type": "媒体流类型",
+                                "LIVE": "直播",
+                                "Loaded": "加载完毕",
+                                "Progress": "进度",
+                                "Fullscreen": "全屏",
+                                "Non-Fullscreen": "退出全屏",
+                                "Mute": "静音",
+                                "Unmute": "取消静音",
+                                "Playback Rate": "播放速度",
+                                "Subtitles": "字幕",
+                                "subtitles off": "关闭字幕",
+                                "Captions": "内嵌字幕",
+                                "captions off": "关闭内嵌字幕",
+                                "Chapters": "节目段落",
+                                "Close Modal Dialog": "关闭弹窗",
+                                "Descriptions": "描述",
+                                "descriptions off": "关闭描述",
+                                "Audio Track": "音轨",
+                                "You aborted the media playback": "视频播放被终止",
+                                "A network error caused the media download to fail part-way.": "网络错误导致视频下载中途失败。",
+                                "The media could not be loaded, either because the server or network failed or because the format is not supported.": "视频因格式不支持或者服务器或网络的问题无法加载。",
+                                "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "由于视频文件损坏或是该视频使用了你的浏览器不支持的功能，播放终止。",
+                                "No compatible source was found for this media.": "无法找到此视频兼容的源。",
+                                "The media is encrypted and we do not have the keys to decrypt it.": "视频已加密，无法解密。",
+                                "Play Video": "播放视频",
+                                "Close": "关闭",
+                                "Modal Window": "弹窗",
+                                "This is a modal window": "这是一个弹窗",
+                                "This modal can be closed by pressing the Escape key or activating the close button.": "可以按ESC按键或启用关闭按钮来关闭此弹窗。",
+                                ", opens captions settings dialog": ", 开启标题设置弹窗",
+                                ", opens subtitles settings dialog": ", 开启字幕设置弹窗",
+                                ", opens descriptions settings dialog": ", 开启描述设置弹窗",
+                                ", selected": ", 选择",
+                                "captions settings": "字幕设定",
+                                "Audio Player": "音频播放器",
+                                "Video Player": "视频播放器",
+                                "Replay": "重播",
+                                "Progress Bar": "进度小节",
+                                "Volume Level": "音量",
+                                "subtitles settings": "字幕设定",
+                                "descriptions settings": "描述设定",
+                                "Text": "文字",
+                                "White": "白",
+                                "Black": "黑",
+                                "Red": "红",
+                                "Green": "绿",
+                                "Blue": "蓝",
+                                "Yellow": "黄",
+                                "Magenta": "紫红",
+                                "Cyan": "青",
+                                "Background": "背景",
+                                "Window": "视窗",
+                                "Transparent": "透明",
+                                "Semi-Transparent": "半透明",
+                                "Opaque": "不透明",
+                                "Font Size": "字体尺寸",
+                                "Text Edge Style": "字体边缘样式",
+                                "None": "无",
+                                "Raised": "浮雕",
+                                "Depressed": "压低",
+                                "Uniform": "均匀",
+                                "Dropshadow": "下阴影",
+                                "Font Family": "字体库",
+                                "Proportional Sans-Serif": "比例无细体",
+                                "Monospace Sans-Serif": "单间隔无细体",
+                                "Proportional Serif": "比例细体",
+                                "Monospace Serif": "单间隔细体",
+                                "Casual": "舒适",
+                                "Script": "手写体",
+                                "Small Caps": "小型大写字体",
+                                "Reset": "重启",
+                                "restore all settings to the default values": "恢复全部设定至预设值",
+                                "Done": "完成",
+                                "Caption Settings Dialog": "字幕设定视窗",
+                                "Beginning of dialog window. Escape will cancel and close the window.": "开始对话视窗。离开会取消及关闭视窗",
+                                "End of dialog window.": "结束对话视窗"
+                            });
+
+                            var myPlayer = videojs('my-video');
+                            videojs("my-video").ready(function(){
+                                var myPlayer = this;
+                                myPlayer.play();
+                            });
+
+                        </script>
+                    </div>
+                </div>
+                <div class="file-video-tips">
+                    <!--  视频上传三种状态  -->
+                    <span class="video-tips"><img src="../../images/video1.png" alt="">视频上传格式不支持</span>
+                    <span class="video-tips"><img src="../../images/video3.png" alt="">视频上中，请稍后</span>
+                    <span class="video-tips"><img src="../../images/video2.png" alt="">视频上传成功</span>
+                    <p class="tishi">*请上传大小在5M以内、格式为mp4的视频，请勿上传违反法律法规的视频</p>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">优先级:</div>
+                <div class="a_list_r"><input type="text" class="s_width center"><span class="tishi">*数字越大，排序越前</span></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">状态:</div>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                            <label for="u-togg2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="tishi">*开启则客户端显示该见证，关闭则不显示</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">关联:</div>
+            <div class="a_list_r">
+                <span class="set-user" style="margin-right: 16px;">选择系列课</span>已包含0课
+                <span class="tishi">*选入的系列课，其详情页会展示该见证，见证有助于课程成交</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/video.min.js"></script>
+<script>
+
+    $(function () {
+        $('.txp_tipbar').hide();
+        $('.pic-radio').click(function () {
+            $('.pic-cont').show();
+            $('.video-cont').hide();
+        });
+        $('.video-radio').click(function () {
+            $('.pic-cont').hide();
+            $('.video-cont').show();
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日签模板</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+
+</head>
+<body id="chutiyan">
+
+<div id="app">
+    <div class="content">
+        <div class="page-title">日签模板</div>
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">启用</a></li>
+                        <li><a href="#">停用</a></li>
+                        <li><a href="#">默认模板</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab_type_2">
+                <a href="海报添加.html" class="tab-tips add_btn"><i class="plus-tips"></i>添加</a>
+            </div>
+        </div>
+        <div class="hbPic-m layer-photos-demo1">
+            <div class="item" :class="item.stopCl" v-for="(item,index) in hbList" :key="index">
+                <div class="pic"><img :src='item.src' alt=""></div>
+                <div class="txt">
+                    <p>{{item.txt}}</p>
+                    <div>
+                        <a href="海报添加.html" v-text="item.stopCl ? statu2 : statu"></a>
+                        <a href="海报添加.html">编辑</a>
+                    </div>
+                </div>
+                <span class="del_btn">删除</span>
+                <span class="sc_icon" @click="sc(index)">
+                    <i class="layui-icon" :class="item.scIcon ? 'layui-icon-rate-solid' : 'layui-icon-rate' "></i>
+                    <em v-text="item.scIcon ? '取消默认模板' : '设为默认模板' ">设为默认模板</em>
+                </span>
+            </div>
+            <div class="item">
+                <a href="海报添加.html" class="add_normal">
+                    <p>添加模板</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  搜索/排序  -->
+<div class="account-box" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">模板标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="statu1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="statu2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+                <label for="statu3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">默认模板</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            statu:'已启用',
+            statu2:'已停用',
+            hbList:[
+                {src:'https://img2.baidu.com/it/u=2462825304,3588288106&fm=253&fmt=auto&app=138&f=JPG?w=500&h=889',txt:'学习打卡',scIcon:false,stopCl:'stopType'},
+                {src:'https://img2.baidu.com/it/u=3578025483,634727127&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享',scIcon:true},
+                {src:'https://img2.baidu.com/it/u=1925850077,613222639&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享',scIcon:true},
+                {src:'https://img2.baidu.com/it/u=2462825304,3588288106&fm=253&fmt=auto&app=138&f=JPG?w=500&h=889',txt:'学习打卡',scIcon:false,stopCl:'stopType'},
+                {src:'https://img2.baidu.com/it/u=3578025483,634727127&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享',scIcon:false},
+                {src:'https://img2.baidu.com/it/u=1925850077,613222639&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享',scIcon:false},
+                {src:'https://img2.baidu.com/it/u=2462825304,3588288106&fm=253&fmt=auto&app=138&f=JPG?w=500&h=889',txt:'学习打卡',scIcon:false,stopCl:'stopType'},
+                {src:'https://img2.baidu.com/it/u=3578025483,634727127&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享',scIcon:false},
+                {src:'https://img2.baidu.com/it/u=1925850077,613222639&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享',scIcon:false},
+                {src:'https://img2.baidu.com/it/u=2462825304,3588288106&fm=253&fmt=auto&app=138&f=JPG?w=500&h=889',txt:'学习打卡',scIcon:false,stopCl:'stopType'},
+                {src:'https://img2.baidu.com/it/u=3578025483,634727127&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享',scIcon:false},
+                {src:'https://img2.baidu.com/it/u=1925850077,613222639&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享',scIcon:false},
+            ],
+        },
+
+        methods:{
+            sc : function (item) {
+                //this.hbList[item].scIcon = !this.hbList[item].scIcon ;
+                this.$set(this.hbList[item],'scIcon',!this.hbList[item].scIcon);
+            },
+        }
+    })
+</script>
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+
+    layer.photos({
+        photos: '.layer-photos-demo1'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $(".account-box")
+        });
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('.del_btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定删除该海报？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px',
+                title:'提醒'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

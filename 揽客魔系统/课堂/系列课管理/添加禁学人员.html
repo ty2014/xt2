@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加禁学学员</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.0">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto;">
+
+
+<!-- Nav tabs -->
+<ul class="head-tab2 head-tab3">
+    <li class="active current"><a href="#tab1">未选人员</a></li>
+    <li><a href="#tab2">批量导入</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content content2">
+    <div class="tab-pane active"  id="tab1">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            </div>
+            <div class="tab_type_2">
+                <span class="tab-tips add_btn"><i class="plus-tips"></i>确定选入</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="60px">用户ID</th>
+                            <th width="80px">头像</th>
+                            <th width="100px">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="100px">会员等级</th>
+                            <th width="100px">手机</th>
+                            <th width="100px">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="60px">56471</td>
+                            <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td width="100px" class="left"><a>小土豆</a></td>
+                            <td width="100px" class="left">蒋雨</td>
+                            <td width="100px">联创人</td>
+                            <td width="100px">13350024578</td>
+                            <td width="100px" class="cz_btn">
+                                <button type="button" class="btn-type1 chose-btn">选入</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>56472</td>
+                            <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td class="left"><a>小土豆</a></td>
+                            <td class="left">蒋雨</td>
+                            <td>联创人</td>
+                            <td>13350024578</td>
+                            <td class="cz_btn">
+                                <button type="button" class="btn-type1 chose-btn">选入</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane"  id="tab2">
+        <div class="activity_set" style="padding-top:40px;">
+            <form class="yjpz">
+                <table class="list_content">
+                    <tr>
+                        <td class="tab-2 pz-title" colspan="4"><img src="../../images/yjpz-8.png" alt="">模板导入</td>
+                    </tr>
+                    <tr>
+                        <td class="tab-1">导入模板下载:</td>
+                        <td class="tab-2" colspan="3"><span class="mb-txt"><img src="../../images/yjpz-5.png" alt="">模板下载</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tab-1">选择导入文件:</td>
+                        <td class="tab-2" colspan="3"><span class="mb-txt"><img src="../../images/yjpz-7.png" alt="">选择文件</span><span class="tishi">ClientTempSimple.xls</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tab-1"></td>
+                        <td class="tab-2" colspan="3"><span class="mb-btn">导入</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tab-1">导入结果:</td>
+                        <td class="tab-2" colspan="3">
+                            <p style="margin-bottom: 16px;">共导入500条信息，成功导入499条，失败<span style="color: #FE6D44">1</span>条</p>
+                            <div class="normal-table">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th width="50px">序号</th>
+                                        <th width="80px">用户ID</th>
+                                        <th width="80px">头像</th>
+                                        <th width="100px">昵称</th>
+                                        <th width="100px">姓名</th>
+                                        <th width="100px">会员等级</th>
+                                        <th width="100px">电话号码</th>
+                                        <th width="150px">失败原因</th>
+                                        <th width="100px">操作</th>
+                                    </tr>
+                                    </thead>
+                                    <thead>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>12138</td>
+                                        <td class="cover-pic"><img src="../../images/head2.jpg" alt=""></td>
+                                        <td>小土豆</td>
+                                        <td>蒋雨</td>
+                                        <td>联创人</td>
+                                        <td>13540332389</td>
+                                        <td class="left">与已入库客户（人脉）重复或本导入文件内部重复</td>
+                                        <td><button type="button">检查重复</button></td>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tab-1">导入注意:</td>
+                        <td class="tab-2" colspan="3">
+                            <div style="color: #999;font-size: 14px;line-height: 200%">
+                                <p>1：Excel文件支持Office Excel2003以上版本；</p>
+                                <p>2：至少必须填写姓名、手机；</p>
+                                <p>3：时间格式标准为：1900-01-01，不支持其它格式；</p>
+                                <p>4：邮编、手机、电话、传真格式必须正确，邮箱如544274245@qq.com、手机如13540332389、电话传真如028-86121461；</p>
+                                <p>5：姓名不能超过30字节，备注不能超过1000字节，其它不超过100字节；</p>
+                                <p>6：建议每次导入建议在500条之内；</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序 -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="number"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">手机:</span>
+            <div class="account-r"><input type="number"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员等级:</span>
+            <div class="account-r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="vip5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .search').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['800px', '442px'],
+            skin: 'account-box',
+            content: $("#search-account").html()
+        });
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

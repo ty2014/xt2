@@ -1,0 +1,76 @@
+*{box-sizing: border-box}
+input,select,textarea{border: 1px solid #d5d5d5;border-radius: 5px;}
+img{vertical-align: middle;}
+body, div,p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textarea, blockquote, th, td { margin:0;padding:0;font-family:"Helvetica Neue", Helvetica, "PingFang SC", 微软雅黑, Tahoma, Arial, sans-serif, sans-serif;word-spacing:2}
+dl, dt, dd, ul, ol, li{list-style: none}
+a,a:hover,a:focus{cursor: pointer;-webkit-text-decoration:none;text-decoration: none;background-color: transparent}
+textarea{resize: none;overflow: hidden}
+html,body{width: 100%;min-width: 1100px;height: 100%;}
+body{background: url("../images/bg.png")no-repeat fixed;background-size:100% 100%;padding: 0 30px 20px;display: flex;flex-direction: column;justify-content: space-between;}
+
+/*  全局  */
+.team_top10,.reach_user{max-height: 466px;}
+.reach_user,.group_msg{background: rgba(11,21,44,1);}
+.team_top10,.reach_user,.group_msg{border: 1px solid #6076ad;border-radius: 4px;position: relative;margin-top: 20px;overflow: hidden;}
+
+
+/*  上  */
+.top_tit{font-size: 33px;color: #666;text-align: center;height: 130px;min-height: 130px;line-height: 102px;background:transparent url("../images/8.png")no-repeat center bottom;}
+.top_tit span{background: linear-gradient(to top, #666,#fff, #fff);color: transparent;-webkit-background-clip: text;}
+
+
+.section{display: flex;}
+.section2{margin-top: 20px;}
+.section_l{width: 30%}
+.section_c{width: 40%;position: relative;display: flex;align-items: center;justify-content: center;}
+.section_r{width: 30%}
+
+/*  左  */
+.s_tit{font-size: 20px;color: #0efcff;padding:8px 78px 8px 25px;display: inline-block;background: url("../images/3.png")no-repeat left;background-size: 100% 100%;}
+.team_top10{padding:10px 20px;background: rgba(11,21,44,.5);}
+
+/*  中  */
+.section_c img{width: 70%;}
+.active_tit{position: absolute;left: 50%;top:50%;font-size: 28px;color: #6dc6d1;transform: translate(-50%,-50%);margin-top: 15%;z-index: 2}
+
+/*  右  */
+.reach_user{padding: 30px 66px;}
+.reach_cont{height: 100%;width: 100%;overflow: hidden}
+.reach_list{display: flex;align-items: center;}
+.reach_id{font-size: 12px;color: #de8d05;min-width: 28px;text-align:center;padding-right: 16px;}
+.reach_msg{display: flex;color: #00fcf9;align-items: center;width: 100%;overflow: hidden;padding: 10px 0;border-bottom: 1px dashed #0090ff;}
+.reach_list:last-child .reach_msg{border-bottom: none;}
+.u_pic{width: 20px;min-width: 20px;height: 20px;border-radius: 50%;border: 1px solid #52a09f;display: inline-block;margin-right: 12px;background: url("../images/1.jpg")no-repeat center;background-size: contain;}
+.u_name{flex-grow: 1;font-size: 12px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.u_num{font-size: 12px;min-width: 40px;text-align: right;}
+
+/*  下  */
+.group_msg{padding: 28px 40px;}
+.group_cont{display: flex;justify-content: space-between;align-items: center;flex-wrap: nowrap;height: 100%;width: 100%}
+.g_list{overflow: hidden;max-width: 160px;min-width: 160px;}
+.g_id{font-size: 20px;color: #fff;text-align: right;padding-right: 6px;}
+.g_id span{background: url("../images/2.png")no-repeat left bottom;background-size: 600px;padding-left: 32px;}
+.g_id .id_2{background-position-x:-82px;}
+.g_id .id_3{background-position-x:-163px;}
+.g_id .id_4{background-position-x:-242px;}
+.g_id .id_5{background-position-x:-323px;}
+.g_id .id_6{background-position-x:-405px;}
+.g_id .id_7{background-position-x:-485px;}
+.g_id .id_8{background-position-x:-564px;}
+.g_person{font-size: 20px;color: #00d5e9;border-bottom: 1px solid #00d5e9;position: relative;}
+.g_person:after{content: "";position: absolute;right: 0;bottom:-2px;display: block;width: 4px;height: 4px;border-radius: 50%;background: #00d5e9;}
+.g_person span{font-size: 52px;display: inline-block;width: 140px;text-align: center;}
+.group_msg ul{display: flex;align-items: center;flex-wrap: nowrap;overflow: hidden;padding: 4px 1px;width: 100%;}
+.group_msg ul li{width: 20px;min-width: 20px;height: 20px;border-radius: 50%;border: 1px solid #57a2ff;margin: 0 3px;overflow: hidden}
+.group_msg ul li img{width: 100%;vertical-align: top}
+
+
+/*  四个角  */
+.lines{display: block;width: 14px;height: 14px;border: 1px solid #0efcff;position: absolute;}
+.top_l{top: 0;left: 0;border-right:none;border-bottom: none}
+.top_r{top: 0;right: 0;border-left: none;border-bottom: none}
+.bottom_r{bottom: 0;right: 0;border-top: none;border-left: none}
+.bottom_l{bottom: 0;left: 0;border-top: none;border-right:none}
+
+
+

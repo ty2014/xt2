@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加活动</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/index.css?v=1.0.0"/>
+</head>
+<body id="chutiyan" style="height: auto;">
+
+
+<div class="content" style="padding-bottom: 100px">
+    <div class="step-box">
+        <div class="eis-stepContents">
+            <div class="eis-stepContent">
+                <div class="activity_set activity_set3 w-4">
+                    <div class="b-line" style="border-bottom: 0">
+                        <div class="a_list">
+                            <span class="a_list_l">活动商家:</span>
+                            <div class="a_list_r"><span class="set-user add-sj" style="margin-right: 16px">活动举办商（单选）</span><span class="tishi mgL-0">*商家保存后不可修改，谨慎选择</span></div>
+                        </div>
+                        <!--  选择商家后显示  -->
+                        <div class="a_list">
+                            <span class="a_list_l">活动商家:</span>
+                            <div class="a_list_r"><span class="set-user add-sj" style="margin-right: 16px">爱达乐（ID：001）</span><span class="tishi mgL-0">*商家保存后不可修改，谨慎选择</span></div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">负责人:</span>
+                            <div class="a_list_r"><img src="../../../images/head.jpg" alt="" class="user-pic"><a href="">小土豆</a></div>
+                        </div>
+                        <!--  选择商家后显示  -->
+                        <div class="a_list">
+                            <span class="a_list_l">活动名称:</span>
+                            <div class="a_list_r">
+                                <div class="showNumBox">
+                                    <input type="text" maxlength="30" placeholder="建议不超过30个字" class="w-620"/>
+                                    <span class="num">0/30</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">活动主图:</span>
+                            <div class="a_list_r">
+                                <ul class="FraUpload_imglist ">
+                                    <li class="img_item" style="display: none">
+                                        <img src="">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn"></li>
+                                </ul>
+                                <p class="tishi mgL-0">*建议图片尺寸为375px*250px，比例为 1.5：1，JPG、PNG格式，图片小于500KB</p>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">活动简介:</span>
+                            <div class="a_list_r">
+                                <div class="showNumBox">
+                                    <input type="text" maxlength="50" placeholder="分享活动展示该简介" class="w-620"/>
+                                    <span class="num">0/50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">活动时间:</span>
+                            <div class="a_list_r">
+                                <input type="text" placeholder="活动开始时间" class="layui-input" id="test1" lay-key="1">&nbsp;~&nbsp;
+                                <input type="text" placeholder="活动结束时间"  class="layui-input" id="test2" lay-key="2"/>
+                                <span class="tishi">*仅活动时间内，可报名参与</span>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">优先级:</span>
+                            <div class="a_list_r"><input type="number" class="s_width center"/><span class="tishi">*数字越大，排序越前;</span></div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">本店名称:</span>
+                            <div class="a_list_r">
+                                <div class="showNumBox">
+                                    <input type="text" maxlength="10" placeholder="活动主办方" class="w-620"/>
+                                    <span class="num">0/10</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="a_list">
+                            <span class="a_list_l">客服电话:</span>
+                            <div class="a_list_r"><input type="number" placeholder="*必填"/></div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">客服二维码:</span>
+                            <div class="a_list_r">
+                                <ul class="FraUpload_imglist ">
+                                    <li class="img_item" style="display: none">
+                                        <img src="">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn"></li>
+                                </ul>
+                                <p class="tishi mgL-0">*选填，建议图片尺寸为80px*80px，比例为1：1，JPG、PNG格式，图片小于500KB</p>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">活动地址:</span>
+                            <div class="a_list_r"><input type="text" placeholder="*选填，活动主办地址" class="w-620"/></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eis-stepContent">
+                <div class="activity_set activity_set3 w-7">
+                    <div class="b-line" style="border-bottom: 0">
+                        <div class="a_list" style="align-items: flex-start">
+                            <span class="a_list_l" style="margin-top: 12px">活动介绍:</span>
+                            <div class="a_list_r">
+                                <textarea name="" id="" style="width: 100%;height: 400px;max-width: 720px">富文本编辑器</textarea>
+                            </div>
+                        </div>
+                        <div class="a_list" style="align-items: flex-start">
+                            <span class="a_list_l" style="margin-top: 12px">本店福利:</span>
+                            <div class="a_list_r card-lists-cont flex-start">
+                                <div class="card-lists">
+                                    <div class="card-item">
+                                        <div class="list-head">
+                                            <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-27/961c77c7-e8f3-4cc3-9248-d91cd5caecba.jpg" alt=""></div>
+                                            <div class="list-txt">
+                                                <p class="price">￥2000<span>1张</span></p>
+                                                <p class="tit1">装修款抵用金</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-text">
+                                            <p class="text-tit">活动规则</p>
+                                            <div class="text-msg">
+                                                <!--   活动规则只显示一行，超出隐藏     -->
+                                                <div class="rule"><p>预定装修抵用，1户限用一张，不可转赠</p></div>
+                                                <!--   活动规则只显示一条，超出隐藏     -->
+                                                <div>有效期至2019-12-27 12:00</div>
+                                            </div>
+                                        </div>
+                                        <span class="del-card"></span>
+                                    </div>
+                                    <!--  点击昵称跳转用户信息  -->
+                                    <div class="card-hx-user">核销人员：<div><span>2人</span></div></div>
+                                </div>
+                                <div class="card-lists">
+                                    <div class="card-item">
+                                        <div class="list-head">
+                                            <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-27/961c77c7-e8f3-4cc3-9248-d91cd5caecba.jpg" alt=""></div>
+                                            <div class="list-txt">
+                                                <p class="price">￥2000<span>1张</span></p>
+                                                <p class="tit1">装修款抵用金</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-text">
+                                            <!--   活动规则只显示一行，超出隐藏     -->
+                                            <p class="text-tit">活动规则</p>
+                                            <div class="text-msg">
+                                                <div class="rule"><p>预定装修抵用，1户限用一张，不可转赠</p></div>
+                                                <div>有效期至2019-12-27 12:00</div>
+                                            </div>
+                                        </div>
+                                        <span class="del-card"></span>
+                                    </div>
+                                    <!--  点击昵称跳转用户信息  -->
+                                    <div class="card-hx-user">核销人员：<div><span>2人</span></div></div>
+                                </div>
+                                <div class="card-lists">
+                                    <div class="card-item card-item-add"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a_list" style="align-items: flex-start">
+                            <span class="a_list_l" style="display: inline-block;margin-top: 12px">分店/联盟福利:<p class="tishi" style="padding-right: 10px;">*选填</p></span>
+                            <div class="a_list_r card-lists-cont flex-start ">
+                                <div class="card-lists">
+                                    <div class="card-item">
+                                        <div class="list-head">
+                                            <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-27/961c77c7-e8f3-4cc3-9248-d91cd5caecba.jpg" alt=""></div>
+                                            <div class="list-txt">
+                                                <p class="price">￥2000<span>1张</span></p>
+                                                <p class="tit1">装修款抵用金</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-text">
+                                            <!--   活动规则只显示一行，超出隐藏     -->
+                                            <p class="text-tit">活动规则</p>
+                                            <div class="text-msg">
+                                                <div class="rule"><p>预定装修抵用，1户限用一张，不可转赠</p></div>
+                                                <div>有效期至2019-12-27 12:00</div>
+                                            </div>
+                                        </div>
+                                        <div class="list-text">
+                                            <p class="text-tit">适用门店</p>
+                                            <div class="text-msg">
+                                                <div>美新家政服务有限公司<span>13350021245</span></div>
+                                                <div>成都市武侯区花园街道22号</div>
+                                            </div>
+                                        </div>
+                                        <span class="del-card"></span>
+                                    </div>
+                                    <!--  点击昵称跳转用户信息  -->
+                                    <div class="card-hx-user">核销人员：<div><span>2人</span></div></div>
+                                </div>
+                                <div class="card-lists">
+                                    <div class="card-item card-item-add"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eis-stepContent">
+                <div class="activity_set activity_set3 w-4">
+                    <div class="b-line">
+                        <!--   右侧可视化区域     -->
+                        <div id="Rview" style="position: absolute;left: 600px;top: 20px;z-index: 9;border: 1px solid #ddd;overflow: hidden">
+                            <img src="../images/hylbBg3.png" alt="" style="height: 400px">
+                        </div>
+                        <div class="a_list">
+                            <div class="a_list_r r-title">分销设置</div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">市场价格:</span>
+                            <div class="a_list_r">
+                                <input type="number" class="s_width center mgR-8" placeholder="￥"/>元
+                                <span class="tishi">*将以划线形式展示该价格</span>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">活动价格:</span>
+                            <div class="a_list_r">
+                                <input type="number" class="s_width center mgR-8" placeholder="￥"/>元
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">商品库存:</span>
+                            <div class="a_list_r"><input type="number" class="s_width center"/><span class="tishi2">已售：0，剩余：0</span></div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">虚拟销量:</span>
+                            <div class="a_list_r"><input type="number" class="s_width center" value="0"/><span class="tishi">*与实际销量加总，即为活动详情展示的销量值</span></div>
+                        </div>
+                    </div>
+                    <div class="b-line" style="border-bottom: 0">
+                        <div class="a_list">
+                            <div class="a_list_r r-title">基础设置</div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">主页展示:</span>
+                            <div class="a_list_r">
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                                        <label for="u-togg" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <span class="tishi">*开启则活动在主页展示，关闭则不展示</span>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">裂变返佣:</span>
+                            <div class="a_list_r">
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="vip-btn" class="toggle-button" name="switch">
+                                        <label for="vip-btn" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--   开关开启，显示 ‘返佣比例’；关闭隐藏 -->
+                        <div class="a_list yj-price">
+                            <span class="a_list_l">返佣比例:</span>
+                            <div class="a_list_r">
+                                <input type="number" class="s_width center"/>&nbsp;%
+                                <!--  当‘返佣比例’为0 时，佣金不显示；当超过0 时，显示;  -->
+                                <span class="tishi2">佣金：0</span>
+                                <span class="tishi">*不能超过90%</span>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">报名信息:</span>
+                            <div class="a_list_r chose_item">
+                                <label for="tp1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" checked disabled name="pic2" id="tp1">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">姓名</span>
+                                </label>
+                                <label for="tp2" class="checked mgR-0">
+                                    <div class="chose">
+                                        <input type="checkbox" checked disabled name="pic2" id="tp2">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">电话</span>
+                                </label>
+                                <span class="tishi">*用户结算时，需填写信息后再付款；姓名、电话为必填项</span>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l"></span>
+                            <div class="a_list_r chose_item">
+                                <label for="tp3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="tp3">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">微信</span>
+                                </label>
+                                <label for="tp4" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="tp4">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">身份证号码</span>
+                                </label>
+                                <label for="tp5" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="tp5">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">地址</span>
+                                </label>
+                                <label for="tp6" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="tp6">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">备注(用户可选填)</span>
+                                </label>
+                                <label for="tp7" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="tp7">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">上传照片(最多3张)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">支付成功:</span>
+                            <div class="a_list_r chose_item">
+                                <label for="norml" class="radio">
+                                    <div class="chose">
+                                        <input type="radio" checked name="支付成功" id="norml">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">默认页面</span>
+                                </label>
+                                <label for="code" class="radio mgR-0">
+                                    <div class="chose">
+                                        <input type="radio" name="支付成功" id="code">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">自定义</span>
+                                </label>
+                                <span class="tishi">*用户付款后跳转【支付成功页面】，可自定义内容继续将用户引流至公众号、个人号等</span>
+                            </div>
+                        </div>
+                        <div class="a_list code-cont" style="display: none">
+                            <span class="a_list_l"></span>
+                            <div class="a_list_r"><textarea style="width: 620px;height: 200px;">富文本编辑器</textarea></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/slideFixed.js"></script>
+<script src="../../../js/step.js"></script>
+<script>
+    $('.step-box').step({
+        stepDirection:'x',
+        showStepButton:true,
+        stepCount:3,
+        stepTitles:['基本信息','活动内容','裂变返佣']
+    });
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+</script>
+<script>
+    $(function () {
+        $('#Rview').slideFixed();
+
+        if($('#vip-btn > input').is(':checked')){
+            $('.yj-price').show()
+        }else{
+            $('.yj-price').hide()
+        }
+    });
+    $('#vip-btn').click(function () {
+        $('.yj-price').toggle()
+    });
+
+    $('#norml').click(function () {$('.code-cont').hide()});
+    $('#code').click(function () {$('.code-cont').show()});
+
+    $('#chutiyan .add-sj').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '商家列表',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '../预售活动/选择商家.html' //iframe的url
+        });
+    });
+    $('#chutiyan .card-item').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '编辑卡券',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../预售活动/编辑卡券.html' //iframe的url
+        });
+    });
+    $('#chutiyan .card-item .del-card').on('click', function(e){
+        e.stopPropagation();
+        //iframe层
+        layer.confirm('是否确定删除此卡券？', {
+            btn: ['取消','确定'] //按钮
+        }, function(index, layero){
+            layer.close(index);
+        }, function(){
+            layer.msg('删除成功',{time: 1000});
+        });
+    });
+    $('#chutiyan .hxr li span').on('click', function(){
+        //iframe层
+        layer.confirm('是否确定删除此负责人？', {
+            btn: ['取消','确定'] //按钮
+        }, function(index, layero){
+            layer.close(index);
+        }, function(){
+            layer.msg('删除成功',{time: 1000});
+        });
+    });
+
+    $('#chutiyan .card-hx-user span').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '添加负责人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../添加负责人.html#tab2' //iframe的url
+        });
+    });
+
+</script>
+<!-- 图片排序 -->
+<script type="text/javascript" src="../../../js/filePic/Sortable.js"></script>
+<script type="text/javascript" src="../../../js/filePic/MD5.js"></script>
+<script type="text/javascript" src="../../../js/filePic/FraUpload.js"></script>
+<script type="text/javascript">
+    // 商品图片上传
+    a = $("#upload_duixiang").FraUpload({
+        view        : ".file-pics",      // 视图输出位置
+        url         : "upload.php", // 上传接口
+        fetch       : "img",   // 视图现在只支持img
+        debug       : false,    // 是否开启调试模式
+        /* 外部获得的回调接口 */
+        onLoad: function(e){                    // 选择文件的回调方法
+            console.log("外部: 初始化完成...");
+        },
+        breforePort: function (e) {         // 发送前触发
+            console.log("文件发送之前触发");
+        },
+        successPort: function (e) {         // 发送成功触发
+            console.log("文件发送成功");
+            onload_image()
+        },
+        errorPort: function (e) {       // 发送失败触发
+            console.log("文件发送失败");
+            onload_image()
+        },
+        deletePost: function(e){    // 删除文件触发
+            console.log("删除文件");
+            console.log(e);
+            alert('删除了'+e.filename);
+            onload_image()
+        },
+        sort: function(e){      // 排序触发
+            console.log("排序");
+            onload_image()
+        },
+    });
+
+    // 获取图片上传信息
+    function onload_image(){
+        var res = a.FraUpload.show()
+        var ids = [];
+        for(let k in res){
+            this_val = res[k]
+            if(!empty(res[k]['is_upload']) && !empty(res[k]['ajax'])){
+                ajax_value = res[k]['ajax'];
+                ids.push(ajax_value.data.id)
+            }
+        }
+        $("#imagepath").val(ids);
+        $('#geoJsonTxt').html(JsonFormat(res));
+    }
+
+    // 将类库返回的json打印到pre中
+    function JsonFormat(json) {
+        if (typeof json != 'string') {
+            json = JSON.stringify(json, undefined, 2);
+        }
+        json = json.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
+        return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+            var cls = 'number';
+            if (/^"/.test(match)) {
+                if (/:$/.test(match)) {
+                    cls = 'key';
+                } else {
+                    cls = 'string';
+                }
+            } else if (/true|false/.test(match)) {
+                cls = 'boolean';
+            } else if (/null/.test(match)) {
+                cls = 'null';
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+        });
+    }
+    /**
+     * 判断变量是否为空
+     */
+    function empty(value) {
+        if(value=="" || value==undefined || value==null || value==false || value==[] || value=={}){
+            return true;
+        }else{
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

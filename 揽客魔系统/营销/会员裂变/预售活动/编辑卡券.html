@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>编辑卡券</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body id="chutiyan" style="height: auto;padding: 0;background: #fff;">
+
+
+
+<div class="activity_set activity_set2">
+    <div class="b-line">
+        <!--   分店/联盟福利才需填写;本店默认展示，不可更改  -->
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l"><em class="importantTip">*</em>商家名称:</span>
+                <div class="a_list_r ">
+                    <div class="showNumBox">
+                        <input type="text" maxlength="15" />
+                        <span class="num">0/15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"><em class="importantTip">*</em>咨询电话:</span>
+                <div class="a_list_r"><input type="number" oninput="if(value.length>11)value=value.slice(0,11)"></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">商家地址:</span>
+            <div class="a_list_r"><input type="text" class="w-620" placeholder="*选填"/></div>
+        </div>
+        <!--分店/联盟福利才需填写;本店默认展示，不可更改-->
+        <div class="a_list">
+            <span class="a_list_l">卡券名称:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" maxlength="12" placeholder="建议不超过12个字"/>
+                    <span class="num">0/12</span>
+                </div>
+                <span class="tishi">*将卡券代表的实物/服务说明清楚</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">卡券主图:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <p class="tishi mgL-0">*建议图片尺寸为120px*120px，比例为1：1，JPG、PNG格式，图片小于500KB</p>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">卡券价值:</span>
+                <div class="a_list_r">
+                    <input type="number" class="m_width center mgR-8" placeholder="￥"/>元
+                    <span class="tishi">*1张卡券的面值（单位：元）</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">每份张数:</span>
+                <div class="a_list_r">
+                    <input type="number" class="s_width center mgR-8"/>张
+                    <span class="tishi">*用户报名活动可获该卡券的张数</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">使用规则:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <textarea name="" id="" style="height: 100px;width: 620px;resize: none"></textarea>
+                    <span class="num">0/300</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">有效期至:</span>
+            <!--  有效期至：时分； 前端暂时改不了，后端帮忙修改一下  -->
+            <div class="a_list_r checked_chose">
+                <input type="text" placeholder="点击选择" class="layui-input" id="test1" lay-key="1">
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">核销人员:</span>
+            <div class="a_list_r"><span class="set-user add-hxr" style="margin-right: 16px">点击选择</span><a class="choseNum">已选择 2 人</a></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">排序码:</span>
+            <!--  排序码全改为输入框，手动输入  -->
+            <div class="a_list_r"><input type="number" class="s_width center"><span class="tishi">*数字越大，排序越前</span></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+
+<!-- 时间 -->
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+
+    $('#chutiyan .add-hxr').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '添加负责人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../添加负责人.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .choseNum').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '添加负责人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../添加负责人.html#tab2' //iframe的url
+        });
+    });
+
+    $('#chutiyan .hxr li span').on('click', function(){
+        //iframe层
+        layer.confirm('是否确定删除此负责人？', {
+            btn: ['取消','确定'] //按钮
+        }, function(index, layero){
+            layer.close(index);
+        }, function(){
+            layer.msg('删除成功',{time: 1000});
+        });
+    });
+
+</script>
+</body>
+</html>

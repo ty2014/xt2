@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冻结提现用户</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs head-tab" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">已冻结用户</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">未冻结用户</a></li>
+    <li role="presentation"><a href="#total" aria-controls="total" role="tab" data-toggle="tab">冻结操作记录</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content padd-top">
+    <div role="tabpanel" class="tab-pane active" id="home">
+        <div class="tab_content">
+            <div class="tab_type_l">
+                <span class="on"><i class="fa fa-list"></i>冻结提现用户</span>
+                <span class="search"><i class="fa fa-search"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table">
+            <form action="" class="table_cont">
+                <table border="0" class="table_body">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">操作</th>
+                        <th width="100px">头像</th>
+                        <th width="100px">昵称</th>
+                        <th width="100px">姓名</th>
+                        <th width="100px">手机</th>
+                        <th width="100px">未结算佣金</th>
+                        <th width="100px">冻结时间</th>
+                        <th width="150px">冻结备注</th>
+                        <th width="100px">冻结操作人</th>
+                        <th width="150px">是否冻结提现</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="cz_btn"><button type="button" class="jd-btn btn-blue">解冻</button></td>
+                        <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                        <td>昵称</td>
+                        <td>姓名</td>
+                        <td>13546798456</td>
+                        <td>1345.00</td>
+                        <td class="date"><span>2019-07-31 00:01:00</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="btm_page">
+            <div class="pages">
+                <div class="pages_num">
+                    <span>1</span>
+                    <span class="active">2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>99</span>
+                </div>
+                <div class="now_page">
+                    到第<input type="text" value="1">页<span class="sure">确定</span>
+                </div>
+                <select>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div>
+                <span><b>1 - 10</b></span>
+                <span>共<b>10</b>条</span>
+            </div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+        <div class="tab_content">
+            <div class="tab_type_l">
+                <span class="on"><i class="fa fa-list"></i>冻结提现用户</span>
+                <span class="search"><i class="fa fa-search"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table">
+            <form action="" class="table_cont">
+                <table border="0" class="table_body">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">操作</th>
+                        <th width="100px">头像</th>
+                        <th width="100px">昵称</th>
+                        <th width="100px">姓名</th>
+                        <th width="100px">手机</th>
+                        <th width="100px">未结算佣金</th>
+                        <th width="100px">冻结时间</th>
+                        <th width="150px">冻结备注</th>
+                        <th width="100px">冻结操作人</th>
+                        <th width="150px">是否冻结提现</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="cz_btn"><button type="button" class="dj-btn btn-red">冻结</button></td>
+                        <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                        <td>昵称</td>
+                        <td>姓名</td>
+                        <td>13546798456</td>
+                        <td>1345.00</td>
+                        <td class="date"><div>2019-07-31 00:01:00</div></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="btm_page">
+            <div class="pages">
+                <div class="pages_num">
+                    <span>1</span>
+                    <span class="active">2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>99</span>
+                </div>
+                <div class="now_page">
+                    到第<input type="text" value="1">页<span class="sure">确定</span>
+                </div>
+                <select>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div>
+                <span><b>1 - 10</b></span>
+                <span>共<b>10</b>条</span>
+            </div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="total">
+        <div class="tab_content">
+            <div class="tab_type_l">
+                <span class="on"><i class="fa fa-list"></i>冻结提现用户</span>
+                <span class="search"><i class="fa fa-search"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table">
+            <form action="" class="table_cont">
+                <table border="0" class="table_body">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">头像</th>
+                        <th width="100px">昵称</th>
+                        <th width="100px">姓名</th>
+                        <th width="100px">手机</th>
+                        <th width="100px">操作类型</th>
+                        <th width="150px">操作原因</th>
+                        <th width="100px">操作时间</th>
+                        <th width="100px">操作人</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                        <td>昵称</td>
+                        <td>姓名</td>
+                        <td>13546798456</td>
+                        <td></td>
+                        <td></td>
+                        <td class="date"><span>2019-07-31 00:01:00</span></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="btm_page">
+            <div class="pages">
+                <div class="pages_num">
+                    <span>1</span>
+                    <span class="active">2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>99</span>
+                </div>
+                <div class="now_page">
+                    到第<input type="text" value="1">页<span class="sure">确定</span>
+                </div>
+                <select>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div>
+                <span><b>1 - 10</b></span>
+                <span>共<b>10</b>条</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<!-- iframe弹框 -->
+<script src="../js/dist/js/bootstrap.min.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script>
+    $('#chutiyan .jd-btn').on('click', function(){
+        layer.confirm('您确定要将此用户解冻吗？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){}, function(){});
+    });
+    $('#chutiyan .dj-btn').on('click', function(){
+        layer.confirm('您确定要将此用户冻结吗？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){}, function(){});
+    });
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '高级搜索',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['40%', '50%'],
+            content: '搜索.html' //iframe的url
+        });
+    });
+</script>
+
+</body>
+</html>

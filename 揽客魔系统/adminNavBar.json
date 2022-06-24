@@ -1,0 +1,440 @@
+{
+  "d": {
+    "menu1": [
+      {
+        "dkfs": "",
+        "name": "客户增长",
+        "tag": "1809",
+        "data_href": "",
+        "child": [
+          {
+            "icon": "/Main2/images/slidNavIcon/13.png",
+            "parent": "18",
+            "title": "全域引流",
+            "child": [
+              {
+                "name": "渠道活码",
+                "data_href": "/Manage/QYWXGL/QYYL/QDHM_LIST.aspx?sn=18091010",
+                "id": "18091010",
+                "className": "1",
+                "urlpath": "客户增长|全域引流|渠道活码"
+              },
+              {
+                "name": "引流链接",
+                "data_href": "/Manage/QYWXGL/QYYL/YLLJ_LIST.aspx?sn=18091020",
+                "id": "18091020",
+                "className": "1",
+                "urlpath": "客户增长|全域引流|引流链接"
+              }
+            ]
+          },
+          {
+            "icon": "/Main2/images/slidNavIcon/6.png",
+            "parent": "18",
+            "title": "私域获客",
+            "child": [
+              {
+                "name": "一客一码",
+                "data_href": "/Manage/QYWXGL/SYHK/YKYMList.aspx?sn=18092010",
+                "id": "18092010",
+                "className": "1",
+                "urlpath": "客户增长|私域获客|一客一码"
+              },
+              {
+                "name": "归属式任务裂变",
+                "data_href": "/Manage/QYWXGL/SYHK/HYRWHKList.aspx?LX=1\u0026sn=18092020",
+                "id": "18092020",
+                "className": "hot",
+                "urlpath": "客户增长|私域获客|归属式任务裂变"
+              },
+              {
+                "name": "共享式任务裂变",
+                "data_href": "/Manage/QYWXGL/SYHK/HYRWHKList.aspx?LX=2\u0026sn=18092030",
+                "id": "18092030",
+                "className": "hot",
+                "urlpath": "客户增长|私域获客|共享式任务裂变"
+              }
+            ]
+          }
+        ],
+        "target": "",
+        "myclass": ""
+      },
+      {
+        "dkfs": "",
+        "name": "客户转化",
+        "tag": "1819",
+        "data_href": "",
+        "child": [
+          {
+            "icon": "/Main2/images/slidNavIcon/20.png",
+            "parent": "18",
+            "title": "自动打标签",
+            "child": [
+              {
+                "name": "根据对话内容",
+                "data_href": "/Manage/QYWXGL/HDLC/ZDDBQ_List.aspx?BQLX=1\u0026sn=18191010",
+                "id": "18191010",
+                "className": "1",
+                "urlpath": "客户转化|自动打标签|根据对话内容"
+              },
+              {
+                "name": "根据企微群",
+                "data_href": "/Manage/QYWXGL/HDLC/ZDDBQ_List.aspx?BQLX=2\u0026sn=18191015",
+                "id": "18191015",
+                "className": "add",
+                "urlpath": "客户转化|自动打标签|根据企微群"
+              },
+              {
+                "name": "根据企微朋友圈互动",
+                "data_href": "/Manage/QYWXGL/HDLC/PYQHDList.aspx?sn=18191030",
+                "id": "18191030",
+                "className": "add",
+                "urlpath": "客户转化|自动打标签|根据企微朋友圈互动"
+              }
+            ]
+          },
+          {
+            "icon": "/Main2/images/slidNavIcon/35.png",
+            "parent": "18",
+            "title": "互动留存",
+            "child": [
+              {
+                "name": "好友欢迎语",
+                "data_href": "/Manage/QYWXGL/HDLC/HYHYYList.aspx?sn=18192005",
+                "id": "18192005",
+                "className": "1",
+                "urlpath": "客户转化|互动留存|好友欢迎语"
+              },
+              {
+                "name": "客户群发",
+                "data_href": "/Manage/QYWXGL/HDLC/KHQFList.aspx?sn=18192010",
+                "id": "18192010",
+                "className": "1",
+                "urlpath": "客户转化|互动留存|客户群发"
+              },
+              {
+                "name": "外部群群发",
+                "data_href": "/Manage/QYWXGL/HDLC/WBQQFList.aspx?sn=18192015",
+                "id": "18192015",
+                "className": "1",
+                "urlpath": "客户转化|互动留存|外部群群发"
+              },
+              {
+                "name": "企业群发",
+                "data_href": "/Manage/QYWXGL/HDLC/QYQFList.aspx?sn=18192017",
+                "id": "18192017",
+                "className": "1",
+                "urlpath": "客户转化|互动留存|企业群发"
+              },
+              {
+                "name": "快捷话术",
+                "data_href": "/Manage/QYWXGL/HDLC/KJHS_List.aspx?sn=18192020",
+                "id": "18192020",
+                "className": "1",
+                "urlpath": "客户转化|互动留存|快捷话术"
+              },
+              {
+                "name": "跟进记录",
+                "data_href": "/Manage/QYWXGL/HDLC/GJJLList.aspx?sn=18192025",
+                "id": "18192025",
+                "className": "1",
+                "urlpath": "客户转化|互动留存|跟进记录"
+              }
+            ]
+          },
+          {
+            "icon": "/Main2/images/slidNavIcon/43.png",
+            "parent": "18",
+            "title": "SOP管理",
+            "child": [
+              {
+                "name": "客户SOP",
+                "data_href": "/Manage/QYWXGL/HDLC/KHSOPList.aspx?sn=18192910",
+                "id": "18192910",
+                "className": "hot",
+                "urlpath": "客户转化|SOP管理|客户SOP"
+              },
+              {
+                "name": "企微群SOP",
+                "data_href": "/Manage/QYWXGL/HDLC/KHQSOP.aspx?sn=18192920",
+                "id": "18192920",
+                "className": "1",
+                "urlpath": "客户转化|SOP管理|企微群SOP"
+              },
+              {
+                "name": "企微朋友圈SOP",
+                "data_href": "/Manage/QYWXGL/QYWX/QWPYQList.aspx?sn=18192930",
+                "id": "18192930",
+                "className": "1",
+                "urlpath": "客户转化|SOP管理|企微朋友圈SOP"
+              }
+            ]
+          },
+          {
+            "icon": "/Main2/images/slidNavIcon/3.png",
+            "parent": "18",
+            "title": "存档记录",
+            "child": [
+              {
+                "name": "私聊存档记录",
+                "data_href": "/Manage/WDPZGLnew/QYWXGL/LTJL/P2P.aspx?sn=18193910",
+                "id": "18193910",
+                "className": "1",
+                "urlpath": "客户转化|存档记录|私聊存档记录"
+              },
+              {
+                "name": "群聊存档记录",
+                "data_href": "/Manage/WDPZGLnew/QYWXGL/LTJL/Room.aspx?sn=18193915",
+                "id": "18193915",
+                "className": "1",
+                "urlpath": "客户转化|存档记录|群聊存档记录"
+              },
+              {
+                "name": "聊天超时记录",
+                "data_href": "/Manage/QYWXGL/LTJL/LTCSList.aspx?sn=18193920",
+                "id": "18193920",
+                "className": "1",
+                "urlpath": "客户转化|存档记录|聊天超时记录"
+              },
+              {
+                "name": "私聊预警记录",
+                "data_href": "/Manage/QYWXGL/LTJL/DL_MGCList.aspx?sn=18193925",
+                "id": "18193925",
+                "className": "1",
+                "urlpath": "客户转化|存档记录|私聊预警记录"
+              },
+              {
+                "name": "群聊预警记录",
+                "data_href": "/Manage/QYWXGL/LTJL/QL_MGCList.aspx?sn=18193930",
+                "id": "18193930",
+                "className": "1",
+                "urlpath": "客户转化|存档记录|群聊预警记录"
+              }
+            ]
+          },
+          {
+            "icon": "/Main2/images/slidNavIcon/5.png",
+            "parent": "18",
+            "title": "风控管理",
+            "child": [
+              {
+                "name": "敏感词设置",
+                "data_href": "/Manage/QYWXGL/FKGL/MGCList.aspx?sn=18194910",
+                "id": "18194910",
+                "className": "1",
+                "urlpath": "客户转化|风控管理|敏感词设置"
+              },
+              {
+                "name": "聊天超时设置",
+                "data_href": "/Manage/QYWXGL/FKGL/LTCSSZ.aspx?sn=18194915",
+                "id": "18194915",
+                "className": "1",
+                "urlpath": "客户转化|风控管理|聊天超时设置"
+              }
+            ]
+          }
+        ],
+        "target": "",
+        "myclass": ""
+      },
+      {
+        "dkfs": "",
+        "name": "客户管理",
+        "tag": "1829",
+        "data_href": "",
+        "child": [
+          {
+            "icon": "/Main2/images/slidNavIcon/7.png",
+            "parent": "18",
+            "title": "客户管理",
+            "child": [
+              {
+                "name": "客户列表",
+                "data_href": "/Manage/QYWXGL/QYWX/QWHY.aspx?sn=18291010",
+                "id": "18291010",
+                "className": "1",
+                "urlpath": "客户管理|客户管理|客户列表"
+              },
+              {
+                "name": "客户标签",
+                "data_href": "/Manage/QYWXGL/QYWX/QWBQList.aspx?sn=18291015",
+                "id": "18291015",
+                "className": "1",
+                "urlpath": "客户管理|客户管理|客户标签"
+              },
+              {
+                "name": "流失提醒",
+                "data_href": "/Manage/QYWXGL/QYWX/SCTXList.aspx?sn=18291020",
+                "id": "18291020",
+                "className": "1",
+                "urlpath": "客户管理|客户管理|流失提醒"
+              },
+              {
+                "name": "删除记录",
+                "data_href": "/Manage/QYWXGL/QYWX/SCJLList.aspx?sn=18291025",
+                "id": "18291025",
+                "className": "add",
+                "urlpath": "客户管理|客户管理|删除记录"
+              },
+              {
+                "name": "自定义信息",
+                "data_href": "/Manage/QYWXGL/QYWX/ZDYXXList.aspx?sn=18291030",
+                "id": "18291030",
+                "className": "add",
+                "urlpath": "客户管理|客户管理|自定义信息"
+              }
+            ]
+          },
+          {
+            "icon": "/Main2/images/slidNavIcon/15.png",
+            "parent": "18",
+            "title": "客户群管理",
+            "child": [
+              {
+                "name": "客户群列表",
+                "data_href": "/Manage/QYWXGL/QYWX/QWQList.aspx?sn=18292010",
+                "id": "18292010",
+                "className": "1",
+                "urlpath": "客户管理|客户群管理|客户群列表"
+              },
+              {
+                "name": "客户群提醒",
+                "data_href": "javascript:;",
+                "id": "18292020",
+                "className": "add",
+                "urlpath": "客户管理|客户群管理|客户群提醒"
+              }
+            ]
+          },
+          {
+            "icon": "/Main2/images/slidNavIcon/42.png",
+            "parent": "18",
+            "title": "企微成员",
+            "child": [
+              {
+                "name": "企微成员",
+                "data_href": "/Manage/QYWXGL/QYWX/QWCYList.aspx?sn=18293010",
+                "id": "18293010",
+                "className": "1",
+                "urlpath": "客户管理|企微成员|企微成员"
+              }
+            ]
+          }
+        ],
+        "target": "",
+        "myclass": ""
+      },
+      {
+        "dkfs": "",
+        "name": "客户旅程",
+        "tag": "1839",
+        "data_href": "",
+        "child": [
+          {
+            "icon": "/Main2/images/slidNavIcon/44.png",
+            "parent": "18",
+            "title": "旅程看板",
+            "child": [
+              {
+                "name": "旅程看板",
+                "data_href": "/Manage/QYWXGL/LCKB/lckbview_kbms.aspx?sn=18391010",
+                "id": "18391010",
+                "className": "1",
+                "urlpath": "客户旅程|旅程看板|旅程看板"
+              },
+              {
+                "name": "旅程SOP",
+                "data_href": "/Manage/QYWXGL/LCKB/lckbsop.aspx?sn=18391020",
+                "id": "18391020",
+                "className": "1",
+                "urlpath": "客户旅程|旅程看板|旅程SOP"
+              },
+              {
+                "name": "旅程配置",
+                "data_href": "/Manage/QYWXGL/LCKB/lckbconfig.aspx?sn=18391030",
+                "id": "18391030",
+                "className": "1",
+                "urlpath": "客户旅程|旅程看板|旅程配置"
+              }
+            ]
+          }
+        ],
+        "target": "",
+        "myclass": ""
+      },
+      {
+        "dkfs": "2",
+        "name": "增长学院",
+        "tag": "1842",
+        "data_href": "https://inst.keliumao.com/kt_jh/sy/index.html?dpid=30",
+        "child": [],
+        "target": "_blank",
+        "myclass": "blankName"
+      },
+      {
+        "dkfs": "2",
+        "name": "行业案例",
+        "tag": "1844",
+        "data_href": "https://www.yuque.com/docs/share/d32d4854-ca37-45b6-9a48-c8d8aa895329",
+        "child": [],
+        "target": "_blank",
+        "myclass": "blankName"
+      },
+      {
+        "dkfs": "2",
+        "name": "裂变海报",
+        "tag": "1846",
+        "data_href": "https://www.yuque.com/docs/share/5c7743b0-5086-40f3-9ec3-60c1a5d8c1f6",
+        "child": [],
+        "target": "_blank",
+        "myclass": "blankName"
+      },
+      {
+        "dkfs": "",
+        "name": "配置",
+        "tag": "1859",
+        "data_href": "",
+        "child": [
+          {
+            "icon": "/Main2/images/slidNavIcon/6.png",
+            "parent": "18",
+            "title": "基础配置",
+            "child": [
+              {
+                "name": "企业基础配置管理",
+                "data_href": "/Manage/QYWXGL/QWPZ/QYWXJCPZ.aspx?sn=18591010",
+                "id": "18591010",
+                "className": "1",
+                "urlpath": "配置|基础配置|企业基础配置管理"
+              },
+              {
+                "name": "企业应用管理",
+                "data_href": "/Manage/QYWXGL/QWPZ/YYGLList.aspx?sn=18591020",
+                "id": "18591020",
+                "className": "1",
+                "urlpath": "配置|基础配置|企业应用管理"
+              }
+            ]
+          },
+          {
+            "icon": "/Main2/images/slidNavIcon/4.png",
+            "parent": "18",
+            "title": "其他配置",
+            "child": [
+              {
+                "name": "短信配置",
+                "data_href": "/Manage/QYWXGL/QWPZ/DXPZList.aspx?sn=18592010",
+                "id": "18592010",
+                "className": "1",
+                "urlpath": "配置|其他配置|短信配置"
+              }
+            ]
+          }
+        ],
+        "target": "",
+        "myclass": ""
+      }
+    ]
+  }
+}

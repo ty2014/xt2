@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>名额查询</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.0">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto;">
+
+<!-- Nav tabs -->
+<ul class="head-tab2 head-tab3">
+    <li class="active current"><a href="#tab1">总名额</a></li>
+    <li><a href="#tab2">已用名额</a></li>
+</ul>
+
+<!-- Tab panes -->
+
+<div class="tab-content content2">
+    <div class="tab-pane active"  id="tab1">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search searchBtn1"><i class="search-tips"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="60px">用户ID</th>
+                            <th width="80px">头像</th>
+                            <th width="120px" class="left">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="120px">手机</th>
+                            <th width="100px">会员等级</th>
+                            <th width="100px">名额类型</th>
+                            <th width="150px" class="left">销售对象</th>
+                            <th width="120pz" class="left">名额增减</th>
+                            <th width="100pz">剩余名额</th>
+                            <th width="100pz">分佣比例</th>
+                            <th width="120pz">触发类型</th>
+                            <th width="300pz" class="left">说明</th>
+                            <th width="100pz">时间</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="60px">3758</td>
+                            <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""/></td>
+                            <td width="120px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px">唐</td>
+                            <td width="120px">13350024525</td>
+                            <td width="100px">联创人</td>
+                            <td width="100px">系列课</td>
+                            <td width="150px" class="left"></td>
+                            <td width="120px" class="left">-1</td>
+                            <td width="100px">9</td>
+                            <td width="100px">-</td>
+                            <td width="120px">授权下级</td>
+                            <td width="300pz" class="left">授权【商品名称】，授权下级：<a href="">小呀么小西几</a></td>
+                            <td width="100pz" class="date"><div></div></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3758</td>
+                            <td class="cover-pic"><img src="../../images/head.jpg" alt=""/></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td>唐</td>
+                            <td>13350024525</td>
+                            <td>联创人</td>
+                            <td>会员商品</td>
+                            <td class="left">VIP：商战狙击手</td>
+                            <td class="left">-1</td>
+                            <td>89</td>
+                            <td>10%</td>
+                            <td>成交</td>
+                            <td class="left">销售出1个名额，购买人：<a href="">小土豆</a></td>
+                            <td class="date"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane"  id="tab2">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search searchBtn2"><i class="search-tips"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="60px">用户ID</th>
+                            <th width="80px">头像</th>
+                            <th width="120px" class="left">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="120px">手机</th>
+                            <th width="100px">会员等级</th>
+                            <th width="100px">名额类型</th>
+                            <th width="150px" class="left">销售对象</th>
+                            <th width="120pz" class="left">名额增减</th>
+                            <th width="100pz">剩余名额</th>
+                            <th width="100pz">分佣比例</th>
+                            <th width="120pz">触发类型</th>
+                            <th width="300pz" class="left">说明</th>
+                            <th width="100pz">时间</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="60px">3758</td>
+                            <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""/></td>
+                            <td width="120px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px">唐</td>
+                            <td width="120px">13350024525</td>
+                            <td width="100px">联创人</td>
+                            <td width="100px">系列课</td>
+                            <td width="150px" class="left"></td>
+                            <td width="120px" class="left">-1</td>
+                            <td width="100px">9</td>
+                            <td width="100px">-</td>
+                            <td width="120px">授权下级</td>
+                            <td width="300pz" class="left">授权【商品名称】，授权下级：<a href="">小呀么小西几</a></td>
+                            <td width="100pz" class="date"><div></div></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3758</td>
+                            <td class="cover-pic"><img src="../../images/head.jpg" alt=""/></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td>唐</td>
+                            <td>13350024525</td>
+                            <td>联创人</td>
+                            <td>会员商品</td>
+                            <td class="left">VIP：商战狙击手</td>
+                            <td class="left">-1</td>
+                            <td>89</td>
+                            <td>10%</td>
+                            <td>成交</td>
+                            <td class="left">销售出1个名额，购买人：<a href="">小土豆</a></td>
+                            <td class="date"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">名额类型:</span>
+            <div class="account-r chose_item">
+                <label for="fix1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fix" id="fix1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">系列课</span>
+                </label>
+                <label for="fix2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fix" id="fix2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">会员商品</span>
+                </label>
+                <label for="fix3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fix" id="fix3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">课程动态</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">销售对象:</span>
+            <div class="account-r"><input type="text" style="width: 432px"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">名额增减:</span>
+            <div class="account-r chose_item">
+                <label for="me1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="me" id="me1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">增加</span>
+                </label>
+                <label for="me2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="me" id="me2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">减少</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">触发类型:</span>
+            <div class="account-r chose_item">
+                <label for="cf1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cf" id="cf1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">购买成为会员</span>
+                </label>
+                <label for="cf2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cf" id="cf2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">手动修改会员</span>
+                </label>
+                <label for="cf3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cf" id="cf3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">成交</span>
+                </label>
+                <label for="cf4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cf" id="cf4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">名额管理</span>
+                </label>
+                <label for="cf5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cf" id="cf5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">名额初始化</span>
+                </label>
+                <label for="cf6" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cf" id="cf6" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">名额购买</span>
+                </label>
+                <label for="cf7" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cf" id="cf7" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">授权下级</span>
+                </label>
+                <label for="cf8" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cf" id="cf8" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">兑换成为会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account2" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">名额类型:</span>
+            <div class="account-r chose_item">
+                <label for="fix2-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fix" id="fix2-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">系列课</span>
+                </label>
+                <label for="fix2-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fix" id="fix2-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">会员商品</span>
+                </label>
+                <label for="fix2-3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fix" id="fix2-3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">课程动态</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">销售对象:</span>
+            <div class="account-r"><input type="text" style="width: 432px"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">触发类型:</span>
+            <div class="account-r chose_item">
+                <label for="cf2-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cf" id="cf2-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">成交</span>
+                </label>
+                <label for="cf2-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cf" id="cf2-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">授权下级</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test3" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test4" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.head-tab2 li');
+    var con = $('.tab-content > .tab-pane');
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active current');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active current');
+            $(con[i]).addClass('active');
+        }
+    }
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test3' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test4' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .searchBtn1').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['800px', 'auto'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .searchBtn2').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', 'auto'],
+            skin: 'account-box',
+            content: $("#search-account2")
+        });
+    });
+
+</script>
+
+</body>
+</html>

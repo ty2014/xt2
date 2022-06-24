@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投诉记录</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="head-tab2">
+    <li class="active current"><a>待处理</a></li>
+    <li><a>已处理</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-body-b" style="padding: 0">
+    <div class="tab-content activity_set activity_set3">
+        <div class="tab-pane active">
+            <div class="tab_content2">
+                <div class="tab_type_2">
+                    <span class="tab-tips search dcl-search"><i class="search-tips"></i>搜索</span>
+                </div>
+                <div class="tab_type_2">
+                    <a class="ts_pz">投诉原因-选项设置：8</a>
+                </div>
+            </div>
+            <div class="edit_table2">
+                <div class="table_cont2">
+                    <div class="table-thead">
+                        <table border="0" class="table_body2">
+                            <thead>
+                            <tr>
+                                <th width="50px">序号</th>
+                                <th width="100px">投诉对象</th>
+                                <th width="150px">投诉原因</th>
+                                <th width="150px">活码名称</th>
+                                <th width="100px">上传人ID</th>
+                                <th width="100pz">上传人头像</th>
+                                <th width="150pz">上传人昵称</th>
+                                <th width="100px">投诉人ID</th>
+                                <th width="100px">投诉人头像</th>
+                                <th width="150px">投诉人昵称</th>
+                                <th width="150pz">投诉时间<i class="sort-icon"></i></th>
+                                <th width="100pz">状态</th>
+                                <th width="100pz">操作</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table-tbody">
+                        <table border="0" class="table_body2">
+                            <tbody>
+                            <tr>
+                                <td width="50px">1</td>
+                                <td width="100px" class="squ-pic"><img src="../images/head.jpg" alt=""></td>
+                                <td width="150px" class="left">欺诈</td>
+                                <td width="150px" class="left"><a href="">联创人文案辅导群</a></td>
+                                <td width="100px">56879</td>
+                                <td width="100px" class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                                <td width="150px" class="left"><a href="">小土豆</a></td>
+                                <td width="100px">56879</td>
+                                <td width="100px" class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                                <td width="150px" class="left"><a href="">独角兽</a></td>
+                                <td width="150px" class="date"><div>2020-01-01 10:00:01</div></td>
+                                <td width="100px" class="statu statu3"><span>未处理</span></td>
+                                <td width="100px" class="cz_btn">
+                                    <button type="button" class="btn-type1 cl-btn">处理</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="left">其他：内容不实</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btm_page2">
+                    <div class="pages">
+                        <div class="pages_num">
+                            <span class="prev">上一页</span>
+                            <span>1</span>
+                            <span class="page-default">...</span>
+                            <span>50</span>
+                            <span class="active">51</span>
+                            <span>52</span>
+                            <span class="page-default">...</span>
+                            <span>100</span>
+                            <span class="next">下一页</span>
+                        </div>
+                        <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                        <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                    </div>
+                    <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                        <div class="select-text">
+                            <span class="select-txt">10</span>
+                            <ul>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>50</li>
+                                <li>100</li>
+                            </ul>
+                        </div>条
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane">
+            <div class="tab_content2">
+                <div class="tab_type_2">
+                    <span class="tab-tips search ycl-search"><i class="search-tips"></i>搜索</span>
+                </div>
+            </div>
+            <div class="edit_table2">
+                <div class="table_cont2">
+                    <div class="table-thead">
+                        <table border="0" class="table_body2">
+                            <thead>
+                            <tr>
+                                <th width="50px">序号</th>
+                                <th width="100px">投诉对象</th>
+                                <th width="150px">投诉原因</th>
+                                <th width="150px">活码名称</th>
+                                <th width="100px">上传人ID</th>
+                                <th width="100pz">上传人头像</th>
+                                <th width="150pz">上传人昵称</th>
+                                <th width="100px">投诉人ID</th>
+                                <th width="100px">投诉人头像</th>
+                                <th width="150px">投诉人昵称</th>
+                                <th width="150pz">投诉时间<i class="sort-icon"></i></th>
+                                <th width="100pz">状态</th>
+                                <th width="100pz">是否下架</th>
+                                <th width="150pz">处理时间</th>
+                                <th width="100pz">处理人</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table-tbody">
+                        <table border="0" class="table_body2">
+                            <tbody>
+                            <tr>
+                                <td width="50px">1</td>
+                                <td width="100px" class="squ-pic"><img src="../images/head.jpg" alt=""></td>
+                                <td width="150px" class="left">欺诈</td>
+                                <td width="150px" class="left"><a href="">联创人文案辅导群</a></td>
+                                <td width="100px">56879</td>
+                                <td width="100px" class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                                <td width="150px" class="left"><a href="">小土豆</a></td>
+                                <td width="100px">56879</td>
+                                <td width="100px" class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                                <td width="150px" class="left"><a href="">独角兽</a></td>
+                                <td width="150px" class="date"><div>2020-01-01 10:00:01</div></td>
+                                <td width="100px" class="statu statu1"><span>已处理</span></td>
+                                <td width="100px"><a class="cl-cont">是</a></td>
+                                <td width="150px"></td>
+                                <td width="100px"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="left">其他：内容不实</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a class="cl-cont2">否</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btm_page2">
+                    <div class="pages">
+                        <div class="pages_num">
+                            <span class="prev">上一页</span>
+                            <span>1</span>
+                            <span class="page-default">...</span>
+                            <span>50</span>
+                            <span class="active">51</span>
+                            <span>52</span>
+                            <span class="page-default">...</span>
+                            <span>100</span>
+                            <span class="next">下一页</span>
+                        </div>
+                        <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                        <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                    </div>
+                    <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                        <div class="select-text">
+                            <span class="select-txt">10</span>
+                            <ul>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>50</li>
+                                <li>100</li>
+                            </ul>
+                        </div>条
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="dcl_search" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">活码名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">投诉人ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">投诉人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">投诉原因:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">投诉时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1" placeholder="起"><span class="date-line"></span><input type="text" class="layui-input" id="test2" placeholder="止"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="ycl_search" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">活码名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">投诉人ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">投诉人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">投诉原因:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">是否下架:</span>
+            <div class="account-r chose_item">
+                <label for="list2-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="list" id="list2-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="list2-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="list" id="list2-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">投诉时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test3" placeholder="起"><span class="date-line"></span><input type="text" class="layui-input" id="test4" placeholder="止"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">处理时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test5" placeholder="起"><span class="date-line"></span><input type="text" class="layui-input" id="test6" placeholder="止"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<!--  处理  -->
+<div class="activity_set activity_set2 w-120" id="cl-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">是否下架:</span>
+            <div class="a_list_r chose_item">
+                <label for="cj1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked name="cj" id="cj1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+                <label for="cj2" class="radio mgR-0">
+                    <div class="chose">
+                        <input type="radio" name="cj" id="cj2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <span class="tishi2">*活码下架后，不可再恢复使用</span>
+            </div>
+        </div>
+        <div class="a_list xj_msg" style="display: none">
+            <span class="a_list_l">下架原因:</span>
+            <div class="a_list_r">
+                <textarea style="width: 400px;height: 60px;padding: 10px;resize: none" placeholder="向“创建人”展示违规下架原因"></textarea>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">后台备注:</span>
+            <div class="a_list_r">
+                <textarea style="width: 400px;height: 60px;padding: 10px;resize: none" placeholder="选填，仅后台可见，用于区别/说明"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定处理</span></div>
+</div>
+<!--  处理完内容  -->
+<div class="activity_set activity_set2 w-120" id="cl-sure2" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">是否下架:</span>
+            <div class="a_list_r chose_item">
+                <label for="cj2-2" class="radio mgR-0">
+                    <div class="chose">
+                        <input type="radio" checked name="cj2" id="cj2-2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+            </div>
+        </div>
+        <!--  如果没有选择下架，那么下架原因不展示  -->
+        <div class="a_list">
+            <span class="a_list_l">下架原因:</span>
+            <div class="a_list_r">
+                <textarea style="width: 400px;height: 60px;padding: 10px;resize: none" disabled>111</textarea>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">后台备注:</span>
+            <div class="a_list_r">
+                <textarea style="width: 400px;height: 60px;padding: 10px;resize: none" disabled>222</textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  处理完内容  -->
+<div class="activity_set activity_set2 w-120" id="cl-sure3" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">是否下架:</span>
+            <div class="a_list_r chose_item">
+                <label for="cj2-2" class="radio mgR-0">
+                    <div class="chose">
+                        <input type="radio" checked name="cj3" id="cj2-3">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">后台备注:</span>
+            <div class="a_list_r">
+                <textarea style="width: 400px;height: 60px;padding: 10px;resize: none" disabled>222</textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  投诉原因配置  -->
+<div class="activity_set activity_set2 w-120" id="ts-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r" style="flex-direction: column;align-items: flex-start">
+                <div class="normal-table">
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 200px">投诉原因</th>
+                            <th style="width: 100px">优先级</th>
+                            <th style="width: 100px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="line-tr"><input type="text" maxlength="20" value="欺诈" style="width: 100%"></td>
+                            <td class="line-tr"><input type="number" value="97" class="s_width center"></td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr"><input type="text" maxlength="20" value="色情" style="width: 100%"></td>
+                            <td class="line-tr"><input type="number" value="96" class="s_width center"></td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr"><input type="text" maxlength="20" value="诱导行为" style="width: 100%"></td>
+                            <td class="line-tr"><input type="number" value="95" class="s_width center"></td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr"><input type="text" maxlength="20" value="不实信息" style="width: 100%"></td>
+                            <td class="line-tr"><input type="number" value="94" class="s_width center"></td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr"><input type="text" maxlength="20" value="违法犯罪" style="width: 100%"></td>
+                            <td class="line-tr"><input type="number" value="93" class="s_width center"></td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr"><input type="text" maxlength="20" value="骚扰" style="width: 100%"></td>
+                            <td class="line-tr"><input type="number" value="92" class="s_width center"></td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr"><input type="text" maxlength="20" value="侵权（冒充他人、侵犯名誉等）" style="width: 100%"></td>
+                            <td class="line-tr"><input type="number" value="91" class="s_width center"></td>
+                            <td><button class="del">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: left"><span class="tishi" style="margin: 10px 0 0 0">*优先级，数字越大排序越前</span></td>
+                            <td><button>添加</button></td>
+                        </tr>
+                        <tr>
+                            <!--  ‘其它’ 是放在最后一个，这里是用户自定义内容，不能排序，开启则前端显示，关闭就不显示  -->
+                            <td class="line-tr"><input type="text" maxlength="20" value="其它" disabled style="width: 100%"></td>
+                            <td class="line-tr"></td>
+                            <td>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper" style="justify-content: center">
+                                        <input type="checkbox" id="u-togg" checked class="toggle-button" name="switch">
+                                        <label for="u-togg" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test3' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test4' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test5' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test6' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#cj1').click(function () {
+        $('.xj_msg').hide();
+    });
+    $('#cj2').click(function () {
+        $('.xj_msg').show();
+    });
+    $('#chutiyan .dcl-search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['750px', '436px'],
+            skin: 'account-box',
+            content: $("#dcl_search")
+        });
+    });
+    $('#chutiyan .ycl-search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['750px', '464px'],
+            skin: 'account-box',
+            content: $("#ycl_search")
+        });
+    });
+    $('#chutiyan .cl-btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '投诉处理',
+            shadeClose: true,
+            shade: 0.3,
+            zIndex:9999,
+            area: ['700px', '385px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#cl-sure")
+        });
+    });
+    $('#chutiyan .cl-cont').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '联创人文案辅导群-处理',
+            shadeClose: true,
+            shade: 0.3,
+            zIndex:9999,
+            area: ['700px', '306px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#cl-sure2")
+        });
+    });
+    $('#chutiyan .cl-cont2').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '联创人文案辅导群-处理',
+            shadeClose: true,
+            shade: 0.3,
+            zIndex:9999,
+            area: ['700px', '213px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#cl-sure3")
+        });
+    });
+    $('#chutiyan .ts_pz').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '投诉原因-选项',
+            shadeClose: true,
+            shade: 0.3,
+            zIndex:9999,
+            area: ['700px', '506px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#ts-sure")
+        });
+    });
+</script>
+
+
+</body>
+</html>

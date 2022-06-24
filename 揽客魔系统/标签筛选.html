@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签筛选</title>
+    <link rel="stylesheet" href="css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff">
+
+
+<div class="tip-content">
+    <!--  已选入标签  -->
+    <div class="tip-items">
+        <div class="tip-head">
+            <span class="tip-num">已选择<em>5</em>个标签</span>
+            <span class="tishi" style="margin-left: 20px">点击‘x’则可以删除该标签</span>
+        </div>
+        <ul class="tip-tips tip-chose-tips">
+            <li>在线教育</li>
+            <li>线下培训</li>
+            <li>意向客户</li>
+            <li>A类客户</li>
+            <li>餐饮行业</li>
+        </ul>
+        <div class="null-msg"><img src="images/null-msg.png" alt="">暂无数据</div>
+    </div>
+    <!--  未选入标签  -->
+    <div class="tip-items">
+        <div class="tip-head">
+            <label for="c1" class="checked check-all">
+                <div class="chose">
+                    <input type="checkbox" name="pic2" id="c1">
+                    <span class="checked-bg"></span>
+                </div>
+                <span style="font-size: 14px;color: #333;margin-left: 10px;">全选</span>
+            </label>
+            <span class="tishi" style="margin-left: 20px">点击标签即可添加，点击‘x’则可以删除该标签</span>
+            <div class="tiphead-search">
+                <input type="text" placeholder="输入搜索关键词"><span><i class="fa fa-search"></i></span>
+            </div>
+        </div>
+        <ul class="tip-tips tip-null-tips">
+            <li>家装建材</li>
+            <li>互联网营销</li>
+            <li>抖音</li>
+            <li>直播疯狂掘金</li>
+            <li>裂变拓客</li>
+        </ul>
+        <div class="null-msg"><img src="images/null-msg.png" alt="">暂无数据</div>
+    </div>
+    <!--  自定义标签  -->
+    <div class="tip-items">
+        <div class="tip-head">没有发现标签？马上自定义一个</div>
+        <div class="tip-tips" style="align-items: center">
+            <div class="showNumBox">
+                <input type="text" placeholder="输入标签名称" maxlength="8">
+                <span class="num">0/8</span>
+            </div>
+            <span class="set-user mgL-10">添加</span>
+            <span class="tishi mgL-10">* 默认将添加到已选标签区域中，且同时添加到标签池中，可作为公共标签使用</span>
+        </div>
+    </div>
+</div>
+
+<div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/layui/lay/modules/layer.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/myjs.js"></script>
+<script>
+    $('#chutiyan .check-all').on('click', function(){
+        layer.confirm('是否将下面所有内容全部选入？', {
+            btn: ['取消','确定'],
+            area: '416px'
+        }, function(index){
+            $('.check-all input').prop('checked',false);
+            layer.close(index);
+        }, function(){
+            $('.check-all input').prop('checked',true);
+            layer.msg('选入成功', {time: 1000});
+        });
+    });
+
+    $('.tip-tips li').addClass('hover');
+    $('.tip-chose-tips').children('li').append('<span class="del-tips">×</span>');
+    $('.tip-null-tips').children('li').append('<span class="del-tips">×</span>');
+
+    $('body').on('click','.tip-chose-tips .del-tips', function(){
+        var that=this;
+        $(that).parent().addClass('dishover');
+        setTimeout(function () {
+            $(that).parent().remove()
+        },500);
+        var html="";
+        html="<li class=\"hover\">"+$(that).parent().text().replace('×','')+ "<span class=\"del-tips\">×</span></li>";
+        $('.tip-null-tips').append(html);
+    });
+    $('body').on('click','.tip-null-tips li', function(){
+        var that=this;
+        $(that).addClass('dishover');
+        setTimeout(function () {
+            $(that).remove()
+        },500);
+        var html="";
+        html="<li class=\"hover\">"+$(that).text().replace('×','')+ "<span class=\"del-tips\">×</span></li>";
+        $('.tip-chose-tips').append(html);
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .tip-null-tips .del-tips').on('click', function(e){
+            var that =this;
+            e.stopPropagation();
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定要删除该标签？<p>删除后，已有该标签的用户将会被移除该标签</p>',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                title:'提示',
+                btn: ['确定','取消'],
+                area: '416px'
+            }, function(){
+                $(that).parent().remove();
+                layer.msg('删除成功', {time: 1000});
+            }, function(index){
+                layer.close(index);
+            });
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

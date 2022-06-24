@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加角色</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0;background: #fff">
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">角色名称：</span>
+            <div class="a_list_r"><input type="text"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">角色类型：</span>
+            <div class="a_list_r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>公司角色</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">状态：</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" checked="" id="togglebtn2" class="toggle-button" name="switch">
+                        <label for="togglebtn2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">排序码：</span>
+            <div class="a_list_r"><input type="text" class="s_width m-height center"><span class="tishi">*数字越大，排序越前</span></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/myjs.js"></script>
+
+</body>
+</html>

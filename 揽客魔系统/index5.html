@@ -1,0 +1,1510 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>客流猫</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+    <!--<script src="https://kit.fontawesome.com/7f7b5fa9f2.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css">
+    <link rel="stylesheet" href="css/index2.css?v=1.0.0"/>
+</head>
+<body>
+
+<div id="app">
+    <!--顶部导航-->
+    <div class="header" style="">
+        <div class="index_nav_top2">
+            <div class="logo"><img src="images/LOGO4.png" alt=""/></div>
+            <div class="navBox">
+                <ul class="headNav">
+                    <li class="J_menuItem active" data_href="概况/index_v1.html">概况</li>
+                    <template v-for="(item,index) in headNav" >
+                        <li class="J_menuItem " :class="item.action" :key="index">
+                            <a :href="item.data_href" :target="item.target">
+                                {{item.name}}
+                            </a>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+            <div class="headR">
+                <a href="index4.html" class="admBtn">
+                    <i class="layui-icon layui-icon-template-1"></i>切换工具
+                </a>
+                <span class="line"></span>
+                <a href="#" class="user" title="个人信息">
+                    <div class="user_pic">
+                        <img src="images/34652363.png" alt="">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul class="user_msg">
+                        <li>个人设置</li>
+                        <li>修改密码</li>
+                        <li>帮助文档</li>
+                        <li class="kfBtn">联系客服</li>
+                        <li onclick="javaScript:window.location.href = 'index.html'">切换旧版</li>
+                        <li onclick="javaScript:window.location.href = 'login3.html'">退出登录</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--左侧导航-->
+    <div class="index_nav_left2 hideSlide">
+        <!--  动态生成目录  -->
+        <div class="slideBox">
+
+        </div>
+    </div>
+
+    <!--右侧内容-->
+    <div class="index_nav_right2 hideSlide">
+        <span class="layui-breadcrumb" lay-separator="/">
+            当前位置：
+              <a href="">企微私域</a>
+              <a href="">企业微信</a>
+              <a><cite>企微好友</cite></a>
+        </span>
+        <div class="app-main">
+            <iframe name="J_iframe" id="J_iframe" title="" width="100%" height="100%" src="概况/index_v1.html" frameborder="0" data-id="index_v1.html" seamless></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            headNav:[
+                {name:'会员'},
+                {name:'课程'},
+                {name:'分销'},
+                {name:'文章'},
+                {name:'专栏'},
+                {name:'图书'},
+                {name:'商品'},
+                {name:'线下活动'},
+                {name:'营销'},
+                {name:'会员裂变'},
+                {name:'直播'},
+                {name:'活码'},
+                {name:'电商'},
+                {name:'财务'},
+                {name:'分析'},
+                {name:'店铺设置'},
+            ],
+        }
+    })
+
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/layui/lay/modules/layer.js"></script>
+<script src="js/myjs.js"></script>
+<script>
+
+    $(function(){
+        document.getElementById('app').style.overflowY = 'hidden';
+
+        setTimeout(function (){
+            showMenu();
+            navBoxW();
+            var navBoxWidthNow = $('.index_nav_top2 .navBox').width();
+            navHide(navBoxWidthNow);
+        },1000)
+
+        $('.kfBtn').click(function (){
+            layer.open({
+                type: 1
+                ,title: false //不显示标题栏
+                ,closeBtn: false
+                ,shadeClose:true
+                ,area: 'auto'
+                ,shade: 0.25
+                ,content: '<div style="background-color: #393D49;"><img src="http://cshtml.lkmsxy.com/eq.jpg" alt=""></div>'
+
+            });
+        })
+
+
+    });
+
+    // 监听窗口变化，操作导航栏
+    window.onresize=function(){
+        navBoxW();
+    }
+
+
+
+    // 自定义json数据
+    var navList = {
+        item1:[
+            {
+                icon:"images/slidNavIcon/6.png",
+                title:"注册用户",
+                children:[
+                    {name:'全部注册用户',data_href:'会员/注册用户/全部注册用户.html',id:'010101',className:''},
+                    {name:'全部客户',data_href:'会员/注册用户/全部客户.html',id:'010102',className:''},
+                    {name:'黑名单',data_href:'会员/注册用户/黑名单.html',id:'010103',className:''},
+                    {name:'发送短信',data_href:'会员/注册用户/发送短信.html',id:'010104',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/7.png",
+                title:"会员管理",
+                children:[
+                    {name:'全部会员',data_href:'会员/会员管理/全部会员.html',id:'010201',className:''},
+                    {name:'会员等级管理',data_href:'会员/会员管理/等级设置.html',id:'010202',className:''},
+                    {name:'会员权益介绍',data_href:'会员/会员管理/会员等级商品.html',id:'010203',className:''},
+                    {name:'会员兑换码',data_href:'会员/会员管理/会员兑换码.html',id:'010204',className:''},
+                    {name:'购买会员渠道价',data_href:'会员/会员管理/渠道优惠价.html',id:'010205',className:''},
+                    {name:'购买会员分佣',data_href:'会员/会员管理/分佣设置.html',id:'010206',className:''},
+                    {name:'分佣结算时间',data_href:'会员/会员管理/分佣方式.html',id:'010207',className:''},
+                    {name:'一人分佣模式',data_href:'会员/会员管理/一人分佣开关.html',id:'010208',className:''},
+                    {name:'用户报名协议',data_href:'会员/会员管理/用户协议.html',id:'010209',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/5.png",
+                title:"实名认证",
+                children:[
+                    {name:'待审核认证',data_href:'会员/实名认证/待审核认证.html',id:'010301',className:''},
+                    {name:'已认证用户',data_href:'会员/实名认证/已认证用户.html',id:'010302',className:''},
+                    {name:'审核记录',data_href:'会员/实名认证/审核记录.html',id:'010303',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/8.png",
+                title:"代理管理",
+                children:[
+                    {name:'代理类型配置',data_href:'会员/代理管理/代理类型配置.html',id:'010401',className:''},
+                    {name:'代理管理',data_href:'会员/代理管理/代理管理.html',id:'010402',className:''},
+                    {name:'下级代理审核',data_href:'会员/代理管理/下级代理审核.html',id:'010403',className:''},
+                    {name:'代理成交情况',data_href:'会员/代理管理/代理成交情况.html',id:'010404',className:''},
+                    {name:'代理佣金结算',data_href:'会员/代理管理/代理佣金结算.html',id:'010405',className:''},
+                    {name:'代理商品管理',data_href:'会员/代理管理/代理商品管理.html',id:'010406',className:''},
+                    {name:'基本设置',data_href:'会员/代理管理/基本设置.html',id:'010407',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"用户设置",
+                children:[
+                    {name:'手动修改上级',data_href:'会员/用户设置/手动修改上级.html',id:'010501',className:''},
+                    {name:'手动修改等级',data_href:'会员/用户设置/手动修改等级.html',id:'010502',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/28.png",
+                title:"购买会员提醒",
+                children:[
+                    {name:'会员注册提醒上级',data_href:'',id:'010601',className:''},
+                    {name:'购买会员提醒(购买人)',data_href:'提醒/会员提醒/提升自己购买(购买人).html',id:'010602',className:''},
+                    {name:'购买会员提醒(锁定人)',data_href:'提醒/会员提醒/提升自己购买(锁定人).html',id:'010603',className:''},
+                    {name:'购买会员提醒(推荐人)',data_href:'提醒/会员提醒/提升自己购买(推荐人).html',id:'010604',className:''},
+                    {name:'购买兑换码（购买人）',data_href:'提醒/会员提醒/兑换码购买(购买人).html',id:'010605',className:''},
+                    {name:'购买兑换码（锁定人）',data_href:'提醒/会员提醒/兑换码购买(锁定人).html',id:'010606',className:''},
+                    {name:'购买兑换码（推荐人）',data_href:'提醒/会员提醒/兑换码购买(推荐人).html',id:'010607',className:''},
+                    {name:'兑换码使用（使用人）',data_href:'提醒/会员提醒/兑换码使用(使用人).html',id:'010608',className:''},
+                    {name:'兑换码使用（持有人）',data_href:'提醒/会员提醒/兑换码使用(持有人).html',id:'010609',className:''},
+                    {name:'兑换码到期提醒',data_href:'提醒/会员提醒/兑换码到期提醒.html',id:'0106010',className:''},
+                    {name:'会员到期提醒',data_href:'提醒/会员提醒/会员到期提醒.html',id:'0106011',className:''},
+                ]
+            }
+        ],
+        item2:[
+            {
+                icon:"images/slidNavIcon/20.png",
+                title:"系列课",
+                children:[
+                    {name:'全部系列课',data_href:'课堂/系列课管理/全部系列课.html',id:'020101',className:''},
+                    {name:'内部课',data_href:'课堂/系列课管理/内部课程.html',id:'020102',className:''},
+                    {name:'课程购买记录',data_href:'课堂/系列课管理/全部系列课-管理.html#tab3',id:'020103',className:''},
+                    {name:'授权学习权限',data_href:'课堂/系列课管理/内部课程.html',id:'020104',className:''},
+                    {name:'课程价格显示设置',data_href:'课堂/系列课管理/价格标签显示.html',id:'020105',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/20.png",
+                title:"课程互动",
+                children:[
+                    {name:'课程收藏记录',data_href:'课堂/系列课管理/收藏记录.html',id:'020201',className:''},
+                    {name:'课程转赠记录',data_href:'课堂/系列课管理/转赠记录.html',id:'020202',className:''},
+                    {name:'学员感悟',data_href:'课堂/系列课管理/课程留言记录.html',id:'020203',className:''},
+                    {name:'学员笔记',data_href:'课堂/系列课管理/学员笔记.html',id:'020204',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/32.png",
+                title:"见证管理",
+                children:[
+                    {name:'上传见证',data_href:'课堂/系列课管理/见证管理.html',id:'020301',className:''},
+                    {name:'全部见证',data_href:'课堂/系列课管理/见证管理.html',id:'020302',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/11.png",
+                title:"系列课分类",
+                children:[
+                    {name:'系列课分类',data_href:'课堂/系列课管理/系列课分类.html',id:'020401',className:''},
+                    {name:'课程小节分类',data_href:'课堂/系列课管理/课程分类.html',id:'020402',className:''},
+                    {name:'系列课提供商',data_href:'课堂/系列课管理/系列课提供商.html',id:'020403',className:''},
+                    {name:'系列课标签管理',data_href:'课堂/系列课管理/系列课标签.html',id:'020404',className:''},
+                    {name:'课程小节标签',data_href:'课堂/系列课管理/课程标签.html',id:'020405',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/29.png",
+                title:"广告管理",
+                children:[
+                    {name:'分类默认广告',data_href:'课堂/系列课管理/统一广告.html',id:'020501',className:''},
+                    {name:'系列课独立广告',data_href:'课堂/系列课管理/分类广告.html',id:'020502',className:''},
+                    {name:'标签列表独立广告',data_href:'课堂/系列课管理/系列课标签广告.html',id:'020503',className:''},
+                    {name:'课程小节标签广告',data_href:'课堂/系列课管理/课程标签广告.html',id:'020504',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/30.png",
+                title:"购买系列课提醒",
+                children:[
+                    {name:'购买提醒（购买人）',data_href:'提醒/系统课提醒/报名成功提醒购买人.html',id:'020601',className:''},
+                    {name:'购买提醒（锁定人）',data_href:'提醒/系统课提醒/报名成功提醒锁定人.html',id:'020602',className:''},
+                    {name:'购买提醒（推荐人）',data_href:'提醒/系统课提醒/报名成功提醒推荐人.html',id:'020603',className:''},
+                    {name:'新课程上线提醒',data_href:'提醒/系统课提醒/新课程提醒.html',id:'020604',className:''},
+                ]
+            }
+        ],
+        item3:[
+            {
+                icon:"images/slidNavIcon/14.png",
+                title:"课程分销",
+                children:[
+                    {name:'课程分销管理',data_href:'课堂/系列课管理/分佣设置.html',id:'030101',className:''},
+                    {name:'分佣结算时间',data_href:'课堂/系列课管理/分佣方式.html',id:'030102',className:''},
+                    {name:'一人分佣模式',data_href:'课堂/系列课管理/一人分佣开关.html',id:'030103',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/29.png",
+                title:"渠道优惠券",
+                children:[
+                    {name:'授权渠道',data_href:'课堂/系列课管理/渠道优惠价.html',id:'030201',className:''},
+                    {name:'渠道发券记录',data_href:'课堂/系列课管理/渠道优惠价-发券记录.html',id:'030202',className:''},
+                    {name:'用户领券记录',data_href:'课堂/系列课管理/渠道优惠价-领券记录.html',id:'030203',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/14.png",
+                title:"课程打赏",
+                children:[
+                    {name:'打赏分佣配置',data_href:'课堂/系列课管理/打赏分佣.html',id:'030301',className:''},
+                    {name:'打赏记录',data_href:'课堂/系列课管理/打赏记录.html',id:'030302',className:''},
+                    {name:'打赏赠品',data_href:'课堂/系列课管理/打赏赠品.html',id:'030303',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/8.png",
+                title:"按名额分佣模式",
+                children:[
+                    {name:'名额管理',data_href:'佣金/统一名额分佣/名额查询.html',id:'030401',className:''},
+                    {name:'名额增减记录',data_href:'佣金/统一名额分佣/名额增减记录.html',id:'030402',className:''},
+                    {name:'名额获得规则',data_href:'佣金/统一名额分佣/名额获得规则.html',id:'030403',className:''},
+                    {name:'名额锁定用户',data_href:'佣金/统一名额分佣/名额锁定用户.html',id:'030404',className:''},
+                    {name:'系列课-配置',data_href:'佣金/统一名额分佣/系列课-配置.html',id:'030405',className:''},
+                    {name:'课程动态-配置',data_href:'佣金/统一名额分佣/课程动态-配置.html',id:'030406',className:''},
+                    {name:'会员商品-配置',data_href:'佣金/统一名额分佣/会员商品-配置.html',id:'030407',className:''},
+                    {name:'授权下级',data_href:'佣金/统一名额分佣/授权下级.html',id:'030408',className:''},
+                    {name:'模块配置',data_href:'佣金/统一名额分佣/模块配置.html',id:'030409',className:''},
+                ]
+            },
+        ],
+        item4:[
+            {
+                icon:"images/slidNavIcon/9.png",
+                title:"干货文章",
+                children:[
+                    {name:'全部干货',data_href:'课堂/干货文章/全部干货.html',id:'040101',className:''},
+                    {name:'用户评论',data_href:'课堂/干货文章/干货留言.html',id:'040102',className:''},
+                    {name:'干货分类',data_href:'课堂/干货文章/干货分类.html',id:'040103',className:''},
+                    {name:'标签管理',data_href:'课堂/干货文章/标签管理.html',id:'040104',className:''},
+                    {name:'干货列表广告',data_href:'课堂/基础设置/干货列表广告.html',id:'040105',className:''},
+                    {name:'文章结尾广告',data_href:'课堂/基础设置/干货文章底部广告.html',id:'040106',className:''},
+                    {name:'模块配置',data_href:'课堂/干货文章/模块配置.html',id:'040107',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/14.png",
+                title:"文章打赏",
+                children:[
+                    {name:'打赏分佣配置',data_href:'课堂/干货文章/打赏分佣.html',id:'040201',className:''},
+                    {name:'打赏记录',data_href:'课堂/干货文章/打赏记录.html',id:'040202',className:''},
+                    {name:'打赏独立赠品',data_href:'课堂/干货文章/打赏赠品.html',id:'040203',className:''},
+                    {name:'打赏赠品',data_href:'课堂/干货文章/打赏赠品.html',id:'040204',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/26.png",
+                title:"文转赚",
+                children:[
+                    {name:'付费文章',data_href:'课堂/干货文章/付费干货.html',id:'040301',className:''},
+                    {name:'文章分销管理',data_href:'课堂/干货文章/分佣设置.html',id:'040302',className:''},
+                    {name:'一人分佣模式',data_href:'课堂/干货文章/一人分佣开关.html',id:'040303',className:''},
+                    {name:'购买文章提醒',data_href:'课堂/干货文章/购买提醒/购买提醒.html',id:'040304',className:''},
+                    {name:'文章付费记录',data_href:'课堂/干货文章/付费记录.html',id:'040305',className:''},
+                ]
+            },
+        ],
+        item5:[
+            {
+                icon:"images/slidNavIcon/21.png",
+                title:"付费专栏",
+                children:[
+                    {name:'全部专栏',data_href:'课堂/干货文章/干货专栏/干货专栏.html',id:'050101',className:''},
+                    {name:'授权专栏学习权限',data_href:'课堂/干货文章/干货专栏/干货专栏.html',id:'050102',className:''},
+                    {name:'专栏付费记录',data_href:'课堂/干货文章/干货专栏/付费订单.html',id:'050103',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/29.png",
+                title:"渠道优惠券",
+                children:[
+                    {name:'授权渠道',data_href:'课堂/系列课管理/渠道优惠价.html',id:'050201',className:''},
+                    {name:'渠道发券记录',data_href:'课堂/系列课管理/渠道优惠价-发券记录.html',id:'050202',className:''},
+                    {name:'用户领券记录',data_href:'课堂/系列课管理/渠道优惠价-领券记录.html',id:'050203',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"专栏分销配置",
+                children:[
+                    {name:'专栏分销管理',data_href:'课堂/干货文章/干货专栏/专栏分佣.html',id:'050301',className:''},
+                    {name:'一人分佣模式',data_href:'',id:'050302',className:''},
+                    {name:'购买专栏提醒',data_href:'课堂/干货文章/干货专栏/购买提醒/购买提醒.html',id:'050303',className:''},
+                    {name:'专栏分销海报模板',data_href:'课堂/干货文章/干货专栏/海报模板/海报模板.html',id:'050304',className:''},
+                    {name:'模块配置',data_href:'课堂/干货文章/干货专栏/模块配置.html',id:'050305',className:''},
+                ]
+            },
+        ],
+        item6:[
+            {
+                icon:"images/slidNavIcon/1.png",
+                title:"图片管理",
+                children:[
+                    {name:'全部图书',data_href:'图书/图书管理/全部图书.html',id:'060101',className:''},
+                    {name:'待上架图书',data_href:'图书/图书管理/待上架图书.html',id:'060102',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/12.png",
+                title:"类目管理",
+                children:[
+                    {name:'图片分类',data_href:'图书/类目管理/图书分类.html',id:'060201',className:''},
+                    {name:'标签管理',data_href:'图书/类目管理/标签管理.html',id:'060202',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/8.png",
+                title:"图书分销",
+                children:[
+                    {name:'已分销图书',data_href:'图书/分销中心/已分销.html',id:'060301',className:''},
+                    {name:'未分销图书',data_href:'图书/分销中心/未分销.html',id:'060302',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/1.png",
+                title:"海报配置",
+                children:[
+                    {name:'图书分享海报配置',data_href:'图书/海报模板/海报模板.html',id:'060401',className:''},
+                    {name:'图书转赠海报配置',data_href:'图书/转赠模板/转赠模板.html',id:'060402',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/13.png",
+                title:"图书数据",
+                children:[
+                    {name:'购买记录',data_href:'图书/图书数据/购买记录.html',id:'060501',className:''},
+                    {name:'阅读记录',data_href:'图书/图书数据/阅读记录.html',id:'060502',className:''},
+                    {name:'图书评价',data_href:'图书/图书数据/图书评价.html',id:'060503',className:''},
+                    {name:'收藏记录',data_href:'图书/图书数据/收藏记录.html',id:'060504',className:''},
+                    {name:'点赞记录',data_href:'图书/图书数据/点赞记录.html',id:'060505',className:''},
+                    {name:'分享记录',data_href:'图书/图书数据/分享记录.html',id:'060506',className:''},
+                    {name:'转赠记录',data_href:'图书/图书数据/赠送记录.html"',id:'060507',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/30.png",
+                title:"购买提醒",
+                children:[
+                    {name:'用户购买（购买人）',data_href:'图书/通知模板/用户购买(购买人).html',id:'060601',className:''},
+                    {name:'用户购买（推荐人）',data_href:'图书/通知模板/用户购买(推荐人).html',id:'060602',className:''},
+                    {name:'用户购买（锁定人）',data_href:'图书/通知模板/用户购买(锁定人).html',id:'060603',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"图书馆配置",
+                children:[
+                    {name:'首页配置',data_href:'图书/图书馆配置/全部图书页.html',id:'060701',className:''},
+                    {name:'轮播广告图配置',data_href:'图书/图书馆配置/轮播图.html',id:'060702',className:''},
+                    {name:'分类页广告设置',data_href:'图书/图书馆配置/分类广告.html',id:'060703',className:''},
+                    {name:'个性化推荐机制',data_href:'图书/图书馆配置/推荐阅读.html',id:'060704',className:''},
+                ]
+            },
+        ],
+        item7:[
+            {
+                icon:"images/slidNavIcon/22.png",
+                title:"商品管理",
+                children:[
+                    {name:'商品管理',data_href:'商品/引流卡/商品管理/商品管理.html',id:'070101',className:''},
+                    {name:'商品分类',data_href:'商品/引流卡/分类管理.html',id:'070102',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/9.png",
+                title:"订单管理",
+                children:[
+                    {name:'全部订单',data_href:'商品/引流卡/订单管理/订单管理.html',id:'070201',className:''},
+                    {name:'待付款',data_href:'商品/引流卡/订单管理/订单管理.html#tab2',id:'070202',className:''},
+                    {name:'待发货',data_href:'商品/引流卡/订单管理/订单管理.html#tab3',id:'070203',className:''},
+                    {name:'已发货',data_href:'商品/引流卡/订单管理/订单管理.html#tab4',id:'070204',className:''},
+                    {name:'交易完成',data_href:'商品/引流卡/订单管理/订单管理.html#tab5',id:'070205',className:''},
+                    {name:'交易关闭',data_href:'商品/引流卡/订单管理/订单管理.html#tab6',id:'070206',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/8.png",
+                title:"商品分销",
+                children:[
+                    {name:'商品分销管理',data_href:'商品/引流卡/分佣设置/分佣设置.html',id:'070301',className:''},
+                    {name:'分佣结算时间',data_href:'商品/引流卡/分佣设置/分佣方式.html',id:'070302',className:''},
+                    {name:'一人分佣模式',data_href:'商品/引流卡/分佣设置/一人分佣开关.html',id:'070303',className:''},
+                    {name:'推广用户',data_href:'商品/引流卡/推广用户/推广用户.html',id:'070304',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/29.png",
+                title:"引流卡",
+                children:[
+                    {name:'卡片管理',data_href:'商品/引流卡/卡片管理/全部卡片.html',id:'070401',className:''},
+                    {name:'渠道管理',data_href:'商品/引流卡/渠道管理/渠道管理.html',id:'070402',className:''},
+                    {name:'渠道激活',data_href:'商品/引流卡/激活记录/渠道激活.html',id:'070403',className:''},
+                    {name:'用户激活',data_href:'商品/引流卡/激活记录/用户激活.html',id:'070404',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"基础配置",
+                children:[
+                    {name:'首页配置',data_href:'商品/引流卡/首页配置.html',id:'070501',className:''},
+                    {name:'底部菜单配置',data_href:'商品/引流卡/底部菜单配置.html',id:'070502',className:''},
+                    {name:'合作物流公司',data_href:'商品/引流卡/合作物流公司/合作物流公司.html',id:'070503',className:''},
+                    {name:'商品分享海报',data_href:'商品/引流卡/海报模板/海报模板.html',id:'070504',className:''},
+                    {name:'模块配置',data_href:'商品/引流卡/模块配置.html',id:'070505',className:''},
+                ]
+            },
+        ],
+        item8:[
+            {
+                icon:"images/slidNavIcon/22.png",
+                title:"活动管理",
+                children:[
+                    {name:'全部线下活动',data_href:'课堂/课程动态管理/全部课程动态.html',id:'080101',className:''},
+                    {name:'活动排期安排',data_href:'课堂/课程动态管理/课程安排.html',id:'080102',className:''},
+                    {name:'渠道推广优惠价',data_href:'课堂/课程动态管理/渠道优惠价.html',id:'080103',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/9.png",
+                title:"报名信息",
+                children:[
+                    {name:'报名记录',data_href:'课堂/课程动态管理/报名记录.html',id:'080201',className:''},
+                    {name:'预约记录',data_href:'课堂/课程动态管理/预约记录.html',id:'080202',className:''},
+                    {name:'复训记录',data_href:'',id:'080203',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/8.png",
+                title:"活动分销",
+                children:[
+                    {name:'分销设置',data_href:'课堂/课程动态管理/分佣设置.html',id:'080301',className:''},
+                    {name:'一人分佣模式',data_href:'',id:'080302',className:''},
+                    {name:'上级变更',data_href:'课堂/课程动态管理/上级变更.html',id:'080303',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/37.png",
+                title:"身份证签到",
+                children:[
+                    {name:'签到管理员',data_href:'',id:'080401',className:''},
+                    {name:'签到记录',data_href:'',id:'080402',className:''},
+                    {name:'签到配置',data_href:'',id:'080403',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"基础设置",
+                children:[
+                    {name:'用户报名参会协议',data_href:'课堂/课程动态管理/用户协议.html',id:'080501',className:''},
+                    {name:'我的成交客户开关',data_href:'',id:'080502',className:''},
+                    {name:'上课人员标签配置',data_href:'课堂/课程动态管理/上课人员标签配置.html',id:'080503',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/3.png",
+                title:"通知模板",
+                children:[
+                    {name:'报名提醒（购买人）',data_href:'提醒/课程动态提醒/报名成功提醒购买人.html',id:'080601',className:''},
+                    {name:'报名提醒（锁定人）',data_href:'提醒/课程动态提醒/报名成功提醒锁定人.html',id:'080602',className:''},
+                    {name:'报名提醒（推荐人）',data_href:'提醒/课程动态提醒/报名成功提醒推荐人.html',id:'080603',className:''},
+                    {name:'预约成功提醒',data_href:'提醒/课程动态提醒/预约课程成功提醒.html',id:'080604',className:''},
+                    {name:'取消预约提醒',data_href:'提醒/课程动态提醒/取消预约课程提醒.html',id:'080605',className:''},
+                    {name:'签到提醒（报名人）',data_href:'提醒/课程动态提醒/签到成功提醒报名人.html',id:'080606',className:''},
+                    {name:'签到提醒（签到人）',data_href:'提醒/课程动态提醒/签到成功提醒签到人.html',id:'080607',className:''},
+                ]
+            },
+        ],
+        item9:[
+            {
+                icon:"images/slidNavIcon/22.png",
+                title:"图文管理",
+                children:[
+                    {name:'图文管理',data_href:'营销/图文管理/图文管理.html',id:'090101',className:''},
+                    {name:'图文留言',data_href:'营销/图文管理/图文留言.html',id:'090102',className:''},
+                    {name:'图文分类',data_href:'营销/图文管理/图文分类.html',id:'090103',className:''},
+                    {name:'付费文章',data_href:'营销/图文管理/付费文章.html',id:'090104',className:''},
+                    {name:'分佣设置',data_href:'营销/图文管理/分佣设置.html',id:'090105',className:''},
+                    {name:'一人分佣',data_href:'营销/图文管理/一人分佣开关.html',id:'090106',className:''},
+                    {name:'打赏分佣',data_href:'营销/图文管理/打赏分佣.html',id:'090107',className:''},
+                    {name:'购买提醒',data_href:'营销/图文管理/购买提醒/购买提醒.html',id:'090108',className:''},
+                    {name:'付费记录',data_href:'营销/图文管理/付费记录.html',id:'090109',className:''},
+                    {name:'打赏记录',data_href:'营销/图文管理/打赏记录.html',id:'090110',className:''},
+                    {name:'打赏赠品',data_href:'营销/图文管理/打赏赠品.html',id:'090111',className:''},
+                    {name:'标签管理',data_href:'营销/图文管理/标签管理.html',id:'090112',className:''},
+                    {name:'模块配置',data_href:'营销/图文管理/模块配置.html',id:'090113',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/16.png",
+                title:"公众号群发",
+                children:[
+                    {name:'群发',data_href:'营销/群发/群发.html',id:'090201',className:''},
+                    {name:'项目管理',data_href:'营销/群发/项目管理.html',id:'090202',className:''},
+                    {name:'模板管理',data_href:'营销/群发/模板管理.html',id:'090203',className:''},
+                    {name:'群发记录',data_href:'营销/群发/群发记录.html',id:'090204',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/24.png",
+                title:"图片直播",
+                children:[
+                    {name:'图片活动',data_href:'营销/图片活动.html',id:'090301',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/3.png",
+                title:"公众号回复",
+                children:[
+                    {name:'关注欢迎语',data_href:'营销/消息宝/关注回复.html',id:'090401',className:''},
+                    {name:'返回公众号欢迎语',data_href:'营销/消息宝/关注回复.html',id:'090402',className:''},
+                    {name:'默认回复',data_href:'营销/消息宝/关注回复.html',id:'090403',className:''},
+                    {name:'关键词回复',data_href:'营销/消息宝/关键词回复.html',id:'090404',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/32.png",
+                title:"浪潮发售sop",
+                children:[
+                    {name:'首次关注SOP',data_href:'营销/消息宝/首次关注序列.html',id:'090501',className:''},
+                    {name:'再次关注SOP',data_href:'营销/消息宝/再次关注序列.html',id:'090502',className:''},
+                    {name:'关键词SOP',data_href:'营销/消息宝/关键词序列.html',id:'090503',className:''},
+                    {name:'会员等级SOP',data_href:'营销/消息宝/会员等级序列.html',id:'090504',className:''},
+                    {name:'首次购买SOP',data_href:'营销/消息宝/首次购买序列.html',id:'090505',className:''},
+                    {name:'系列课SOP',data_href:'营销/消息宝/系列课SOP.html',id:'090506',className:''},
+                    {name:'专栏订阅SOP',data_href:'营销/消息宝/专栏订阅SOP.html',id:'090507',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/25.png",
+                title:"百业裂变涨粉",
+                children:[
+                    {name:'百业裂变涨粉',data_href:'百业裂变拓客/活动管理.html',id:'090601',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/3.png",
+                title:"用户动态通知",
+                children:[
+                    {name:'行为轨迹配置',data_href:'营销/行为轨迹配置.html',id:'090701',className:''},
+                    {name:'阅读文章提醒',data_href:'',id:'090701',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/15.png",
+                title:"社群培育",
+                children:[
+                    {name:'社群列表',data_href:'营销/社群培育/后端/社群列表/社群列表.html',id:'090801',className:''},
+                    {name:'社群分佣',data_href:'营销/社群培育/后端/社群分佣/社群分佣.html',id:'090802',className:''},
+                    {name:'社群入口开关',data_href:'营销/社群培育/后端/社群入口开关.html',id:'090803',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/31.png",
+                title:"签到打卡",
+                children:[
+                    {name:'打卡列表',data_href:'营销/打卡/打卡列表.html',id:'090901',className:''},
+                    {name:'成员列表',data_href:'营销/打卡/成员列表.html',id:'090902',className:''},
+                    {name:'日签金句',data_href:'营销/打卡/日签金句.html',id:'090903',className:''},
+                    {name:'日签模板',data_href:'营销/打卡/海报模板/海报模板.html',id:'090904',className:''},
+                    {name:'数据统计提醒（管理员）',data_href:'营销/打卡/打卡提醒/数据统计提醒.html',id:'090904',className:''},
+                    {name:'发表日记提醒（管理员）',data_href:'营销/打卡/打卡提醒/发表日记提醒.html',id:'090904',className:''},
+                    {name:'打卡提醒（学员）',data_href:'营销/打卡/打卡提醒/打卡提醒.html',id:'090904',className:''},
+                    {name:'基础配置',data_href:'营销/打卡/基础配置.html',id:'090905',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/32.png",
+                title:"在线签",
+                children:[
+                    {name:'指定签署',data_href:'在线签/批量签署/批量签署.html',id:'091001',className:''},
+                    {name:'任意签署',data_href:'在线签/任意签署.html',id:'091002',className:''},
+                    {name:'业务签署',data_href:'在线签/业务签署/业务签署.html',id:'091003',className:''},
+                    {name:'签署记录',data_href:'在线签/签署记录.html',id:'091004',className:''},
+                    {name:'作废提醒',data_href:'在线签/作废提醒.html',id:'091005',className:''},
+                    {name:'指定签提醒',data_href:'在线签/指定签提醒.html',id:'091006',className:''},
+                    {name:'协议模板',data_href:'在线签/协议模板.html',id:'091007',className:''},
+                    {name:'模块配置',data_href:'在线签/模块配置.html',id:'091008',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/23.png",
+                title:"归属活码",
+                children:[
+                    {name:'通用活码',data_href:'营销/活码/通用活码/通用活码.html',id:'091101',className:''},
+                    {name:'接力活码',data_href:'营销/活码/接力活码/接力活码.html',id:'091102',className:''},
+                    {name:'分类活码',data_href:'营销/活码/分类活码/分类活码.html',id:'091103',className:''},
+                    {name:'活码投诉',data_href:'营销/活码/活码投诉/活码投诉.html',id:'091104',className:''},
+                    {name:'模块设置',data_href:'营销/活码/模块设置.html',id:'091105',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/9.png",
+                title:"专题表单",
+                children:[
+                    {name:'专题表单',data_href:'营销/专题表单/专题表单.html',id:'091201',className:''},
+                    {name:'表单提醒(提交人)',data_href:'营销/专题表单/提交表单-提交人.html',id:'091202',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/20.png",
+                title:"通讯录",
+                children:[
+                    {name:'通讯录名单',data_href:'营销/通讯录/通讯录名单.html',id:'091301',className:''},
+                    {name:'特别名单',data_href:'营销/通讯录/特别名单.html',id:'091302',className:''},
+                    {name:'通讯录配置',data_href:'营销/通讯录/通讯录.html',id:'091303',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/29.png",
+                title:"优惠券",
+                children:[
+                    {name:'优惠券列表',data_href:'营销/优惠券/优惠券列表.html',id:'091401',className:''},
+                    {name:'海报模板',data_href:'营销/优惠券/海报模板/海报模板.html',id:'091402',className:''},
+                    {name:'优惠券配置',data_href:'营销/优惠券/模块配置.html',id:'091403',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/29.png",
+                title:"弹屏广告",
+                children:[
+                    {name:'广告管理',data_href:'营销/弹屏按钮设置/浮动按钮弹屏.html',id:'091501',className:''},
+                ]
+            },
+        ],
+        item10:[
+            {
+                icon:"images/slidNavIcon/22.png",
+                title:"活动管理",
+                children:[
+                    {name:'预售活动',data_href:'营销/会员裂变/预售活动/预售活动.html',id:'100101',className:''},
+                    {name:'拼团活动',data_href:'营销/会员裂变/拼团/拼团活动.html',id:'100102',className:''},
+                    {name:'定金膨胀',data_href:'营销/会员裂变/定金/定金活动.html',id:'100103',className:''},
+                    {name:'自动裂变',data_href:'营销/会员裂变/自动裂变/自动裂变.html',id:'100104',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/40.png",
+                title:"商家管理",
+                children:[
+                    {name:'申请商家',data_href:'营销/会员裂变/申请商家.html',id:'100201',className:''},
+                    {name:'商家管理',data_href:'营销/会员裂变/商家管理/商家管理.html',id:'100202',className:''},
+                    {name:'商家分类',data_href:'营销/会员裂变/商家活动聚合/商家分类.html',id:'100203',className:''},
+                    {name:'商家活动聚合',data_href:'营销/会员裂变/商家活动聚合/商家活动聚合.html',id:'100204',className:''},
+                    {name:'商家授权记录',data_href:'营销/会员裂变/商家授权记录.html',id:'100205',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/26.png",
+                title:"商家提现",
+                children:[
+                    {name:'商家提现申请',data_href:'营销/会员裂变/商家提现/商家提现申请.html',id:'100301',className:''},
+                    {name:'提现审核记录',data_href:'营销/会员裂变/商家提现/提现审核记录.html',id:'100302',className:''},
+                    {name:'商家财务详情',data_href:'营销/会员裂变/商家提现/商家财务详情.html',id:'100303',className:''},
+                    {name:'全部活动订单',data_href:'营销/会员裂变/商家提现/全部活动订单.html',id:'100304',className:''},
+                    {name:'商家提现设置',data_href:'营销/会员裂变/商家提现/商家提现设置.html',id:'100305',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/6.png",
+                title:"商家升级",
+                children:[
+                    {name:'商家升级记录',data_href:'营销/会员裂变/商家升级记录.html',id:'100401',className:''},
+                    {name:'商家升级分佣配置',data_href:'营销/会员裂变/分佣配置.html',id:'100402',className:''},
+                    {name:'商家升级一人分佣',data_href:'营销/会员裂变/一人分佣.html',id:'100403',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/33.png",
+                title:"商家升级名额分佣",
+                children:[
+                    {name:'名额分佣开关',data_href:'营销/会员裂变/名额分佣/名额分佣开关.html',id:'100501',className:''},
+                    {name:'各等级初始化名额',data_href:'营销/会员裂变/名额分佣/各等级初始化名额.html',id:'100502',className:''},
+                    {name:'名额购买记录',data_href:'营销/会员裂变/名额分佣/名额购买记录.html',id:'100503',className:''},
+                    {name:'名额增减记录',data_href:'营销/会员裂变/名额分佣/名额增减记录.html',id:'100504',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/18.png",
+                title:"通知模板",
+                children:[
+                    {name:'用户购买(购买人)',data_href:'营销/会员裂变/统一提醒/购买活动(购买人).html',id:'100601',className:''},
+                    {name:'用户购买(推荐人)',data_href:'营销/会员裂变/统一提醒/购买活动(推荐人).html',id:'100602',className:''},
+                    {name:'用户购买(商家)',data_href:'营销/会员裂变/统一提醒/购买活动(商家).html',id:'100603',className:''},
+                    {name:'支付尾款(购买人)',data_href:'营销/会员裂变/统一提醒/支付尾款(购买人).html',id:'100604',className:''},
+                    {name:'好友领取(赠送人)',data_href:'营销/会员裂变/统一提醒/好友领取(赠送人).html',id:'100605',className:''},
+                    {name:'卡券核销(使用人)',data_href:'营销/会员裂变/统一提醒/卡券核销(使用人).html',id:'100606',className:''},
+                    {name:'卡券到期提醒',data_href:'营销/会员裂变/统一提醒/卡券到期提醒.html',id:'100607',className:''},
+                    {name:'商家升级(购买人)',data_href:'营销/会员裂变/统一提醒/商家升级(购买人).html',id:'100608',className:''},
+                    {name:'商家升级(锁定人)',data_href:'营销/会员裂变/统一提醒/商家升级(锁定人).html',id:'100609',className:''},
+                    {name:'商家升级(推荐人)',data_href:'营销/会员裂变/统一提醒/商家升级(推荐人).html',id:'100610',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"基础配置",
+                children:[
+                    {name:'交易须知',data_href:'营销/会员裂变/交易须知.html',id:'100701',className:''},
+                    {name:'海报模板',data_href:'营销/会员裂变/海报模板/海报模板.html',id:'100702',className:''},
+                    {name:'商家广告',data_href:'营销/会员裂变/首页广告.html',id:'100703',className:''},
+                    {name:'模块配置',data_href:'营销/会员裂变/基础设置.html',id:'100704',className:''},
+                ]
+            },
+        ],
+        item11:[
+            {
+                icon:"images/slidNavIcon/24.png",
+                title:"直播管理",
+                children:[
+                    {name:'直播话题',data_href:'营销/直播间/直播管理/直播话题/直播话题.html',id:'110101',className:''},
+                    {name:'直播主题',data_href:'营销/直播间/直播管理/直播主题/直播主题.html',id:'110102',className:''},
+                    {name:'直播账号',data_href:'营销/直播间/直播管理/直播账号/直播账号.html',id:'110103',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/13.png",
+                title:"直播数据",
+                children:[
+                    {name:'直播数据',data_href:'营销/直播间/直播数据/直播数据/直播数据.html',id:'110201',className:''},
+                    {name:'获奖名单',data_href:'营销/直播间/直播管理/获奖名单.html',id:'110202',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/13.png",
+                title:"收益数据",
+                children:[
+                    {name:'话题订单',data_href:'营销/直播间/收益数据/话题订单/话题订单.html',id:'110301',className:''},
+                    {name:'主题订单',data_href:'营销/直播间/收益数据/主题订单/主题订单.html',id:'110302',className:''},
+                    {name:'商品订单',data_href:'营销/直播间/收益数据/商品订单/商品订单.html',id:'110303',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/8.png",
+                title:"分佣设置",
+                children:[
+                    {name:'直播话题分佣',data_href:'营销/直播间/分佣设置/直播话题.html',id:'110401',className:''},
+                    {name:'直播主题分佣',data_href:'营销/直播间/分佣设置/直播主题.html',id:'110402',className:''},
+                    {name:'直播商品分佣',data_href:'营销/直播间/分佣设置/直播商品分佣.html',id:'110403',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/14.png",
+                title:"红包钱袋",
+                children:[
+                    {name:'红包充值',data_href:'营销/直播间/红包钱袋/红包充值.html',id:'110501',className:''},
+                    {name:'主播钱袋',data_href:'营销/直播间/红包钱袋/主播钱袋.html',id:'110502',className:''},
+                    {name:'钱袋明细',data_href:'营销/直播间/红包钱袋/钱袋明细.html',id:'110503',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/14.png",
+                title:"用户余额",
+                children:[
+                    {name:'余额提现申请',data_href:'营销/直播间/用户余额/余额提现申请.html',id:'110601',className:''},
+                    {name:'提现申请记录',data_href:'营销/直播间/用户余额/提现申请记录.html',id:'110602',className:''},
+                    {name:'余额明细',data_href:'营销/直播间/用户余额/余额明细.html',id:'110603',className:''},
+                    {name:'用户余额',data_href:'营销/直播间/用户余额/用户余额.html',id:'110604',className:''},
+                    {name:'冻结提现用户',data_href:'营销/直播间/用户余额/冻结提现用户.html',id:'110605',className:''},
+                    {name:'提现审核设置',data_href:'营销/直播间/用户余额/提现审核设置.html',id:'110606',className:''},
+                    {name:'余额配置',data_href:'营销/直播间/用户余额/余额配置.html',id:'110607',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/26.png",
+                title:"打赏分佣",
+                children:[
+                    {name:'打赏分佣',data_href:'营销/直播间/打赏分佣/打赏分佣.html',id:'110701',className:''},
+                    {name:'打赏记录',data_href:'营销/直播间/打赏分佣/分佣记录.html',id:'110702',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/30.png",
+                title:"直播提醒",
+                children:[
+                    {name:'预约直播（预约人）',data_href:'营销/直播间/直播提醒/预约直播-预约人.html',id:'110801',className:''},
+                    {name:'预约直播（推荐人）',data_href:'营销/直播间/直播提醒/预约直播-推荐人.html',id:'110802',className:''},
+                    {name:'开播提醒（主播）',data_href:'营销/直播间/直播提醒/开播提醒-主播.html',id:'110803',className:''},
+                    {name:'开播提醒（订阅人）',data_href:'营销/直播间/直播提醒/开播提醒-订阅人.html',id:'110804',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/30.png",
+                title:"购买提醒",
+                children:[
+                    {name:'购买话题（购买人）',data_href:'营销/直播间/购买提醒/购买话题-购买人.html',id:'110901',className:''},
+                    {name:'购买话题（推荐人）',data_href:'营销/直播间/购买提醒/购买话题-推荐人.html',id:'110902',className:''},
+                    {name:'购买话题（锁定人）',data_href:'营销/直播间/购买提醒/购买话题-锁定人.html',id:'110903',className:''},
+                    {name:'购买主题（购买人）',data_href:'营销/直播间/购买提醒/购买主题-购买人.html',id:'110904',className:''},
+                    {name:'购买主题（推荐人）',data_href:'营销/直播间/购买提醒/购买主题-推荐人.html',id:'110905',className:''},
+                    {name:'购买主题（锁定人）',data_href:'营销/直播间/购买提醒/购买主题-锁定人.html',id:'110906',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/9.png",
+                title:"骚扰拦截",
+                children:[
+                    {name:'屏蔽词',data_href:'营销/直播间/骚扰拦截/屏蔽词.html',id:'110901',className:''},
+                    {name:'黑名单',data_href:'营销/直播间/骚扰拦截/黑名单.html',id:'110902',className:''},
+                    {name:'禁言',data_href:'营销/直播间/骚扰拦截/禁言.html',id:'110903',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"基础配置",
+                children:[
+                    {name:'直播管理条例',data_href:'营销/直播间/主播协议/直播管理条例.html',id:'111001',className:''},
+                    {name:'海报模板',data_href:'营销/直播间/海报模板/海报模板.html',id:'111002',className:''},
+                    {name:'模块配置',data_href:'营销/直播间/模块配置.html',id:'111003',className:''},
+                ]
+            },
+        ],
+        item12:[
+            {
+                icon:"images/slidNavIcon/23.png",
+                title:"活码平台",
+                children:[
+                    {name:'活码管理',data_href:'活码/活码管理/活码管理.html',id:'120101',className:''},
+                    {name:'活码用户',data_href:'活码/活码用户.html',id:'120102',className:''},
+                    {name:'付费记录',data_href:'活码/付费记录.html',id:'120103',className:''},
+                    {name:'授权使用',data_href:'活码/授权使用.html',id:'120104',className:''},
+                    {name:'投诉记录',data_href:'活码/投诉记录.html',id:'120105',className:''},
+                    {name:'图片巡查',data_href:'活码/图片巡查/图片巡查.html',id:'120106',className:''},
+                    {name:'提醒设置',data_href:'活码/提醒设置.html',id:'120107',className:''},
+                    {name:'海报设置',data_href:'活码/海报设置.html',id:'120108',className:''},
+                    {name:'分佣设置',data_href:'活码/分佣设置.html',id:'120109',className:''},
+                    {name:'首页自定义',data_href:'活码/首页自定义.html',id:'120110',className:''},
+                    {name:'模块设置',data_href:'活码/模块设置.html',id:'120111',className:''},
+                ]
+            },
+        ],
+        item13:[
+            {
+                icon:"images/slidNavIcon/22.png",
+                title:"概况",
+                children:[
+                    {name:'店铺概况',data_href:'商城/view.html',id:'130101',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/22.png",
+                title:"商品管理",
+                children:[
+                    {name:'上传商品',data_href:'商城/商品管理/添加商品.html',id:'130201',className:''},
+                    {name:'全部商品',data_href:'商城/商品管理/全部商品.html',id:'130202',className:''},
+                    {name:'出售中',data_href:'商城/商品管理/出售中.html',id:'130203',className:''},
+                    {name:'待售商品',data_href:'商城/商品管理/仓库中.html',id:'130204',className:''},
+                    {name:'已售罄',data_href:'商城/商品管理/已售罄.html',id:'130205',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/11.png",
+                title:"类目管理",
+                children:[
+                    {name:'商品分类',data_href:'商城/类目管理/分类管理.html',id:'130301',className:''},
+                    {name:'商品规格',data_href:'商城/类目管理/商品规格.html',id:'130302',className:''},
+                    {name:'品牌管理',data_href:'商城/类目管理/品牌管理.html',id:'130303',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/13.png",
+                title:"交易管理",
+                children:[
+                    {name:'已卖出商品',data_href:'商城/交易管理/已卖出商品.html',id:'130401',className:''},
+                    {name:'退款售后',data_href:'商城/交易管理/退款售后.html',id:'130402',className:''},
+                    {name:'评价管理',data_href:'商城/交易管理/评价管理.html',id:'130403',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/32.png",
+                title:"投诉处理",
+                children:[
+                    {name:'新投诉',data_href:'商城/投诉处理/新投诉.html',id:'130501',className:''},
+                    {name:'处理中',data_href:'商城/投诉处理/处理中.html',id:'130502',className:''},
+                    {name:'已完成',data_href:'商城/投诉处理/已完成.html',id:'130503',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/40.png",
+                title:"商家管理",
+                children:[
+                    {name:'快速建店',data_href:'商城/商家管理/快速建店.html',id:'130601',className:''},
+                    {name:'商家管理',data_href:'商城/商家管理/商家管理.html',id:'130602',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/26.png",
+                title:"货款结账",
+                children:[
+                    {name:'提现申请',data_href:'商城/货款结账/提现申请.html',id:'130701',className:''},
+                    {name:'统一打款',data_href:'商城/货款结账/统一打款.html',id:'130702',className:''},
+                    {name:'提现设置',data_href:'商城/货款结账/提现设置.html',id:'130703',className:''},
+                    {name:'提现提醒',data_href:'商城/货款结账/提现提醒.html',id:'130704',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/43.png",
+                title:"营销活动",
+                children:[
+                    {name:'推荐商品',data_href:'商城/营销活动/推荐商品.html',id:'130801',className:''},
+                    {name:'热销商品',data_href:'商城/营销活动/热销商品.html',id:'130802',className:''},
+                    {name:'特卖商品',data_href:'商城/营销活动/首页商品.html',id:'130803',className:''},
+                    {name:'猜你喜欢',data_href:'商城/营销活动/猜你喜欢.html',id:'130804',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/30.png",
+                title:"订单提醒",
+                children:[
+                    {name:'提醒买家',data_href:'商城/商城配置/订单关怀/提醒买家.html',id:'130901',className:''},
+                    {name:'提醒商家',data_href:'商城/商城配置/订单关怀/提醒商家.html',id:'130902',className:''},
+                    {name:'分销提醒',data_href:'商城/商城配置/订单关怀/分销提醒.html',id:'130903',className:''},
+                    {name:'商品独立提醒',data_href:'',id:'130904',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/8.png",
+                title:"分销管理",
+                children:[
+                    {name:'未分销商品',data_href:'商城/分销管理/未分销商品.html',id:'131001',className:''},
+                    {name:'已分销商品',data_href:'商城/分销管理/已分销商品.html',id:'131002',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"商城配置",
+                children:[
+                    {name:'交易设置',data_href:'商城/商城配置/交易设置.html',id:'131101',className:''},
+                    {name:'合作物流',data_href:'',id:'131102',className:''},
+                    {name:'首页广告图',data_href:'商城/商城配置/首页广告图.html',id:'131103',className:''},
+                    {name:'首页自定义区',data_href:'商城/商城配置/首页自定义.html',id:'131104',className:''},
+                    {name:'首页分类推荐',data_href:'商城/商城配置/首页分类推荐.html',id:'131105',className:''},
+                    {name:'热门搜索词',data_href:'商城/商城配置/热门搜索词.html',id:'131106',className:''},
+                    {name:'积分设置',data_href:'商城/商城配置/积分设置.html',id:'131107',className:''},
+                    {name:'投诉原因配置',data_href:'商城/商城配置/投诉原因设置.html',id:'131108',className:''},
+                    {name:'商城菜单配置',data_href:'商城/商城配置/商城菜单设置.html',id:'131109',className:''},
+                    {name:'分享背景图',data_href:'',id:'131110',className:''},
+                ]
+            },
+        ],
+        item14:[
+            {
+                icon:"images/slidNavIcon/26.png",
+                title:"分销员佣金",
+                children:[
+                    {name:'分销员佣金报表',data_href:'佣金/分销商佣金报表.html',id:'140101',className:''},
+                    {name:'主动给用户补佣',data_href:'佣金/分销商线上补佣.html',id:'140102',className:''},
+                    {name:'主动扣除用户佣金',data_href:'佣金/分销商线下扣佣.html',id:'140103',className:''},
+                    {name:'待确认佣金订单',data_href:'佣金/待确认佣金.html',id:'140104',className:''},
+                    {name:'佣金明细记录',data_href:'佣金/佣金明细记录.html',id:'140105',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/44.png",
+                title:"提现审核",
+                children:[
+                    {name:'用户申请提现',data_href:'佣金/用户提现申请.html',id:'140201',className:''},
+                    {name:'提现审核记录',data_href:'佣金/提现审核记录.html',id:'140202',className:''},
+                    {name:'冻结用户提现',data_href:'佣金/冻结提现用户.html',id:'140203',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/30.png",
+                title:"提现提醒",
+                children:[
+                    {name:'申请提现通知',data_href:'提醒/佣金提现提醒/提现申请提醒.html',id:'140301',className:''},
+                    {name:'提现审核通过',data_href:'提醒/佣金提现提醒/提现审核成功提醒.html',id:'140302',className:''},
+                    {name:'提现审核失败',data_href:'提醒/佣金提现提醒/提现审核失败提醒.html',id:'140303',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/26.png",
+                title:"佣金结算设置",
+                children:[
+                    {name:'即可分佣接口选择',data_href:'',id:'140401',className:''},
+                    {name:'用户提现秒到设置',data_href:'',id:'140402',className:''},
+                    {name:'用户提现限额及手续费',data_href:'',id:'140403',className:''},
+                    {name:'强推荐成交原则',data_href:'',id:'140404',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/15.png",
+                title:"独立商户配置",
+                children:[
+                    {name:'收款商户号配置',data_href:'设置/收付款设置定制/收款方式设置.html',id:'140501',className:''},
+                    {name:'佣金支付商户号配置',data_href:'设置/收付款设置定制/佣金支付设置.html',id:'140502',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/14.png",
+                title:"财税筹划",
+                children:[
+                    {name:'分公司管理',data_href:'佣金/分公司/分公司管理/分公司管理.html',id:'140601',className:''},
+                    {name:'财务结算',data_href:'佣金/分公司/财务结算/财务结算.html',id:'140602',className:''},
+                    {name:'结算设置',data_href:'佣金/分公司/基本设置.html',id:'140603',className:''},
+                    {name:'分公司收款明细',data_href:'佣金/分公司/分公司收款明细.html',id:'140604',className:''},
+                    {name:'推客佣金明细',data_href:'佣金/分公司/推客佣金明细.html',id:'140605',className:''},
+                    {name:'推客提现申请',data_href:'佣金/分公司/推客提现申请.html',id:'140606',className:''},
+                    {name:'提现审核记录',data_href:'佣金/分公司/提现审核记录.html',id:'140607',className:''},
+                ]
+            },
+        ],
+        item15:[
+            {
+                icon:"images/slidNavIcon/44.png",
+                title:"来源分析",
+                children:[
+                    {name:'访问入口',data_href:'营销/深层挖掘系统/来源分析/访问入口.html',id:'150101',className:''},
+                    {name:'分享来源',data_href:'营销/深层挖掘系统/来源分析/分享来源.html',id:'150102',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/14.png",
+                title:"访问分析",
+                children:[
+                    {name:'访问趋势',data_href:'营销/深层挖掘系统/访问分析/访问趋势.html',id:'150201',className:''},
+                    {name:'新客增长',data_href:'营销/深层挖掘系统/访问分析/新客增长.html',id:'150202',className:''},
+                    {name:'受访页面',data_href:'营销/深层挖掘系统/访问分析/受访页面.html',id:'150203',className:''},
+                    {name:'访问明细',data_href:'营销/深层挖掘系统/访问分析/访问明细.html',id:'150204',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/7.png",
+                title:"访客分析",
+                children:[
+                    {name:'基本信息',data_href:'营销/深层挖掘系统/访客分析/基本信息.html',id:'150301',className:''},
+                    {name:'地域分布',data_href:'营销/深层挖掘系统/访客分析/地域分布.html',id:'150302',className:''},
+                    {name:'活跃度',data_href:'营销/深层挖掘系统/访客分析/活跃度.html',id:'150303',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/35.png",
+                title:"用户价值分析",
+                children:[
+                    {name:'价值分析',data_href:'营销/深层挖掘系统/用户价值分析/价值分析.html',id:'150401',className:''},
+                    {name:'价值明细',data_href:'营销/深层挖掘系统/用户价值分析/价值明细.html',id:'150402',className:''},
+                ]
+            },
+        ],
+        item16:[
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"店铺设置",
+                children:[
+                    {name:'店铺首页配置',data_href:'课堂/基础设置/首页配置.html',id:'160101',className:''},
+                    {name:'底部统一广告',data_href:'课堂/基础设置/首页底部图.html',id:'160102',className:''},
+                    {name:'底部菜单设置',data_href:'课堂/基础设置/课程菜单设置.html',id:'160103',className:''},
+                    {name:'个人中心配置',data_href:'课堂/基础设置/个人中心配置.html',id:'160104',className:''},
+                    {name:'课程转赠海报模板',data_href:'课堂/基础设置/课程转赠模板.html',id:'160105',className:''},
+                    {name:'课程分享海报配置',data_href:'课堂/基础设置/系列课海报.html',id:'160106',className:''},
+                    {name:'分销报课码配置',data_href:'课堂/基础设置/报课码配置.html',id:'160107',className:''},
+                    {name:'在线客服配置(渠道/官方)',data_href:'设置/客服配置.html',id:'160108',className:''},
+                    {name:'显示上级代理',data_href:'佣金/上级代理.html',id:'160109',className:''},
+                    {name:'搜索页热搜词',data_href:'课堂/基础设置/搜索页热搜词.html',id:'160110',className:''},
+                    {name:'课程详情页推广会员',data_href:'课堂/系列课管理/推广会员.html',id:'160111',className:''},
+                    {name:'推广报表开关',data_href:'会员/推广报表开关.html',id:'160112',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/16.png",
+                title:"公众号配置",
+                children:[
+                    {name:'公众号授权',data_href:'设置/公众号设置/公众号授权.html',id:'160201',className:''},
+                    {name:'公众号菜单配置',data_href:'设置/公众号设置/微信菜单设置.html',id:'160202',className:''},
+                    {name:'引导关注页配置',data_href:'设置/公众号设置/一键关注配置.html',id:'160203',className:''},
+                    {name:'公众号菜单海报配置',data_href:'设置/公众号设置/推广海报配置.html',id:'160204',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/19.png",
+                title:"小程序配置",
+                children:[
+                    {name:'小程序授权',data_href:'设置/小程序授权/小程序授权.html',id:'160301',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/14.png",
+                title:"收付款配置",
+                children:[
+                    {name:'收款商户号设置',data_href:'设置/收付款设置/收款方式设置.html',id:'160401',className:''},
+                    {name:'付佣商户号设置',data_href:'设置/收付款设置/佣金支付设置.html',id:'160402',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"基础配置",
+                children:[
+                    {name:'短信签名设置',data_href:'设置/短信标签设置/短信标签设置.html',id:'160501',className:''},
+                    {name:'登录注册协议',data_href:'设置/基础协议.html',id:'160502',className:''},
+                    {name:'PC端扫码登录提醒',data_href:'设置/网页扫码登录提醒/提醒设置.html',id:'160503',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/43.png",
+                title:"分销裂变系统对接",
+                children:[
+                    {name:'对接验证',data_href:'设置/分销裂变系统对接/对接验证.html',id:'160601',className:''},
+                    {name:'活动数据',data_href:'设置/分销裂变系统对接/活动数据.html',id:'160602',className:''},
+                ]
+            },
+            {
+                icon:"images/slidNavIcon/4.png",
+                title:"系统配置",
+                children:[
+                    {name:'部门管理',data_href:'系统管理/部门管理.html',id:'160701',className:''},
+                    {name:'用户管理',data_href:'系统管理/用户管理.html',id:'160702',className:''},
+                    {name:'角色管理',data_href:'系统管理/角色管理.html',id:'160703',className:''},
+                ]
+            },
+        ]
+    };
+    var arr = [];
+    // 将 json 数据放入自定义数组中
+    for(var i in navList){
+        arr.push(navList[i])
+    }
+
+    function mDoubPic(className) {
+
+        // 在导航栏中，判断鼠标移入移出
+        // 若鼠标移入到内容块中，则显示
+        // 若鼠标移出内容块，且移出导航栏，则隐藏
+        var name = $(className).children('li.J_menuItem:not(:first-child)');
+        var name2 = $(className).children('li.J_menuItem');
+
+        $(name).on('mouseenter',function (e) {
+            $(this).addClass('hoverName').siblings().removeClass('hoverName');
+
+            $('#headSlideNav').remove();
+            var top = $(this).offset().top;
+            var left = $(this).offset().left;
+
+            // 获取json数据数组，因为 概况 下没有数据，所以这里数组的下标后移一位
+            var data = arr[$(this).index()-1];
+
+            // 先动态创建父元素，不然后面数据挂载不上去
+            $('body').append('<div id="headSlideNav"></div>');
+            // 循环遍历数组，将第一层级获取出来，并添加到元素中去
+            var arr2=[];
+            for(var i in data){
+                $('#headSlideNav').append('<div class="item">' +
+                    '<p class="itemTitle">'+ data[i].title +'</p>' +
+                    '<ul></ul>' +
+                    '</div>')
+                // 把子数据放入自定义数组中，方便后续引用
+                arr2.push(data[i].children)
+            }
+
+            // 判断该元素是否有子页面，没有则不展示弹框
+            if(arr2.length === 0){
+                $('#headSlideNav').remove();
+                return false
+            }
+
+            // 遍历存放子数据的数组，获取数组下标，方便数据的存放
+            for (var j = 0;j < arr2.length;j++) {
+                // 再次遍历每个下标数组对应值
+                for(var k in arr2[j]){
+                    $('<li class="'+arr2[j][k].className + '"><span class="J_menuItem" data_id="'+ arr2[j][k].id + '" data_href="'+ arr2[j][k].data_href + '">'+arr2[j][k].name+'</span></li>').appendTo($('#headSlideNav .item:nth-child('+ (j+1) + ') ul'));
+                }
+            }
+
+            $('#headSlideNav li.hot span').append('<img src="images/hot.png">');
+
+            // 判断临界点，展示位置
+            if($(window).width() - left >= 450){
+                $("#headSlideNav").css({
+                    "left": left -20,
+                    "top": top + 62,
+                });
+            }else{
+                $("#headSlideNav").css({
+                    "left": left - ($('#headSlideNav').outerWidth()/2),
+                    "top": top + 62,
+                });
+            }
+            let that = this;
+            $('#headSlideNav li span').on('click',function (){
+                $('.index_nav_left2,.index_nav_right2').removeClass('hideSlide');
+                showSlideNav(that);
+                showIframe();
+
+                $(that).addClass('active').siblings().removeClass('active');
+                // 点击获取链接赋值到 iframe
+                href(this)
+
+                var id = $(this).attr('data_id');
+                var item = $('.slideNavBox .items .item span[data_id = '+ id +']');
+                item.parent().addClass('active').siblings().removeClass('active')
+
+                var top1 = item.parent().position().top;
+                var top2 = $('body').height();
+                if(top1 - top2 >=0){
+                    $('.index_nav_left2 .slideBox').animate({scrollTop:top1-top2 + 200}, 200);
+                }else{
+                    $('.index_nav_left2 .slideBox').scrollTop(0)
+                }
+            })
+
+        }).on('mouseleave',function(e){
+            mouseMove(e,this,'#headSlideNav')
+        });
+
+        $(name2).on('click',function (e){
+            if($(this).hasClass('blankName')){
+                //
+            }else {
+                let that = this;
+                $(that).addClass('active').siblings().removeClass('active');
+                $(that).removeClass('hoverName');
+                $('#hideSlideNav li').removeClass('active');
+
+                if ($(that).index() === 0) {
+                    $('.index_nav_left2,.index_nav_right2').addClass('hideSlide')
+                } else {
+                    $('.index_nav_left2,.index_nav_right2').removeClass('hideSlide')
+                }
+
+                showSlideNav(that)
+                showIframe()
+            }
+        })
+    }
+    mDoubPic('.headNav')
+
+    function showSlideNav(that){
+        $('.slideNavBox,#headSlideNav').remove();
+        // 点击顶部导航，左侧出现对应弹框内容
+        // 循环遍历数组，将第一层级获取出来，并添加到元素中去
+        var data = arr[$(that).index()-1];
+        appendSlide(data)
+    }
+    function appendSlide(data) {
+        var arr3=[];
+        for(var i in data){
+            $('.index_nav_left2 .slideBox').append('<div class="slideNavBox">' +
+                '<div class="itemTitle"><img src=" ' + data[i].icon +' " alt=""><span>'+ data[i].title +'</span></div>' +
+                '<ul class="items"></ul>' +
+                '</div>')
+            // 把子数据放入自定义数组中，方便后续引用
+            arr3.push(data[i].children)
+        }
+        // 遍历存放子数据的数组，获取数组下标，方便数据的存放
+        for (var j = 0;j < arr3.length;j++) {
+            // 再次遍历每个下标数组对应值
+            for(var k in arr3[j]){
+                $('<li class="item '+ arr3[j][k].className +'">' +
+                    '<span class="J_menuItem" data_id="'+ arr3[j][k].id + '" data_href="'+ arr3[j][k].data_href + '">'+arr3[j][k].name+'</span>' +
+                    '</li>'
+                ).appendTo($('.index_nav_left2 .slideNavBox:nth-child('+ (j+1) + ') ul'));
+            }
+        }
+
+
+        $('.slideNavBox .itemTitle').click(function () {
+            $(this).siblings().slideToggle('fast');
+            $(this).toggleClass('on');
+        })
+        $('.slideNavBox .J_menuItem').click(function () {
+            $(this).parent().addClass('active').siblings().removeClass('active');
+            $(this).parents('.slideNavBox').siblings().find('.item').removeClass('active');
+
+        })
+    }
+    function showIframe() {
+        $(".J_menuItem").on('click',function(){
+            $('#headSlideNav').remove();
+            href(this)
+        });
+    }
+    function href(that) {
+        var url = $(that).attr('data_href');
+        console.log(url)
+        if(!url){
+            $("#J_iframe").attr('src','404.html');
+        }else{
+            $("#J_iframe").attr('src',url);
+        }
+    }
+
+    // 判断顶部导航栏宽度，显隐后面的元素
+    function navBoxW() {
+        // 判断顶部导航栏
+        var navBoxWidth = $('.index_nav_top2 .navBox').width();
+        navHide(navBoxWidth);
+    }
+    function navHide(navBoxWidth) {
+
+        var name = $('.index_nav_top2 .navBox .J_menuItem');
+        var navArr=[];
+        for(var i = 0; i < name.length ; i++){
+            var left = ($(name[i]).offset().left - 190) + $(name[i]).outerWidth(true);
+
+            navArr.push(left);
+        }
+        var menu = '<div class="menu"><i class="layui-icon layui-icon-more"></i></div>';
+        for(var j in navArr){
+            if(navArr[j] > navBoxWidth){
+                $('.index_nav_top2 .headNav .menu').remove();
+                $(name).eq(j).css('visibility','hidden');
+                $('.index_nav_top2 .headNav').append(menu)
+            }else if(navArr[j] < navBoxWidth){
+                $(name).eq(j).css('visibility','visible');
+                $('.index_nav_top2 .headNav .menu').remove();
+            }
+        }
+
+        $('.index_nav_top2 .headNav .menu').on('mouseenter',function (){
+            $('#hideSlideNav,#headSlideNav').remove();
+            var left = $(this).offset().left;
+            $('body').append('<ul id="hideSlideNav"></ul>');
+            $('#hideSlideNav').css({
+                'left': left,
+            })
+            $(".index_nav_top2 .headNav li.J_menuItem").each(function() {
+                if ($(this).css("visibility") === "hidden"){
+                    //console.log($(this).clone());
+                    //var txt = $('.index_nav_top2 .headNav li').eq($(this).index()).text();
+                    $('#hideSlideNav').append($(this).clone().css('visibility','visible'));
+                }
+            })
+
+            var len = $('.headNav li.J_menuItem ').length;
+            var len2 = $('#hideSlideNav li').length;
+
+            $('#hideSlideNav li').on('click',function (e){
+                $('.slideNavBox,#headSlideNav').remove();
+
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.headNav li.J_menuItem').removeClass('active');
+
+                var ind = $(this).index();
+                $('.index_nav_left2,.index_nav_right2').removeClass('hideSlide');
+
+                // 截取隐藏元素对应下标的数组
+                var datas = arr.slice((len - len2-1),len);
+                var data = datas[ind];
+                appendSlide(data)
+                showIframe()
+            })
+
+        }).on('mouseleave',function (e){
+            mouseMove(e,this,'#hideSlideNav')
+
+        })
+
+    }
+
+    // 公共，鼠标移入移出展示弹框
+    function mouseMove(e,that,item) {
+        var x = e.pageX;
+        var y = e.pageY;
+        var item1 = $(that);
+        var item_y1 = item1.offset().top;
+        var item_y2 = item_y1 + item1.height();
+        var item_x1 = item1.offset().left;
+        var item_x2 = item_x1 + item1.outerWidth();
+
+        var item2 = $(item);
+        // 因为后面有删除该节点的操作，所以这里加一个判断，避免报错
+        if(item2.length < 1){
+            return false;
+        }else{
+            var item2_y1 = item2.offset().top;
+            var item2_y2 = item2_y1 + item2.height();
+            var item2_x1 = item2.offset().left;
+            var item2_x2 = item2_x1 + item2.outerWidth();
+            if( x <= item_x1 || x >= item_x2 || y <= item_y1 || y >= item_y2){
+                //console.log('在外面')
+                if( x <= item2_x1 || x >= item2_x2 || y <= item2_y1 || y >= item2_y2){
+                    //console.log('在弹框外面')
+                    item2.remove();
+                    item1.removeClass('hoverName');
+                }else{
+                    //console.log('在弹框里面')
+                    item2.on('mouseenter',function (e){
+                        e.stopPropagation();
+                        $(this).show();
+                    }).on('mouseleave',function(){
+                        $(this).remove();
+                        item1.removeClass('hoverName');
+                    });
+                }
+            }else{
+                //console.log('在里面')
+            }
+        }
+    }
+
+    // 加载完成后，判断导航栏是否有元素隐藏
+    function showMenu() {
+        $(".index_nav_top2 .headNav li.J_menuItem").each(function() {
+            if ($(this).css("visibility") === "hidden"){
+                $('.index_nav_top2 .headNav .menu').show();
+            } else {
+                $('.index_nav_top2 .headNav .menu').hide();
+            }
+        })
+    }
+
+
+
+
+</script>
+</body>
+</html>

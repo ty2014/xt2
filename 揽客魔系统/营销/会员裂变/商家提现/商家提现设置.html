@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商家提现设置</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body id="chutiyan" style="height: auto">
+
+<div class="page-title">商家提现设置</div>
+<div class="activity_set activity_set3 w-7">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">提现方式:</span>
+            <div class="a_list_r chose_item">
+                <label for="cj1" class="radio" style="width: 84px">
+                    <div class="chose">
+                        <input type="radio" checked name="cj" id="cj1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通提现</span>
+                </label>
+                <label for="cj2" class="radio mgR-0" style="width: 84px;opacity: .8;cursor: no-drop">
+                    <div class="chose">
+                        <input type="radio" disabled name="cj" id="cj2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">微信分账</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">提现限制:</span>
+            <div class="a_list_r">
+                商户每<input type="text" class="center m_width" style="margin:0 8px;">
+                天，可提现<input type="text" class="center s_width" style="margin:0 8px;">次。
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">单次限制:</span>
+            <div class="a_list_r">
+                每次提现最低<input type="text" class="center m_width" style="margin:0 8px;">元，
+                最高<input type="text" class="center m_width" style="margin:0 8px;">元。
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">服务费:</span>
+            <div class="a_list_r">
+                商户提现总金额在
+                <input type="text" class="center m_width" style="margin:0 8px;">
+                元内，<span style="color: #52b91d">免收</span>服务费；超过部分按照
+                <input type="text" class="center s_width" style="margin:0 8px;">%<span style="color: #fe6d44">收取</span>服务费。
+            </div>
+        </div>
+    </div>
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <span class="a_list_l">货款冻结:</span>
+            <div class="a_list_r">用户报名商户活动后，钱将在平台账户上停留<input type="text" class="center s_width" style="margin:0 8px;">天，商户才可提现该笔金额</div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对接验证</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">对接验证</div>
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <div class="a_list_r">
+                <div class="tishi-bg">
+                    <img src="../../images/3.png" alt="">
+                    请登录【客流猫·裂变系统】，从公众号-客流猫-数据对接处复制【App_ID、App_KEY】填入验证，详细操作可查看
+                    <a href="https://www.yuque.com/docs/share/75be8aba-6d2d-46a2-a5d1-168d5e0650b9?#" target="_blank">对接说明</a>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r">
+                <h2 class="color-f80"><b>对接状态：待对接</b></h2>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r">
+                <h2 class="notExpired"><b>对接状态：成功</b></h2>
+                <span class="tishi notExpired">【客流猫·裂变系统】的活动可将相关数据同步到本系统</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r">
+                <h2 class="expired"><b>对接状态：失败</b></h2>
+                <span class="tishi expired">校验失败，公众号使用不一致，请使用相同公众号</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r">
+                <h2 class="expired"><b>对接状态：失败</b></h2>
+                <span class="tishi expired">校验失败，App_ID、App_KEY未填对</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">公众号APPID:</span>
+            <div class="a_list_r">
+                <input type="text" value="" disabled>
+                <span class="tishi">*请保证两边系统使用相同的公众号，即Appid相同</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">App_ID:</span>
+            <div class="a_list_r">
+                <input type="text" value="">
+                <a class="tishi img_btn">查看示例</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">App_KEY:</span>
+            <div class="a_list_r">
+                <input type="text" value="">
+                <a class="tishi img_btn">查看示例</a>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2 align-left" style="padding: 0 168px"><span class="btn btn-sure">验证</span></div>
+</div>
+
+<img src="http://cshtml.lkmsxy.com/csimg/dxbq.png" alt="" id="title_img" style="height: 580px;display: none;">
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#chutiyan .img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#title_img")
+        });
+    });
+</script>
+
+</body>
+</html>

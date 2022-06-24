@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程转赠模板添加</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/handl.css">
+</head>
+<body id="chutiyan">
+
+
+
+<div id="app">
+    <div class="activity_set activity_set3 w-4">
+        <div class="b-line">
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">状态:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="ds-fy" checked class="toggle-button" name="switch">
+                                <label for="ds-fy" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">启用</span>
+                                    <span class="text off">停用</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">默认模板:</span>
+                    <div class="a_list_r chose_item">
+                        <label for="default1" class="radio">
+                            <div class="chose">
+                                <input type="radio" checked name="default" id="default1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">默认</span>
+                        </label>
+                        <label for="default2" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="default" id="default2" />
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">不默认</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list ">
+                    <span class="a_list_l">应用类型:</span>
+                    <div class="a_list_r">
+                        <div class="showNumBox">
+                            <input type="text" placeholder="最多可输入10字" maxlength="10">
+                            <span class="num">0/10</span>
+                        </div>
+                        <i class="tips tip1 mgL-10"></i>
+                    </div>
+                </div>
+                <div class="a_list ">
+                    <span class="a_list_l">优先级:</span>
+                    <div class="a_list_r"><input type="text" class="s_width center" value="100"><span class="tishi">*数字越大排序越前</span></div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">日签配置:</span>
+                <div class="a_list_r chose_item">
+                    <label for="hbset1" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked name="hbset" id="hbset1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">简易模式</span>
+                    </label>
+                    <label for="hbset2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="hbset" id="hbset2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">高级模式</span>
+                    </label>
+                    <span class="tishi">高级模式：此模式下为自定义内容，使用者需要掌握程序编码方法，再进行操作</span>
+                </div>
+            </div>
+            <div class="a_list hbset_cont1">
+                <span class="a_list_l" style="align-items: flex-start;padding-top: 25px"></span>
+                <div class="a_list_r">
+                    <div class="poster">
+                        <div id='poster' style="width: 320px;min-width: 320px;height: 569px;margin-right: 40px;border:1px solid #d5d5d5;overflow: hidden;background: #fff;position:relative;z-index: 9;">
+                            <img src="../images/knwlczsj0juc.jpg" class='bg' id="Img" style="width:100%;height: 100%;z-index:0;" alt="背景图"/>
+                            <div class="drag u_pic" type="head" index="3" style="z-index:3;left:26px;top:389px;width:32px;height: 32px;position: absolute">
+                                <img src="../../../images/head.jpg" alt="头像" style="width:100%;height: 100%;border-radius: 50%;vertical-align: top"/>
+                                <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                            </div>
+                            <div class="drag u_name" type="realname" index="4" style="z-index:4;left:74px;top:394px;position: absolute;cursor: default">
+                                <div class="text" style="color: #fff">昵称</div>
+                                <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                            </div>
+                            <div class="drag" type="qr" index="2" style="z-index:2;left:227px;top:462px;width:52px;height:52px;position: absolute;cursor: default">
+                                <img src="../../../images/1.png" alt="二维码" style="width:100%;height: 100%;"/>
+                                <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                            </div>
+                            <div class="drag u_date" type="date" index="2" style="z-index:2;left:26px;top:29px;position: absolute;width: 32px;cursor: default">
+                                <div class="rqCardCont1">
+                                    <div class="rqdateCont">
+                                        <div class="date" style="font-size: 26px;">
+                                            <span>03</span>
+                                            <span class="line"></span>
+                                            <span>03</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                            </div>
+                            <div class="drag u_week" type="week" index="2" style="z-index:2;left:78px;top:29px;position: absolute;width: 20px;cursor: default">
+                                <div class="rqCardCont1">
+                                    <div class="rqdateCont">
+                                        <span class="week" style="font-size: 12px;">周四</span>
+                                    </div>
+                                </div>
+                                <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                            </div>
+                            <div class="drag u_txt" type="txt" index="3" style="z-index:3;left:26px;top:176px;position: absolute;width: 263px;cursor: default">
+                                <div class="rqCardCont2">
+                                    <div class="rqtxtCont">
+                                        <textarea rows="4" style="font-size: 15px;">好设计让产品可用好设计让产品用</textarea>
+                                    </div>
+                                </div>
+                                <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                            </div>
+                            <div class="drag u_classNum" type="classNum" index="2" style="z-index:2;left:26px;top:313px;position: absolute;cursor: default">
+                                <span class="num" style="color: #fff">10</span>
+                                <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                            </div>
+                            <div class="drag u_personNum" type="personNum" index="2" style="z-index:2;left:66px;top:313px;position: absolute;cursor: default">
+                                <span class="num" style="color: #fff">10</span>
+                                <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                            </div>
+                            <div class="drag u_finishNum" type="finishNum" index="2" style="z-index:2;left:106px;top:313px;position: absolute;cursor: default">
+                                <span class="num" style="color: #fff">10<em style="font-style: normal;margin-left: 4px;">%</em></span>
+                                <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                            </div>
+                        </div>
+                        <ul class="poster_setting">
+                            <li>
+                                <div class="set_tit">日签背景</div>
+                                <div class="set_msg">
+                                    <div class="bg_pic">
+                                        <div id="remark"><span></span><input id="f" type="file" onchange="chooseImg(this)" style="opacity: 0;"></div>
+                                        <label for="f" class="hb_pic">选择背景图</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="set_tit"></div>
+                                <div class="set_msg">
+                                    <p class="tishi2" style="margin: 0">日签背景，最佳尺寸为：750*1334，最佳大小为：500KB以下</p>
+                                </div>
+                            </li>
+                            <!--  海报尺寸设置  -->
+                            <li class="title2_msg hb_size">
+                                <div class="set_tit">日签尺寸</div>
+                                <div class="set_msg">
+                                    <p><span>宽：</span>320px，<span style="margin-left: 16px;">高：</span>569px</p>
+                                    <a class="mgL-20" onclick="set_hbsize()">修改</a>
+                                </div>
+                            </li>
+                            <li class="title2_msg hb_size_set" style="display: none">
+                                <div class="set_tit">日签尺寸</div>
+                                <div class="set_msg">
+                                    宽：<input type="number" class="s_width hbWidth" value="320">&nbsp;px&nbsp;,&nbsp;&nbsp;&nbsp;
+                                    高：<input type="number" class="s_width hbHeight" value="569">&nbsp;px
+                                    <button class="set_btn mgL-20" onclick="set_hbSizeBtn()">确定修改尺寸</button>
+                                </div>
+                            </li>
+                            <!--  海报元素选择  -->
+                            <li class="RewardType">
+                                <div class="set_tit">日签元素</div>
+                                <div class="set_msg hb_element">
+                                    <div class="radio_list">
+                                        <!--   二维码默认就有，且必须要   -->
+                                        <label for="h_qr" class="checked disabled" style="cursor: no-drop;">
+                                            <div class="chose">
+                                                <input type="checkbox" checked  name="pic2" id="h_qr">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">二维码</span>
+                                        </label>
+                                        <label for="h_pic" class="checked" id="Uphoto_togg">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="pic2" id="h_pic">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">头像</span>
+                                        </label>
+                                        <label for="h_name" class="checked" id="Name_togg">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="pic2" id="h_name">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">昵称</span>
+                                        </label>
+                                        <label for="date" class="checked" id="date_togg">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="pic2" id="date">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">打卡日期</span>
+                                        </label>
+                                        <label for="dayWord" class="checked" id="dayWord_togg">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="pic2" id="dayWord">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">日签金句</span>
+                                        </label>
+                                        <label for="classNum" class="checked" id="classNum_togg">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="pic2" id="classNum">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">连续打卡</span>
+                                        </label>
+                                        <label for="personNum" class="checked" id="personNum_togg">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="pic2" id="personNum">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">参与人数</span>
+                                        </label>
+                                        <label for="finishNum" class="checked" id="finishNum_togg">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="pic2" id="finishNum">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">完成率</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--  头像设置  -->
+                            <li class="contSet hpic_msg active">
+                                <legend>头像设置</legend>
+                                <div class="set_tit">头像形状</div>
+                                <div class="set_msg">
+                                    <ul class="head_style">
+                                        <li onclick="avatarSquare()">
+                                            <label for="squ" class="radio">
+                                                <div class="chose">
+                                                    <input type="radio"  name="statu" id="squ" />
+                                                    <span class="checked-bg"></span>
+                                                </div>
+                                                <span class="msg_set_txt">方形</span>
+                                            </label>
+                                        </li>
+                                        <li onclick="avatarCircle()">
+                                            <label for="cir" class="radio">
+                                                <div class="chose">
+                                                    <input type="radio" checked name="statu" id="cir" />
+                                                    <span class="checked-bg"></span>
+                                                </div>
+                                                <span class="msg_set_txt">圆形</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!--  昵称样式设置  -->
+                            <li class="contSet name_msg active">
+                                <legend>昵称设置</legend>
+                                <div class="dub-list">
+                                    <div>
+                                        <div class="set_tit">昵称颜色</div>
+                                        <div class="set_msg">
+                                            <div class="layui-form fontColor">
+                                                <div class="layui-form-item">
+                                                    <div class="layui-input-inline">
+                                                        <input type="text" value="" placeholder="请选择" class="layui-input" id="test-form-input">
+                                                    </div>
+                                                    <div class="layui-inline">
+                                                        <div id="test-form"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">昵称大小</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontSizeType(this,$('#poster .u_name .text'))">
+                                                <span class="select-txt">12</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontSize" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">字体粗细</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontWeightType(this,$('#poster .u_name .text'))">
+                                                <span class="select-txt">正常</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontWeight" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">对齐方式</div>
+                                        <div class="set_msg">
+                                            <div class="select-text alignType1" onclick="alignType(this,$('#poster .u_name'))">
+                                                <span class="select-txt">居左</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in alignType" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--  打卡日期设置  -->
+                            <li class="contSet date_msg active">
+                                <legend>打卡日期设置</legend>
+                                <div class="dub-list">
+                                    <div>
+                                        <div class="set_tit">日期颜色</div>
+                                        <div class="set_msg">
+                                            <div class="layui-form fontColor">
+                                                <div class="layui-form-item">
+                                                    <div class="layui-input-inline">
+                                                        <input type="text" value="" placeholder="请选择" class="layui-input" id="test-form-input2">
+                                                    </div>
+                                                    <div class="layui-inline">
+                                                        <div id="test-form2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">字体大小</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontSizeType(this,$('#poster .rqCardCont1 .date'))">
+                                                <span class="select-txt">27</span>
+                                                <ul style="display: none">
+                                                    <li v-for="(item,index) in fontSize" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">日期对齐</div>
+                                        <div class="set_msg">
+                                            <div class="select-text " onclick="alignType(this,$('#poster .u_date'))">
+                                                <span class="select-txt">居左</span>
+                                                <ul style="display: none">
+                                                    <li v-for="(item,index) in alignType" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="font_weight">
+                                        <div class="set_tit">星期展示</div>
+                                        <div class="set_msg">
+                                            <div class="button-label-s">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="week-togg" checked class="toggle-button" name="switch">
+                                                    <label for="week-togg" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显示</span>
+                                                        <span class="text off">隐藏</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="weekAlign">
+                                        <div class="set_tit">字体大小</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontSizeType(this,$('#poster .rqCardCont1 .week'))">
+                                                <span class="select-txt">12</span>
+                                                <ul style="display: none">
+                                                    <li v-for="(item,index) in fontSize" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="weekAlign">
+                                        <div class="set_tit">星期对齐</div>
+                                        <div class="set_msg">
+                                            <div class="select-text " onclick="alignType(this,$('#poster .u_week'))">
+                                                <span class="select-txt">居左</span>
+                                                <ul style="display: none">
+                                                    <li v-for="(item,index) in alignType" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--  金句样式设置  -->
+                            <li class="contSet word_msg  active">
+                                <legend>金句样式设置</legend>
+                                <div class="dub-list">
+                                    <div>
+                                        <div class="set_tit">金句颜色</div>
+                                        <div class="set_msg">
+                                            <div class="layui-form fontColor">
+                                                <div class="layui-form-item">
+                                                    <div class="layui-input-inline">
+                                                        <input type="text" value="" placeholder="请选择" class="layui-input" id="test-form-input3">
+                                                    </div>
+                                                    <div class="layui-inline">
+                                                        <div id="test-form3"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price_txt_msg">
+                                        <div class="set_tit">字体大小</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontSizeType(this,$('#poster .rqCardCont2 textarea'))">
+                                                <span class="select-txt">12</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontSize" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">字体粗细</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontWeightType(this,$('#poster .rqCardCont2 textarea'))">
+                                                <span class="select-txt">正常</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontWeight" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">行数展示</div>
+                                        <div class="set_msg">
+                                            <div class="select-text wordLine" onclick="contRowType(this,$('#poster .rqCardCont2 textarea'))">
+                                                <span class="select-txt">四行展示</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in lineShow" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--  连续打卡设置  -->
+                            <li class="contSet classNum_msg  active">
+                                <legend>连续打卡设置</legend>
+                                <div class="dub-list">
+                                    <div>
+                                        <div class="set_tit">字体颜色</div>
+                                        <div class="set_msg">
+                                            <div class="layui-form fontColor">
+                                                <div class="layui-form-item">
+                                                    <div class="layui-input-inline">
+                                                        <input type="text" value="" placeholder="请选择" class="layui-input" id="test-form-input4">
+                                                    </div>
+                                                    <div class="layui-inline">
+                                                        <div id="test-form4"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price_txt_msg">
+                                        <div class="set_tit">字体大小</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontSizeType(this,$('#poster .u_classNum .num'))">
+                                                <span class="select-txt">12</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontSize" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">字体粗细</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontWeightType(this,$('#poster .u_classNum .num'))">
+                                                <span class="select-txt">正常</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontWeight" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">对齐方式</div>
+                                        <div class="set_msg">
+                                            <div class="select-text " onclick="alignType(this,$('#poster .u_classNum'))">
+                                                <span class="select-txt">居左</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in alignType" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--  参与人数设置  -->
+                            <li class="contSet personNum_msg  active">
+                                <legend>参与人数设置</legend>
+                                <div class="dub-list">
+                                    <div>
+                                        <div class="set_tit">字体颜色</div>
+                                        <div class="set_msg">
+                                            <div class="layui-form fontColor">
+                                                <div class="layui-form-item">
+                                                    <div class="layui-input-inline">
+                                                        <input type="text" value="" placeholder="请选择" class="layui-input" id="test-form-input5">
+                                                    </div>
+                                                    <div class="layui-inline">
+                                                        <div id="test-form5"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price_txt_msg">
+                                        <div class="set_tit">字体大小</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontSizeType(this,$('#poster .u_personNum .num'))">
+                                                <span class="select-txt">12</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontSize" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">字体粗细</div>
+                                        <div class="set_msg">
+                                            <div class="select-text " onclick="fontWeightType(this,$('#poster .u_personNum .num'))">
+                                                <span class="select-txt">正常</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontWeight" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">对齐方式</div>
+                                        <div class="set_msg">
+                                            <div class="select-text " onclick="alignType(this,$('#poster .u_personNum'))">
+                                                <span class="select-txt">居左</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in alignType" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--  完成率设置  -->
+                            <li class="contSet finishNum_msg  active">
+                                <legend>完成率设置</legend>
+                                <div class="dub-list">
+                                    <div>
+                                        <div class="set_tit">字体颜色</div>
+                                        <div class="set_msg">
+                                            <div class="layui-form fontColor">
+                                                <div class="layui-form-item">
+                                                    <div class="layui-input-inline">
+                                                        <input type="text" value="" placeholder="请选择" class="layui-input" id="test-form-input6">
+                                                    </div>
+                                                    <div class="layui-inline">
+                                                        <div id="test-form6"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price_txt_msg">
+                                        <div class="set_tit">字体大小</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontSizeType(this,$('#poster .u_finishNum .num'))">
+                                                <span class="select-txt">12</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontSize" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">字体粗细</div>
+                                        <div class="set_msg">
+                                            <div class="select-text " onclick="fontWeightType(this,$('#poster .u_finishNum .num'))">
+                                                <span class="select-txt">正常</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontWeight" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price_txt_msg">
+                                        <div class="set_tit">单位字体</div>
+                                        <div class="set_msg">
+                                            <div class="select-text" onclick="fontSizeType(this,$('#poster .u_finishNum .num em'))">
+                                                <span class="select-txt">12</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in fontSize" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="set_tit">对齐方式</div>
+                                        <div class="set_msg">
+                                            <div class="select-text " onclick="alignType(this,$('#poster .u_finishNum'))">
+                                                <span class="select-txt">居左</span>
+                                                <ul>
+                                                    <li v-for="(item,index) in alignType" :key="item.index">{{item}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list hbset_cont2" style="display: none">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <textarea style="width: 620px;height: 400px;">此处放富文本编辑器</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+    </div>
+</div>
+
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/vue.js"></script>
+<script src="../../../js/hbData.js"></script>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            fontSize:hb_fontSize,
+            fontWeight:hb_fontWeight,
+            alignType:hb_alignType,
+            lineShow:hb_lineShow,
+        }
+    })
+</script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<!--<script src="../../../js/slideFixed.js"></script>-->
+<script src="../../../js/designer.js"></script>
+<script src="../../../js/myjs.js"></script>
+
+<script>
+    // 左侧浮动跟随
+    // $('#poster').slideFixed('#app');
+
+    $('.tip1').on('mouseenter',function(){
+        this.index =layer.tips('用于什么场景<br>' +
+            '例：学习打卡、日常分享等等', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:600
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+    $('#hbset1').click(function (){
+        $('.hbset_cont1').show();
+        $('.hbset_cont2').hide();
+    });
+    $('#hbset2').click(function (){
+        $('.hbset_cont2').show();
+        $('.hbset_cont1').hide();
+    });
+
+    $(function(){
+        $('#Uphoto_togg input').click(function(){
+            $('#h_pic').attr("checked",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.hpic_msg').toggle();
+            $('#squ').attr("checked",false);
+            $('#cir').attr("checked",true);
+            if($('#h_pic').is(':checked')){
+                $('.u_pic').remove();
+                $('#poster').append( '<div class="drag u_pic" type="head" index="3" style="z-index:3;left:26px;top:389px;width:32px;height: 32px;position: absolute">'+
+                    '<img src="../../../images/head.jpg" alt="头像" style="width:100%;height: 100%;border-radius: 50%;vertical-align: top"/>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                });
+                $('.u_pic img').css('border-radius','50%');
+            }else{
+                $('.u_pic').remove();
+            }
+        });
+        $('#Name_togg input').click(function(){
+            $('#h_name').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.name_msg').toggle();
+            if($('#h_name').is(':checked')){
+                $('.u_name').remove();
+                $('#poster').append( '<div  class="drag u_name" id="u_name" type="realname" index="4" style="z-index:4;left:74px;top:394px;position: absolute;cursor: default">'+
+                    '<div class="text" style="color: #fff">昵称</div>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.u_name').remove();
+            }
+        });
+        $('#date_togg input').click(function(){
+            $('#date').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.date_msg').toggle();
+            if($('#date').is(':checked')){
+                $('.u_date,.u_week').remove();
+                $('#poster').append( '<div  class="drag u_date" type="date" index="3" style="z-index:3;left:26px;top:29px;position: absolute;width: 32px;cursor: default">'+
+                    '<div class="rqCardCont1">\n' +
+                    '      <div class="rqdateCont">\n' +
+                    '            <div class="date">\n' +
+                    '                   <span>03</span>\n' +
+                    '                   <span class="line"></span>\n' +
+                    '                   <span>03</span>\n' +
+                    '             </div>\n' +
+                    '      </div>\n' +
+                    '</div>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>' +
+                    '<div class="drag u_week" type="week" index="2" style="z-index:2;left:78px;top:29px;position: absolute;width: 20px;cursor: default">\n' +
+                    '                            <div class="rqCardCont1">\n' +
+                    '                                <div class="rqdateCont">\n' +
+                    '                                    <span class="week">周四</span>\n' +
+                    '                                </div>\n' +
+                    '                            </div>\n' +
+                    '                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>\n' +
+                    '                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>\n' +
+                    '                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>\n' +
+                    '                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>\n' +
+                    '                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>\n' +
+                    '                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>\n' +
+                    '                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>\n' +
+                    '                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>\n' +
+                    '                        </div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.u_date,.u_week').remove();
+            }
+        });
+        $('#dayWord_togg input').click(function(){
+            $('#dayWord').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.word_msg').toggle();
+            if($('#dayWord').is(':checked')){
+                $('.u_txt').remove();
+                $('#poster').append( '<div  class="drag u_txt" type="txt" index="4" style="z-index:4;left:26px;top:176px;position: absolute;width: 263px;cursor: default">'+
+                    '<div class="rqCardCont2">\n' +
+                    '     <div class="rqtxtCont">\n' +
+                    '           <textarea rows="4">好设计让产品可用好设计让产品用</textarea>\n' +
+                    '     </div>\n' +
+                    '</div>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.u_txt').remove();
+            }
+        });
+        $('#classNum_togg input').click(function(){
+            $('#classNum').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.classNum_msg').toggle();
+            if($('#classNum').is(':checked')){
+                $('.u_classNum').remove();
+                $('#poster').append( '<div  class="drag u_classNum" type="classNum" index="2" style="z-index:2;left:26px;top:313px;position: absolute;cursor: default">'+
+                    '<span class="num" style="color: #fff">10</span>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.u_classNum').remove();
+            }
+        });
+        $('#personNum_togg input').click(function(){
+            $('#personNum').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.personNum_msg').toggle();
+            if($('#personNum').is(':checked')){
+                $('.u_personNum').remove();
+                $('#poster').append( '<div class="drag u_personNum" type="personNum" index="2" style="z-index:2;left:66px;top:313px;position: absolute;cursor: default">'+
+                    '<span class="num" style="color: #fff">10</span>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.u_personNum').remove();
+            }
+        });
+        $('#finishNum_togg input').click(function(){
+            $('#finishNum').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.finishNum_msg').toggle();
+            if($('#finishNum').is(':checked')){
+                $('.u_finishNum').remove();
+                $('#poster').append( '<div class="drag u_finishNum" type="finishNum" index="2" style="z-index:2;left:106px;top:313px;position: absolute;cursor: default">'+
+                    '<span class="num" style="color: #fff">10<em style="font-style: normal;margin-left: 4px;">%</em></span>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.u_finishNum').remove();
+            }
+        });
+    });
+
+    // 颜色选择器
+    layui.use('colorpicker', function() {
+        var $ = layui.$,
+            colorpicker = layui.colorpicker;
+        // 昵称
+        colorpicker.render({
+            elem: '#test-form',
+            color: '#333',
+            done: function(color){
+                $('#test-form-input').val(color);
+                $('.u_name .text').css('color', color);
+            }
+        });
+        // 打卡日期
+        colorpicker.render({
+            elem: '#test-form2',
+            color: '#333',
+            done: function(color){
+                $('#test-form-input2').val(color);
+                $('.rqCardCont1').css('color', color);
+                $('.rqCardCont1 .week').css('border-color', color);
+                $('.rqCardCont1 .line').css('background-color', color);
+            }
+        });
+        // 金句样式
+        colorpicker.render({
+            elem: '#test-form3',
+            color: '#333',
+            done: function(color){
+                $('#test-form-input3').val(color);
+                $('.rqCardCont2 .rqtxtCont').css('color', color);
+            }
+        });
+        // 连续打卡
+        colorpicker.render({
+            elem: '#test-form4',
+            color: '#333',
+            done: function(color){
+                $('#test-form-input4').val(color);
+                $('.u_classNum .num').css('color', color);
+            }
+        });
+        // 参与人数
+        colorpicker.render({
+            elem: '#test-form5',
+            color: '#333',
+            done: function(color){
+                $('#test-form-input5').val(color);
+                $('.u_personNum .num').css('color', color);
+            }
+        });
+        // 完成率
+        colorpicker.render({
+            elem: '#test-form6',
+            color: '#333',
+            done: function(color){
+                $('#test-form-input6').val(color);
+                $('.u_finishNum .num').css('color', color);
+            }
+        });
+    });
+
+    // 打卡日期切换
+    $('#week-togg').click(function (){
+        $('.u_week').toggle();
+        $('.weekAlign').toggle();
+    })
+
+</script>
+<!-- 拖动缩放 -->
+<script language='javascript'>
+
+    function bindEvents(obj){
+        var index = obj.attr('index');
+        var rs = new Resize(obj, { Max: true, mxContainer: "#poster" });
+        rs.Set($(".rRightDown",obj), "right-down");
+        rs.Set($(".rLeftDown",obj), "left-down");
+        rs.Set($(".rRightUp",obj), "right-up");
+        rs.Set($(".rLeftUp",obj), "left-up");
+        rs.Set($(".rRight",obj), "right");
+        rs.Set($(".rLeft",obj), "left");
+        rs.Set($(".rUp",obj), "up");
+        rs.Set($(".rDown",obj), "down");
+        rs.Scale = true;
+        var type = obj.attr('type');
+        if(type=='date' || type=='txt' || type=='realname' || type=='classNum' || type=='week' || type=='personNum' || type=='finishNum'){
+            // 关闭等比缩放
+            rs.Scale = false;
+        }
+        new Drag(obj, { Limit: true, mxContainer: "#poster" });
+        $('.drag .remove').unbind('click').click(function(){
+            $(this).parent().remove();
+        })
+
+        obj.unbind('click').click(function(){
+            //bind($(this));
+        })
+    }
+
+    $(function(){
+        $('.drag').each(function(){
+            bindEvents($(this));
+        });
+    })
+</script>
+
+</body>
+</html>

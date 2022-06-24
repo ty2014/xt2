@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>提现申请</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan" style="min-width: auto;background: #fff;padding: 0">
+
+<div class="top-p-detail w-70">
+    <div class="detail-list">
+        <div>
+            <div><span>开户行名：</span>中国银行绵阳分行</div>
+            <a class="change">修改</a>
+        </div>
+        <div class="ju-start"><span>收款卡号：</span>6215 6831 0000 1245 078</div>
+        <div class="ju-start"><span>持卡人：</span>江苏爱美服饰有限公司</div>
+    </div>
+    <div class="detail-list detail-tips">
+        <div>温馨提示：</div>
+        <div class="ju-start"><span>1，预计到账时间：</span><em>每月20~22号平台统一打款结算</em></div>
+        <div class="ju-start"><span>2，提现手续费：</span><b>10%oo</b>（万分比）,<em>每年</em>可免手续费额<b>10000</b>元</div>
+        <div class="ju-start flex-start">
+            <span>3，打款说明：</span>
+            <div>
+                <p>每月最高打款金额为20万，打款门槛为500。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script>
+    $('#chutiyan .change').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '收款账户变更',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '95%'],
+            content: '收款账户变更.html' //iframe的url
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

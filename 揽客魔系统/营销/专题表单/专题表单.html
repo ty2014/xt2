@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>专题表单</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">专题表单</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">启用</a></li>
+                    <li><a href="#">停用</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100pz">操作</th>
+                        <th width="200px" class="left">标题</th>
+                        <th width="100px">页面链接</th>
+                        <th width="100px">访问人次<i class="sort-icon"></i></th>
+                        <th width="100pz" class="left">后台备注</th>
+                        <th width="100pz">是否付费</th>
+                        <th width="100pz">提交表单</th>
+                        <th width="100pz">状态</th>
+                        <th width="150px">更新时间<i class="sort-icon"></i></th>
+                        <th width="100px">更新人</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px" class="cz_btn">
+                            <button type="button" class="btn-type1 editBtn">编辑</button>
+                        </td>
+                        <td width="200px" class="left"><a class="editBtn">走进揽客魔</a></td>
+                        <td width="100px" class="m-pic">
+                            <div class="m-doub-pic">
+                                <img src="../../images/1.png" alt="">
+                                <img src="../../images/2.png" alt="">
+                            </div>
+                        </td>
+                        <td width="100px"><a class="fw_num">13398</a></td>
+                        <td width="100px" class="left">1102测试一</td>
+                        <td width="100px">是</td>
+                        <td width="100px"><a class="sub_num">199</a></td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="150px" class="date"><div>2020-10-20 10:00:00</div></td>
+                        <td width="100px">tongchuang</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1 editBtn">编辑</button>
+                        </td>
+                        <td class="left"><a class="editBtn">108精英导师介绍</a></td>
+                        <td class="m-pic">
+                            <div class="m-doub-pic">
+                                <img src="../../images/1.png" alt="">
+                                <img src="../../images/2.png" alt="">
+                            </div>
+                        </td>
+                        <td><a class="fw_num">298</a></td>
+                        <td class="left">第二次测试</td>
+                        <td>否</td>
+                        <td><a class="sub_num">1</a></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td class="date"><div>2020-10-20 10:00:00</div></td>
+                        <td>李欢</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">更新人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">是否付费:</span>
+            <div class="account-r chose_item">
+                <label for="pay1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pay" id="pay1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="pay2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pay" id="pay2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="statu1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="statu2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">更新时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" lay-key="1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" lay-key="2" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="sort-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">访问人次:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt">默认</span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                        <li>默认</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">更新时间:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt">默认</span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                        <li>默认</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<div class="activity_set activity_set2 w-120" id="umsg-detail" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">姓名:</div>
+                <div class="a_list_r"><input type="text" value="蒋蒋蒋" disabled></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">备注:</div>
+                <div class="a_list_r"><textarea style="height: 60px;width: 100%;resize: none;" disabled>多行文本</textarea></div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">性别:</div>
+                <div class="a_list_r">
+                    <div class="select-text">
+                        <span class="select-txt">男</span>
+                        <ul>
+                            <li class="active">男</li>
+                            <li>女</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">日期:</div>
+                <div class="a_list_r"><input type="date" disabled></div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">图片:</div>
+                <div class="a_list_r">
+                    <ul class="FraUpload_imglist layer-photos-demo1">
+                        <li class="img_item">
+                            <img src="../../images/null2.jpg" layer-src="../../images/null2.jpg">
+                            <!--<span class="icon-delete"></span>-->
+                        </li>
+                        <li class="img_item">
+                            <img src="../../images/null2.jpg" layer-src="../../images/null2.jpg">
+                            <!--<span class="icon-delete"></span>-->
+                        </li>
+                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                        <!--<li class="file-btn" style="display: none"></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">时间:</div>
+                <div class="a_list_r"><input type="time" disabled></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">地址:</div>
+            <div class="a_list_r"><input type="text" disabled value="四川省成都市武侯区智领大厦1栋1单元101" style="width: 100%;"></div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">单选:</div>
+            <div class="account-r chose_item">
+                <label for="radio-1" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="radio" id="radio-1" disabled checked>
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">选项一</span>
+                </label>
+                <label for="radio-2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="radio" id="radio-2" disabled>
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">选项二</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">多选:</div>
+            <div class="account-r chose_item">
+                <label for="checked-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="checked" id="checked-1" disabled checked>
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">选项一</span>
+                </label>
+                <label for="checked-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="checked" id="checked-2" disabled checked>
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">选项二</span>
+                </label>
+                <label for="checked-3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="checked" id="checked-3" disabled>
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">选项三</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">关闭</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .sort').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '排序',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#sort-account")
+        });
+    });
+
+    $('#chutiyan .add_btn,#chutiyan .editBtn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '页面管理',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '添加.html' //iframe的url
+        });
+    });
+    $('#chutiyan .fw_num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '访问人次',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '访问人次.html' //iframe的url
+        });
+    });
+    $('#chutiyan .sub_num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '反馈记录',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '提交反馈.html' //iframe的url
+        });
+    });
+    /* 表格中显示二维码样式 */
+    $('.m-doub-pic').on('click',function (e) {
+        e.stopPropagation();
+        console.log(e.pageX + '--' + e.pageY);
+        var html="";
+        html+=`<div class="table-eq">
+                <div class="show-pic">
+                    <em></em>
+                    <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    <div><input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx"><span>复制</span></div>
+                </div>
+            </div>`;
+        $('.table-eq').remove();
+        $('body').append(html);
+        $(".table-eq").css({
+            "left": e.pageX-180,
+            "top": e.pageY+20,
+        });
+        $('.show-pic').click(function (e) {
+            e.stopPropagation();
+            $(this).show();
+        });
+    });
+
+
+
+    $('.select-text ul li').unbind('click');
+
+    layer.photos({
+        photos: '.layer-photos-demo1'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+    $('#chutiyan .user_msg').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '课程名称',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['860px', '436px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#umsg-detail")
+        });
+    });
+</script>
+</body>
+</html>

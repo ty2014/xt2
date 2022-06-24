@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>广告管理</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="min-width: auto;background: #fff;padding: 0">
+
+<div class="account-cont">
+    <div class="account-title"><span class="title">广告位信息</span></div>
+    <div class="account">
+        <span class="account-l">广告位名称：</span>
+        <div class="account-r"><input type="text" class="l_width" disabled></div>
+    </div>
+    <div class="account">
+        <span class="account-l">广告位说明：</span>
+        <div class="account-r"><input type="text" class="l_width" disabled></div>
+    </div>
+    <div class="account-title"><span class="title">广告信息</span></div>
+
+    <div class="account">
+        <span class="account-l">广告标题：</span>
+        <div class="account-r"><input type="text" class="l_width"></div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">分类图标：</span>
+        <div class="account-r">
+            <div class="file-cont">
+                <div class="file-btn"></div>
+                <p class="tishi2">*建议宽度不超过800px；大小不超过1000KB</p>
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">广告链接：</span>
+        <div class="account-r"><input type="text" class="l_width"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">广告开始时间：</span>
+        <div class="account-r"><input type="text"></div>
+    </div>
+    <div class="account chose_item">
+        <span class="account-l">状态：</span>
+        <div class="account-r">
+            <label for="pu1" class="radio">
+                <div class="chose">
+                    <input type="radio" name="pic2" id="pu1" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">启用</span>
+            </label>
+            <label for="pu2" class="radio">
+                <div class="chose">
+                    <input type="radio" name="pic2" id="pu2" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">停用</span>
+            </label>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">优先级：</span>
+        <div class="account-r"><input type="text" class="m_width"></div>
+    </div>
+</div>
+
+<div class="account_btn"><span class="btn btn-sure">确定</span></div>
+
+</body>
+</html>

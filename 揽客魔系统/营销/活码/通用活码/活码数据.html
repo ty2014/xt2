@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活码数据</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css?v=1.0.0">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto;">
+
+<!-- Nav tabs -->
+<ul class="head-tab3">
+    <li class="active current3"><a href="#tab1">活码管理</a></li>
+    <li><a href="#tab2">海报设置</a></li>
+    <li><a href="#tab3">上传码数</a></li>
+    <li><a href="#tab4">访问用户</a></li>
+    <li><a href="#tab5">邀请排行</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content3 content2">
+    <div class="tab-pane active" id="tab1">
+        <div class="activity_set activity_set2 w-120 activity_set-normal">
+            <div class="b-line">
+                <div class="a_list">
+                    <span class="a_list_l">活码名称:</span>
+                    <div class="a_list_r"><input type="text" placeholder="标题" class="w-620"></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">启用状态:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="u-togg2" checked class="toggle-button" name="switch">
+                                <label for="u-togg2" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">开启</span>
+                                    <span class="text off">关闭</span>
+                                </label>
+                            </div>
+                        </div>
+                        <span class="tishi">*关闭即不可用，访问活码将不再展示上传的二维码</span>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">切换模式:</span>
+                    <div class="a_list_r chose_item">
+                        <div>
+                            <div style="display: flex;align-items: center;margin-bottom: 8px">
+                                <label for="cj2-1" class="radio">
+                                    <div class="chose">
+                                        <input type="radio" checked name="cj" id="cj2-1">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">顺序切换</span>
+                                </label>
+                                <label for="cj2-2" class="radio mgR-0">
+                                    <div class="chose">
+                                        <input type="radio"  name="cj" id="cj2-2">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">循环切换</span>
+                                </label>
+                            </div>
+                            <p class="tishi" style="margin: 0">*顺序切换：所有码切换完后，页面将显示活动暂停；适用于群二维码，加满人后切换下一群</p>
+                            <p class="tishi" style="margin: 0">*循环切换：所有码切换完后，又从第一个码开始切换；适用于客服码分配，给客服均匀分流</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">切换值:</span>
+                    <div class="a_list_r">每<input type="text" class="s_width center" style="margin: 0 8px;">人访问，自动切换二维码</div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">提醒引导:</span>
+                    <div class="a_list_r">
+                        <input type="text" maxlength="20" value="此二维码安全，请放心扫码使用！" style="width: 300px;">
+                        <span class="tishi">*最多20字，可换文案引导，例如：添加老师微信领取课程资料</span>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">扫码提示:</span>
+                    <div class="a_list_r">
+                        <input type="text" value="长按二维码，立即加我微信" style="width: 300px;">
+                        <span class="tishi">*最多50字</span>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">活码:</span>
+                    <div class="a_list_r" style="align-items: flex-end">
+                        <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="" style="width: 70px;">
+                        <span class="download-btn">下载</span>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">活码链接:</span>
+                    <div class="a_list_r">
+                        <div style="max-width: 80%">http://lkm.hm.lingyiliebian.com/web/active_code/web/active_code/?id=ooMO&show=1</div>
+                        <span class="copy-btn">复制</span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+        <div class="activity_set activity_set3 w-4">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l">海报链接:</span>
+                    <div class="a_list_r">http：lkm.huoma.com<span class="copy-btn">复制</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">海报设置:</span>
+                    <div class="a_list_r">
+                        设置分享海报，用户通过扫描海报上的二维码访问活码页面
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l"></span>
+                    <div class="a_list_r">
+                        <div class="poster">
+                            <div id='poster' style="width: 300px;min-width: 300px;margin-right: 40px;height: 640px;border:1px solid #d5d5d5;position:relative;z-index: 1;border-radius: 10px;overflow: hidden;">
+                                <img src='' class='bg' id="Img" style="width:100%;z-index:0;" alt=""/>
+                                <div class="drag u_pic" type="head" index="3" style="z-index:3;left:20px;top:20px;width:93px;height:93px;position: absolute">
+                                    <img src="../../../images/head.jpg" style="width:100%;"/>
+                                    <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                    <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                    <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                    <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                    <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                    <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                    <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                    <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                                </div>
+                                <div class="drag u_name" id="u_name" type="realname" index="2" style="z-index:2;left:80%;top:20px;width:80px;height:21px;position: absolute">
+                                    <div class="text" style="font-size: 12px;">昵称</div>
+                                    <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                    <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                    <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                    <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                    <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                    <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                    <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                    <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                                </div>
+                                <div class="drag" type="qr" index="1" style="z-index:1;left:142px;top:20px;width:93px;height:93px;position: absolute">
+                                    <img src="../../../images/1.png" style="width:100%;"/>
+                                    <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                                    <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                                    <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                                    <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                                    <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                                    <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                                    <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                                    <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                                </div>
+                            </div>
+                            <ul class="poster_setting">
+                                <li>
+                                    <div class="set_tit">背景图片</div>
+                                    <div class="set_msg">
+                                        <div class="bg_pic">
+                                            <div id="remark"><span></span><input id="f" type="file" onchange="chooseImg(this)" style="opacity: 0;"></div>
+                                            <label for="f" class="hb_pic">选择背景图</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="set_tit"></div>
+                                    <div class="set_msg">
+                                        <p class="tishi2" style="margin: 0">海报背景，最佳尺寸为：750*1600，大小建议500KB以下</p>
+                                    </div>
+                                </li>
+                                <li class="RewardType">
+                                    <div class="set_tit">海报元素</div>
+                                    <div class="set_msg hb_element">
+                                        <div class="radio_list">
+                                            <label for="h_pic" class="checked" id="Uphoto_togg">
+                                                <div class="chose">
+                                                    <input type="checkbox" checked name="pic2" id="h_pic">
+                                                    <span class="checked-bg"></span>
+                                                </div>
+                                                <span class="msg_set_txt">头像</span>
+                                            </label>
+                                            <label for="h_name" class="checked" id="Name_togg">
+                                                <div class="chose">
+                                                    <input type="checkbox" checked name="pic2" id="h_name">
+                                                    <span class="checked-bg"></span>
+                                                </div>
+                                                <span class="msg_set_txt">昵称</span>
+                                            </label>
+                                            <!--   默认就有，且必须要   -->
+                                            <label for="h_qr" class="checked" style="cursor: no-drop;opacity: .6">
+                                                <div class="chose">
+                                                    <input type="checkbox" checked disabled name="pic2" id="h_qr">
+                                                    <span class="checked-bg"></span>
+                                                </div>
+                                                <span class="msg_set_txt">二维码</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="name_msg active">
+                                    <div class="set_tit">昵称颜色</div>
+                                    <div class="set_msg">
+                                        <div class="fontSize_color">
+                                            <span>#666666</span>       <!--  选择颜色后 要把 RGB格式 转换为 HEX 格式  -->
+                                            <label for="onchange" onclick="rgb2hex()"></label>
+                                            <input type="color" id="onchange" style="display: none"/>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="name_msg active">
+                                    <div class="set_tit">昵称大小</div>
+                                    <div class="set_msg">
+                                        <div class="select-text fontSize">
+                                            <span class="select-txt">12</span>
+                                            <ul style="display: none;">
+                                                <li>12</li>
+                                                <li>14</li>
+                                                <li>16</li>
+                                                <li>18</li>
+                                                <li>20</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="hpic_msg" style="display: flex;">
+                                    <div class="set_tit">头像形状</div>
+                                    <div class="set_msg">
+                                        <ul class="head_style">
+                                            <li class="square">
+                                                <label for="squ" class="radio">
+                                                    <div class="chose">
+                                                        <input type="radio" checked name="statu" id="squ" />
+                                                        <span class="checked-bg"></span>
+                                                    </div>
+                                                    <span class="msg_set_txt">方形</span>
+                                                </label>
+                                            </li>
+                                            <li class="circle">
+                                                <label for="cir" class="radio">
+                                                    <div class="chose">
+                                                        <input type="radio" name="statu" id="cir" />
+                                                        <span class="checked-bg"></span>
+                                                    </div>
+                                                    <span class="msg_set_txt">圆形</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab3">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search eq-search"><i class="search-tips"></i>搜索</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">有效</a></li>
+                        <li><a href="#">无效</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab_type_2">
+                <span class="tab-tips add_btn fleq-btn"><i class="plus-tips"></i>批量添加二维码</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="80pz">二维码</th>
+                            <th width="150px">备注</th>
+                            <th width="150px">过期时间<i class="sort-icon"></i></th>
+                            <th width="100px">状态</th>
+                            <th width="100pz">切换值<i class="sort-icon"></i></th>
+                            <th width="100pz">访问用户<i class="sort-icon"></i></th>
+                            <th width="150pz">更新时间<i class="sort-icon"></i></th>
+                            <th width="200pz">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="80px" class="squ-pic layer-photos-demo">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                            </td>
+                            <td width="150px" class="left">辅导66群</td>
+                            <td width="150px" class="date"><div>2020-01-01 10:00:01</div></td>
+                            <td width="100px" class="statu statu2"><span>无效</span></td>
+                            <td width="100px">10</td>
+                            <td width="100px"><a class="fw-num">5</a></td>
+                            <td width="150px" class="date"><div>2020-01-01 10:00:01</div></td>
+                            <td width="200px" class="cz_btn">
+                                <button type="button" class="btn-type1 gl-btn">管理</button>
+                                <button type="button" class="btn-type2 del-btn">移除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="squ-pic layer-photos-demo">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                            </td>
+                            <td class="left">辅导88群</td>
+                            <td class="date"><div>2020-01-01 10:00:01</div></td>
+                            <td class="statu statu1"><span>有效</span></td>
+                            <td>10</td>
+                            <td><a class="fw-num">11</a></td>
+                            <td class="date"><div>2020-01-01 10:00:01</div></td>
+                            <td class="cz_btn">
+                                <button type="button" class="btn-type1 gl-btn">管理</button>
+                                <button type="button" class="btn-type2 del-btn">移除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="squ-pic layer-photos-demo">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                            </td>
+                            <td class="left">-</td>
+                            <td class="date">-</td>
+                            <td class="statu statu1"><span>有效</span></td>
+                            <td>20</td>
+                            <td><a class="fw-num">21</a></td>
+                            <td class="date"><div>2020-01-01 10:00:01</div></td>
+                            <td class="cz_btn">
+                                <button type="button" class="btn-type1 gl-btn">管理</button>
+                                <button type="button" class="btn-type2 del-btn">移除</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab4">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search fw-search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100pz">用户ID</th>
+                            <th width="100px">用户头像</th>
+                            <th width="150px">用户昵称</th>
+                            <th width="100px">访问二维码</th>
+                            <th width="150pz">二维码备注</th>
+                            <th width="150pz">访问时间<i class="sort-icon"></i></th>
+                            <th width="100pz">分享人ID</th>
+                            <th width="100pz">分享人头像</th>
+                            <th width="150pz">分享人昵称</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px">56879</td>
+                            <td width="100px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px" class="squ-pic layer-photos-demo2">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                            </td>
+                            <td width="150px" class="left">辅导88群</td>
+                            <td width="150px" class="date"><div>2020-04-01 10:00:01</div></td>
+                            <td width="100px">56879</td>
+                            <td width="100px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a href="">小土豆</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>56879</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">呀呀呀</a></td>
+                            <td class="squ-pic layer-photos-demo2">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                            </td>
+                            <td class="left">辅导66群</td>
+                            <td class="date"><div>2020-01-01 10:00:01</div></td>
+                            <td>56879</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">呀呀呀</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab5">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search invit-search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+                <p class="tishi">手机端排行地址：http：lkm.huoma.com/paihang<span class="copy-btn">复制</span></p>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100pz">分享人ID</th>
+                            <th width="100pz">分享人头像</th>
+                            <th width="150pz">分享人昵称</th>
+                            <th width="100pz">分享人姓名</th>
+                            <th width="100px">会员等级</th>
+                            <th width="100px">邀请用户<i class="sort-icon"></i></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px">56879</td>
+                            <td width="100px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px">蒋小花</td>
+                            <td width="100px">VIP</td>
+                            <td width="100px"><a class="invit-num">10</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>56879</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">呀呀呀</a></td>
+                            <td>蒋小花</td>
+                            <td>联创人</td>
+                            <td><a class="invit-num">9</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  上传码数管理  -->
+<div class="activity_set activity_set2 w-120" id="gl-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="padding-top: 18px;">二维码:</span>
+            <div class="a_list_r" style="align-items: flex-end">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist">
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a>更换</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">备注:</span>
+            <div class="a_list_r"><input type="text" placeholder="选填，便于后台区别二维码"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">失效时间:</span>
+            <div class="a_list_r"><input type="text" class="layui-input" id="test1" placeholder="默认长期有效"><span class="tishi">*按选择时间过期失效，即该码将不再被展示</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">切换值:</span>
+            <div class="a_list_r"><input type="text" class="s_width center"><span class="tishi">*活码的默认切换值，可差异化修改</span></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<!--  上传码数搜索 -->
+<div class="account-box" id="eq-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">备注:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">有效</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">无效</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">过期时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test2" placeholder="起"><span class="date-line"></span><input type="text" class="layui-input" id="test3" placeholder="止"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  访问用户搜索 -->
+<div class="account-box" id="fw-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">用户昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">分享人ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">分享人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">二维码备注:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">访问时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test4" placeholder="起"><span class="date-line"></span><input type="text" class="layui-input" id="test5" placeholder="止"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  邀请排行搜索 -->
+<div class="account-box" id="invit-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">分享人ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">分享人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">分享人姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<!--  分类上传二维码  -->
+<div class="activity_set activity_set2" id="fleq-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="padding-top: 18px;">批量上传二维码:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo3">
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <!--  上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/designer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test3' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test4' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test5' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.head-tab3 li');
+    var con = $('.tab-content3 > .tab-pane');
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active current3');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active current3');
+            $(con[i]).addClass('active');
+        }
+    }
+
+    layer.photos({
+        photos: '.layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+    layer.photos({
+        photos: '.layer-photos-demo2'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+    layer.photos({
+        photos: '.layer-photos-demo3'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del-btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定移除该条数据？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px',
+                title:'提醒'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('移除成功', {time: 1000});
+            });
+        });
+    });
+
+    $('#chutiyan .eq-search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '314px'],
+            skin: 'account-box',
+            content: $("#eq-account")
+        });
+    });
+    $('#chutiyan .fw-search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '496px'],
+            skin: 'account-box',
+            content: $("#fw-account")
+        });
+    });
+    $('#chutiyan .invit-search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '316px'],
+            skin: 'account-box',
+            content: $("#invit-account")
+        });
+    });
+
+    $('.gl-btn').on('click',function (e) {
+        parent.layer.open({
+            type: 1,
+            title: '二维码管理',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '445px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#gl-sure").html()
+        });
+    });
+
+    $('#chutiyan .fw-num').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '访问用户',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '访问用户.html' //iframe的url
+        });
+    });
+    $('#chutiyan .invit-num').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '邀请用户',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '邀请用户.html' //iframe的url
+        });
+    });
+
+    $('.fleq-btn').on('click',function (e) {
+        layer.open({
+            type: 1,
+            title: '批量添加二维码',
+            shadeClose: true,
+            shade: 0.3,
+            zIndex:9999,
+            area: ['900px', '410px'],
+            skin: 'activity_set activity_set2',
+            content: $("#fleq-sure")
+        });
+    });
+
+</script>
+<!--海报设置js-->
+<script>
+    $(function(){
+        $('.circle').click(function(){
+            $('.u_pic > img').css('border-radius','50%')
+        });
+        $('.square').click(function(){
+            $('.u_pic > img').css('border-radius','0')
+        });
+        $('.fontSize li').click(function(){
+            $('.u_name .text').css('fontSize',$(this).text()+'px');
+            $('.fontSize_name span').text($(this).text());
+        });
+        $('#Uphoto_togg input').click(function(){
+            $('#h_pic').attr("checked",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.hpic_msg').toggle();
+            $('#squ').attr("checked",true);
+            $('#cir').attr("checked",false);
+            if($('#h_pic').is(':checked')){
+                $('.u_pic').remove();
+                $('#poster').append( '<div class="drag u_pic" type="head" index="3" style="z-index:3;left:20px;top:20px;width:93px;height:93px;">'+
+                    '<img src="../../images/head.jpg" style="position:absolute;z-index:0;width:100%;"/>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                });
+                $('.u_pic > img').css('border-radius','0');
+            }else{
+                $('.u_pic').remove();
+            }
+        });
+        $('#Name_togg input').click(function(){
+            $('#h_name').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.name_msg').toggleClass('active');
+            if($('#h_name').is(':checked')){
+                $('.u_name').remove();
+                $('#poster').append( '<div  class="drag u_name" id="u_name" type="realname" index="2" style="z-index:2;left:80%;top: 20px;width:80px;height:21px">'+
+                    '<div class="text">昵称</div>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.u_name').remove();
+            }
+        });
+    });
+    function colorRGB2Hex(color) {
+        var rgb = color.split(',');
+        var r = parseInt(rgb[0].split('(')[1]);
+        var g = parseInt(rgb[1]);
+        var b = parseInt(rgb[2].split(')')[0]);
+        var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        return hex;
+    }
+    document.getElementById('onchange').onchange = function(){
+        document.getElementById('onchange').click();
+        document.getElementById('u_name').style.color = this.value;
+        var link_col=$('.u_name').css('color');
+        var sHexColor = colorRGB2Hex(link_col);
+        $('.fontSize_color label').css('background-color',link_col);
+        $('.fontSize_color span').text(sHexColor)
+    };
+    function chooseImg(file){
+        var file=file.files[0];
+        var reader=new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload=function(){
+            var img=document.getElementById('Img');
+            img.src=this.result;
+        };
+    }
+    $("input[type=file]").change(function(){
+        var str=$(this).val();
+        if(str!==""){
+            var arr=str.split("\\");
+            var file_name=arr[arr.length-1];
+            $('#remark span').text(file_name);
+        }
+    });
+</script>
+<!-- 拖动缩放 -->
+<script language='javascript'>
+    $('form').submit(function(){
+        $('.drag').each(function(){
+            var obj = $(this);
+            var type = obj.attr('type');
+            var left = obj.css('left'),top = obj.css('top');
+            var d= {left:left,top:top,type:obj.attr('type'),width:obj.css('width'),height:obj.css('height'),radius:obj.css('border-radius')};
+            if(type=='realname' ||type=='title' || type=='marketprice' || type=='productprice'){
+                d.size = obj.attr('size');
+                d.color = obj.attr('color');
+            } else if(type=='qr'){
+                d.size = obj.attr('size');
+            } else if(type=='img'){
+                d.src = obj.attr('src');
+            }else if(type=='head'){
+                d.radius = obj.attr('border-radius');
+            } else if(type=='fimg'){
+                d.size = obj.attr('size');
+            }//粉丝
+            data.push(d);
+        });
+    });
+    function bindEvents(obj){
+        var index = obj.attr('index');
+        var rs = new Resize(obj, { Max: true, mxContainer: "#poster" });
+        rs.Set($(".rRightDown",obj), "right-down");
+        rs.Set($(".rLeftDown",obj), "left-down");
+        rs.Set($(".rRightUp",obj), "right-up");
+        rs.Set($(".rLeftUp",obj), "left-up");
+        rs.Set($(".rRight",obj), "right");
+        rs.Set($(".rLeft",obj), "left");
+        rs.Set($(".rUp",obj), "up");
+        rs.Set($(".rDown",obj), "down");
+        rs.Scale = true;
+        var type = obj.attr('type');
+        if(type=='realname' || type=='img' || type=='title' || type=='marketprice' || type=='productprice' || type=='fimg'){
+            rs.Scale = false;
+        }
+        new Drag(obj, { Limit: true, mxContainer: "#poster" });
+        $('.drag .remove').unbind('click').click(function(){
+            $(this).parent().remove();
+        })
+
+        obj.unbind('click').click(function(){
+            bind($(this));
+        })
+    }
+    var imgsettimer = 0 ;
+    var nametimer = 0;
+    var headsettimer = 0;
+    var bgtimer = 0 ;
+    function bindType(type){
+        $("#goodsparams").hide();
+        $(".type4").hide();
+        if(type=='4'){
+            $(".type4").show();
+        } else if(type=='3'){
+            $("#goodsparams").show();
+        }
+    }
+    function clearTimers(){
+        clearInterval(imgsettimer);
+        clearInterval(nametimer);
+        clearInterval(bgtimer);
+        clearInterval(headsettimer);
+    }
+    function bind(obj){
+        var imgset = $('#imgset'), nameset = $("#nameset"),qrset = $('#qrset'),headset =$("#headset"),fimgset =$("#fimgset");
+        imgset.hide();nameset.hide();headset.hide();qrset.hide();fimgset.hide();
+        clearTimers();
+        var type = obj.attr('type');
+        if(type=='realname' || type=='title' || type=='marketprice' || type=='productprice'){
+            nameset.show();
+            var color = obj.attr('color') || "#000";
+            var size = obj.attr('size') || "12";
+            var input = nameset.find('input:first');
+            var namesize = nameset.find('#namesize');
+            var picker = nameset.find('.sp-preview-inner');
+            input.val(color); namesize.val(size.replace("pt",""));
+            picker.css( {'background-color':color,'font-size':size});
+            nametimer = setInterval(function(){
+                obj.attr('color',input.val()).find('.text').css('color',input.val());
+                obj.attr('size',namesize.val() +"pt").find('.text').css('font-size',namesize.val() +"pt");
+            },100);
+        } else if(type=='qr'){
+            qrset.show();
+            var size = obj.attr('size') || "3";
+            var sel = qrset.find('#qrsize');
+            sel.val(size);
+
+            sel.unbind('change').change(function(){
+                obj.attr('size',sel.val())
+            });
+        }else if(type=='head'){
+            headset.show();
+            var radius= obj.attr('border-radius') || "0px";
+
+            var head_shape_checked=headset.find("#head_shape_val");
+            $("input:radio[name='head_shape']").each(function(){
+                if($(this).val()==radius){
+                    $(this).prop("checked",true);
+                }else{
+                    $(this).prop("checked",false);
+                }
+            })
+
+            head_shape_checked.val(radius);
+            headsettimer = setInterval(function() {
+                obj.attr('border-radius', head_shape_checked.val());
+                obj.find('img').css('border-radius', head_shape_checked.val());
+            },100);
+        } else if(type=='fimg'){
+            fimgset.show();
+            var size = obj.attr('size') || "3";
+            var sel = fimgset.find('#fimgset');
+            sel.val(size);
+
+            sel.unbind('change').change(function(){
+                obj.attr('size',sel.val())
+            });
+        }
+    }
+    $(function(){
+        $('.drag').each(function(){
+            bindEvents($(this));
+        });
+    })
+</script>
+</body>
+</html>

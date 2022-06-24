@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程安排管理</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0;background: #fff">
+
+    <div class="account-title"><span class="title">基础信息</span></div>
+    <div class="account">
+        <span class="account-l">活动动态名称：</span>
+        <div class="account-r"><input type="text" class="l_width"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">课程名称：</span>
+        <div class="account-r"><input type="text" class="l_width"></div>
+    </div>
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">状态：</span>
+            <div class="account-r">
+                <div class="htmleaf-content">
+                    <div class="checkbox">
+                        <input type="checkbox"/>
+                        <label></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">上课人数限制：</span>
+            <div class="account-r"><input type="text" class="m_width center">&nbsp;人</div>
+        </div>
+    </div>
+
+    <div class="account">
+        <span class="account-l">地址：</span>
+        <div class="account-r"><input type="text" class="l_width"></div>
+    </div>
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">咨询电话：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">课程开始时间：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">课程结束时间：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">签到开始时间：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+
+    <div class="account">
+        <span class="account-l">签到结束时间：</span>
+        <div class="account-r"><input type="text"></div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">签到海报：</span>
+        <div class="account-r">
+            <div class="file-cont">
+                <div class="file-btn"></div>
+                <p class="tishi2">*建议宽度不超过800px；大小不超过1000KB</p>
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">简介：</span>
+        <div class="account-r"><input type="text" class="l_width"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">预约成功后按钮名称：</span>
+        <div class="account-r"><input type="text"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">预约成功后按钮网址：</span>
+        <div class="account-r"><input type="text" class="l_width"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">签到成功后按钮名称：</span>
+        <div class="account-r"><input type="text"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">签到成功后按钮网址：</span>
+        <div class="account-r"><input type="text" class="l_width"></div>
+    </div>
+    <div class="account-title"><span class="title">调查表配置</span></div>
+    <div class="account">
+        <span class="account-l">调查表配置：</span>
+        <div class="account-r" style="overflow: auto">
+            <div class="content">
+                <div class="tab_content">
+                    <div class="tab_type_l"><span class="add_btn"><i class="fa fa-plus"></i>添加</span></div>
+                </div>
+                <div class="edit_table">
+                    <form action="" class="table_cont">
+                        <table border="0" class="table_body">
+                            <thead>
+                            <tr>
+                                <th width="50px">序号</th>
+                                <th width="100px">字段名</th>
+                                <th width="220px">字段描述</th>
+                                <th width="150px">数据类型</th>
+                                <th width="220px">选项</th>
+                                <th width="100px">排序</th>
+                                <th width="100px">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="text" class="m_width"></td>
+                                <td><input type="text"></td>
+                                <td>
+                                    <div class="slide-select">
+                                        <select>
+                                            <option value="">-- 请选择 --</option>
+                                            <option value="">多行文本</option>
+                                            <option value="">多选</option>
+                                        </select>
+                                        <img src="../../images/bottom-icon.jpg" alt="">
+                                    </div>
+                                </td>
+                                <td><input type="text"></td>
+                                <td>
+                                    <div class="slide-select">
+                                        <select>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                        </select>
+                                        <img src="../../images/bottom-icon.jpg" alt="">
+                                    </div>
+                                </td>
+                                <td class="cz_btn">
+                                    <span class="del_tips" data-toggle="tooltip" data-placement="top" title="删除"></span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="btn-list"><span class="btn btn-sure">保存</span></div>
+
+
+</body>
+</html>

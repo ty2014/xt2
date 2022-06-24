@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>自建任务</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">自建任务</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">启用</a></li>
+                    <li><a href="#">停用</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px" class="left">任务类型</th>
+                        <th width="150px" class="left">指定课程</th>
+                        <th width="150px" class="left">任务名称</th>
+                        <th width="100px">状态</th>
+                        <th width="150px" class="left">任务说明</th>
+                        <th width="100px">可获积分</th>
+                        <th width="100px">完成任务链接</th>
+                        <th width="100px">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px" class="left">观看指定课程</td>
+                        <td width="150px" class="left">引流的8个关键</td>
+                        <td width="150px" class="left"><a class="edit_btn">试学一节课程</a></td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="150px" class="left">试学一节课程</td>
+                        <td width="100px">20</td>
+                        <td width="100px" class="m-pic">
+                            <div class="m-doub-pic">
+                                <img src="../../../images/1.png" alt="">
+                                <img src="../../../images/2.png" alt="">
+                            </div>
+                        </td>
+                        <td width="100px" class="cz_btn">
+                            <button type="button" class="btn-type1 edit_btn">管理</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left">阅读指定文章</td>
+                        <td class="left">抖音直播的爆款秘笈</td>
+                        <td class="left"><a class="edit_btn">阅读本篇文章</a></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td class="left">阅读精品文章</td>
+                        <td>300</td>
+                        <td class="m-pic">
+
+                        </td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1 edit_btn">编辑</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">任务名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">任务类型:</span>
+            <div class="account-r chose_item">
+                <label for="type1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">观看指定课程</span>
+                </label>
+                <label for="type2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">阅读指定文章</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="statu1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="statu2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<!--    -->
+<div class="activity_set activity_set2 w-120" id="edit_cont" style="display: none;">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">任务类型:</span>
+            <div class="a_list_r checked_chose">
+                <label for="rw1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="type" id="rw1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">观看指定课程</span>
+                </label>
+                <label for="rw2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="type" id="rw2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">阅读指定文章</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div class="cont1">
+                    <div style="display: flex;align-items: center"><span class="set-user chose_kc mgL-0">选择课程</span><span class="tishi">*完成任务需将本节课程全程观看完</span></div>
+                    <p style="color: #999;margin-top: 10px;">完成任务链接：http://lkm.com <a class="copy-btn">复制</a></p>
+                </div>
+                <div class="cont2" style="display: none">
+                    <div style="display: flex;align-items: center"><span class="set-user chose_wz mgL-0">选择文章</span><span class="tishi">*完成任务需阅读文章至底部并阅读时间大于3分钟</span></div>
+                    <p style="color: #999;margin-top: 10px;">完成任务链接：http://lkm.com <a class="copy-btn">复制</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">任务名称:</span>
+            <div class="a_list_r"><input type="text"></div>
+        </div>
+        <div class="a_list liveHf_href">
+            <span class="a_list_l">任务图标:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <p class="tishi">*建议像素100*100，比例1:1，大小不超过50KB</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">任务说明:</span>
+            <div class="a_list_r"><input type="text"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">可获积分:</span>
+            <div class="a_list_r"><input type="number" class="m_width center" value="300"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">启用状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper ">
+                        <input type="checkbox" id="cont1-togg4"  class="toggle-button" name="switch">
+                        <label for="cont1-togg4" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">启用</span>
+                            <span class="text off">停用</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*停用则完成任务不获得积分</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+
+    $('#rw1').click(function () {
+        $('.cont1').show();
+        $('.cont2').hide();
+    });
+    $('#rw2').click(function () {
+        $('.cont2').show();
+        $('.cont1').hide();
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .edit_btn,.add_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '管理',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#edit_cont")
+        });
+    });
+
+    $('#chutiyan .chose_kc').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '选择课程',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../选择系列课.html' //iframe的url
+        });
+    });
+    $('#chutiyan .chose_wz').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '选择文章',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../选择文章.html' //iframe的url
+        });
+    });
+
+
+    $('.m-doub-pic').on('click',function (e) {
+        e.stopPropagation();
+        console.log(e.pageX + '--' + e.pageY);
+        var html="";
+        html+=`<div class="table-eq">
+                <div class="show-pic">
+                    <em></em>
+                    <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    <div><input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx"><span>复制</span></div>
+                </div>
+            </div>`;
+        $('.table-eq').remove();
+        $('body').append(html);
+        $(".table-eq").css({
+            "left": e.pageX-180,
+            "top": e.pageY+20,
+        });
+        $('.show-pic').click(function (e) {
+            e.stopPropagation();
+            $(this).show();
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一人分佣开关</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+
+<div class="page-title">一人分佣开关</div>
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">一人分佣开关:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                    <label for="u-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*开启后，按照正常规则执行都无人分佣，那么再按锁定人上级原则找到一人分佣</span>
+            </div>
+        </div>
+        <div class="a_list xz-cont">
+            <span class="a_list_l">等级限制:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="togg" class="toggle-button" name="switch">
+                    <label for="togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*开启后，从上级开始找到制定等级里的一人分佣，直接上级不受此影响</span>
+            </div>
+        </div>
+        <div class="xz-cont2">
+            <div class="a_list">
+                <span class="a_list_l">指定等级:</span>
+                <div class="a_list_r chose_item">
+                    <label for="vip1" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">学员</span>
+                    </label>
+                    <label for="vip2" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">VIP</span>
+                    </label>
+                    <label for="vip3" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip3" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">合伙</span>
+                    </label>
+                    <label for="vip4" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip4" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">联创</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script>
+
+
+    $('.xz-cont,.xz-cont2').hide();
+    $(function () {
+        if($('#u-togg > input').is(':checked')){
+            $('.xz-cont').show();
+            $('.xz-cont2').show();
+        }else{
+            $('.xz-cont').hide();
+            $('.xz-cont2').hide();
+        }
+        if($('#togg > input').is(':checked')){
+            $('.xz-cont2').show()
+        }else{
+            $('.xz-cont2').hide()
+        }
+    });
+
+    $('#u-togg').click(function () {$('.xz-cont').toggle();});
+    $('#togg').click(function () {$('.xz-cont2').toggle();});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,639 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>客流猫</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+    <!--<script src="https://kit.fontawesome.com/7f7b5fa9f2.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/newStyle.css"/>
+    <link rel="stylesheet" href="css/index2.css?v=1.0.0"/>
+</head>
+<body>
+
+<!--
+好友裂变获客：内部成员裂变来的所有用户都加该内部成员（该裂变适用于内部员工担心自己的资源被裂变到其他同事手中，而担心自己利益受损）
+任务裂变获客：内部成员裂变来的用户不一定加该内部成员，而是按企业微信渠道活码规则自动分配加到指定的内部成员（1、适用于员工手中的资源为公司资源，2、需要大量引流）
+-->
+
+
+<div id="app">
+    <!--顶部导航-->
+    <div class="header" style="">
+        <div class="index_nav_top2">
+            <div class="logo"><img src="images/LOGO7.jpg" alt=""/></div>
+            <div class="navBox">
+                <ul class="headNav">
+                    <!--<li class="J_menuItem active" data_href="概况/index_v2.html">首页</li>-->
+                    <template v-for="(item,index) in headNav" >
+                        <li class="J_menuItem " :class="[item.class,item.active]" :key="index">
+                            <a :href="item.data_href" :target="item.target">
+                                {{item.name}}
+                            </a>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+            <div class="headR">
+                <a href="#" class="docx" title="帮助文档">
+                    <i class="layui-icon layui-icon-tips"></i>
+                </a>
+                <a href="#" class="docx kfBtn" title="联系客服">
+                    <i class="layui-icon layui-icon-service"></i>
+                    <div class="kfCont">
+                        <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    </div>
+                </a>
+                <a href="index4.html" class="admBtn">
+                    <i class="layui-icon layui-icon-template-1"></i>切换工具
+                </a>
+                <span class="line"></span>
+                <a href="#" class="user" title="个人信息">
+                    <div class="user_pic">
+                        <img src="images/34652363.png" alt="">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul class="user_msg">
+                        <li class="umsg_setBtn">个人设置</li>
+                        <li class="pwd_setBtn">修改密码</li>
+                        <li onclick="javaScript:window.location.href = 'index.html'">切换旧版</li>
+                        <li onclick="javaScript:window.location.href = 'login3.html'">退出登录</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--左侧导航-->
+    <div class="index_nav_left2 ">
+        <!--  动态生成目录  -->
+        <div class="slideBox">
+
+        </div>
+    </div>
+    <!--右侧内容-->
+    <div class="index_nav_right2 ">
+        <span class="layui-breadcrumb" lay-separator="/">
+            当前位置：
+              <a href="">企微私域</a>
+              <a href="">企业微信</a>
+              <a><cite>企微好友</cite></a>
+        </span>
+        <div class="app-main">
+            <iframe name="J_iframe" id="J_iframe" title="" width="100%" height="100%" src="" frameborder="0" data-id=""></iframe>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            headNav:[
+                {name:'首页',active:'active'},
+                {name:'客户增长'},
+                {name:'客户转化'},
+                {name:'客户管理'},
+                {name:'客户旅程'},
+                {name:'数据分析'},
+                {name:'增长学院',data_href:'https://inst.keliumao.com/kt_jh/sy/index.html?dpid=30',target:'_blank',class:'blankName'},
+                {name:'行业案例',data_href:'https://www.yuque.com/docs/share/d32d4854-ca37-45b6-9a48-c8d8aa895329',target:'_blank',class:'blankName'},
+                {name:'裂变海报',data_href:'https://www.yuque.com/docs/share/5c7743b0-5086-40f3-9ec3-60c1a5d8c1f6',target:'_blank',class:'blankName'},
+                {name:'应用'},
+            ],
+        }
+    })
+
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/layui/lay/modules/layer.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/myjs.js"></script>
+<script>
+    $('.umsg_setBtn').on('click', function(){
+        top.layer.open({
+            type: 2,
+            title: '个人设置',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['800px', '540px'],
+            content: '用户-个人设置.html' //iframe的url
+        });
+    });
+    $('.pwd_setBtn').on('click', function(){
+        top.layer.open({
+            type: 2,
+            title: '修改密码',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['800px', '540px'],
+            content: '用户-修改密码.html' //iframe的url
+        });
+    });
+
+    $(function(){
+        document.getElementById('app').style.overflowY = 'hidden';
+
+        // 默认展示选中导航的内容菜单
+        const item = $('.headNav').children('li.active');
+        showSlideNav(item)
+
+        setTimeout(function (){
+            showMenu();
+            navBoxW();
+            var navBoxWidthNow = $('.index_nav_top2 .navBox').width();
+            navHide(navBoxWidthNow);
+
+            // 获取左侧菜单默认选中的路径
+            const showItem = $('.slideNavBox .item.active .J_menuItem');
+            href(showItem)
+        },1000)
+    });
+
+    // 监听窗口变化，操作导航栏
+    window.onresize=function(){
+        navBoxW();
+    }
+
+    // 自定义json数据
+    var navList = {
+        "qywx0":[
+            {
+                "icon":"images/slidNavIcon/13.png",
+                "title":"数据概览",
+                "children":[
+                    {"name":'数据概览',"data_href":'概况/index_v2.html',"id":'000101',"className":''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/13.png",
+                "title":"基础设置",
+                "children":[
+                    {"name":'企业微信接入',"data_href":'企微私域/企微配置/绑定企业微信.html',"id":'000201',"className":''},
+                    {"name":'会话内容存档接入',"data_href":'企微私域/企微配置/会话内容存档接入.html',"id":'000201',"className":''},
+                    {"name":'视频号接入',"data_href":'企微私域/企微配置/视频号接入.html',"id":'000201',"className":''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/13.png",
+                "title":"组织架构",
+                "children":[
+                    {"name":'成员管理',"data_href":'企微私域/企业微信/企微成员.html',"id":'000301',"className":''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/13.png",
+                "title":"我的服务",
+                "children":[
+                    {"name":'订购产品',"data_href":'企微私域/企微配置/套餐介绍.html',"id":'000401',"className":''},
+                    {"name":'订购记录',"data_href":'',"id":'000402',"className":''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/13.png",
+                "title":"服务文档",
+                "children":[
+                    {"name":'使用手册',"data_href":'',"id":'000501',"className":'',target:'_blank'},
+                ]
+            },
+        ],
+        "qywx1":[
+            {
+                "icon":"images/slidNavIcon/13.png",
+                "title":"全域引流",
+                "children":[
+                    {"name":'渠道活码',"data_href":'企微私域/全域引流/渠道活码.html',"id":'010101',"className":''},
+                    {"name":'智能雷达(跟踪)',"data_href":'企微私域/智能雷达/智能雷达.html',"id":'010102',"className":''},
+                    {"name":'智能表单(收集)',"data_href":'',"id":'010103',"className":''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/6.png",
+                "title":"私域获客",
+                "children":[
+                    {"name":'归属式任务裂变',"data_href":'企微私域/私域获客/好友裂变获客.html',"id":'010201',"className":'hot'},
+                    {"name":'共享式任务裂变',"data_href":'企微私域/私域获客/任务裂变获客.html',"id":'010202',"className":'hot'},
+                    {"name":'抽奖裂变',"data_href":'',"id":'010203',"className":''},
+                    {"name":'群裂变',"data_href":'',"id":'010204',"className":''},
+                    {"name":'一客一码',"data_href":'企微私域/私域获客/一客一码.html',"id":'010205',"className":''},
+                ]
+            },
+        ],
+        "qywx2":[
+            {
+                "icon":"images/slidNavIcon/20.png",
+                "title":"自动打标签",
+                "children":[
+                    {'name':'根据对话内容','data_href':'企微私域/互动留存/自动打标签.html','id':'020101','className':''},
+                    {'name':'根据企微群','data_href':'企微私域/互动留存/自动打标签-群聊.html','id':'020102','className':''},
+                    {'name':'根据企微朋友圈互动','data_href':'企微私域/企微朋友圈/自动打标签.html','id':'020103','className':''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/35.png",
+                "title":"互动留存",
+                "children":[
+                    {'name':'好友欢迎语','data_href':'企微私域/互动留存/好友欢迎语.html','id':'020201','className':''},
+                    {'name':'企业群发','data_href':'企微私域/互动留存/客户群发.html','id':'020202','className':''},
+                    {'name':'外部群群发','data_href':'企微私域/互动留存/客户群群发.html','id':'020203','className':''},
+                    {'name':'快捷话术','data_href':'企微私域/互动留存/快捷话术.html','id':'020205','className':''},
+                    {'name':'跟进记录','data_href':'企微私域/互动留存/跟进记录.html','id':'020206','className':''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/43.png",
+                "title":"sop管理",
+                "children":[
+                    {'name':'客户SOP','data_href':'企微私域/互动留存/客户SOP.html','id':'020301','className':'hot'},
+                    {'name':'客户群SOP','data_href':'企微私域/互动留存/企微群SOP.html','id':'020302','className':''},
+                    {'name':'企微朋友圈SOP','data_href':'企微私域/企微朋友圈/企微朋友圈.html','id':'020303','className':''},
+                    {'name': '浪潮式发售SOP', 'data_href': '企微私域/小单浪潮发售SOP/小单浪潮式发售SOP.html', 'id': '020304', 'className': 'hot'}
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/3.png",
+                "title":"存档记录",
+                "children":[
+                    {'name':'私聊存档记录','data_href':'企微私域/聊天记录/单聊记录.html','id':'020401','className':''},
+                    {'name':'群聊存档记录','data_href':'企微私域/聊天记录/群聊记录.html','id':'020402','className':''},
+                    {'name':'聊天超时记录','data_href':'企微私域/聊天记录/聊天超时记录.html','id':'020403','className':''},
+                    {'name':'私聊预警记录','data_href':'企微私域/聊天记录/单聊敏感词记录.html','id':'020404','className':''},
+                    {'name':'群聊预警记录','data_href':'企微私域/聊天记录/群聊敏感词记录.html','id':'020405','className':''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/5.png",
+                "title":"风控管理",
+                "children":[
+                    {'name':'敏感词设置','data_href':'企微私域/风控管理/敏感词设置.html','id':'020501','className':''},
+                    {'name':'聊天超时设置','data_href':'企微私域/风控管理/聊天超时设置.html','id':'020502','className':''}
+                ]
+            },
+        ],
+        "qywx3":[
+            {
+                "icon":"images/slidNavIcon/7.png",
+                "title":"客户管理",
+                "children":[
+                    {'name':'客户列表','data_href':'企微私域/企业微信/企微好友.html','id':'030101','className':''},
+                    {'name':'客户标签','data_href':'企微私域/企业微信/企微标签.html','id':'030102','className':''},
+                    {'name':'流失提醒','data_href':'企微私域/企业微信/删除提醒.html','id':'030103','className':''},
+                    {'name':'删除记录','data_href':'企微私域/企业微信/删除提醒.html','id':'030104','className':''},
+                    {'name':'自定义信息','data_href':'企微私域/企业微信/自定义信息.html','id':'030105','className':''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/15.png",
+                "title":"客户群管理",
+                "children":[
+                    {'name':'客户群列表','data_href':'企微私域/企业微信/企微群.html','id':'030201','className':''},
+                    {'name':'客户群提醒','data_href':'企微私域/企业微信/企微群.html','id':'030202','className':''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/42.png",
+                "title":"企微成员",
+                "children":[
+                    {'name':'企微成员','data_href':'企微私域/企业微信/企微成员.html','id':'030301','className':''},
+                ]
+            },
+        ],
+        "qywx4":[
+            {
+                "icon": "images/slidNavIcon/44.png",
+                "title": "客户旅程",
+                "children": [
+                    {'name': '旅程看板', 'data_href': '企微私域/旅程看板/旅程看板.html', 'id': '040101', 'className': ''},
+                    {'name': '旅程SOP', 'data_href': '企微私域/旅程看板/旅程SOP.html', 'id': '040102', 'className': ''},
+                    {'name': '旅程配置', 'data_href': '企微私域/旅程看板/旅程配置.html', 'id': '040103', 'className': ''},
+                ]
+            },
+        ],
+        "qywx5":[
+            {
+                "icon": "images/slidNavIcon/44.png",
+                "title": "旅程报表",
+                "children": [
+                    {'name': '标签分布', 'data_href': '', 'id': '050101', 'className': ''},
+                    {'name': '阶段占比', 'data_href': '', 'id': '050102', 'className': ''},
+                    {'name': 'SOP分析', 'data_href': '', 'id': '050103', 'className': ''},
+                    {'name': '增长趋势', 'data_href': '', 'id': '050104', 'className': ''},
+                ]
+            },
+            {
+                "icon": "images/slidNavIcon/42.png",
+                "title": "企业微信",
+                "children": [
+                    {'name': '群发结果分析', 'data_href': '', 'id': '050201', 'className': ''},
+                    {'name': '成员分析', 'data_href': '', 'id': '050202', 'className': ''},
+                    {'name': '好友分析', 'data_href': '', 'id': '050203', 'className': ''},
+                    {'name': '群分析', 'data_href': '', 'id': '050204', 'className': ''},
+                    {'name': '重复好友', 'data_href': '', 'id': '050205', 'className': ''},
+                ]
+            },
+            {
+                "icon": "images/slidNavIcon/43.png",
+                "title": "渠道分析",
+                "children": [
+                    {'name': '渠道获客', 'data_href': '', 'id': '050301', 'className': ''},
+                    {'name': '渠道转化', 'data_href': '', 'id': '050302', 'className': ''},
+                ]
+            },
+            {
+                "icon": "images/slidNavIcon/3.png",
+                "title": "沟通",
+                "children": [
+                    {'name': '总览', 'data_href': '', 'id': '050401', 'className': ''},
+                    {'name': '单聊数据分析', 'data_href': '', 'id': '050402', 'className': ''},
+                    {'name': '群聊数据分析', 'data_href': '', 'id': '050403', 'className': ''},
+                ]
+            },
+            {
+                "icon": "images/slidNavIcon/14.png",
+                "title": "价值分析",
+                "children": [
+                    {'name': '企微社群分析', 'data_href': '', 'id': '050501', 'className': ''},
+                    {'name': '用户订单分析', 'data_href': '', 'id': '050502', 'className': ''},
+                    {'name': '用户复购分析', 'data_href': '', 'id': '050503', 'className': ''},
+                ]
+            },
+        ],
+        "qywx6":[
+
+        ],
+        "qywx7":[
+
+        ],
+        "qywx8":[
+
+        ],
+        "qywx9":[
+            {
+                "icon":"images/slidNavIcon/4.png",
+                "title":"版本信息",
+                "children":[
+                    {'name':'企业微信配置','data_href':'企微私域/企微配置/绑定企业微信.html','id':'060101','className':''},
+                    {'name':'企业应用管理','data_href':'企微私域/企微配置/版本信息.html','id':'060102','className':''},
+                ]
+            },
+            {
+                "icon":"images/slidNavIcon/4.png",
+                "title":"配套工具",
+                "children":[
+                    {'name':'表单管理','data_href':'企微私域/表单管理/表单管理.html','id':'060201','className':''},
+                ]
+            },
+        ],
+    };
+    var arr = [];
+    // 将 json 数据放入自定义数组中
+    for(var i in navList){
+        arr.push(navList[i])
+    }
+
+    function mDoubPic(className) {
+        var name1 = $(className).children('li.J_menuItem:not(:first-child)');
+        var name = $(className).children('li.J_menuItem');
+        $(name1).on('mouseenter',function (e) {
+            $('#headSlideNav').remove();
+
+            var left = $(this).offset().left;
+
+            // 获取json数据数组，因为 概况 下没有数据，所以这里数组的下标后移一位
+            var data = arr[$(this).index()];
+
+            // 先动态创建父元素，不然后面数据挂载不上去
+            $(this).append('<div id="headSlideNav"></div>');
+            // 循环遍历数组，将第一层级获取出来，并添加到元素中去
+            var arr2=[];
+            for(var i in data){
+                $('#headSlideNav').append('<div class="item">' +
+                    '<p class="itemTitle">'+ data[i].title +'</p>' +
+                    '<ul></ul>' +
+                    '</div>')
+                // 把子数据放入自定义数组中，方便后续引用
+                arr2.push(data[i].children)
+            }
+
+            // 判断该元素是否有子页面，没有则不展示弹框
+            if(arr2.length === 0){
+                $('#headSlideNav').remove();
+                return false
+            }
+
+            // 遍历存放子数据的数组，获取数组下标，方便数据的存放
+            for (var j = 0;j < arr2.length;j++) {
+                // 再次遍历每个下标数组对应值
+                for(var k in arr2[j]){
+                    $('<li class="'+arr2[j][k].className + '"><span class="J_menuItem" data_id="'+ arr2[j][k].id + '" data_href="'+ arr2[j][k].data_href + '">'+arr2[j][k].name+'</span></li>').appendTo($('#headSlideNav .item:nth-child('+ (j+1) + ') ul'));
+                }
+            }
+
+            // 判断临界点，展示位置
+            if($(window).width() - left <= 400){
+                $("#headSlideNav").css({
+                    "left": 'unset',
+                    "right": '-100px',
+                });
+            }
+            let that = this;
+            $('#headSlideNav li span').on('click',function (e){
+                e.stopPropagation()
+                showSlideNav(that);
+
+                // 点击获取链接赋值到 iframe
+                var id = $(this).attr('data_id');
+                var item = $('.slideNavBox .items .item a[data_id = '+ id +']');
+                item.parent().addClass('active').siblings().removeClass('active');
+                item.parents('.slideNavBox').siblings().find('.item').removeClass('active');
+                console.log(item)
+
+                href(this)
+            })
+        }).on('mouseleave',function(e){
+
+        });
+        $(name).on('click',function (e){
+            // 判断该元素是否有指定类名，有则不做任何处理
+            if($(this).hasClass('blankName')){
+                //
+            }else{
+                let that = this;
+                $(that).addClass('active').siblings().removeClass('active');
+                $('#hideSlideNav li').removeClass('active');
+
+                showSlideNav(that)
+                showIframe()
+                normalInd(0,0)  // 点击顶部导航后，左侧菜单默认第一个展示
+
+                $('#headSlideNav').remove();
+                const item = $('.slideNavBox .item.active .J_menuItem');
+                href(item)
+            }
+        })
+    }
+    mDoubPic('.headNav')
+
+    function showSlideNav(that){
+        // 判断默认选中菜单并展示数据
+        $('.slideNavBox,#headSlideNav').remove();
+        // 点击顶部导航，左侧出现对应弹框内容
+        // 循环遍历数组，将第一层级获取出来，并添加到元素中去
+        var data = arr[$(that).index()];
+        appendSlide(data)
+    }
+    function appendSlide(data) {
+        var arr3=[];
+
+        for(var i in data){
+            $('.index_nav_left2 .slideBox').append('<div class="slideNavBox">' +
+                '<div class="itemTitle"><img src=" ' + data[i].icon +' " alt=""><span>'+ data[i].title +'</span></div>' +
+                '<ul class="items"></ul>' +
+                '</div>')
+            // 把子数据放入自定义数组中，方便后续引用
+            arr3.push(data[i].children)
+        }
+        // 遍历存放子数据的数组，获取数组下标，方便数据的存放
+
+        for (var j = 0;j < arr3.length;j++) {
+            // 再次遍历每个下标数组对应值
+            for(var k in arr3[j]){
+                // 判断当前菜单点击是否新窗口打开
+                if(arr3[j][k].target === '_blank'){
+                    $('<li class="item '+ arr3[j][k].className +'">' +
+                        '<a class="J_menuItem" href="'+ arr3[j][k].data_href + '" target="'+arr3[j][k].target+'" data_id="'+ arr3[j][k].id + '">'+arr3[j][k].name+'</a>' +
+                        '</li>'
+                    ).appendTo($('.index_nav_left2 .slideNavBox:nth-child('+ (j+1) + ') ul'));
+                }else{
+                    $('<li class="item '+ arr3[j][k].className +'">' +
+                        '<a class="J_menuItem" data_id="'+ arr3[j][k].id + '" data_href="'+ arr3[j][k].data_href + '">'+arr3[j][k].name+'</a>' +
+                        '</li>'
+                    ).appendTo($('.index_nav_left2 .slideNavBox:nth-child('+ (j+1) + ') ul'));
+                }
+
+            }
+        }
+        normalInd(0,0)
+        $('.slideNavBox .itemTitle').click(function () {
+            $(this).siblings().slideToggle('fast');
+            $(this).toggleClass('on');
+        })
+        $('.slideNavBox .J_menuItem').click(function () {
+            href(this)
+            $(this).parent().addClass('active').siblings().removeClass('active');
+            $(this).parents('.slideNavBox').siblings().find('.item').removeClass('active');
+        })
+    }
+    function normalInd(oind,ind) {
+        //  默认左侧导航栏指定位置是选中状态
+        var item = $('.slideBox .slideNavBox').eq(oind).find('.item').eq(ind);
+        item.addClass('active').siblings().removeClass('active');
+
+
+    }
+    function showIframe() {
+        $(".slideBox .J_menuItem").on('click',function(){
+            $('#headSlideNav').remove();
+            href(this)
+        });
+    }
+    function href(that) {
+        var url = $(that).attr('data_href');
+        if(!url){
+            $("#J_iframe").attr('src','404.html');
+        }else{
+            $("#J_iframe").attr('src',url);
+        }
+    }
+
+    // 判断顶部导航栏宽度，显隐后面的元素
+    function navBoxW() {
+        // 判断顶部导航栏
+        var navBoxWidth = $('.index_nav_top2 .navBox').width();
+        navHide(navBoxWidth);
+    }
+    function navHide(navBoxWidth) {
+
+        var name = $('.index_nav_top2 .navBox .J_menuItem');
+        var navArr=[];
+        for(var i = 0; i < name.length ; i++){
+            var left = ($(name[i]).offset().left - 190) + $(name[i]).outerWidth(true);
+
+            navArr.push(left);
+        }
+        var menu = '<div class="menu"><i class="layui-icon layui-icon-more"></i></div>';
+        for(var j in navArr){
+            if(navArr[j] > navBoxWidth){
+                $('.index_nav_top2 .headNav .menu').remove();
+                $(name).eq(j).css('visibility','hidden');
+                $('.index_nav_top2 .headNav').append(menu)
+            }else if(navArr[j] < navBoxWidth){
+                $(name).eq(j).css('visibility','visible');
+                $('.index_nav_top2 .headNav .menu').remove();
+            }
+        }
+
+        $('.index_nav_top2 .headNav .menu').on('mouseenter',function (){
+            $('#hideSlideNav,#headSlideNav').remove();
+            var left = $(this).offset().left;
+            $('body').append('<ul id="hideSlideNav"></ul>');
+            $('#hideSlideNav').css({
+                'left': left,
+            })
+            $(".index_nav_top2 .headNav li.J_menuItem").each(function() {
+                if ($(this).css("visibility") === "hidden"){
+                    //console.log($(this).clone());
+                    //var txt = $('.index_nav_top2 .headNav li').eq($(this).index()).text();
+                    $('#hideSlideNav').append($(this).clone().css('visibility','visible'));
+                }
+            })
+
+            var len = $('.headNav li.J_menuItem ').length;
+            var len2 = $('#hideSlideNav li').length;
+
+            $('#hideSlideNav li').on('click',function (e){
+                $('.slideNavBox,#headSlideNav').remove();
+
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.headNav li.J_menuItem').removeClass('active');
+
+                var ind = $(this).index();
+
+                // 截取隐藏元素对应下标的数组
+                var datas = arr.slice((len - len2-1),len);
+                var data = datas[ind];
+                appendSlide(data)
+                showIframe()
+            })
+
+        }).on('mouseleave',function (e){
+            mouseMove(e,this,'#hideSlideNav')
+
+        })
+
+    }
+
+    // 加载完成后，判断导航栏是否有元素隐藏
+    function showMenu() {
+        $(".index_nav_top2 .headNav li.J_menuItem").each(function() {
+            if ($(this).css("visibility") === "hidden"){
+                $('.index_nav_top2 .headNav .menu').show();
+            } else {
+                $('.index_nav_top2 .headNav .menu').hide();
+            }
+        })
+    }
+
+
+
+
+</script>
+</body>
+</html>

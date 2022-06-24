@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>提现审核设置</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">提现审核设置</div>
+
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <span class="a_list_l">余额提现审核:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg0" checked="" class="toggle-button" name="switch">
+                    <label for="u-togg0" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*开启时余额提现需要管理员后台审核、关闭时提现自动完成。默认：开启</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<img src="http://cshtml.lkmsxy.com/csimg/liveYp1.png" alt="" id="detail_img" style="height: 580px;display: none;">
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .imgShow').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#detail_img")
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

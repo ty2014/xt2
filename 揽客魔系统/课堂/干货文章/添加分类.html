@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加文章</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0;background: #fff">
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list ">
+                <span class="a_list_l">分类名称:</span>
+                <div class="a_list_r"><input type="text" placeholder=""></div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l">状态:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox"  id="is_vip" class="toggle-button" name="switch">
+                            <label for="is_vip" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开</span>
+                                <span class="text off">关</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list ">
+                <span class="a_list_l">排序码:</span>
+                <div class="a_list_r"><input type="text" class="m_width center"></div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l">是否展示:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox"  id="is_vip2" class="toggle-button" name="switch">
+                            <label for="is_vip2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">是</span>
+                                <span class="text off">否</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">描述:</span>
+            <div class="a_list_r">
+                <input type="text" class="w-620">
+            </div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">链接:</span>
+            <div class="a_list_r">
+                <input type="text" class="w-620">
+            </div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">分类图标:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi mgL-0">*建议宽高尺寸 200*200像素；大小不超过100KB</p>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+
+</body>
+</html>

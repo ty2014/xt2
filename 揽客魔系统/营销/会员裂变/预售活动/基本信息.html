@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本信息</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css?v=1.0.0">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="head-tab2 head-tab3">
+    <li class="active current"><a href="#tab1">福利卡券</a></li>
+    <li><a href="#tab2">销量</a></li>
+    <li><a href="#tab3">待支付</a></li>
+</ul>
+
+<!-- Tab panes -->
+
+<div class="tab-content content2">
+    <div class="tab-pane active"  id="tab1">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search flkq-search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips sort flkq-sort"><i class="sort-tips"></i>排序</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="60px">序号</th>
+                            <th width="80px">卡券主图</th>
+                            <th width="150px" class="left">卡券名称</th>
+                            <th width="150px" class="left">发行商家</th>
+                            <th width="100px">卡券价值<i class="sort-icon"></i></th>
+                            <th width="150px">有效期至<i class="sort-icon"></i></th>
+                            <th width="100px">每份张数<i class="sort-icon"></i></th>
+                            <th width="100px">共计发放<i class="sort-icon"></i></th>
+                            <th width="100px">待核销<i class="sort-icon"></i></th>
+                            <th width="100px">已核销<i class="sort-icon"></i></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="60px">1</td>
+                            <td width="80px" class="squ-pic"><img src="../../../images/null2.jpg" alt=""></td>
+                            <td width="150px" class="left"><a class="card-name">装修款抵用金</a></td>
+                            <td width="150px" class="left">本店</td>
+                            <td width="100px">2000</td>
+                            <td width="150px" class="date">2019-10-01 10:00</td>
+                            <td width="100px">3</td>
+                            <td width="100px">400</td>
+                            <td width="100px"><a class="dhx">300</a></td>
+                            <td width="100px"><a class="yhx">100</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="squ-pic"><img src="../../../images/null2.jpg" alt=""></td>
+                            <td class="left"><a class="card-name">家庭保洁服务</a></td>
+                            <td class="left">美新家政服务有限公司</td>
+                            <td>400</td>
+                            <td class="date">2020-11-20  09:00</td>
+                            <td>1</td>
+                            <td>800</td>
+                            <td><a class="dhx">200</a></td>
+                            <td><a class="yhx">600</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane"  id="tab2">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search xl-search"><i class="search-tips"></i>搜索</span>
+            </div>
+            <div class="tab_type_2"><p class="tishi">总收入：2,359.00&nbsp;&nbsp;&nbsp;&nbsp;总支出：689.00</p></div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="60px">序号</th>
+                            <th width="150px">订单编号</th>
+                            <th width="100px">购买人头像</th>
+                            <th width="150px" class="left">购买人昵称</th>
+                            <th width="100px">预留姓名</th>
+                            <th width="120px">预留电话</th>
+                            <th width="100px">微信</th>
+                            <th width="150px">身份证号码</th>
+                            <th width="150px">地址</th>
+                            <th width="100px">上传照片</th>
+                            <th width="150px">创建时间</th>
+                            <th width="150px">支付时间</th>
+                            <th width="100px">支付金额</th>
+                            <th width="100px">推荐人头像</th>
+                            <th width="100px" class="left">推荐人昵称</th>
+                            <th width="100px">推荐佣金</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="60px">1</td>
+                            <td width="150px">12345678910</td>
+                            <td width="100px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px" class="left">蒋雨</td>
+                            <td width="120px">13350021234</td>
+                            <td width="100px"></td>
+                            <td width="150px"></td>
+                            <td width="150px" class="left"><div class="wrap-noml">四川省成都市武侯区武兴五路智领大厦二单元701</div></td>
+                            <td width="100px"><a href="#">3</a></td>
+                            <td width="150px" class="date">2019-10-20 10:00:02</td>
+                            <td width="150px" class="date">2019-10-20 10:00:02</td>
+                            <td width="100px">19.00</td>
+                            <td width="100px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="100px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px">5.00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>12345678910</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td class="left">蒋雨</td>
+                            <td>13350021234</td>
+                            <td></td>
+                            <td></td>
+                            <td><div class="wrap-noml"></div></td>
+                            <td><a href="#"></a></td>
+                            <td class="date">2019-10-20 10:00:02</td>
+                            <td class="date">2019-10-20 10:00:02</td>
+                            <td>19.00</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td>5.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane"  id="tab3">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search dzf-search"><i class="search-tips"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="60px">序号</th>
+                            <th width="150px">订单编号</th>
+                            <th width="100px">购买人头像</th>
+                            <th width="150px" class="left">购买人昵称</th>
+                            <th width="100px">预留姓名</th>
+                            <th width="120px">预留电话</th>
+                            <th width="100px">微信</th>
+                            <th width="150px">身份证号码</th>
+                            <th width="150px">地址</th>
+                            <th width="100px">上传照片</th>
+                            <th width="150px">创建时间</th>
+                            <th width="100px">应付金额</th>
+                            <th width="100px">推荐人头像</th>
+                            <th width="100px" class="left">推荐人昵称</th>
+                            <th width="100px">推荐佣金</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="60px">1</td>
+                            <td width="150px">12345678910</td>
+                            <td width="100px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px" class="left">蒋雨</td>
+                            <td width="120px">13350021234</td>
+                            <td width="100px"></td>
+                            <td width="150px"></td>
+                            <td width="150px" class="left"><div class="wrap-noml">四川省成都市武侯区武兴五路智领大厦二单元701</div></td>
+                            <td width="100px"><a href="#">3</a></td>
+                            <td width="150px" class="date">2019-10-20 10:00:02</td>
+                            <td width="100px">19.00</td>
+                            <td width="100px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="100px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px">5.00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>12345678910</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td class="left">蒋雨</td>
+                            <td>13350021234</td>
+                            <td></td>
+                            <td></td>
+                            <td class="left"><div class="wrap-noml">四川省成都市武侯区武兴五路智领大厦二单元701</div></td>
+                            <td><a href="#"></a></td>
+                            <td class="date">2019-10-20 10:00:02</td>
+                            <td>19.00</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td>5.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序 -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">发行商家:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">卡券名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="sort-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">卡劵价值:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">有效期至:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">每份张数:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">共计发放:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">待核销:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">已核销:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="xl-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">订单号:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">购买人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留电话:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">推荐人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="dzf-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">订单号:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">购买人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留电话:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">推荐人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.head-tab2 li');
+    var con = $('.tab-content > .tab-pane');
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active current');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active current');
+            $(con[i]).addClass('active');
+        }
+    }
+
+    $('#chutiyan .flkq-search').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '266px'],
+            skin: 'account-box',
+            content: $("#search-account").html()
+        });
+    });
+    $('#chutiyan .flkq-sort').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '排序',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '580px'],
+            skin: 'account-box',
+            content: $("#sort-account").html()
+        });
+    });
+    $('#chutiyan .xl-search').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '446px'],
+            skin: 'account-box',
+            content: $("#xl-account").html()
+        });
+    });
+    $('#chutiyan .dzf-search').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '446px'],
+            skin: 'account-box',
+            content: $("#dzf-account").html()
+        });
+    });
+
+    $('#chutiyan .card-name').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '卡券详情',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['1100px', '90%'],
+            content: '../预售活动/编辑卡券.html' //iframe的url
+        });
+    });
+    $('#chutiyan .dhx').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '装修款抵用金',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '../预售活动/核销详情.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .yhx').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '装修款抵用金',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '../预售活动/核销详情.html#tab2' //iframe的url
+        });
+    });
+</script>
+
+</body>
+</html>

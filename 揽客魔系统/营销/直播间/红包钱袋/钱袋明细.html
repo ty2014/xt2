@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钱袋明细</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+
+<div class="content">
+    <div class="page-title">钱袋明细</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+            <p class="tishi">支出：1000.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收入：2000.00</p>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">用户ID</th>
+                        <th width="200px" class="left">主播</th>
+                        <th width="100px">主播姓名</th>
+                        <th width="100pz">交易类型</th>
+                        <th width="100px">变动金额</th>
+                        <th width="100px">变动后金额</th>
+                        <th width="150pz">变动时间</th>
+                        <th width="150pz" class="left">操作人</th>
+                        <th width="150pz" class="left">变动说明</th>
+                        <th width="150pz">交易单号</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px">57487</td>
+                        <td width="200px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/head.jpg" alt="">
+                                <a class="wrap-noml">小土豆</a>
+                            </div>
+                        </td>
+                        <td width="100px">蒋雨</td>
+                        <td width="100px">后台充值</td>
+                        <td width="100px">+100.00</td>
+                        <td width="100px">200.00</td>
+                        <td width="150px" class="date"><div>2020-10-20 10:00:00</div></td>
+                        <td width="150px" class="left">袁琳莉</td>
+                        <td width="150px" class="left"><a class="contBtn1">醛老虎广告赞助</a></td>
+                        <td width="150px">2020102012345678</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>45781</td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/head.jpg" alt="">
+                                <a class="wrap-noml">小土豆</a>
+                            </div>
+                        </td>
+                        <td>郑传华</td>
+                        <td>后台扣减</td>
+                        <td>-100.00</td>
+                        <td>100.00</td>
+                        <td class="date"><div></div></td>
+                        <td class="left">郑琼</td>
+                        <td class="left"><a class="contBtn2">主播打赏折现</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="cover-pic"></td>
+                        <td></td>
+                        <td>发出红包</td>
+                        <td>-120.00</td>
+                        <td></td>
+                        <td class="date"><div></div></td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/head.jpg" alt="">
+                                <a class="wrap-noml">小土豆</a>
+                            </div>
+                        </td>
+                        <td class="left"><a class="contBtn3">直播主题《直播疯狂掘金1》，红包详情</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="cover-pic"></td>
+                        <td></td>
+                        <td>退回红包</td>
+                        <td>+120.00</td>
+                        <td></td>
+                        <td class="date"><div></div></td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/head.jpg" alt="">
+                                <a class="wrap-noml">小土豆</a>
+                            </div>
+                        </td>
+                        <td class="left"><a class="contBtn4">直播主题《直播疯狂掘金1》，红包详情</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="cover-pic"></td>
+                        <td></td>
+                        <td>打赏收入</td>
+                        <td>+520.00</td>
+                        <td></td>
+                        <td class="date"><div></div></td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/head.jpg" alt="">
+                                <a class="wrap-noml">小土豆</a>
+                            </div>
+                        </td>
+                        <td class="left"><a class="contBtn5">直播主题《直播疯狂掘金1》</a></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">主播昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">主播姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">操作人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">交易单号:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">交易类型:</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">后台充值</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">后台扣减</span>
+                </label>
+                <label for="ly3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">发出红包</span>
+                </label>
+                <label for="ly4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">退回红包</span>
+                </label>
+                <label for="ly5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">打赏收入</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">变动时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" lay-key="1">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" lay-key="2">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<!--  后台充值  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure1" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">交易类型:</div>
+                <div class="a_list_r">后台充值</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">交易单号:</div>
+                <div class="a_list_r">2020102012345678</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">变动金额:</div>
+                <div class="a_list_r">+100.00</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">变动时间:</div>
+                <div class="a_list_r">2020-10-20 10:00:00</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">变动后金额:</div>
+                <div class="a_list_r">100.00</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">操作人:</div>
+                <div class="a_list_r">郑琼</div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">变动说明:</div>
+            <div class="a_list_r">醛老虎广告赞助</div>
+        </div>
+
+    </div>
+</div>
+<!--  后台扣减  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure2" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">交易类型:</div>
+                <div class="a_list_r">后台扣减</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">交易单号:</div>
+                <div class="a_list_r">2020102012345678</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">变动金额:</div>
+                <div class="a_list_r">-100.00</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">变动时间:</div>
+                <div class="a_list_r">2020-10-20 10:00:00</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">变动后金额:</div>
+                <div class="a_list_r">100.00</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">操作人:</div>
+                <div class="a_list_r">郑琼</div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">变动说明:</div>
+            <div class="a_list_r">主播打赏折现</div>
+        </div>
+    </div>
+</div>
+<!--  发出红包  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure3" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">交易类型:</div>
+                <div class="a_list_r">发出红包</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">交易单号:</div>
+                <div class="a_list_r">2020102012345678</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">变动金额:</div>
+                <div class="a_list_r">-100.00</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">变动时间:</div>
+                <div class="a_list_r">2020-10-20 10:00:00</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">变动后金额:</div>
+                <div class="a_list_r">100.00</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">发出人:</div>
+                <div class="a_list_r"><img src="../../../images/head.jpg" alt="" class="user-pic"><a href="">小土豆</a></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">变动说明:</div>
+            <div class="a_list_r">直播主题《直播疯狂掘金1》</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r">
+                <div class="normal-table">
+                    <div style="display: flex;align-items: center;justify-content: space-between;background: #dee4ef;height: 45px;padding: 0 15px;color: #888;">
+                        <span style="color: #333;font-size: 14px;font-weight: bold;">抢红包明细</span>
+                        <p>红包待领取：已领取3/5，共62.88/100元。</p>
+                    </div>
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 60px">用户ID</th>
+                            <th style="width: 200px;text-align: left">用户</th>
+                            <th style="width: 120px">时间</th>
+                            <th style="width: 80px">金额</th>
+                            <th style="width: 120px">交易编号</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>52489</td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../../images/head.jpg" alt="">
+                                    <a href="">xxxxxxxxxxxxxxxxxx</a>
+                                </div>
+                            </td>
+                            <td>2020-9-11 10:00:00</td>
+                            <td>6.53元</td>
+                            <td>21020003</td>
+                        </tr>
+                        <tr>
+                            <td>52489</td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../../images/head.jpg" alt="">
+                                    <a href="">xxxxxxxxxxxxxxxxxx</a>
+                                </div>
+                            </td>
+                            <td>2020-9-11 10:00:00</td>
+                            <td>6.53元</td>
+                            <td>21020003</td>
+                        </tr>
+                        <tr>
+                            <td>52489</td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../../images/head.jpg" alt="">
+                                    <a href="">xxxxxxxxxxxxxxxxxx</a>
+                                </div>
+                            </td>
+                            <td>2020-9-11 10:00:00</td>
+                            <td>6.53元</td>
+                            <td>21020003</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  退回红包  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure4" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">交易类型:</div>
+                <div class="a_list_r">退回红包</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">交易单号:</div>
+                <div class="a_list_r">2020102012345678</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">变动金额:</div>
+                <div class="a_list_r">+37.12</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">变动时间:</div>
+                <div class="a_list_r">2020-10-20 10:00:00</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">变动后金额:</div>
+                <div class="a_list_r">137.12</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">发出人:</div>
+                <div class="a_list_r"><img src="../../../images/head.jpg" alt="" class="user-pic"><a href="">小土豆</a></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">变动说明:</div>
+            <div class="a_list_r">来源主题《直播疯狂掘金1》</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r">
+                <div class="normal-table">
+                    <div style="display: flex;align-items: center;justify-content: space-between;background: #dee4ef;height: 45px;padding: 0 15px;color: #888;">
+                        <span style="color: #333;font-size: 14px;font-weight: bold;">抢红包明细</span>
+                        <p>红包待领取：已领取3/5，共62.88/100元。</p>
+                    </div>
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 60px">用户ID</th>
+                            <th style="width: 200px;text-align: left">用户</th>
+                            <th style="width: 120px">时间</th>
+                            <th style="width: 80px">金额</th>
+                            <th style="width: 120px">交易编号</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>52489</td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../../images/head.jpg" alt="">
+                                    <a href="">xxxxxxxxxxxxxxxxxx</a>
+                                </div>
+                            </td>
+                            <td>2020-9-11 10:00:00</td>
+                            <td>6.53元</td>
+                            <td>21020003</td>
+                        </tr>
+                        <tr>
+                            <td>52489</td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../../images/head.jpg" alt="">
+                                    <a href="">xxxxxxxxxxxxxxxxxx</a>
+                                </div>
+                            </td>
+                            <td>2020-9-11 10:00:00</td>
+                            <td>6.53元</td>
+                            <td>21020003</td>
+                        </tr>
+                        <tr>
+                            <td>52489</td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../../images/head.jpg" alt="">
+                                    <a href="">xxxxxxxxxxxxxxxxxx</a>
+                                </div>
+                            </td>
+                            <td>2020-9-11 10:00:00</td>
+                            <td>6.53元</td>
+                            <td>21020003</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  打赏收入  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure5" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">交易类型:</div>
+                <div class="a_list_r">打赏收入</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">交易单号:</div>
+                <div class="a_list_r">2020102012345678</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">变动金额:</div>
+                <div class="a_list_r">+100.00</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">变动时间:</div>
+                <div class="a_list_r">2020-10-20 10:00:00</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">变动后金额:</div>
+                <div class="a_list_r">200.00</div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">打赏人:</div>
+                <div class="a_list_r"><img src="../../../images/head.jpg" alt="" class="user-pic"><a href="">小土豆</a></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">变动说明:</div>
+            <div class="a_list_r">直播主题《直播疯狂掘金1》</div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .contBtn1').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '交易详情',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#cont-sure1")
+        });
+    });
+    $('#chutiyan .contBtn2').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '交易详情',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#cont-sure2")
+        });
+    });
+    $('#chutiyan .contBtn3').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '交易详情',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#cont-sure3")
+        });
+    });
+    $('#chutiyan .contBtn4').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '交易详情',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#cont-sure4")
+        });
+    });
+    $('#chutiyan .contBtn5').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '交易详情',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#cont-sure5")
+        });
+    });
+
+
+
+
+
+</script>
+</body>
+</html>

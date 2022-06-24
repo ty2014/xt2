@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权限管理</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<!--<div class="page-title">权限管理</div>-->
+<div class="tab_content2">
+    <div class="tab_type_2"></div>
+    <div class="tab_type_2">
+        <span class="tab-tips add_btn add_key"><i class="fa fa-plus"></i>保存</span>
+    </div>
+</div>
+<div class="gz-content">
+    <table class="permiss"  cellpadding="0" cellspacing="0" rules="cols">
+        <thead>
+            <tr class="permiss-head">
+                <th width="25%">功能模块</th>
+                <th width="30%">模块说明</th>
+                <th width="30%">
+                    <div id="head-radio">
+                        基本权限：
+                        <label for="pu1" class="radio">
+                            <span class="msg_set_txt">无权</span>
+                            <div class="chose">
+                                <input type="radio" name="pic2" id="pu1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                        <label for="pu2" class="radio">
+                            <span class="msg_set_txt">有权</span>
+                            <div class="chose">
+                                <input type="radio" name="pic2" id="pu2" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </div>
+                </th>
+                <th width="15%">
+                    <div>
+                        导出权限
+                        <label for="c1" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="c1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 一级目录，点击后展开二级目录 -->
+            <tr class="permiss-body">
+                <td class="p-first"><span><img src="images/1.png" alt="">会员</span></td>
+                <td></td>
+                <td>
+                    <div>
+                        <label for="r1-1" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="one" id="r1-1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                        <label for="r1-2" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="one" id="r1-2" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <label for="r1-3" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="one" id="r1-3" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <!-- 二级目录，点击后展开三级目录 -->
+            <tr class="permiss-body">
+                <td class="p-second"><span><img src="images/2.png" alt="">注册用户</span></td>
+                <td></td>
+                <td>
+                    <div>
+                        <label for="r1-2-1" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="one-2" id="r1-2-1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                        <label for="r1-2-2" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="one-2" id="r1-2-2" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <label for="r1-r2-3" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="one-2" id="r1-r2-3" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <!-- 三级目录 -->
+            <tr class="permiss-body">
+                <td class="p-third"><span><img src="images/3.png" alt="">会员</span></td>
+                <td></td>
+                <td>
+                    <div>
+                        <label for="r1-3-1" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="one-3" id="r1-3-1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                        <label for="r1-3-2" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="one-3" id="r1-3-2" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <label for="r1-3-3" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="one-3" id="r1-3-3" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

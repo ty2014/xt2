@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商家管理</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!--
+
+注意：
+①若用户不是负责人，手机端首建活动前，需填“商家名称”，创建一个商家。
+②负责人被授权免费创建，授权权益跟随负责人变更而迁移。
+③未授权的负责人，需付费创建活动，付费购买的使用权限属于商户，不随负责人变更而迁移。
+
+创建期限：
+①若负责人的会员等级可免费创建，则展示“会员权益”。
+②若负责人是免费创建授权用户，则展示“用户授权”。
+③若负责人两项都不是，则展示商家升级的“创建期限”。
+注：创建期限搜索时，只需搜索相应时间起止即可，即第三种情况。
+
+-->
+
+
+<div class="content">
+    <div class="page-title">商家管理</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">有效</a></li>
+                    <li><a href="#">无效</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">商家ID</th>
+                        <th width="150px" class="left">商家名称</th>
+                        <th width="100px">商家分类</th>
+                        <th width="250px" class="left">店铺</th>
+                        <th width="250px" class="left">负责人</th>
+                        <th width="100px">会员等级</th>
+                        <th width="100px">当前权限</th>
+                        <th width="150pz">开始时间</th>
+                        <th width="150pz">到期时间</th>
+                        <th width="100pz">商家升级<i class="sort-icon"></i></th>
+                        <th width="100pz">商家授权<i class="sort-icon"></i></th>
+                        <th width="100pz">商家活动<i class="sort-icon"></i></th>
+                        <th width="100pz">商家链接</th>
+                        <th width="100pz">创建来源</th>
+                        <th width="100pz">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px">001</td>
+                        <td width="150px" class="left"><a href="">爱达乐</a></td>
+                        <td width="100px">教育</td>
+                        <td width="250px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null2.jpg" alt="">
+                                <span class="wrap-noml">店铺名称</span>
+                            </div>
+                        </td>
+                        <td width="250px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null2.jpg" alt="">
+                                <span class="wrap-noml">小土豆</span>
+                            </div>
+                        </td>
+                        <td width="100px">vip</td>
+                        <td width="100px">授权</td>
+                        <td width="150px" class="date"><div>2020-07-01 10:00:01</div></td>
+                        <td width="150px" class="date notExpired"><div>2020-08-01 10:00:01</div></td>
+                        <td width="100px"><a class="sj-list">2</a></td>
+                        <td width="100px"><a class="sq-list">5</a></td>
+                        <td width="100px"><a class="cjhd">2</a></td>
+                        <td width="100px" class="m-pic">
+                            <div class="m-doub-pic">
+                                <img src="../../../images/1.png" alt="">
+                                <img src="../../../images/2.png" alt="">
+                            </div>
+                        </td>
+                        <td width="100px"><a class="cj-detail">用户</a></td>
+                        <td width="100px" class="cz_btn"><button type="button" class="btn-type1 gl-btn">管理</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>002</td>
+                        <td class="left"><a href="">爱达乐</a></td>
+                        <td>游玩</td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null2.jpg" alt="">
+                                <span class="wrap-noml">店铺名称</span>
+                            </div>
+                        </td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null2.jpg" alt="">
+                                <span class="wrap-noml">小呀么小西几</span>
+                            </div>
+                        </td>
+                        <td>联创人</td>
+                        <td>购买</td>
+                        <td class="date"><div>2020-01-01 10:00:01</div></td>
+                        <td class="date expired"><div>2020-01-01 10:00:01</div></td>
+                        <td><a class="sj-list">0</a></td>
+                        <td><a class="sq-list">1</a></td>
+                        <td><a class="cjhd">10</a></td>
+                        <td class="m-pic">
+                            <div class="m-doub-pic">
+                                <img src="../../../images/1.png" alt="">
+                                <img src="../../../images/2.png" alt="">
+                            </div>
+                        </td>
+                        <td><a class="cj-detail">后台</a></td>
+                        <td width="100px" class="cz_btn"><button type="button" class="btn-type1 gl-btn">管理</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>003</td>
+                        <td class="left"><a href="">爱达乐</a></td>
+                        <td>餐饮</td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null2.jpg" alt="">
+                                <span class="wrap-noml">店铺名称</span>
+                            </div>
+                        </td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null2.jpg" alt="">
+                                <span class="wrap-noml">皮卡丘</span>
+                            </div>
+                        </td>
+                        <td>联创人</td>
+                        <td>购买</td>
+                        <td class="date"><div>2019-08-01 10:00:01</div></td>
+                        <td class="date expired"><div>2019-10-04 10:00:01</div></td>
+                        <td><a class="sj-list">2</a></td>
+                        <td><a class="sq-list">0</a></td>
+                        <td><a class="cjhd">10</a></td>
+                        <td class="m-pic">
+                            <div class="m-doub-pic">
+                                <img src="../../../images/1.png" alt="">
+                                <img src="../../../images/2.png" alt="">
+                            </div>
+                        </td>
+                        <td><a class="cj-detail">后台</a></td>
+                        <td width="100px" class="cz_btn"><button type="button" class="btn-type1 gl-btn">管理</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span>...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span>...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="text" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>
+                条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">商家ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">商家名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">店铺名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">商家分类:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">负责人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">当前权限:</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">授权</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">购买</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">创建来源:</span>
+            <div class="account-r chose_item">
+                <label for="cj1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">用户</span>
+                </label>
+                <label for="cj2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">后台</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">创建期限:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1" placeholder="起"><span class="date-line"></span><input type="text" class="layui-input" id="test2" placeholder="止"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-120" id="add-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">商家名称:</span>
+            <div class="a_list_r"><input type="text"></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">店铺名称:</span>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">店铺头像:</span>
+                <div class="a_list_r">
+                    <img src="../../../images/null2.jpg" alt="" class="user-pic">
+                    <a href="">更换</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">店铺简介:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">商家分类:</span>
+            <div class="a_list_r">
+                <div class="select-text">
+                    <span class="select-txt">分类一</span>
+                    <ul>
+                        <li>分类一</li>
+                        <li>分类二</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">商家区域:</span>
+            <div class="a_list_r">
+                <div class="layui-form">
+                    <div class="layui-form-item" id="area-picker" style="margin-bottom: 0">
+                        <div class="layui-input-inline" style="width: 200px;">
+                            <select name="province" class="province-selector" data-value="四川省" lay-filter="province-1">
+                                <option value="">请选择省</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline" style="width: 200px;">
+                            <select name="city" class="city-selector" data-value="成都市" lay-filter="city-1">
+                                <option value="">请选择市</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline" style="width: 200px;">
+                            <select name="county" class="county-selector" data-value="武侯区" lay-filter="county-1">
+                                <option value="">请选择区</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">负责人:</span>
+            <div class="a_list_r"><span class="set-user add-hxr" style="margin-right: 16px">点击选择（单选）</span></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-120" id="xq-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">创建来源:</span>
+            <div class="a_list_r">用户</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">原始创建人:</span>
+            <div class="a_list_r">小呀么小西几</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">创建时间:</span>
+            <div class="a_list_r">2020-07-22 14:58:47</div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+
+<script>
+
+    //选择省市
+    layui.config({
+        base: '../../../js/mods/'
+        , version: '1.0'
+    });
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form', 'layarea'], function () {
+        var layer = layui.layer
+            , form = layui.form
+            , layarea = layui.layarea;
+
+        layarea.render({
+            elem: '#area-picker',
+            change: function (res) {
+                //选择结果
+                console.log(res);
+            }
+        });
+    });
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '562px'],
+            skin: 'account-box',
+            content: $(".account-box")
+        });
+    });
+    $('#chutiyan .cjhd').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '创建活动',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '创建活动.html' //iframe的url
+        });
+    });
+    $('#chutiyan .sj-list').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '商家升级',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '升级记录.html' //iframe的url
+        });
+    });
+    $('#chutiyan .sq-list').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '商家授权',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '商家授权.html' //iframe的url
+        });
+    });
+    $('#chutiyan .add-hxr').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '负责人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '../添加负责人.html' //iframe的url
+        });
+    });
+
+    /* 表格中显示二维码样式 */
+    $('.m-doub-pic').on('click',function (e) {
+        e.stopPropagation();
+        console.log(e.pageX + '--' + e.pageY);
+        var html="";
+        html+=`<div class="table-eq">
+                <div class="show-pic">
+                    <em></em>
+                    <p>活动主页</p>
+                    <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    <div><input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx"><span>复制</span></div>
+                </div>
+                <div class="show-pic">
+                    <em></em>
+                    <p>核销主页</p>
+                    <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    <div><input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx"><span>复制</span></div>
+                </div>
+            </div>`;
+        $('.table-eq').remove();
+        $('body').append(html);
+        $(".table-eq").css({
+            "left": e.pageX-360,
+            "top": e.pageY+20,
+        });
+        $('.show-pic').click(function (e) {
+            e.stopPropagation();
+            $(this).show();
+        });
+    });
+
+    $('#chutiyan .add_btn,#chutiyan .gl-btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '添加/编辑',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['900px', '411px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#add-sure")
+        });
+    });
+    $('#chutiyan .cj-detail').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '店铺创建详情',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '215px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#xq-sure")
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面管理</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .normal-table table td{overflow: unset;}
+        .normal-table .select-text{min-width: 60px;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto;padding: 0;background: #fff">
+
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="a_list ">
+            <span class="a_list_l">页面标题:</span>
+            <div class="a_list_r"><input type="text" class="w-620" placeholder="标题名称将给用户展示"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">启用状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="statu-togg" class="toggle-button" name="switch">
+                        <label for="statu-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">启用</span>
+                            <span class="text off">停用</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*停用后用户访问页面链接将不展示内容</span>
+            </div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">后台备注:</span>
+            <div class="a_list_r"><input type="text" class="w-620" placeholder="*选填，仅后台可见，用于备注说明"></div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">分享简介:</span>
+            <div class="a_list_r"><textarea style="height: 60px;width: 620px;padding: 10px;resize: none" placeholder="页面内容简介，用户分享页面时展示"></textarea></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享图标:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo1">
+                    <li class="img_item" style="display: none">
+                        <img src="" layer-src="">
+                        <span class="icon-delete"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <p class="tishi mgL-0">*建议像素100*100或比例1:1 ，JPG、PNG格式，图片小于50KB</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="padding-top: 20px;align-items: flex-start">页面内容:</span>
+            <div class="a_list_r"><textarea style="height: 200px;width: 620px;resize: none">此处放编辑器</textarea></div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">信息提交:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="submit-togg" class="toggle-button" name="switch">
+                        <label for="submit-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*用户需要填写信息提交</span>
+            </div>
+        </div>
+        <div class="submitMsg" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <div>
+                        <div class="chose_item msg_content" style="margin-bottom: 10px;">
+                            <label for="type1" class="radio ">
+                                <div class="chose">
+                                    <input type="radio" checked="" name="type" id="type1">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">样式一</span>
+                            </label>
+                            <label for="type2" class="radio ">
+                                <div class="chose">
+                                    <input type="radio" name="type" id="type2">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">样式二</span>
+                            </label>
+                            <a class="type_btn1">查看示例</a>
+                            <span class="tishi2">* 字段名的开关控制该名称在前台页面是否显示（隐藏）</span>
+                        </div>
+                        <!--
+                            公用图标（即没有找到对应图标的），使用 buy-vip5.png
+                        -->
+                        <div class="normal-table">
+                            <table border="0">
+                                <thead>
+                                <tr>
+                                    <th style="width: 50px">序号</th>
+                                    <th style="width: 80px">图标</th>
+                                    <th style="width: 200px">字段名</th>
+                                    <th style="width: 80px">是否必填</th>
+                                    <th style="width: 150px">填写提示</th>
+                                    <th style="width: 120px">数据类型</th>
+                                    <th style="width: 180px;">选项</th>
+                                    <th style="width: 80px">排序</th>
+                                    <th style="width: 80px">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <img src="images/buy-vip1.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="姓名">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg1" class="toggle-button" name="switch">
+                                                    <label for="sh-togg1" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check1" class="checked disabled mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check1" disabled>
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value="请输入姓名"></td>
+                                    <td>单行文本</td>
+                                    <td>-</td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">1</span>
+                                            <ul>
+                                                <li class="active">1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <img src="images/buy-vip2.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div  class="flex alignItemC">
+                                            <input type="text" value="手机" >
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg2" class="toggle-button" name="switch">
+                                                    <label for="sh-togg2" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check2" class="checked disabled mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check2" disabled>
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value="请输入手机号码"></td>
+                                    <td>单行文本</td>
+                                    <td>-</td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">2</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li class="active">2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <img src="images/buy-vip4.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="身份证" >
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg3" class="toggle-button" name="switch">
+                                                    <label for="sh-togg3" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check3" class="checked disabled mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check3" disabled>
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value="请输入身份证号码"></td>
+                                    <td>单行文本</td>
+                                    <td>-</td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">3</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li class="active">3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <img src="images/buy-vip5.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="提示">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg4" class="toggle-button" name="switch">
+                                                    <label for="sh-togg4" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check4" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check4">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value="选填"></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">单行文本</span>
+                                            <ul style="text-align: left">
+                                                <li class="active">单行文本</li>
+                                                <li>多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li>时间</li>
+                                                <li>下拉选择</li>
+                                                <li>图片</li>
+                                                <li>地址</li>
+                                                <li>上传附件</li>
+                                                <li>分割线</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>-</td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">4</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li class="active">4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <img src="images/buy-vip13.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="备注">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg5" class="toggle-button" name="switch">
+                                                    <label for="sh-togg5" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check5" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check5">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value=""></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">多行文本</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li class="active">多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li>时间</li>
+                                                <li>下拉选择</li>
+                                                <li>图片</li>
+                                                <li>地址</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>-</td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">5</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li class="active">5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>
+                                        <img src="images/buy-vip15.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="数量">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg6" class="toggle-button" name="switch">
+                                                    <label for="sh-togg6" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check6" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check6">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value="请填写整数"></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">数字</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li>多行文本</li>
+                                                <li class="active">数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li>时间</li>
+                                                <li>下拉选择</li>
+                                                <li>图片</li>
+                                                <li>地址</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="display: flex;align-items: center;justify-content: center;flex-wrap: wrap;padding: 6px 0;">
+                                            <div class="select-text" style="min-width: 110px;">
+                                                <span class="select-txt">整数</span>
+                                                <ul>
+                                                    <li class="active">整数</li>
+                                                    <li>最多1位小数</li>
+                                                    <li>最多2位小数</li>
+                                                    <li>最多3位小数</li>
+                                                    <li>最多4位小数</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">6</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>
+                                        <img src="images/buy-vip18.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="日期">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg7" class="toggle-button" name="switch">
+                                                    <label for="sh-togg7" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check7" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check7">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value="请选择日期"></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">日期</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li>多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li class="active">日期</li>
+                                                <li>时间</li>
+                                                <li>下拉选择</li>
+                                                <li>图片</li>
+                                                <li>地址</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>-</td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">7</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li class="active">7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>
+                                        <img src="images/buy-vip19.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="时间">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg8" class="toggle-button" name="switch">
+                                                    <label for="sh-togg8" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check8" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check8">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value="请选择时间"></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">时间</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li>多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li class="active">时间</li>
+                                                <li>下拉选择</li>
+                                                <li>图片</li>
+                                                <li>地址</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>-</td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">8</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li class="active">8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>
+                                        <img src="images/buy-vip20.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="性别">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg9" class="toggle-button" name="switch">
+                                                    <label for="sh-togg9" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check9" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check9">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value="请选择"></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">下拉选择</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li>多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li>时间</li>
+                                                <li class="active">下拉选择</li>
+                                                <li>图片</li>
+                                                <li>地址</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><a class="edit_checked">编辑</a></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">9</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li class="active">9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>
+                                        <img src="images/buy-vip16.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="上传照片">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg10" class="toggle-button" name="switch">
+                                                    <label for="sh-togg10" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check10" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check10">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value=""></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">图片</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li>多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li>时间</li>
+                                                <li>下拉选择</li>
+                                                <li class="active">图片</li>
+                                                <li>地址</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="display: flex;align-items: center;justify-content: center;flex-wrap: wrap;padding: 6px 0;">
+                                            最多上传：
+                                            <div class="select-text">
+                                                <span class="select-txt">3</span>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                    <li>5</li>
+                                                    <li>6</li>
+                                                </ul>
+                                            </div>
+                                            &nbsp;张
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">10</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li class="active">10</li>
+                                                <li>11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>
+                                        <img src="images/buy-vip3.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="地址">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg11" class="toggle-button" name="switch">
+                                                    <label for="sh-togg11" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check11" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check11">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value="请选择省/市/区"></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">地址</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li>多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li>时间</li>
+                                                <li>下拉选择</li>
+                                                <li>图片</li>
+                                                <li class="active">地址</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="display: flex;align-items: center;justify-content: center;flex-wrap: wrap;padding: 6px 0;">
+                                            <div class="select-text" style="margin-right: 10px;min-width: 86px;">
+                                                <span class="select-txt">省-市-区</span>
+                                                <ul>
+                                                    <li>省</li>
+                                                    <li>省-市</li>
+                                                    <li class="active">省-市-区</li>
+                                                </ul>
+                                            </div>+&nbsp;
+                                            <label for="addr1" class="checked">
+                                                <div class="chose">
+                                                    <input type="checkbox" checked name="addr" id="addr1">
+                                                    <span class="checked-bg"></span>
+                                                </div>
+                                                <span class="msg_set_txt">详细地址</span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">11</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li class="active">11</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>
+                                        <img src="images/buy-vip21.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="勾选选项">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg12" class="toggle-button" name="switch">
+                                                    <label for="sh-togg12" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check12" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check12">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value=""></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">单选</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li>多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li>时间</li>
+                                                <li>下拉选择</li>
+                                                <li>图片</li>
+                                                <li>地址</li>
+                                                <li class="active">单选</li>
+                                                <li>多选</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><a class="edit_checked">编辑</a></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">12</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                                <li class="active">12</li>
+                                                <li>13</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>
+                                        <img src="images/buy-vip22.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="勾选选项">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg13" class="toggle-button" name="switch">
+                                                    <label for="sh-togg13" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check13" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check13">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value=""></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">多选</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li>多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li>时间</li>
+                                                <li>下拉选择</li>
+                                                <li>图片</li>
+                                                <li>地址</li>
+                                                <li>单选</li>
+                                                <li class="active">多选</li>
+                                                <li>上传附件</li>
+                                                <li>分割线</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><a class="edit_checked">编辑</a></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">13</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                                <li>12</li>
+                                                <li class="active">13</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>
+                                        <img src="images/buy-vip7.png" alt="" class="icons">
+                                        <a class="chose_icon">替换</a>
+                                    </td>
+                                    <td>
+                                        <div class="flex alignItemC">
+                                            <input type="text" value="上传附件">
+                                            <div class="button-label-s mgL-4">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="sh-togg14" class="toggle-button" name="switch">
+                                                    <label for="sh-togg14" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">显</span>
+                                                        <span class="text off">隐</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="check14" class="checked mg-auto">
+                                            <div class="chose">
+                                                <input type="checkbox" checked name="check" id="check14">
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                        </label>
+                                    </td>
+                                    <td><input type="text" value="仅支持Word、TXT格式文件"></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">上传附件</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li>多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li>时间</li>
+                                                <li>下拉选择</li>
+                                                <li>图片</li>
+                                                <li>地址</li>
+                                                <li>单选</li>
+                                                <li>多选</li>
+                                                <li class="active">上传附件</li>
+                                                <li>分割线</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><span class="tishi mgL-0">*仅支持Word、TXT格式文件</span></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">14</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                                <li>12</li>
+                                                <li>13</li>
+                                                <li class="active">14</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">分割线</span>
+                                            <ul style="text-align: left">
+                                                <li>单行文本</li>
+                                                <li>多行文本</li>
+                                                <li>数字</li>  <!--  整数、小数1位、小数2位 -->
+                                                <li>日期</li>
+                                                <li>时间</li>
+                                                <li>下拉选择</li>
+                                                <li>图片</li>
+                                                <li>地址</li>
+                                                <li>单选</li>
+                                                <li>多选</li>
+                                                <li>上传附件</li>
+                                                <li class="active">分割线</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><span class="tishi mgL-0">*用来分隔内容的虚线</span></td>
+                                    <td>
+                                        <div class="select-text">
+                                            <span class="select-txt">15</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                                <li>12</li>
+                                                <li>13</li>
+                                                <li>14</li>
+                                                <li class="active">15</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="8" style="text-align: left">
+                                        <span class="tishi2 mgL-0">* 字段名的开关控制该名称在前台页面是否显示（隐藏）</span>
+                                    </td>
+                                    <td><button>添加</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="margin-top: 20px">
+                            <div style="display: flex;align-items: center;">
+                                提交信息后，是否付费：
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="pay-togg" class="toggle-button" name="switch">
+                                        <label for="pay-togg" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payMsg" style="display: none;margin-top: 20px;">
+                                单价<input type="number" class="m_width m-height center" style="margin: 0 8px;">元/份，一单最多可购买<input type="number" class="s_width m-height center" placeholder="无数" style="margin: 0 8px;">份<span class="tishi" style="margin-right: 100px;">*用户付费=单价*购买份数</span>
+                                市场价：<input type="number" class="m_width m-height" placeholder="选填" style="margin-right: 8px;">元/份；<span class="tishi">*将以划线形式展示该价格</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">提交限制:</span>
+                <div class="a_list_r" style="padding: 26px 0;">
+                    <div>
+                        <div style="margin-bottom: 10px;">
+                            <div style="display: flex;align-items: center;flex-wrap: wrap;margin-bottom: 10px;">
+                                <div class="button-label-m space-toggle">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="tjxz-togg" checked class="toggle-button" name="switch">
+                                        <label for="tjxz-togg" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">不限制</span>
+                                            <span class="text off">限制</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <span class="tishi">*如果不限制，则所有用户都有权限提交；如果限制，则指定的等级用户才有权限提交;</span>
+                            </div>
+                            <div class="chose_item tjxz_cont" style="display: none;margin-bottom: 16px;">
+                                <label for="vip1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="vip1" id="vip1" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">普通会员</span>
+                                </label>
+                                <label for="vip2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="vip1" id="vip2" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">白银会员</span>
+                                </label>
+                                <label for="vip3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="vip1" id="vip3" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">铂金会员</span>
+                                </label>
+                                <label for="vip4" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="vip1" id="vip4" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">钻石会员</span>
+                                </label>
+                                <label for="vip5" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="vip1" id="vip5" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">非会员</span>
+                                </label>
+                            </div>
+                        </div>
+                        同一用户最多可提交信息<input type="text" value="0" placeholder="无数" class="m_width m-height center" style="margin: 0 8px;">次<span class="tishi">*填写0，或不填即默认不限制次数</span>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">提交成功后提醒:</span>
+                <div class="a_list_r">
+                    <!-- 此处放文本域 -->
+                    <textarea placeholder="选填，在【表单提醒】处可引用本处“话术”，用户提交表单后进行公众号/短信提醒" style="height: 60px;padding: 10px;width: 620px;resize: none"></textarea>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">提交成功:</span>
+                <div class="a_list_r chose_item">
+                    <label for="norml" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked name="提交成功" id="norml">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">展示默认页面</span>
+                    </label>
+                    <label for="code" class="radio mgR-0">
+                        <div class="chose">
+                            <input type="radio" name="提交成功" id="code">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">展示自定义内容</span>
+                    </label>
+                    <span class="tishi">*用户提交成功后的页面，可自定义内容继续将用户引流至公众号、个人号等</span>
+                </div>
+            </div>
+            <div class="a_list code-cont" style="display: none">
+                <span class="a_list_l"></span>
+                <div class="a_list_r"><textarea style="width: 620px;height: 200px;">富文本编辑器</textarea></div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">页面链接:</span>
+            <div class="a_list_r">http://lkm.com<span class="copy-btn">复制</span></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<!--    -->
+<img src="http://cshtml.lkmsxy.com/csimg/ztType1.png" alt="" id="concat_img" style="height: 580px;display: none;">
+
+<!---->
+<!--    -->
+<div class="activity_set activity_set2 w-120" id="icon-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">图标样式:</div>
+            <div class="a_list_r">
+                <!--  图标选择即选中，弹框消失  -->
+                <div>
+                    <ul class="icon_chose">
+                        <li class="on"><img src="images/buy-vip1.png" alt=""></li>
+                        <li><img src="images/buy-vip2.png" alt=""></li>
+                        <li><img src="images/buy-vip3.png" alt=""></li>
+                        <li><img src="images/buy-vip4.png" alt=""></li>
+                        <li><img src="images/buy-vip5.png" alt=""></li>
+                        <li><img src="images/buy-vip6.png" alt=""></li>
+                        <li><img src="images/buy-vip7.png" alt=""></li>
+                        <li><img src="images/buy-vip8.png" alt=""></li>
+                        <li><img src="images/buy-vip9.png" alt=""></li>
+                        <li><img src="images/buy-vip10.png" alt=""></li>
+                        <li><img src="images/buy-vip11.png" alt=""></li>
+                        <li><img src="images/buy-vip12.png" alt=""></li>
+                        <li><img src="images/buy-vip13.png" alt=""></li>
+                        <li><img src="images/buy-vip14.png" alt=""></li>
+                        <li><img src="images/buy-vip15.png" alt=""></li>
+                        <li><img src="images/buy-vip16.png" alt=""></li>
+                        <li><img src="images/buy-vip17.png" alt=""></li>
+                        <li><img src="images/buy-vip18.png" alt=""></li>
+                        <li><img src="images/buy-vip19.png" alt=""></li>
+                        <li><img src="images/buy-vip20.png" alt=""></li>
+                        <li><img src="images/buy-vip21.png" alt=""></li>
+                        <li><img src="images/buy-vip22.png" alt=""></li>
+                    </ul>
+                    <p class="tishi" style="margin:10px 0 0 0;">*点击即选择此图标</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="activity_set activity_set2 w-120" id="checked-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">添加选项:</div>
+            <div class="a_list_r">
+                <div class="normal-table">
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 50px">序号</th>
+                            <th style="width: 200px">选项名称</th>
+                            <th style="width: 80px">优先级</th>
+                            <th style="width: 100px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" value=""></td>
+                            <td><input type="number" value="" placeholder="数字越大，排序越前"></td>
+                            <td>
+                                <button class="del">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: left"></td>
+                            <td><button>添加</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#submit-togg').click(function () {$('.submitMsg').toggle()});
+    $('#pay-togg').click(function () {$('.payMsg').toggle()});
+    $('#norml').click(function () {$('.code-cont').hide()});
+    $('#code').click(function () {$('.code-cont').show()});
+    $('#tjxz-togg').click(function () {$('.tjxz_cont').toggle()});
+
+
+    layer.photos({
+        photos: '.layer-photos-demo2'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+    layer.photos({
+        photos: '.layer-photos-demo3'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定删除该项设置？',{
+                skin: 'failureskin ',    //类名
+                icon:2,
+                title:'提示',
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+
+
+    $('.icon_chose li').click(function () {
+        $(this).addClass('on').siblings().removeClass('on');
+    });
+
+
+    /* 查看示例 */
+    $('#chutiyan .type_btn1').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img")
+        });
+    });
+
+
+    $('#chutiyan .chose_icon').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '选择图标',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#icon-sure")
+        });
+    });
+    $('#chutiyan .edit_checked').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '添加/编辑选项',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['60%', '60%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#checked-sure").html()
+        });
+    });
+</script>
+
+</body>
+</html>

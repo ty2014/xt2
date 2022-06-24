@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>编辑卡券</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan" style="padding: 0">
+
+
+
+
+<div class="activity_set activity_set2">
+    <div class="b-line">
+        <!--分店/联盟福利才需填写;本店默认展示，不可更改-->
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">商家名称：</span>
+                <div class="a_list_r">活动主办方</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">咨询电话：</span>
+                <div class="a_list_r">13350021234</div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">商家地址：</span>
+            <div class="a_list_r">活动主办地址</div>
+        </div>
+        <!--分店/联盟福利才需填写;本店默认展示，不可更改-->
+        <div class="a_list">
+            <span class="a_list_l">卡券名称：</span>
+            <div class="a_list_r">装修款抵用金</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">卡券主图：</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮  -->
+                    <div class="file-btn" id="upload_duixiang"></div>
+                </div>
+                <p class="tishi">*建议尺寸:750px*297px，大小不超过200kb</p>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">卡券价值：</span>
+                <div class="a_list_r">￥2000</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">每份张数：</span>
+                <div class="a_list_r">1</div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">使用规则：</span>
+            <div class="a_list_r">
+                <textarea name="" id="" style="width: 100%;height: 200px;max-width: 720px;padding: 10px;resize: none" readonly>预定装修抵用，1户限用一张，不可转赠</textarea>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">有效期至：</span>
+            <!--  有效期至：时分  -->
+            <div class="a_list_r checked_chose">2019-10-20 10:00:00</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">核销人员：</span>
+            <div class="a_list_r">
+                <div class="hxr">
+                    <ul>
+                        <li>小土豆</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">排序码：</span>
+            <div class="a_list_r">01</div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+
+<!-- 时间 -->
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+        });
+    });
+
+
+    $('#chutiyan .add-hxr').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加负责人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['100%', '100%'],
+            content: '../添加负责人.html' //iframe的url
+        });
+    });
+
+    $('#chutiyan .hxr li span').on('click', function(){
+        //iframe层
+        layer.confirm('是否确定删除此负责人？', {
+            btn: ['取消','确定'] //按钮
+        }, function(index, layero){
+            layer.close(index);
+        }, function(){
+            layer.msg('删除成功',{time: 1000});
+        });
+    });
+
+</script>
+</body>
+</html>

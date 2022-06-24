@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收益数据</title>
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+
+<div class="content">
+    <div class="page-title">收益数据</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+            <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">待播</a></li>
+                    <li><a href="#">在播</a></li>
+                    <li><a href="#">已播</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="150px">所属话题</th>
+                        <th width="100px">直播ID</th>
+                        <th width="80px">直播海报</th>
+                        <th width="150px">直播主题</th>
+                        <th width="80px">主播头像</th>
+                        <th width="150pz">主播昵称</th>
+                        <th width="150pz">实际开播</th>
+                        <th width="150pz">实际直播时长</th>
+                        <th width="100pz">总访客</th>
+                        <th width="120pz">进直播付费(人)</th>
+                        <th width="120pz">直播收益(￥)</th>
+                        <th width="120pz">商品订单(单)</th>
+                        <th width="120pz">商品收入(￥)</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="150px" class="left"><a href="">职场形象包装</a></td>
+                        <td width="100px">100</td>
+                        <td width="80px" class="squ-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                        <td width="150px" class="left"><a href="">职场形象包装</a></td>
+                        <td width="80px" class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                        <td width="150px" class="left"><a>小土豆</a></td>
+                        <td width="150px" class="date">-</td>
+                        <td width="150px" class="date">-</td>
+                        <td width="100px"><a class="">1000</a></td>
+                        <td width="120px"><a class="">10</a></td>
+                        <td width="120px"><a class="">100</a></td>
+                        <td width="120px"><a class="">0</a></td>
+                        <td width="120px"><a class="">0</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td>105</td>
+                        <td class="squ-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                        <td class="left"><a href="">怎样打造鱼塘？</a></td>
+                        <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                        <td class="left"><a href="">郑传华</a></td>
+                        <td class="date notExpired"><div>2020-05-20 10:00:00</div></td>
+                        <td class="date"><div>-</div></td>
+                        <td><a class="">2000</a></td>
+                        <td><a class="">1800</a></td>
+                        <td><a class="">5988.28</a></td>
+                        <td><a class="">200</a></td>
+                        <td><a class="">600000.99</a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="squ-pic"></td>
+                        <td class="left"></td>
+                        <td class="cover-pic"></td>
+                        <td class="left"></td>
+                        <td class="date"><div>2020-05-20 10:00:00</div></td>
+                        <td class="date"><div>02:10:00</div></td>
+                        <td><a class=""></a></td>
+                        <td><a class=""></a></td>
+                        <td><a class=""></a></td>
+                        <td><a class=""></a></td>
+                        <td><a class=""></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box " id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">直播ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">直播主题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">主播昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">实际开播:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../../../js/jquery.min.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/myjs.js"></script>
+<script>
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+</script>
+</body>
+</html>

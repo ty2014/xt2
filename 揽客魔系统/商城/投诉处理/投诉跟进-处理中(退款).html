@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>投诉跟进</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan" style="min-width: auto;background: #fff;padding: 0">
+
+<div class="top-p-detail">
+    <div class="detail-list">
+        <div>
+            <div>投诉编号：<span>123245678910</span></div>
+        </div>
+        <div>
+            <div class="de-l">
+                <div>投诉类型：<span>退款投诉</span></div>
+                <div>投诉用户：<a class="user-msg">小土豆</a></div>
+            </div>
+        </div>
+        <div>
+            <div class="de-l">
+                <div>退款编号：<a>123245678910</a></div>
+                <div>订单编号：<a>123245678910</a></div>
+            </div>
+        </div>
+        <div>
+            <div class="de-l">
+                <div>联系电话：<span>13350024578</span></div>
+                <div>投诉时间：<span>2019-10-15 10:00:00</span></div>
+            </div>
+        </div>
+        <div>
+            <div>投诉原因：<span>退款金额有异样</span></div>
+        </div>
+        <div class="ju-start flex-start">
+            <span>详情描述：</span>
+            <div>
+                <p>我已经下单很久了，联系客服不回话，货也不发！！！</p>
+                <ul class="detail-pics">
+                    <li><img src="http://t-chs.com/tuhsJDAzJDI0L1RCMXFjTjBSViQ2WEZYViQ1JDM.jpg" alt=""></li>
+                    <li><img src="http://t-chs.com/tuhsJDAzJDI0L1RCMXFjTjBSViQ2WEZYViQ1JDM.jpg" alt=""></li>
+                    <li><img src="http://t-chs.com/tuhsJDAzJDI0L1RCMXFjTjBSViQ2WEZYViQ1JDM.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="detail-list detail-tips">
+        <div>跟进记录</div>
+        <div class="ju-start flex-start"><span>1，2019-10-15 10:00:00，</span>联系商家，客服、负责人电话均未接通</div>
+        <div class="ju-start flex-start"><span>2，2019-10-19 10:00:00，</span>回访了客户，客户表示接受退款处理</div>
+    </div>
+</div>
+
+
+<div class="activity_set ">
+    <div class="a_list">
+        <span class="a_list_l">投诉状态：</span>
+        <div class="a_list_r checked_chose">
+            <label for="ps1" class="radio active">
+                <div class="chose">
+                    <input type="radio" checked name="ps" id="ps1" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">处理中</span>
+            </label>
+            <label for="ps2" class="radio">
+                <div class="chose">
+                    <input type="radio" name="ps" id="ps2" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">已完成</span>
+            </label>
+        </div>
+    </div>
+    <div class="box-content">
+        <div class="box">
+            <div class="a_list flex-start">
+                <span class="a_list_l">跟进记录：</span>
+                <div class="a_list_r"><textarea style="width:720px;height: 150px;padding: 10px;" placeholder="该记录仅后台可见"></textarea></div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="a_list flex-start">
+                <span class="a_list_l">反馈说明：</span>
+                <div class="a_list_r"><textarea style="width:720px;height: 150px;padding: 10px;" placeholder="向用户反馈说明投诉结果"></textarea></div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list"><span class="btn btn-sure">确定</span><span class="btn btn-cancel">取消</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script>
+    $(".activity_set label").each(function(index){
+        $(this).click(function(){
+            $(this).parent().parent().siblings('.box-content').children().eq($(this).index()).show().siblings().hide();
+        });
+        if($(this).hasClass('active')){
+            $(this).parent().parent().siblings('.box-content').children().eq($(this).index()).show().siblings().hide();
+        }
+    });
+
+    $('#chutiyan .user-msg').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '用户信息',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['850px', '400px'],
+            content: '../用户信息.html' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

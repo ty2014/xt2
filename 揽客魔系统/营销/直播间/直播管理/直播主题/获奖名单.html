@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>获奖名单</title>
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;height: auto">
+
+<!--
+
+    注意：
+    1、奖励名称为记录字段，中途可能更改奖励
+    2、随机码控制在10个字符左右
+    3、最新时间排序在上
+
+-->
+
+
+<div class="content2" style="padding-bottom: 0">
+    <div class="table-msgList">
+        <div><p>分享获奖</p><span>100</span></div>
+        <div><p>被邀获奖</p><span>200</span></div>
+        <div><p>订阅获奖</p><span>1000</span></div>
+        <div><p>粉丝团获奖</p><span>100</span></div>
+    </div>
+    <div class="content">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips"><i class="download-tips"></i>导出</span>
+                <div class="top_tit2">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">未领奖</a></li>
+                        <li><a href="#">已领奖</a></li>
+                    </ul>
+                </div>
+                <div class="top_tit2">
+                    <a href="#"><span>主题：职场行为</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="search-input"><i class="fa fa-search"></i><input type="text"></li>
+                        <li class="active"><a href="#">主题：职场行为</a></li>
+                        <li><a href="#">其它</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab_type_2">
+                <span class="tab-tips add_btn"><i class="plus-tips"></i>批量核销</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">
+                                <label for="chose0" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="chose" id="chose0">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </th>
+                            <th width="200px" class="left">奖励名称</th>
+                            <th width="100px">获奖随机码</th>
+                            <th width="150px">获奖时间</th>
+                            <th width="100px">获奖人ID</th>
+                            <th width="100px">获奖人头像</th>
+                            <th width="150px" class="left">获取人昵称</th>
+                            <th width="100px">会员等级</th>
+                            <th width="100px">是否领奖</th>
+                            <th width="100px">核销操作人</th>
+                            <th width="150px">核销时间</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px">
+                                <label for="chose1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="chose" id="chose1">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                            <td width="200px" class="left"><a class="jlName">商战铁律电子书2</a></td>
+                            <td width="100px">L7O058L7</td>
+                            <td width="150px" class="date"><div>2019-10-20 10:00:00</div></td>
+                            <td width="100px">578946</td>
+                            <td width="100px" class="cover-pic"><img src="../../../../images/head.jpg" alt=""/></td>
+                            <td width="150px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px">VIP</td>
+                            <td width="100px">否</td>
+                            <td width="100px">-</td>
+                            <td width="150px" class="date">-</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>已核销</td>
+                            <td class="left"><a class="jlName">商战铁律电子书1</a></td>
+                            <td>M85958L7</td>
+                            <td class="date"><div>2019-10-20 10:00:00</div></td>
+                            <td>578946</td>
+                            <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""/></td>
+                            <td class="left"><a href="">小豆丁小豆丁小豆丁</a></td>
+                            <td>-</td>
+                            <td>是</td>
+                            <td>张爱红</td>
+                            <td class="date"><div>2019-10-20 10:00:00</div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">奖励名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">获奖随机码:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">获奖人ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">获奖人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">获奖名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">是否领奖:</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员等级:</span>
+            <div class="account-r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">VIP</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip3">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">合伙人</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip4">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">联创人</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">获奖时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" lay-key="1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" lay-key="2" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div id="jlName_cont" style="display: none">
+    <img src="http://cshtml.lkmsxy.com/1602318133.jpg" alt="" style="width: 320px">
+</div>
+
+
+<script src="../../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .jlName').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'],
+            skin: 'account-box',
+            content: $("#jlName_cont")
+        });
+    });
+
+</script>
+</body>
+</html>

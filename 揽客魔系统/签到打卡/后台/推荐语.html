@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>推荐语</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan">
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>推荐语</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <div class="top_tit">
+                <!--
+                ①全部分类时，按分类、循环图数排序展示
+                ②某一分类时，按添加顺序展示
+
+                -->
+                <a href="#"><i class="filter-icon"></i><span>全部分类</span><em class="fa fa-caret-down"></em></a>
+                <ul>
+                    <li><a href="#">全部分类</a></li>
+                    <li><a href="#">商战铁律</a></li>
+                    <li><a href="#">商业哲学</a></li>
+                    <li><a href="#">欲望激发</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_l rh"><span class="add_btn"><i class="fa fa-plus"></i>添加</span></div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="100px">分类</th>
+                    <th width="300px">推荐语</th>
+                    <th width="100px">创建时间</th>
+                    <th width="100px">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>欲望激发</td>
+                    <td>无数商业精彩案例正在上演，只是暂时和你没有任何关系。不管什么原因你来或者不来，反正你的对手们早晚…</td>
+                    <td class="date"><div>2019-12-01 15:41:00</div></td>
+                    <td class="cz_btn">
+                        <button type="button">删除</button>
+                        <button type="button">编辑</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>商业思维</td>
+                    <td>市场调研才是企业生存和发展的最核心环节，只有把市场彻底分析透了，才能为自己的产品找到更好的出路。</td>
+                    <td class="date"><div>2019-12-01 15:41:00</div></td>
+                    <td class="cz_btn">
+                        <button type="button">删除</button>
+                        <button type="button">编辑</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            skin: 'layui-layer-rim', //加上边框
+            area: ['420px', '240px'], //宽高
+            content: '搜素字段：推荐语'
+        });
+    });
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '推荐语管理',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['800px', '450px'],
+            content: '推荐语管理.html' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

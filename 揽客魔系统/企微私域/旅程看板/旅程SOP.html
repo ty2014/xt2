@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅程SOP</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+</head>
+<body id="chutiyan">
+
+<div class="contentAuto">
+    <div class="page-title">旅程SOP
+        <div class="notisTip">
+            <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="fa fa-file-word-o"></i>功能说明</a>
+            <a href="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" target="_blank"><i class="fa fa-file-movie-o"></i>视频教程</a>
+        </div>
+    </div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+        </div>
+    </div>
+    <div class="pz_content">
+        <div class="pz_item">
+            <div class="pz_title">旅程名称1
+                <div class="btns">
+                    <span class="edit"><i class="layui-icon layui-icon-edit"></i></span>
+                </div>
+            </div>
+            <div class="step_tit2">
+                <div class="item">
+                    <span>客户认识阶段</span>
+                    <p>sop：<a >联创人文案辅导群</a><a >、联创人文案辅导群</a></p>
+                </div>
+                <div class="item">
+                    <span>客户了解阶段</span>
+                    <p>sop：暂无</p>
+                </div>
+                <div class="item">
+                    <span>客户了解阶段</span>
+                    <p>sop：暂无</p>
+                </div>
+                <div class="item">
+                    <span>客户购买阶段</span>
+                    <p>sop：暂无</p>
+                </div>
+                <div class="item">
+                    <span>客户复购阶段</span>
+                    <p>sop：暂无</p>
+                </div>
+            </div>
+        </div>
+        <div class="pz_item">
+            <div class="pz_title">旅程名称2
+                <div class="btns">
+                    <span class="edit"><i class="layui-icon layui-icon-edit"></i></span>
+                </div>
+            </div>
+            <div class="step_tit2">
+                <div class="item">
+                    <span>进程1</span>
+                    <p>sop：<a >联创人文案辅导群</a></p>
+                </div>
+                <div class="item">
+                    <span>进程2</span>
+                    <p>sop：暂无</p>
+                </div>
+                <div class="item">
+                    <span>进程3</span>
+                    <p>sop：暂无</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">旅程名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('.step_tit2 .item,.pz_title .edit').on('click', function(){
+        window.location.href = '选择SOP.html'
+    });
+
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('删除该条数据？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交易须知</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">交易须知</div>
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 15px;">内容区域:</span>
+            <div class="a_list_r" style="align-items: flex-start">
+                <textarea style="width: 60%;height: 400px;">此处放富文本编辑器</textarea>
+                <img src="http://cshtml.lkmsxy.com/csimg/yskImg2.png" alt="" style="height: 400px;margin-left: 20px;">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script>
+
+    $('.xz-cont,.xz-cont2').hide();
+    $(function () {
+        $('#u-togg').click(function () {
+            if($('#u-togg').is(':checked')){
+                $('.xz-cont').show();
+            }else{
+                $('.xz-cont').hide();
+            }
+        });
+        $('#togg').click(function () {$('.xz-cont2').toggle();});
+    });
+
+</script>
+
+</body>
+</html>

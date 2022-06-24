@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新访客数</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 省市联动 -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../js/Popt.js"></script>
+    <script src="../js/cityJson.js"></script>
+    <script src="../js/citySet.js"></script>
+</head>
+<body id="chutiyan">
+<!--
+     <pre>
+         例：所选时间段为 2019/06/01~2019/07/28
+             按时  23：00-23：59     【按每小时统计】
+                   22：00-22：59
+             按日  2019/07/28      【按每日统计】
+                   2019/07/27
+             按周  2019/07/26-2019/07/28   【按周一~周日统计】
+             按月  2019/07/01~2019/07/28   【按每月统计】
+     </pre>
+
+     地域：选择不同地区后下面的数据也发生变化
+     点击全部弹框消失，地域提示框内容为‘全部’
+     直辖市和特别行政区只需要点一下
+
+     搜索字段：首次访问时间、用户昵称、用户姓名、访问入口、分享人昵称、第一篇文章浏览
+     排序字段：首次访问时间、第一篇浏览时长
+ -->
+<section class="head-slide">
+    <div class="head-slide-item">
+        <span>时间：</span>
+        <div class="slide-span"><span class="active">今天</span><span>昨天</span><span>最近7天</span><span>最近30天</span></div>
+        <div class="slide-input"><input type="text" class="demo-input" id="test1"></div>
+    </div>
+</section>
+<section>
+    <ul class="num-view">
+        <li>
+            <div>
+                <p>今日新访客</p>
+                <span>10,358</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>昨日新访客</p>
+                <span>1,358</span>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="charts">
+    <div class="nav-sibling">
+        <ul class="nav nav-pills nav-radio" role="tablist">
+            <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">新访客</a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active " id="tab1">
+            <div class="charts-list">
+                <div id="main1" style="width: 100%;height:300%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="table-content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span class="sort"><i class="fa fa-sort"></i>排序</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+    </div>
+    <!-- 最多展示30条数据 -->
+    <form action="" class="table_cont">
+        <table border="0" class="table_body">
+            <thead>
+            <tr>
+                <th width="50px">序号</th>
+                <th width="120px">首次访问时间<i class="sort-icon"></i></th>
+                <th width="80px">头像</th>
+                <th width="100px">昵称</th>
+                <th width="80px">姓名</th>
+                <th width="80px">访问入口</th>
+                <th width="100px">分享人昵称</th>
+                <th width="200px">第一篇文章浏览</th>
+                <th width="100px">第一篇浏览时长<i class="sort-icon"></i></th>
+                <th width="100px">访问明细</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td class="date"><div>2019-09-13 14:00:35</div></td>
+                <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                <td><a href="跳转到基础信息页面">安兔兔</a></td>
+                <td>张三</td>
+                <td>朋友圈</td>
+                <td><a href="跳转到基础信息页面">李四</a></td>
+                <td>5秒信任系统：瞬间成为行业专家，顾客首次接触，信任度就</td>
+                <td>00:02:16</td>
+                <td class="cz_btn">
+                    <a href="访问次数.html"><span class="look_tips" data-toggle="tooltip" data-placement="top" title="" data-original-title="查看明细"></span></a>
+                </td> <!-- 跳转到访问明细子级页面，展示该用户所有的访问明细；时间为：首次访问时间 到 当前时间 -->
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- iframe弹框 -->
+<script src="../../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../../js/echarts.js"></script>
+<script src="../../../js/index.js"></script>
+<script src="../../../js/plugins/laydate/laydate.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+
+<!-- 时间 -->
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        value: '2019-06-30 至 2019-08-15',
+        range: '至'
+    });
+</script>
+<!-- 图表 -->
+<script>
+    // 时间格式化
+    function addDate(date, days) {
+        if(days == undefined || days == '') {
+                days = 1;
+            }
+        var date = new Date(date);
+        date.setDate(date.getDate() + days);
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        var mm = "'" + month + "'";
+        var dd = "'" + day + "'";
+
+        //单位数前面加0
+       if(mm.length == 3) {
+              month = "0" + month;
+            }
+       if(dd.length == 3) {
+                day = "0" + day;
+       }
+       var time = date.getFullYear() + "/" + month + "/" + day;
+       return time;
+    }
+
+    var charts=[];
+    var myChart = echarts.init(document.getElementById('main1'));
+
+    var xData = ["2019/08/12","2019/08/13","2019/08/14","2019/08/15","2019/08/16","2019/08/17","2019/08/18","2019/08/19","2019/08/20","2019/08/21","2019/08/22","2019/08/23","2019/08/24","2019/08/25","2019/08/26","2019/08/27","2019/08/28","2019/08/29","2019/08/30","2019/08/31","2019/09/01","2019/09/02","2019/09/03","2019/09/04","2019/09/05","2019/09/06","2019/09/07","2019/09/08","2019/09/09","2019/09/10","2019/09/11","2019/09/12","2019/09/13"];
+    var yData1 = [43,27,30,68,47,78,32,32,79,34,19,18,20,32,12,28,19,14,19,19,20,3,19,28,22,18,20,32,12,28,19,32,32],
+    option = {
+        // 提示框
+        tooltip: {
+            trigger: 'axis',
+            formatter:function (params) {
+                /*function timeNumer(t) {
+                    var t1=t,
+                        t2= addDate(t,1),
+                        t3=t1+'-'+t2;
+                    return t3;
+                }*/
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px"><span>'+ params[0].name +'</div>';
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 158px;display: flex;justify-content: space-between;padding: 7px 0px;margin:3px 0;transform: scale(.85);font-size: 14px"><div><span style="margin-right: 2px">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>' + '<span>'+params[i].value +'</span></div>';
+                }
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        /* 图例 */
+        legend: {
+            show:false
+        },
+        //  直角坐标系
+        grid: {
+            right: '5%',
+            bottom: '10%',
+            left: '2%',
+            top: '44px',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xData ,
+            nameTextStyle: {
+                color: '#999',
+            },
+            axisLine: {
+                show: false,
+                lineStyle: {
+                    color: 'transpartant',
+                    backgroundColor: "#fff",
+                }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                interval: 3,
+                textStyle: {
+                    color: "#999",
+                    fontSize: 12,
+                    backgroundColor: "#fff",
+                }
+            },
+            offset:10,
+            boundaryGap:false   // 是否从 0 刻度开始
+        }],
+        yAxis: [{
+            type: 'value',
+            nameTextStyle: {
+                color: '#999'
+            },
+            nameGap:20,
+            position: 'left',
+            axisLine: {
+                show:false,
+                lineStyle: {
+                    color: '#999'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: "#f0f2f3",
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                color: '#999',
+                fontSize: 12,
+            },
+            offset:10
+        }],
+        // 系列列表
+        series: [
+            {
+                name:'新访客',
+                type: 'line',
+                yAxisIndex: 0,
+                symbolSize: 1,
+                itemStyle: {
+                    normal: {
+                        color: '#3699ff',
+                        borderWidth: 6,
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(54,210,255,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(94,211,255,0.27059)'
+                            }]),
+                        }
+                    }
+                },
+                lineStyle:{
+                    width:1
+                },
+                data: yData1
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+
+    charts.push(myChart);
+
+    setTimeout(function (){
+        window.onresize = function () {
+            myChart.resize();
+        }
+    },200);
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+        for(var i = 0; i < charts.length; i++) {
+            charts[i].resize();
+        }
+    });
+
+</script>
+<!-- 自定义 -->
+
+</body>
+</html>

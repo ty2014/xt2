@@ -1,0 +1,1202 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>客流猫</title>
+<link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+<link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet"/>
+<link rel="stylesheet" href="js/layui/css/layui.css" media="all">
+<link rel="stylesheet" href="js/layui/css/layer.css">
+<link href="css/animate.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"/>
+<link href="css/index.css?v=1.0.0" rel="stylesheet" />
+</head>
+<body class="fixed-sidebar full-height-layout">
+
+<!--顶部导航-->
+<div class="index_nav_top">
+    <nav class="navbar navbar-static-top" role="navigation" style="display: flex;justify-content: space-between;align-items: center;">
+        <div class="user_step">
+            <span>当前位置:</span>会员<em>&gt;</em>注册用户<em>&gt;</em>全部注册用户
+        </div>
+        <div class="navbar-header navbar-right">
+            <a href="#" class="minimalize-styl-2 docx" title="帮助文档">
+                <i class="fa fa-question-circle"></i>
+                帮助文档
+            </a>
+            <a class="minimalize-styl-2 user" href="#" title="个人信息">
+                <img src="images/wx.png" alt=""><span>cdklsh(成都快乐生活)</span><i class="fa fa-caret-down"></i>
+                <ul class="user_msg">
+                    <li>个人设置</li>
+                    <li>修改密码</li>
+                    <li onclick="javaScript:window.location.href = 'index2.html'">切换新版<img src="images/new.png" alt="" class="icon-new"></li>
+                    <li onclick="javaScript:window.location.href = 'login3.html'">退出登录</li>
+                </ul>
+            </a>
+        </div>
+    </nav>
+    <!--<div class="top-rotate">笔记/作业/结果</div>-->
+</div>
+
+<!--左侧导航-->
+<div class="index_nav_left">
+    <div class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <div class="dropdown profile-element">
+                <a  href="index.html">
+                    <span class="clear">
+                        <img src="images/LOGO2.png" alt=""/>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav" id="side-menu">
+                <!-- 概况 -->
+                <li>
+                    <a class="J_menuItem" href="概况/index_v1.html"><img src="images/icon1.png" alt="" class="icon">概况</a>
+                </li>
+                <!--企微私域-->
+                <li>
+                    <a><img src="images/icon9.png" alt="" class="icon">企微私域<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>企业微信<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a class="J_menuItem" href="企微私域/企业微信/企微好友.html">企微好友</a></li>
+                                <li><a class="J_menuItem" href="企微私域/企业微信/企微群.html">企微群</a></li>
+                                <li><a class="J_menuItem" href="企微私域/企业微信/企微标签.html">企微标签</a></li>
+                                <li><a class="J_menuItem" href="企微私域/企业微信/删除提醒.html">删除提醒</a></li>
+                                <li><a class="J_menuItem" href="企微私域/企业微信/企微成员.html">企微成员</a></li>
+                                <li><a class="J_menuItem" href="企微私域/企业微信/自定义信息.html">自定义信息</a></li>
+                                <li><a class="J_menuItem" href="企微私域/企微朋友圈/企微朋友圈.html">企微朋友圈</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>全域引流<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="企微私域/全域引流/渠道活码.html" class="J_menuItem">渠道活码</a></li>
+                                <li><a href="企微私域/全域引流/自动拉群.html" class="J_menuItem">自动拉群</a></li>
+                                <li><a href="企微私域/全域引流/引流链接.html" class="J_menuItem">引流链接</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>私域获客<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="企微私域/私域获客/好友裂变获客.html" class="J_menuItem">好友裂变获客</a></li>
+                                <li><a href="企微私域/私域获客/任务裂变获客.html" class="J_menuItem">任务裂变获客</a></li>
+                                <li><a href="企微私域/私域获客/群任务获客.html" class="J_menuItem">群任务获客</a></li>
+                                <li><a href="企微私域/私域获客/一客一码.html" class="J_menuItem">一客一码</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>互动留存<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="企微私域/互动留存/好友欢迎语.html" class="J_menuItem">好友欢迎语</a></li>
+                                <li><a href="企微私域/互动留存/自动打标签.html" class="J_menuItem">自动打标签</a></li>
+                                <li><a href="企微私域/互动留存/快捷话术.html" class="J_menuItem">快捷话术</a></li>
+                                <li><a href="企微私域/互动留存/客户群发.html" class="J_menuItem">客户群发</a></li>
+                                <li><a href="企微私域/互动留存/客户群群发.html" class="J_menuItem">外部群群发</a></li>
+                                <li><a href="企微私域/互动留存/企业群发.html" class="J_menuItem">企业群发</a></li>
+                                <li><a href="企微私域/互动留存/客户sop.html" class="J_menuItem">客户sop</a></li>
+                                <li><a href="企微私域/互动留存/企微群sop.html" class="J_menuItem">企微群sop</a></li>
+                                <li><a href="企微私域/互动留存/跟进记录.html" class="J_menuItem">跟进记录</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>聊天记录<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="企微私域/聊天记录/单聊记录.html" class="J_menuItem">单聊记录</a></li>
+                                <li><a href="企微私域/聊天记录/群聊记录.html" class="J_menuItem">群聊记录</a></li>
+                                <li><a href="企微私域/聊天记录/聊天超时记录.html" class="J_menuItem">聊天超时记录</a></li>
+                                <li><a href="企微私域/聊天记录/单聊敏感词记录.html" class="J_menuItem">单聊敏感词记录</a></li>
+                                <li><a href="企微私域/聊天记录/群聊敏感词记录.html" class="J_menuItem">群聊敏感词记录</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>风控管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="企微私域/风控管理/会话存档配置.html" class="J_menuItem">会话存档配置</a></li>
+                                <li><a href="企微私域/风控管理/敏感词设置.html" class="J_menuItem">敏感词设置</a></li>
+                                <li><a href="企微私域/风控管理/聊天超时设置.html" class="J_menuItem">聊天超时设置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>旅程看板<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="企微私域/旅程看板/旅程看板.html" class="J_menuItem">旅程看板</a></li>
+                                <li><a href="企微私域/旅程看板/旅程SOP.html" class="J_menuItem">旅程SOP</a></li>
+                                <li><a href="企微私域/旅程看板/旅程配置.html" class="J_menuItem">旅程配置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>企微配置<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="企微私域/企微配置/版本信息.html" class="J_menuItem">版本信息</a></li>
+                                <li><a href="企微私域/企微配置/短信配置.html" class="J_menuItem">短信配置</a></li>
+                                <li><a href="企微私域/企微配置/绑定企业微信.html" class="J_menuItem">绑定企业微信</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--商城-->
+                <li>
+                    <a><img src="images/icon9.png" alt="" class="icon">商城<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="商城/view.html"><i class="fa fa-circle-thin"></i>店铺概况</a></li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>商品管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a class="J_menuItem" href="商城/商品管理/添加商品.html">添加商品</a></li>
+                                <li><a class="J_menuItem" href="商城/商品管理/全部商品.html">全部商品</a></li>
+                                <li><a class="J_menuItem" href="商城/商品管理/出售中.html">出售中</a></li>
+                                <li><a class="J_menuItem" href="商城/商品管理/仓库中.html">仓库中</a></li>
+                                <li><a class="J_menuItem" href="商城/商品管理/已售罄.html">已售罄</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>类目管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="商城/类目管理/分类管理.html" class="J_menuItem">分类管理</a></li>
+                                <li><a href="商城/类目管理/品牌管理.html" class="J_menuItem">品牌管理</a></li>
+                                <li><a href="商城/类目管理/商品规格.html" class="J_menuItem">商品规格</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>交易管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="商城/交易管理/已卖出商品.html" class="J_menuItem">已卖出商品</a></li>
+                                <li><a href="商城/交易管理/退款售后.html" class="J_menuItem">退款售后</a></li>
+                                <li><a href="商城/交易管理/评价管理.html" class="J_menuItem">评价管理</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>投诉处理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="商城/投诉处理/新投诉.html" class="J_menuItem">新投诉</a></li>
+                                <li><a href="商城/投诉处理/处理中.html" class="J_menuItem">处理中</a></li>
+                                <li><a href="商城/投诉处理/已完成.html" class="J_menuItem">已完成</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>商家管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="商城/商家管理/快速建店.html" class="J_menuItem">快速建店</a></li>
+                                <li><a href="商城/商家管理/商家管理.html" class="J_menuItem">商家管理</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>货款结算<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="商城/货款结账/提现申请.html" class="J_menuItem">提现申请</a></li>
+                                <li><a href="商城/货款结账/统一打款.html" class="J_menuItem">统一打款</a></li>
+                                <li><a href="商城/货款结账/提现设置.html" class="J_menuItem">提现设置</a></li>
+                                <li><a href="商城/货款结账/提现提醒.html" class="J_menuItem">提现提醒</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>营销活动<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="商城/营销活动/满减.html" class="J_menuItem">满减</a></li>
+                                <li><a href="商城/营销活动/积分抵现.html" class="J_menuItem">积分抵现</a></li>
+                                <li><a href="商城/营销活动/购物得积分.html" class="J_menuItem">购物得积分</a></li>
+                                <li><a href="商城/营销活动/主题活动.html" class="J_menuItem">主题活动</a></li>
+                                <li><a href="商城/营销活动/推荐商品.html" class="J_menuItem">推荐商品</a></li>
+                                <li><a href="商城/营销活动/热销商品.html" class="J_menuItem">热销商品</a></li>
+                                <li><a href="商城/营销活动/首页商品.html" class="J_menuItem">特卖商品</a></li>
+                                <li><a href="商城/营销活动/猜你喜欢.html" class="J_menuItem">猜你喜欢</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>商城配置<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level">
+                                <li><a href="商城/商城配置/交易设置.html" class="J_menuItem">交易设置</a></li>
+                                <li>
+                                    <a>统一提醒<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="商城/商城配置/订单关怀/提醒买家.html" class="J_menuItem">提醒买家</a></li>
+                                        <li class=""><a href="商城/商城配置/订单关怀/提醒商家.html" class="J_menuItem">提醒商家</a></li>
+                                        <li class=""><a href="商城/商城配置/订单关怀/分销提醒.html" class="J_menuItem">分销提醒</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="商城/商城配置/首页广告图.html" class="J_menuItem">首页广告图</a></li>
+                                <li><a href="商城/商城配置/首页自定义.html" class="J_menuItem">首页自定义</a></li>
+                                <li><a href="商城/商城配置/首页分类推荐.html" class="J_menuItem">首页分类推荐</a></li>
+                                <li><a href="商城/商城配置/热门搜索词.html" class="J_menuItem">热门搜索词</a></li>
+                                <li><a href="商城/商城配置/积分设置.html" class="J_menuItem">积分设置</a></li>
+                                <li><a href="商城/商城配置/投诉原因设置.html" class="J_menuItem">投诉原因设置</a></li>
+                                <li><a href="商城/商城配置/平台客服运营.html" class="J_menuItem">平台客服/运营</a></li>
+                                <li><a href="商城/商城配置/商城菜单设置.html" class="J_menuItem">商城菜单设置</a></li>
+                            </ul>
+                        </li>
+                        <li >
+                            <a><i class="fa fa-circle-thin"></i>分销管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="商城/分销管理/已分销商品.html" class="J_menuItem">已分销商品</a></li>
+                                <li><a href="商城/分销管理/未分销商品.html" class="J_menuItem">未分销商品</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="商城/订单关怀/订单关怀.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>订单关怀</a></li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>店铺管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="商城/店铺管理/店招设置.html" class="J_menuItem">店招设置</a></li>
+                                <li><a href="商城/店铺管理/店铺介绍.html" class="J_menuItem">店铺介绍</a></li>
+                                <li><a href="商城/店铺管理/自提管理.html" class="J_menuItem">自提管理</a></li>
+                                <li><a href="商城/店铺管理/我的财务.html" class="J_menuItem">我的财务</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--会员-->
+                <li>
+                    <a><img src="images/icon2.png" alt="" class="icon">会员<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>注册用户<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="会员/注册用户/全部注册用户.html" class="J_menuItem">全部注册用户</a></li>
+                                <li><a href="会员/注册用户/全部客户.html" class="J_menuItem">全部客户</a></li>
+                                <li><a href="会员/注册用户/黑名单.html" class="J_menuItem">黑名单</a></li>
+                                <li><a href="会员/注册用户/发送短信.html" class="J_menuItem">发送短信</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>会员管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="会员/会员管理/全部会员.html" class="J_menuItem">全部会员</a></li>
+                                <li><a href="会员/会员管理/等级设置.html" class="J_menuItem">等级设置</a></li>
+                                <li><a href="会员/会员管理/会员等级商品.html" class="J_menuItem">会员等级商品</a></li>
+                                <li><a href="会员/会员管理/会员兑换码.html" class="J_menuItem">会员兑换码</a></li>
+                                <li ><a href="会员/会员管理/渠道优惠价.html" class="J_menuItem">渠道优惠价</a></li>
+                                <li ><a href="会员/会员管理/分佣设置.html" class="J_menuItem">分佣设置</a></li>
+                                <li ><a href="会员/会员管理/分佣方式.html" class="J_menuItem">分佣方式</a></li>
+                                <li ><a href="会员/会员管理/一人分佣开关.html" class="J_menuItem">一人分佣开关</a></li>
+                                <li ><a href="会员/会员管理/积分奖励.html" class="J_menuItem">积分奖励</a></li>
+                                <li ><a href="会员/会员管理/推三返一/推三返一.html" class="J_menuItem">推三返一</a></li>
+                                <li><a href="会员/会员管理/用户协议.html" class="J_menuItem">用户协议</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>实名认证<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="会员/实名认证/待审核认证.html" class="J_menuItem">待审核认证</a></li>
+                                <li><a href="会员/实名认证/已认证用户.html" class="J_menuItem">已认证用户</a></li>
+                                <li><a href="会员/实名认证/审核记录.html" class="J_menuItem">审核记录</a></li>
+                            </ul>
+                        </li>
+                        <li >
+                            <a><i class="fa fa-circle-thin"></i>代理管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="会员/代理管理/代理类型配置.html" class="J_menuItem">代理类型配置</a></li>
+                                <li><a href="会员/代理管理/代理管理.html" class="J_menuItem">代理管理</a></li>
+                                <li><a href="会员/代理管理/下级代理审核.html" class="J_menuItem">下级代理审核</a></li>
+                                <li><a href="会员/代理管理/代理成交情况.html" class="J_menuItem">代理成交情况</a></li>
+                                <li><a href="会员/代理管理/代理佣金结算.html" class="J_menuItem">代理佣金结算</a></li>
+                                <li><a href="会员/代理管理/代理商品管理.html" class="J_menuItem">代理商品管理</a></li>
+                                <li><a href="会员/代理管理/基本设置.html" class="J_menuItem">基本设置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>用户设置<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="会员/用户设置/手动修改上级.html" class="J_menuItem">手动修改上级</a></li>
+                                <li><a href="会员/用户设置/手动修改等级.html" class="J_menuItem">手动修改等级</a></li>
+                            </ul>
+                        </li>
+                        <li style="display: none">
+                            <a><i class="fa fa-circle-thin"></i>单独名额分佣<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="会员/单独名额分佣/名额购买记录.html" class="J_menuItem">名额购买记录</a></li>
+                                <li><a href="会员/单独名额分佣/名额查询.html" class="J_menuItem">名额查询</a></li>
+                                <li><a href="会员/单独名额分佣/名额增减记录.html" class="J_menuItem">名额增减记录</a></li>
+                                <li><a href="会员/单独名额分佣/名额分佣开关.html" class="J_menuItem">名额分佣开关</a></li>
+                                <li><a href="会员/单独名额分佣/名额初始化.html" class="J_menuItem">名额初始化</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>聊天管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="会员/聊天管理/单聊记录.html" class="J_menuItem">单聊记录</a></li>
+                                <li><a href="会员/聊天管理/群聊记录.html" class="J_menuItem">群聊记录</a></li>
+                            </ul>
+                        </li>
+                        <li >
+                            <a href="会员/推广报表开关.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>推广报表开关</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--课堂-->
+                <li>
+                    <a><img src="images/icon3.png" alt="" class="icon">课堂<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>系列课管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level">
+                                <li><a href="课堂/系列课管理/全部系列课.html" class="J_menuItem">全部系列课</a></li>
+                                <li><a href="课堂/系列课管理/价格标签显示.html" class="J_menuItem">价格标签显示</a></li>
+                                <li><a href="课堂/系列课管理/内部课程.html" class="J_menuItem">内部课</a></li>
+                                <li><a href="课堂/系列课管理/系列课提供商.html" class="J_menuItem">系列课提供商</a></li>
+                                <li><a href="课堂/系列课管理/系列课分类.html" class="J_menuItem">系列课分类</a></li>
+                                <li><a href="课堂/系列课管理/课程分类.html" class="J_menuItem">课程分类</a></li>
+                                <li><a href="课堂/系列课管理/系列课标签.html" class="J_menuItem">系列课标签</a></li>
+                                <li><a href="课堂/系列课管理/课程标签.html" class="J_menuItem">课程标签</a></li>
+                                <li>
+                                    <a>系列课广告<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li><a href="课堂/系列课管理/统一广告.html" class="J_menuItem">统一广告</a></li>
+                                        <li><a href="课堂/系列课管理/分类广告.html" class="J_menuItem">系列课分类广告</a></li>
+                                        <li><a href="课堂/系列课管理/系列课标签广告.html" class="J_menuItem">系列课标签广告</a></li>
+                                        <li><a href="课堂/系列课管理/课程标签广告.html" class="J_menuItem">课程标签广告</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>打赏管理<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class="" ><a href="课堂/系列课管理/打赏分佣.html" class="J_menuItem">打赏分佣</a></li>
+                                        <li class=""><a href="课堂/系列课管理/打赏记录.html" class="J_menuItem">打赏记录</a></li>
+                                        <li class=""><a href="课堂/系列课管理/打赏赠品.html" class="J_menuItem">打赏赠品</a></li>
+                                    </ul>
+                                </li>
+                                <li >
+                                    <a>系列课分佣<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="课堂/系列课管理/分佣设置.html" class="J_menuItem">分佣设置</a></li>
+                                        <li class=""><a href="课堂/系列课管理/分佣方式.html" class="J_menuItem">分佣方式</a></li>
+                                        <li class=""><a href="课堂/系列课管理/一人分佣开关.html" class="J_menuItem">一人分佣开关</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="课堂/系列课管理/积分奖励.html" class="J_menuItem">积分奖励</a></li>
+                                <!--<li><a href="课堂/系列课管理/推三返一/推三返一.html" class="J_menuItem">推三返一</a></li>-->
+                                <li >
+                                    <a>渠道优惠<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="课堂/系列课管理/渠道优惠价.html" class="J_menuItem">优惠配置</a></li>
+                                        <li class=""><a href="课堂/系列课管理/渠道优惠价-发券记录.html" class="J_menuItem">发券记录</a></li>
+                                        <li class=""><a href="课堂/系列课管理/渠道优惠价-领券记录.html" class="J_menuItem">领券记录</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="课堂/系列课管理/报名记录.html" class="J_menuItem">报名记录</a></li>
+                                <li><a href="课堂/系列课管理/后台报名管理.html" class="J_menuItem">后台报名管理</a></li>
+                                <li><a href="课堂/系列课管理/黑名单.html" class="J_menuItem">黑名单管理</a></li>
+                                <li><a href="课堂/系列课管理/收藏记录.html" class="J_menuItem">收藏记录</a></li>
+                                <li><a href="课堂/系列课管理/转赠记录.html" class="J_menuItem">转赠记录</a></li>
+                                <li><a href="课堂/系列课管理/课程留言记录.html" class="J_menuItem">学员感悟</a></li>
+                                <li><a href="课堂/系列课管理/学员笔记.html" class="J_menuItem">学员笔记</a></li>
+                                <li><a href="课堂/系列课管理/见证管理.html" class="J_menuItem">见证管理</a></li>
+                                <li><a href="课堂/系列课管理/推广会员.html" class="J_menuItem">推广会员</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>线下活动管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="课堂/课程动态管理/全部课程动态.html" class="J_menuItem">全部线下活动</a></li>
+                                <li><a href="课堂/课程动态管理/课程安排.html" class="J_menuItem">活动安排</a></li>
+                                <li><a href="课堂/课程动态管理/渠道优惠价.html" class="J_menuItem">渠道优惠价</a></li>
+                                <li><a href="课堂/课程动态管理/分佣设置.html" class="J_menuItem">分佣设置</a></li>
+                                <li><a href="课堂/课程动态管理/积分奖励.html" class="J_menuItem">积分奖励</a></li>
+                                <li><a href="课堂/课程动态管理/报名记录.html" class="J_menuItem">报名记录</a></li>
+                                <li><a href="课堂/课程动态管理/预约记录.html" class="J_menuItem">预约记录</a></li>
+                                <li><a href="课堂/课程动态管理/上课人员标签配置.html" class="J_menuItem">上课人员标签配置</a></li>
+                                <li><a href="课堂/课程动态管理/用户协议.html" class="J_menuItem">用户协议</a></li>
+                                <li><a href="课堂/课程动态管理/上级变更.html" class="J_menuItem">上级变更</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>干货文章<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level">
+                                <li><a href="课堂/干货文章/全部干货.html" class="J_menuItem">全部干货</a></li>
+                                <li><a href="课堂/干货文章/干货分类.html" class="J_menuItem">干货分类</a></li>
+                                <li><a href="课堂/干货文章/干货留言.html" class="J_menuItem">干货留言</a></li>
+                                <li><a href="课堂/干货文章/付费干货.html" class="J_menuItem">付费干货</a></li>
+                                <li><a href="课堂/干货文章/分佣设置.html" class="J_menuItem">分佣设置</a></li>
+                                <li><a href="课堂/干货文章/一人分佣开关.html" class="J_menuItem">一人分佣</a></li>
+                                <li><a href="课堂/干货文章/打赏分佣.html" class="J_menuItem">打赏分佣</a></li>
+                                <li><a href="课堂/干货文章/积分奖励.html" class="J_menuItem">积分奖励</a></li>
+                                <li><a href="课堂/干货文章/购买提醒/购买提醒.html" class="J_menuItem">购买提醒</a></li>
+                                <li><a href="课堂/干货文章/付费记录.html" class="J_menuItem">付费记录</a></li>
+                                <li><a href="课堂/干货文章/打赏记录.html" class="J_menuItem">打赏记录</a></li>
+                                <li><a href="课堂/干货文章/打赏赠品.html" class="J_menuItem">打赏赠品</a></li>
+                                <li><a href="课堂/干货文章/标签管理.html" class="J_menuItem">标签管理</a></li>
+                                <li>
+                                    <a>干货专栏<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="课堂/干货文章/干货专栏/干货专栏.html" class="J_menuItem">干货专栏</a></li>
+                                        <li class=""><a href="课堂/干货文章/干货专栏/黑名单管理.html" class="J_menuItem">黑名单管理</a></li>
+                                        <li class=""><a href="课堂/干货文章/干货专栏/专栏订单.html" class="J_menuItem">专栏订单</a></li>
+                                        <li class=""><a href="课堂/干货文章/干货专栏/专栏分佣.html" class="J_menuItem">专栏分佣</a></li>
+                                        <li class=""><a href="课堂/干货文章/干货专栏/积分奖励.html" class="J_menuItem">积分奖励</a></li>
+                                        <li class=""><a href="课堂/干货文章/干货专栏/购买提醒/购买提醒.html" class="J_menuItem">购买提醒</a></li>
+                                        <li class=""><a href="课堂/干货文章/干货专栏/推三返一/推三返一.html" class="J_menuItem">推三返一</a></li>
+                                        <li class=""><a href="课堂/干货文章/干货专栏/海报模板/海报模板.html" class="J_menuItem">海报模板</a></li>
+                                        <li class=""><a href="课堂/干货文章/干货专栏/模块配置.html" class="J_menuItem">模块配置</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="课堂/干货文章/模块配置.html" class="J_menuItem">模块配置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>基础设置<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="课堂/基础设置/首页焦点图.html" class="J_menuItem">首页焦点图</a></li>
+                                <li><a href="课堂/基础设置/首页底部图.html" class="J_menuItem">首页底部图</a></li>
+                                <li><a href="课堂/基础设置/干货列表广告.html" class="J_menuItem">干货列表广告</a></li>
+                                <li><a href="课堂/基础设置/干货文章底部广告.html" class="J_menuItem">干货文章底部广告</a></li>
+                                <li><a href="课堂/基础设置/课程动态广告.html" class="J_menuItem">课程动态广告</a></li>
+                                <li><a href="课堂/基础设置/课程转赠模板.html" class="J_menuItem">课程转赠模板</a></li>
+                                <li><a href="课堂/基础设置/搜索页热搜词.html" class="J_menuItem">搜索页热搜词</a></li>
+                                <li><a href="课堂/基础设置/首页自定义区.html" class="J_menuItem">首页自定义区</a></li>
+                                <li><a href="课堂/基础设置/课堂底部版权广告.html" class="J_menuItem">课堂底部版权广告</a></li>
+                                <li><a href="课堂/基础设置/查看联系方式配置.html" class="J_menuItem">查看联系方式配置</a></li>
+                                <li><a href="课堂/基础设置/报课码配置.html" class="J_menuItem">报课码配置</a></li>
+                                <li><a href="课堂/基础设置/课程菜单设置.html" class="J_menuItem">课程菜单设置</a></li>
+                                <li><a href="课堂/基础设置/系列课海报.html" class="J_menuItem">系列课海报</a></li>
+                                <li><a href="课堂/基础设置/首页配置.html" class="J_menuItem">首页配置</a></li>
+                                <li><a href="课堂/基础设置/个人中心配置.html" class="J_menuItem">个人中心配置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>课程表<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="课堂/课程表/课程列表.html" class="J_menuItem">课程表管理</a></li>
+                                <li><a href="课堂/课程表/课程表配置.html" class="J_menuItem">课程表配置</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--图书-->
+                <li>
+                    <a><img src="images/icon11.png" alt="" class="icon">图书<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>图书管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="图书/图书管理/全部图书.html" class="J_menuItem">全部图书</a></li>
+                                <li><a href="图书/图书管理/待上架图书.html" class="J_menuItem">待上架图书</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>类目管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="图书/类目管理/图书分类.html" class="J_menuItem">图书分类</a></li>
+                                <li><a href="图书/类目管理/标签管理.html" class="J_menuItem">标签管理</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>分销中心<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="图书/分销中心/已分销.html" class="J_menuItem">已分销</a></li>
+                                <li><a href="图书/分销中心/未分销.html" class="J_menuItem">未分销</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>海报模板<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="图书/海报模板/海报模板.html" class="J_menuItem">分享海报</a></li>
+                                <li><a href="图书/转赠模板/转赠模板.html" class="J_menuItem">转赠海报</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>图书数据<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="图书/图书数据/购买记录.html" class="J_menuItem">购买记录</a></li>
+                                <li><a href="图书/图书数据/阅读记录.html" class="J_menuItem">阅读记录</a></li>
+                                <li><a href="图书/图书数据/图书评价.html" class="J_menuItem">图书评价</a></li>
+                                <li><a href="图书/图书数据/收藏记录.html" class="J_menuItem">收藏记录</a></li>
+                                <li><a href="图书/图书数据/点赞记录.html" class="J_menuItem">点赞记录</a></li>
+                                <li><a href="图书/图书数据/分享记录.html" class="J_menuItem">分享记录</a></li>
+                                <li><a href="图书/图书数据/赠送记录.html" class="J_menuItem">赠送记录</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>通知模板<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="图书/通知模板/用户购买(购买人).html" class="J_menuItem">用户购买(购买人)</a></li>
+                                <li><a href="图书/通知模板/用户购买(推荐人).html" class="J_menuItem">用户购买(推荐人)</a></li>
+                                <li><a href="图书/通知模板/用户购买(锁定人).html" class="J_menuItem">用户购买(锁定人)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>图书馆配置<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="图书/图书馆配置/全部图书页.html" class="J_menuItem">全部图书页</a></li>
+                                <li><a href="图书/图书馆配置/轮播图.html" class="J_menuItem">轮播图</a></li>
+                                <li><a href="图书/图书馆配置/分类广告.html" class="J_menuItem">分类广告</a></li>
+                                <li><a href="图书/图书馆配置/推荐阅读.html" class="J_menuItem">推荐阅读</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--商品-->
+                <li>
+                    <a><img src="images/icon12.png" alt="" class="icon">商品<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="商品/引流卡/商品管理/商品管理.html"><i class="fa fa-circle-thin"></i>商品管理</a></li>
+                        <li><a class="J_menuItem" href="商品/引流卡/分类管理.html"><i class="fa fa-circle-thin"></i>分类管理</a></li>
+                        <li><a class="J_menuItem" href="商品/引流卡/订单管理/订单管理.html"><i class="fa fa-circle-thin"></i>订单管理</a></li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>分佣设置<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-four-level third-list-level last-list-type">
+                                <li class=""><a href="商品/引流卡/分佣设置/分佣设置.html" class="J_menuItem">分佣设置</a></li>
+                                <li class=""><a href="商品/引流卡/分佣设置/分佣方式.html" class="J_menuItem">分佣方式</a></li>
+                                <li class=""><a href="商品/引流卡/分佣设置/一人分佣开关.html" class="J_menuItem">一人分佣开关</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>引流卡<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="商品/引流卡/卡片管理/全部卡片.html" class="J_menuItem">卡片管理</a></li>
+                                <li><a href="商品/引流卡/渠道管理/渠道管理.html" class="J_menuItem">渠道管理</a></li>
+                                <li><a href="商品/引流卡/激活记录/渠道激活.html" class="J_menuItem">渠道激活</a></li>
+                                <li><a href="商品/引流卡/激活记录/用户激活.html" class="J_menuItem">用户激活</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="J_menuItem" href="商品/引流卡/推广用户/推广用户.html"><i class="fa fa-circle-thin"></i>推广用户</a></li>
+                        <li><a class="J_menuItem" href="商品/引流卡/海报模板/海报模板.html"><i class="fa fa-circle-thin"></i>海报模板</a></li>
+                        <li><a class="J_menuItem" href="商品/引流卡/合作物流公司/合作物流公司.html"><i class="fa fa-circle-thin"></i>合作物流公司</a></li>
+                        <li><a class="J_menuItem" href="商品/引流卡/首页配置.html"><i class="fa fa-circle-thin"></i>首页配置</a></li>
+                        <li><a class="J_menuItem" href="商品/引流卡/底部菜单配置.html"><i class="fa fa-circle-thin"></i>底部菜单配置</a></li>
+                        <li><a class="J_menuItem" href="商品/引流卡/模块配置.html"><i class="fa fa-circle-thin"></i>模块配置</a></li>
+                    </ul>
+                </li>
+                <!--佣金-->
+                <li>
+                    <a><img src="images/icon4.png" alt="" class="icon">佣金<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="佣金/分销商佣金报表.html"><i class="fa fa-circle-thin"></i>分销商佣金报表</a></li>
+                        <li><a class="J_menuItem" href="佣金/分销商线上补佣.html"><i class="fa fa-circle-thin"></i>分销商线上补佣</a></li>
+                        <li><a class="J_menuItem" href="佣金/分销商线下扣佣.html"><i class="fa fa-circle-thin"></i>分销商线下扣佣</a></li>
+                        <li><a class="J_menuItem" href="佣金/用户提现申请.html"><i class="fa fa-circle-thin"></i>用户提现申请</a></li>
+                        <li><a class="J_menuItem" href="佣金/提现审核记录.html"><i class="fa fa-circle-thin"></i>提现审核记录</a></li>
+                        <li><a class="J_menuItem" href="佣金/冻结提现用户.html"><i class="fa fa-circle-thin"></i>冻结提现用户</a></li>
+                        <li><a class="J_menuItem" href="佣金/用户提现设置.html"><i class="fa fa-circle-thin"></i>用户提现设置</a></li>
+                        <li><a class="J_menuItem" href="佣金/等级提现设置.html"><i class="fa fa-circle-thin"></i>等级提现设置</a></li>
+                        <li><a class="J_menuItem" href="佣金/待确认佣金.html"><i class="fa fa-circle-thin"></i>待确认佣金</a></li>
+                        <li><a class="J_menuItem" href="佣金/佣金明细记录.html"><i class="fa fa-circle-thin"></i>佣金明细记录</a></li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>分公司结算系统<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="佣金/分公司/分公司管理/分公司管理.html" class="J_menuItem">分公司管理</a></li>
+                                <li><a href="佣金/分公司/财务结算/财务结算.html" class="J_menuItem">财务结算</a></li>
+                                <li><a href="佣金/分公司/基本设置.html" class="J_menuItem">结算设置</a></li>
+                                <li><a href="佣金/分公司/分公司收款明细.html" class="J_menuItem">分公司收款明细</a></li>
+                                <li><a href="佣金/分公司/推客佣金明细.html" class="J_menuItem">推客佣金明细</a></li>
+                                <li><a href="佣金/分公司/推客提现申请.html" class="J_menuItem">推客提现申请</a></li>
+                                <li><a href="佣金/分公司/提现审核记录.html" class="J_menuItem">提现审核记录</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>名额分佣<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="佣金/统一名额分佣/名额查询.html" class="J_menuItem">名额查询</a></li>
+                                <li><a href="佣金/统一名额分佣/名额增减记录.html" class="J_menuItem">名额增减记录</a></li>
+                                <li><a href="佣金/统一名额分佣/名额获得规则.html" class="J_menuItem">名额获得规则</a></li>
+                                <li><a href="佣金/统一名额分佣/名额锁定用户.html" class="J_menuItem">名额锁定用户</a></li>
+                                <li><a href="佣金/统一名额分佣/系列课-配置.html" class="J_menuItem">系列课-配置</a></li>
+                                <li><a href="佣金/统一名额分佣/课程动态-配置.html" class="J_menuItem">课程动态-配置</a></li>
+                                <li><a href="佣金/统一名额分佣/会员商品-配置.html" class="J_menuItem">会员商品-配置</a></li>
+                                <li><a href="佣金/统一名额分佣/授权下级.html" class="J_menuItem">授权下级</a></li>
+                                <li><a href="佣金/统一名额分佣/模块配置.html" class="J_menuItem">模块配置</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="J_menuItem" href="佣金/上级代理.html"><i class="fa fa-circle-thin"></i>上级代理</a></li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>财务报表<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="佣金/财务报表/报表概况.html" class="J_menuItem">报表概况</a></li>
+                                <li><a href="佣金/财务报表/系列课明细.html" class="J_menuItem">系列课明细</a></li>
+                                <li><a href="佣金/财务报表/干货专栏明细.html" class="J_menuItem">干货专栏明细</a></li>
+                                <li><a href="佣金/财务报表/会员裂变明细.html" class="J_menuItem">会员裂变明细</a></li>
+                                <li><a href="佣金/财务报表/商城明细.html" class="J_menuItem">商城明细</a></li>
+                                <li><a href="佣金/财务报表/文章打赏明细.html" class="J_menuItem">文章打赏明细</a></li>
+                                <li><a href="佣金/财务报表/直播话题明细.html" class="J_menuItem">直播话题明细</a></li>
+                                <li><a href="佣金/财务报表/直播主题明细.html" class="J_menuItem">直播主题明细</a></li>
+                                <li><a href="佣金/财务报表/直播商品明细.html" class="J_menuItem">直播商品明细</a></li>
+                                <li><a href="佣金/财务报表/线下扣佣明细.html" class="J_menuItem">线下扣佣明细</a></li>
+                                <li><a href="佣金/财务报表/线上补佣明细.html" class="J_menuItem">线上补佣明细</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--营销-->
+                <li>
+                    <a><img src="images/icon5.png" alt="" class="icon">营销<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>图文管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/图文管理/图文管理.html" class="J_menuItem">图文管理</a></li>
+                                <li><a href="营销/图文管理/图文留言.html" class="J_menuItem">图文留言</a></li>
+                                <li><a href="营销/图文管理/图文分类.html" class="J_menuItem">图文分类</a></li>
+                                <li><a href="营销/图文管理/付费文章.html" class="J_menuItem">付费文章</a></li>
+                                <li><a href="营销/图文管理/分佣设置.html" class="J_menuItem">分佣设置</a></li>
+                                <li><a href="营销/图文管理/一人分佣开关.html" class="J_menuItem">一人分佣</a></li>
+                                <li><a href="营销/图文管理/打赏分佣.html" class="J_menuItem">打赏分佣</a></li>
+                                <li><a href="营销/图文管理/购买提醒/购买提醒.html" class="J_menuItem">购买提醒</a></li>
+                                <li><a href="营销/图文管理/付费记录.html" class="J_menuItem">付费记录</a></li>
+                                <li><a href="营销/图文管理/打赏记录.html" class="J_menuItem">打赏记录</a></li>
+                                <li><a href="营销/图文管理/打赏赠品.html" class="J_menuItem">打赏赠品</a></li>
+                                <li><a href="营销/图文管理/标签管理.html" class="J_menuItem">标签管理</a></li>
+                                <li><a href="营销/图文管理/模块配置.html" class="J_menuItem">模块配置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>群发<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/群发/群发.html" class="J_menuItem">群发</a></li>
+                                <li><a href="营销/群发/项目管理.html" class="J_menuItem">项目管理</a></li>
+                                <li><a href="营销/群发/模板管理.html" class="J_menuItem">模板管理</a></li>
+                                <li><a href="营销/群发/群发记录.html" class="J_menuItem">群发记录</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="营销/图片活动.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>图片活动</a></li>
+                        <li><a href="营销/消息宝/关注回复.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>公众号回复</a></li>
+                        <li><a href="营销/消息宝/关键词回复.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>关键词回复</a></li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>浪潮式发售SOP<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/消息宝/首次关注序列.html" class="J_menuItem">首次关注SOP</a></li>
+                                <li><a href="营销/消息宝/再次关注序列.html" class="J_menuItem">再次关注SOP</a></li>
+                                <li><a href="营销/消息宝/关键词序列.html" class="J_menuItem">关键词SOP</a></li>
+                                <li><a href="营销/消息宝/会员等级序列.html" class="J_menuItem">会员等级SOP</a></li>
+                                <li><a href="营销/消息宝/首次购买序列.html" class="J_menuItem">首次购买SOP</a></li>
+                                <li><a href="营销/消息宝/系列课SOP.html" class="J_menuItem">系列课SOP</a></li>
+                                <li><a href="营销/消息宝/专栏订阅SOP.html" class="J_menuItem">专栏订阅SOP</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="百业裂变拓客/活动管理.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>百业裂变拓客</a></li>
+                        <li><a href="营销/多客服管理.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>多客服管理</a></li>
+                        <li >
+                            <a><i class="fa fa-circle-thin"></i>深层挖掘系统<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level">
+                                <li>
+                                    <a>来源分析<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/深层挖掘系统/来源分析/访问入口.html" class="J_menuItem">访问入口</a></li>
+                                        <li class=""><a href="营销/深层挖掘系统/来源分析/分享来源.html" class="J_menuItem">分享来源</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>访问分析<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/深层挖掘系统/访问分析/访问趋势.html" class="J_menuItem">访问趋势</a></li>
+                                        <li class=""><a href="营销/深层挖掘系统/访问分析/新客增长.html" class="J_menuItem">新客增长</a></li>
+                                        <li class=""><a href="营销/深层挖掘系统/访问分析/受访页面.html" class="J_menuItem">受访页面</a></li>
+                                        <li class=""><a href="营销/深层挖掘系统/访问分析/访问明细.html" class="J_menuItem">访问明细</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>访客分析<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/深层挖掘系统/访客分析/基本信息.html" class="J_menuItem">基本信息</a></li>
+                                        <li class=""><a href="营销/深层挖掘系统/访客分析/地域分布.html" class="J_menuItem">地域分布</a></li>
+                                        <li class=""><a href="营销/深层挖掘系统/访客分析/活跃度.html" class="J_menuItem">活跃度</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>用户价值分析<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/深层挖掘系统/用户价值分析/价值分析.html" class="J_menuItem">价值分析</a></li>
+                                        <li class=""><a href="营销/深层挖掘系统/用户价值分析/价值明细.html" class="J_menuItem">价值明细</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li ><a href="营销/行为轨迹配置.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>行为轨迹配置</a></li>
+                        <li >
+                            <a><i class="fa fa-circle-thin"></i>浮动联系人统计<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/微信浮动联系/联系趋势.html" class="J_menuItem">联系趋势</a></li>
+                                <li><a href="营销/微信浮动联系/访问地域.html" class="J_menuItem">访问地域</a></li>
+                                <li><a href="营销/微信浮动联系/联系人统计.html" class="J_menuItem">联系人统计</a></li>
+                                <li><a href="营销/微信浮动联系/联系页面统计.html" class="J_menuItem">联系页面统计</a></li>
+                                <li><a href="营销/微信浮动联系/访问用户统计.html" class="J_menuItem">访问用户统计</a></li>
+                                <li><a href="营销/微信浮动联系/实时联系明细.html" class="J_menuItem">实时联系明细</a></li>
+                                <li><a href="营销/微信浮动联系/查看联系方式配置.html" class="J_menuItem">查看联系方式配置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>社群培育<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/社群培育/后端/社群列表/社群列表.html" class="J_menuItem">社群列表</a></li>
+                                <li><a href="营销/社群培育/后端/社群分佣/社群分佣.html" class="J_menuItem">社群分佣</a></li>
+                                <li><a href="营销/社群培育/后端/社群入口开关.html" class="J_menuItem">社群入口开关</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>日精进<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="签到打卡/后台/分类.html" class="J_menuItem">分类管理</a></li>
+                                <li><a href="签到打卡/后台/签到图.html" class="J_menuItem">签到图</a></li>
+                                <li><a href="签到打卡/后台/推荐语.html" class="J_menuItem">推荐语</a></li>
+                                <li><a href="签到打卡/后台/打卡记录.html" class="J_menuItem">打卡记录</a></li>
+                                <li><a href="签到打卡/后台/签到设置.html" class="J_menuItem">签到设置</a></li>
+                            </ul>
+                        </li>
+                        <li >
+                            <a><i class="fa fa-circle-thin"></i>会员裂变<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level ">
+                                <li>
+                                    <a>活动列表<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li><a href="营销/会员裂变/预售活动/预售活动.html" class="J_menuItem">预售活动</a></li>
+                                        <li><a href="营销/会员裂变/拼团/拼团活动.html" class="J_menuItem">拼团活动</a></li>
+                                        <li><a href="营销/会员裂变/定金/定金活动.html" class="J_menuItem">定金活动</a></li>
+                                        <li><a href="营销/会员裂变/自动裂变/自动裂变.html" class="J_menuItem">自动裂变</a></li>
+                                        <li><a href="营销/会员裂变/卡券管理/卡券管理.html" class="J_menuItem">卡券管理</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>商家管理<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li><a href="营销/会员裂变/申请商家.html" class="J_menuItem">申请商家</a></li>
+                                        <li><a href="营销/会员裂变/商家管理/商家管理.html" class="J_menuItem">商家管理</a></li>
+                                        <li><a href="营销/会员裂变/商家活动聚合/商家分类.html" class="J_menuItem">商家分类</a></li>
+                                        <li><a href="营销/会员裂变/商家活动聚合/商家活动聚合.html" class="J_menuItem">商家活动聚合</a></li>
+                                        <li><a href="营销/会员裂变/商家授权记录.html" class="J_menuItem">商家授权记录</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>商家提现<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/会员裂变/商家提现/商家提现申请.html" class="J_menuItem">商家提现申请</a></li>
+                                        <li class=""><a href="营销/会员裂变/商家提现/提现审核记录.html" class="J_menuItem">提现审核记录</a></li>
+                                        <li class=""><a href="营销/会员裂变/商家提现/商家财务详情.html" class="J_menuItem">商家财务详情</a></li>
+                                        <li class=""><a href="营销/会员裂变/商家提现/全部活动订单.html" class="J_menuItem">全部活动订单</a></li>
+                                        <li class=""><a href="营销/会员裂变/商家提现/商家提现设置.html" class="J_menuItem">商家提现设置</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>商家升级<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li><a href="营销/会员裂变/商家升级记录.html" class="J_menuItem">商家升级记录</a></li>
+                                        <li><a href="营销/会员裂变/分佣配置.html" class="J_menuItem">商家升级分佣配置</a></li>
+                                        <li><a href="营销/会员裂变/一人分佣.html" class="J_menuItem">商家升级一人分佣</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>商家升级名额分佣<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/会员裂变/名额分佣/名额分佣开关.html" class="J_menuItem">名额分佣开关</a></li>
+                                        <li class=""><a href="营销/会员裂变/名额分佣/各等级初始化名额.html" class="J_menuItem">各等级初始化名额</a></li>
+                                        <li class=""><a href="营销/会员裂变/名额分佣/名额购买记录.html" class="J_menuItem">名额购买记录</a></li>
+                                        <li class=""><a href="营销/会员裂变/名额分佣/名额查询.html" class="J_menuItem">名额查询</a></li>
+                                        <li class=""><a href="营销/会员裂变/名额分佣/名额增减记录.html" class="J_menuItem">名额增减记录</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>统一提醒<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/会员裂变/统一提醒/购买活动(购买人).html" class="J_menuItem">用户购买(购买人)</a></li>
+                                        <li class=""><a href="营销/会员裂变/统一提醒/购买活动(推荐人).html" class="J_menuItem">用户购买(推荐人)</a></li>
+                                        <li class=""><a href="营销/会员裂变/统一提醒/购买活动(商家).html" class="J_menuItem">用户购买(商家)</a></li>
+                                        <li class=""><a href="营销/会员裂变/统一提醒/支付尾款(购买人).html" class="J_menuItem">支付尾款(购买人)</a></li>
+                                        <li class=""><a href="营销/会员裂变/统一提醒/好友领取(赠送人).html" class="J_menuItem">好友领取(赠送人)</a></li>
+                                        <li class=""><a href="营销/会员裂变/统一提醒/卡券核销(使用人).html" class="J_menuItem">卡券核销(使用人)</a></li>
+                                        <li class=""><a href="营销/会员裂变/统一提醒/卡券到期提醒.html" class="J_menuItem">卡券到期提醒</a></li>
+                                        <li class=""><a href="营销/会员裂变/统一提醒/商家升级(购买人).html" class="J_menuItem">商家升级(购买人)</a></li>
+                                        <li class=""><a href="营销/会员裂变/统一提醒/商家升级(锁定人).html" class="J_menuItem">商家升级(锁定人)</a></li>
+                                        <li class=""><a href="营销/会员裂变/统一提醒/商家升级(推荐人).html" class="J_menuItem">商家升级(推荐人)</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>基础配置<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li><a href="营销/会员裂变/交易须知.html" class="J_menuItem">交易须知</a></li>
+                                        <li><a href="营销/会员裂变/海报模板/海报模板.html" class="J_menuItem">海报模板</a></li>
+                                        <li><a href="营销/会员裂变/首页广告.html" class="J_menuItem">商家广告</a></li>
+                                        <li><a href="营销/会员裂变/基础设置.html" class="J_menuItem">模块配置</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>在线签<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="在线签/批量签署/批量签署.html" class="J_menuItem">指定签署</a></li>
+                                <li><a href="在线签/任意签署.html" class="J_menuItem">任意签署</a></li>
+                                <li><a href="在线签/业务签署/业务签署.html" class="J_menuItem">业务签署</a></li>
+                                <li><a href="在线签/签署记录.html" class="J_menuItem">签署记录</a></li>
+                                <li><a href="在线签/作废提醒.html" class="J_menuItem">作废提醒</a></li>
+                                <li><a href="在线签/指定签提醒.html" class="J_menuItem">指定签提醒</a></li>
+                                <li><a href="在线签/协议模板.html" class="J_menuItem">协议模板</a></li>
+                                <li><a href="在线签/模块配置.html" class="J_menuItem">模块配置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>直播<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level">
+                                <li>
+                                    <a>直播管理<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/直播间/直播管理/直播话题/直播话题.html" class="J_menuItem">直播话题</a></li>
+                                        <li class=""><a href="营销/直播间/直播管理/直播主题/直播主题.html" class="J_menuItem">直播主题</a></li>
+                                        <li class=""><a href="营销/直播间/直播管理/直播账号/直播账号.html" class="J_menuItem">直播账号</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>直播数据<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/直播间/直播数据/直播数据/直播数据.html" class="J_menuItem">直播数据</a></li>
+                                        <li class=""><a href="营销/直播间/直播管理/获奖名单.html" class="J_menuItem">获奖名单</a></li>
+                                        <!--<li class=""><a href="营销/直播间/直播数据/主播数据/主播数据.html" class="J_menuItem">主播数据</a></li>-->
+                                        <!--<li class=""><a href="营销/直播间/直播数据/粉丝数据/粉丝数据.html" class="J_menuItem">粉丝数据</a></li>-->
+                                        <!--<li class=""><a href="营销/直播间/直播数据/收益数据/收益数据.html" class="J_menuItem">收益数据</a></li>-->
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>收益数据<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li><a href="营销/直播间/收益数据/话题订单/话题订单.html" class="J_menuItem">话题订单</a></li>
+                                        <li><a href="营销/直播间/收益数据/主题订单/主题订单.html" class="J_menuItem">主题订单</a></li>
+                                        <li><a href="营销/直播间/收益数据/商品订单/商品订单.html" class="J_menuItem">商品订单</a></li>
+                                        <!--<li class=""><a href="营销/直播间/直播数据/主播数据/主播数据.html" class="J_menuItem">主播数据</a></li>-->
+                                        <!--<li class=""><a href="营销/直播间/直播数据/粉丝数据/粉丝数据.html" class="J_menuItem">粉丝数据</a></li>-->
+                                        <!--<li class=""><a href="营销/直播间/直播数据/收益数据/收益数据.html" class="J_menuItem">收益数据</a></li>-->
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>红包钱袋<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li><a href="营销/直播间/红包钱袋/红包充值.html" class="J_menuItem">红包充值</a></li>
+                                        <li><a href="营销/直播间/红包钱袋/主播钱袋.html" class="J_menuItem">主播钱袋</a></li>
+                                        <li><a href="营销/直播间/红包钱袋/钱袋明细.html" class="J_menuItem">钱袋明细</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>用户余额<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li><a href="营销/直播间/用户余额/余额提现申请.html" class="J_menuItem">余额提现申请</a></li>
+                                        <li><a href="营销/直播间/用户余额/提现申请记录.html" class="J_menuItem">提现申请记录</a></li>
+                                        <li><a href="营销/直播间/用户余额/余额明细.html" class="J_menuItem">余额明细</a></li>
+                                        <li><a href="营销/直播间/用户余额/用户余额.html" class="J_menuItem">用户余额</a></li>
+                                        <li><a href="营销/直播间/用户余额/冻结提现用户.html" class="J_menuItem">冻结提现用户</a></li>
+                                        <li><a href="营销/直播间/用户余额/提现审核设置.html" class="J_menuItem">提现审核设置</a></li>
+                                        <li><a href="营销/直播间/用户余额/余额配置.html" class="J_menuItem">余额配置</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>打赏分佣<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li><a href="营销/直播间/打赏分佣/打赏分佣.html" class="J_menuItem">打赏分佣</a></li>
+                                        <li><a href="营销/直播间/打赏分佣/分佣记录.html" class="J_menuItem">打赏记录</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>分佣设置<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/直播间/分佣设置/直播话题.html" class="J_menuItem">直播话题分佣</a></li>
+                                        <li class=""><a href="营销/直播间/分佣设置/直播主题.html" class="J_menuItem">直播主题分佣</a></li>
+                                        <li class=""><a href="营销/直播间/分佣设置/直播商品分佣.html" class="J_menuItem">直播商品分佣</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="营销/直播间/积分奖励.html" class="J_menuItem">积分奖励</a></li>
+                                <li>
+                                    <a>直播提醒<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/直播间/直播提醒/预约直播-预约人.html" class="J_menuItem">预约直播（预约人）</a></li>
+                                        <li class=""><a href="营销/直播间/直播提醒/预约直播-推荐人.html" class="J_menuItem">预约直播（推荐人）</a></li>
+                                        <li class=""><a href="营销/直播间/直播提醒/开播提醒-主播.html" class="J_menuItem">开播提醒（主播）</a></li>
+                                        <li class=""><a href="营销/直播间/直播提醒/开播提醒-订阅人.html" class="J_menuItem">开播提醒（订阅人）</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>购买提醒<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/直播间/购买提醒/购买话题-购买人.html" class="J_menuItem">购买话题（购买人）</a></li>
+                                        <li class=""><a href="营销/直播间/购买提醒/购买话题-推荐人.html" class="J_menuItem">购买话题（推荐人）</a></li>
+                                        <li class=""><a href="营销/直播间/购买提醒/购买话题-锁定人.html" class="J_menuItem">购买话题（锁定人）</a></li>
+                                        <li class=""><a href="营销/直播间/购买提醒/购买主题-购买人.html" class="J_menuItem">购买主题（购买人）</a></li>
+                                        <li class=""><a href="营销/直播间/购买提醒/购买主题-推荐人.html" class="J_menuItem">购买主题（推荐人）</a></li>
+                                        <li class=""><a href="营销/直播间/购买提醒/购买主题-锁定人.html" class="J_menuItem">购买主题（锁定人）</a></li>
+                                    </ul>
+                                </li>
+                                <!--<li class=""><a href="营销/直播间/订阅提醒.html" class="J_menuItem">订阅提醒</a></li>-->
+                                <!--<li>-->
+                                    <!--<a>主播协议<span class="fa fa-sort-down"></span></a>-->
+                                    <!--<ul class="nav nav-four-level">-->
+                                        <!--<li class=""><a href="营销/直播间/主播协议/用户服务协议.html" class="J_menuItem">用户服务协议</a></li>-->
+                                        <!--<li class=""><a href="营销/直播间/主播协议/隐私政策.html" class="J_menuItem">隐私政策</a></li>-->
+                                        <!--<li class=""><a href="营销/直播间/主播协议/直播管理条例.html" class="J_menuItem">直播管理条例</a></li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                                <li>
+                                    <a>骚扰拦截<span class="fa fa-sort-down"></span></a>
+                                    <ul class="nav nav-four-level last-list-type">
+                                        <li class=""><a href="营销/直播间/骚扰拦截/屏蔽词.html" class="J_menuItem">屏蔽词</a></li>
+                                        <li class=""><a href="营销/直播间/骚扰拦截/黑名单.html" class="J_menuItem">黑名单</a></li>
+                                        <li class=""><a href="营销/直播间/骚扰拦截/禁言.html" class="J_menuItem">禁言</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="营销/直播间/海报模板/海报模板.html" class="J_menuItem">海报模板</a></li>
+                                <!--<li><a href="营销/直播间/推三返一/返利设置.html" class="J_menuItem">推三返一</a></li>-->
+                                <li><a href="营销/直播间/模块配置.html" class="J_menuItem">模块配置</a></li>
+                            </ul>
+                        </li>
+                        <li >
+                            <a><i class="fa fa-circle-thin"></i>归属活码<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/活码/通用活码/通用活码.html" class="J_menuItem">通用活码</a></li>
+                                <li><a href="营销/活码/接力活码/接力活码.html" class="J_menuItem">接力活码</a></li>
+                                <li><a href="营销/活码/分类活码/分类活码.html" class="J_menuItem">分类活码</a></li>
+                                <li><a href="营销/活码/活码投诉/活码投诉.html" class="J_menuItem">活码投诉</a></li>
+                                <li><a href="营销/活码/模块设置.html" class="J_menuItem">模块设置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>专题表单<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/专题表单/专题表单.html" class="J_menuItem">专题表单</a></li>
+                                <li><a href="营销/专题表单/提交表单-提交人.html" class="J_menuItem">表单提醒(提交人)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>积分中心<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/积分中心/积分主页/积分主页.html" class="J_menuItem">积分主页</a></li>
+                                <li><a href="营销/积分中心/默认任务/默认任务.html" class="J_menuItem">默认任务</a></li>
+                                <li><a href="营销/积分中心/自建任务/自建任务.html" class="J_menuItem">自建任务</a></li>
+                                <li><a href="营销/积分中心/兑换主页/兑换主页.html" class="J_menuItem">兑换主页</a></li>
+                                <li><a href="营销/积分中心/兑换分类/兑换分类.html" class="J_menuItem">兑换分类</a></li>
+                                <li><a href="营销/积分中心/兑换商品/兑换商品.html" class="J_menuItem">兑换商品</a></li>
+                                <li><a href="营销/积分中心/兑换订单/兑换订单.html" class="J_menuItem">兑换订单</a></li>
+                                <li><a href="营销/积分中心/用户积分/用户积分.html" class="J_menuItem">用户积分</a></li>
+                                <li><a href="营销/积分中心/积分明细/积分明细.html" class="J_menuItem">积分明细</a></li>
+                                <li><a href="营销/积分中心/模块配置.html" class="J_menuItem">模块配置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>通讯录<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/通讯录/通讯录名单.html" class="J_menuItem">通讯录名单</a></li>
+                                <li><a href="营销/通讯录/特别名单.html" class="J_menuItem">特别名单</a></li>
+                                <li><a href="营销/通讯录/通讯录.html" class="J_menuItem">通讯录配置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>优惠券<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/优惠券/优惠券列表.html" class="J_menuItem">优惠券列表</a></li>
+                                <li><a href="营销/优惠券/海报模板/海报模板.html" class="J_menuItem">海报模板</a></li>
+                                <li><a href="营销/优惠券/模块配置.html" class="J_menuItem">优惠券配置</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="营销/弹屏按钮设置/浮动按钮弹屏.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>浮动按钮弹屏</a></li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>打卡<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="营销/打卡/打卡列表.html" class="J_menuItem">打卡列表</a></li>
+                                <li><a href="营销/打卡/成员列表.html" class="J_menuItem">成员列表</a></li>
+                                <li><a href="营销/打卡/日签金句.html" class="J_menuItem">日签金句</a></li>
+                                <li><a href="营销/打卡/海报模板/海报模板.html" class="J_menuItem">日签模板</a></li>
+                                <li><a href="营销/打卡/打卡提醒/数据统计提醒.html" class="J_menuItem">打卡提醒</a></li>
+                                <li><a href="营销/打卡/基础配置.html" class="J_menuItem">基础配置</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--活码-->
+                <li >
+                    <a><img src="images/icon10.png" alt="" class="icon">活码<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="活码/活码管理/活码管理.html"><i class="fa fa-circle-thin"></i>活码管理</a></li>
+                        <li><a class="J_menuItem" href="活码/活码用户.html"><i class="fa fa-circle-thin"></i>活码用户</a></li>
+                        <li><a class="J_menuItem" href="活码/付费记录.html"><i class="fa fa-circle-thin"></i>付费记录</a></li>
+                        <li><a class="J_menuItem" href="活码/授权使用.html"><i class="fa fa-circle-thin"></i>授权使用</a></li>
+                        <li><a class="J_menuItem" href="活码/投诉记录.html"><i class="fa fa-circle-thin"></i>投诉记录</a></li>
+                        <li><a class="J_menuItem" href="活码/图片巡查/图片巡查.html"><i class="fa fa-circle-thin"></i>图片巡查</a></li>
+                        <li><a class="J_menuItem" href="活码/提醒设置.html"><i class="fa fa-circle-thin"></i>提醒设置</a></li>
+                        <li><a class="J_menuItem" href="活码/海报设置.html"><i class="fa fa-circle-thin"></i>海报设置</a></li>
+                        <li><a class="J_menuItem" href="活码/分佣设置.html"><i class="fa fa-circle-thin"></i>分佣设置</a></li>
+                        <li><a class="J_menuItem" href="活码/首页自定义.html"><i class="fa fa-circle-thin"></i>首页自定义</a></li>
+                        <li><a class="J_menuItem" href="活码/模块设置.html"><i class="fa fa-circle-thin"></i>模块设置</a></li>
+                    </ul>
+                </li>
+                <!--提醒-->
+                <li>
+                    <a><img src="images/icon6.png" alt="" class="icon">提醒<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>系列课提醒<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="提醒/系统课提醒/报名成功提醒购买人.html" class="J_menuItem">报名成功提醒购买人</a></li>
+                                <li><a href="提醒/系统课提醒/报名成功提醒锁定人.html" class="J_menuItem">报名成功提醒锁定人</a></li>
+                                <li><a href="提醒/系统课提醒/报名成功提醒推荐人.html" class="J_menuItem">报名成功提醒推荐人</a></li>
+                                <li><a href="提醒/系统课提醒/新课程提醒.html" class="J_menuItem">新课程提醒</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>课程动态提醒<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="提醒/课程动态提醒/报名成功提醒购买人.html" class="J_menuItem">报名成功提醒购买人</a></li>
+                                <li><a href="提醒/课程动态提醒/报名成功提醒锁定人.html" class="J_menuItem">报名成功提醒锁定人</a></li>
+                                <li><a href="提醒/课程动态提醒/报名成功提醒推荐人.html" class="J_menuItem">报名成功提醒推荐人</a></li>
+                                <li><a href="提醒/课程动态提醒/预约课程成功提醒.html" class="J_menuItem">预约课程成功提醒</a></li>
+                                <li><a href="提醒/课程动态提醒/取消预约课程提醒.html" class="J_menuItem">取消预约课程提醒</a></li>
+                                <li><a href="提醒/课程动态提醒/签到成功提醒报名人.html" class="J_menuItem">签到成功提醒报名人</a></li>
+                                <li><a href="提醒/课程动态提醒/签到成功提醒签到人.html" class="J_menuItem">签到成功提醒签到人</a></li>
+                            </ul>
+                        </li>
+                        <li >
+                            <a><i class="fa fa-circle-thin"></i>佣金提现提醒<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="提醒/佣金提现提醒/提现申请提醒.html" class="J_menuItem">提现申请提醒</a></li>
+                                <li><a href="提醒/佣金提现提醒/提现审核成功提醒.html" class="J_menuItem">提现审核成功提醒</a></li>
+                                <li><a href="提醒/佣金提现提醒/提现审核失败提醒.html" class="J_menuItem">提现审核失败提醒</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>会员提醒<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="提醒/会员提醒/提升自己购买(购买人).html" class="J_menuItem">提升自己购买(购买人)</a></li>
+                                <li><a href="提醒/会员提醒/提升自己购买(锁定人).html" class="J_menuItem">提升自己购买(锁定人)</a></li>
+                                <li><a href="提醒/会员提醒/提升自己购买(推荐人).html" class="J_menuItem">提升自己购买(推荐人)</a></li>
+                                <li><a href="提醒/会员提醒/兑换码购买(购买人).html" class="J_menuItem">兑换码购买(购买人)</a></li>
+                                <li><a href="提醒/会员提醒/兑换码购买(锁定人).html" class="J_menuItem">兑换码购买(锁定人)</a></li>
+                                <li><a href="提醒/会员提醒/兑换码购买(推荐人).html" class="J_menuItem">兑换码购买(推荐人)</a></li>
+                                <li><a href="提醒/会员提醒/兑换码使用(使用人).html" class="J_menuItem">兑换码使用(使用人)</a></li>
+                                <li><a href="提醒/会员提醒/兑换码使用(持有人).html" class="J_menuItem">兑换码使用(持有人)</a></li>
+                                <li><a href="提醒/会员提醒/兑换码到期提醒.html" class="J_menuItem">兑换码到期提醒</a></li>
+                                <li><a href="提醒/会员提醒/会员到期提醒.html" class="J_menuItem">会员到期提醒</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--设置-->
+                <li>
+                    <a><img src="images/icon7.png" alt="" class="icon">设置<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level" >
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>公众号设置<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="设置/公众号设置/公众号授权.html" class="J_menuItem">公众号授权</a></li>
+                                <li><a href="设置/公众号设置/微信菜单设置.html" class="J_menuItem">微信菜单设置</a></li>
+                                <li><a href="设置/公众号设置/一键关注配置.html" class="J_menuItem">一键关注配置</a></li>
+                                <li><a href="设置/公众号设置/推广海报配置.html" class="J_menuItem">推广海报配置</a></li>
+                                <li><a href="设置/公众号设置/备份公众号.html" class="J_menuItem">备份公众号</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="设置/小程序授权/小程序授权.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>小程序授权</a></li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>收付款（定制）<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="设置/收付款设置定制/收款方式设置.html" class="J_menuItem">收款方式设置</a></li>
+                                <li><a href="设置/收付款设置定制/佣金支付设置.html" class="J_menuItem">佣金支付设置</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>收付款设置<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="设置/收付款设置/收款方式设置.html" class="J_menuItem">收款方式设置</a></li>
+                                <li><a href="设置/收付款设置/佣金支付设置.html" class="J_menuItem">佣金支付设置</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="设置/短信标签设置/短信标签设置.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>短信标签设置</a></li>
+                        <li><a href="设置/基础协议.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>基础协议</a></li>
+                        <li><a href="设置/网页扫码登录提醒/提醒设置.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>网页扫码登录提醒</a></li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>帮助文档<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="设置/帮助文档/全部帮助文档.html" class="J_menuItem">全部帮助文档</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>分销裂变系统对接<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="设置/分销裂变系统对接/对接验证.html" class="J_menuItem">对接验证</a></li>
+                                <li><a href="设置/分销裂变系统对接/活动数据.html" class="J_menuItem">活动数据</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="设置/客服配置.html" class="J_menuItem"><i class="fa fa-circle-thin"></i>客服配置</a></li>
+                    </ul>
+                </li>
+                <!--系统管理-->
+                <li>
+                    <a><img src="images/icon8.png" alt="" class="icon">系统管理<span class="fa fa-sort-down"></span></a>
+                    <ul class="nav nav-second-level" >
+                        <li><a class="J_menuItem" href="系统管理/部门管理.html"><i class="fa fa-circle-thin"></i>部门管理</a></li>
+                        <li><a class="J_menuItem" href="系统管理/用户管理.html"><i class="fa fa-circle-thin"></i>用户管理</a></li>
+                        <li><a class="J_menuItem" href="系统管理/角色管理.html"><i class="fa fa-circle-thin"></i>角色管理</a></li>
+                        <li>
+                            <a><i class="fa fa-circle-thin"></i>资费管理<span class="fa fa-sort-down"></span></a>
+                            <ul class="nav nav-second-level third-list-level last-list-type">
+                                <li><a href="资费管理/概况.html" class="J_menuItem">概况</a></li>
+                                <li><a href="资费管理/充值记录.html" class="J_menuItem">充值记录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--右侧内容-->
+<div class="index_nav_right index_shou">
+    <div class="backIcon"><i class="layui-icon layui-icon-return"></i>上个页面路径</div>
+    <div class="row J_mainContent" id="content-main" style="height: 100%;margin: 0;">
+        <iframe name="J_iframe" id="J_iframe" width="100%" height="100%" src="概况/index_v1.html" frameborder="0" data-id="index_v1.html" seamless></iframe>
+    </div>
+</div>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/dist/js/bootstrap.min.js?v=3.3.6"></script>
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/hAdmin.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/layui/lay/modules/layer.js"></script>
+<script src="js/myjs.js"></script>
+<script>
+
+
+        layer.open({
+            type: 1
+            ,title: false
+            ,closeBtn: false
+            ,area: '300px;'
+            ,shade: 0.3
+            ,btn: ['立即体验', '残忍拒绝']
+            ,btnAlign: 'c'
+            ,content: '<div style="padding: 50px 20px;text-align: center;line-height: 22px; background-color: #14667c; color: #fff; font-weight: 300;">' +
+                '新版本后台已准备好，马上去体验吧' +
+                '</div>'
+            ,yes: function(layero){
+                var btn = layero.find('.layui-layer-btn');
+                btn.find('.layui-layer-btn0').attr({
+                    href: 'index2.html'
+                    ,target: '_blank'
+                });
+            }
+            ,btn2: function(index, layero){
+                layer.msg('可通过右上角菜单进行切换版本');
+            }
+        });
+
+
+    $.sidebarMenu($('#side-menu'));
+    $(function(){
+        //菜单点击 无刷新切换内容
+        J_iframe
+        $(".J_menuItem").on('click',function(){
+            var url = $(this).attr('href');
+            $("#J_iframe").attr('src',url);
+            return false;
+        });
+
+
+    });
+    $('.user').hover(function(){
+        $('.user i').toggleClass('fa-caret-up')
+    });
+    $('.mail').hover(function(){
+        $('.mail i').toggleClass('fa-caret-up')
+    });
+
+</script>
+</body>
+</html>

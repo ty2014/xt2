@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>积分主页</title>
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/jf.css">
+    <style>
+        .activity_set3 .a_list .a_list_r{padding: 8px 0;}
+        .select-text{min-width: 90px;}
+        .select-text .select-txt{padding: 0 20px 0 8px;}
+        .radio{color: #333;}
+        .articl-cont div{position: relative;}
+        .type-bg{position: absolute;top: 13px;left: 12px;right: 12px;width: 267px;height: 70px;border-radius: 6px 6px 0 0;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 15px;">
+
+<div class="scpz-top">
+    <p class="title font20">积分主页<span class="tishi"></span></p>
+</div>
+
+<div class="scpz-body">
+    <div class="scpz-body-l">
+        <img src="../images/pz3.png" alt="">
+        <span id="page_title">积分中心</span>
+        <!--  模板一  -->
+        <div class="box-cont ">
+            <div class="content" style="background: #f8f8f8;">
+                <!--  顶部  -->
+                <img src="../images/zypz_icon1.png" alt="" class="top_icon">
+                <div class="zdyContent top_zdy">自定义内容</div>
+                <div class="scroll-cont">
+                    <div class="fixed-flex">
+                        <div class="fixed-flex-box">
+                            <!--  背景  -->
+                            <img src="../images/zypz_icon2.png" alt="">
+                            <!--  任务列表  -->
+                            <div class="index_cont2 type2">
+                                <p class="tit">新手任务</p>
+                                <div class="cont2_box">
+                                    <img src="../images/zypz_icon3.png" alt="">
+                                    <img src="../images/zypz_icon3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="zdyContent" style="display: block">自定义内容</div>
+                            <div class="index_cont2">
+                                <p class="tit">日常任务</p>
+                                <div class="cont2_box">
+                                    <img src="../images/zypz_icon3.png" alt="">
+                                    <img src="../images/zypz_icon3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <p style="text-align: center;color: #999;margin: 10px 0;width: 100%">底部版权</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scpz-body-r">
+        <!--    -->
+        <div class="activity_set activity_set3 w-4" style="padding: 0;">
+            <div class="b-line">
+                <div class="a_list">
+                    <span class="a_list_l">页面命名:</span>
+                    <!--  输入内容后，左侧示例图对应位置实时响应展示  -->
+                    <div class="a_list_r"><input type="text" value="积分中心"><a class="copy-btn">积分主页链接</a></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">分享简介:</span>
+                    <div class="a_list_r"><input type="text" class="w-620" value="精彩好物等你来"></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">分享图标:</span>
+                    <div class="a_list_r">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <li class="img_item" style="display: none">
+                                <img src="">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                        <p class="tishi">*建议像素100*100，比例1:1，大小不超过50KB</p>
+                    </div>
+                </div>
+
+
+                <div class="a_list">
+                    <span class="a_list_l">顶部展示:</span>
+                    <div class="a_list_r search_item">
+                        <label for="cd1" class="radio">
+                            <div class="chose">
+                                <input type="radio" checked="" name="cd" id="cd1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">默认</span>
+                        </label>
+                        <label for="cd2" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="cd" id="cd2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">自定义</span>
+                        </label>
+                        <label for="cd3" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="cd" id="cd3">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">不展示</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="a_list top_cont">
+                    <span class="a_list_l"></span>
+                    <div class="a_list_r">
+                        <span class="set-user hb_set mgL-0">分享：海报设置</span>
+                        <button class="zdy-btn zdy-btn1 mgL-0" style="display: none;">自定义内容</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fl-settins">
+            <div class="settins-item">
+                <div class="item-list">
+                    <span class="del">删除</span>
+                    <div class="list-cont type-chose">
+                        <span class="txtL">展示类型:</span>
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="edit-togg1" checked class="toggle-button" name="switch">
+                                <label for="edit-togg1" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">任务列表</span>
+                                    <span class="text off">自定义</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-list">
+                    <span class="prev disab">上移一层</span>
+                    <div class="list-cont msgTip">
+                        <span class="txtL">抬头标题:</span>
+                        <div class="list-text"><input type="text" value="新手任务" placeholder="给任务集合命个标题"></div>
+                    </div>
+                    <div class="list-cont zdyTip" style="display: none">
+                        <span class="txtL"></span>
+                        <span class="zdy-btn mgL-0" style="display: block">代码定义</span>
+                    </div>
+                </div>
+                <div class="item-list zypz_floor">
+                    <span class="next">下移一层</span>
+                    <div class="zypz_cont msgTip">
+                        <div class="list-cont">
+                            <span class="txtL">具体任务:</span>
+                            <div class="slide-select type-chose">
+                                <select name="">
+                                    <option value="" selected>默认任务</option>
+                                    <option value="">自建任务</option>
+                                </select>
+                                <img src="../../../images/bottom-icon.jpg" alt="">
+                            </div>
+                            <input type="text" placeholder="请选择" value="完善个人资料" readonly class="mr_chose">
+                            <span class="fl-btn del">删除</span>
+                        </div>
+                        <div class="list-cont">
+                            <span class="txtL">具体任务:</span>
+                            <div class="slide-select type-chose">
+                                <select name="">
+                                    <option value="" selected>默认任务</option>
+                                    <option value="">自建任务</option>
+                                </select>
+                                <img src="../../../images/bottom-icon.jpg" alt="">
+                            </div>
+                            <input type="text" placeholder="请选择" value="绑定手机号" readonly class="mr_chose">
+                            <span class="fl-btn del">删除</span>
+                            <span class="fl-btn add">添加任务</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="settins-item">
+                <div class="item-list">
+                    <span class="del">删除</span>
+                    <div class="list-cont type-chose">
+                        <span class="txtL">展示类型:</span>
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper ">
+                                <input type="checkbox" id="edit-togg2" class="toggle-button" name="switch">
+                                <label for="edit-togg2" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">任务列表</span>
+                                    <span class="text off">自定义</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-list">
+                    <span class="prev">上移一层</span>
+                    <div class="list-cont msgTip" style="display: none">
+                        <span class="txtL">抬头标题:</span>
+                        <div class="list-text"><input type="text" value="新手任务" placeholder="给任务集合命个标题"></div>
+                    </div>
+                    <div class="list-cont zdyTip">
+                        <span class="txtL"></span>
+                        <span class="zdy-btn mgL-0" style="display: block">代码定义</span>
+                    </div>
+                </div>
+                <div class="item-list zypz_floor">
+                    <span class="next">下移一层</span>
+                    <div class="zypz_cont msgTip" style="display: none">
+                        <div class="list-cont">
+                            <span class="txtL">具体任务:</span>
+                            <div class="slide-select type-chose">
+                                <select name="">
+                                    <option value="" selected>默认任务</option>
+                                    <option value="">自建任务</option>
+                                </select>
+                                <img src="../../../images/bottom-icon.jpg" alt="">
+                            </div>
+                            <input type="text" placeholder="请选择" value="完善个人资料" readonly class="mr_chose">
+                            <span class="fl-btn del">删除</span>
+                        </div>
+                        <div class="list-cont">
+                            <span class="txtL">具体任务:</span>
+                            <div class="slide-select type-chose">
+                                <select name="">
+                                    <option value="" selected>默认任务</option>
+                                    <option value="">自建任务</option>
+                                </select>
+                                <img src="../../../images/bottom-icon.jpg" alt="">
+                            </div>
+                            <input type="text" placeholder="请选择" value="绑定手机号" readonly class="mr_chose">
+                            <span class="fl-btn del">删除</span>
+                            <span class="fl-btn add">添加任务</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="settins-item">
+                <div class="item-list">
+                    <span class="del">删除</span>
+                    <div class="list-cont type-chose">
+                        <span class="txtL">展示类型:</span>
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper ">
+                                <input type="checkbox" id="edit-togg3" checked class="toggle-button" name="switch">
+                                <label for="edit-togg3" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">任务列表</span>
+                                    <span class="text off">自定义</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-list">
+                    <span class="prev">上移一层</span>
+                    <div class="list-cont msgTip">
+                        <span class="txtL">抬头标题:</span>
+                        <div class="list-text"><input type="text" value="" placeholder="给任务集合命个标题"></div>
+                    </div>
+                    <div class="list-cont zdyTip" style="display: none">
+                        <span class="txtL"></span>
+                        <span class="zdy-btn mgL-0" style="display: block">代码定义</span>
+                    </div>
+                </div>
+                <div class="item-list zypz_floor">
+                    <span class="next disab">下移一层</span>
+                    <div class="zypz_cont msgTip">
+                        <div class="list-cont">
+                            <span class="txtL">具体任务:</span>
+                            <div class="slide-select type-chose">
+                                <select name="">
+                                    <option value="" >默认任务</option>
+                                    <option value="" selected>自建任务</option>
+                                </select>
+                                <img src="../../../images/bottom-icon.jpg" alt="">
+                            </div>
+                            <input type="text" placeholder="请选择" value="" readonly class="zj_chose">
+                            <span class="fl-btn del">删除</span>
+                            <span class="fl-btn add">添加任务</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="set_save" style="margin: 20px 0 10px;display: flex;justify-content: space-between;align-items: center;">
+                <span class="scpz-save-btn">添加模块</span>
+            </div>
+        </div>
+        <div class="fl-settins">
+            <div class="set_save" style="margin: 10px 0;display: flex;align-items: center;">
+                <span class="scpz-save-btn2">保存并使用</span>
+                <!--  还原默认设置后：左侧及右侧设置项全都初始化；
+                                      顶部分享设置不用还原
+                  -->
+                <span class="scpz-save-btn3">恢复默认配置</span>
+                <span class="scpz-save-btn yl-btn" style="background: #1dccd8;">保存草稿并预览</span>
+                <div class="tishi" style="display: flex;align-items: center;">*最近保存草稿2021-04-25 14:25:43，预览效果：
+                    <div class="ylicon-btn" style="cursor: pointer">
+                        <img src="../../../images/1.png" alt=""><img src="../../../images/2.png" alt="">
+                    </div>
+                    <a href="">修改草稿</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  预览二维码链接  -->
+<div id="pvw" class="model pvw" style="display: none;">
+    <div class="mark"></div>
+    <div class="content">
+        <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+        <p class="cont-msg"><input type="text" value="http://cshtml.lkmsxy.com"><span class="copy-btn">复制</span></p>
+        <p class="tishi left" style="margin-top: 10px;">*已为你生成预览效果，微信扫码或复制链接打开查看，确认无误后记得点击“保存并使用”</p>
+    </div>
+</div>
+
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+
+
+    $(function () {
+        // 搜索栏
+        $('.search_item label').click(function () {
+            var txt=$(this).find('.msg_set_txt').text();
+            console.log('11');
+            if($(this).find('input').is(':checked')){
+                switch (txt) {
+                    case '默认':
+                        $('.top_cont,.top_cont .set-user,.top_icon').show();
+                        $('.top_cont .zdy-btn,.top_zdy').hide();
+                        break;
+                    case '自定义':
+                        $('.top_cont .set-user,.top_icon').hide();
+                        $('.top_cont,.top_cont .zdy-btn,.top_zdy').show();
+                        break;
+                    case '不展示':
+                        $('.top_cont,.top_icon,.top_zdy').hide();
+                        break;
+                }
+            }
+        });
+
+        // 类型选择
+        $('.type-chose input').on('click',function () {
+            var clas = $(this).parents('.settins-item');
+            if($(this).is(':checked')){
+                clas.find('.msgTip').show();
+                clas.find('.zdyTip').hide();
+            }else{
+                clas.find('.msgTip').hide();
+                clas.find('.zdyTip').show();
+            }
+        });
+
+
+
+        $('#chutiyan .mr_chose').on('click', function(){
+            //iframe层
+            layer.open({
+                type: 2,
+                title: '默认任务',
+                shadeClose: true,
+                shade: 0.3,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['95%', '95%'],
+                content: '../默认任务/默认任务选择.html' //iframe的url
+            });
+        });
+        $('#chutiyan .zj_chose').on('click', function(){
+            //iframe层
+            layer.open({
+                type: 2,
+                title: '自建任务',
+                shadeClose: true,
+                shade: 0.3,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['95%', '95%'],
+                content: '../自建任务/自建任务选择.html' //iframe的url
+            });
+        });
+
+        // 自定义内容
+        $('#chutiyan .zdyCont-btn1').on('click', function(){
+            layer.open({
+                type: 1,
+                title: '自定义内容',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['90%', '90%'],
+                skin: 'account-box',
+                content: $("#contTable-sure1")
+            });
+        });
+
+
+        $('#chutiyan .hb_set').on('click', function(){
+            //iframe层
+            layer.open({
+                type: 2,
+                title: '海报设置',
+                shadeClose: true,
+                shade: 0.3,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['95%', '95%'],
+                content: '../海报模板/海报添加.html' //iframe的url
+            });
+        });
+
+        layer.photos({
+            photos: '.layer-photos-demo'
+            ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+        });
+        // 按钮提示弹框
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .scpz-save-btn2').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定使用该样式？<p>确定后，用户端将自动切换到该样式</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    btn: ['取消','确定'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('使用成功', {time: 1000});
+                });
+            });
+        });
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .scpz-save-btn3').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定还原到默认设置？<p>确定后，以上配置内容将全部重置到初始状态</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    btn: ['取消','确定'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('操作成功', {time: 1000});
+                });
+            });
+        });
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .del').on('click', function(){
+                layer.config({
+                    extend: 'myskin/failure.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定删除该项设置？',{
+                    skin: 'failureskin ',    //类名
+                    icon:2,
+                    btn: ['取消','确定'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('删除成功', {time: 1000});
+                });
+            });
+        });
+
+        layui.use(['layer','jquery'], function () {
+            var layer=layui.layer;
+            var $=layui.jquery;
+            $('#chutiyan .yl-btn').on('click', function(){
+                layer.config({
+                    extend: 'myskin/success.css' //同样需要加载新皮肤
+                });
+                layer.confirm('是否确定保存到草稿？<p>保存后，下次可点击‘修改草稿’按钮继续编辑</p>',{
+                    skin: 'successskin ',    //类名
+                    icon:3,
+                    btn: ['取消','确定并预览'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    //layer.msg('操作成功', {time: 1000});
+                    layer.open({
+                        type: 1,
+                        title: false,
+                        shadeClose: true,
+                        shade: 0.3,
+                        closeBtn: 0,
+                        area: ['100%', '100%'],
+                        skin: 'pvw',
+                        content: $("#pvw")
+                    });
+                });
+            });
+        });
+        $('.ylicon-btn').click(function () {
+            layer.open({
+                type: 1,
+                title: false,
+                shadeClose: true,
+                shade: 0.3,
+                closeBtn: 0,
+                area: ['100%', '100%'],
+                skin: 'pvw',
+                content: $("#pvw")
+            });
+        })
+    })
+</script>
+
+
+</body>
+</html>

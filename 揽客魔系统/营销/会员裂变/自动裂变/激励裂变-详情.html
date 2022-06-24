@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>裂变管理</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto;">
+
+<ul class="head-tab3">
+    <li class="active current3"><a href="#tab1">赠送人数</a></li>
+    <li><a href="#tab2">使用人数</a></li>
+</ul>
+
+<div class="tab-content3 content2">
+    <div class="tab-pane active" id="tab1">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="80px">卡券主图</th>
+                            <th width="150px">卡券名称</th>
+                            <th width="100px">购买人ID</th>
+                            <th width="80px">购买人头像</th>
+                            <th width="150px">购买人昵称</th>
+                            <th width="100px">预留姓名</th>
+                            <th width="120pz">预留电话</th>
+                            <th width="100px">领取人ID</th>
+                            <th width="80pz">领取人头像</th>
+                            <th width="150px">领取人昵称</th>
+                            <th width="100px">预留姓名(领)</th>
+                            <th width="120px">预留电话(领)</th>
+                            <th width="150px">领取时间</th>
+                            <th width="100px">是否使用</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="80px" class="squ-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left">装修款抵用金</td>
+                            <td width="100px">54682</td>
+                            <td width="80px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px">小土豆</td>
+                            <td width="100px">蒋雨</td>
+                            <td width="120px">13350021234</td>
+                            <td width="100px">54682</td>
+                            <td width="80px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px">啊啊啊</td>
+                            <td width="100px">陈晨</td>
+                            <td width="120px">13350021234</td>
+                            <td width="150px" class="date"><div>2019-10-20 10:00:00</div></td>
+                            <td width="100px">否</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="squ-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left">装修款抵用金</td>
+                            <td>54682</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td>小土豆</td>
+                            <td>蒋雨</td>
+                            <td>13350021234</td>
+                            <td>54682</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td>啊啊啊</td>
+                            <td>陈晨</td>
+                            <td>13350021234</td>
+                            <td class="date"><div>2019-10-20 10:00:00</div></td>
+                            <td>是</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="80px">卡券主图</th>
+                            <th width="150px">卡券名称</th>
+                            <th width="100px">购买人ID</th>
+                            <th width="80px">购买人头像</th>
+                            <th width="150px">购买人昵称</th>
+                            <th width="100px">预留姓名</th>
+                            <th width="120pz">预留电话</th>
+                            <th width="100px">领取人ID</th>
+                            <th width="80pz">领取人头像</th>
+                            <th width="150px">领取人昵称</th>
+                            <th width="100px">预留姓名(领)</th>
+                            <th width="120px">预留电话(领)</th>
+                            <th width="150px">领取时间</th>
+                            <th width="100px">是否使用</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="80px" class="squ-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left">装修款抵用金</td>
+                            <td width="100px">54682</td>
+                            <td width="80px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px">小土豆</td>
+                            <td width="100px">蒋雨</td>
+                            <td width="120pz">13350021234</td>
+                            <td width="100px">54682</td>
+                            <td width="80pz" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px">啊啊啊</td>
+                            <td width="100px">陈晨</td>
+                            <td width="120px">13350021234</td>
+                            <td width="150px" class="date"><div>2019-10-20 10:00:00</div></td>
+                            <td width="100px">是</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">购买人ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">购买人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">领取人ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">领取人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">领取时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1"><span class="date-line"></span><input type="text" class="layui-input" id="test2"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.head-tab3 li');
+    var con = $('.tab-content3 > .tab-pane');
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active current3');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active current3');
+            $(con[i]).addClass('active');
+        }
+    }
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+
+    $('#chutiyan .free-card-btn').on('click', function(){
+        layer.confirm('<div>免赠张数：<input type="text" style="width: 60px;text-align: center;border-radius: 0"/><p class="tishi" style="margin-top: 10px">*可免费赠送好友的卡券张数<br>赠送成功将不扣自己的卡券</p></div>',{
+            btn: ['取消','确定'],
+            area: '416px'
+        }, function(index){
+            layer.close(index);
+        }, function(index){
+            layer.close(index);
+        });
+    });
+
+    // 未设置
+    $('#chutiyan .set-none').on('click', function(){
+        layer.confirm('<div>开启赠送，才可设置哦！<p class="tishi">*用好处激励他人为你推广、裂变、引流</p></div>',{
+            btn: ['取消','确定'],
+            area: '416px'
+        }, function(index){
+            layer.close(index);
+        }, function(index){
+            layer.close(index);
+        });
+    });
+
+    // 开启失败
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('.failure input').on('click', function(){
+            var that=this;
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('<div>转赠开启失败！<p class="tishi">*当前卡券为1张，购买者需至少保留1张</p></div>',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+                ,yes: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.close(index);
+                }
+                ,btn2: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.close(index);
+                }
+                ,cancel: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.close(index);
+                }
+            });
+        });
+    });
+
+    // 开启成功
+    $('.success input').on('click', function(){
+        var that=this;
+        if($(this).is(':checked')){
+            layer.confirm('<div>是否确定开启该卡券转赠？<p class="tishi">*赠送成功将扣减自己的卡券张数<br>购买者只剩1张时不再可赠送好友</p></div>',{
+                btn: ['取消','确定'],
+                area: '416px',
+                yes: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.close(index);
+                }
+                ,btn2: function(index, layero){
+                    $(that).prop('checked','true');
+                    layer.msg('开启成功', {time: 1000});
+                }
+                ,cancel: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.close(index);
+                }
+            });
+        }else{
+            layer.confirm('<div>是否确定关闭该卡券转赠？</div>',{
+                btn: ['取消','确定'],
+                area: '416px',
+                yes: function(index, layero){
+                    $(that).prop('checked','true');
+                    layer.close(index);
+                }
+                ,btn2: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.msg('开启成功', {time: 1000});
+                }
+                ,cancel: function(index, layero){
+                    $(that).prop('checked','true');
+                    layer.close(index);
+                }
+            });
+        }
+    });
+    $('#chutiyan .card-item').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '卡券详情',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['1100px', '97%'],
+            content: '../预售活动/编辑卡券.html' //iframe的url
+        });
+    });
+</script>
+
+
+</body>
+</html>

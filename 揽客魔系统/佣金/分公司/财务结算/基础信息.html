@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础信息</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css"/>
+</head>
+<body id="chutiyan" style="height: auto">
+
+<ul class="nav nav-tabs head-tab" role="tablist">
+    <li role="presentation" class="active"><a>总收款</a></li>
+    <li role="presentation"><a>直营收款</a></li>
+    <li role="presentation"><a>渠道收款</a></li>
+    <li role="presentation"><a>推客收款</a></li>
+    <li role="presentation"><a>推客佣金</a></li>
+    <li role="presentation"><a>调配佣金</a></li>
+    <li role="presentation"><a>已结算</a></li>
+    <li role="presentation"><a>提现申请</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+        <div class="content">
+            <div class="tab_content">
+                <div class="tab_type_l">
+                    <span class="on"><i class="fa fa-list"></i>分公司收款明细</span>
+                    <span class="search"><i class="fa fa-search"></i>搜索</span>
+                    <span class="down"><i class="fa fa-download"></i>导出</span>
+                    <div class="top_tit">
+                        <a href="#"><i class="filter-icon"></i><span>全部</span><em class="fa fa-caret-down"></em></a>
+                        <ul>
+                            <li><a href="#">全部</a></li>
+                            <li><a href="#">直营</a></li>
+                            <li><a href="#">渠道</a></li>
+                            <li><a href="#">推客</a></li>
+                        </ul>
+                    </div>
+                    <p class="tishi">总计 | 收款：0.01</p>
+                </div>
+            </div>
+            <div class="edit_table">
+                <form action="" class="table_cont">
+                    <table border="0" class="table_body">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">分公司</th>
+                            <th width="100px">成交所属</th>
+                            <th width="100px">业务类型</th>
+                            <th width="150px">商品名称</th>
+                            <th width="80pz">购买人头像</th>
+                            <th width="100pz">购买人昵称</th>
+                            <th width="100pz">购买人姓名</th>
+                            <th width="100pz">购买人电话</th>
+                            <th width="100px">支付金额</th>
+                            <th width="140px">支付时间</th>
+                            <th width="100px">推荐人头像</th>
+                            <th width="100px">推荐人昵称</th>
+                            <th width="100px">推荐人姓名</th>
+                            <th width="100px">推荐佣金</th>
+                            <th width="100px">锁定人头像</th>
+                            <th width="100px">锁定人昵称</th>
+                            <th width="100px">锁定人姓名</th>
+                            <th width="100pz">锁定人电话</th>
+                            <th width="100px">锁定佣金</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td>直营</td>
+                            <td>课堂动态</td>
+                            <td>百万客流爆破营</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>13350024512</td>
+                            <td>3980.00</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>0.00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td>新希望商会</td>
+                            <td>系列课</td>
+                            <td>社群核裂变发售模型</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>13350024512</td>
+                            <td>299.00</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>10.00</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>0.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+        <div class="content">
+            <div class="tab_content">
+                <div class="tab_type_l">
+                    <span class="on"><i class="fa fa-list"></i>分公司收款明细</span>
+                    <span class="search"><i class="fa fa-search"></i>搜索</span>
+                    <span class="down"><i class="fa fa-download"></i>导出</span>
+                    <div class="top_tit">
+                        <a href="#"><i class="filter-icon"></i><span>直营</span><em class="fa fa-caret-down"></em></a>
+                        <ul>
+                            <li><a href="#">全部</a></li>
+                            <li><a href="#">直营</a></li>
+                            <li><a href="#">渠道</a></li>
+                            <li><a href="#">推客</a></li>
+                        </ul>
+                    </div>
+                    <p class="tishi">总计 | 收款：0.00</p>
+                </div>
+            </div>
+            <div class="edit_table">
+                <form action="" class="table_cont">
+                    <table border="0" class="table_body">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">分公司</th>
+                            <th width="100px">成交所属</th>
+                            <th width="100px">业务类型</th>
+                            <th width="150px">商品名称</th>
+                            <th width="80pz">购买人头像</th>
+                            <th width="100pz">购买人昵称</th>
+                            <th width="100pz">购买人姓名</th>
+                            <th width="100pz">购买人电话</th>
+                            <th width="100px">支付金额</th>
+                            <th width="140px">支付时间</th>
+                            <th width="100px">推荐人头像</th>
+                            <th width="100px">推荐人昵称</th>
+                            <th width="100px">推荐人姓名</th>
+                            <th width="100px">推荐佣金</th>
+                            <th width="100px">锁定人头像</th>
+                            <th width="100px">锁定人昵称</th>
+                            <th width="100px">锁定人姓名</th>
+                            <th width="100pz">锁定人电话</th>
+                            <th width="100px">锁定佣金</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td>直营</td>
+                            <td>课堂动态</td>
+                            <td>百万客流爆破营</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>3980.00</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>0.00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td>新希望商会</td>
+                            <td>系列课</td>
+                            <td>社群核裂变发售模型</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>299.00</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>10.00</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>0.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab3">
+        <div class="content">
+            <div class="tab_content">
+                <div class="tab_type_l">
+                    <span class="on"><i class="fa fa-list"></i>分公司收款明细</span>
+                    <span class="search"><i class="fa fa-search"></i>搜索</span>
+                    <span class="down"><i class="fa fa-download"></i>导出</span>
+                    <div class="top_tit">
+                        <a href="#"><i class="filter-icon"></i><span>渠道</span><em class="fa fa-caret-down"></em></a>
+                        <ul>
+                            <li><a href="#">全部</a></li>
+                            <li><a href="#">直营</a></li>
+                            <li><a href="#">渠道</a></li>
+                            <li><a href="#">推客</a></li>
+                        </ul>
+                    </div>
+                    <p class="tishi">总计 | 收款：0.00</p>
+                </div>
+            </div>
+            <div class="edit_table">
+                <form action="" class="table_cont">
+                    <table border="0" class="table_body">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">分公司</th>
+                            <th width="100px">成交所属</th>
+                            <th width="100px">业务类型</th>
+                            <th width="150px">商品名称</th>
+                            <th width="80pz">购买人头像</th>
+                            <th width="100pz">购买人昵称</th>
+                            <th width="100pz">购买人姓名</th>
+                            <th width="100pz">购买人电话</th>
+                            <th width="100px">支付金额</th>
+                            <th width="140px">支付时间</th>
+                            <th width="100px">推荐人头像</th>
+                            <th width="100px">推荐人昵称</th>
+                            <th width="100px">推荐人姓名</th>
+                            <th width="100px">推荐佣金</th>
+                            <th width="100px">锁定人头像</th>
+                            <th width="100px">锁定人昵称</th>
+                            <th width="100px">锁定人姓名</th>
+                            <th width="100pz">锁定人电话</th>
+                            <th width="100px">锁定佣金</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td>直营</td>
+                            <td>课堂动态</td>
+                            <td>百万客流爆破营</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>3980.00</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>0.00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td>新希望商会</td>
+                            <td>系列课</td>
+                            <td>社群核裂变发售模型</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>299.00</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>10.00</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>0.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab4">
+        <div class="content">
+            <div class="tab_content">
+                <div class="tab_type_l">
+                    <span class="on"><i class="fa fa-list"></i>分公司收款明细</span>
+                    <span class="search"><i class="fa fa-search"></i>搜索</span>
+                    <span class="down"><i class="fa fa-download"></i>导出</span>
+                    <div class="top_tit">
+                        <a href="#"><i class="filter-icon"></i><span>推客</span><em class="fa fa-caret-down"></em></a>
+                        <ul>
+                            <li><a href="#">全部</a></li>
+                            <li><a href="#">直营</a></li>
+                            <li><a href="#">渠道</a></li>
+                            <li><a href="#">推客</a></li>
+                        </ul>
+                    </div>
+                    <p class="tishi">总计 | 收款：0.00</p>
+                </div>
+            </div>
+            <div class="edit_table">
+                <form action="" class="table_cont">
+                    <table border="0" class="table_body">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">分公司</th>
+                            <th width="100px">成交所属</th>
+                            <th width="100px">业务类型</th>
+                            <th width="150px">商品名称</th>
+                            <th width="80pz">购买人头像</th>
+                            <th width="100pz">购买人昵称</th>
+                            <th width="100pz">购买人姓名</th>
+                            <th width="100pz">购买人电话</th>
+                            <th width="100px">支付金额</th>
+                            <th width="140px">支付时间</th>
+                            <th width="100px">推荐人头像</th>
+                            <th width="100px">推荐人昵称</th>
+                            <th width="100px">推荐人姓名</th>
+                            <th width="100px">推荐佣金</th>
+                            <th width="100px">锁定人头像</th>
+                            <th width="100px">锁定人昵称</th>
+                            <th width="100px">锁定人姓名</th>
+                            <th width="100pz">锁定人电话</th>
+                            <th width="100px">锁定佣金</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td>直营</td>
+                            <td>课堂动态</td>
+                            <td>百万客流爆破营</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>3980.00</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>0.00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td>新希望商会</td>
+                            <td>系列课</td>
+                            <td>社群核裂变发售模型</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>299.00</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>10.00</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>0.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab5">
+        <div class="content">
+            <div class="tab_content">
+                <div class="tab_type_l">
+                    <span class="on"><i class="fa fa-list"></i>推客累计佣金明细</span>
+                    <span class="search"><i class="fa fa-search"></i>搜索</span>
+                    <span class="down"><i class="fa fa-download"></i>导出</span>
+                    <p class="tishi">总计 | 佣金：10.00</p>
+                </div>
+            </div>
+            <div class="edit_table">
+                <form action="" class="table_cont">
+                    <table border="0" class="table_body">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="150px">分公司</th>
+                            <th width="150px">业务类型</th>
+                            <th width="150px">商品名称</th>
+                            <th width="100pz">购买人头像</th>
+                            <th width="100pz">购买人昵称</th>
+                            <th width="100pz">购买人姓名</th>
+                            <th width="100pz">购买人电话</th>
+                            <th width="100px">支付金额</th>
+                            <th width="140px">支付时间</th>
+                            <th width="100px">推客头像</th>
+                            <th width="100px">推客昵称</th>
+                            <th width="100px">推客姓名</th>
+                            <th width="100px">推客手机</th>
+                            <th width="100px">佣金类型</th>
+                            <th width="100px">佣金</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td>课堂动态</td>
+                            <td>百万客流爆破营</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>13350024512</td>
+                            <td>3980.00</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>18950024531</td>
+                            <td>推购</td>
+                            <td>100.00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td>系列课</td>
+                            <td>社群核裂变发售模型</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td></td>
+                            <td>299.00</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>17850024525</td>
+                            <td>推购</td>
+                            <td>300.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab6">
+        <div class="content">
+            <div class="tab_content">
+                <div class="tab_type_l">
+                    <span class="on"><i class="fa fa-list"></i>调配佣金明细</span>
+                    <span class="search"><i class="fa fa-search"></i>搜索</span>
+                    <span class="down"><i class="fa fa-download"></i>导出</span>
+                    <p class="tishi">总计 | 调配佣金：-10.00</p>
+                </div>
+            </div>
+            <div class="edit_table">
+                <form action="" class="table_cont">
+                    <table border="0" class="table_body">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="80pz">头像</th>
+                            <th width="100pz">昵称</th>
+                            <th width="100pz">姓名</th>
+                            <th width="100pz">手机</th>
+                            <th width="150px">原公司</th>
+                            <th width="150px">现公司</th>
+                            <th width="100px">调配佣金</th>
+                            <th width="100px">佣金类型</th>
+                            <th width="140px">调配时间</th>
+                            <th width="100px">触发人</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>18950024531</td>
+                            <td>香港分公司</td>
+                            <td>北京分公司</td>
+                            <td>+10.00</td>
+                            <td>佣金余额</td>
+                            <td class="date"><div>2020-03-01  10:00:00</div></td>
+                            <td>操作调配的人</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="cover-pic"></td>
+                            <td><a href=""></a></td>
+                            <td></td>
+                            <td></td>
+                            <td>西安分公司</td>
+                            <td>北京分公司</td>
+                            <td>+10.00</td>
+                            <td>提现被拒</td>
+                            <td class="date"><div></div></td>
+                            <td>拒绝提现的人</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="cover-pic"></td>
+                            <td><a href=""></a></td>
+                            <td></td>
+                            <td></td>
+                            <td>总公司</td>
+                            <td>北京分公司</td>
+                            <td>+10.00</td>
+                            <td>预计分佣</td>
+                            <td class="date"><div></div></td>
+                            <td>动态课签到人</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="cover-pic"></td>
+                            <td><a href=""></a></td>
+                            <td></td>
+                            <td></td>
+                            <td>北京分公司</td>
+                            <td>香港分公司</td>
+                            <td>-10.00</td>
+                            <td>佣金余额</td>
+                            <td class="date"><div></div></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="cover-pic"></td>
+                            <td><a href=""></a></td>
+                            <td></td>
+                            <td></td>
+                            <td>北京分公司</td>
+                            <td>西安分公司</td>
+                            <td>-10.00</td>
+                            <td>提现被拒</td>
+                            <td class="date"><div></div></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="cover-pic"></td>
+                            <td><a href=""></a></td>
+                            <td></td>
+                            <td></td>
+                            <td>北京分公司</td>
+                            <td>总分公司</td>
+                            <td>-10.00</td>
+                            <td>预计分佣</td>
+                            <td class="date"><div></div></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab7">
+        <div class="content">
+            <div class="tab_content">
+                <div class="tab_type_l">
+                    <span class="on"><i class="fa fa-list"></i>推客已结算佣金记录</span>
+                    <span class="search"><i class="fa fa-search"></i>搜索</span>
+                    <span class="down"><i class="fa fa-download"></i>导出</span>
+                    <p class="tishi">总计 | 已结算：0.00</p>
+                </div>
+            </div>
+            <div class="edit_table">
+                <form action="" class="table_cont">
+                    <table border="0" class="table_body">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="150px">分公司</th>
+                            <th width="80px">推客头像</th>
+                            <th width="100px">推客昵称</th>
+                            <th width="100px">推客姓名</th>
+                            <th width="100px">推客手机</th>
+                            <th width="80pz">会员等级</th>
+                            <th width="100pz">提现金额</th>
+                            <th width="100pz">服务费金额</th>
+                            <th width="100px">提现后余额</th>
+                            <th width="150px">提现备注</th>
+                            <th width="140px">申请时间</th>
+                            <th width="100px">状态</th>
+                            <th width="140px">处理时间</th>
+                            <th width="100px">处理人</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>18950024531</td>
+                            <td>联创人</td>
+                            <td>5800.00</td>
+                            <td>58.00</td>
+                            <td>100.00</td>
+                            <td>麻烦了</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td>已付款</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td>lkm</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left"><a href="">四川梦想科技</a></td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">乌拉拉</a></td>
+                            <td>李雷磊</td>
+                            <td>18950024531</td>
+                            <td>VIP</td>
+                            <td>5800.00</td>
+                            <td>18.00</td>
+                            <td>0.00</td>
+                            <td>-</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td>已付款</td>
+                            <td class="date"><div>2019-10-20  10:00:00</div></td>
+                            <td>lkm</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab8">
+        <div class="content">
+            <div class="tab_content">
+                <div class="tab_type_l">
+                    <span class="on"><i class="fa fa-list"></i>推客提现申请</span>
+                    <span class="">批量付款</span>
+                    <span class="">批量不通过</span>
+                    <span class="search txsq-search"><i class="fa fa-search"></i>搜索</span>
+                    <span class="down"><i class="fa fa-download"></i>导出</span>
+                    <p class="tishi">总计 | 申请提现金额：0.00</p>
+                </div>
+            </div>
+            <div class="edit_table">
+                <form action="" class="table_cont">
+                    <table border="0" class="table_body">
+                        <thead>
+                        <tr>
+                            <th width="50px">
+                                <label for="a1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="a1">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </th>
+                            <th width="50px">序号</th>
+                            <th width="100pz">分公司</th>
+                            <th width="80pz">推客头像</th>
+                            <th width="100pz">推客昵称</th>
+                            <th width="100pz">推客姓名</th>
+                            <th width="100px">推客手机</th>
+                            <th width="100px">会员等级</th>
+                            <th width="100px">提现金额</th>
+                            <th width="100px">服务费金额</th>
+                            <th width="100px">提现后余额</th>
+                            <th width="100px">提现备注</th>
+                            <th width="140px">申请时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label for="a2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="a2">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>1</td>
+                            <td>四川梦想科技</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td>13350024578</td>
+                            <td>联创人</td>
+                            <td>5800.00</td>
+                            <td>58.00</td>
+                            <td>100.00</td>
+                            <td>麻烦了</td>
+                            <td class="date"><div>2019-12-01 10:00:00</div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="a3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="a3">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>2</td>
+                            <td>四川梦想科技</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小西呀么西</a></td>
+                            <td>蒋雨</td>
+                            <td>13350024578</td>
+                            <td>VIP</td>
+                            <td>1800.00</td>
+                            <td>18.00</td>
+                            <td>0.00</td>
+                            <td>-</td>
+                            <td class="date"><div>2019-12-01 10:00:00</div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/index.js"></script>
+
+<script>
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.nav-tabs li');
+    var con = $('.tab-content .tab-pane');
+    console.log(con);
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active');
+            $(con[i]).addClass('active');
+        }
+    }
+
+    $(".nav-tabs li").on("click", function () {
+        var index = $(this).index();
+        $(this).parent().siblings().find(".tab-pane").hide().eq(index).show();
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+
+</script>
+
+
+
+</body>
+</html>

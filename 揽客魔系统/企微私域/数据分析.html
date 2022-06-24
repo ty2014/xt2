@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据分析</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/newStyle.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+
+    </style>
+</head>
+<body id="chutiyan" style="">
+
+
+<ul class="msgBlock">
+    <li>
+        <p>扫码总人数<i class="tips tip1"></i></p>
+        <span>4</span>
+        <div>今日扫码人数 0</div>
+    </li>
+    <li>
+        <p>留存总人数<i class="tips tip2"></i></p>
+        <span>4</span>
+        <div>今日留存人数 0</div>
+    </li>
+    <li>
+        <p>净增客户数<i class="tips tip3"></i></p>
+        <span>4</span>
+        <div>今日净增客户数 0</div>
+    </li>
+    <li>
+        <p>流失客户人数<i class="tips tip4"></i></p>
+        <span>0</span>
+        <div>今日流失客户人数 0</div>
+    </li>
+</ul>
+
+<!--
+    完成数：当前层数第一阶所有完成的人数
+    k值 = 当前层级人数 / 上一层级人数
+-->
+<div id="main1" style="height: 400px;width: 100%;background: #fff;"></div>
+
+<div class="content mgT-10">
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips export"><i class="export-tips"></i>导出</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">编号</th>
+                        <th width="400px" class="left">客户信息</th>
+                        <th width="100px" class="left">客户状态</th>
+                        <th width="100px" class="left">客户类型<i class="tips tip5"></i></th>
+                        <!--<th width="100px" class="left">加入方式</th>-->
+                        <th width="200px" class="left">推荐人</th>
+                        <th width="200px" class="left">获客成员</th>
+                        <th width="150px" class="left">扫码时间</th>
+                        <th width="100px" class="left">完成任务</th>
+                        <th width="200px" class="left">渠道</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="400px">
+                            <div class="newTable_cont">
+                                <div class="cover-pic">
+                                    <img src="../images/null.jpg" alt="">
+                                    <i class="sex_icon sex_icon_woman"></i>
+                                    <!--<i class="sex_icon sex_icon_man"></i>-->
+                                </div>
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <a class="line1 user_nc mgR-4">小呀么小西几</a>/<span class="line1 mgL-4">蒋小雨</span>
+                                        <span class="mgL-8 wxcolor">@微信</span>
+                                    </div>
+                                    <div class="cont_foot">
+                                        <div class="statu statu2 mgR-8"><span>未身份验证</span></div>
+                                        <span class="statu_id">ID:123456</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="100px">
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <div class="statu statu1">
+                                            <span>未流失</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="100px">
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        增量用户
+                                    </div>
+                                </div>
+                            </div>
+                        <!--</td>-->
+                        <!--<td width="100px">-->
+                        <!--    <div class="newTable_cont">-->
+                        <!--        <div class="cont_box">-->
+                        <!--            <div class="cont_top">-->
+                        <!--                <div>扫码加入</div>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</td>-->
+                        <td width="200px">
+                            <div class="newTable_cont">
+                                <div class="cover-pic">
+                                    <img src="../images/null.jpg" alt="">
+                                </div>
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <a class="line1 user_nc mgR-4">小小</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="200px">
+                            <div class="newTable_cont">
+                                <div class="cover-pic">
+                                    <img src="../images/null.jpg" alt="">
+                                </div>
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <a class="line1 user_nc mgR-4">小呀么小西几</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="150px">
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <div>2019-04-26 14:20:41</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="100px">
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <div>一阶任务</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="200px">
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        小呀么小西几
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cover-pic">
+                                    <img src="../images/null.jpg" alt="">
+                                    <i class="sex_icon sex_icon_man"></i>
+                                </div>
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <a class="line1 user_nc mgR-4">国家一级保护废物</a>/<span class="line1 mgL-4">蒋小雨</span><span class="mgL-8 qywxcolor">@企业微信</span>
+                                    </div>
+                                    <div class="cont_foot">
+                                        <div class="statu statu1 mgR-8"><span>已身份验证</span></div>
+                                        <span class="statu_id ">ID:123456</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <div class="statu statu1">
+                                            <span>未流失</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        增量用户
+                                    </div>
+                                </div>
+                            </div>
+                        <!--</td>-->
+                        <!--<td>-->
+                        <!--    <div class="newTable_cont">-->
+                        <!--        <div class="cont_box">-->
+                        <!--            <div class="cont_top">-->
+                        <!--                <div>链接进入</div>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</td>-->
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cover-pic">
+                                    <img src="../images/null.jpg" alt="">
+                                </div>
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <a class="line1 user_nc mgR-4">小小</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cover-pic">
+                                    <img src="../images/null.jpg" alt="">
+                                </div>
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <a class="line1 user_nc mgR-4">小呀么小西几</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        <div>一阶任务</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="newTable_cont">
+                                <div class="cont_box">
+                                    <div class="cont_top">
+                                        小呀么小西几
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">客户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">客户昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">成员昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">推荐人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">渠道:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">客户类型:</span>
+            <div class="account-r chose_item">
+                <label for="from1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="from" id="from1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">增量用户</span>
+                </label>
+                <label for="from2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="from" id="from2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">存量用户</span>
+                </label>
+                <label for="from3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="from" id="from3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">未知</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">客户状态:</span>
+            <div class="account-r chose_item">
+                <label for="gz1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gz" id="gz1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">未流失</span>
+                </label>
+                <label for="gz2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gz" id="gz2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">已流失</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">扫码时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test1" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/echarts.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+    var charts=[];
+
+    var main1 = echarts.init(document.getElementById('main1'));
+    var xmainData= [1,2,3,4,5,6];
+    option1 = {
+        color: ['#d73e1c', '#eaab22'],
+        title: {
+            text: '裂变趋势分析',
+            top:'10',
+            left:'10',
+            textStyle:{
+                fontSize:14
+            }
+        },
+        tooltip: {
+            trigger: 'axis',
+            formatter:function (params) {
+                console.log(params)
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;">' +
+                    '<span>层级：'+ params[0].name + '</span>' +
+                    '</div>';
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div id="chartCont" style="width: 200px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;">' +
+                        '<div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>'
+                        + '<span>'+params[i].value +'</span>' +
+                        '</div>';
+                }
+                res += '<div style="display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;">' +
+                    '<div><span style="width: 10px;height: 10px;border-radius: 50%;background: #815105;margin-right: 6px;"></span><span>K值</span></div>'
+                    + '<span>'+ 10 +'</span>' + // 动态计算   k值 = 当前层完成人数 / 上一层完成人数
+                    '</div>';
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:13
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        legend: {
+            data: ['用户数','完成数'],
+            top:'10',
+            right:'10',
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            top:'20%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                boundaryGap: false,
+                data: xmainData
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                axisLine:{
+                    show:true,
+                },
+                axisTick:{
+                    show:true
+                }
+            }
+
+        ],
+        series: [
+            {
+                name: '用户数',
+                type: 'line',
+                // stack: 'Total',
+                areaStyle: {},
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [120, 132, 101, 134, 90, 230]
+            },
+            {
+                name: '完成数',
+                type: 'line',
+                // stack: 'Total',
+                areaStyle: {},
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [100, 112, 11, 23, 20, 33]
+            },
+        ]
+    };
+
+    main1.setOption(option1);
+
+    charts.push(main1);
+
+    // 重载图表
+    setTimeout(function (){
+        window.onresize = function () {
+            charts.forEach((item,index,arr)=>{
+                item.resize();
+            })
+
+        }
+    },200);
+
+
+</script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .tip1').on('mouseenter',function(){
+        this.index =layer.tips('扫码总人数：扫描渠道码添加企业成员的总客户数 </br></br>' +
+            '今日扫码人数：今日扫描渠道码添加企业成员的总客户数', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:280
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+    $('#chutiyan .tip2').on('mouseenter',function(){
+        this.index =layer.tips('留存总人数：未删除企业成员的客户数</br></br>' +
+            '今日留存人数：今日扫码添加企业成员后未删除企业成员的客户数', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:280
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+    $('#chutiyan .tip3').on('mouseenter',function(){
+        this.index =layer.tips('净增客户数：参与活动的净增客户数(未添加过企业成员的客户)</br></br>' +
+            '今日净增客户数：今日净增客户数', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:280
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+    $('#chutiyan .tip4').on('mouseenter',function(){
+        this.index =layer.tips('流失客户人数：扫描渠道码添加企业成员之后删除了企业成员的客户数</br></br>' +
+            '今日流失客户人数：今日扫描渠道码添加企业成员之后删除了企业成员的客户数', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:280
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+    $('#chutiyan .tip5').on('mouseenter',function(){
+        this.index =layer.tips('存量用户：扫描渠道码之前添加过企业成员的客户</br>' +
+            '增量用户：扫描渠道码之前未添加过任何企业成员的客户</br>' +
+            '未知：2021-08-19日前扫码的客户类型不能统计到', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:280
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+</script>
+</body>
+</html>

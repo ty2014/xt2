@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>退款申请</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan" style="min-width: auto;background: #fff;padding: 0">
+
+<div class="top-p-detail">
+    <div class="detail-list">
+        <div>
+            <div>纪梵希2019新款范冰冰力荐渐变果冻口红（250ml；大红色）x1</div>
+            <span>未发货</span>
+        </div>
+        <div>
+            <div>商品消费：199.00</div>
+        </div>
+        <div>
+            <div>快递运费：10.00</div>
+        </div>
+    </div>
+    <div  class="detail-list detail-tips">
+        <div class="ju-start flex-start">
+            <span>2019-10-15 10:00:00，</span>
+            <div>
+                <p>买家申请退款</p>
+                <div>
+                    <p>退款原因：不想买了</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="activity_set ">
+    <div class="a_list">
+        <span class="a_list_l">处理意见：</span>
+        <div class="a_list_r checked_chose">
+            <label for="ps1" class="radio active">
+                <div class="chose">
+                    <input type="radio" checked name="ps" id="ps1" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">同意退款</span>
+            </label>
+            <label for="ps2" class="radio">
+                <div class="chose">
+                    <input type="radio" name="ps" id="ps2" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">拒绝退款</span>
+            </label>
+        </div>
+    </div>
+    <div class="box-content">
+        <div class="box">
+            <div class="a_list">
+                <span class="a_list_l">需要退货：</span>
+                <div class="a_list_r checked_chose">
+                    <label for="yj1" class="radio active">
+                        <div class="chose">
+                            <input type="radio" checked name="yj" id="yj1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">否</span>
+                    </label>
+                    <label for="yj2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="yj" id="yj2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">是</span>
+                    </label>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="box"></div>
+                <div class="box">
+                    <div class="a_list flex-start">
+                        <span class="a_list_l top5">退货地址：</span>
+                        <!--  退货地址，每个店端用上次输入结果  -->
+                        <div class="a_list_r checked_chose">
+                            <div class="list-column">
+                                <div>
+                                    <input type="text" placeholder="收货人" style="width: 120px;margin-right: 10px">
+                                    <input type="text" placeholder="联系电话">
+                                </div>
+                                <div>
+                                    <!-- 退货地址，每个店调用上次输入结果 -->
+                                    <input type="text" placeholder="详细地址" style="width: 330px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list flex-start">
+                <span class="a_list_l top5">退款金额：</span>
+                <!--
+                    退款金额，默认放最大可退金额
+                    最多可退金额=商品消费+快递运费
+
+                    特别说明：退款不退积分，且赠送积分归0
+                -->
+                <div class="a_list_r r-tishi">
+                    <input type="text" placeholder="209.00" style="width: 100px"><span class="tishi2">*最多可退209.00</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <!-- 1. 不需要退货时的提示 -->
+                    <p class="tishi mgL-0">*确定退款后，退款将立即退回买家微信账户；退款金额请和买家将协商一致</p>
+
+                    <!-- 2. 需要退货时的提示 -->
+                    <!--<p class="tishi mgL-0">*确定后，将发送退货地址给买家；收到退货确认后，再退钱给买家</p>-->
+
+                    <!-- 3. 拒绝退款时的提示 -->
+                    <!--<p class="tishi mgL-0">*拒绝退款，买家将无法对该商品再次申请退款；不合理的拒绝买家可发起投诉</p>-->
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="a_list">
+                <span class="a_list_l">拒绝理由：</span>
+                <div class="a_list_r"><input type="text" class="w-620"></div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list"><span class="btn btn-sure">确定</span><span class="btn btn-cancel">取消</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script>
+    $(".activity_set label").each(function(index){
+        $(this).click(function(){
+            $(".activity_set label").removeClass("active");
+            $(".activity_set label").eq(index).addClass("active");
+            $(this).parent().parent().siblings('.box-content').children().eq($(this).index()).show().siblings().hide();
+        });
+        if($(this).hasClass('active')){
+            $(this).parent().parent().siblings('.box-content').children().eq($(this).index()).show().siblings().hide();
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>推广用户</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+
+<div class="content">
+    <div class="page-title">推广用户</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul style="display: none;">
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">平台</a></li>
+                    <li><a href="#">渠道</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="200px" class="left">用户</th>
+                        <th width="100px">用户姓名</th>
+                        <th width="120px">用户手机</th>
+                        <th width="100px">累计订单</th>
+                        <th width="150px">推广时间</th>
+                        <th width="200px" class="left">锁定人（上级）</th>
+                        <th width="200px" class="left">第一单推荐人</th>
+                        <th width="200px" class="left">渠道</th>
+                        <th width="100px">渠道姓名</th>
+                        <th width="120px">渠道电话</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="200px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null.jpg" alt="">
+                                <a class="wrap-noml">郑先生</a>
+                            </div>
+                        </td>
+                        <td width="100px">郑宇浩</td>
+                        <td width="120px">15100005689</td>
+                        <td width="100px"><a class="dd_num">12</a></td>
+                        <td width="150px" class="date"><div>2019-10-20 10:00:00</div></td>
+                        <td width="200px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null.jpg" alt="">
+                                <a class="wrap-noml">小土豆</a>
+                            </div>
+                        </td>
+                        <td width="200px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null.jpg" alt="">
+                                <a class="wrap-noml">小土豆</a>
+                            </div>
+                        </td>
+                        <td width="200px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null.jpg" alt="">
+                                <a class="wrap-noml qd_name">郑传华</a>
+                            </div>
+                        </td>
+                        <td width="100px">蒋雨</td>
+                        <td width="120px">15100005689</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../images/null.jpg" alt="">
+                                <a class="wrap-noml">小也么小西几</a>
+                            </div>
+                        </td>
+                        <td>唐锦山</td>
+                        <td>18600005689</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="left">平台</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">用户昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">用户姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">用户手机:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">渠道昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">渠道姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">渠道电话:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">锁定人（上级）:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">第一单推荐人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">类型:</span>
+            <div class="account-r chose_item">
+                <label for="cj1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">平台</span>
+                </label>
+                <label for="cj2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">渠道</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">推广时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-120" id="push-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">渠道状态:</div>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="statu-togg" checked class="toggle-button" name="switch">
+                    <label for="statu-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">启用</span>
+                        <span class="text off">停用</span>
+                    </label>
+                </div>
+                <span class="tishi">* 渠道停用后不再可推广，其下派发的“未激活”卡片将不可被激活</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">关联用户:</div>
+            <div class="a_list_r">
+                <img src="../../../images/head.jpg" alt="" class="user-pic"><a >小土豆</a>（ID：72248）
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">负责人头像:</div>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" layer-index="0">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">负责人昵称:</div>
+                <div class="a_list_r"><input type="text" value="郑先生" disabled></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">负责人姓名:</div>
+                <div class="a_list_r"><input type="text" value="郑宇浩" disabled></div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">负责人电话:</div>
+                <div class="a_list_r"><input type="text" value="15100005689" disabled></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">微信号:</div>
+                <div class="a_list_r"><input type="text" value="wx15100005689" disabled></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">微信二维码:</div>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" layer-index="0">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <!--
+                渠道推广码：首次添加成功之前是没有的，首次添加成功之后，生成渠道推广码，通过渠道推广码扫码的用户，直接绑定到该渠道
+            -->
+            <div class="a_list_l">渠道推广码:</div>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo2">
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" layer-index="0">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">关闭</span></div>
+</div>
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '506px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .dd_num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '郑先生',  // 商品名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '订单详情.html' //iframe的url
+        });
+    });
+
+    $('#chutiyan .qd_name').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '添加渠道',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['900px', '75%'],
+            skin: 'activity_set activity_set2 w-100',
+            content: $("#push-sure")
+        });
+    });
+
+</script>
+</body>
+</html>

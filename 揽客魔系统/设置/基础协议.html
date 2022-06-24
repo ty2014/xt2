@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础协议</title>
+    <link rel="stylesheet" href="../css/font-awesome.css" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">基础协议</div>
+    <div class="tab_content2">
+        <div class="tab_type_2"></div>
+        <div class="tab_type_2"><span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span></div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="150px">使用场景</th>
+                        <th width="300px" class="left">协议标题</th>
+                        <th width="100px">协议状态</th>
+                        <th width="100px">优先级</th>
+                        <th width="200px">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="150px">登录注册</td>
+                        <td width="300px" class="left"><a class="wrap-noml edit_btn">用户信息授权协议</a></td>
+                        <td width="100px" class="statu statu2"><span>停用</span></td>
+                        <td width="100px">1</td>
+                        <td width="200px" class="cz_btn">
+                            <button type="button" class="btn-type1 edit_btn">编辑</button>
+                            <button type="button" class="btn-type2 del_btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td class="left"><a class="wrap-noml edit_btn">服务协议和隐私政策</a></td>
+                        <td class="statu statu1"><span>启用</span></td>
+                        <td>2</td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1 edit_btn">编辑</button>
+                            <button type="button" class="btn-type2 del_btn">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--    -->
+<div class="activity_set activity_set2 w-120" id="edit_cont" style="display: none;">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">协议标题:</span>
+            <div class="a_list_r"><input type="text" style="width: 45%"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">使用场景:</span>
+            <div class="a_list_r">
+                <div class="select-text" style="min-width: 200px">
+                    <span class="select-txt">请选择</span>
+                    <ul>
+                        <li>登录注册</li>
+                        <li>后续新功能其它</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">协议状态:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper ">
+                            <input type="checkbox" id="cont1-togg4" checked  class="toggle-button" name="switch">
+                            <label for="cont1-togg4" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">启用</span>
+                                <span class="text off">停用</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">优先级:</span>
+                <div class="a_list_r">
+                    <input type="number" class="m_width center" value="100">
+                    <p class="tishi">*数字越大排序越前</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">协议内容:</span>
+            <div class="a_list_r">
+                <textarea style="width: 80%;height: 400px;">此处放编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .edit_btn,.add_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '直播疯狂掘金',    // 协议名称
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '90%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#edit_cont")
+        });
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del_btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定删除该协议？',{
+                skin: 'failureskin ',    //类名
+                icon:2,
+                title:'提示',
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

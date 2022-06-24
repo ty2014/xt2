@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页自定义</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .viewPhone_cont{position: absolute;left: 60%;top: 60px;z-index: 99}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto">
+
+
+<div class="page-title">首页自定义</div>
+
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 13px">顶部自定义区:</span>
+            <div class="a_list_r" style="align-items: flex-start">
+                <div style="width: 100%">
+                    <p class="tishi mgL-0" style="margin-bottom: 10px">*顶部自定义区是在创建活码列表上方</p>
+                    <textarea style="width: 50%;height: 400px;">富文本编辑器</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 13px">底部自定义区:</span>
+            <div class="a_list_r" style="align-items: flex-start">
+                <div style="width: 100%">
+                    <p class="tishi mgL-0" style="margin-bottom: 10px">*底部自定义区是在页面底部版权上方</p>
+                    <textarea style="width: 50%;height: 400px;">富文本编辑器</textarea>
+                </div>
+            </div>
+        </div>
+        <!--  右侧可视化  -->
+        <div class="viewPhone_cont">
+            <div class="viewPhone_head"><span></span><span></span></div>
+            <div class="viewPhone_box viewbox-contetn">
+                <img src="http://cshtml.lkmsxy.com/csimg/hm1.jpg" alt="" style="width: 100%">
+            </div>
+            <div class="viewPhone_foot"><span></span></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    $('#cj1').click(function () {
+        $('.free_cont').hide()
+    });
+    $('#cj2').click(function () {
+        $('.free_cont').show()
+    });
+
+    $('#pay-togg').click(function () {
+        if($('#pay-togg').is(':checked')){
+            $('.pay_cont2').hide();
+            $('.pay_cont1').show();
+        }else{
+            $('.pay_cont2').show();
+            $('.pay_cont1').hide();
+        }
+    });
+
+
+    $('#chutiyan .pc-user').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '选择用户',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '排除人员.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .pc-user2').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '选择用户',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '排除人员.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .zdy').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '付费页面-自定义',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['900px', '506px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#zdy-sure")
+        });
+    });
+</script>
+
+
+</body>
+</html>

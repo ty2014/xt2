@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品牌管理-添加</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0;height: 100%">
+
+<div class="account-cont w-100">
+    <div class="account">
+        <span class="account-l">品牌名称：</span>
+        <div class="account-r"><input type="text"></div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">品牌logo：</span>
+        <div class="account-r">
+            <div class="file-cont">
+                <!-- 给 file-btn 添加上传图片功能，  -->
+                <div class="file-btn"></div>
+                <p class="tishi2">*图片为1：1比例效果；大小不超过1000KB</p>
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">排序码：</span>
+        <div class="account-r">
+            <div class="slide-select">
+                <select>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                    <option value="">03</option>
+                </select>
+                <img src="../../images/bottom-icon.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">状态：</span>
+        <div class="account-r">
+            <div class="htmleaf-content">
+                <div class="checkbox" id="vip-btn">
+                    <input type="checkbox"/>
+                    <label></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="account_btn"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+
+
+</body>
+</html>

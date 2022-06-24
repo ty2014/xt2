@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员选择</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="head-tab2">
+    <li class="active current"><a>未选择人员</a></li>
+    <li><a>已选择人员</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content content2">
+    <div class="tab-pane active">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            </div>
+            <div class="tab_type_2">
+                <span class="tab-tips add_btn"><i class="plus-tips"></i>完成选择</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100pz">操作</th>
+                            <th width="80px">头像</th>
+                            <th width="150pz">昵称</th>
+                            <th width="100pz">姓名</th>
+                            <th width="80pz">姓别</th>
+                            <th width="100pz">手机</th>
+                            <th width="150px">上级昵称</th>
+                            <th width="150px">顶级昵称</th>
+                            <th width="80px">是否客户</th>
+                            <th width="120px">获得会员资格方式</th>
+                            <th width="100pz">会员等级</th>
+                            <th width="140pz">会员开始时间</th>
+                            <th width="140pz">会员到期时间</th>
+                            <th width="100pz">用户来源</th>
+                            <th width="120pz">锁定方式</th>
+                            <th width="140pz">锁定时间</th>
+                            <th width="140pz">关注时间</th>
+                            <th width="100pz">关注状态</th>
+                            <th width="140pz">入库时间</th>
+                            <th width="100pz">状态</th>
+                            <th width="100pz">身份证认证</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100pz" class="cz_btn"><button type="button" class="btn-type1 chose-btn">选入</button></td>
+                            <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td width="150pz" class="left"><a href="">wvjyh723</a></td>
+                            <td width="100pz" class="left">wvjyh723</td>
+                            <td width="80px">女</td>
+                            <td width="100pz">13350021234</td>
+                            <td width="150px" class="left"><a href="">陈俊波【揽客魔】导师</a></td>
+                            <td width="150pz" class="left">嚯哈嚯</td>
+                            <td width="80px">是</td>
+                            <td width="120px">购买</td>
+                            <td width="100px">VIP</td>
+                            <td width="140pz" class="date">2019-10-01 10:00:01</td>
+                            <td width="140pz" class="date">2019-10-01 10:00:01</td>
+                            <td width="100px">公众号注册</td>
+                            <td width="120px"><a href="">公众号链接锁定</a></td>
+                            <td width="140pz" class="date">2019-10-01 10:00:01</td>
+                            <td width="140pz" class="date">2019-10-01 10:00:01</td>
+                            <td width="100px" class="statu statu1"><span>关注中</span></td>
+                            <td width="140pz" class="date">2019-10-01 10:00:01</td>
+                            <td width="100px" class="statu statu1"><span>有效</span></td>
+                            <td width="100px"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            </div>
+            <div class="tab_type_2">
+                <span class="tab-tips add_btn"><i class="plus-tips"></i>完成选择</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100pz">操作</th>
+                            <th width="80px">头像</th>
+                            <th width="150pz">昵称</th>
+                            <th width="100pz">姓名</th>
+                            <th width="80pz">姓别</th>
+                            <th width="100pz">手机</th>
+                            <th width="150px">上级昵称</th>
+                            <th width="150px">顶级昵称</th>
+                            <th width="80px">是否客户</th>
+                            <th width="120px">获得会员资格方式</th>
+                            <th width="100pz">会员等级</th>
+                            <th width="140pz">会员开始时间</th>
+                            <th width="140pz">会员到期时间</th>
+                            <th width="100pz">用户来源</th>
+                            <th width="120pz">锁定方式</th>
+                            <th width="140pz">锁定时间</th>
+                            <th width="140pz">关注时间</th>
+                            <th width="100pz">关注状态</th>
+                            <th width="140pz">入库时间</th>
+                            <th width="100pz">状态</th>
+                            <th width="100pz">身份证认证</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100pz" class="cz_btn"><button type="button" class="btn-type2 del-btn">排除</button></td>
+                            <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td width="150pz" class="left"><a href="">店来|Mr.武〰.</a></td>
+                            <td width="100pz" class="left">店来|Mr.武〰.</td>
+                            <td width="80px">女</td>
+                            <td width="100pz">13350021234</td>
+                            <td width="150px" class="left"><a href="">任云志【郑传华】老师助理035号</a></td>
+                            <td width="150pz" class="left">嚯哈嚯</td>
+                            <td width="80px">是</td>
+                            <td width="120px">购买</td>
+                            <td width="100px">VIP</td>
+                            <td width="140pz" class="date">2019-10-01 10:00:01</td>
+                            <td width="140pz" class="date">2019-10-01 10:00:01</td>
+                            <td width="100px">公众号注册</td>
+                            <td width="120px"><a href="">公众号链接锁定</a></td>
+                            <td width="140pz" class="date">2019-10-01 10:00:01</td>
+                            <td width="140pz" class="date">2019-10-01 10:00:01</td>
+                            <td width="100px" class="statu statu1"><span>关注中</span></td>
+                            <td width="140pz" class="date">2019-10-01 10:00:01</td>
+                            <td width="100px" class="statu statu1"><span>有效</span></td>
+                            <td width="100px"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">手机:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">上级昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">用户来源:</span>
+            <div class="account-r chose_item">
+                <label for="yhly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="yhly" id="yhly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">公众号注册</span>
+                </label>
+                <label for="yhly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="yhly" id="yhly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">小程序注册</span>
+                </label>
+                <label for="yhly3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="yhly" id="yhly3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">APP注册</span>
+                </label>
+                <label for="yhly4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="yhly" id="yhly4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">其他</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员资格来源:</span>
+            <div class="account-r chose_item">
+                <label for="hyzgly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="hyzgly" id="hyzgly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">购买会员资格</span>
+                </label>
+                <label for="hyzgly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="hyzgly" id="hyzgly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">报名指定活动</span>
+                </label>
+                <label for="hyzgly3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="hyzgly" id="hyzgly3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">人工调整</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">关注状态:</span>
+            <div class="account-r chose_item">
+                <label for="gzzt1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gzzt" id="gzzt1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非公众号用户</span>
+                </label>
+                <label for="gzzt2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gzzt" id="gzzt2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">关注中</span>
+                </label>
+                <label for="gzzt3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gzzt" id="gzzt3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">已取消关注</span>
+                </label>
+                <label for="gzzt4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gzzt" id="gzzt4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">未关注</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">锁定方式:</span>
+            <div class="account-r chose_item">
+                <label for="sdfs1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="sdfs" id="sdfs1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">公众号链接锁定</span>
+                </label>
+                <label for="sdfs2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="sdfs" id="sdfs2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">公众号关注锁定</span>
+                </label>
+                <label for="sdfs3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="sdfs" id="sdfs3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">APP链接锁定</span>
+                </label>
+                <label for="sdfs4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="sdfs" id="sdfs4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">小程序链接锁定</span>
+                </label>
+                <label for="sdfs5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="sdfs" id="sdfs5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通浏览器链接锁定</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">关注时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '506px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .del-btn').on('click', function(){
+        layer.confirm('是否确定将该用户排除？', {
+            btn: ['取消','确定']
+        }, function(index){
+            layer.close(index);
+        }, function(){
+            layer.msg('排除成功', {time: 1000});
+        });
+    });
+
+    $('.chose-btn').click(function () {
+        if($(this).text()==="选入"){
+            $(this).text('已选入').css({'background':'#F7B116','border-color':'#F7B116'});
+        }else{
+            $(this).text('选入').css({'background':'#008089','border-color':'#008089'});
+        }
+    });
+
+</script>
+</body>
+</html>

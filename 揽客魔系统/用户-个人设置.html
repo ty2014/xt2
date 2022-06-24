@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="padding: 0">
+
+<div class="activity_set activity_set2 w-120" style="padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">联系方式</span>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">手机:</div>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">电话:</div>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">Email:</div>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">绑定微信:</div>
+                <div class="a_list_r">
+                    <div style="position: relative;width: 40px;min-width: 40px;height: 40px;border-radius: 50%;margin-right: 16px;">
+                        <img src="images/head.jpg" alt="" style="width: 100%;height: 100%;border-radius: 50%">
+                        <img src="images/wx.png" alt="" style="position: absolute;width: 20px;height: 20px;border-radius: 50%;bottom: 0;right: 0;">
+                    </div>
+                    <p>小土豆</p>
+                    <a class="edit_icon mgL-auto changeWX">去更换</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/layui/lay/modules/layer.js"></script>
+
+<script>
+    $('.changeWX').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: '绑定微信',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['800px', '540px'],
+            content: '重新绑定微信.html' //iframe的url
+        });
+    });
+</script>
+
+</body>
+</html>

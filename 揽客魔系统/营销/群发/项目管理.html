@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目管理</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">项目管理</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+            <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+        </div>
+        <div class="tab_type_2">
+            <a href="群发-添加模板.html"><span class="tab-tips add_btn"><i class="plus-tips"></i>添加模板</span></a>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="200px">项目名称</th>
+                        <th width="100px">现有人数</th>
+                        <th width="100pz">发送次数</th>
+                        <th width="100pz">退订人数</th>
+                        <th width="200pz">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="200px" class="left">某某项目组01</td>
+                        <td width="100px"><a class="now-num">1500</a></td>
+                        <td width="100px"><a class="send-num">0</a></td>
+                        <td width="100px"><a class="return-num">100</a></td>
+                        <td width="200px" class="cz_btn">
+                            <a href="群发-添加模板.html"><button type="button" class="btn-type1">编辑</button></a>
+                            <button type="button" class="btn-type2 del-btn">删除</button>
+                            <a href="群发.html"><button type="button">群发</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">某某项目组02</td>
+                        <td><a class="now-num">1500</a></td>
+                        <td><a class="send-num">5</a></td>
+                        <td><a class="return-num">100</a></td>
+                        <td class="cz_btn">
+                            <a href="群发-添加模板.html"><button type="button" class="btn-type1">编辑</button></a>
+                            <button type="button" class="btn-type2 del-btn">删除</button>
+                            <a href="群发.html"><button type="button">群发</button></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>
+                条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">项目名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="sort-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">现有人数:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">发送次数:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">退订人数:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '204px'],      //  搜索(排序)弹框高度计算  m*60 + 146 ; m 为搜索项，有5个搜索项，则 m=5.
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .sort').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '排序',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['450px', '404px'],
+            skin: 'account-box',
+            content: $("#sort-account")
+        });
+    });
+    $('#chutiyan .return-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '退订人数详情',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '退订人数.html' //iframe的url
+        });
+    });
+    $('#chutiyan .send-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '发送次数详情',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '发送次数.html' //iframe的url
+        });
+    });
+    $('#chutiyan .now-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '现有人数',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '现有人数.html' //iframe的url
+        });
+    });
+
+    $('#chutiyan .del-btn').on('click', function(){
+        layer.confirm('是否确定删除此项目？', {
+            btn: ['取消','确定']
+        }, function(index){
+            layer.close(index);
+        }, function(){
+            layer.msg('删除成功', {time: 1000});
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

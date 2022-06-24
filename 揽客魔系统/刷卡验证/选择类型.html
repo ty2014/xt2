@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>扫码登录</title>
+    <link rel="stylesheet" href="css/style.css?v=1.0.0">
+</head>
+<body>
+
+<img src="images/bg2.jpg" alt="" id="bg">
+
+<div class="head-msg">
+    <div class="msg-l">
+        <div><img src="http://pic.qqtn.com/up/2018-1/2018010412381418218.jpg" alt=""></div>
+        <p>郑传华【揽客魔】创始人</p>
+    </div>
+    <ul class="msg-r">
+        <li>切换账号</li>
+    </ul>
+</div>
+
+<div class="content">
+    <div class="type-content">
+        <div class="mx-btn"><span>会员身份验证</span></div>
+        <div class="btn-3980"><span>上课名单签到</span><img src="images/more.png" alt="">
+            <ul>
+                <li>揽客魔·百万客流爆破营（第13期）</li>
+                <li>揽客魔·百万客流爆破营（第12期）</li>
+                <li>揽客魔·百万客流爆破营（第11期）</li>
+                <li>揽客魔·百万客流爆破营（第10期）</li>
+            </ul>
+        </div>
+        <div class="jc-btn"><span>上课名单进场</span><img src="images/more.png" alt="">
+            <ul>
+                <li><a href="">揽客魔·百万客流爆破营（第13期）</a></li>
+                <li><a href="">揽客魔·百万客流爆破营（第12期）</a></li>
+                <li><a href="">揽客魔·百万客流爆破营（第11期）</a></li>
+                <li><a href="">揽客魔·百万客流爆破营（第10期）</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="model-content">
+        <div class="id-card" style="display: none;">
+            <div><span class="top-l"></span><span class="top-r"></span><span class="bottom-l"></span><span class="bottom-r"></span><p class="line"></p></div>
+            <span>请刷证件，查看信息</span>
+        </div>
+        <!--  刷卡验证-密训  -->
+        <div class="model-msg mx-model" style="display: none;">
+            <span class="cancel"></span>
+            <p class="model-title model-title2">参会人信息</p>
+            <div class="model-item">
+                <div class="item-l">
+                    <div><img src="http://ci.xiaohongshu.com/08899c14-881e-451f-aa56-ff49ab8a54a7@r_640w_640h.jpg" alt=""></div>
+                    <span class="team-num">女</span>
+                </div>
+                <div class="item-r">
+                    <p><span>姓名：</span>刘娜</p>
+                    <p><span>手机：</span>151******66</p>
+                    <p><span>身份证：</span>510****************</p>
+                    <p><span>公司：</span>简阳市揽客魔文化传媒有限公司</p>
+                    <p class="name"><span>微信：</span><img src="http://cshtml.lkmsxy.com/1.png" alt="">小土豆小土豆小土豆小土豆</p>
+                </div>
+            </div>
+            <div class="model-foot2">
+                <div>团队：周倩倩</div>
+                <div>初训</div>
+            </div>
+        </div>
+        <!--  刷卡验证-3980   -->
+        <div class="model-msg model-3980" style="display: none;">
+            <div class="m-tips"><span>初训</span></div>
+            <span class="cancel"></span>
+            <p class="model-title">参会人信息</p>
+            <div class="model-item">
+                <div class="item-l">
+                    <div><img src="http://ci.xiaohongshu.com/08899c14-881e-451f-aa56-ff49ab8a54a7@r_640w_640h.jpg" alt=""></div>
+                    <span class="team-num">第20组</span>
+                </div>
+                <div class="item-r">
+                    <p><span>姓名：</span>刘娜</p>
+                    <p><span>性别：</span>女</p>
+                    <p><span>手机：</span>151******66</p>
+                    <p><span>身份证：</span>510****************</p>
+                    <p class="name"><span>微信：</span><img src="http://cshtml.lkmsxy.com/1.png" alt="">小土豆小土豆小土豆小土豆</p>
+                </div>
+            </div>
+            <div class="model-foot">
+                <div>场地费：<p>￥680</p></div>
+                <div>餐费：<p>￥420</p></div>
+                <div>尾款：<p>￥0</p></div>
+                <div class="pay-succ">已付：<p>￥6800</p></div>
+            </div>
+        </div>
+        <!--刷卡失败 -->
+        <div class="model-msg null-msg" style="display: none;">
+            <span class="cancel2"></span>
+        </div>
+        <!--  刷卡后出现多个人员信息（同名、其它情况）  -->
+        <div class="more-msg" style="display: none">
+            <div class="model-msg model-3980">
+                <div class="m-tips"><span>初训</span></div>
+                <span class="chose2"></span>
+                <p class="model-title">参会人信息</p>
+                <div class="model-item" style="justify-content: flex-end">
+                    <div class="item-l">
+                        <div><img src="http://ci.xiaohongshu.com/08899c14-881e-451f-aa56-ff49ab8a54a7@r_640w_640h.jpg" alt=""></div>
+                        <span class="team-num">第20组</span>
+                    </div>
+                    <div class="item-r">
+                        <p><span>姓名：</span>刘娜</p>
+                        <p><span>性别：</span>女</p>
+                        <p><span>手机：</span>151******66</p>
+                        <p><span>身份证：</span>510****************</p>
+                        <p class="name"><span>微信：</span><img src="http://cshtml.lkmsxy.com/1.png" alt="">小土豆小土豆小土豆小土豆</p>
+                    </div>
+                </div>
+                <div class="model-foot">
+                    <div>场地费：<p>￥680</p></div>
+                    <div>餐费：<p>￥420</p></div>
+                    <div>尾款：<p>￥0</p></div>
+                    <div class="pay-succ">已付：<p>￥6800</p></div>
+                </div>
+            </div>
+            <div class="model-msg model-3980">
+                <div class="m-tips"><span>初训</span></div>
+                <span class="chose2"></span>
+                <p class="model-title">参会人信息</p>
+                <div class="model-item" style="justify-content: flex-end">
+                    <div class="item-l">
+                        <div><img src="http://ci.xiaohongshu.com/08899c14-881e-451f-aa56-ff49ab8a54a7@r_640w_640h.jpg" alt=""></div>
+                        <span class="team-num">第20组</span>
+                    </div>
+                    <div class="item-r">
+                        <p><span>姓名：</span>刘娜</p>
+                        <p><span>性别：</span>女</p>
+                        <p><span>手机：</span>151******66</p>
+                        <p><span>身份证：</span>510****************</p>
+                        <p class="name"><span>微信：</span><img src="http://cshtml.lkmsxy.com/1.png" alt="">小土豆小土豆小土豆小土豆</p>
+                    </div>
+                </div>
+                <div class="model-foot">
+                    <div>场地费：<p>￥680</p></div>
+                    <div>餐费：<p>￥420</p></div>
+                    <div>尾款：<p>￥0</p></div>
+                    <div class="pay-succ">已付：<p>￥6800</p></div>
+                </div>
+            </div>
+            <div class="model-msg model-3980">
+                <div class="m-tips"><span>初训</span></div>
+                <span class="chose2"></span>
+                <p class="model-title">参会人信息</p>
+                <div class="model-item" style="justify-content: flex-end">
+                    <div class="item-l">
+                        <div><img src="http://ci.xiaohongshu.com/08899c14-881e-451f-aa56-ff49ab8a54a7@r_640w_640h.jpg" alt=""></div>
+                        <span class="team-num">第20组</span>
+                    </div>
+                    <div class="item-r">
+                        <p><span>姓名：</span>刘娜</p>
+                        <p><span>性别：</span>女</p>
+                        <p><span>手机：</span>151******66</p>
+                        <p><span>身份证：</span>510****************</p>
+                        <p class="name"><span>微信：</span><img src="http://cshtml.lkmsxy.com/1.png" alt="">小土豆小土豆小土豆小土豆</p>
+                    </div>
+                </div>
+                <div class="model-foot">
+                    <div>场地费：<p>￥680</p></div>
+                    <div>餐费：<p>￥420</p></div>
+                    <div>尾款：<p>￥0</p></div>
+                    <div class="pay-succ">已付：<p>￥6800</p></div>
+                </div>
+            </div>
+            <div class="model-msg model-3980">
+                <div class="m-tips"><span>初训</span></div>
+                <span class="chose2"></span>
+                <p class="model-title">参会人信息</p>
+                <div class="model-item" style="justify-content: flex-end">
+                    <div class="item-l">
+                        <div><img src="http://ci.xiaohongshu.com/08899c14-881e-451f-aa56-ff49ab8a54a7@r_640w_640h.jpg" alt=""></div>
+                        <span class="team-num">第20组</span>
+                    </div>
+                    <div class="item-r">
+                        <p><span>姓名：</span>刘娜</p>
+                        <p><span>性别：</span>女</p>
+                        <p><span>手机：</span>151******66</p>
+                        <p><span>身份证：</span>510****************</p>
+                        <p class="name"><span>微信：</span><img src="http://cshtml.lkmsxy.com/1.png" alt="">小土豆小土豆小土豆小土豆</p>
+                    </div>
+                </div>
+                <div class="model-foot">
+                    <div>场地费：<p>￥680</p></div>
+                    <div>餐费：<p>￥420</p></div>
+                    <div>尾款：<p>￥0</p></div>
+                    <div class="pay-succ">已付：<p>￥6800</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    -->
+    <div class="userMsg-scroll">
+        <ul class="userMsg-show">
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+            <li class="list"><p><span>小土豆</span>24组 </p><span>07-23 15:35:00</span></li>
+        </ul>
+    </div>
+
+
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script>
+
+    var timer  = null;
+    var wrapBox = document.querySelector(".userMsg-scroll");
+    var wrapBox2 = document.querySelector(".userMsg-show");
+    var h1 = wrapBox.offsetHeight;
+    var h2 = wrapBox2.offsetHeight;
+    if(h2 > h1){
+        playTime();
+    }else{
+        clearInterval(timer);
+    }
+    function playTime() {
+        timer = setInterval(function () {
+            $(".userMsg-scroll .userMsg-show").animate({
+                marginTop: "-20px"
+            }, 500, function () {
+                $(this).css({ marginTop: "0px" }).find(".list:first").appendTo(this);
+            });
+        }, 2000)
+    }
+    wrapBox.onmouseenter = function () {
+        clearInterval(timer);
+        console.log('111')
+    };
+    wrapBox.onmouseleave = function () {
+        playTime();
+    };
+
+
+    $('.more-msg .model-msg').click(function () {
+        alert('是否确认签到');
+        $(this).siblings().hide();
+        $('.more-msg').addClass('on');
+        $('.chose2').show();
+    });
+    $('.chose2').click(function (e) {
+        e.stopPropagation();
+        $('.chose2').hide();
+        $('.more-msg').removeClass('on');
+        $('.more-msg').hide();
+        $('.more-msg .model-msg').show();
+    });
+
+    $('.cancel,.cancel2').click(function () {
+        $(this).parent().hide();
+    });
+
+    $('.type-content > div').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    $('.mx-btn').click(function () {
+        $('.btn-3980 ul').fadeOut();
+        $('.btn-3980 > span').text('上课名单验证');
+    });
+
+    $('.btn-3980').click(function () {
+        $(this).find('ul').fadeToggle();
+        $(this).siblings().find('ul').hide();
+    });
+    $('.jc-btn').click(function () {
+        $(this).find('ul').fadeToggle();
+        $(this).siblings().find('ul').hide();
+    });
+    $('.btn-3980 li,.mx-btn').click(function () {
+        $('.id-card').fadeIn();
+    });
+
+
+    $('.btn-3980 li').click(function () {
+        $('.btn-3980 > span').text($(this).text());
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+
+    $('.btn-3980 ul').click(function (e) {
+        e.stopPropagation();
+        $(this).show();
+    });
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>名额获得规则</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">名额获得规则</div>
+<div class="activity_set activity_set3 w-7">
+    <div class="b-line" style="border-bottom: 0">
+        <div class="tishi-bg" style="margin-bottom: 20px;max-width: 770px;">
+            <p><img src="../../images/3.png" alt=""> 用户通过<b>以下5个</b>途径获得会员，可以触发用户的名额发生变化，<b>停用</b>某一途径，则该途径<b>不会触发</b>用户的名额变更。</p>
+            <p>注意：用户名额变更，将按照对应“配置”处填写的“名额个数、比例”发生变化！</p>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">购买/兑换会员:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                    <label for="u-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*用户通过购买/兑换会员等级，都将触发名额变更</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">授权会员/系列课:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                    <label for="u-togg2" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*用户通过<span class="expired">授权下级</span>获得会员，仅<span class="expired">首次</span>成为该会员等级时，才触发名额变更</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">购买系列课:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg3" class="toggle-button" name="switch">
+                    <label for="u-togg3" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*用户通过<span class="expired">购买系列课</span>获得会员，仅<span class="expired">首次</span>成为该会员等级时，才触发名额变更</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">购买课程动态:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg4" class="toggle-button" name="switch">
+                    <label for="u-togg4" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*用户通过<span class="expired">购买课程动态</span>获得会员，仅<span class="expired">首次</span>成为该会员等级时，才触发名额变更</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">后台修改会员:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg5" class="toggle-button" name="switch">
+                    <label for="u-togg5" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*管理员在<span class="expired">后台修改会员等级</span>，仅<span class="expired">首次</span>成为该会员等级时，才触发名额变更</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+</script>
+
+</body>
+</html>

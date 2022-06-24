@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/font-awesome.css"/>
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/flipclock.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/gk.css"/>
+    <style>
+        body{padding: 0}
+        .uendTimeModel{background: transparent;box-shadow: none;}
+        .uendTimeModel .layui-layer-setwin{right: -8px;top: -10px;}
+    </style>
+</head>
+<body>
+
+<div class="uendTimeModel">
+    <div class="dateTimeCont">
+        <div class="timeCont1">
+            <img src="../images/timeTxt.png" alt="">
+        </div>
+        <div class="timeCont2">
+            <div class="time_cont">
+                <span>距离会员权益到期仅剩</span>
+                <div class="clock flip-clock-wrapper"></div>
+                <span>天</span>
+            </div>
+            <div class="eq_cont">
+                <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                <p>微信扫描二维码，联系客服续费</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/flipclock.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    var clock;
+    clock = $('.clock').FlipClock({
+        clockFace: 'DailyCounter',
+        autoStart: false,
+        callbacks: {
+            stop: function() {
+                $('.message').html('The clock has stopped!')
+            }
+        }
+    });
+    // 获取到指定日期天数，再换算成数字
+    var s1 = '2022-03-31 23:59:59';
+    s1 = new Date(s1.replace(/-/g, "/"));
+    s2 = new Date();//当前日期：
+    var days = s1.getTime() - s2.getTime();
+    var time = days/1000;
+    clock.setTime(time);
+    clock.setCountdown(true);
+    clock.start();
+    if((time/60/60/24) < 10){
+        $('.flip-clock-divider.days').siblings().eq(0).hide();
+    }
+
+</script>
+</body>
+</html>

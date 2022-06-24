@@ -1,0 +1,26 @@
+1、添加内容左侧标题的冒号 统一用 英文版的
+
+2、表格中可跳转内容 统一用a标签
+
+3、表格中操作按钮 不论有几个按钮，第一个统一添加 btn-type1 类名，删除添加 btn-type2 类名，其它不添加类名
+
+4、表格中有些指定内容需要2排显示的，统一在td下新增块元素并增加 wrap-noml 类名
+
+5、表格中状态现有三种样式
+   格式：<td class="statu statu1"><span>进行中</span></td>
+  	 statu1 为进行中、已开始、开启等状态
+	 statu2 为关闭等状态
+	 statu3 为待开始等状态
+
+添加内容DOM统一为 activity_set 类名下开始；activity_set2 用在弹框中的样式；activity_set3 用在不是弹框的样式
+左侧标题是根据字数最多的来控制宽度的，在 activity_set 上添加如下类名，就代表对应样式
+w-4 为最长4个字的样式
+w-5 为最长5个字的样式
+w-6 为最长6个字的样式
+w-7 为最长7个字的样式
+
+在w-x 下出现 numx 的情况，就代表这个下面按照 numx 的宽度来适应；    x --代表数字
+
+<em class="importantTip">*</em>		必填提示符号
+
+所有有表格页面头部统一添加样式	.table_cont2 .table_body2{width:100%;table-layout:fixed;}

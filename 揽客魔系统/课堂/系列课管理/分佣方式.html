@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分佣方式</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<!--     名额分佣开启（默认关闭），提示：开启后，分佣人按自己有的名额进行提成，名额消耗完之后，则无法提成，要想提成，必须 再补充名额；   -->
+
+<div class="page-title">系列课-分佣方式</div>
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">即时分佣:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                    <label for="u-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="togg-cont">
+            <div class="a_list">
+                <span class="a_list_l">分佣方式:</span>
+                <div class="a_list_r chose_item">
+                    <label for="type1" class="radio zd-btn">
+                        <div class="chose">
+                            <input type="radio" checked name="type" id="type1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">定时自动分佣</span>
+                    </label>
+                    <label for="type2" class="radio sd-btn">
+                        <div class="chose">
+                            <input type="radio" name="type" id="type2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">全手动审核分佣</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list zd-cont">
+                <span class="a_list_l">分佣时间:</span>
+                <div class="a_list_r">付款<input type="number" class="s_width center" style="margin: 0 10px;">天后自动分佣，当付款金额大于<input type="number" style="margin: 0 10px;width: 80px;text-align: center;">元时，该笔订单分佣为即时分佣。</div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('#u-togg').click(function () {
+            if($('#u-togg').is(':checked')){
+                $('.togg-cont').hide();
+            }else{
+                $('.togg-cont').show();
+            }
+        });
+        $('#togg').click(function () {$('.togg-cont').toggle();});
+
+
+        $('.zd-btn').click(function () {
+            $('.zd-cont').show();
+        });
+        $('.sd-btn').click(function () {
+            $('.zd-cont').hide();
+        });
+    });
+
+
+</script>
+
+
+</body>
+</html>

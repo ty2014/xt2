@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>受访页面</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 省市联动 -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../js/Popt.js"></script>
+    <script src="../js/cityJson.js"></script>
+    <script src="../js/citySet.js"></script>
+</head>
+<body id="chutiyan">
+<!--
+
+搜索字段：受访页面、页面名称
+
+排序字段：浏览量、访客数、入口页次数、退出页次数、退出率、贡献下游浏览量、平均浏览量、平均浏览时长
+
+-->
+<section class="head-slide">
+    <div class="head-slide-item">
+        <span>时间：</span>
+        <div class="slide-span"><span class="active">今天</span><span>昨天</span><span>最近7天</span><span>最近30天</span></div>
+        <div class="slide-input"><input type="text" class="demo-input" id="test1"></div>
+    </div>
+    <div class="head-slide-item">
+        <span>访客：</span>
+        <div class="slide-span"><span class="active">全部</span><span>新访客</span><span>老访客</span></div>
+    </div>
+    <div class="head-slide-item">
+        <span>入口：</span>
+        <div class="slide-select">
+            <select>
+                <option value="">全部</option>
+                <option value="">公众号</option>
+                <option value="">朋友圈</option>
+                <option value="">好友/群</option>
+            </select>
+            <img src="../../../images/bottom-icon.jpg" alt="">
+        </div>
+    </div>
+    <div class="head-slide-item">
+        <span>地域：</span>
+        <div class="slide-select">
+            <input type="text" id="city" placeholder="全部"/>
+            <img src="../../../images/bottom-icon.jpg" alt="">
+        </div>
+    </div>
+</section>
+<section>
+    <ul class="num-view">
+        <li>
+            <div>
+                <p>浏览量<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="用户每打开一个网站页面就被记录1次。</br>用户多次打开同一页面，浏览量值累计。" data-original-title="1"></i></p>
+                <span>10,358</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>访客数<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="一天之内访问网站的用户数，</br>同一用户多次访问只计算1个访客。" data-original-title="1"></i></p>
+                <span>1,358</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>退出率<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="退出率=该页面的退出次数/该页面的浏览量。" data-original-title="1"></i></p>
+                <span>12.34%</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>平均浏览量<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="平均每个访客浏览网站页面的次数，</br>平均浏览量=浏览量/访客数。" data-original-title="1"></i></p>
+                <span>7.63</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>平均浏览时长<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="访客浏览一个页面的平均时长。" data-original-title="1"></i></p>
+                <span>00:00:32</span>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="table-content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span><i class="fa fa-sort"></i>排序</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+    </div>
+    <form action="" class="table_cont">
+        <table border="1px" class="table_body">
+            <thead>
+            <tr>
+                <th width="300px" colspan="3"></th>
+                <th width="200px" colspan="2">基础指标<i class="tips" data-toggle="tooltip" data-placement="bottom" data-html="true" title="浏览量：用户每打开一个网站页面就被记录1次。用户多次打开同一页面，浏览量值累计。<br>访客数：一天之内访问网站的用户数，同一用户多次访问只计算1个访客。"></i></th>
+                <th width="100px">入口指标<i class="tips" data-toggle="tooltip" data-placement="bottom" data-html="true" title="入口页次数：作访问的第一个页面的次数。"></i></th>
+                <th width="200px" colspan="2">出口指标<i class="tips" data-toggle="tooltip" data-placement="bottom" data-html="true" title="退出页次数：作为访问的最后一个页面的次数。<br>退出率：退出率=该页面的退出次数/该页面的浏览量。"></i></th>
+                <th width="350px" colspan="3">质量指标<i class="tips" data-toggle="tooltip" data-placement="bottom" data-html="true" title="贡献下游浏览量：该页面给站内其他页面直接带去的浏览量。<br>平均浏览量：平均每个访客浏览网站页面的次数，平均浏览量=浏览量/访客数。<br>平均浏览时长：访客浏览某一页面时所花费的平均时长。"></i></th>
+            </tr>
+            <tr>
+                <th width="50px">序号</th>
+                <th width="200px">受访页面</th>
+                <th width="100px">页面名称</th>
+                <th width="80px">浏览量<i class="sort-icon"></i></th>
+                <th width="80px">访客数<i class="sort-icon"></i></th>
+                <th width="120px">入口页次数<i class="sort-icon"></i></th>
+                <th width="120px">退出页次数<i class="sort-icon"></i></th>
+                <th width="80px">退出率<i class="sort-icon"></i></th>
+                <th width="120px">贡献下游浏览量<i class="sort-icon"></i></th>
+                <th width="120px">平均浏览量<i class="sort-icon"></i></th>
+                <th width="120px">平均浏览时长<i class="sort-icon"></i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td><a href="#">https://wx.lkmsxy.com/dl/dl_index__dlh.html?dpid=27</a></td>
+                <td>揽客魔</td>
+                <td>5,682</td>
+                <td>3,682</td>
+                <td>528</td>
+                <td>528</td>
+                <td>10.65%</td>
+                <td>3.89</td>
+                <td>3.89</td>
+                <td>00:02:16</td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</section>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../../js/index.js"></script>
+<script src="../../../js/plugins/laydate/laydate.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<!-- 时间 -->
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        value: '2019-06-30 至 2019-08-15',
+        range: '至'
+    });
+</script>
+<!-- 省市联动 -->
+<script>
+    $("#city").click(function (e) {
+        SelCity(this,e);
+    });
+</script>
+</body>
+</html>

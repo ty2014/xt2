@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板管理</title>
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<div class="content">
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="fa fa-refresh"></i>微信平台同步到系统</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="150pz">操作</th>
+                        <th width="150px">模板ID</th>
+                        <th width="150pz">标题</th>
+                        <th width="80pz">一级行业</th>
+                        <th width="80pz">二级行业</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="150px" class="cz_btn">
+                            <button type="button" class="btn-type1">选入</button>
+                            <button type="button" class="detail-btn">详情</button>
+                            <button type="button" class="btn-type2 del-btn">移除</button>
+                        </td>
+                        <td width="150px">sw1an1m0oeoooidcosp]eei-sddodwpqolpewsldk</td>
+                        <td width="150px" class="left">课程通知</td>
+                        <td width="80px">IT科技</td>
+                        <td width="80px">互联网电子商务</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1">选入</button>
+                            <button type="button" class="detail-btn">详情</button>
+                            <button type="button" class="btn-type2 del-btn">移除</button>
+                        </td>
+                        <td>sw1an1m0oeoooidcosp]eei-sddodwpqolpewsldk</td>
+                        <td class="left">课程通知</td>
+                        <td>IT科技</td>
+                        <td>互联网电子商务</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">模板ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<!-- 详情 -->
+<div id="mb-detail" style="display: none;">
+    <div style="display: flex;align-items: flex-start;padding: 40px;">
+        <div style="margin-right: 35px;">
+            <p style="font-size: 18px;color: #F7B116;margin-bottom: 14px;display: flex;align-items: center;justify-content: center;">
+                <img src="../../../../images/mbTip1.png" alt="" style="height: 16px;margin-right: 16px;">
+                内容示例
+                <img src="../../../../images/mbTip2.png" alt="" style="height: 16px;margin-left: 16px;">
+            </p>
+            <div class="qfmb_content">
+                <div class="code-cont" style="margin-right: 0;width: 300px;">
+                    <ul class="code-demo">
+                        <li>今晚主题：后端变现：怎么从后端赚到100倍利润？</li>
+                        <li><span>课程:</span>直播疯狂掘金</li>
+                        <li><span>地点:</span>微赞直播间</li>
+                        <li><span>讲师:</span>郑传华老师</li>
+                        <li><span>时间:</span>今晚7点（4月15号）</li>
+                        <li>请按照时间提前进入直播间！</li>
+                    </ul>
+                    <p class="code-btn">查看详情<img src="../../../../images/right.png" alt=""></p>
+                </div>
+            </div>
+        </div>
+        <div class="mb-detail-r">
+            <div class="activity_set activity_set2 w-120">
+                <div class="b-line">
+                    <div class="a_list">
+                        <span class="a_list_l">模板ID:</span>
+                        <div class="a_list_r">sw1an1m0oeoooidcosp]eei-sddodwpqolpewsldk</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">标题:</span>
+                        <div class="a_list_r">课程通知</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">行业:</span>
+                        <div class="a_list_r">IT科技|互联网电子商务</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">详细内容:</span>
+                        <div class="a_list_r">
+                            <ul class="mb-cont">
+                                <li>{{first.DATA}}</li>
+                                <li><span>课程:</span>{{keyword1.DATA}}</li>
+                                <li><span>地点:</span>{{keyword2.DATA}}</li>
+                                <li><span>讲师:</span>{{keyword3.DATA}}</li>
+                                <li><span>时间:</span>{{keyword4.DATA}}</li>
+                                <li>{{remark.DATA}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="tishi" style="margin-top: 10px;">*在发送时，需要将内容中的参数（{{DATA}}内为参数）赋值替换为需要的信息</p>
+        </div>
+    </div>
+</div>
+
+<script src="../../../../js/jquery.min.js"></script>
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', 'auto'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .add_btn').on('click', function(){
+        layer.confirm('您确定要同步模板数据？',{
+            btn: ['取消','确定'],
+            area: '416px'
+        }, function(index){
+            layer.close(index);
+        }, function(){
+            layer.msg('同步成功', {time: 1000});
+        });
+    });
+    $('#chutiyan .detail-btn').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 1,
+            title: '模板详情',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['900px', '600px'],
+            skin: 'mb-detail',
+            content: $("#mb-detail").html()
+        });
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del-btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('您确定要移除这条模板吗？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('移除成功', {time: 1000});
+            });
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

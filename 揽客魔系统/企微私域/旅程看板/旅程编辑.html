@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅程编辑</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+        .table-tbody,.table_cont2{overflow: unset}
+        .xqCont > div{display: flex;flex-wrap: wrap;align-items: center;text-align: left;}
+    </style>
+</head>
+<body id="chutiyan">
+
+
+<div class="content">
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tishi">*可上下拖动排序</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="60px">序号</th>
+                        <th width="200px" class="left">旅程阶段</th>
+                        <th width="300px" class="left">阶段需求</th>
+                        <th width="100px">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody id="example2">
+                    <tr>
+                        <td width="60px">1</td>
+                        <td width="200px" class="left"><input type="text" value="客户认识阶段"></td>
+                        <td width="300px">
+                            <div class="flex alignItemC">
+                                <div class="select-text" style="min-width: 160px;">
+                                    <span class="select-txt left">请选择</span>
+                                    <ul style="display: none;text-align: left">
+                                        <li class="item0-chose">添加好友入</li>
+                                        <li class="item1-chose">进入企微群</li>
+                                        <li class="item2-chose">聊天中涉及关键词</li>
+                                        <li class="item3-chose">朋友圈点赞、互动</li>
+                                        <li class="item4-chose">获得指定标签</li>
+                                    </ul>
+                                </div>
+                                <div class="flex mgL-10 xqCont" style="display: none">
+                                    <div class="set-item1 hide"><a>添加</a>，<p>群聊：激活粉丝 微信变现，【讲师变现】1-3期</p></div>
+                                    <div class="set-item2 hide"><a>添加</a>，词：<p>关键词1，关键词2</p></div>
+                                    <div class="set-item3 hide">
+                                        <a>点赞：<input type="number" class="center m-height mg-4" style="width: 40px;">次</a>，
+                                        <a>互动：<input type="number" class="center m-height mg-4" style="width: 40px;">次</a>
+                                    </div>
+                                    <div class="set-item4 hide"><a>添加</a>，标签：
+                                        <div class="qwTips">
+                                            <span class="tiem on">战略帮扶</span>
+                                            <span class="tiem on">联创帮扶</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="100px" class="cz_btn">
+                            <button type="button" class="btn-type2 del_tips">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left"><input type="text" value="客户了解阶段"></td>
+                        <td></td>
+                        <td class="cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="left"><input type="text" value="客户认可阶段"></td>
+                        <td></td>
+                        <td class="cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="left"><input type="text" value="客户购买阶段"></td>
+                        <td></td>
+                        <td class="cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="left"><input type="text" value="客户复购阶段"></td>
+                        <td></td>
+                        <td class="cz_btn"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="activity_set activity_set3">
+        <div class="b-line" style="padding: 16px 24px;">
+            <div class="a_list">
+                <span class="a_list_l" style="width: 150px;">排除其它旅程中的用户:</span>
+                <div class="a_list_r">
+                    <a class="addTip">已选择2个旅程</a>
+                    <span class="tishi">*如果用户已处在下面的旅程当中，就算用户满足上面的条件也不能加入本旅程</span>
+                </div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l" style="width: 150px;"></span>
+                <div class="a_list_r">
+                    <ul class="hasChoseList" style="display: block;margin: -10px -8px 0">
+                        <li>旅程名称1<i></i></li>
+                        <li>旅程名称2<i></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab_content2" style="padding-bottom: 20px">
+        <div class="tab_type_2">
+            <span class="tab-tips addJd"><em class="layui-icon layui-icon-addition"></em>添加旅程阶段</span>
+            <span class="tab-tips add_btn mgL-20">保存并生效</span>
+            <span class="tishi2 mgL-10"><b>* 操作变更内容后，需点击保存按钮后才能生效</b></span>
+        </div>
+    </div>
+</div>
+
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">旅程阶段:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-150" id="tip-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">阶段名称:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" class="w-620" maxlength="10">
+                    <span class="num">0/10</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-150" id="tip-sure2" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">关键词名称:</span>
+            <div class="a_list_r">
+                <input type="text" class="w-620">
+                <span class="tishi mgL-0 mgT-10">*多个关键词用英文的’,‘隔开</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/Sortable.min.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    // 拖动排序   参考api：https://www.jq22.com/jquery-info23053
+    var example2Left = document.getElementById('example2');
+    new Sortable(example2Left, {
+        group: 'shared', // set both lists to same group
+        animation: 150,
+        onChoose: function( /**Event*/ evt) {
+            evt.oldIndex; // element index within parent
+            console.log('121')
+        },
+    });
+
+
+    for(var i=0;i<$('.select-text li').length;i++){
+        //item1-chose
+        $('.select-text li.item'+ i +'-chose').on('click',function (){
+            var ind = $(this).index();
+
+            if(ind === 0){
+                $(this).parents('.select-text').siblings().hide();
+            }else{
+                $(this).parents('.select-text').siblings().show();
+                $(this).parents('.select-text').siblings().find('.set-item' + ind).show().siblings().hide();
+            }
+
+        })
+    }
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .addJd').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '新增旅程阶段',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'activity_set activity_set2',
+            content: $("#tip-sure")
+        });
+    });
+
+    $('.set-item1 a').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择群聊',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../群列表.html' //iframe的url
+        });
+    });
+    $('.set-item2 a').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '关键词设置',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'activity_set activity_set2',
+            content: $("#tip-sure2")
+        });
+    });
+    $('.set-item4 a').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '436px'],
+            content: '../添加标签.html' //iframe的url
+        });
+    });
+
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del_tips').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('删除该条数据？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>自提点添加</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?v=1.0.0">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?v=1.0.0">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+    <!--  百度地图API  -->
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=E42DGbCz8qmImABFEkkLHPfchBW9jzU9"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/IndoorMap/1.0/src/indoor.min.js?v=1.0.1 "></script>
+</head>
+<body id="chutiyan" style="min-width: auto;padding: 0">
+
+
+<div class="activity_set">
+    <div class="a_list">
+        <span class="a_list_l">自提点名称：</span>
+        <div class="a_list_r"><input type="text"/></div>
+    </div>
+    <div class="a_list">
+        <span class="a_list_l">核销人：</span>
+        <div class="a_list_r">
+            <div class="hxr">
+                <ul>
+                    <li>小土豆<span>×</span></li>
+                    <li>皮卡京<span>×</span></li>
+                </ul>
+                <span class="add-hxr">+</span>
+            </div>
+            <span class="tishi">*该核销人员，处理该自提点发货（微信扫码核销）;</span></div>
+    </div>
+    <div class="a_list flex-start">
+        <span class="a_list_l top5">自提地点：</span>
+        <div class="a_list_r checked_chose">
+            <div class="list-column">
+                <div class="layui-form">
+                    <div class="layui-form-item" id="area-picker">
+                        <div class="layui-input-inline" style="width: 200px;">
+                            <select name="province" class="province-selector" data-value="四川省" lay-filter="province-1">
+                                <option value="">请选择省</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline" style="width: 200px;">
+                            <select name="city" class="city-selector" data-value="成都市" lay-filter="city-1">
+                                <option value="">请选择市</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline" style="width: 200px;">
+                            <select name="county" class="county-selector" data-value="武侯区" lay-filter="county-1">
+                                <option value="">请选择区</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input type="text" placeholder="详细地址" class="w-620">
+                    <button class="sear-btn">搜索地图</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="a_list flex-start">
+        <!--   通过上面自提点地址来实现地图定位，也可以通过地图上选取点来切换上面自提点地址  -->
+        <span class="a_list_l">地图定位：</span>
+        <div class="a_list_r">
+            <div id="allmap" style="width:500px;height:500px"></div>
+        </div>
+    </div>
+    <div class="a_list">
+        <span class="a_list_l">咨询电话：</span>
+        <div class="a_list_r"><input type="text"></div>
+    </div>
+    <div class="a_list flex-start">
+        <span class="a_list_l">提货说明：</span>
+        <div class="a_list_r">
+            <textarea style="width: 620px;height: 80px;padding: 10px" placeholder="告知用户提货注意事项，如是否需提前预约、可提货时间等"></textarea>
+        </div>
+    </div>
+    <div class="btn-list"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+
+    var point = new BMap.Point(103.98332,30.629033);
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.addOverlay(marker);              // 将标注添加到地图中
+    map.centerAndZoom(point, 17);
+    var opts = {
+        width : 200,     // 信息窗口宽度
+        height: 100,     // 信息窗口高度
+        title : "智领大厦" , // 信息窗口标题
+        enableMessage:true,//设置允许信息窗发送短息
+        message:"亲耐滴，晚上一起吃个饭吧？戳下面的链接看下地址喔~"
+    }
+    var infoWindow = new BMap.InfoWindow("地址：四川省成都市武侯区武兴五路77号", opts);  // 创建信息窗口对象
+    marker.addEventListener("click", function(){
+        map.openInfoWindow(infoWindow,point); //开启信息窗口
+    });
+    map.openInfoWindow(infoWindow,point); //开启信息窗口
+    var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+    var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+    map.addControl(top_left_control);
+    map.addControl(top_left_navigation);
+    map.centerAndZoom(new BMap.Point(116.340739,40.03592), 17);  // 初始化地图,设置中心点坐标和地图级别
+    map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+    // 创建室内图实例
+    var indoorManager = new BMapLib.IndoorManager(map);
+
+</script>
+<script>
+    //选择省市
+    layui.config({
+        base: '../../js/mods/'
+        , version: '1.0'
+    });
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form', 'layarea'], function () {
+        var layer = layui.layer
+            , form = layui.form
+            , layarea = layui.layarea;
+
+        layarea.render({
+            elem: '#area-picker',
+            change: function (res) {
+                //选择结果
+                console.log(res);
+            }
+        });
+    });
+
+
+    $('#chutiyan .hxr li span').on('click', function(){
+        layer.confirm('您确定要删除此核销人？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){}, function(){});
+    });
+    //
+    $('#chutiyan .add-hxr').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '核销人添加',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['100%', '100%'],
+            content: '核销人添加.html' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>余额明细</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+
+<div class="content">
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">充值</a></li>
+                    <li><a href="#">提现</a></li>
+                    <li><a href="#">打赏</a></li>
+                    <li><a href="#">红包</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100pz">交易类型</th>
+                        <th width="100px">变动金额</th>
+                        <th width="100px">变动后金额</th>
+                        <th width="150pz">变动时间</th>
+                        <th width="150pz" class="left">变动说明</th>
+                        <th width="150pz">交易单号</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px">用户充值</td>
+                        <td width="100px">+100.00</td>
+                        <td width="100px">200.00</td>
+                        <td width="150px" class="date"><div>2020-10-20 10:00:00</div></td>
+                        <td width="150px" class="left">充值到账余额100.00元</td>
+                        <td width="150px">2020102012345678</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>用户提现</td>
+                        <td>-100.00</td>
+                        <td>100.00</td>
+                        <td class="date"><div></div></td>
+                        <td class="left">提现审核中/提现成功</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>提现退回</td>
+                        <td>+100.00</td>
+                        <td>200.00</td>
+                        <td class="date"><div></div></td>
+                        <td class="left">提现失败，退回余额</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>抢得红包</td>
+                        <td>+100.00</td>
+                        <td>100.00</td>
+                        <td class="date"><div></div></td>
+                        <td class="left">直播主题《直播疯狂掘金1》，来自管理员<a>小土豆</a>的红包</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>发出红包</td>
+                        <td>-50.00</td>
+                        <td>0.00</td>
+                        <td class="date"><div></div></td>
+                        <td class="left">直播主题《直播疯狂掘金1》，<a class="contBtn3">红包详情</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>红包退回</td>
+                        <td>+50.00</td>
+                        <td>50.00</td>
+                        <td class="date"><div></div></td>
+                        <td class="left">直播主题《直播疯狂掘金1》，<a class="contBtn3">红包详情</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>打赏主播</td>
+                        <td>-50.00</td>
+                        <td>100.00</td>
+                        <td class="date"><div></div></td>
+                        <td class="left">直播主题《直播疯狂掘金1》，打赏<a>小土豆</a>50.00元</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">交易单号:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">交易类型:</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">用户充值</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">用户提现</span>
+                </label>
+                <label for="ly3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">提现退回</span>
+                </label>
+                <label for="ly4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">抢得红包</span>
+                </label>
+                <label for="ly5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">发出红包</span>
+                </label>
+                <label for="ly6" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly6" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">红包退回</span>
+                </label>
+                <label for="ly7" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly7" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">打赏主播</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">变动时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" lay-key="1">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" lay-key="2">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<!--  发出红包  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure3" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r">
+                <div class="normal-table">
+                    <div style="display: flex;align-items: center;justify-content: space-between;background: #dee4ef;height: 45px;padding: 0 15px;color: #888;">
+                        <span style="color: #333;font-size: 14px;font-weight: bold;">抢红包明细</span>
+                        <p>红包待领取：已领取3/5，共62.88/100元。</p>
+                    </div>
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 60px">用户ID</th>
+                            <th style="width: 200px;text-align: left">用户</th>
+                            <th style="width: 120px">时间</th>
+                            <th style="width: 80px">金额</th>
+                            <th style="width: 120px">交易编号</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>52489</td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../../images/head.jpg" alt="">
+                                    <a href="">xxxxxxxxxxxxxxxxxx</a>
+                                </div>
+                            </td>
+                            <td>2020-9-11 10:00:00</td>
+                            <td>6.53元</td>
+                            <td>21020003</td>
+                        </tr>
+                        <tr>
+                            <td>52489</td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../../images/head.jpg" alt="">
+                                    <a href="">xxxxxxxxxxxxxxxxxx</a>
+                                </div>
+                            </td>
+                            <td>2020-9-11 10:00:00</td>
+                            <td>6.53元</td>
+                            <td>21020003</td>
+                        </tr>
+                        <tr>
+                            <td>52489</td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../../images/head.jpg" alt="">
+                                    <a href="">xxxxxxxxxxxxxxxxxx</a>
+                                </div>
+                            </td>
+                            <td>2020-9-11 10:00:00</td>
+                            <td>6.53元</td>
+                            <td>21020003</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+
+    $('#chutiyan .contBtn3').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '交易详情',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#cont-sure3").html()
+        });
+    });
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

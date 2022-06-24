@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优惠券</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+
+    </style>
+</head>
+<body id="chutiyan">
+
+<!--
+
+回收：已领用户，将不能再使用，也不能看到
+
+-->
+
+<div class="content">
+    <div class="page-title">优惠券</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">立即启用</a></li>
+                    <li><a href="#">暂不启用</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>添加优惠券</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="200px" class="left">优惠券名称</th>
+                        <th width="100px">使用范围</th>
+                        <th width="100px">优惠券类型</th>
+                        <th width="100px">发放对象</th>
+                        <th width="100px">领取方式</th>
+                        <th width="100px">价格</th>
+                        <th width="100pz">数量</th>
+                        <th width="100pz">已领取</th>
+                        <th width="150pz">开始时间</th>
+                        <th width="150pz">结束时间</th>
+                        <th width="100pz">海报模板</th>
+                        <th width="100pz">开启翻倍</th>
+                        <th width="150pz">优惠券状态</th>
+                        <th width="100pz">操作人</th>
+                        <th width="300pz">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="200px" class="left">小米旗舰店店铺优惠券</td>
+                        <td width="100px">单课</td>
+                        <td width="100px">普通</td>
+                        <td width="100px">任何人</td>
+                        <td width="100px">直接发放</td>
+                        <td width="100px">5元</td>
+                        <td width="100px">2</td>
+                        <td width="100px"><a class="lq-num">1</a></td>
+                        <td width="150px" class="date"><div>2021-06-12 12:00:00</div></td>
+                        <td width="150px" class="date"><div>2021-07-12 12:00:00</div></td>
+                        <td width="100px"><a class="mbChose_num">2</a></td>
+                        <td width="100px" class="statu statu1"><span>开启</span></td>
+                        <td width="150px" class="statu statu1"><span>立即启用</span></td>
+                        <td width="100px">同创小课</td>
+                        <td width="300px" class="cz_btn">
+                            <button type="button" class="edit-btn">已回收，点击查看</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left"></td>
+                        <td>专栏</td>
+                        <td>裂变</td>
+                        <td>新人专享</td>
+                        <td>随机发放</td>
+                        <td>5~8折</td>
+                        <td>2</td>
+                        <td><a href="">0</a></td>
+                        <td class="date"></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td class="statu statu2"><span>关闭</span></td>
+                        <td class="statu statu1"><span>立即启用</span></td>
+                        <td></td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1 edit-btn">编辑</button>
+                            <button type="button" class="btn-type2 del-btn">回收</button>
+                            <button type="button" class="stop-btn">停止发放</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="left"></td>
+                        <td>会员</td>
+                        <td></td>
+                        <td>老客户专享</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href=""></a></td>
+                        <td class="date"></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td class="statu statu2"></td>
+                        <td class="statu statu2"></td>
+                        <td></td>
+                        <td class="cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="left"></td>
+                        <td>线下活动</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href=""></a></td>
+                        <td class="date"></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td class="statu statu2"></td>
+                        <td class="statu statu2"></td>
+                        <td></td>
+                        <td class="cz_btn"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="left"></td>
+                        <td>课程分类</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href=""></a></td>
+                        <td class="date"></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td class="statu statu2"></td>
+                        <td class="statu statu2"></td>
+                        <td></td>
+                        <td class="cz_btn"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>
+                条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">优惠券名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">操作人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">使用范围:</span>
+            <div class="account-r chose_item">
+                <label for="fw1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fw" id="fw1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">单课</span>
+                </label>
+                <label for="fw2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fw" id="fw2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">专栏</span>
+                </label>
+                <label for="fw3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fw" id="fw3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">会员</span>
+                </label>
+                <label for="fw4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fw" id="fw4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">线下活动</span>
+                </label>
+                <label for="fw5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fw" id="fw5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">课程分类</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">优惠券类型:</span>
+            <div class="account-r chose_item">
+                <label for="type1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通</span>
+                </label>
+                <label for="type2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">裂变</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">优惠券价格:</span>
+            <div class="account-r chose_item">
+                <label for="price1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="price" id="price1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">金额</span>
+                </label>
+                <label for="price2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="price" id="price2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">折扣</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">发放对象:</span>
+            <div class="account-r chose_item">
+                <label for="dx1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="dx" id="dx1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">任何人</span>
+                </label>
+                <label for="dx2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="dx" id="dx2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">新人专享</span>
+                </label>
+                <label for="dx3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="dx" id="dx3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">老客户专享</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">领取方式:</span>
+            <div class="account-r chose_item">
+                <label for="lq1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="lq" id="lq1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">直接发放</span>
+                </label>
+                <label for="lq2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="lq" id="lq2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">随机发放</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">开启翻倍:</span>
+            <div class="account-r chose_item">
+                <label for="fb1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fb" id="fb1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">开启</span>
+                </label>
+                <label for="fb2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fb" id="fb2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">关闭</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">开始时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2">
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">结束时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test3">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test4">
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test3' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test4' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .add_btn,.edit-btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加优惠券',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '添加优惠券.html' //iframe的url
+        });
+    });
+
+    $('#chutiyan .lq-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '小米旗舰店店铺优惠券',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '领取用户.html' //iframe的url
+        });
+    });
+
+    $('#chutiyan .mbChose_num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '小米旗舰店店铺优惠券',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '海报模板/海报模板选择.html#tab2' //iframe的url
+        });
+    });
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del-btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('已领用户，将不能再使用，也不能看到',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                title:'提示',
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.confirm('再次确认是否要回收，填写备注并确认<p style="margin-top: 10px;display: flex;white-space: nowrap;align-items: center;">备注：<input type="text" placeholder="*必填" style="width: 100%"></p>',{
+                    skin: 'failureskin',    //类名
+                    icon:2,
+                    title:'提示',
+                    btn: ['取消','确定强制回收'],
+                    area: '416px'
+                }, function(index){
+                    layer.close(index);
+                }, function(){
+                    layer.msg('操作成功', {time: 1000});
+                });
+            });
+        });
+    });
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .stop-btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('停止发放，用户将不能领取优惠券',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                title:'提示',
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('操作成功', {time: 1000});
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>签到图</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.0"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>签到图</span>
+            <div class="top_tit">
+                <!--
+                ①全部分类时，按分类、循环图数排序展示
+                ②某一分类时，按添加顺序展示
+
+                -->
+                <a href="#"><i class="filter-icon"></i><span>全部分类</span><em class="fa fa-caret-down"></em></a>
+                <ul>
+                    <li><a href="#">全部分类</a></li>
+                    <li><a href="#">商战铁律</a></li>
+                    <li><a href="#">商业哲学</a></li>
+                    <li><a href="#">欲望激发</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_l rh"><span class="add_btn"><i class="fa fa-plus"></i>添加</span></div>
+    </div>
+    <!--    点击图片，可预览【可上、下一张;快速编辑】    -->
+    <div class="edit_table" id="layer-photos-demo">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="100px">分类</th>
+                    <th width="100px">排序码</th>
+                    <th width="100px">签到图</th>
+                    <th width="100px">创建时间</th>
+                    <th width="100px">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a class="edit">商战铁律</a></td>
+                    <td>1</td>
+                    <td class="squ-pic"><img layer-pid="image1" src="../images/1.jpg" layer-src="../images/1.jpg" alt=""></td>
+                    <td class="date"><div>2019-12-01 15:41:00</div></td>
+                    <td class="cz_btn">
+                        <button type="button" class="edit">编辑</button>
+                        <button type="button">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a class="edit">商业哲学</a></td>
+                    <td>2</td>
+                    <td class="squ-pic"><img layer-pid="image2" src="../images/1.jpg" layer-src="../images/1.jpg" alt=""></td>
+                    <td class="date"><div>2019-12-01 15:41:00</div></td>
+                    <td class="cz_btn">
+                        <button type="button" class="edit">编辑</button>
+                        <button type="button">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a class="edit">欲望激发</a></td>
+                    <td>1</td>
+                    <td class="squ-pic"><img layer-pid="image3" src="../images/1.jpg" layer-src="../images/1.jpg" alt=""></td>
+                    <td class="date"><div>2019-12-01 15:41:00</div></td>
+                    <td class="cz_btn">
+                        <button type="button" class="edit">编辑</button>
+                        <button type="button">删除</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+    $('#chutiyan .add_btn,.edit').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '签到图管理',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '500px'],
+            content: '签到图管理.html' //iframe的url
+        });
+    });
+    $('#chutiyan .squ-pic').on('click', function(){
+        //iframe层
+        layer.photos({
+            photos: '#layer-photos-demo'
+            ,shade:0.7
+            ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+            ,btn: ['编辑', '删除']
+            ,yes: function(index, layero){
+                layer.open({
+                    type: 2,
+                    title: '签到图管理',
+                    shadeClose: true,
+                    shade: 0.3,
+                    maxmin: true, //开启最大化最小化按钮
+                    area: ['700px', '436px'],
+                    content: '签到图管理.html' //iframe的url
+                });
+            }
+            ,btn2: function(index, layero){
+                console.log('取消');
+
+                //return false 开启该代码可禁止点击该按钮关闭
+            }
+        });
+    });
+    $(".squ-pic").click(function(){
+        var imgArry = [];
+        $(".layer-photos-demo").find("img").each(function(){
+            imgArry.push({"alt": "fddf","src": $(this).attr("src")})
+        })
+        layer.photos({
+            photos: {
+                "title": "", //相册标题
+                "id": 123, //相册id
+                "start": 0, //初始显示的图片序号，默认0
+                "data": imgArry
+            } //格式见API文档手册页
+            ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+        });
+    })
+</script>
+</body>
+</html>

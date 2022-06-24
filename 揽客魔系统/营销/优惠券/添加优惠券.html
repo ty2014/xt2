@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加优惠券</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .icon_chose li{padding: 4px;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0">
+
+
+
+<div class="activity_set activity_set2 w-5">
+    <!-- 基础信息   -->
+    <div class="b-line">
+        <!--  该优惠券删除后，顶部出现该提示语      -->
+        <div class="a_list" style="position: sticky;top: 0;z-index: 9;width: 100%;background: #fff">
+            <div class="a_list_r">
+                <p class="tishi-bg" style="width: 100%"><b style="font-size: 16px;margin-right: 16px;">该优惠券已被回收，不可恢复！</b>删除原因：操作人员填写的原因</p>
+            </div>
+        </div>
+        <!--   右侧可视化区域     -->
+        <div id="Rview" style="background-color: #f0f0f0;background-image: url(‘’);background-position: center;background-repeat: no-repeat;background-size:100% 100%;position: absolute;left: 800px;top: 100px;z-index: 9;border: 1px solid #ddd;overflow: hidden">
+            <img src="images/yhqImg1.png" alt="" style="height: 400px">
+            <div style="position: absolute;top: 240px;height: 76px;left: 8px;right: 8px;overflow: hidden;">
+                <span id="tipTxt" style="font-size: 10px;background: #9770f5;color: #fff;width: 90px;text-align: center;transform: rotate(38deg) translate(26px, -14px) scale(.62);position: absolute;right: 0;top: 0;">新人专享</span>
+            </div>
+        </div>
+
+        <!--   正文内容     -->
+        <div class="a_list">
+            <span class="a_list_r r-title">基础信息:</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">优惠券类型:</span>
+            <div class="a_list_r flex-column">
+                <ul class="type_cont_item">
+                    <li class="active">普通优惠券</li>
+                    <li>裂变优惠券</li>
+                </ul>
+                <p class="tishi-bg mgL-0">普通优惠券：用户不需要做任何操作就可以领取</br>裂变优惠券：A用户把优惠券分享给B用户，B用户直接领取（B无需分享给他人）后，A用户才能领取</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">优惠券状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg" checked="" class="toggle-button" name="switch">
+                        <label for="u-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">立即启用</span>
+                            <span class="text off">暂不启用</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*立即启用则在前台展示，暂不启用则不展示</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">使用范围:</span>
+            <div class="a_list_r">
+                <div class="select-text type_chose">
+                    <span class="select-txt">请选择</span>
+                    <ul>
+                        <li>单课</li>
+                        <li>专栏</li>
+                        <li>会员</li>
+                        <li>线下活动</li>
+                        <li>课程分类</li>
+                    </ul>
+                </div>
+                <div class="type_chose_cont" style="font-size: 0;display: none">
+                    <span class="set-user" style="margin: 0 8px">选择指定课程</span><a href="" style="font-size: 12px;display: inline-block;vertical-align: top;margin-top: 8px;">已选择0个</a>
+                </div>
+                <div class="type_chose_cont2" style="font-size: 0;display: none">
+                    <div class="select-text" style="min-width: 120px;display: inline-block;margin-left: 8px">
+                        <span class="select-txt">分类一</span>
+                        <ul>
+                            <li>分类一</li>
+                            <li>分类二</li>
+                            <li>分类三</li>
+                        </ul>
+                    </div>
+                    <div class="select-text" style="min-width: 120px;display: inline-block;margin-left: 8px">
+                        <span class="select-txt">子分类一</span>
+                        <ul>
+                            <li>子分类一</li>
+                            <li>子分类二</li>
+                            <li>子分类三</li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="tishi">*用户只有购买此处设置的范围内的商品时，才可以使用本优惠券</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">优惠券名称:</span>
+            <div class="a_list_r">
+                <div class="showNumBox"><input type="text" class="w-620"><span class="num">0/12</span></div>
+                <span class="tishi">*将会在前台展示</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">优惠券价格:</span>
+            <div class="a_list_r">
+                <input type="number" class="m_width" placeholder="￥" style="margin-right: 8px">
+                <div class="select-text center priceType" style="min-width: 60px">
+                    <span class="select-txt">元</span>
+                    <ul>
+                        <li class="active">元</li>
+                        <li>折</li>
+                    </ul>
+                </div>
+                <span class="tishi priceTypeTip">*设置该优惠券的使用价格</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">使用限制:</span>
+            <div class="a_list_r">单个商品满<input type="number" class="m_width" placeholder="￥" style="margin: 0 8px">元可使用</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">发放数量:</span>
+            <div class="a_list_r"><input type="number" class="s_width center" style="margin-right: 8px;">张</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">有效时间:</span>
+            <div class="a_list_r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" placeholder="止">
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">优惠券规则:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <textarea class="w-620" style="height: 100px;resize: none;padding: 10px;" placeholder="填写优惠券使用规则"></textarea>
+                    <span class="num">0/200</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">选择分享海报:</span>
+            <div class="a_list_r">
+                <span class="set-user mbChose">选择模板</span><a class="mgL-10 mbChose_num">已选择2个</a>
+                <span class="tishi">*需要分享才能获得优惠券的时候，需要此海报来实现，<a class="hbImgBtn">查看示例</a></span>
+            </div>
+        </div>
+    </div>
+    <!-- 领取条件   -->
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_r r-title">领取条件:</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">发放对象:</span>
+            <div class="a_list_r">
+                <div class="select-text lq_user" style="min-width: 120px">
+                    <span class="select-txt">新人专享</span>
+                    <ul>
+                        <li class="active">新人专享</li>
+                        <li>老客户专享</li>
+                        <li>任何人</li>
+                    </ul>
+                </div>
+                <i class="tips tip3" style="margin-left: 8px;"></i>
+            </div>
+        </div>
+        <div class="a_list lq_user_cont" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r flex-column">
+                <span class="tishi" style="margin: 0 0 10px 0">* 指定会员等级的用户可以领取该优惠券</span>
+                <div class="chose_item">
+                    <label for="vip1" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">普通会员</span>
+                    </label>
+                    <label for="vip2" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">白银会员</span>
+                    </label>
+                    <label for="vip3" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip3">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">铂金会员</span>
+                    </label>
+                    <label for="vip4" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip4">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">钻石会员</span>
+                    </label>
+                    <label for="vip5" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip5">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">非会员</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">优惠券标签:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg3" checked class="toggle-button" name="switch">
+                        <label for="u-togg3" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">展示标签</span>
+                            <span class="text off">不展示标签</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list setTip">
+            <span class="a_list_l">标签内容:</span>
+            <div class="a_list_r">
+                <div class="showNumBox" style="margin-right: 20px;">
+                    <input type="text" class="m_width btnTypeVal" maxlength="5" value="新人专享" placeholder="">
+                    <span class="num">0/5</span>
+                </div>
+                选择背景色：
+                <div id="test_color"></div>
+
+                <span class="tishi">*最多可输入5个字符，不填或不开启则前台不展示</span>
+            </div>
+        </div>
+    </div>
+    <!-- 发放方式   -->
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_r r-title">发放方式:</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">领取方式:</span>
+            <div class="a_list_r">
+                <div class="select-text lq_type" style="min-width: 120px">
+                    <span class="select-txt">直接发放</span>
+                    <ul>
+                        <li>直接发放</li>
+                        <li>随机发放</li>
+                    </ul>
+                </div>
+                <i class="tips tip2" style="margin-left: 8px;"></i>
+            </div>
+        </div>
+        <div class="a_list lq_type_cont">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <input type="number" class="s_width center mgR-8" value="" disabled><span class="txt">元</span>
+                <span class="tishi">*该处价格来自于上面的‘优惠券价格’设置，如需修改，请修改上面的价格</span>
+            </div>
+        </div>
+        <div class=" lq_type_cont2" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <input type="number" class="s_width center mgR-8" placeholder="起"><span class="txt">元</span>
+                    <span class="date-line"></span>
+                    <input type="number" class="s_width center mgR-8" placeholder="止"><span class="txt">元</span>
+                    <span class="tishi">*输入随机价格的起止范围，用户可领取这个范围内任意价格的优惠券</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <input type="number" class="s_width center mgR-8" placeholder="">次
+                    <span class="tishi">*输入可随机翻牌的次数</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r lqType">
+                    <label for="lq1" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked="" name="lq" id="lq1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">默认翻牌背景</span>
+                    </label>
+                    <label for="lq2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="lq" id="lq2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">自定义翻牌背景</span>
+                    </label>
+                    <span class="tishi">*选择翻牌按钮的背景图，<a class="fpbg_img_btn">点击查看示例</a></span>
+                </div>
+            </div>
+            <div class="a_list lqType_cont1">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <ul class="icon_chose layer-photos-demo2">
+                        <li class="on"><img src="images/itemBg2.png"></li>
+                        <li class=""><img src="images/itemBg3.png"></li>
+                        <li class=""><img src="images/itemBg4.png"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="a_list lqType_cont2" style="display: none">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <ul class="FraUpload_imglist layer-photos-demo3">
+                        <li class="img_item" style="display: none">
+                            <img src="">
+                            <span class="icon-delete img_del"></span>
+                        </li>
+                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                        <li class="file-btn"></li>
+                    </ul>
+                    <div class="tishi mgL-0">*建议像素156*192，jpg、gif等格式，大小不超过100KB</div>
+                </div>
+            </div>
+
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg4" class="toggle-button" name="switch">
+                            <label for="u-togg4" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">自定义背景</span>
+                                <span class="text off">不自定义背景</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="tishi">*自定义随机发放页面背景图；<a class="bg_img_btn">点击查看示例</a></span>
+                </div>
+            </div>
+            <div class="a_list zdyBgCont" style="display: none">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <ul class="FraUpload_imglist layer-photos-demo1">
+                        <li class="img_item" style="display: none">
+                            <img src="">
+                            <span class="icon-delete img_del"></span>
+                        </li>
+                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                        <li class="file-btn"></li>
+                    </ul>
+                    <div class="tishi mgL-0">*建议像素750*1334，大小不超过1000KB；</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 用户增长   -->
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_r r-title">用户增长:</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">开启翻倍:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg2"  class="toggle-button" name="switch">
+                        <label for="u-togg2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*开启则用户领取优惠券后，都要出现翻倍弹框提示，关闭则不展示；<a class="title_img_btn">点击查看示例</a></span>
+            </div>
+        </div>
+        <div class="a_list fbCont" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                邀请<input type="number" class="s_width center" style="margin: 0 8px;">人后，优惠券的价格可以翻<b style="color: red;margin: 0 4px;">1</b>倍
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<img src="images/yhqImg4.png" alt="" id="title_img" style="height: 580px;display: none;">
+<img src="images/yhqImg6.png" alt="" id="hb_img" style="height: 580px;display: none;">
+<img src="images/yhqImg8.png" alt="" id="bg_img" style="height: 580px;display: none;">
+<img src="images/yhqImg7.png" alt="" id="fpbg_img" style="height: 580px;display: none;">
+
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/slideFixed.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    layui.use('colorpicker', function(){
+        var $ = layui.$
+            ,colorpicker = layui.colorpicker;
+        colorpicker.render({
+            elem: '#test_color'
+            ,color: '#9770f5'
+            ,predefine: true // 开启预定义颜色
+            ,colors: ['#9770f5','#0ca5ff'] //自定义预定义颜色项
+            ,done: function(color){
+                $('#tipTxt').css('background',color); //向隐藏域赋值
+                //layer.tips('给指定隐藏域设置了颜色值：'+ color, this.elem);
+            }
+        });
+    })
+
+    layer.photos({
+        photos: '.layer-photos-demo2'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+    $(function() {
+        //
+        $('#Rview').slideFixed();
+    });
+
+    $('#chutiyan .title_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#title_img")
+        });
+    });
+    $('#chutiyan .hbImgBtn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#hb_img")
+        });
+    });
+    $('#chutiyan .bg_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#bg_img")
+        });
+    });
+    $('#chutiyan .fpbg_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#fpbg_img")
+        });
+    });
+
+    // 鼠标移入提示语
+    $('#chutiyan .tip2').on('mouseenter',function(){
+        this.index =layer.tips('1、直接发放：用户直接领取</br>' +
+            '2、随机发放：通过“随机”的方式随机获得优惠券', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:600
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+    $('#chutiyan .tip3').on('mouseenter',function(){
+        this.index =layer.tips('1、任何人：任何人都可以领取，没有限制</br>' +
+            '2、新人专享：从未购买过（课程、专栏、会员、线下活动等）的用户才是新用户（打赏除外）</br>' +
+            '3、老客户专享：只要有购买过（课程、专栏、会员、线下活动等）的都算老客户', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:600
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+    // 选择类型
+    $('.type_cont_item li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+    // 范围选择
+    $('.type_chose li').on('click',function () {
+        let txt = $(this).text();
+        let p = $('.type_chose_cont');
+        let c = $('.type_chose_cont .set-user');
+        let oth = $('.type_chose_cont2');
+        switch (txt) {
+            case '单课':
+                p.show();
+                oth.hide();
+                c.attr('class','set-user chose_kc').text('选择指定课程')
+                break;
+            case '专栏':
+                p.show();
+                oth.hide();
+                c.attr('class','set-user chose_zl').text('选择指定专栏')
+                break;
+            case '会员':
+                p.show();
+                oth.hide();
+                c.attr('class','set-user chose_vip').text('选择指定会员')
+                break;
+            case '线下活动':
+                p.show();
+                oth.hide();
+                c.attr('class','set-user chose_active').text('选择指定线下活动')
+                break;
+            case '课程分类':
+                p.hide();
+                oth.show();
+                break;
+        }
+    })
+
+
+    // 标签内容监听
+    var timer ='';
+    $(".btnTypeVal").bind("input propertychange",function(event){
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            let num = $(".btnTypeVal").val();
+            $('#tipTxt').text(num);
+        },500)
+    });
+    // 选择发放对象
+    $('.lq_user li').on('click',function () {
+        let txt = $(this).text();
+        let p = $('.lq_user_cont');
+        let place = $('.setTip input');
+        switch (txt) {
+            case '任何人':
+                p.hide();
+                place.attr('value','');
+                $('#tipTxt').text('')
+                break;
+            case '新人专享':
+                p.hide();
+                place.attr('value','新人专享');
+                $('#tipTxt').text('新人专享')
+                break;
+            case '老客户专享':
+                p.show();
+                place.attr('value','老用户专享');
+                $('#tipTxt').text('老客户专享')
+                break;
+        }
+    })
+
+    // 设置价格类型（元、折）
+    $('.priceType li').on('click',function () {
+        let txt = $(this).text();
+        switch (txt) {
+            case '元':
+                $('.priceTypeTip').text('*设置该优惠券的使用价格');
+                $('.lq_type_cont .tishi').text('*该处价格来自于上面的‘优惠券价格’设置，如需修改，请修改上面的价格');
+                $('.lq_type_cont2 .tishi').text('*输入随机价格的起止范围，用户可领取这个范围内任意价格的优惠券');
+                $('.lq_type_cont,.lq_type_cont2').find('.txt').text('元');
+                break;
+            case '折':
+                $('.priceTypeTip').text('*设置该优惠券的使用折扣');
+                $('.lq_type_cont .tishi').text('*该处折扣来自于上面的‘优惠券价格’设置，如需修改，请修改上面的折扣');
+                $('.lq_type_cont2 .tishi').text('*输入随机折扣的起止范围，用户可领取这个范围内任意价格的优惠券');
+                $('.lq_type_cont,.lq_type_cont2').find('.txt').text('折');
+                break;
+        }
+    })
+
+    $('.icon_chose li').click(function () {
+        $(this).addClass('on').siblings().removeClass('on')
+    })
+
+    $('.lqType label').on('click',function () {
+        let i = $(this).index();
+        if(i === 0){
+            $('.lqType_cont1').show();
+            $('.lqType_cont2').hide();
+        }else if(i === 1){
+            $('.lqType_cont2').show();
+            $('.lqType_cont1').hide();
+        }
+    })
+
+    //
+    $('.lq_type li').on('click',function () {
+        let txt = $(this).text();
+        switch (txt) {
+            case '直接发放':
+                $('.lq_type_cont').show()
+                $('.lq_type_cont2').hide()
+                break;
+            case '随机发放':
+                $('.lq_type_cont').hide()
+                $('.lq_type_cont2').show()
+                break;
+        }
+    })
+
+    // 开关控制内容显隐
+    $('#u-togg2').click(function () {
+        $('.fbCont').toggle();
+    })
+    $('#u-togg3').click(function () {
+        $('.setTip,#tipTxt').toggle();
+    })
+    $('#u-togg4').click(function () {
+        $('.zdyBgCont').toggle();
+    })
+
+    // 选择海报
+    $('#chutiyan .mbChose').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '小米旗舰店店铺优惠券',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '海报模板/海报模板选择.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .mbChose_num').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '小米旗舰店店铺优惠券',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '海报模板/海报模板选择.html#tab2' //iframe的url
+        });
+    });
+
+    $('#chutiyan .setCj').on('click', function(){
+        parent.layer.open({
+            type: 2,
+            title: '抽奖设置',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true,
+            area: ['95%', '95%'],
+            content: '抽奖设置.html'
+        });
+    });
+
+</script>
+
+</body>
+</html>

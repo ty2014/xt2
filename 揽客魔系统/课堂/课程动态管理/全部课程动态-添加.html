@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加课程动态</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        .normal-table .button-label-s{display: inline-block;}
+        .normal-table table td{overflow: unset;}
+        .normal-table .select-text{min-width: 80px;width: 80px;margin: 0 auto;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<div class="activity_set activity_set2">
+    <!--  基础信息  -->
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">基础信息</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">课程动态状态:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" checked id="u-togg1" class="toggle-button" name="switch">
+                            <label for="u-togg1" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="tishi">默认：开启</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">显示到列表:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" checked id="u-togg2" class="toggle-button" name="switch">
+                            <label for="u-togg2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">是</span>
+                                <span class="text off">否</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="tishi">默认：是，为否时不会在手机列表上显示</span>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">课程动态名称:</span>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">优先级:</span>
+                <div class="a_list_r"><input type="number" class="s_width center"><span class="tishi">*优先级越大,排名越靠前</span></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">封面图:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮  -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi">*建议尺寸750px*500px；大小不超过50KB</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">报名注意事项:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">主讲人:</span>
+                <div class="a_list_r"><input type="text" class="m_width center"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">时长:</span>
+                <div class="a_list_r"><input type="text"><span class="tishi">如：3天2夜</span></div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">报名成为会员:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper isvip">
+                            <input type="checkbox" id="u-togg3" class="toggle-button" name="switch">
+                            <label for="u-togg3" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">是</span>
+                                <span class="text off">否</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">初始报名人数:</span>
+                <div class="a_list_r"><input type="number" class="m_width center"></div>
+            </div>
+        </div>
+        <div class="vip-toggle-cont" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l">会员等级:</span>
+                <div class="a_list_r chose_item">
+                    <label for="vip1" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">联创人</span>
+                    </label>
+                    <label for="vip2" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">合伙人</span>
+                    </label>
+                    <label for="vip3" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip3" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">VIP</span>
+                    </label>
+                    <label for="vip4" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="vip4" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">学员</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">会员有效时间:</span>
+                <div class="a_list_r"><input type="number" class="s_width center" style="margin-right: 4px;">月<span class="tishi">*输入数字是多少，则会员有效时间就为多少个月</span></div>
+            </div>
+        </div>
+    </div>
+    <!--  报名信息  -->
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">报名信息</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">报名状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg4" class="toggle-button" name="switch">
+                        <label for="u-togg4" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">启用</span>
+                            <span class="text off">停用</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">报名项配置:</span>
+            <div class="a_list_r" style="max-width: 620px;">
+                <div class="normal-table">
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 80px">字段名</th>
+                            <th style="width: 80px">是否显示</th>
+                            <th style="width: 80px">是否必填</th>
+                            <th style="width: 80px">字段排序</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="line-tr">姓名</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show0" class="toggle-button" name="switch">
+                                        <label for="show0" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must0" class="toggle-button" name="switch">
+                                        <label for="must0" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">1</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">手机</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show1" class="toggle-button" name="switch">
+                                        <label for="show1" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must1" class="toggle-button" name="switch">
+                                        <label for="must1" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">2</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">身份证号</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show2" class="toggle-button" name="switch">
+                                        <label for="show2" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must2" class="toggle-button" name="switch">
+                                        <label for="must2" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">3</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">性别</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show3" class="toggle-button" name="switch">
+                                        <label for="show3" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must3" class="toggle-button" name="switch">
+                                        <label for="must3" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">4</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">联系地址</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show4" class="toggle-button" name="switch">
+                                        <label for="show4" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must4" class="toggle-button" name="switch">
+                                        <label for="must4" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">5</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">年龄</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show5" class="toggle-button" name="switch">
+                                        <label for="show5" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must5" class="toggle-button" name="switch">
+                                        <label for="must5" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">6</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">学历</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show6" class="toggle-button" name="switch">
+                                        <label for="show6" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must6" class="toggle-button" name="switch">
+                                        <label for="must6" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">7</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">生日</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show7" class="toggle-button" name="switch">
+                                        <label for="show7" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must7" class="toggle-button" name="switch">
+                                        <label for="must7" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">8</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">爱好</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show8" class="toggle-button" name="switch">
+                                        <label for="show8" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must8" class="toggle-button" name="switch">
+                                        <label for="must8" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">9</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">公司名称</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show9" class="toggle-button" name="switch">
+                                        <label for="show9" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must9" class="toggle-button" name="switch">
+                                        <label for="must9" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">10</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">职位</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show10" class="toggle-button" name="switch">
+                                        <label for="show10" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must10" class="toggle-button" name="switch">
+                                        <label for="must10" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">11</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">备注</td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="show11" class="toggle-button" name="switch">
+                                        <label for="show11" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <input type="checkbox" id="must11" class="toggle-button" name="switch">
+                                        <label for="must11" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">是</span>
+                                            <span class="text off">否</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="select-text">
+                                    <span class="select-txt">12</span>
+                                    <ul>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">报名费:</span>
+                <div class="a_list_r"><input type="number" class="m_width"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">优惠价:</span>
+                <div class="a_list_r"><input type="number" class="m_width"></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">专属优惠价:</span>
+            <div class="a_list_r"><input type="number" class="m_width"></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">同行费用:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper both-fy">
+                            <input type="checkbox" id="u-togg5" class="toggle-button" name="switch">
+                            <label for="u-togg5" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">递增</span>
+                                <span class="text off">无</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list bm-num">
+                <span class="a_list_l">最大报名人数:</span>
+                <div class="a_list_r"><input type="number" class="m_width center"></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">席位开关:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper xw-toggle">
+                        <input type="checkbox" id="u-togg6" class="toggle-button" name="switch">
+                        <label for="u-togg6" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*开启：则前端显示选择席位样式；关闭：则前端不显示</span>
+            </div>
+        </div>
+        <div class="xw-sett" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l">席位配置:</span>
+                <div class="a_list_r" style="max-width: 620px;">
+                    <div class="normal-table">
+                        <table border="0">
+                            <thead>
+                            <tr>
+                                <th style="width: 80px">席位名称</th>
+                                <th style="width: 80px">席位价格</th>
+                                <th style="width: 80px">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="line-tr"><input type="text"></td>
+                                <td class="line-tr"><input type="number" class="m_width"></td>
+                                <td><button class="del">删除</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: left"><p class="tishi2 mgL-0">该处席位有配置‘渠道优惠价’，此处若修改请注意是否要关联修改</p></td>
+                                <td><button>添加</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  课程参与配置  -->
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">课程参与配置</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">课程参与配置:</span>
+            <div class="a_list_r">自报名之日起<input type="number" class="s_width center" style="margin: 0 4px;">天内可参加<input type="number" class="s_width center" style="margin: 0 4px;">场</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">复训资格用完提示语:</span>
+            <div class="a_list_r"><input type="text" class="w-620" placeholder="此处填写提示语"></div>
+        </div>
+    </div>
+    <!--  课程动态内容  -->
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">课程动态内容</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">课程动态简介:</span>
+            <div class="a_list_r"><input type="text" class="w-620" placeholder="填写课程动态简介"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px">课程动态内容:</span>
+            <div class="a_list_r" style="flex-direction: column;align-items: flex-start;">
+                <p class="tishi mgL-0" style="margin-bottom: 10px;">*若想用户在当前页面直接弹出购买信息，请在当前页面中包含名为class的<span style="color: #ff0000">dqymtx_infrm</span>的标签</p>
+                <textarea style="width: 620px;height: 200px;padding: 10px;resize: none;">此处放编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <!--  报名成功后提醒  -->
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">报名成功后提醒</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;">报名成功后提醒（网页）:</span>
+            <div class="a_list_r">
+                <textarea name="" style="width: 60%;height: 360px;">此处放富文本编辑器</textarea>
+                <img src="http://cshtml.lkmsxy.com/csimg/zfcg.jpg" alt="" style="height: 360px;margin-left: 40px;">
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">报名成功后提醒（微信\短信）:</span>
+            <div class="a_list_r">
+                <textarea name="" style="width: 620px;height: 100px;padding: 10px;" placeholder=""></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('.isvip label').click(function () {
+        $('.vip-toggle-cont').toggle();
+    });
+    $('.both-fy label').click(function () {
+        $('.bm-num').toggle();
+    });
+    $('.xw-toggle label').click(function () {
+        $('.xw-sett').toggle();
+    });
+</script>
+</body>
+</html>

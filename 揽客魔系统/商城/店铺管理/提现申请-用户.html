@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>提现申请</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan" style="min-width: auto;background: #fff;padding: 0">
+
+<div class="top-p-detail w-70">
+    <div class="detail-list">
+        <div>
+            <div><span>开户行名：</span>中国银行绵阳分行</div>
+            <a class="change">修改</a>
+        </div>
+        <div class="ju-start"><span>收款卡号：</span>6215 6831 0000 1245 078</div>
+        <div class="ju-start"><span>持卡人：</span>江苏爱美服饰有限公司</div>
+    </div>
+</div>
+
+<div class="activity_set">
+    <div class="a_list">
+        <span class="a_list_l">提现金额：</span>
+        <div class="a_list_r">
+            <input type="text"  style="width: 100px"><span class="tishi">*待提现余额：258.00</span>
+        </div>
+    </div>
+    <div class="a_list flex-start">
+        <span class="a_list_l">提现留言：</span>
+        <div class="a_list_r">
+            <textarea style="width: 720px;padding: 10px;height: 100px"></textarea>
+        </div>
+    </div>
+    <div class="btn-list"><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="top-p-detail w-70">
+    <div class="detail-list detail-tips" style="border-top: none">
+        <div>温馨提示：</div>
+        <div class="ju-start"><span>1，预计到账时间：</span><em>1~2工作日内</em></div>
+        <!--  当未设置可免手续费额时，不展示；注意：总计、每年是变量，据设置来  -->
+        <div class="ju-start"><span>2，提现手续费：</span><b>10%oo</b>（万分比）,<em>总计</em>可免手续费额<b>20000</b>元</div>
+        <div class="ju-start flex-start">
+            <span>3，提现规则：</span>
+            <div>
+                <p>每日最高提现总额：<b>50000</b>元，每日做多可提现<b>3</b>次；</p>
+                <p>单笔提现金额条件：<b>1000~20000</b>元。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script>
+    $('#chutiyan .change').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '收款账户变更',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['900px', '500px'],
+            content: '收款账户变更.html' //iframe的url
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地域分布</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan">
+
+<!--
+
+搜索字段：地域
+
+排序字段：浏览量、访客数、访问次数、跳出率、平均浏览量、平均访问时长
+-->
+
+<section class="head-slide">
+    <div class="head-slide-item">
+        <span>时间：</span>
+        <div class="slide-span"><span class="active">今天</span><span>昨天</span><span>最近7天</span><span>最近30天</span></div>
+        <div class="slide-input"><input type="text" class="demo-input" id="test1"></div>
+    </div>
+    <div class="head-slide-item">
+        <span>访客：</span>
+        <div class="slide-span"><span class="active">全部</span><span>新访客</span><span>老访客</span></div>
+    </div>
+    <div class="head-slide-item">
+        <span>入口：</span>
+        <div class="slide-select">
+            <select>
+                <option value="">全部</option>
+                <option value="">公众号</option>
+                <option value="">朋友圈</option>
+                <option value="">好友/群</option>
+            </select>
+            <img src="../../../images/bottom-icon.jpg" alt="">
+        </div>
+    </div>
+</section>
+<section>
+    <ul class="num-view">
+        <li>
+            <div>
+                <p>浏览量<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="用户每打开一个网站页面就被记录1次。</br>用户多次打开同一页面，浏览量值累计。" data-original-title="1"></i></p>
+                <span>10,358</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>访客数<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="一天之内访问网站的用户数，</br>同一用户多次访问只计算1个访客。" data-original-title="1"></i></p>
+                <span>1,358</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>访问次数<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="访客访问您网站的次数。</br>一个访客可以多次访问网站，一次访问可能会浏览多个页面。" data-original-title="1"></i></p>
+                <span>2,126</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>跳出率<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="只浏览了一个页面便离开了网站的访问次数占总的访问次数的百分比。" data-original-title="1"></i></p>
+                <span>12.34%</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>平均浏览量<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="平均每个访客浏览网站页面的次数，平均浏览量=浏览量/访客数。" data-original-title="1"></i></p>
+                <span>7.63</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>平均访问时长<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="访客在一次访问中，平均打开网站的时长。" data-original-title="1"></i></p>
+                <span>00:00:32</span>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="charts">
+    <ul class="nav nav-pills nav-radio" role="tablist">
+        <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">浏览量</a></li>
+        <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">访客数</a></li>
+        <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">访问次数</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active " id="tab1">
+            <div class="charts-list">
+                <div id="main" style="width: 50%;height:400px;"></div>
+                <div class="table-content align-items" style="width: 50%;">
+                    <form action="" class="table_cont">
+                        <table border="0" class="table_body">
+                            <thead>
+                            <tr>
+                                <th width="50px">排行</th>
+                                <th width="200px">省份</th>
+                                <th width="80px">浏览量</th>
+                                <th width="80px">占比</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- 显示前5个 -->
+                            <tr>
+                                <td>01</td>
+                                <td>四川</td>
+                                <td>3</td>
+                                <td>10.8%</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>天津</td>
+                                <td>3</td>
+                                <td>11.65%</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>北京</td>
+                                <td>3</td>
+                                <td>13.65%</td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>陕西</td>
+                                <td>5</td>
+                                <td>10.65%</td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>上海</td>
+                                <td>4</td>
+                                <td>10.12%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab2">
+            <div class="charts-list">
+                <div id="main2" style="width: 50%;height:400px;"></div>
+                <div class="table-content align-items" style="width: 50%;">
+                    <form action="" class="table_cont">
+                        <table border="0" class="table_body">
+                            <thead>
+                            <tr>
+                                <th width="50px">排行</th>
+                                <th width="200px">省份</th>
+                                <th width="80px">访客数</th>
+                                <th width="80px">占比</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- 显示前5个 -->
+                            <tr>
+                                <td>01</td>
+                                <td>四川</td>
+                                <td>3</td>
+                                <td>10.8%</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>天津</td>
+                                <td>3</td>
+                                <td>11.65%</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>北京</td>
+                                <td>3</td>
+                                <td>13.65%</td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>陕西</td>
+                                <td>5</td>
+                                <td>10.65%</td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>上海</td>
+                                <td>4</td>
+                                <td>10.12%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab3">
+            <div class="charts-list">
+                <div id="main3" style="width: 50%;height:400px;"></div>
+                <div class="table-content align-items" style="width: 50%;">
+                    <form action="" class="table_cont">
+                        <table border="0" class="table_body">
+                            <thead>
+                            <tr>
+                                <th width="50px">排行</th>
+                                <th width="200px">省份</th>
+                                <th width="80px">访问次数</th>
+                                <th width="80px">占比</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- 显示前5个 -->
+                            <tr>
+                                <td>01</td>
+                                <td>四川</td>
+                                <td>3</td>
+                                <td>10.8%</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>天津</td>
+                                <td>3</td>
+                                <td>11.65%</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>北京</td>
+                                <td>3</td>
+                                <td>13.65%</td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>陕西</td>
+                                <td>5</td>
+                                <td>10.65%</td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>上海</td>
+                                <td>4</td>
+                                <td>10.12%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="table-content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span><i class="fa fa-sort"></i>排序</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+    </div>
+    <form action="" class="table_cont">
+        <table border="0" class="table_body">
+            <thead>
+            <tr>
+                <th width="50px">序号</th>
+                <th width="100px">地域</th>
+                <th width="100px">浏览量<i class="sort-icon"></i></th>
+                <th width="100px">访客数<i class="sort-icon"></i></th>
+                <th width="100px">访问次数<i class="sort-icon"></i></th>
+                <th width="100px">跳出率<i class="sort-icon"></i></th>
+                <th width="100px">平均浏览量<i class="sort-icon"></i></th>
+                <th width="100px">平均访问时长<i class="sort-icon"></i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- 最多展示5条数据 -->
+            <tr>
+                <td>01</td>
+                <td>四川省-成都市</td>
+                <td>2,362</td>
+                <td>362</td>
+                <td>362</td>
+                <td>7.92%</td>
+                <td>2.62</td>
+                <td>00:01:36</td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</section>
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../../js/echarts.js"></script>
+<script src="../../../js/china.js"></script>
+<script src="../../../js/index.js"></script>
+<script src="../../../js/plugins/laydate/laydate.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<!-- 时间 -->
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        value: '2019-06-30 至 2019-08-15',
+        range: '至'
+    });
+</script>
+
+<!-- 图表 -->
+<script>
+    var charts=[];
+    var myChart = echarts.init(document.getElementById('main'));
+    var myChart2 = echarts.init(document.getElementById('main2'));
+    var myChart3 = echarts.init(document.getElementById('main3'));
+
+    var data = [
+        {
+            name: '北京',
+            value: 3
+        },
+        {
+            name: '天津',
+            value: 3
+        },
+        {
+            name: '上海',
+            value: 4
+        },
+        {
+            name: '重庆',
+            value: 4
+        },
+        {
+            name: '河北',
+            value: 2
+        },
+        {
+            name: '河南',
+            value: 3
+        },
+        {
+            name: '云南',
+            value: 1
+        },
+        {
+            name: '辽宁',
+            value: 3
+        },
+        {
+            name: '黑龙江',
+            value: 2
+        },
+        {
+            name: '湖南',
+            value: 4
+        },
+        {
+            name: '安徽',
+            value: 3
+        },
+        {
+            name: '山东',
+            value: 3
+        },
+        {
+            name: '新疆',
+            value: 12
+        },
+        {
+            name: '江苏',
+            value: 3
+        },
+        {
+            name: '浙江',
+            value: 3
+        },
+        {
+            name: '江西',
+            value: 2
+        },
+        {
+            name: '湖北',
+            value: 11
+        },
+        {
+            name: '广西',
+            value: 3
+        },
+        {
+            name: '甘肃',
+            value: 2
+        },
+        {
+            name: '山西',
+            value: 3
+        },
+        {
+            name: '内蒙古',
+            value: 5
+        },
+        {
+            name: '陕西',
+            value: 5
+        },
+        {
+            name: '吉林',
+            value: 4
+        },
+        {
+            name: '福建',
+            value: 5
+        },
+        {
+            name: '贵州',
+            value: 8
+        },
+        {
+            name: '广东',
+            value: 4
+        },
+        {
+            name: '青海',
+            value: 6
+        },
+        {
+            name: '西藏',
+            value: 4
+        },
+        {
+            name: '四川',
+            value: 3
+        },
+        {
+            name: '宁夏',
+            value: 8
+        },
+        {
+            name: '海南',
+            value: 9
+        },
+        {
+            name: '台湾',
+            value: 1
+        },
+        {
+            name: '香港',
+            value: 1
+        },
+        {
+            name: '澳门',
+            value: 1
+        }
+    ];
+
+    var option = {
+        tooltip: {
+            show: true,
+            formatter: function(params) {
+                let sum =0;
+                for(var i = 0;i<data.length;i++){
+                    sum +=data[i]['value'];
+                }
+                let html='<div style="width: 200px;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding:8px 10px;border-radius:5px 5px 0 0"><span display: inline-block;margin-right: 8px;width: 8px;height: 8px;>' + params.marker + '</span>' + params.name + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-top: 7px"><span>浏览量</span>' + params.data['value'] + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-bottom: 7px"><span>占比</span>' + (params.data['value']/sum*100).toFixed(2) + '%' + '</div>';
+                return html;
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)'
+        },
+        visualMap: {
+            type: 'continuous',
+            orient: 'horizontal',
+            text: ['高', '低'],
+            itemWidth:17,
+            itemHeight:50,
+            showLabel: true,
+            seriesIndex: [0],
+            inverse:true,
+            min: 0,
+            max: 5,
+            inRange: {
+                color: ['#e8effb', '#d6e3fa', '#bcd4fb', '#6ba0f5', '#367ef2', ]
+            },
+            textStyle: {
+                color: '#000'
+            },
+            bottom: 30,
+            left: 'left',
+        },
+        geo: {
+            roam: true,
+            map: 'china',
+            label: {
+                emphasis: {
+                    show: false
+                }
+            },
+            itemStyle: {
+                emphasis: {
+                    areaColor: '#fff464'
+                }
+            },
+            regions: [{
+                name: '南海诸岛',
+                value: 0,
+                itemStyle: {
+                    normal: {
+                        opacity: 0,
+                        label: {
+                            show: false
+                        }
+                    }
+                }
+            }],
+        },
+        series: [{
+            name: 'mapSer',
+            type: 'map',
+            geoIndex: 0,
+            label: {
+                show: false,
+            },
+            data: data
+        }]
+    };
+    var option2 = {
+        tooltip: {
+            show: true,
+            formatter: function(params) {
+                let sum =0;
+                for(var i = 0;i<data.length;i++){
+                    sum +=data[i]['value'];
+                }
+                let html='<div style="width: 200px;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding:8px 10px;border-radius:5px 5px 0 0"><span display: inline-block;margin-right: 8px;width: 8px;height: 8px;>' + params.marker + '</span>' + params.name + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-top: 7px"><span>访客数</span>' + params.data['value'] + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-bottom: 7px"><span>占比</span>' + (params.data['value']/sum*100).toFixed(2) + '%' + '</div>';
+                return html;
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)'
+        },
+        visualMap: {
+            type: 'continuous',
+            orient: 'horizontal',
+            text: ['高', '低'],
+            itemWidth:17,
+            itemHeight:50,
+            showLabel: true,
+            seriesIndex: [0],
+            inverse:true,
+            min: 0,
+            max: 5,
+            inRange: {
+                color: ['#e8effb', '#d6e3fa', '#bcd4fb', '#6ba0f5', '#367ef2', ]
+            },
+            textStyle: {
+                color: '#000'
+            },
+            bottom: 30,
+            left: 'left',
+        },
+        geo: {
+            roam: true,
+            map: 'china',
+            label: {
+                emphasis: {
+                    show: false
+                }
+            },
+            itemStyle: {
+                emphasis: {
+                    areaColor: '#fff464'
+                }
+            },
+            regions: [{
+                name: '南海诸岛',
+                value: 0,
+                itemStyle: {
+                    normal: {
+                        opacity: 0,
+                        label: {
+                            show: false
+                        }
+                    }
+                }
+            }],
+        },
+        series: [{
+            name: 'mapSer',
+            type: 'map',
+            geoIndex: 0,
+            label: {
+                show: false,
+            },
+            data: data
+        }]
+    };
+    var option3 = {
+        tooltip: {
+            show: true,
+            formatter: function(params) {
+                let sum =0;
+                for(var i = 0;i<data.length;i++){
+                    sum +=data[i]['value'];
+                }
+                let html='<div style="width: 200px;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding:8px 10px;border-radius:5px 5px 0 0"><span display: inline-block;margin-right: 8px;width: 8px;height: 8px;>' + params.marker + '</span>' + params.name + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-top: 7px"><span>访问次数</span>' + params.data['value'] + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-bottom: 7px"><span>占比</span>' + (params.data['value']/sum*100).toFixed(2) + '%' + '</div>';
+                return html;
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)'
+        },
+        visualMap: {
+            type: 'continuous',
+            orient: 'horizontal',
+            text: ['高', '低'],
+            itemWidth:17,
+            itemHeight:50,
+            showLabel: true,
+            seriesIndex: [0],
+            inverse:true,
+            min: 0,
+            max: 5,
+            inRange: {
+                color: ['#e8effb', '#d6e3fa', '#bcd4fb', '#6ba0f5', '#367ef2', ]
+            },
+            textStyle: {
+                color: '#000'
+            },
+            bottom: 30,
+            left: 'left',
+        },
+        geo: {
+            roam: true,
+            map: 'china',
+            label: {
+                emphasis: {
+                    show: false
+                }
+            },
+            itemStyle: {
+                emphasis: {
+                    areaColor: '#fff464'
+                }
+            },
+            regions: [{
+                name: '南海诸岛',
+                value: 0,
+                itemStyle: {
+                    normal: {
+                        opacity: 0,
+                        label: {
+                            show: false
+                        }
+                    }
+                }
+            }],
+        },
+        series: [{
+            name: 'mapSer',
+            type: 'map',
+            geoIndex: 0,
+            label: {
+                show: false,
+            },
+            data: data
+        }]
+    };
+
+    myChart.setOption(option);
+    myChart2.setOption(option2);
+    myChart3.setOption(option3);
+
+    charts.push(myChart,myChart2,myChart3);
+
+    setTimeout(function (){
+        window.onresize = function () {
+            myChart.resize();
+            myChart2.resize();
+            myChart3.resize();
+        }
+    },200);
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+        for(var i = 0; i < charts.length; i++) {
+            charts[i].resize();
+        }
+    });
+</script>
+
+
+</body>
+</html>

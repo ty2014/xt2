@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>会员商品配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.0">
+    <style>
+        .normal-table td label{justify-content: center}
+    </style>
+</head>
+<body id="chutiyan">
+
+
+<div class="page-title">会员商品-名额分佣配置</div>
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line">
+        <div class="tishi-bg" style="margin-bottom: 20px;max-width: 770px">
+            <img src="../../images/3.png" alt=""> 用户达到对应“会员等级”获得相应配置的“名额个数、比例”，5种触发名额变更的途径在“名额获得规则”处控制
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">名额分佣开关:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                    <label for="u-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*开启后，分佣人按自己有的名额进行提成，名额消耗完之后，则无法提成，要想提成，必须再补充名额</span>
+            </div>
+        </div>
+        <div class="a_list" style="align-items: flex-start">
+            <span class="a_list_l" style="padding-top: 25px">等级明细:</span>
+            <div class="a_list_r" style="max-width: 640px;">
+                <div class="normal-table">
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 60px">等级</th>
+                            <th style="width: 100px">销售对象</th>
+                            <th style="width: 80px">名额个数</th>
+                            <th style="width: 80px">分佣比例(%)</th>
+                            <th style="width: 80px">老用户初始化</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="line-tr" rowspan="3">联创人</td>
+                            <td class="line-tr">VIP1</td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td>
+                                <label for="reset1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="reset" id="reset1" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">VIP2</td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td>
+                                <label for="reset2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="reset" id="reset2" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">VIP3</td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td>
+                                <label for="reset3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="reset" id="reset3" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr" rowspan="3">合伙人</td>
+                            <td class="line-tr">VIP1</td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td>
+                                <label for="reset4" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="reset" id="reset4" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">VIP2</td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td>
+                                <label for="reset5" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="reset" id="reset5" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">VIP3</td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td class="line-tr"><input type="text" class="center m_width"></td>
+                            <td>
+                                <label for="reset6" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="reset" id="reset6" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr" colspan="4" style="text-align: left"><span class="tishi mgL-0">*勾选后，老用户就按照最新等级设置来执行,以前对应等级设置作废</span></td>
+                            <td>
+                                <label for="resetTotal" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="reset" id="resetTotal" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">变更规则:</span>
+            <div class="a_list_r">
+                用户的名额要变更时，原剩余的名额
+                <div class="select-text" style="margin-left: 8px;min-width: 80px;">
+                    <span class="select-txt">作废</span>
+                    <ul style="display: none;">
+                        <li>作废</li>
+                        <li>有效</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div class="tishi mgL-0">
+                    <p>例：用户原来是VIP(当前剩有5个10%的名额)，此时升级为SVIP（设置有10个20%的名额），用户VIP的原剩余5个名额怎么处理？</p>
+                    <p style="padding-left: 24px;">①原剩余的名额作废：则用户直接名额初始为“10个20%”</p>
+                    <p style="padding-left: 24px;">②原剩余的名额有效：则用户名额“5+10”个，这15个都按最新比例“20%”执行</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .btn-sure').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定保存并执行当前内容？<p style="font-size: 12px;color: #999">*请谨慎操作，注意检查</p>',{
+                skin: 'failureskin',    //类名
+                icon:7,
+                btn: ['确定','取消'],
+                area: '416px',
+                title:'提醒'
+            }, function(index){
+                layer.close(index);
+                layer.msg('操作成功')
+            }, function(index){
+                layer.close(index);
+            });
+        });
+    });
+
+</script>
+
+</body>
+</html>

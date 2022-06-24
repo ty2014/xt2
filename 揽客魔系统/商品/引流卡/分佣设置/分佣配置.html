@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分佣配置</title>
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body id="chutiyan" style="padding: 0;">
+
+<div class="activity_set" style="padding-top:24px;">
+    <form class="yjpz">
+        <table class="list_content">
+            <tr>
+                <td class="tab-2 pz-title" colspan="4"><img src="../../../images/yjpz-4.png" alt="">商品信息</td>
+            </tr>
+            <tr>
+                <td class="tab-1">商品名称:</td>
+                <td class="tab-2"  colspan="3">御芙兰香氛除螨洗衣液2L</td>
+            </tr>
+            <tr>
+                <td class="tab-1">市场价:</td>
+                <td class="tab-2">199.00</td>
+                <td class="tab-1">售价:</td>
+                <td class="tab-2">1.00</td>
+            </tr>
+        </table>
+    </form>
+    <form class="yjpz">
+        <table class="list_content">
+            <tr>
+                <td class="tab-2 pz-title" colspan="4"><img src="../../../images/yjpz-2.png" alt="">锁定提成信息</td>
+            </tr>
+            <tr>
+                <td class="tab-1"><em class="importantTip">*</em>锁定佣金开关:</td>
+                <td class="tab-2" colspan="3">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="togglebtn1" class="toggle-button" name="switch">
+                            <label for="togglebtn1" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                            <span class="switch_status">默认：关闭，在设置时若不填写或设置为0则不会产生分佣</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tab-1">提成标准:</td>
+                <td class="tab-2">
+                    <div class="select-text">
+                        <span class="select-txt">按固定值</span>
+                        <ul>
+                            <li>按固定值</li>
+                            <li>按比例</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="tab-1">低等级提成高等级:</td>
+                <td class="tab-2">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" checked id="togglebtn2" class="toggle-button" name="switch">
+                            <label for="togglebtn2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                            <span class="switch_status">默认：开启</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tab-1">锁定提成设置:</td>
+                <td class="tab-2" colspan="3">
+                    <ul class="ticheng_set">
+                        <li>
+                            <div class="tc_1">
+                                <span>会员等级1</span>
+                                <span class="tc_num">提成值（元）:<input type="text"/></span>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <span class="switch_status" style="color: #666;margin-left: 0;margin-right: 18px">高级提成:</span>
+                                        <input type="checkbox" id="togglebtn3" class="toggle-button" name="switch">
+                                        <label for="togglebtn3" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tc_2">
+                                <div class="gj-setting">
+                                    <span>已分佣人数</span>
+                                    <div class="select-text mini">
+                                        <span class="select-txt">&lt;=</span>
+                                        <ul>
+                                            <li>&lt;=</li>
+                                            <li>&gt;=</li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" style="margin-right: 16px;"/>
+                                    <span>人，且获得会员资格在</span>
+                                    <input type="text" placeholder="年/月/日" class="layui-input" style="margin: 0 16px;" id="test1">
+                                    <span>之后，提成值（元）:</span>
+                                    <input type="text" style="margin-left: 16px;"/>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tc_1">
+                                <span>会员等级2</span>
+                                <span class="tc_num">提成值（元）:<input type="text"/></span>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <span class="switch_status" style="color: #666;margin-left: 0;margin-right: 18px">高级提成:</span>
+                                        <input type="checkbox" id="togglebtn4" class="toggle-button" name="switch">
+                                        <label for="togglebtn4" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tc_2">
+                                <div class="gj-setting">
+                                    <span>已分佣人数</span>
+                                    <div class="select-text mini">
+                                        <span class="select-txt">&lt;=</span>
+                                        <ul>
+                                            <li>&lt;=</li>
+                                            <li>&gt;=</li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" style="margin-right: 16px;"/>
+                                    <span>人，且获得会员资格在</span>
+                                    <input type="text" placeholder="年/月/日" class="layui-input" style="margin: 0 16px;" id="test2">
+                                    <span>之后，提成值（元）:</span>
+                                    <input type="text" style="margin-left: 16px;"/>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tc_1">
+                                <span>非会员</span>
+                                <span class="tc_num">提成值（元）:<input type="text"/></span>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <form class="yjpz" style="margin-bottom: 40px;">
+        <table class="list_content">
+            <tr>
+                <td class="tab-2 pz-title" colspan="4"><img src="../../../images/yjpz-1.png" alt="">推荐提成配置</td>
+            </tr>
+            <tr>
+                <td class="tab-1"><em class="importantTip">*</em>推荐佣金开关:</td>
+                <td class="tab-2" colspan="3">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="togglebtn9" class="toggle-button" name="switch">
+                            <label for="togglebtn9" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                            <span class="switch_status">默认：关闭，在设置时若不填写或设置为0则不会产生分佣</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tab-1">提成标准:</td>
+                <td class="tab-2">
+                    <div class="select-text">
+                        <span class="select-txt">按比例</span>
+                        <ul>
+                            <li>按固定值</li>
+                            <li>按比例</li>
+                        </ul>
+                    </div>
+                </td>
+                <td class="tab-1">低等级提成高等级:</td>
+                <td class="tab-2">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" checked id="togglebtn5" class="toggle-button" name="switch">
+                            <label for="togglebtn5" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                            <span class="switch_status">默认：开启</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tab-1">推荐提成设置:</td>
+                <td class="tab-2" colspan="3">
+                    <ul class="ticheng_set">
+                        <li>
+                            <div class="tc_1">
+                                <span>会员等级1</span>
+                                <span class="tc_num">提成比例（%）:<input type="text"/></span>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <span class="switch_status" style="color: #666;margin-left: 0;margin-right: 18px">高级提成:</span>
+                                        <input type="checkbox" id="togglebtn6" class="toggle-button" name="switch">
+                                        <label for="togglebtn6" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tc_2">
+                                <div class="gj-setting">
+                                    <span>已分佣人数</span>
+                                    <div class="select-text mini">
+                                        <span class="select-txt">&lt;=</span>
+                                        <ul>
+                                            <li>&lt;=</li>
+                                            <li>&gt;=</li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" style="margin-right: 16px;"/>
+                                    <span>人，且获得会员资格在</span>
+                                    <input type="text" placeholder="年/月/日" class="layui-input" style="margin: 0 16px;" id="test3">
+                                    <span>之后，提成值（元）:</span>
+                                    <input type="text" style="margin-left: 16px;"/>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tc_1">
+                                <span>会员等级2</span>
+                                <span class="tc_num">提成比例（%）:<input type="text"/></span>
+                                <div class="button-label-s">
+                                    <div class="toggle-button-wrapper">
+                                        <span class="switch_status" style="color: #666;margin-left: 0;margin-right: 18px">高级提成:</span>
+                                        <input type="checkbox" id="togglebtn7" class="toggle-button" name="switch">
+                                        <label for="togglebtn7" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tc_2">
+                                <div class="gj-setting">
+                                    <span>已分佣人数</span>
+                                    <div class="select-text mini">
+                                        <span class="select-txt">&lt;=</span>
+                                        <ul>
+                                            <li>&lt;=</li>
+                                            <li>&gt;=</li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" style="margin-right: 16px;"/>
+                                    <span>人，且获得会员资格在</span>
+                                    <input type="text" placeholder="年/月/日" class="layui-input" style="margin: 0 16px;" id="test4">
+                                    <span>之后，提成值（元）:</span>
+                                    <input type="text" style="margin-left: 16px;"/>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tc_1">
+                                <span>非会员</span>
+                                <span class="tc_num">提成比例（%）:<input type="text"/></span>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test3' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test4' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('.toggle-button').click(function () {
+        if($(this).is(':checked')){
+            $(this).parent().parent().parent().next('.tc_2').show()
+        }else{
+            $(this).parent().parent().parent().next('.tc_2').hide()
+        }
+    });
+
+
+
+</script>
+
+</body>
+</html>

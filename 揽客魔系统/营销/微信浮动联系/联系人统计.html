@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系人统计</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="chutiyan">
+
+<!--
+   搜索字段：联系人昵称、联系人姓名
+   排序字段：联系页面、访问用户、曝光量、扫描二维码、复制电话号、复制微信号
+
+   注意：联系页面、访问用户、联系人，为“去重”统计。同一联系页面、访问用户、联系人计数为1。
+-->
+
+
+<section class="head-slide">
+    <div class="head-slide-item">
+        <span>时间：</span>
+        <div class="slide-span"><span>今天</span><span class="active">昨天</span><span>最近7天</span><span>最近30天</span></div>
+        <div class="slide-input"><input type="text" class="demo-input" id="test1"></div>
+    </div>
+</section>
+<section>
+    <ul class="num-view">
+        <li>
+            <div>
+                <p>曝光量<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="浮动联系人每展示一次计数+1。" data-original-title="1"></i></p>
+                <span>2,989</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>扫描二维码<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="用户扫描联系人“微信二维码”的次数，每长按一次计数+1。" data-original-title="1"></i></p>
+                <span>1,526</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>复制电话号<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="用户复制联系人“电话号”的次数，每长按一次计数+1。" data-original-title="1"></i></p>
+                <span>568</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>复制微信号<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="用户复制联系人“微信号”的次数，每长按一次计数+1。" data-original-title="1"></i></p>
+                <span>895</span>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="table-content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span><i class="fa fa-sort"></i>排序</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+    </div>
+    <form action="" class="table_cont">
+        <table border="0" class="table_body">
+            <thead>
+            <tr>
+                <th width="50px">序号</th>
+                <th width="80px">头像</th>
+                <th width="80px">联系人昵称</th>
+                <th width="80px">联系人姓名</th>
+                <th width="80px">联系页面<i class="sort-icon"></i></th>
+                <th width="80px">访问用户<i class="sort-icon"></i></th>
+                <th width="80px">曝光量<i class="sort-icon"></i></th>
+                <th width="80px">扫描二维码<i class="sort-icon"></i></th>
+                <th width="80px">复制电话号<i class="sort-icon"></i></th>
+                <th width="80px">复制微信号<i class="sort-icon"></i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                <td><a href="">小土豆</a></td>
+                <td>僵小鱼</td>
+                <td>5</td>
+                <td>32</td>
+                <td>20</td>
+                <td class="statu">3</td>
+                <td class="statu">2</td>
+                <td class="statu">1</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                <td><a href="">小土豆</a></td>
+                <td>僵小鱼</td>
+                <td>5</td>
+                <td>32</td>
+                <td>20</td>
+                <td class="statu">3</td>
+                <td class="statu">2</td>
+                <td class="statu">1</td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</section>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/plugins/laydate/laydate.js"></script>
+<script src="../../js/index.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<!-- 时间 -->
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        value: '2019-06-30 至 2019-08-15',
+        range: '至'
+    });
+</script>
+<!-- 弹框 -->
+<script>
+    $('#chutiyan .statu').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '联系明细',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '90%'],
+            content: '联系人统计明细.html' //iframe的url
+        });
+    });
+
+</script>
+</body>
+</html>

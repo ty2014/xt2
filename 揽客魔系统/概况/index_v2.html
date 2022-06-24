@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>概况</title>
+    <!--<script src="https://kit.fontawesome.com/7f7b5fa9f2.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/flipclock.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/gk.css"/>
+</head>
+<body id="chutiyan">
+
+<div class="lkmui-message lkmui-message--error" style="top: 5px">
+    <p class="lkmui-message_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</p>
+    <i class="icon-remove"></i>
+</div>
+
+<div id="app">
+    <div class="general">
+        <div class="general_l">
+            <!--  企微  -->
+            <div class="flex">
+                <div class="qwMsgCont borderRadius w_50vw">
+                    <div class="tit">
+                        <span class="txt1">客户统计</span>
+                        <span class="txt2">查看客户</span>
+                        <span class="icon">
+                            <i class="fa-regular fa-eye"></i>
+                            <i class="fa-regular fa-eye-slash"></i>
+                        </span>
+                    </div>
+                    <ul>
+                        <li>
+                            <div>
+                                <p class="txt1">客户总数</p>
+                                <p class="txt2">10066</p>
+                                <p class="txt2-hide hide">***</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="txt1">今日新增</p>
+                                <p class="txt2">6</p>
+                                <p class="txt2-hide hide">***</p>
+                                <div id="main1" style="height: 50px;width: 100px;margin-top: 10px;"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="txt1">今日流失</p>
+                                <p class="txt2">1</p>
+                                <p class="txt2-hide hide">***</p>
+                                <div id="main2" style="height: 50px;width: 100px;margin-top: 10px;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="qwMsgCont borderRadius w_50vw">
+                    <div class="tit">
+                        <span class="txt1">群统计</span>
+                        <span class="txt2">查看客户群</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <div>
+                                <p class="txt1">群总数</p>
+                                <p class="txt2">257</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="txt1">今日入群</p>
+                                <p class="txt2">45</p>
+                                <div id="main3" style="height: 50px;width: 100px;margin-top: 10px;"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="txt1">今日退群</p>
+                                <p class="txt2">14</p>
+                                <div id="main4" style="height: 50px;width: 100px;margin-top: 10px;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <div class="contBoxHead chartNavBar">
+                    <ul class="chartNav">
+                        <li class="on">客户数</li>
+                        <li>流失客户</li>
+                        <li>互动数</li>
+                    </ul>
+                    <div class="timeTip">
+                        <input type="text" class="layui-input mgR-10" id="test1" placeholder="起">
+                        <span class="on">7天</span>
+                        <span>30天</span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="chartBox" style="width: 65%">
+                        <div id="main5" style="height: 442px;width: 100%;background: #fff;"></div>
+                        <div id="main6" style="height: 442px;width: 100%;background: #fff;display: none"></div>
+                        <div id="main7" style="height: 442px;width: 100%;background: #fff;display: none"></div>
+                    </div>
+                    <div class="phbContent" style="width: 35%;">
+                        <div class="contBoxHead">
+                            <span class="tit">员工排行榜</span>
+                        </div>
+                        <!--  只展示 10 个数据，从最新的开始  -->
+                        <ul>
+                            <li v-for="(item,index) in phbList" :key="item.index">
+                            <span class="pmNum" v-if="item.isIcon">
+                                <img :src="item.pmNum" alt="">
+                            </span>
+                                <span class="pmNum" v-else>{{item.pmNum}}</span>
+                                <div class="name tooltip" :tooltip="item.uname">
+                                    <img :src="item.upic" alt="">
+                                    <p class="line1">{{item.uname}}</p>
+                                </div>
+                                <span class="txtNum">{{item.txtNum}}</span>
+                            </li>
+                        </ul>
+                        <div class="null-msg" style="min-height: 414px;display: none"><img src="images/null-msg.png" alt="">暂无数据</div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="qwMsgList borderRadius ">
+                    <div class="contBoxHead"><span class="tit">事件提醒</span><a href="消息列表.html">查看更多<i class="layui-icon layui-icon-right"></i></a></div>
+                    <!--  最多展示 10 条消息，从最新的开始展示  -->
+                    <ul>
+                        <li v-for="(listItem,index) in msgList" :key="listItem.index">
+                            <span class="tip">【客户流失】</span>
+                            <p class="user">
+                                <img :src="listItem.khpic" alt="">
+                                <span>{{listItem.khname}}</span>
+                            </p>
+                            <span class="txt">删除了</span>
+                            <p class="user">
+                                <img :src="listItem.cypic" alt="">
+                                <span>{{listItem.cyname}}</span>
+                            </p>
+                            <span class="layui-badge-dot" v-if="listItem.new"></span>
+                            <span class="date">{{listItem.time}}</span>
+                        </li>
+                    </ul>
+                    <div class="null-msg" style="min-height: 414px;display: none"><img src="images/null-msg.png" alt="">暂无数据</div>
+                </div>
+            </div>
+        </div>
+        <div class="general_r">
+            <div class="general_r_box sticky" style="top: -15px">
+                <div class="borderRadius">
+                    <div class="box_cont1">
+                        <p>早上好，欢迎登陆本系统！</p>
+                        <span>上次登录时间：2020/11/12 17:24:00</span>
+                    </div>
+                    <div class="box_cont2">
+                        <p class="title_tip">个人信息</p>
+                        <div class="user_msg">
+                            <div><span>用户</span>:<p>曾亮亮【揽客魔】联合</p></div>
+                            <div><span>公司</span>:<p>揽客魔互联网科技有限公司</p></div>
+                            <div><span>到期</span>:<p style="color: #3878fb">2020-08-24 10:53:00</p></div>
+                            <div class="endTime">剩余24天</div>
+                        </div>
+                        <div class="btn_list">
+                            <span class="buy_Btn">立即升级</span>
+                            <span class="umsg_Btn">基本信息</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="borderRadius mgTop16">
+                    <div class="box_cont3">
+                        <p class="title_tip">联系客服</p>
+                        <div class="cont3_msg">
+                            <div class="msg_eq">
+                                <img src="images/eqPerch.jpg" alt="">
+                                <span class="lt"></span><span class="rt"></span><span class="rb"></span><span class="lb"></span>
+                                <p class="t"></p>
+                                <p class="r"></p>
+                                <p class="b"></p>
+                                <p class="l"></p>
+                            </div>
+                            <ul>
+                                <li class="kf">专属客服：小李</li>
+                                <li class="tel">客服热线：13540332389</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            phbList:[
+                {isIcon:true,pmNum:'images/icon-phb1.png',upic:'https://img2.baidu.com/it/u=922482826,4065183488&fm=253&fmt=auto&app=138&f=JPEG?w=326&h=296',uname:'赵娟',txtNum:'45'},
+                {isIcon:true,pmNum:'images/icon-phb2.png',upic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',uname:'陈萤【华厚】研习导师',txtNum:'35'},
+                {isIcon:true,pmNum:'images/icon-phb3.png',upic:'https://img2.baidu.com/it/u=922482826,4065183488&fm=253&fmt=auto&app=138&f=JPEG?w=326&h=296',uname:'阮巧【华厚】研习导师',txtNum:'25'},
+                {isIcon:false,pmNum:'4',upic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',uname:'乔田润【华厚】研习导师',txtNum:'15'},
+                {isIcon:false,pmNum:'5',upic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',uname:'乔田润【华厚】研习导师',txtNum:'15'},
+                {isIcon:false,pmNum:'6',upic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',uname:'乔田润【华厚】研习导师',txtNum:'15'},
+                {isIcon:false,pmNum:'7',upic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',uname:'乔田润【华厚】研习导师',txtNum:'15'},
+                {isIcon:false,pmNum:'8',upic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',uname:'乔田润【华厚】研习导师',txtNum:'15'},
+                {isIcon:false,pmNum:'9',upic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',uname:'乔田润【华厚】研习导师',txtNum:'15'},
+                {isIcon:false,pmNum:'10',upic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',uname:'乔田润【华厚】研习导师',txtNum:'15'},
+            ],
+            msgList:[
+                {
+                    khpic:'https://img2.baidu.com/it/u=922482826,4065183488&fm=253&fmt=auto&app=138&f=JPEG?w=326&h=296',
+                    khname:'coco',
+                    cypic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+                    cyname:'陈萤【华厚】研习导师',
+                    time:'2022-03-29 16:45',
+                    new:true
+                },
+                {
+                    khpic:'https://img2.baidu.com/it/u=922482826,4065183488&fm=253&fmt=auto&app=138&f=JPEG?w=326&h=296',
+                    khname:'吉祥',
+                    cypic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+                    cyname:'阮巧【华厚】研习导师',
+                    time:'2022-03-29 16:45',
+                    new:false
+                },
+                {
+                    khpic:'https://img2.baidu.com/it/u=922482826,4065183488&fm=253&fmt=auto&app=138&f=JPEG?w=326&h=296',
+                    khname:'coco',
+                    cypic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+                    cyname:'郑传华',
+                    time:'2022-03-29 16:45',
+                    new:true
+                },
+                {
+                    khpic:'https://img2.baidu.com/it/u=922482826,4065183488&fm=253&fmt=auto&app=138&f=JPEG?w=326&h=296',
+                    khname:'coco',
+                    cypic:'https://img0.baidu.com/it/u=3963748879,104500619&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+                    cyname:'乔田润【华厚】研习导师',
+                    time:'2022-03-29 16:45',
+                    new:false
+                },
+            ]
+        }
+    })
+
+</script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/echarts.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/myjs.js"></script>
+<script type="text/javascript">
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+            ,range: '~'
+            ,format: 'yyyy/MM/dd'
+            ,value: ''
+        });
+    });
+
+    $('.umsg_Btn').on('click', function(){
+        top.layer.open({
+            type: 2,
+            title: '基本信息',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['800px', '540px'],
+            content: '用户-基本信息.html' //iframe的url
+        });
+    });
+    $('.umsg_setBtn').on('click', function(){
+        top.layer.open({
+            type: 2,
+            title: '个人设置',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['800px', '540px'],
+            content: '用户-个人设置.html' //iframe的url
+        });
+    });
+    $('.pwd_setBtn').on('click', function(){
+        top.layer.open({
+            type: 2,
+            title: '修改密码',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['800px', '540px'],
+            content: '用户-修改密码.html' //iframe的url
+        });
+    });
+
+    $(function () {
+
+        $('.qwMsgCont .icon').click(function (){
+            $(this).toggleClass('on');
+            if($(this).hasClass('on')){
+                $(this).parents('.qwMsgCont').find('li .txt2-hide').show();
+                $(this).parents('.qwMsgCont').find('li .txt2').hide();
+            }else{
+                $(this).parents('.qwMsgCont').find('li .txt2-hide').hide();
+                $(this).parents('.qwMsgCont').find('li .txt2').show();
+            }
+        })
+
+        $('.qwMsgList li').click(function (){
+            $(this).find('.layui-badge-dot').remove();
+        })
+
+        setTimeout(function (){
+            endTime()
+        },100)
+
+    });
+    function endTime() {
+        // 获取到指定日期天数，再换算成数字
+        var s1 = '2022-02-31 23:59:59';
+        s1 = new Date(s1.replace(/-/g, "/"));
+        s2 = new Date();//当前日期：
+        var days = s1.getTime() - s2.getTime();
+        var time = days/1000;
+        // 判断剩余天数是否大于100,小于0
+        if((time/60/60/24) < 0){
+            // top.layer.open({
+            //     type: 2,
+            //     title: false,
+            //     shadeClose: false,
+            //     shade: 0.25,
+            //     skin: 'gk-class',
+            //     maxmin: false, //开启最大化最小化按钮
+            //     area: ['512px', '444px'],
+            //     content: ['概况/到期提醒.html','no'] //iframe的url
+            // });
+        }else if((time/60/60/24) < 100){
+            // top.layer.open({
+            //     type: 2,
+            //     title: false,
+            //     shadeClose: false,
+            //     shade: 0.25,
+            //     skin: 'gk-class',
+            //     maxmin: false, //开启最大化最小化按钮
+            //     area: ['512px', '500px'],
+            //     content: ['概况/即将到期提醒.html','no'] //iframe的url
+            // });
+        }
+    }
+</script>
+<script>
+    var charts=[];
+
+    var main1 = echarts.init(document.getElementById('main1'));
+    var main3 = echarts.init(document.getElementById('main3'));
+    var xmainData= ["2020/01/01","2020/01/02","2020/01/03","2020/01/04","2020/01/05","2020/01/06","2020/01/07"];
+    var ymainData = [0,0,0,0,0,35,40];
+    option1 = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        grid: {
+            right: '0px',
+            bottom: '0px',
+            left: '0px',
+            top: '0px',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xmainData,
+            axisLine: {
+                show: true,
+                lineStyle:{
+                    color: '#80FFA5',
+                    width:2
+                }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: false,
+            },
+            splitLine:{
+                show:false
+            }
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLine: {
+                show:false,
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                show:false,
+            },
+            splitLine:{
+                show:false
+            }
+        }],
+        series: [
+            {
+                name: '',
+                type: 'bar',
+                barCategoryGap: '10%',
+                itemStyle: {
+                    normal: {
+                        color: '#80FFA5',
+                    }
+                },
+                data: ymainData
+            },
+        ]
+    };
+
+    var main2 = echarts.init(document.getElementById('main2'));
+    var main4 = echarts.init(document.getElementById('main4'));
+    option2 = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        color: ['rgba(254,109,68,1)'],
+        grid: {
+            right: '0px',
+            bottom: '0px',
+            left: '0px',
+            top: '0px',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                boundaryGap: false,
+                data: ["2020/01/01","2020/01/02","2020/01/03","2020/01/04","2020/01/05","2020/01/06","2020/01/07"],
+                axisLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    show: false,
+                },
+                splitLine:{
+                    show:false
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                axisLine: {
+                    show:false,
+                },
+                axisTick:{
+                    show:false
+                },
+                axisLabel: {
+                    show:false,
+                },
+                splitLine:{
+                    show:false
+                }
+            }
+        ],
+        series: [
+            {
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    width: 1
+                },
+                showSymbol: false,
+                areaStyle: {
+                    opacity: 0.8,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: 'rgb(248,168,119)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgb(254,109,68)'
+                        }
+                    ])
+                },
+                data: [0, 0, 0, 0, 0, 34, 25]
+            },
+        ]
+    };
+
+    var main5 = echarts.init(document.getElementById('main5'));
+    var main6 = echarts.init(document.getElementById('main6'));
+    var main7 = echarts.init(document.getElementById('main7'));
+
+    var year = '2022-';
+    var dateX = [];
+    var dateY = [];
+    var timeNum = 7;
+    $('.timeTip span').click(function () {
+        $(this).addClass('on').siblings().removeClass('on');
+        var txt = $(this).text().replace('天','');
+        $.ajax({
+            async: false,
+            success: function() {
+                window.timeNum = txt;
+            }
+        })
+    })
+
+    for(let i=1;i<=timeNum;i++){
+        if(i<10){
+            i = '0'+i
+        }
+        var time = '06-' + i;
+        var resove = Math.floor(i * Math.random()*200);
+        dateX.push(time)
+        dateY.push(resove)
+    }
+    option5 = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            },
+            formatter:function (params) {
+
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;">' +
+                    '<span>'+ year + params[0].name + '</span>' +
+                    '</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 150px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;">' +
+                        '<div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>'
+                        + '<span>'+params[i].value +'</span>' +
+                        '</div>';
+                }
+                return res
+            },
+            textStyle: {
+                color: '#666',
+                fontStyle: 'normal',
+                fontFamily: '微软雅黑',
+                fontSize: 12,
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        grid: {
+            right: '5%',
+            left: '5%',
+            top: '15%',
+            bottom:'5%',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: dateX,
+            axisLine: {
+                show: true,
+                // lineStyle:{
+                //     color: 'rgba(254,109,68,1)',
+                //     width:2
+                // }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+            },
+            splitLine:{
+                show:false
+            }
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLine: {
+                show:false,
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                show:true,
+            },
+            splitLine:{
+                show:true
+            }
+        }],
+        series: [
+            {
+                name: '总客户数',
+                type: 'bar',
+                stack: 'Ad',
+                itemStyle: {
+                    normal: {
+                        color: '#f37965',
+                    }
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: dateY
+            }
+        ]
+    };
+    option6 = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            },
+            formatter:function (params) {
+
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;">' +
+                    '<span>'+ year + params[0].name + '</span>' +
+                    '</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 150px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;">' +
+                        '<div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>'
+                        + '<span>'+params[i].value +'</span>' +
+                        '</div>';
+                }
+                return res
+            },
+            textStyle: {
+                color: '#666',
+                fontStyle: 'normal',
+                fontFamily: '微软雅黑',
+                fontSize: 12,
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        color: ['rgba(254,109,68,1)'],
+        grid: {
+            right: '5%',
+            left: '5%',
+            top: '15%',
+            bottom:'5%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                boundaryGap: false,
+                data: dateX,
+                axisLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    show: true,
+                },
+                splitLine:{
+                    show:false
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                axisLine: {
+                    show:true,
+                },
+                axisTick:{
+                    show:true
+                },
+                axisLabel: {
+                    show:true,
+                },
+                splitLine:{
+                    show:true
+                }
+            }
+        ],
+        series: [
+            {
+                name: '总流失客户数',
+                type: 'line',
+                smooth: true,
+                lineStyle: {
+                    width: 1
+                },
+                showSymbol: false,
+                areaStyle: {
+                    opacity: 0.8,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: 'rgb(248,168,119)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgb(254,109,68)'
+                        }
+                    ])
+                },
+                data: dateY
+            },
+        ]
+    };
+    option7 = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            },
+            formatter:function (params) {
+
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;">' +
+                    '<span>'+ year+ params[0].name + '</span>' +
+                    '</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 150px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;">' +
+                        '<div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>'
+                        + '<span>'+params[i].value +'</span>' +
+                        '</div>';
+                }
+                return res
+            },
+            textStyle: {
+                color: '#666',
+                fontStyle: 'normal',
+                fontFamily: '微软雅黑',
+                fontSize: 12,
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        color: ['rgb(145,123,231)'],
+        grid: {
+            right: '5%',
+            left: '5%',
+            top: '15%',
+            bottom:'5%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: dateX,
+            axisLabel: {
+                show: true,
+            },
+        },
+        yAxis: {
+            type: 'value',
+            axisLine: {
+                show:true,
+            },
+            axisTick:{
+                show:true
+            },
+            axisLabel: {
+                show:true,
+            },
+            splitLine:{
+                show:true
+            }
+        },
+        series: [
+            {
+                name: '总互动客户数',
+                type: 'line',
+                data: dateY,
+                areaStyle: {}
+            }
+        ]
+    };
+
+    main1.setOption(option1);
+    main3.setOption(option1);
+    main2.setOption(option2);
+    main4.setOption(option2);
+    main5.setOption(option5);
+    main6.setOption(option6);
+    main7.setOption(option7);
+
+    charts.push(main1,main2,main3,main4,main5,main6,main7);
+
+    // 重载图表
+    setTimeout(function (){
+        window.onresize = function () {
+            charts.forEach((item,index,arr)=>{
+                item.resize();
+            })
+        }
+    },200);
+
+    $('.chartNav li').on('click',function () {
+        $(this).addClass('on').siblings().removeClass('on');
+        let ind = $(this).index();
+        $('.chartBox > div').eq(ind).show().siblings().hide();
+        charts.forEach((item,index,arr)=>{
+            item.resize();
+        })
+    })
+
+
+</script>
+</body>
+</html>

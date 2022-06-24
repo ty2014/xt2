@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商城菜单设置</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css?v=1.0.0">
+</head>
+<body id="chutiyan" style="padding: 15px;height: auto">
+
+<div class="scpz-top">
+    <p class="title font20">商城菜单设置<span class="tishi">图标建议尺寸：48px*48px，大小不超过30kb</span></p>
+    <span class="scpz-btn">恢复默认菜单</span>
+</div>
+
+<div class="scpz-body">
+    <div class="scpz-body-l">
+        <img src="../images/pz1.png" alt="">
+        <ul class="foot-icon">
+            <!--    菜单内容跟随右边设置变化（图标+名称）    -->
+            <li class="index-icon active">
+                <a style="background: url(../images/foot1.png)no-repeat center;" backimg="background: url(../images/foot1.png)no-repeat center;" backimg_active="background: url(../images/foot1-1.png)no-repeat center;"></a>
+            </li>
+            <li class="fl-icon">
+                <a style="background: url(../images/foot2.png)no-repeat center;" backimg="background: url(../images/foot2.png)no-repeat center;" backimg_active="background: url(../images/foot2-1.png)no-repeat center;"></a>
+            </li>
+            <li class="car-icon">
+                <a style="background: url(../images/foot3.png)no-repeat center;" backimg="background: url(../images/foot3.png)no-repeat center;" backimg_active="background: url(../images/foot3-1.png)no-repeat center;"></a>
+            </li>
+            <li class="my-icon">
+                <a style="background: url(../images/foot4.png)no-repeat center;" backimg="background: url(../images/foot4.png)no-repeat center;" backimg_active="background: url(../images/foot4-1.png)no-repeat center;"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="scpz-body-r">
+        <div class="activity_set">
+            <div class="a_list">
+                <span class="a_list_l" style="min-width: 106px">菜单背景：</span>
+                <div class="a_list_r checked_chose">
+                    <label for="fs1" class="radio noml">
+                        <div class="chose">
+                            <input type="radio" checked="" name="fs" id="fs1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">默认白底</span>
+                    </label>
+                    <label for="fs2" class="radio zdy">
+                        <div class="chose">
+                            <input type="radio" name="fs" id="fs2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">自定义图</span>
+                    </label>
+                    <div class="file-cont" style="display: none">
+                        <!--    上传图片成功后，设置为 scpz-body-l 下面 foot-icon 的背景图 ；前端对应显示  -->
+                        <div class="file-btn"></div>
+                        <p class="tishi2">*建议图片尺寸 750*100像素，大小不超过30KB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scpz-form">
+            <form action="">
+                <table>
+                    <thead>
+                    <tr>
+                        <th width="40px">序号</th>
+                        <th width="80px">常态图标</th>
+                        <th width="80px">选中图标</th>
+                        <th width="250px">跳转链接</th>
+                        <th width="100px">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <!--  点击编辑  -->
+                            <div class="foot-icon">
+                                <!--   图片比例 1:1     -->
+                                <div style="width: 100%;height: 48px;border-radius: 4px;overflow: hidden;">
+                                    <img src="../images/foot1.png" alt="" style="width: 100%;height: 100%;">
+                                </div>
+                                <p>修改</p>
+                            </div>
+                        </td>
+                        <td>
+                            <!--  点击编辑  -->
+                            <div class="foot-icon">
+                                <!--   图片比例 1:1     -->
+                                <div style="width: 100%;height: 48px;border-radius: 4px;overflow: hidden;">
+                                    <img src="../images/foot1-1.png" alt="" style="width: 100%;height: 100%;">
+                                </div>
+                                <p>修改</p>
+                            </div>
+                        </td>
+                        <td>
+                            <textarea class="href-addr">http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E5%95%86%E5%9F%8E%E5%89%8D%E7%AB%AF/%E9%A6%96%E9%A1%B5.html</textarea>
+                        </td>
+                        <td class="scpz_cz_btn">
+                            <!--  删除提示  -->
+                            <p class="del">删除</p>
+                            <p>上移一层</p>
+                            <p class="on">下移一层</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <!--  点击编辑  -->
+                            <div class="foot-icon">
+                                <!--   图片比例 1:1     -->
+                                <div style="width: 100%;height: 48px;border-radius: 4px;overflow: hidden;">
+                                    <img src="../images/foot2.png" alt="" style="width: 100%;height: 100%;">
+                                </div>
+                                <p>修改</p>
+                            </div>
+                        </td>
+                        <td>
+                            <!--  点击编辑  -->
+                            <div class="foot-icon">
+                                <!--   图片比例 1:1     -->
+                                <div style="width: 100%;height: 48px;border-radius: 4px;overflow: hidden;">
+                                    <img src="../images/foot2-1.png" alt="" style="width: 100%;height: 100%;">
+                                </div>
+                                <p>修改</p>
+                            </div>
+                        </td>
+                        <td>
+                            <textarea class="href-addr">http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E5%95%86%E5%9F%8E%E5%89%8D%E7%AB%AF/%E9%A6%96%E9%A1%B5.html</textarea>
+                        </td>
+                        <td class="scpz_cz_btn">
+                            <!--  删除提示  -->
+                            <p class="del">删除</p>
+                            <p class="on">上移一层</p>
+                            <p class="on">下移一层</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <!--  点击编辑  -->
+                            <div class="foot-icon">
+                                <!--   图片比例 1:1     -->
+                                <div style="width: 100%;height: 48px;border-radius: 4px;overflow: hidden;">
+                                    <img src="../images/foot3.png" alt="" style="width: 100%;height: 100%;">
+                                </div>
+                                <p>修改</p>
+                            </div>
+                        </td>
+                        <td>
+                            <!--  点击编辑  -->
+                            <div class="foot-icon">
+                                <!--   图片比例 1:1     -->
+                                <div style="width: 100%;height: 48px;border-radius: 4px;overflow: hidden;">
+                                    <img src="../images/foot3-1.png" alt="" style="width: 100%;height: 100%;">
+                                </div>
+                                <p>修改</p>
+                            </div>
+                        </td>
+                        <td>
+                            <textarea class="href-addr">http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E5%95%86%E5%9F%8E%E5%89%8D%E7%AB%AF/%E9%A6%96%E9%A1%B5.html</textarea>
+                        </td>
+                        <td class="scpz_cz_btn">
+                            <!--  删除提示  -->
+                            <p class="del">删除</p>
+                            <p class="on">上移一层</p>
+                            <p class="on">下移一层</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <!--  点击编辑  -->
+                            <div class="foot-icon">
+                                <!--   图片比例 1:1     -->
+                                <div style="width: 100%;height: 48px;border-radius: 4px;overflow: hidden;">
+                                    <img src="../images/foot4.png" alt="" style="width: 100%;height: 100%;">
+                                </div>
+                                <p>修改</p>
+                            </div>
+                        </td>
+                        <td>
+                            <!--  点击编辑  -->
+                            <div class="foot-icon">
+                                <!--   图片比例 1:1     -->
+                                <div style="width: 100%;height: 48px;border-radius: 4px;overflow: hidden;">
+                                    <img src="../images/foot4-1.png" alt="" style="width: 100%;height: 100%;">
+                                </div>
+                                <p>修改</p>
+                            </div>
+                        </td>
+                        <td>
+                            <textarea class="href-addr">http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E5%95%86%E5%9F%8E%E5%89%8D%E7%AB%AF/%E9%A6%96%E9%A1%B5.html</textarea>
+                        </td>
+                        <td class="scpz_cz_btn">
+                            <!--  删除提示  -->
+                            <p class="del">删除</p>
+                            <p class="on">上移一层</p>
+                            <p class="on">下移一层</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>
+                            <!--  点击添加  -->
+                            <div class="foot-icon">
+                                <!--   图片比例 1:1     -->
+                                <div style="width: 100%;height: 48px;border-radius: 4px;overflow: hidden;">
+                                    <img src="../images/2.png" alt="" style="width: 100%;height: 100%;">
+                                </div>
+                                <p>添加</p>
+                            </div>
+                        </td>
+                        <td>
+                            <!--  点击添加  -->
+                            <div class="foot-icon">
+                                <!--   图片比例 1:1     -->
+                                <div style="width: 100%;height: 48px;border-radius: 4px;overflow: hidden;">
+                                    <img src="../images/2.png" alt="" style="width: 100%;height: 100%;">
+                                </div>
+                                <p>添加</p>
+                            </div>
+                        </td>
+                        <td>
+                            <textarea class="href-addr"></textarea>
+                        </td>
+                        <td class="scpz_cz_btn">
+                            <!--  删除提示  -->
+                            <p class="del">删除</p>
+                            <p class="on">上移一层</p>
+                            <p>下移一层</p>
+                        </td>
+                    </tr>
+                    <tr class="scpz-foot">
+                        <!--  超过6个菜单后，此按钮不能点击，背景色变灰  -->
+                        <td class="left" colspan="4"><span class="scpz-btn">添加菜单栏</span><span class="tishi">*最多可添加6个菜单栏</span></td>
+                        <!--  所有数据只有保存后才能同步前端，恢复默认菜单后也需要保存才生效  -->
+                        <td><span class="scpz-save-btn">保存</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script>
+
+    $('.scpz-body-l .foot-icon li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    });
+
+    $('.noml').click(function () {
+        $('.file-cont').css('display','none')
+    });
+    $('.zdy').click(function () {
+        $('.file-cont').css('display','flex')
+    });
+
+    $('#chutiyan .scpz_cz_btn .del').on('click', function(){
+        layer.confirm('确定要删除此条数据？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){}, function(){});
+    });
+
+    $('#chutiyan .scpz-save-btn').on('click', function(){
+        layer.confirm('<div style="text-align: center">是否确定保存？</br> 保存后将同步到前端展示</div>', {
+            btn: ['确定','取消'] //按钮
+        }, function(){}, function(){});
+    });
+
+</script>
+
+
+</body>
+</html>

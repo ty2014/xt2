@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看联系方式配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .hide_cont{position: relative;display: none}
+        .right_cont{position: absolute;right: 60px;top: 0px;z-index: 9}
+        .right_cont p{position: absolute;top: 38px;font-size: 13px;color: #fff;left: 47%;transform: translateX(-50%);}
+        .right_cont img{width: 200px;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="page-title">查看联系方式配置</div>
+<div class="activity_set activity_set3 w-5">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">是否启用:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper ">
+                    <input type="checkbox" id="ds-fy" class="toggle-button" name="switch">
+                    <label for="ds-fy" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*启用将给用户展示其推荐人的“微信二维码/微信/电话”联系方式（推荐人属于下方勾选等级才会被展示）</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">样式:</span>
+            <div class="a_list_r chose_item">
+                <label for="pu1" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="pic2" id="pu1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">顶部</span>
+                </label>
+                <label for="pu2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="pic2" id="pu2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">右侧</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">会员等级:</span>
+            <div class="a_list_r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">页面标题:</span>
+            <div class="a_list_r">
+                <input type="text" value="你的专属导师" id="pageTitle" maxlength="8">
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">默认联系:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper lxTogg">
+                    <input type="checkbox" id="lx" class="toggle-button">
+                    <label for="lx" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*当用户没有推荐人或推荐人不符合指定等级时，将展示以下默认联系方式</span>
+            </div>
+        </div>
+        <div class="hide_cont">
+            <div class="a_list">
+                <span class="a_list_l">微信头像:</span>
+                <div class="a_list_r">
+                    <div class="file-cont file-cont2">
+                        <!--  存放已上传图片，默认隐藏  -->
+                        <div class="file-pics" style="border-radius: 50%;width: 48px;min-width: 48px;height: 48px;display: none"></div>
+                        <!--  上传图片按钮  -->
+                        <div class="file-btn" style="border-radius: 50%;width: 48px;min-width: 48px;height: 48px"></div>
+                    </div>
+                    <p class="tishi" style="margin-left: 0">*建议像素80*80或比例1:1 ，JPG、PNG格式，图片小于50KB</p>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">微信昵称:</span>
+                <div class="a_list_r">
+                    <input type="text" value="">
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">微信二维码:</span>
+                <div class="a_list_r">
+                    <div class="file-cont file-cont2">
+                        <!--  存放已上传图片，默认隐藏  -->
+                        <div class="file-pics"></div>
+                        <!--  上传图片按钮  -->
+                        <div class="file-btn"></div>
+                    </div>
+                    <p class="tishi" style="margin-left: 0">*建议像素80*80或比例1:1 ，JPG、PNG格式，图片小于50KB</p>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">微信号:</span>
+                <div class="a_list_r">
+                    <input type="text" value="">
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">手机号:</span>
+                <div class="a_list_r">
+                    <input type="text" value="">
+                </div>
+            </div>
+        </div>
+        <div class="right_cont">
+            <p>你的专属导师</p>
+            <img src="http://cshtml.lkmsxy.com/1602151026.jpg" alt="">
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('.lxTogg input').click(function () {
+        $('.hide_cont').toggle()
+    });
+    $("#pageTitle").bind("input propertychange",function(event){
+        //console.log($("#pageTitle").val())
+        $('.right_cont p').text($("#pageTitle").val())
+    });
+
+</script>
+
+
+</body>
+</html>

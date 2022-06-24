@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全部系列课-管理课程</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto">
+
+<!-- Nav tabs -->
+<ul class="head-tab3">
+    <li class="active current3"><a>基本信息</a></li>
+    <li><a>课程管理</a></li>
+    <li><a>报名记录</a></li>
+    <li><a>授权学习</a></li>
+    <li><a >禁止学习</a></li>
+    <li><a >学员记录</a></li>
+    <li><a >收藏</a></li>
+    <li><a >点赞</a></li>
+    <li><a >感悟</a></li>
+    <li><a >笔记</a></li>
+    <li><a >见证</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content3 content2">
+    <div class="tab-pane active" id="tab1">
+        <div class="activity_set activity_set2 activity_set-normal">
+            <div class="b-line">
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">系列课标题:</span>
+                        <div class="a_list_r"><input type="text" style="width: 100%;"></div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">状态:</span>
+                        <div class="a_list_r">
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper">
+                                    <input type="checkbox" id="u-togg4" class="toggle-button" name="switch">
+                                    <label for="u-togg4" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">开启</span>
+                                        <span class="text off">关闭</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">系列课分类:</span>
+                    <div class="a_list_r">
+                        <div class="select-text" style="margin-right: 16px;">
+                            <span class="select-txt"></span>
+                            <ul>
+                                <li>干货</li>
+                                <li>视频</li>
+                            </ul>
+                        </div>
+                        <div class="select-text">
+                            <span class="select-txt"></span>
+                            <ul>
+                                <li>干货</li>
+                                <li>视频</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">主讲师:</span>
+                        <div class="a_list_r"><input type="text"></div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">系列课标签:</span>
+                        <div class="a_list_r">
+                            <input type="text">
+                            <div class="bq-items">
+                                <p>已有标签:</p>
+                                <ul>
+                                    <li style="width: 92px">92</li>
+                                    <li style="width: 92px">92</li>
+                                    <li style="width: 92px">92</li>
+                                    <li style="width: 143px">143</li>
+                                    <li style="width: 143px">143</li>
+                                    <li style="width: 143px">143</li>
+                                    <li style="width: 144px">144</li>
+                                    <li>44</li>
+                                    <li style="width: 243px">243</li>
+                                    <li style="width: 243px">243</li>
+                                    <li>4</li>
+                                    <li>装饰装修装饰装修装饰装修装饰装修装饰装修</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                        <span class="a_list_l">课程提供商:</span>
+                        <div class="a_list_r">
+                            <span class="set-user chose-tgs" style="margin-right: 16px">选择</span>
+                            <div class="user-pic"><img src="../../images/null2.jpg" alt=""></div>
+                            <a href="">揽客魔商学院</a>
+                        </div>
+                    </div>
+                <div class="a_list">
+                    <span class="a_list_l">系列课主图:</span>
+                    <div class="a_list_r">
+                        <div class="file-cont file-cont2">
+                            <!--  存放已上传图片，默认隐藏  -->
+                            <div class="file-pics"></div>
+                            <!--  上传图片按钮  -->
+                            <div class="file-btn"></div>
+                        </div>
+                        <p class="tishi">*建议尺寸750px*500px；大小不超过1M</p>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">系列课简介:</span>
+                    <div class="a_list_r">
+                        <!-- 此处放文本域 -->
+                        <textarea placeholder="简述课程内容及价值，该简介常用于分享课程时展示" style="height: 60px;padding: 10px;width: 620px;resize: none"></textarea>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">系列课介绍:</span>
+                    <div class="a_list_r">
+                        <!-- 此处放编辑器 -->
+                        <textarea style="height: 400px;padding: 10px;width: 620px">编辑器</textarea>
+                    </div>
+                </div>
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">价格:</span>
+                        <div class="a_list_r"><input type="text" class="m_width center" style="margin-right: 16px">元</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">优惠价格:</span>
+                        <div class="a_list_r">
+                            <input type="text" class="m_width center" style="margin-right: 16px">元
+                            <span class="tishi">*选填，填写将按该价格执行售卖</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="a_list">
+                    <span class="a_list_l">学习有效期:</span>
+                    <div class="a_list_r">
+                        <div class="select-text selectDate" style="min-width: 150px;margin-right: 20px;">
+                            <span class="select-txt">长期有效</span>
+                            <ul style="display: none;">
+                                <li class="active">长期有效</li>
+                                <li>按购买时间到期</li>
+                                <li>固定时间到期</li>
+                            </ul>
+                        </div>
+                        <div class="date-togg-cont1 flex alignItemC" style="display: none">
+                            用户支付时间 + <input type="number" class="mg-8 s_width center">天后到期
+                            <p class="tishi">* 以用户支付时间+指定时间周期为到期时间；</p>
+                        </div>
+                        <div class="date-togg-cont2 flex alignItemC" style="display: none">
+                            固定<input type="text" class="layui-input mg-8" id="test1" placeholder="选择时间">后到期
+                            <p class="tishi">* 用户无论什么时间购买，都是指定时间到期；</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">预计章节:</span>
+                        <div class="a_list_r"><input type="text" class="s_width center" style="margin-right:16px">节<span class="tishi">*实际讲课次数可以超过此数字</span></div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">优先级:</span>
+                        <div class="a_list_r"><input type="text" class="s_width center"><span class="tishi">*数字越大，显示越前</span></div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">苹果系统支付:</span>
+                    <div class="a_list_r" style="flex-wrap: nowrap;">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="apple_pay" class="toggle-button" name="switch">
+                                <label for="apple_pay" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">是</span>
+                                    <span class="text off">否</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="tishi">*是否可允许苹果系统用户购买该课程。请谨慎使用，使用将有被微信处罚、限制公众号功能的风险</span>
+                            <p class="tishi2">风险提示：课程为虚拟商品，微信要求不可在苹果系统内支付购买虚拟商品，被查到将作出处罚。详细参考微信公告<a href="https://mp.weixin.qq.com/cgi-bin/announce?action=getannouncement&announce_id=11590748689LGlxz&version=&lang=zh_CN&token=" target="_blank">《关于规范公众号内虚拟支付行为的公告》</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">支付有礼内容:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper paytoggle">
+                                <input type="checkbox" id="u-togg3" class="toggle-button" name="switch">
+                                <label for="u-togg3" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">开启</span>
+                                    <span class="text off">关闭</span>
+                                </label>
+                            </div>
+                        </div>
+                        <span class="tishi">*在系列课介绍上方提示，常用于付费后提示加客服微信、进群等</span>
+                    </div>
+                </div>
+                <div class="a_list paycont" style="display: none">
+                    <span class="a_list_l"></span>
+                    <div class="a_list_r">
+                        <textarea style="height: 60px;padding: 10px;width: 620px"></textarea>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">付费后联系开关:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper paytips">
+                                <input type="checkbox" id="concat" class="toggle-button" name="switch">
+                                <label for="concat" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">开启</span>
+                                    <span class="text off">关闭</span>
+                                </label>
+                            </div>
+                        </div>
+                        <span class="tishi">*用户付费成功后，在详情介绍上方展示联系人的联系方式</span>
+                    </div>
+                </div>
+                <div class="a_list paytips_cont" style="display: none">
+                    <span class="a_list_l"></span>
+                    <div class="a_list_r">
+                        <span class="set-user zd_person">指定联系人</span>
+                        <div class="mgL-20">
+                            <p class="flex alignItemC"><a class="yx_person mgR-4">已指定10人</a><i class="tips person_tip"></i></p>
+                            <p class="mgT-10"><a class="mr_person">设置默认联系人</a><span class="tishi">*不指定即使用默认联系人，点击去设置</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dub-list">
+                    <div class="a_list">
+                        <span class="a_list_l">推荐:</span>
+                        <div class="a_list_r">
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper">
+                                    <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                                    <label for="u-togg" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">开启</span>
+                                        <span class="text off">关闭</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <span class="tishi">*是否在其他系列课详情页面推荐该课程</span>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">热门:</span>
+                        <div class="a_list_r">
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper">
+                                    <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                                    <label for="u-togg2" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">开启</span>
+                                        <span class="text off">关闭</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">顺序打卡:</span>
+                    <div class="a_list_r">
+                        <label for="dk1" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="dk" id="dk1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                        <div>
+                            <p class="tishi">*未勾选，学员可任意选择课程进行打卡，默认不勾选</p>
+                            <p class="tishi">*勾选后，学员需要按照课程目录顺序打卡，不能在前面课程未打卡情况下参与后面课程打卡；</p>
+                        </div>
+                    </div>
+                </div>
+                <!--  报名成为会员  -->
+                <div class="a_list">
+                    <span class="a_list_l">报名成为会员:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper bm_vip">
+                                <input type="checkbox" id="bm-togg" class="toggle-button" name="switch">
+                                <label for="bm-togg" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">开启</span>
+                                    <span class="text off">关闭</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bmvip-cont" style="display: none;margin-left: 20px;">
+                            <div style="display: flex;align-items: center;">
+                                报名成为
+                                <div class="select-text" style="margin: 0 10px;">
+                                    <span class="select-txt"></span>
+                                    <ul style="display: none;">
+                                        <li>VIP</li>
+                                        <li>合伙人</li>
+                                        <li>联创人</li>
+                                    </ul>
+                                </div>
+                                会员，会员有效期为<input type="text" class="s_width center" style="margin:0 8px">
+                                <div class="select-text" style="margin: 0 10px;min-width: 60px;">
+                                    <span class="select-txt">天</span>
+                                    <ul style="display: none;text-align: center">
+                                        <li>天</li>
+                                        <li>月</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="a_list">
+                    <span class="a_list_l" style="align-items: flex-start;padding-top: 21px;">会员免费学本课:</span>
+                    <div class="a_list_r">
+                        <div>
+                            <span class="tishi mgL-0" style="margin-bottom: 10px;">*勾选的会员可免费学习该系列课</span>
+                            <div class="chose_item">
+                                <label for="vip1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="vip1">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">学员</span>
+                                </label>
+                                <label for="vip2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" checked name="pic2" id="vip2">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">VIP</span>
+                                </label>
+                                <label for="vip3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" checked name="pic2" id="vip3">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">合伙</span>
+                                </label>
+                                <label for="vip4" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="vip4">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">联创</span>
+                                </label>
+                                <label for="vip5" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="vip5">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">非会员</span>
+                                </label>
+                            </div>
+                            <div style="display: flex;align-items: center;margin-top: 10px">
+                                同时引导去购买会员：
+                                <div class="select-text yd-chose" style="margin-right: 8px;">
+                                    <span class="select-txt">默认不引导</span>
+                                    <ul>
+                                        <li>默认不引导</li>
+                                        <li>合伙人</li>
+                                        <li>联创人</li>
+                                    </ul>
+                                </div>
+                                <p class="yd-cont" style="display: none">，引导价（365元）；</p>
+                            </div>
+                            <div class="yd-cont" style="margin-top: 10px;display: none">
+                                <p style="margin-top: 10px">引导话术：<input type="text" class="m-height" value="开通会员免费学" maxlength="8" placeholder="不超过8个字符"><a class="tishi concat_img_btn">查看示例</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="a_list">
+                    <span class="a_list_l">报名成功后提醒:</span>
+                    <div class="a_list_r">
+                        <!-- 此处放文本域 -->
+                        <textarea placeholder="选填，在【提醒-系列课提醒-报名成功提醒购买人】处可引用本处“话术”，用户购买该课程后进行公众号/短信提醒" style="height: 60px;padding: 10px;width: 620px;resize: none"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search kcgl-search"><i class="search-tips"></i>搜索</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">启用</a></li>
+                        <li><a href="#">停用</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab_type_2"><span class="tab-tips add_btn addkc_btn"><i class="plus-tips"></i>添加课程</span></div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">操作</th>
+                            <th width="150px">系列课分类</th>
+                            <th width="250px">系列课标题</th>
+                            <th width="250px">课程标题</th>
+                            <th width="80px">排序码</th>
+                            <th width="80px">讲师</th>
+                            <th width="80px">转赠数量</th>
+                            <th width="80px">观看次数</th>
+                            <th width="80px">观看人数</th>
+                            <th width="80px">留言数量</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px" class="cz_btn">
+                                <button type="button" class="btn-type1">编辑</button>
+                            </td>
+                            <td width="150px">干货</td>
+                            <td width="250px" class="left"><div class="wrap-noml">5秒信任系统：瞬间成为行业专家，顾客首次接触，信任度就提高到50%？</div></td>
+                            <td width="250px" class="left"><a class="wrap-noml">卖装修。。。。。</a></td>
+                            <td width="80px">1</td>
+                            <td width="80px">zzz</td>
+                            <td width="80px"><a >0</a></td>
+                            <td width="80px">0</td>
+                            <td width="80px"><a class="gk-num">0</a></td>
+                            <td width="80px"><a >0</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="cz_btn">
+                                <button type="button" class="btn-type1">编辑</button>
+                            </td>
+                            <td>干货</td>
+                            <td class="left"><div class="wrap-noml">5秒信任系统：瞬间成为行业专家，顾客首次接触，信任度就提高到50%？</div></td>
+                            <td class="left"><a class="wrap-noml">卖装修。。。。。</a></td>
+                            <td>1</td>
+                            <td>zzz</td>
+                            <td><a >0</a></td>
+                            <td>0</td>
+                            <td><a class="gk-num">0</a></td>
+                            <td><a >0</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab3">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search bmjl-search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">未支付</a></li>
+                        <li><a href="#">已支付</a></li>
+                        <li><a href="#">已退款</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="150px">系列课标题</th>
+                            <th width="100px">报名人头像</th>
+                            <th width="150px">报名人昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="100px">手机</th>
+                            <th width="100px">推荐人头像</th>
+                            <th width="150px">推荐人昵称</th>
+                            <th width="100px">渠道商头像</th>
+                            <th width="150px">渠道商昵称</th>
+                            <th width="100px">支付状态</th>
+                            <th width="150px">订单编号</th>
+                            <th width="100px">支付金额</th>
+                            <th width="150px">录入时间<i class="sort-icon"></i></th>
+                            <th width="150px">报名时间<i class="sort-icon"></i></th>
+                            <th width="100px">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="150px" class="left"><div class="wrap-noml">社群裂变吸金兵法</div></td>
+                            <td width="100px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a >小土豆</a></td>
+                            <td width="100px"></td>
+                            <td width="100px"></td>
+                            <td width="100px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left">娄梦婷【揽客魔】导师69号</td>
+                            <td width="100px" class="cover-pic"></td>
+                            <td width="150px"></td>
+                            <td width="100px" class="statu statu1"><span>已支付</span></td>
+                            <td width="150px">2020100100050843</td>
+                            <td width="100px">0.01</td>
+                            <td width="150px" class="date"><div>2019-08-04 10:47:01</div></td>
+                            <td width="150px" class="date"><div>2019-08-04 10:47:01</div></td>
+                            <td width="100px" class="cz_btn">
+                                <button type="button" class="btn-type1 tk-btn">退款</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left"><div class="wrap-noml">社群裂变吸金兵法</div></td>
+                            <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="cover-pic"></td>
+                            <td></td>
+                            <td class="cover-pic"></td>
+                            <td></td>
+                            <td class="statu statu3"><span>未支付</span></td>
+                            <td>2020100100050843</td>
+                            <td>0.01</td>
+                            <td class="date"><div>2019-08-04 10:47:01</div></td>
+                            <td class="date"><div>2019-08-04 10:47:01</div></td>
+                            <td class="cz_btn">-</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="left"><div class="wrap-noml">社群裂变吸金兵法</div></td>
+                            <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="cover-pic"></td>
+                            <td></td>
+                            <td class="cover-pic"></td>
+                            <td></td>
+                            <td class="statu statu2"><span>已退款</span></td>
+                            <td></td>
+                            <td></td>
+                            <td class="date"></td>
+                            <td class="date"></td>
+                            <td class="cz_btn"><a class="tk-detail">退款详情</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab4">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search sqxx-search"><i class="search-tips"></i>搜索</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">有期限</a></li>
+                        <li><a href="#">无期限</a></li>
+                    </ul>
+                </div>
+                <span class="tishi">*以下学员无需付费课程，有权直接学习该课程，授权截止到期后，将自动从该列表移除</span>
+            </div>
+            <div class="tab_type_2"><span class="tab-tips add_btn addxy_btn"><i class="plus-tips"></i>添加学员</span></div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">用户ID</th>
+                            <th width="100px">头像</th>
+                            <th width="100px">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="100px">会员等级</th>
+                            <th width="150px">学习期限</th>
+                            <th width="100px">历史变更</th>
+                            <th width="150px">操作时间</th>
+                            <th width="100px">操作人</th>
+                            <th width="200px">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px">56471</td>
+                            <td width="100px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td width="100px"><a >小土豆</a></td>
+                            <td width="100px">蒋雨</td>
+                            <td width="100px">-</td>
+                            <td width="150px"><a >无期限</a></td>
+                            <td width="100px"><a >2</a></td>
+                            <td width="150px" class="date"><div>2019-08-04 10:47:01</div></td>
+                            <td width="100px">LKM</td>
+                            <td width="200px" class="cz_btn">
+                                <button type="button" class="btn-type2 disxy-remove">移除</button>
+                                <button type="button" class="btn-type1 sqxx-gl">管理</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>56471</td>
+                            <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td><a >小啊啊</a></td>
+                            <td>糖糖</td>
+                            <td>普通会员</td>
+                            <td><a >2021-05-10</a></td>
+                            <td><a >1</a></td>
+                            <td class="date"><div>2019-08-04 10:47:01</div></td>
+                            <td>LKM</td>
+                            <td class="cz_btn">
+                                <button type="button" class="btn-type2 disxy-remove">移除</button>
+                                <button type="button" class="btn-type1 sqxx-gl">管理</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab5">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search jzxx-search"><i class="search-tips"></i>搜索</span>
+                <span class="tishi">*被禁学的用户：未购买用户将不可发起购买；已购买用户将不可再学习</span>
+            </div>
+            <!--  授权用户不能备选，只有移除授权，才可禁学  -->
+            <div class="tab_type_2"><span class="tab-tips add_btn addjxxy_btn"><i class="plus-tips"></i>添加禁学人员</span></div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="80px">用户ID</th>
+                            <th width="80px">头像</th>
+                            <th width="150px">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="100px">会员等级</th>
+                            <th width="100px">学资变更</th>
+                            <th width="150px">操作时间</th>
+                            <th width="100px">操作人</th>
+                            <th width="100px">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="80px">56471</td>
+                            <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td width="150px">小土豆</td>
+                            <td width="100px">蒋雨</td>
+                            <td width="100px">-</td>
+                            <td width="100px"><a >2</a></td>
+                            <td width="150px" class="date"><div>2019-08-04 10:47:01</div></td>
+                            <td width="100px">LKM</td>
+                            <td width="100px" class="cz_btn"><button class="btn-type2 disxy-remove">移除</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>56471</td>
+                            <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td>小土豆</td>
+                            <td>蒋雨</td>
+                            <td>-</td>
+                            <td><a >2</a></td>
+                            <td class="date"><div>2019-08-04 10:47:01</div></td>
+                            <td>LKM</td>
+                            <td class="cz_btn"><button class="btn-type2 disxy-remove">移除</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab6">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search xyjl-search"><i class="search-tips"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">用户ID</th>
+                            <th width="80px">头像</th>
+                            <th width="150px">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="100px">会员等级</th>
+                            <th width="150px">累计学时</th>
+                            <th width="100px">历史变更</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px">56471</td>
+                            <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td width="150px"><a >小土豆</a></td>
+                            <td width="100px">蒋雨</td>
+                            <td width="100px">VIP</td>
+                            <td width="150px"><a class="gk-time">72:52:00</a></td>
+                            <td width="100px"><a >5</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab7">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search sc-search"><i class="search-tips"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="200px" class="left">系列课标题</th>
+                            <th width="200px" class="left">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="150px">收藏时间</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="200px"><div class="wrap-noml">5秒信任系统：瞬间成为行业专家，顾客首次接触，信任度就提高到50%？</div></td>
+                            <td width="200px" class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑传华【揽客魔】创始人</a>
+                                </div>
+                            </td>
+                            <td width="100px">蒋雨</td>
+                            <td width="150px" class="date"><div>2019-08-04 10:47:01</div></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><div class="wrap-noml">5秒信任系统：瞬间成为行业专家，顾客首次接触，信任度就提高到50%？</div></td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑传华【揽客魔】创始人</a>
+                                </div>
+                            </td>
+                            <td>蒋雨</td>
+                            <td class="date"><div>2019-08-04 10:47:01</div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab8">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search dz-search"><i class="search-tips"></i>搜索</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="200px" class="left">系列课标题</th>
+                            <th width="200px" class="left">课程标题</th>
+                            <th width="200px" class="left">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="150px">点赞时间</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="200px"><div class="wrap-noml">社群裂变吸金兵法</div></td>
+                            <td width="200px"><div class="wrap-noml">5秒信任系统：瞬间成为行业专家，顾客首次接触，信任度就提高到50%？</div></td>
+                            <td width="200px" class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑传华【揽客魔】创始人</a>
+                                </div>
+                            </td>
+                            <td width="100px">蒋雨</td>
+                            <td width="150px" class="date"><div>2019-08-04 10:47:01</div></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><div class="wrap-noml">社群裂变吸金兵法</div></td>
+                            <td><div class="wrap-noml">5秒信任系统：瞬间成为行业专家，顾客首次接触，信任度就提高到50%？</div></td>
+                            <td class="cover-pic">
+                                <div class="user_picName">
+                                    <img src="../../images/null.jpg" alt="">
+                                    <a class="wrap-noml">郑传华【揽客魔】创始人</a>
+                                </div>
+                            </td>
+                            <td>蒋雨</td>
+                            <td class="date"><div>2019-08-04 10:47:01</div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab9">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search gw-search"><i class="search-tips"></i>搜索</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">待审核</a></li>
+                        <li><a href="#">有效</a></li>
+                        <li><a href="#">无效</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="300px">操作</th>
+                            <th width="200px">系列课标题</th>
+                            <th width="80px">头像</th>
+                            <th width="150px">昵称</th>
+                            <th width="120px">姓名</th>
+                            <th width="100px">是否见证</th>
+                            <th width="150px">留言内容</th>
+                            <th width="150px">留言时间</th>
+                            <th width="100px">点赞数量</th>
+                            <th width="100px">留言状态</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="300px" class="cz_btn left">
+                                <button type="button" class="btn-type1">回复</button>
+                                <button type="button" class="btn-type2">取消</button>
+                                <button type="button">查看回复内容</button>
+                            </td>
+                            <td width="200px"><div class="wrap-noml">社区懒人引流模式： 不花钱，每月358个精准客户</div></td>
+                            <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a >啊啊啊</a></td>
+                            <td width="120px">小土豆</td>
+                            <td width="100px">否</td>
+                            <td width="150px">测试</td>
+                            <td width="150px" class="date"><div>2020-05-04 16:32:10</div></td>
+                            <td width="100px">0</td>
+                            <td width="100px" class="statu statu2"><span>待审核</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="cz_btn left">
+                                <button type="button" class="btn-type1">通过</button>
+                                <button type="button" class="btn-type2">不通过</button>
+                                <button type="button" class="btn-type2">彻底删除</button>
+                            </td>
+                            <td><div class="wrap-noml">社区懒人引流模式： 不花钱，每月358个精准客户</div></td>
+                            <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td class="left"><a >啊啊啊</a></td>
+                            <td>微信用户503143</td>
+                            <td>否</td>
+                            <td>测试</td>
+                            <td class="date"><div>2020-05-04 16:32:10</div></td>
+                            <td>0</td>
+                            <td class="statu statu2"><span>待审核</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab10">
+        <div class="content2">
+            <div class="tab_content2">
+                    <div class="tab_type_2">
+                        <span class="tab-tips search bj-search"><i class="fa fa-search"></i>搜索</span>
+                        <div class="top_tit2 center">
+                            <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                            <ul>
+                                <li class="active"><a href="#">全部</a></li>
+                                <li><a href="#">待审核</a></li>
+                                <li><a href="#">有效</a></li>
+                                <li><a href="#">无效</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="edit_table2">
+                    <div class="table_cont2">
+                        <div class="table-thead">
+                            <table border="0" class="table_body2">
+                                <thead>
+                                <tr>
+                                    <th width="50px">序号</th>
+                                    <th width="400px">操作</th>
+                                    <th width="200px">系列课标题</th>
+                                    <th width="80px">头像</th>
+                                    <th width="100px">昵称</th>
+                                    <th width="100px">姓名</th>
+                                    <th width="100px">手机</th>
+                                    <th width="80px">是否感悟</th>
+                                    <th width="150px">留言内容</th>
+                                    <th width="140px">留言时间</th>
+                                    <th width="100px">留言状态</th>
+                                    <th width="80px">点赞数量</th>
+                                    <th width="80px">回复数量</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="table-tbody">
+                            <table border="0" class="table_body2">
+                                <tbody>
+                                <tr>
+                                    <td width="50px">1</td>
+                                    <td width="400px" class="cz_btn">
+                                        <button type="button" class="btn-type1">回复</button>
+                                        <button type="button" class="btn-type2">取消</button>
+                                        <button type="button">查看回复内容</button>
+                                        <button type="button">设为感悟</button>
+                                    </td>
+                                    <td width="200px"><div class="wrap-noml">社区懒人引流模式： 不花钱，每月358个精准客户</div></td>
+                                    <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                                    <td width="100px" class="left"><a >啊啊啊</a></td>
+                                    <td width="100px" class="left">微信用户503143</td>
+                                    <td width="100px">13546829765</td>
+                                    <td width="80px">是</td>
+                                    <td width="150px"></td>
+                                    <td width="140px" class="date"><div>2019-08-13 15:17:41</div></td>
+                                    <td width="100px" class="statu statu2"><span>无效</span></td>
+                                    <td width="80px">1</td>
+                                    <td width="80px">1</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="btm_page2">
+                        <div class="pages">
+                            <div class="pages_num">
+                                <span class="prev">上一页</span>
+                                <span>1</span>
+                                <span class="page-default">...</span>
+                                <span>50</span>
+                                <span class="active">51</span>
+                                <span>52</span>
+                                <span class="page-default">...</span>
+                                <span>100</span>
+                                <span class="next">下一页</span>
+                            </div>
+                            <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                            <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                        </div>
+                        <div class="page-nums">每页显示:
+                            <div class="select-text">
+                                <span class="select-txt">10</span>
+                                <ul>
+                                    <li>10</li>
+                                    <li>50</li>
+                                    <li>100</li>
+                                </ul>
+                            </div>
+                            条
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab11">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search jz-search"><i class="search-tips"></i>搜索</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">启用</a></li>
+                        <li><a href="#">停用</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="80px">头像</th>
+                            <th width="150px">昵称</th>
+                            <th width="150px">文案</th>
+                            <th width="100px">见证类型</th>
+                            <th width="100px">图片/视频</th>
+                            <th width="100px">关联系列课</th>
+                            <th width="100px">点赞</th>
+                            <th width="100px">优先级<i class="sort-icon"></i></th>
+                            <th width="100px">状态</th>
+                            <th width="150px">更新时间</th>
+                            <th width="100px">更新人</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="80px" class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left">千千</td>
+                            <td width="150px" class="left"><a class="wrap-noml">卖蛋糕3个月收入翻了20倍…</a></td>
+                            <!--  直接预览图片/视频  -->
+                            <td width="100px">图片</td>
+                            <td width="100px"><a >5</a></td>
+                            <td width="100px"><a >2</a></td>
+                            <td width="100px"><a >10</a></td>
+                            <td width="100px">10</td>
+                            <td width="100px" class="statu statu1"><span>启用</span></td>
+                            <td width="150px" class="date"><div>2020-05-20 10:00:00</div></td>
+                            <td width="100px">lkm</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="cover-pic"><img src="../../images/head.jpg" alt=""></td>
+                            <td class="left">叶晓青</td>
+                            <td class="left"><a class="wrap-noml">法律顾问，策划一场活动，赢…</a></td>
+                            <!--  直接预览图片/视频  -->
+                            <td>视频</td>
+                            <td><a >5</a></td>
+                            <td><a >2</a></td>
+                            <td><a >10</a></td>
+                            <td>10</td>
+                            <td class="statu statu2"><span>停用</span></td>
+                            <td class="date"><div>2020-05-20 10:00:00</div></td>
+                            <td>lkm</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  课程管理搜索  -->
+<div class="account-box" id="kcgl-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">系列课分类名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">课程分类名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">讲师:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  报名记录搜索  -->
+<div class="account-box" id="bmjl-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">系列课标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">报名人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">推荐人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">渠道商昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  授权学习搜索  -->
+<div class="account-box" id="sqxx-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员等级:</span>
+            <div class="account-r chose_item">
+                <label for="s-vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="s-vip" id="s-vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="s-vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="s-vip" id="s-vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="s-vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="s-vip" id="s-vip3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="s-vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="s-vip" id="s-vip4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="s-vip5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="s-vip" id="s-vip5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">操作时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test5">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test6">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  学员记录搜索  -->
+<div class="account-box" id="xyjl-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员等级:</span>
+            <div class="account-r chose_item">
+                <label for="s2-vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="s-vip" id="s2-vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="s2-vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="s-vip" id="s2-vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="s2-vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="s-vip" id="s2-vip3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="s2-vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="s-vip" id="s2-vip4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="s2-vip5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="s-vip" id="s2-vip5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  收藏搜索  -->
+<div class="account-box" id="sc-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">系列课标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">收藏人姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">收藏人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">收藏时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test7">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test8">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  点赞搜索  -->
+<div class="account-box" id="dz-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">系列课标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">课程标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">点赞人姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">点赞人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">点赞时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test13">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test14">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  笔记搜索  -->
+<div class="account-box" id="bj-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">系列课标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">留言时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test15">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test16">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  感悟搜索  -->
+<div class="account-box" id="gw-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">系列课标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">留言时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test9">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test10">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  见证搜索  -->
+<div class="account-box" id="jz-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">见证类型:</span>
+            <div class="account-r chose_item">
+                <label for="jz1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="jz-type" id="jz1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">图片</span>
+                </label>
+                <label for="jz2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="jz-type" id="jz2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">视频</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">更新时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test11">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test12">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<!--  报名记录  -->
+<div class="activity_set activity_set2" id="tk-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r" style="display: block">
+                <textarea placeholder="请输入退款说明" style="padding: 10px;width: 435px;height: 80px;resize: none"></textarea>
+                <div class="tishi2" style="margin-left: 0">*退款后，该学员不可再学习该课，也不能再次购买</div>
+                <div class="tishi2" style="margin-left: 0">若想恢复退款学员的学习权限，请去授权学习</div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="activity_set activity_set2 w-120" id="tk-detail" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">操作人:</div>
+            <div class="a_list_r">袁琳莉</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">操作时间:</div>
+            <div class="a_list_r">2020-04-22  10:00:00</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">退款原因:</div>
+            <div class="a_list_r"><textarea style="padding: 10px;width: 350px;height: 80px;resize: none;" disabled>已线下退款</textarea></div>
+        </div>
+    </div>
+</div>
+
+<!--  授权学习-管理  -->
+<div class="activity_set activity_set2 w-120" id="sqxx-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">授权对象:</div>
+            <div class="a_list_r">小土豆</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">学习期限:</span>
+            <div class="a_list_r chose_item">
+                <label for="cj2" class="radio href1">
+                    <div class="chose">
+                        <input type="radio"  name="href1" id="cj2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">无期限</span>
+                </label>
+                <label for="cj1" class="radio href2">
+                    <div class="chose">
+                        <input type="radio" checked name="href1" id="cj1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">有期限</span>
+                </label>
+            </div>
+        </div>
+        <div class="time-cont">
+            <div class="a_list">
+                <div class="a_list_l">开始时间:</div>
+                <div class="a_list_r"><input type="text" class="layui-input" id="sq-test"></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">可学时长:</div>
+                <div class="a_list_r"><input type="text" class="s_width center" style="margin-right: 4px;">天<span class="tishi">*开始时间+可学时长=学习期限</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<!--    -->
+<div class="activity_set activity_set2 w-120" id="concat-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">头像:</div>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo3">
+                    <li class="img_item" style="display: none">
+                        <img src="" layer-index="0">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <span class="tishi">*建议尺寸：1:1，小于1M，支持jpg、png、jpeg格式</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">昵称:</div>
+            <div class="a_list_r">
+                <input type="text" class="w-620">
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">二维码:</div>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo3">
+                    <li class="img_item" style="display: none">
+                        <img src="" layer-index="0">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <span class="tishi">*建议尺寸：1:1，小于1M，支持jpg、png、jpeg格式</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<img src="http://cshtml.lkmsxy.com/csimg/xlk_ydvip.png" alt="" id="concat_img" style="height: 520px;display: none;">
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#sq-test' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test3' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test4' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test5' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test6' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test7' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test8' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test9' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test10' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test11' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test12' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test13' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test14' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test15' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test16' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.head-tab3 li');
+    var con = $('.tab-content3 > .tab-pane');
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active current3');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active current3');
+            $(con[i]).addClass('active');
+        }
+    }
+
+
+
+
+    // j 为树形一级菜单个数
+    for (let j=1;j<10;j++){
+        if(j<10){
+            j='0'+j;
+        }
+        var a = $('.treeId-' + j);
+
+        // j 为树形二级菜单个数
+        for(let t = 1;t<10;t++){
+            if(t<10){
+                t='0'+t;
+            }
+            var m = $('.treeId-' + j + t);
+
+            // 一级菜单点击
+            a.on('click',function () {
+                for(let x = 1 ;x<10;x++){
+                    if(x<10){
+                        x='0'+x;
+                    }
+
+                    var txt2 = $(this).attr('class');
+                    var s=txt2.substring(25,34);
+                    var b = $('.'+s +'-cont');  // treeId-01-cont
+                    // 获取二级菜单需要隐藏内容的类名
+                    var z = $('.'+ s + x +'-cont');
+
+                    $(this).toggleClass('on');
+                    var i = $(this).find('i');
+
+                    if($(this).hasClass('on')){
+                        i.removeClass('layui-icon-subtraction').addClass('layui-icon-addition');
+                        b.hide();
+
+                    }else{
+                        i.removeClass('layui-icon-addition').addClass('layui-icon-subtraction');
+                        b.show();
+
+                        $('.'+ s + x).each(function () {
+                            let that = this;
+                            let txt3 = $(that).attr('class');
+                            let c=txt3.substring(25,36);
+                            let z = $('.'+c+'-cont');
+
+                            if($(that).hasClass('on')){
+                                // 临时方法，直接展开全部
+                                $(that).removeClass('on');
+                                $(that).find('i').removeClass('layui-icon-addition').addClass('layui-icon-subtraction');
+                            }
+                        })
+                    }
+                    //
+                }
+
+            })
+
+            // 二级菜单点击
+            m.on('click',function () {
+                var txt = $(this).attr('class');
+                var y=txt.substring(25,36);
+                var n = $('.'+y +'-cont');
+
+                $(this).toggleClass('on');
+                let i = $(this).find('i');
+                if($(this).hasClass('on')){
+                    i.removeClass('layui-icon-subtraction').addClass('layui-icon-addition');
+                    n.hide()
+                }else{
+                    i.removeClass('layui-icon-addition').addClass('layui-icon-subtraction');
+                    n.show()
+                }
+            })
+        }
+    }
+
+
+    $('.selectDate li').click(function (){
+        var ind = $(this).index();
+        switch (ind) {
+            case 0:
+                $('.date-togg-cont1,.date-togg-cont2').hide();
+                break;
+            case 1:
+                $('.date-togg-cont1').show();
+                $('.date-togg-cont2').hide();
+                break;
+            case 2:
+                $('.date-togg-cont1').hide();
+                $('.date-togg-cont2').show();
+                break;
+        }
+    })
+
+    $('#chutiyan .mr_person').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '编辑联系人',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#concat-sure")
+        });
+    });
+
+    $('#chutiyan .concat_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img")
+        });
+    });
+
+    $('.pay-content-togg label').click(function () {
+        $('.pay-content').toggle();
+    });
+    $('.bm_vip label').click(function () {
+        $('.bmvip-cont').toggle();
+    });
+    $('.paytoggle label').click(function () {
+        $('.paycont').toggle();
+    });
+    $('.paytips label').click(function () {
+        $('.paytips_cont').toggle();
+    });
+    $('.vip-tq label').click(function () {
+        $('.viptq-cont').toggle();
+    });
+    $('.yd-chose li').click(function () {
+        if($(this).text() === '默认不引导'){
+            $('.yd-cont').hide()
+        }else{
+            $('.yd-cont').show()
+        }
+    });
+
+    $('#chutiyan .chose-tgs').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择提供商',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '选择提供商.html' //iframe的url
+        });
+    });
+    // 搜索
+    $('#chutiyan .kcgl-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#kcgl-account")
+        });
+    });
+    $('#chutiyan .bmjl-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#bmjl-account")
+        });
+    });
+    $('#chutiyan .sqxx-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#sqxx-account")
+        });
+    });
+    $('#chutiyan .jzxx-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#sqxx-account")
+        });
+    });
+    $('#chutiyan .xyjl-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#xyjl-account")
+        });
+    });
+    $('#chutiyan .sc-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#sc-account")
+        });
+    });
+    $('#chutiyan .dz-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#dz-account")
+        });
+    });
+    $('#chutiyan .bj-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#bj-account")
+        });
+    });
+    $('#chutiyan .gw-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#gw-account")
+        });
+    });
+    $('#chutiyan .jz-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#jz-account")
+        });
+    });
+
+
+    //  课程管理
+    $('#chutiyan .addkc_btn').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '课程管理',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['1000px', '90%'],
+            content: '课程管理-添加.html' //iframe的url
+        });
+    });
+    $('#chutiyan .gk-num').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '观看人数',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '观看人数.html' //iframe的url
+        });
+    });
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .delMl_btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('确定删除该条数据？',{
+                skin: 'failureskin',
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('操作成功', {time: 1000});
+            });
+        });
+    });
+
+    //  报名记录
+    $('#chutiyan .tk-btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '确认退款',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['483px', '298px'],
+            skin: 'activity_set activity_set2',
+            content: $("#tk-sure").html()
+        });
+    });
+    $('#chutiyan .tk-detail').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '退款详情',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['600px', '278px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#tk-detail").html()
+        });
+    });
+    //  授权学习
+    $('#chutiyan .addxy_btn').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '授权学习',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '添加学员.html' //iframe的url
+        });
+    });
+    $('#chutiyan .sqxx-gl').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            title: '学习期限',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '382px'],
+            skin: 'activity_set2 activity_set w-120',
+            content: $("#sqxx-sure").html()
+        });
+    });
+    //  禁止学习
+    $('#chutiyan .addjxxy_btn').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '禁止学习',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '添加禁学人员.html' //iframe的url
+        });
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .disxy-remove').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('确定移除该条数据？',{
+                skin: 'failureskin',
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('移除成功', {time: 1000});
+            });
+        });
+    });
+    //  学员记录
+    $('#chutiyan .gk-time').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '学习明细',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '学习明细.html' //iframe的url
+        });
+    });
+
+    $('#chutiyan .zd_person').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择联系人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '指定人员.html' //iframe的url
+        });
+    });
+    $('#chutiyan .yx_person').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择联系人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '指定人员.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .person_tip').on('mouseenter',function(){
+        this.index =layer.tips('联系人展示规则：</br>' +
+            '①报名该系列课，取推荐人/锁定人中拿有分佣的人A，从A至A的顶级，找第一个在“指定可联系人”内的用户，即为该报名人的“联系人”；（锁定人/推荐人都拿有分佣时，推荐人算作A）</br>' +
+            '②若未找到联系人或联系人未在个人中心处上传“二维码/微信/手机号”，则默认展示“默认联系人”；</br>' +
+            '③注意：分公司开启时，分公司员工算作“拿分佣”的有效占位。', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:600
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+</script>
+
+</body>
+</html>

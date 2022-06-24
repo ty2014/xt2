@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程转赠模板添加</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff">
+
+<div class="activity_set activity_set2 ">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="ds-fy" checked class="toggle-button" name="switch">
+                        <label for="ds-fy" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">启用</span>
+                            <span class="text off">停用</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list ">
+                <span class="a_list_l">标题:</span>
+                <div class="a_list_r">
+                    <div class="showNumBox">
+                        <input type="text" maxlength="20" style="width: 310px">
+                        <span class="num">0/20</span>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l">优先级:</span>
+                <div class="a_list_r"><input type="text" class="s_width center" value="100"><span class="tishi">*数字越大排序越前</span></div>
+            </div>
+        </div>
+
+
+        <div class="a_list">
+            <span class="a_list_l">海报配置:</span>
+            <div class="a_list_r chose_item">
+                <label for="hbset1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked name="hbset" id="hbset1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">简易模式</span>
+                </label>
+                <label for="hbset2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="hbset" id="hbset2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">高级模式</span>
+                </label>
+                <span class="tishi">高级模式：此模式下为自定义内容，使用者需要掌握程序编码方法，再进行操作</span>
+            </div>
+        </div>
+        <div class="a_list hbset_cont1">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 25px"></span>
+            <div class="a_list_r">
+                <div class="poster">
+                    <div id='poster' style="width: 320px;min-width: 320px;margin-right: 40px;height: 569px;border:1px solid #d5d5d5;position:relative;z-index: 1;overflow: hidden;background: #fff;">
+                        <img src="" class='bg' id="Img" style="width:100%;height: 100%;z-index:0;" alt="背景图"/>
+                        <div class="drag u_pic" type="head" index="3" style="z-index:3;left:12px;top:470px;width:32px;height: 32px;position: absolute">
+                            <img src="../../images/head.jpg" alt="头像" style="width:100%;height: 100%;border-radius: 50%;vertical-align: top"/>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag u_name" id="u_name" type="realname" index="4" style="z-index:4;left:58px;top:476px;position: absolute;cursor: default">
+                            <div class="text" style="font-size: 12px;">昵称</div>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag" type="qr" index="2" style="z-index:2;left:220px;top:464px;width:82px;height:82px;position: absolute">
+                            <img src="../../images/1.png" alt="二维码" style="width:100%;height: 100%;"/>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag book_pic" id="book_pic" type="book_pic" index="1" style="z-index:1;left:50px;top:50px;width:100px;height:100px;background: #ddd;position: absolute">
+                            <img src="" alt="图书缩略图" style="width:100%;height: 100%;"/>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag book_title" id="book_title" type="book_title" index="1" style="z-index:1;left:10px;top:220px;width: 300px;height:42px;line-height: 145%;position: absolute;cursor: default">
+                            <div class="text" style="font-size: 12px;color: #333;height:42px;overflow: hidden;">图书名称</div>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag book_author" id="book_author" type="book_author" index="1" style="z-index:1;left:10px;top:380px;position: absolute;cursor: default">
+                            <div class="text" style="font-size: 12px;">图书作者</div>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag book_txt" id="book_txt" type="book_txt" index="1" style="z-index:1;left:10px;top:280px;width: 300px;height:42px;line-height: 145%;position: absolute;cursor: default">
+                            <div class="text" style="font-size: 12px;color: #333;line-height: 190%;height:48px;overflow: hidden;">图书简介</div>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                    </div>
+                    <ul class="poster_setting">
+                        <li>
+                            <div class="set_tit">海报背景</div>
+                            <div class="set_msg">
+                                <div class="bg_pic">
+                                    <div id="remark"><span></span><input id="f" type="file" onchange="chooseImg(this)" style="opacity: 0;"></div>
+                                    <label for="f" class="hb_pic">选择背景图</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="set_tit"></div>
+                            <div class="set_msg">
+                                <p class="tishi2" style="margin: 0">海报背景，最佳尺寸为：750*1334，最佳大小为：500KB以下</p>
+                            </div>
+                        </li>
+                        <!--  海报尺寸设置  -->
+                        <li class="title2_msg hb_size">
+                            <div class="set_tit">海报尺寸</div>
+                            <div class="set_msg">
+                                <p><span>宽：</span>320px，<span style="margin-left: 16px;">高：</span>569px</p>
+                                <a class="set_hbsize" style="margin-left: 30px;">修改</a>
+                            </div>
+                        </li>
+                        <li class="title2_msg hb_size_set" style="display: none">
+                            <div class="set_tit">海报尺寸</div>
+                            <div class="set_msg">
+                                宽：<input type="number" class="s_width hbWidth" value="320">&nbsp;px&nbsp;,&nbsp;&nbsp;&nbsp;
+                                高：<input type="number" class="s_width hbHeight" value="569">&nbsp;px
+                                <button class="set_btn set_hbSizeBtn" style="margin-left: 40px;">确定修改尺寸</button>
+                            </div>
+                        </li>
+                        <!--  海报元素选择  -->
+                        <li class="RewardType">
+                            <div class="set_tit">海报元素</div>
+                            <div class="set_msg hb_element">
+                                <div class="radio_list">
+                                    <!--   默认就有，且必须要   -->
+                                    <label for="h_qr" class="checked" style="cursor: no-drop;">
+                                        <div class="chose">
+                                            <input type="checkbox" checked disabled name="pic2" id="h_qr">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">二维码</span>
+                                    </label>
+                                    <label for="h_pic" class="checked" id="Uphoto_togg">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="pic2" id="h_pic">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">头像</span>
+                                    </label>
+                                    <label for="h_name" class="checked" id="Name_togg">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="pic2" id="h_name">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">昵称</span>
+                                    </label>
+                                    <label for="bookPic" class="checked" id="bookPic_togg">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="pic2" id="bookPic">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">图书缩略图</span>
+                                    </label>
+                                    <label for="bookTitle" class="checked" id="bookTitle_togg">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="pic2" id="bookTitle">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">图书名称</span>
+                                    </label>
+                                    <label for="bookAuthor" class="checked" id="bookAuthor_togg">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="pic2" id="bookAuthor">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">图书作者</span>
+                                    </label>
+                                    <label for="bookTxt" class="checked" id="bookTxt_togg">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="pic2" id="bookTxt">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">图书简介</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                        <!--  头像设置  -->
+                        <li class="hpic_msg" style="display: flex;">
+                            <div class="set_tit">头像形状</div>
+                            <div class="set_msg">
+                                <ul class="head_style">
+                                    <li class="square">
+                                        <label for="squ" class="radio">
+                                            <div class="chose">
+                                                <input type="radio"  name="statu" id="squ" />
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">方形</span>
+                                        </label>
+                                    </li>
+                                    <li class="circle">
+                                        <label for="cir" class="radio">
+                                            <div class="chose">
+                                                <input type="radio" checked name="statu" id="cir" />
+                                                <span class="checked-bg"></span>
+                                            </div>
+                                            <span class="msg_set_txt">圆形</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--  昵称样式设置  -->
+                        <li class="name_msg active">
+                            <div class="dub-list">
+                                <div>
+                                    <div class="set_tit">昵称颜色</div>
+                                    <div class="set_msg">
+                                        <div class="colorB fontSize_color">
+                                            <span>#666666</span>       <!--  选择颜色后 要把 RGB格式 转换为 HEX 格式  -->
+                                            <label for="onchange" onclick="rgb2hex()"></label>
+                                            <input type="color" id="onchange" style="display: none"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="set_tit">字体大小</div>
+                                    <div class="set_msg">
+                                        <div class="select-text fontSize" style="min-width: 60px">
+                                            <span class="select-txt">12</span>
+                                            <ul style="display: none;">
+                                                <li>12</li>
+                                                <li>14</li>
+                                                <li>16</li>
+                                                <li>18</li>
+                                                <li>20</li>
+                                                <li>22</li>
+                                                <li>24</li>
+                                                <li>26</li>
+                                                <li>28</li>
+                                                <li>30</li>
+                                                <li>32</li>
+                                                <li>34</li>
+                                                <li>36</li>
+                                                <li>38</li>
+                                                <li>40</li>
+                                                <li>44</li>
+                                                <li>48</li>
+                                                <li>52</li>
+                                                <li>56</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="set_tit">字体粗细</div>
+                                    <div class="set_msg">
+                                        <div class="select-text " style="min-width: 106px">
+                                            <span class="select-txt">500</span>
+                                            <ul style="display: none;">
+                                                <li>100</li>
+                                                <li>200</li>
+                                                <li>300</li>
+                                                <li>400</li>
+                                                <li>500</li>
+                                                <li>600</li>
+                                                <li>700</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="set_tit">字体样式</div>
+                                    <div class="set_msg">
+                                        <div class="select-text " style="min-width: 106px">
+                                            <span class="select-txt">正常</span>
+                                            <ul style="display: none;">
+                                                <li>倾斜</li>
+                                                <li>正常</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="set_tit">对齐方式</div>
+                                    <div class="set_msg">
+                                        <div class="select-text " style="min-width: 106px">
+                                            <span class="select-txt">居左对齐</span>
+                                            <ul style="display: none;">
+                                                <li>居左对齐</li>
+                                                <li>居中对齐</li>
+                                                <li>居右对齐</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--  标题样式设置  -->
+                        <li class="title_msg">
+                            <div class="dub-list">
+                                <div>
+                                    <div class="set_tit">名称颜色</div>
+                                    <div class="set_msg">
+                                        <div class="colorB fontSize_color3">
+                                            <span>#666666</span>       <!--  选择颜色后 要把 RGB格式 转换为 HEX 格式  -->
+                                            <label for="onchange3" onclick="rgb2hex()"></label>
+                                            <input type="color" id="onchange3" style="display: none"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="set_tit">字体大小</div>
+                                    <div class="set_msg">
+                                        <div class="select-text fontSize" style="min-width: 60px">
+                                            <span class="select-txt">12</span>
+                                            <ul style="display: none;">
+                                                <li>12</li>
+                                                <li>14</li>
+                                                <li>16</li>
+                                                <li>18</li>
+                                                <li>20</li>
+                                                <li>22</li>
+                                                <li>24</li>
+                                                <li>26</li>
+                                                <li>28</li>
+                                                <li>30</li>
+                                                <li>32</li>
+                                                <li>34</li>
+                                                <li>36</li>
+                                                <li>38</li>
+                                                <li>40</li>
+                                                <li>44</li>
+                                                <li>48</li>
+                                                <li>52</li>
+                                                <li>56</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="set_tit">名称行数</div>
+                                    <div class="set_msg">
+                                        <div class="select-text title-chose" style="min-width: 106px">
+                                            <span class="select-txt">二行展示</span>
+                                            <ul style="display: none;">
+                                                <li>一行展示</li>
+                                                <li>二行展示</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--  作者样式设置  -->
+                        <li class="author_msg">
+                            <div class="dub-list">
+                                <div>
+                                    <div class="set_tit">作者颜色</div>
+                                    <div class="set_msg">
+                                        <div class="colorB fontSize_color2">
+                                            <span>#666666</span>       <!--  选择颜色后 要把 RGB格式 转换为 HEX 格式  -->
+                                            <label for="onchange2" onclick="rgb2hex()"></label>
+                                            <input type="color" id="onchange2" style="display: none"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="set_tit">字体大小</div>
+                                    <div class="set_msg">
+                                        <div class="select-text fontSize" style="min-width: 60px">
+                                            <span class="select-txt">12</span>
+                                            <ul style="display: none;">
+                                                <li>12</li>
+                                                <li>14</li>
+                                                <li>16</li>
+                                                <li>18</li>
+                                                <li>20</li>
+                                                <li>22</li>
+                                                <li>24</li>
+                                                <li>26</li>
+                                                <li>28</li>
+                                                <li>30</li>
+                                                <li>32</li>
+                                                <li>34</li>
+                                                <li>36</li>
+                                                <li>38</li>
+                                                <li>40</li>
+                                                <li>44</li>
+                                                <li>48</li>
+                                                <li>52</li>
+                                                <li>56</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--  简介样式设置  -->
+                        <li class="txt_msg">
+                            <div class="dub-list">
+                                <div>
+                                    <div class="set_tit">简介颜色</div>
+                                    <div class="set_msg">
+                                        <div class="colorB fontSize_color4">
+                                            <span>#666666</span>       <!--  选择颜色后 要把 RGB格式 转换为 HEX 格式  -->
+                                            <label for="onchange4" onclick="rgb2hex()"></label>
+                                            <input type="color" id="onchange4" style="display: none"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="set_tit">字体大小</div>
+                                    <div class="set_msg">
+                                        <div class="select-text fontSize" style="min-width: 60px">
+                                            <span class="select-txt">12</span>
+                                            <ul style="display: none;">
+                                                <li>12</li>
+                                                <li>14</li>
+                                                <li>16</li>
+                                                <li>18</li>
+                                                <li>20</li>
+                                                <li>22</li>
+                                                <li>24</li>
+                                                <li>26</li>
+                                                <li>28</li>
+                                                <li>30</li>
+                                                <li>32</li>
+                                                <li>34</li>
+                                                <li>36</li>
+                                                <li>38</li>
+                                                <li>40</li>
+                                                <li>44</li>
+                                                <li>48</li>
+                                                <li>52</li>
+                                                <li>56</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="set_tit">简介行数</div>
+                                    <div class="set_msg">
+                                        <div class="select-text title-chose" style="min-width: 106px">
+                                            <span class="select-txt">二行展示</span>
+                                            <ul style="display: none;">
+                                                <li>二行展示</li>
+                                                <li>三行展示</li>
+                                                <li>四行展示</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="set_tit">行高设置</div>
+                                    <div class="set_msg">
+                                        <div class="select-text title-chose" style="min-width: 106px">
+                                            <span class="select-txt">150%</span>
+                                            <ul style="display: none;">
+                                                <li>110%</li>
+                                                <li>120%</li>
+                                                <li>130%</li>
+                                                <li>140%</li>
+                                                <li>150%</li>
+                                                <li>160%</li>
+                                                <li>170%</li>
+                                                <li>180%</li>
+                                                <li>190%</li>
+                                                <li>200%</li>
+                                                <li>210%</li>
+                                                <li>220%</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="a_list hbset_cont2" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <textarea style="width: 620px;height: 400px;">此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/designer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#hbset1').click(function (){
+        $('.hbset_cont1').show();
+        $('.hbset_cont2').hide();
+    });
+    $('#hbset2').click(function (){
+        $('.hbset_cont2').show();
+        $('.hbset_cont1').hide();
+    });
+
+    $("#cf_method label input").on("click",function(){
+        var index=$(this).parents('#cf_method label').index();
+        $('.cont_box').find(".box").hide().eq(index).show();
+        $(this).parent().parent().siblings('.tishi').find('span').hide().eq(index).show();
+    });
+
+</script>
+<!--海报设置js-->
+<script>
+    $(function(){
+        $('.set_hbsize').click(function () {
+            $('.hb_size').hide();
+            $('.hb_size_set').css('display','flex')
+        });
+        $('.set_hbSizeBtn').click(function () {
+            $('.hb_size_set').hide();
+            $('.hb_size').show();
+            let w=$('.hbWidth').val(),
+                h=$('.hbHeight').val();
+            $('.hb_size .set_msg p').html('<span>宽：</span>'+ w +'px，<span style="margin-left: 16px;">高：</span>'+ h +'px');
+            $('#poster').css({'width': w+'px','min-width': w+'px','height': h+'px'});
+        });
+        $('.circle').click(function(){
+            $('.u_pic > img').css('border-radius','50%')
+        });
+        $('.square').click(function(){
+            $('.u_pic > img').css('border-radius','0')
+        });
+        $('.fontSize li').click(function(){
+            $('.u_name .text').css('fontSize',$(this).text()+'px');
+            $('.fontSize_name span').text($(this).text());
+        });
+        $('.title-chose li').click(function(){
+            let txt = $(this).text();
+            switch (txt) {
+                case '一行展示':
+                    $('.kc_title,.kc_title .text').css('height','21px');
+                    break;
+                case '二行展示':
+                    $('.kc_title,.kc_title .text').css('height','42px');
+                    break;
+            }
+        });
+        $('#Uphoto_togg input').click(function(){
+            $('#h_pic').attr("checked",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.hpic_msg').toggle();
+            $('#squ').attr("checked",false);
+            $('#cir').attr("checked",true);
+            if($('#h_pic').is(':checked')){
+                $('.u_pic').remove();
+                $('#poster').append( '<div class="drag u_pic" type="head" index="3" style="z-index:3;left:12px;top:470px;width:32px;height: 32px;position: absolute">'+
+                    '<img src="../../images/head.jpg" alt="头像" style="width:100%;height: 100%;border-radius: 50%;vertical-align: top"/>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                });
+                $('.u_pic > img').css('border-radius','50%');
+            }else{
+                $('.u_pic').remove();
+            }
+        });
+        $('#Name_togg input').click(function(){
+            $('#h_name').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.name_msg').toggle();
+            if($('#h_name').is(':checked')){
+                $('.u_name').remove();
+                $('#poster').append( '<div  class="drag u_name" id="u_name" type="realname" index="4" style="z-index:4;left:58px;top:476px;position: absolute;cursor: default">'+
+                    '<div class="text" style="font-size: 12px;">昵称</div>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.u_name').remove();
+            }
+        });
+        $('#bookPic_togg input').click(function(){
+            $('#bookPic').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            if($('#bookPic').is(':checked')){
+                $('.book_pic').remove();
+                $('#poster').append( '<div  class="drag book_pic" id="book_pic" type="book_pic" index="1" style="z-index:1;left:50px;top:50px;width:100px;height:100px;background: #ddd;position: absolute">'+
+                    '<img src="" alt="图书缩略图" style="width:100%;height: 100%;"/>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.book_pic').remove();
+            }
+        });
+        $('#bookTitle_togg input').click(function(){
+            $('#bookTitle').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.title_msg').toggle();
+            if($('#bookTitle').is(':checked')){
+                $('.book_title').remove();
+                $('#poster').append( '<div  class="drag book_title" id="book_title" type="book_title" index="1" style="z-index:1;left:10px;top:220px;width: 300px;height:42px;line-height: 145%;position: absolute;cursor: default">'+
+                    '<div class="text" style="font-size: 12px;color: #333;height:42px;overflow:hidden;">图书名称</div>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.book_title').remove();
+            }
+        });
+        $('#bookAuthor_togg input').click(function(){
+            $('#bookAuthor').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.author_msg').toggle();
+            if($('#bookAuthor').is(':checked')){
+                $('.book_author').remove();
+                $('#poster').append( '<div  class="drag book_author" id="book_author" type="book_author" index="1" style="z-index:1;left:10px;top:380px;position: absolute;cursor: default">'+
+                    '<div class="text" style="font-size: 12px;">图书作者</div>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.book_author').remove();
+            }
+        });
+        $('#bookTxt_togg input').click(function(){
+            $('#bookTxt').attr("checkbox",true);
+            $(this).find('.checked-bg').toggleClass('on');
+            $('.txt_msg').toggle();
+            if($('#bookTxt').is(':checked')){
+                $('.book_txt').remove();
+                $('#poster').append( '<div  class="drag book_txt" id="book_txt" type="book_txt" index="1" style="z-index:1;left:10px;top:280px;width: 300px;height:42px;line-height: 145%;position: absolute;cursor: default">'+
+                    '<div class="text" style="font-size: 12px;color: #333;height:42px;overflow:hidden;">图书简介</div>'+
+                    '<div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>'+
+                    '<div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>'+
+                    '<div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>'+
+                    '<div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>'+
+                    '<div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>'+
+                    '<div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '<div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>'+
+                    '</div>');
+                $(function(){
+                    $('.drag').each(function(){
+                        bindEvents($(this));
+                    });
+                })
+            }else{
+                $('.book_txt').remove();
+            }
+        });
+
+    });
+    function colorRGB2Hex(color) {
+        var rgb = color.split(',');
+        var r = parseInt(rgb[0].split('(')[1]);
+        var g = parseInt(rgb[1]);
+        var b = parseInt(rgb[2].split(')')[0]);
+        var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        return hex;
+    }
+    document.getElementById('onchange').onchange = function() {
+        $('#u_name').css('color', this.value)
+        setcolor();
+    };
+    function setcolor() {
+        var link_col = $('#u_name').css('color');
+        if (!link_col) {//未设置，就是初始值
+            link_col = "rgb(102,102,102)";
+        }
+        var sHexColor = colorRGB2Hex(link_col);
+        $('.fontSize_color label').css('background-color', link_col);
+        $('.fontSize_color span').text(sHexColor)
+    }
+    function setfontsize() {
+        //字号
+        var fontsize = $("#u_name .text").css("font-size");
+        if (!fontsize) {
+            fontsize = "12px"; //默认字号
+        }
+        fontsize = fontsize.replace("px", "");
+        $('.select-text ul li:contains(' + fontsize + ')').click();
+    }
+    function chooseImg(file){
+        var file=file.files[0];
+        var reader=new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload=function(){
+            var img=document.getElementById('Img');
+            img.src=this.result;
+        };
+    }
+    $("input[type=file]").change(function(){
+        var str=$(this).val();
+        if(str!==""){
+            var arr=str.split("\\");
+            var file_name=arr[arr.length-1];
+            $(this).siblings('span').text(file_name);
+        }
+    });
+
+    // 作者颜色设置
+    document.getElementById('onchange2').onchange = function() {
+        $('#book_author .text').css('color', this.value);
+        setcolor2();
+    };
+    function setcolor2() {
+        var link_col = $('#book_author .text').css('color');
+        if (!link_col) {//未设置，就是初始值
+            link_col = "rgb(102,102,102)";
+        }
+        var sHexColor = colorRGB2Hex(link_col);
+        $('.fontSize_color2 label').css('background-color', link_col);
+        $('.fontSize_color2 span').text(sHexColor)
+    }
+    // 标题颜色设置
+    document.getElementById('onchange3').onchange = function() {
+        $('#book_title .text').css('color', this.value);
+        setcolor3();
+    };
+    function setcolor3() {
+        var link_col = $('#book_title .text').css('color');
+        if (!link_col) {//未设置，就是初始值
+            link_col = "rgb(102,102,102)";
+        }
+        var sHexColor = colorRGB2Hex(link_col);
+        $('.fontSize_color3 label').css('background-color', link_col);
+        $('.fontSize_color3 span').text(sHexColor)
+    }
+    // 标题颜色设置
+    document.getElementById('onchange4').onchange = function() {
+        $('#book_txt .text').css('color', this.value);
+        setcolor4();
+    };
+    function setcolor4() {
+        var link_col = $('#book_txt .text').css('color');
+        if (!link_col) {//未设置，就是初始值
+            link_col = "rgb(102,102,102)";
+        }
+        var sHexColor = colorRGB2Hex(link_col);
+        $('.fontSize_color4 label').css('background-color', link_col);
+        $('.fontSize_color4 span').text(sHexColor)
+    }
+</script>
+<!-- 拖动缩放 -->
+<script language='javascript'>
+    $('form').submit(function(){
+        $('.drag').each(function(){
+            var obj = $(this);
+            var type = obj.attr('type');
+            var left = obj.css('left'),top = obj.css('top');
+            var d= {left:left,top:top,type:obj.attr('type'),width:obj.css('width'),height:obj.css('height'),radius:obj.css('border-radius')};
+            if(type=='head'){
+                d.size = obj.attr('size');
+                d.color = obj.attr('color');
+            } else if(type=='qr'){
+                d.size = obj.attr('size');
+            } else if(type=='img'){
+                d.src = obj.attr('src');
+            }else if(type=='head'){
+                d.radius = obj.attr('border-radius');
+            } else if(type=='fimg'){
+                d.size = obj.attr('size');
+            }//粉丝
+            data.push(d);
+        });
+    });
+    function bindEvents(obj){
+        var index = obj.attr('index');
+        var rs = new Resize(obj, { Max: true, mxContainer: "#poster" });
+        rs.Set($(".rRightDown",obj), "right-down");
+        rs.Set($(".rLeftDown",obj), "left-down");
+        rs.Set($(".rRightUp",obj), "right-up");
+        rs.Set($(".rLeftUp",obj), "left-up");
+        rs.Set($(".rRight",obj), "right");
+        rs.Set($(".rLeft",obj), "left");
+        rs.Set($(".rUp",obj), "up");
+        rs.Set($(".rDown",obj), "down");
+        rs.Scale = true;
+        var type = obj.attr('type');
+        if(type=='realname' || type=='book_pic' || type=='book_title' || type=='book_author' || type=='book_txt'){
+            // 关闭等比缩放
+            rs.Scale = false;
+        }
+        new Drag(obj, { Limit: true, mxContainer: "#poster" });
+        $('.drag .remove').unbind('click').click(function(){
+            $(this).parent().remove();
+        })
+
+        obj.unbind('click').click(function(){
+            bind($(this));
+        })
+    }
+    var imgsettimer = 0 ;
+    var nametimer = 0;
+    var headsettimer = 0;
+    var bgtimer = 0 ;
+    function bindType(type){
+        $("#goodsparams").hide();
+        $(".type4").hide();
+        if(type=='4'){
+            $(".type4").show();
+        } else if(type=='3'){
+            $("#goodsparams").show();
+        }
+    }
+    function clearTimers(){
+        clearInterval(imgsettimer);
+        clearInterval(nametimer);
+        clearInterval(bgtimer);
+        clearInterval(headsettimer);
+    }
+    function bind(obj){
+        var imgset = $('#imgset'), nameset = $("#nameset"),qrset = $('#qrset'),headset =$("#headset"),fimgset =$("#fimgset");
+        imgset.hide();nameset.hide();headset.hide();qrset.hide();fimgset.hide();
+        clearTimers();
+        var type = obj.attr('type');
+        if(type=='realname' || type=='title' || type=='marketprice' || type=='productprice'){
+            nameset.show();
+            var color = obj.attr('color') || "#000";
+            var size = obj.attr('size') || "12";
+            var input = nameset.find('input:first');
+            var namesize = nameset.find('#namesize');
+            var picker = nameset.find('.sp-preview-inner');
+            input.val(color); namesize.val(size.replace("pt",""));
+            picker.css( {'background-color':color,'font-size':size});
+            nametimer = setInterval(function(){
+                obj.attr('color',input.val()).find('.text').css('color',input.val());
+                obj.attr('size',namesize.val() +"pt").find('.text').css('font-size',namesize.val() +"pt");
+            },100);
+        } else if(type=='qr'){
+            qrset.show();
+            var size = obj.attr('size') || "3";
+            var sel = qrset.find('#qrsize');
+            sel.val(size);
+
+            sel.unbind('change').change(function(){
+                obj.attr('size',sel.val())
+            });
+        }else if(type=='head'){
+            headset.show();
+            var radius= obj.attr('border-radius') || "0px";
+
+            var head_shape_checked=headset.find("#head_shape_val");
+            $("input:radio[name='head_shape']").each(function(){
+                if($(this).val()==radius){
+                    $(this).prop("checked",true);
+                }else{
+                    $(this).prop("checked",false);
+                }
+            })
+
+            head_shape_checked.val(radius);
+            headsettimer = setInterval(function() {
+                obj.attr('border-radius', head_shape_checked.val());
+                obj.find('img').css('border-radius', head_shape_checked.val());
+            },100);
+        } else if(type=='fimg'){
+            fimgset.show();
+            var size = obj.attr('size') || "3";
+            var sel = fimgset.find('#fimgset');
+            sel.val(size);
+
+            sel.unbind('change').change(function(){
+                obj.attr('size',sel.val())
+            });
+        }
+    }
+    $(function(){
+        $('.drag').each(function(){
+            bindEvents($(this));
+        });
+    })
+</script>
+<script>
+    $(function() {
+        //二维码
+        if ($("div[type=qr]").length == 0) {
+            $("#h_qr").click();
+        }
+        //头像
+        if ($("div[type=head]").length == 0) {
+            $("#h_pic").click();
+        }else{
+            //头像形状
+            if ($("div[type=head] img").css("border-radius") == "0px") {
+                $("#squ").click();
+            }else {
+                $("#cir").click();
+            }
+        }
+        //昵称
+        if ($("div[type=realname]").length == 0) {
+            $('#h_name').trigger("click");
+        }else {
+            //设置颜色
+            setcolor();
+            //设置字号
+            setfontsize();
+        }
+        //商品主图
+        if ($("div[type=sp_pic]").length == 0) {
+            $("#h_spPic").click();
+        }
+        //商品标题
+        if ($("div[type=sp_title]").length == 0) {
+            $("#h_spTitle").click();
+        }
+        //时间
+        if ($("div[type=sp_time]").length == 0) {
+            $("#h_spTime").click();
+        }
+        //人气
+        if ($("div[type=sp_rq]").length == 0) {
+            $("#h_rqNum").click();
+        }
+    });
+</script>
+</body>
+</html>

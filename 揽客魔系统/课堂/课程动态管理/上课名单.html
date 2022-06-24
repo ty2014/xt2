@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>报名人</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+</head>
+<body id="chutiyan" style="background: #f8f8f8;min-width: auto">
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>上课人员名单</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span><i class="fa fa-download"></i>导出调研表</span>
+            <span><i class="fa fa-download"></i>导出上课标签</span>
+        </div>
+        <div class="tab_type_l"><span class="add_btn add-classPerson"><i class="fa fa-plus"></i>添加</span></div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">
+                        <label for="c1" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="c1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </th>
+                    <th width="50px">序号</th>
+                    <th width="250px">操作</th>
+                    <th width="150px">课程安排名称</th>
+                    <th width="80px">是否录入</th>
+                    <th width="80px">录入组别</th>
+                    <th width="100px">上课备注</th>
+                    <th width="80px">材料费</th>
+                    <th width="80px">尾款</th>
+                    <th width="80px">餐费</th>
+                    <th width="80px">支付金额</th>
+                    <th width="100px">支付时间</th>
+                    <th width="100px">签到时间</th>
+                    <th width="150px">验证时拍摄的照片</th>
+                    <th width="150px">席位名称</th>
+                    <th width="80px">姓名</th>
+                    <th width="100px">电话</th>
+                    <th width="150px">身份证号</th>
+                    <th width="150px">联系地址</th>
+                    <th width="150px">公司名称</th>
+                    <th width="80px">职位</th>
+                    <th width="150px">报名单号</th>
+                    <th width="80px">备注</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label for="c2" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="c2" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </td>
+                    <td>1</td>
+                    <td class="cz_btn">
+                        <span class="edit_tips set-notes" data-toggle="tooltip" data-placement="top" title="设置上课备注"></span>
+                        <span class="look_tips look-table" data-toggle="tooltip" data-placement="top" title="查看调研表"></span>
+                        <span class="del_tips" data-toggle="tooltip" data-placement="top" title="删除"></span>
+                    </td>
+                    <td>百万客流爆破营第二十期</td>
+                    <td>是</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                    <td>1.00</td>
+                    <td>3.00</td>
+                    <td class="date"><div>2019-08-04 10:47:01</div></td>
+                    <td class="date"><div>2019-08-04 10:47:01</div></td>
+                    <td><a class="picNum">2</a></td>
+                    <td></td>
+                    <td>杨</td>
+                    <td>18364527984</td>
+                    <td>510823199707075544</td>
+                    <td>四川成都</td>
+                    <td>揽客魔</td>
+                    <td></td>
+                    <td>2020080600048897</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script>
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['50%', '60%'],
+            content: '搜索.html' //iframe的url
+        });
+    });
+    $('#chutiyan .add-classPerson').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加预约人员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['60%', '90%'],
+            content: '添加预约人员.html' //iframe的url
+        });
+    });
+    $('#chutiyan .set-notes').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '上课备注',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['60%', '90%'],
+            content: '上课备注.html' //iframe的url
+        });
+    });
+    $('#chutiyan .look-table').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '调研表管理',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['60%', '90%'],
+            content: '调研表管理.html' //iframe的url
+        });
+    });
+    $('#chutiyan .picNum').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '拍摄照片',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '验证拍摄照片.html' //iframe的url
+        });
+    });
+
+</script>
+</body>
+</html>

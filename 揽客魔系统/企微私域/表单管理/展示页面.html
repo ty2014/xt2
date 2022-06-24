@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- import CSS -->
+    <link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+    <style>
+        *{box-sizing: border-box}
+        html,body{margin: 0;width: 100%;-webkit-overflow-scrolling: touch;-webkit-appearance:none;}
+        ul ,li{list-style: none}
+        img{max-width: 100%}
+        body, div,p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textarea, blockquote, th, td ,pre{ box-sizing: border-box;margin:0;padding:0;font-family:"Helvetica Neue", Helvetica, "PingFang SC", 微软雅黑, Tahoma, Arial, sans-serif;word-break: break-all}
+        a{cursor: pointer;text-decoration: none;background-color: transparent;color: #fff}
+        a,a:hover,a:active,a:visited,a:link,a:focus{-webkit-tap-highlight-color: transparent;outline:none;text-decoration: none;}
+        body{overflow-x: hidden;max-width: 750px;margin: 0 auto;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+        .demo-ruleForm{padding: 12px;}
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <!--  自定义顶部背景图  -->
+    <div><img src="https://xiaoliebian-sys.oss-cn-hangzhou.aliyuncs.com/img/2022/01/15/20220115/fc4e65d7-6a08-488d-90f0-704473508150.png?1334" alt=""></div>
+    <!--  自定义表单元素  -->
+    <el-form ref="ruleForm" :rules="rules" :label-position="labelPosition" :model="ruleForm" size="mini" label-width="80px"  class="demo-ruleForm">
+        <el-form-item label="文本框" prop="name">
+            <el-input v-model="ruleForm.name"></el-input>
+        </el-form-item>
+        <el-form-item label="下拉菜单"  prop="region">
+            <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
+                <el-option label="区域一" value="shanghai"></el-option>
+                <el-option label="区域二" value="beijing"></el-option>
+            </el-select>
+        </el-form-item>
+        <el-form-item label="活动时间" required>
+            <el-col :span="11">
+                <el-form-item prop="date1">
+                    <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
+                </el-form-item>
+            </el-col>
+            <el-col class="line" :span="2" style="text-align: center">-</el-col>
+            <el-col :span="11">
+                <el-form-item prop="date2">
+                    <el-time-picker placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
+                </el-form-item>
+            </el-col>
+        </el-form-item>
+        <el-form-item label="日期" required>
+            <el-col :span="11">
+                <el-form-item prop="date1">
+                    <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
+                </el-form-item>
+            </el-col>
+        </el-form-item>
+        <el-form-item label="时间" required>
+            <el-col :span="11">
+                <el-form-item prop="date2">
+                    <el-time-picker placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
+                </el-form-item>
+            </el-col>
+        </el-form-item>
+        <el-form-item label="开关" prop="delivery">
+            <el-switch v-model="ruleForm.delivery"></el-switch>
+        </el-form-item>
+        <el-form-item label="多选" prop="type">
+            <el-checkbox-group v-model="ruleForm.type">
+                <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
+                <el-checkbox label="地推活动" name="type"></el-checkbox>
+                <el-checkbox label="线下主题活动" name="type"></el-checkbox>
+                <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+            </el-checkbox-group>
+        </el-form-item>
+        <el-form-item label="单选" prop="resource">
+            <el-radio-group v-model="ruleForm.resource">
+                <el-radio label="线上品牌商赞助"></el-radio>
+                <el-radio label="线下场地免费"></el-radio>
+            </el-radio-group>
+        </el-form-item>
+        <el-form-item label="文本域" prop="desc">
+            <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+        </el-form-item>
+        <el-form-item label="计数器">
+            <el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
+        </el-form-item>
+        <el-form-item label="滑块">
+            <el-slider v-model="value1"></el-slider>
+        </el-form-item>
+        <el-form-item label="上传">
+            <el-upload
+                    action="https://jsonplaceholder.typicode.com/posts/"
+                    list-type="picture-card"
+                    :on-preview="handlePictureCardPreview"
+                    :on-remove="handleRemove">
+                <i class="el-icon-plus"></i>
+            </el-upload>
+            <el-dialog :visible.sync="dialogVisible">
+                <img width="100%" :src="dialogImageUrl" alt="">
+            </el-dialog>
+        </el-form-item>
+        <el-form-item label="分割线">
+            <el-divider></el-divider>
+        </el-form-item>
+        <el-form-item label="评分">
+            <el-rate v-model="value" show-text></el-rate>
+        </el-form-item>
+
+        <el-form-item>
+            <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
+            <el-button>取消</el-button>
+        </el-form-item>
+    </el-form>
+</div>
+
+<script src="element-ui/vue.js"></script>
+<script src="element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                labelPosition: 'top',
+                ruleForm: {
+                    name: '',
+                    region: '',
+                    date1: '',
+                    date2: '',
+                    delivery: false,
+                    type: [],
+                    resource: '',
+                    desc: ''
+                },
+                rules: {
+                    name: [
+                        { required: true, message: '请输入活动名称', trigger: 'blur' },
+                        { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+                    ],
+                    region: [
+                        { required: true, message: '请选择活动区域', trigger: 'change' }
+                    ],
+                    date1: [
+                        { type: 'date', required: true, message: '请选择日期', trigger: 'change' }
+                    ],
+                    date2: [
+                        { type: 'date', required: true, message: '请选择时间', trigger: 'change' }
+                    ],
+                    type: [
+                        { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }
+                    ],
+                    resource: [
+                        { required: true, message: '请选择活动资源', trigger: 'change' }
+                    ],
+                    desc: [
+                        { required: true, message: '请填写活动形式', trigger: 'blur' }
+                    ]
+                },
+                num: 1,
+                value1: 0,
+                dialogImageUrl: '',
+                dialogVisible: false,
+                value: null
+            }
+        },
+        methods: {
+            submitForm(formName) {
+                this.$refs[formName].validate((valid) => {
+                    if (valid) {
+                        alert('submit!');
+                    } else {
+                        console.log('error submit!!');
+                        return false;
+                    }
+                });
+            },
+            resetForm(formName) {
+                this.$refs[formName].resetFields();
+            },
+            onSubmit() {
+                console.log('submit!');
+            },
+            handleChange(value) {
+                console.log(value);
+            },
+            formatTooltip(val) {
+                return val / 100;
+            },
+            handleRemove(file, fileList) {
+                console.log(file, fileList);
+            },
+            handlePictureCardPreview(file) {
+                this.dialogImageUrl = file.url;
+                this.dialogVisible = true;
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

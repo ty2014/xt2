@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>备份公众号</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.0">
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="head-tab2">
+    <li class="active current"><a>基本设置</a></li>
+    <li><a>通用设置</a></li>
+    <li><a>配置信息</a></li>
+    <li><a>公众号转正</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-body-b" style="padding: 0">
+    <div class="tab-content activity_set activity_set3 w-6">
+        <div class="tab-pane active">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <div class="a_list_r">
+                        <div class="tishi-bg"><img src="../../images/3.png" alt="">注意：公众号基本配置必须与公众号一致，否则公众号将不能正常运作，请根据公众号配置要求填写。
+                            <a href="https://www.yuque.com/books/share/eec9a3a3-b995-46e4-9514-8569173d8bb2/sssm77" target="_blank">详情请查看文档</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">公众号名称:</span>
+                    <div class="a_list_r"><input type="text"><span class="tishi">个人类型公众号一年内可修改两次名称，详情请<a class="showPic1">查看示例</a></span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">公众号微信号:</span>
+                    <div class="a_list_r"><input type="text"><span class="tishi">微信号是有唯一性的，不支持重复设置，详情请<a class="showPic2">查看示例</a></span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">公众号头像:</span>
+                    <div class="a_list_r">
+                        <div class="file-cont file-cont2">
+                            <!--  存放已上传图片，默认隐藏  -->
+                            <div class="file-pics"></div>
+                            <!--  上传图片按钮  -->
+                            <div class="file-btn"></div>
+                        </div>
+                        <p class="tishi mgL-0">*建议图片尺寸为200px*200px，比例为1：1，支持BMP、JPEG、JPG、GIF、PNG，大小不超过2M</p>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">公众号二维码:</span>
+                    <div class="a_list_r">
+                        <div class="file-cont file-cont2">
+                            <!--  存放已上传图片，默认隐藏  -->
+                            <div class="file-pics"></div>
+                            <!--  上传图片按钮  -->
+                            <div class="file-btn"></div>
+                        </div>
+                        <p class="tishi mgL-0">*建议图片尺寸为400px*400px，比例为1：1，仅支持 JPG 格式，大小不超过2M</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div class="tab-pane">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <div class="a_list_r">
+                        <p class="tishi-bg">
+                            <img src="../../images/3.png" alt="">
+                            安全验证文件获取方法：微信公众号平台 -> 公众号设置 -> 功能设置 -> 点击JS接口安全域名后面的‘设置’，复制弹框中的文件名即可，
+                            <a href="https://www.yuque.com/books/share/eec9a3a3-b995-46e4-9514-8569173d8bb2/sssm77" target="_blank">详情请查看文档</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">原始ID:</span>
+                    <div class="a_list_r"><input type="text" style="width: 310px;"><span class="tishi">查看方式：登录微信公众号平台-设置-公众号设置-注册信息，详情请<a class="showPic3">查看示例</a></span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">APPID:</span>
+                    <div class="a_list_r"><input type="text" style="width: 310px;"><span class="tishi">开发者ID是公众号开发识别码，详情请<a class="showPic4">查看示例</a></span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">APPSECRET:</span>
+                    <div class="a_list_r"><input type="text" style="width: 310px;"><span class="tishi">开发者密码是校验公众号开发者身份的密码，详情请<a class="showPic5">查看示例</a></span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">安全验证文件:</span>
+                    <div class="a_list_r">
+                        <span class="set-user" style="margin-right: 16px">上传文件</span>
+                        MP_verify_vqubHQUTQxfmAUKl.txt
+                        <span class="tishi">用于填写服务器配置，详情请<a class="showPic6">查看示例</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div class="tab-pane">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l">服务器IP:</span>
+                    <div class="a_list_r"><span>后台调取相关配置信息</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">授权域名:</span>
+                    <div class="a_list_r"><span>后台调取相关配置信息</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">消息处理网址:</span>
+                    <div class="a_list_r"><span>后台调取相关配置信息</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">Token:</span>
+                    <div class="a_list_r"><span>后台调取相关配置信息</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">微信支付目录:</span>
+                    <div class="a_list_r"><span>后台调取相关配置信息</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane">
+            <div class="b-line">
+                <div class="a_list">
+                    <div class="a_list_r"><div class="tishi-bg"><img src="../../images/3.png" alt="">注意：一键替换后新公众号将替换旧公众号。</div></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l r-title">旧公众号</span>
+                    <div class="a_list_r"></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">公众号名称:</span>
+                    <div class="a_list_r"><input type="text" disabled><span class="tishi">公众号授权中设置的名称</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">原始ID:</span>
+                    <div class="a_list_r"><input type="text" disabled><span class="tishi">公众号授权中设置的原始ID</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">APPID:</span>
+                    <div class="a_list_r"><input type="text" disabled><span class="tishi">公众号授权中设置的APPID</span></div>
+                </div>
+            </div>
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l r-title">新公众号</span>
+                    <div class="a_list_r"></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">公众号名称:</span>
+                    <div class="a_list_r"><input type="text" disabled><span class="tishi">最新设置的公众号名称</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">原始ID:</span>
+                    <div class="a_list_r"><input type="text" disabled><span class="tishi">最新设置的原始ID</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">APPID:</span>
+                    <div class="a_list_r"><input type="text" disabled><span class="tishi">最新设置的APPID</span></div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l"></span>
+                    <!--  每 3s 刷新一次  -->
+                    <div class="a_list_r"><span class="tishi" style="margin-left: 0">数据更新：1000/5000</span></div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">一键替换</span></div>
+        </div>
+    </div>
+</div>
+
+<img src="http://cshtml.lkmsxy.com/csimg/gzh1.png" alt="" id="title_img1" style="width: 100%;height: 100%;display: none;">
+<img src="http://cshtml.lkmsxy.com/csimg/gzh2.png" alt="" id="title_img2" style="width: 100%;height: 100%;display: none;">
+<img src="http://cshtml.lkmsxy.com/csimg/gzh3.png" alt="" id="title_img3" style="width: 100%;height: 100%;display: none;">
+<img src="http://cshtml.lkmsxy.com/csimg/gzh4.png" alt="" id="title_img4" style="width: 100%;height: 100%;display: none;">
+<img src="http://cshtml.lkmsxy.com/csimg/gzh5.png" alt="" id="title_img5" style="width: 100%;height: 100%;display: none;">
+<img src="http://cshtml.lkmsxy.com/csimg/gzhaqwj.png" alt="" id="title_img6" style="width: 100%;height: 100%;display: none;">
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .showPic1').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['90%', 'auto'], //宽高
+            content: $("#title_img1")
+        });
+    });
+    $('#chutiyan .showPic2').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['90%', 'auto'], //宽高
+            content: $("#title_img2")
+        });
+    });
+    $('#chutiyan .showPic3').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['90%', 'auto'], //宽高
+            content: $("#title_img3")
+        });
+    });
+    $('#chutiyan .showPic4').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['90%', 'auto'], //宽高
+            content: $("#title_img4")
+        });
+    });
+    $('#chutiyan .showPic5').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['90%', 'auto'], //宽高
+            content: $("#title_img5")
+        });
+    });
+    $('#chutiyan .showPic6').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['90%', 'auto'], //宽高
+            content: $("#title_img6")
+        });
+    });
+
+    $('#chutiyan .btn-sure').on('click', function(){
+        layer.confirm('是否确定用新公众号替换旧公众号？</br>替换后旧公众号信息将被清除',{
+            btn: ['取消','确定'],
+            area: '416px'
+        }, function(index){
+            layer.close(index);
+        }, function(){
+            layer.msg('替换成功', {time: 1000});
+        });
+    });
+</script>
+
+
+</body>
+</html>

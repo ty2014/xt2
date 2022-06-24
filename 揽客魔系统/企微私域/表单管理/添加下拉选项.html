@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.1">
+    <style>
+        .fa-bars{cursor: all-scroll}
+        .normal-table table thead{border-bottom: 1px solid #ededed;background: #f7f7f7;}
+    </style>
+</head>
+<body style="padding: 0">
+
+<div class="content">
+    <div class="activity_set activity_set2 w-4">
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">添加选项:</span>
+                <div class="a_list_r" style="align-items: flex-start;flex-wrap: nowrap;overflow: auto;">
+                    <div>
+                        <div class="normal-table" style="min-width: 500px">
+                            <table border="0" style="table-layout: unset;">
+                                <thead>
+                                <tr>
+                                    <th style="width: 50px">序号</th>
+                                    <th style="width: 200px">选项内容</th>
+                                    <th style="width: 100px">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody id="example2">
+                                <tr>
+                                    <td>1</td>
+                                    <td><input type="text" value=""></td>
+                                    <td>
+                                        <a class="expired del">删除</a><a class="notExpired mg-8">新增</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><input type="text" value=""></td>
+                                    <td><a class="expired del">删除</a><a class="notExpired mg-8">新增</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <span class="tishi mgL-0 mgT-10">*可上下拖动排序</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/Sortable.min.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    var example2Left = document.getElementById('example2');
+    new Sortable(example2Left, {
+        group: 'shared',
+        animation: 150,
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>店招设置</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan" style="height: auto">
+
+<div class="gz-content">
+    <p class="title font20">店招设置 <span class="tishi">*店铺编号：00015</span></p>
+    <div class="activity_set">
+        <p class="title">店铺信息</p>
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">是否自营：</span>
+                <div class="a_list_r">是</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">店铺名称：</span>
+                <div class="a_list_r"><input type="text" placeholder="最多输入15个字符"/></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">店铺简介：</span>
+                <div class="a_list_r"><input type="text" placeholder="分享店铺时，展示此简介" class="w-620"/></div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list flex-start">
+                    <span class="a_list_l">店铺logo：</span>
+                    <div class="a_list_r flex-column">
+                        <div class="file-cont">
+                            <!-- 给 file-btn 添加上传图片功能，  -->
+                            <div class="file-btn"></div>
+                            <p class="tishi2">*建议尺寸：80px*80px</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list flex-start">
+                    <span class="a_list_l">店铺主图：</span>
+                    <div class="a_list_r flex-column">
+                        <div class="file-cont">
+                            <!-- 给 file-btn 添加上传图片功能，  -->
+                            <div class="file-btn"></div>
+                            <p class="tishi2">*建议尺寸：624px*480px</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="title">负责人信息</p>
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">负责人：</span>
+                <div class="a_list_r">
+                    <div class="r-user"><img src="../../images/head.jpg" alt="">小土豆</div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">负责人电话：</span>
+                <div class="a_list_r">13350024525<span class="tishi2" style="margin-left: 20px">*变更手机号，请从微信公众号，进入平台“我的->个人信息->手机号”更改</span></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">客服/运营：</span>
+                <div class="a_list_r">
+                    <div class="r-user">
+                        <img src="../../images/head.jpg" alt="">小土豆<a>换绑人员</a>
+                        <div class="u-eq">
+                            <em></em>
+                            <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                            <p>微信扫一扫，绑定新客服/运营</p>
+                            <p>用户咨询信息、订单信息将提示该微信用户</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">运营电话：</span>
+                <div class="a_list_r">13350024525</div>
+            </div>
+        </div>
+        <p class="title">公司信息</p>
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">公司名称：</span>
+                <div class="a_list_r"><input type="text" class="w-620"/></div>
+            </div>
+            <div class="a_list flex-start">
+                <span class="a_list_l top5">联系地址：</span>
+                <div class="a_list_r">
+                    <div class="list-column">
+                        <div class="layui-form">
+                            <div class="layui-form-item" id="area-picker">
+                                <div class="layui-input-inline" style="width: 200px;">
+                                    <select name="province" class="province-selector" data-value="四川省" lay-filter="province-1">
+                                        <option value="">请选择省</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline" style="width: 200px;">
+                                    <select name="city" class="city-selector" data-value="成都市" lay-filter="city-1">
+                                        <option value="">请选择市</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline" style="width: 200px;">
+                                    <select name="county" class="county-selector" data-value="武侯区" lay-filter="county-1">
+                                        <option value="">请选择区</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- 退货地址，每个店调用上次输入结果 -->
+                            <input type="text" placeholder="详细地址" class="w-620">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list flex-start">
+                <span class="a_list_l">营业执照：</span>
+                <div class="a_list_r flex-column">
+                    <div class="file-cont">
+                        <!-- 给 file-btn 添加上传图片功能，  -->
+                        <div class="file-btn"></div>
+                        <p class="tishi2">*上传规范：证件照需完整、清晰，为彩色</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+    </div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script>
+    var pop = $('.u-eq');
+    $('.r-user a').click(function (e) {
+        pop.fadeToggle();
+        e.stopPropagation();
+    });
+    $(document).click(function(e){
+        // 方法1
+        //    if($(':not(.pop)')){
+        //      pop.hide();
+        //    }
+        // 方法2
+        if(!pop.is(e.target) && pop.has(e.target).length === 0){
+            pop.fadeOut();
+        }
+    });
+</script>
+<script>
+    //配置插件目录
+    layui.config({
+        base: '../../js/mods/'
+        , version: '1.0'
+    });
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form', 'layarea'], function () {
+        var layer = layui.layer
+            , form = layui.form
+            , layarea = layui.layarea;
+
+        layarea.render({
+            elem: '#area-picker',
+            change: function (res) {
+                //选择结果
+                console.log(res);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

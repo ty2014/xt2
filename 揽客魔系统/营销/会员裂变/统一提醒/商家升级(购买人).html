@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统一提醒</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<!--
+
+购买的使用时间，注意带有单位
+
+-->
+
+
+<!-- Nav tabs -->
+<ul class="head-tab2">
+    <li class="active current"><a>微信提醒</a></li>
+    <li><a>短信提醒</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-body-b" style="padding: 0">
+    <div class="tab-content activity_set activity_set3 w-4">
+        <div class="tab-pane active">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l">提醒购买人:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                            <label for="u-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*用户购买”自主创建活动“成功后，提示购买人</span>
+                    </div>
+                </div>
+                <div class="a_list" style="align-items: flex-start">
+                    <span class="a_list_l" style="padding-top: 20px">微信模板:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt">
+                            <div class="cont_label">
+                                <div class="href_cont href_cont1">
+                                    <p>文本<input type="text" placeholder="链接名字"></p>
+                                    <p>链接<input type="text"><span>确定</span></p>
+                                </div>
+                                <span class="href_btn href_btn1" data-toggle="tooltip" data-placement="top" title="链接"></span>
+                                <span class="emoji_btn" data-toggle="tooltip" data-placement="top" title="表情"></span>
+                                <div class="faceDiv"></div>
+                                <span class="line"></span>
+                                <em class="label-tips">[购买人]</em>
+                                <em class="label-tips">[购买时间]</em>
+                                <em class="label-tips">[购买期限]</em>
+                                <em class="label-tips">[创建活动截止期]</em>
+                                <em class="label-tips">[商家名称]</em>
+                                <div style="position: relative">
+                                    <em class="label-tips href_btn2">[创建活动链接]</em>
+                                    <div class="href_cont href_cont2" style="top: -122px">
+                                        <p>文本<input type="text" value="创建活动链接"></p>
+                                        <p>链接<input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx" disabled><span>确定</span></p>
+                                    </div>
+                                </div>
+                                <div style="position: relative">
+                                    <em class="label-tips href_btn2">[核销主页链接]</em>
+                                    <div class="href_cont href_cont2" style="top: -122px">
+                                        <p>文本<input type="text" value="核销主页链接"></p>
+                                        <p>链接<input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx" disabled><span>确定</span></p>
+                                    </div>
+                                </div>
+                                <div style="position: relative">
+                                    <em class="label-tips href_btn2">[商家主页链接]</em>
+                                    <div class="href_cont href_cont2" style="top: -122px">
+                                        <p>文本<input type="text" value="商家主页链接"></p>
+                                        <p>链接<input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx" disabled><span>确定</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="txt_cont Input_text" contenteditable="true"><span>[购买人]</span>，您好~
+你已成功购买“预售裂变拓客-自主创建活动”！您可以开始自主创建活动啦~
+
+购买期限：<span>[购买期限]</span>
+有效使用期：<span>[创建活动截止期]</span>
+您的店铺名：<span>[商家名称]</span>
+*若无名称，系统将默认取首次创建活动的商家名称~
+
+快速创建活动>>><span>创建活动链接</span>
+店铺核销主页>>><span>核销主页链接</span>
+您的店铺主页>>><span>商家主页链接</span>
+
+加客服微信：LKM16688，答疑解惑哦~
+                            </div>
+                            <p class="nums-tip2">还可输入<span>600</span>字</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div class="tab-pane">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l">提醒购买人:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                            <label for="u-togg2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*用户购买”自主创建活动“成功后，提示购买人</span>
+                    </div>
+                </div>
+                <div class="a_list" style="align-items: flex-start">
+                    <span class="a_list_l"  style="padding-top: 20px">短信模板:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt">
+                            <div class="cont_label">
+                                <em class="label-tips">[购买人]</em>
+                                <em class="label-tips">[购买时间]</em>
+                                <em class="label-tips">[购买期限]</em>
+                                <em class="label-tips">[创建活动截止期]</em>
+                                <em class="label-tips">[商家名称]</em>
+                                <em class="label-tips">[创建活动链接]</em>
+                                <em class="label-tips">[核销主页链接]</em>
+                                <em class="label-tips">[商家主页链接]</em>
+                            </div>
+                            <textarea class="txt_cont Input_text" contenteditable="true">[购买人]，您好~
+你已成功购买“预售裂变拓客-自主创建活动”！您可以开始自主创建活动啦~
+
+购买期限： [购买期限]
+有效使用期：[创建活动截止期]
+您的店铺名：[商家名称]
+*若无名称，系统将默认取首次创建活动的商家名称~
+
+快速创建活动>>>[创建活动链接]
+店铺核销主页>>>[核销主页链接]
+您的店铺主页>>>[商家主页链接]
+
+加客服微信：LKM16688，答疑解惑哦~
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/emoji.js"></script>
+<script src="../../../js/myjs.js"></script>
+
+
+</body>
+</html>

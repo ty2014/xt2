@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直播主题</title>
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+        .normal-table table{font-size: 12px;}
+        .normal-table .copy-btn{margin: 0}
+        .normal-table table .line_btn button{background: #fff;border: 1px solid #ddd;color: #666;}
+        .normal-table table td button{font-size: 12px;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!--
+
+直播ID从6位数开始
+
+①待播：橙色
+②在播：绿色
+③已播：灰色
+
+-->
+
+<div class="content">
+    <div class="page-title">直播主题</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">待播</a></li>
+                    <li><a href="#">预期未播</a></li>
+                    <li><a href="#">在播</a></li>
+                    <li><a href="#">已播(支持回放)</a></li>
+                    <li><a href="#">已播(不支持回放)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_2">
+            <a href="添加.html"><span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span></a>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="150px" class="left">所属话题</th>
+                        <th width="100px">直播ID</th>
+                        <th width="80px">主图</th>
+                        <th width="150px" class="left">直播主题</th>
+                        <th width="150pz">预计开始<i class="sort-icon"></i></th>
+                        <th width="200px" class="left">主播</th>
+                        <th width="100pz">管理员</th>
+                        <th width="100pz">直播回放</th>
+                        <th width="100pz">观看权限</th>
+                        <th width="100pz">预备商品</th>
+                        <th width="100pz">观看人次<i class="sort-icon"></i></th>
+                        <th width="100pz">获奖名单<i class="sort-icon"></i></th>
+                        <th width="100pz">状态</th>
+                        <th width="100pz">直播链接</th>
+                        <th width="100pz">更新人</th>
+                        <th width="350pz">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="150px" class="left"><a href="">职场形象包装</a></td>
+                        <td width="100px">100</td>
+                        <td width="80px" class="squ-pic"><img src="../../../../images/null2.jpg" alt=""></td>
+                        <td width="150px" class="left">职场形象包装</td>
+                        <td width="150px" class="date notExpired"><div>2020-08-01 10:00:01</div></td>
+                        <td width="200px" class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../../images/head.jpg" alt="">
+                                <a class="wrap-noml">小土豆</a>
+                            </div>
+                        </td>
+                        <td width="100px"><a class="admin-num">2</a></td>
+                        <td width="100px"><a class="liveHf_btn">是</a></td>
+                        <td width="100px">可免费试看</td>
+                        <td width="100px"><a class="sp-num">10</a></td>
+                        <td width="100px"><a class="gk-num">0</a></td>
+                        <td width="100px"><a class="hj-num">1400</a></td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="100px" class="m-pic">
+                            <div class="m-doub-pic">
+                                <img src="../../../../images/1.png" alt="">
+                                <img src="../../../../images/2.png" alt="">
+                            </div>
+                        </td>
+                        <td width="100px">同创小课</td>
+                        <td width="350px" class="cz_btn left">
+                            <a href="添加.html"><button type="button" class="btn-type1">编辑</button></a>
+                            <button type="button" class="set-btn">奖励</button>
+                            <button type="button" class="set-btn2">公告</button>
+                            <button type="button" class="set-btn3">加群/微信</button>
+                            <button type="button" class="set-btn4">片头</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="squ-pic"></td>
+                        <td class="left"></td>
+                        <td class="date"><div>2020-08-01 10:00:01</div></td>
+                        <td class="left"></td>
+                        <td></td>
+                        <td></td>
+                        <td>试看：0.01</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu3"><span>需完善</span></td>
+                        <td class="m-pic"></td>
+                        <td>同创小课</td>
+                        <td class="cz_btn left">
+                            <a href="添加.html"><button type="button" class="btn-type1">编辑</button></a>
+                            <button type="button" class="set-btn">奖励</button>
+                            <button type="button" class="set-btn2">公告</button>
+                            <button type="button" class="set-btn3">加群/微信</button>
+                            <button type="button" class="set-btn4">片头</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="squ-pic"></td>
+                        <td class="left"></td>
+                        <td class="date"></td>
+                        <td class="cover-pic"></td>
+                        <td></td>
+                        <td></td>
+                        <td>购话题解锁</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu2"></td>
+                        <td class="m-pic"></td>
+                        <td>同创小课</td>
+                        <td class="cz_btn left"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="left">单节直播</td>
+                        <td>105</td>
+                        <td class="squ-pic"><img src="../../../../images/null2.jpg" alt=""></td>
+                        <td class="left">怎样打造鱼塘？</td>
+                        <td class="date expired"><div>2020-07-28 10:20:30</div></td>
+                        <td class="cover-pic">
+                            <div class="user_picName">
+                                <img src="../../../../images/head.jpg" alt="">
+                                <a class="wrap-noml">小土豆</a>
+                            </div>
+                        </td>
+                        <td><a class="admin-num">5</a></td>
+                        <td><a class="liveHf_btn">否</a></td>
+                        <td>付费/指定</td>
+                        <td><a class="sp-num">2</a></td>
+                        <td><a class="gk-num">1002</a></td>
+                        <td><a class="hj-num">1400</a></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td class="m-pic">
+                            <div class="m-doub-pic">
+                                <img src="../../../../images/1.png" alt="">
+                                <img src="../../../../images/2.png" alt="">
+                            </div>
+                        </td>
+                        <td>同创小课</td>
+                        <td class="cz_btn left">
+                            <a href="添加.html"><button type="button" class="btn-type1">编辑</button></a>
+                            <button type="button" class="set-btn">奖励</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="squ-pic"></td>
+                        <td class="left"></td>
+                        <td class="date"></td>
+                        <td class="cover-pic"></td>
+                        <td></td>
+                        <td></td>
+                        <td>公开免费</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu2"></td>
+                        <td class="m-pic"></td>
+                        <td>同创小课</td>
+                        <td class="cz_btn left"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">直播ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">直播主题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">所属话题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">主播昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">观看权限:</span>
+            <div class="account-r chose_item">
+                <!--  单节直播搜索项  -->
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">公开免费</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">付费/指定</span>
+                </label>
+                <!--  话题搜索项  -->
+                <label for="ly3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">购话题解锁</span>
+                </label>
+                <label for="ly4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">可免费试看</span>
+                </label>
+                <label for="ly5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">付费试看</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="cj1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="cj2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+                <label for="cj3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">需完善</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">预计开始:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="sort-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">预计开始:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                        <li>默认</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">观看人次:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                        <li>默认</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">获奖名单:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                        <li>默认</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<!--  直播回放  -->
+<div class="activity_set activity_set2 w-120" id="cont-liveHf" style="display: none;">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">直播回放:</span>
+            <div class="a_list_r chose_item liveHf">
+                <label for="reback1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked name="reback" id="reback1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="reback2" class="radio mgR-0">
+                    <div class="chose">
+                        <input type="radio" name="reback" id="reback2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+                <span class="tishi">*直播结束后，用户是否可以回放观看</span>
+            </div>
+        </div>
+        <div class="a_list liveHf_href">
+            <span class="a_list_l">回放链接:</span>
+            <div class="a_list_r"><input type="text" class="w-620" placeholder="*选填，不填将自动回放录制的视频，录制视频只可手机端回看"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div class="normal-table" style="width: 700px;">
+                    <div style="border-bottom: 1px solid #ededed;background: #e5e8ee;height: 46px;;line-height: 46px;padding: 0 10px;">
+                        <span class="expired" style="font-weight: bold;font-size: 14px;">直播视频录制：</span>
+                        <span class="tishi mgL-0">*直播过程都将录制成视频，您也可下载视频自行合成剪辑</span>
+                    </div>
+                    <table border="0">
+                        <tbody>
+                        <tr>
+                            <td class="line-tr" width="80px">视频1:</td>
+                            <td class="line-tr" width="150px">【录制时长 00:23:49】</td>
+                            <td class="line-tr" width="200px" title=""><input type="text" style="width: 100%;font-size: 12px" value="http://cshtml.lkmsxy.com/file.mp4"></td>
+                            <td class="line_btn" width="200px">
+                                <button>下载视频</button>
+                                <button class="copy-btn">复制链接</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">视频2:</td>
+                            <td class="line-tr">【录制时长 00:23:49】</td>
+                            <td class="line-tr" title=""><input type="text" style="width: 100%;font-size: 12px" value="http://cshtml.lkmsxy.com/file.mp4"></td>
+                            <td class="line_btn">
+                                <button>下载视频</button>
+                                <button class="copy-btn">复制链接</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr">视频3:</td>
+                            <td class="line-tr">【录制时长 00:23:49】</td>
+                            <td class="line-tr" title=""><input type="text" style="width: 100%;font-size: 12px" value="http://cshtml.lkmsxy.com/file.mp4"></td>
+                            <td class="line_btn">
+                                <button>下载视频</button>
+                                <button class="copy-btn">复制链接</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="left"><span class="tishi">直播结束后6个月，视频将失效不可再下载，请提前保存好视频</span></td>
+                        </tr>
+                        <!--&lt;!&ndash;  合成前  &ndash;&gt;-->
+                        <!--<tr>-->
+                        <!--<td class="line-tr" colspan="4" style="text-align: left">-->
+                        <!--<button class="concat_video">合成以上全部视频</button>-->
+                        <!--<span class="tishi">*您也可下载视频自行合成剪辑</span>-->
+                        <!--</td>-->
+                        <!--</tr>-->
+                        <!--&lt;!&ndash;  合成后  &ndash;&gt;-->
+                        <!--<tr>-->
+                        <!--<td class="line-tr" colspan="4" style="text-align: left">-->
+                        <!--<span class="notExpired" style="font-weight: bold;font-size: 14px;">已合成视频1~3:</span>-->
+                        <!--<span class="tishi">*您也可下载视频自行合成剪辑</span>-->
+                        <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<td class="line-tr">合成视频:</td>-->
+                        <!--<td class="line-tr">【录制时长 00:23:49】</td>-->
+                        <!--<td class="line-tr" title=""><input type="text" style="width: 100%;font-size: 12px" value="http://cshtml.lkmsxy.com/file.mp4"></td>-->
+                        <!--<td class="line_btn">-->
+                        <!--<button>下载视频</button>-->
+                        <!--<button class="copy-btn">复制链接</button>-->
+                        <!--</td>-->
+                        <!--</tr>-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  直播公告  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure1" style="display: none;">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">直播公告:</div>
+            <div class="a_list_r">
+                <textarea placeholder="*选填，公告内容将横向滚动展示" style="width: 100%;height: 60px;padding: 10px;resize: none"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  加群/微信  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure2" style="display: none;">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">加微信群:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper wxqTogg">
+                    <input type="checkbox" id="wx-togg" checked class="toggle-button" name="switch">
+                    <label for="wx-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*直播时浮动联系方式，引导粉丝加入<span style="color: red">直播粉丝群</span>。管理员可在微信端进行设置</span>
+            </div>
+        </div>
+        <div class="a_list wxqTogg_cont">
+            <span class="a_list_l">群二维码:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮  -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi mgL-0">*建议像素宽为 100px ，JPG、PNG格式，图片小于5M</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">加微信:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper wxqTogg2">
+                    <input type="checkbox" id="wx-togg2" checked class="toggle-button" name="switch">
+                    <label for="wx-togg2" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*直播时浮动联系方式，引导粉丝加入<span style="color: red">个人微信号</span>。管理员可在微信端进行设置</span>
+            </div>
+        </div>
+        <div class="a_list wxqTogg_cont2">
+            <span class="a_list_l">微信二维码:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮  -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi mgL-0">*建议像素宽高为 100px*100px 或比例 1:1，JPG、PNG格式，图片小于5M</p>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  片头广告  -->
+<div class="activity_set activity_set2 w-120" id="cont-sure3" style="display: none;">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">片头广告:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="ad-togg" checked class="toggle-button" name="switch">
+                    <label for="ad-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="ad-cont">
+            <div class="a_list">
+                <span class="a_list_l">广告内容:</span>
+                <div class="a_list_r">
+                    <div class="file-video">
+                        <!--  上传视频按钮 ,上传视频成功后隐藏 -->
+                        <div class="file-video-btn"><input type="file"><img src="../../../../images/yjpz-6.png" alt="">点击上传视频</div>
+                        <!--  视频上传成功区域  -->
+                        <div class="file-video-cont" style="display: none">
+                            <span class="del-video">删除</span>
+                            <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%" poster="//puui.qpic.cn/qqvideo_ori/0/p0703okprqf_496_280/0" data-setup="{}">
+                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                            </video>
+                            <script type="text/javascript">
+                                //设置中文
+                                videojs.addLanguage('zh-CN', {
+                                    "Play": "播放",
+                                    "Pause": "暂停",
+                                    "Current Time": "当前时间",
+                                    "Duration": "时长",
+                                    "Remaining Time": "剩余时间",
+                                    "Stream Type": "媒体流类型",
+                                    "LIVE": "直播",
+                                    "Loaded": "加载完毕",
+                                    "Progress": "进度",
+                                    "Fullscreen": "全屏",
+                                    "Non-Fullscreen": "退出全屏",
+                                    "Mute": "静音",
+                                    "Unmute": "取消静音",
+                                    "Playback Rate": "播放速度",
+                                    "Subtitles": "字幕",
+                                    "subtitles off": "关闭字幕",
+                                    "Captions": "内嵌字幕",
+                                    "captions off": "关闭内嵌字幕",
+                                    "Chapters": "节目段落",
+                                    "Close Modal Dialog": "关闭弹窗",
+                                    "Descriptions": "描述",
+                                    "descriptions off": "关闭描述",
+                                    "Audio Track": "音轨",
+                                    "You aborted the media playback": "视频播放被终止",
+                                    "A network error caused the media download to fail part-way.": "网络错误导致视频下载中途失败。",
+                                    "The media could not be loaded, either because the server or network failed or because the format is not supported.": "视频因格式不支持或者服务器或网络的问题无法加载。",
+                                    "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "由于视频文件损坏或是该视频使用了你的浏览器不支持的功能，播放终止。",
+                                    "No compatible source was found for this media.": "无法找到此视频兼容的源。",
+                                    "The media is encrypted and we do not have the keys to decrypt it.": "视频已加密，无法解密。",
+                                    "Play Video": "播放视频",
+                                    "Close": "关闭",
+                                    "Modal Window": "弹窗",
+                                    "This is a modal window": "这是一个弹窗",
+                                    "This modal can be closed by pressing the Escape key or activating the close button.": "可以按ESC按键或启用关闭按钮来关闭此弹窗。",
+                                    ", opens captions settings dialog": ", 开启标题设置弹窗",
+                                    ", opens subtitles settings dialog": ", 开启字幕设置弹窗",
+                                    ", opens descriptions settings dialog": ", 开启描述设置弹窗",
+                                    ", selected": ", 选择",
+                                    "captions settings": "字幕设定",
+                                    "Audio Player": "音频播放器",
+                                    "Video Player": "视频播放器",
+                                    "Replay": "重播",
+                                    "Progress Bar": "进度小节",
+                                    "Volume Level": "音量",
+                                    "subtitles settings": "字幕设定",
+                                    "descriptions settings": "描述设定",
+                                    "Text": "文字",
+                                    "White": "白",
+                                    "Black": "黑",
+                                    "Red": "红",
+                                    "Green": "绿",
+                                    "Blue": "蓝",
+                                    "Yellow": "黄",
+                                    "Magenta": "紫红",
+                                    "Cyan": "青",
+                                    "Background": "背景",
+                                    "Window": "视窗",
+                                    "Transparent": "透明",
+                                    "Semi-Transparent": "半透明",
+                                    "Opaque": "不透明",
+                                    "Font Size": "字体尺寸",
+                                    "Text Edge Style": "字体边缘样式",
+                                    "None": "无",
+                                    "Raised": "浮雕",
+                                    "Depressed": "压低",
+                                    "Uniform": "均匀",
+                                    "Dropshadow": "下阴影",
+                                    "Font Family": "字体库",
+                                    "Proportional Sans-Serif": "比例无细体",
+                                    "Monospace Sans-Serif": "单间隔无细体",
+                                    "Proportional Serif": "比例细体",
+                                    "Monospace Serif": "单间隔细体",
+                                    "Casual": "舒适",
+                                    "Script": "手写体",
+                                    "Small Caps": "小型大写字体",
+                                    "Reset": "重启",
+                                    "restore all settings to the default values": "恢复全部设定至预设值",
+                                    "Done": "完成",
+                                    "Caption Settings Dialog": "字幕设定视窗",
+                                    "Beginning of dialog window. Escape will cancel and close the window.": "开始对话视窗。离开会取消及关闭视窗",
+                                    "End of dialog window.": "结束对话视窗"
+                                });
+
+                                var myPlayer = videojs('my-video');
+                                videojs("my-video").ready(function(){
+                                    var myPlayer = this;
+                                    myPlayer.play();
+                                });
+
+                            </script>
+                        </div>
+                    </div>
+                    <div class="file-video-tips">
+                        <!--  视频上传三种状态  -->
+                        <span class="video-tips"><img src="../../../../images/video1.png" alt="">视频上传格式不支持</span>
+                        <span class="video-tips"><img src="../../../../images/video3.png" alt="">视频上中，请稍后</span>
+                        <span class="video-tips"><img src="../../../../images/video2.png" alt="">视频上传成功</span>
+                        <p class="tishi">*上传视频广告,请上传大小在5M以内、格式为mp4的视频，请勿上传违反法律法规的视频</p>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">广告播放:</span>
+                <div class="a_list_r chose_item">
+                    <label for="times1" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked name="times" id="times1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">仅首次播放</span>
+                    </label>
+                    <label for="times2" class="radio mgR-0">
+                        <div class="chose">
+                            <input type="radio" name="times" id="times2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">每次播放</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../../../js/jquery.min.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/myjs.js"></script>
+<script>
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .sort').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '排序',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '422px'],
+            skin: 'account-box',
+            content: $("#sort-account")
+        });
+    });
+    $('#ad-togg').click(function () {
+        $('.ad-cont').toggle()
+    });
+    $('.wxqTogg label').click(function () {
+        $('.wxqTogg_cont').toggle()
+    });
+    $('.wxqTogg2 label').click(function () {
+        $('.wxqTogg_cont2').toggle()
+    });
+    $('#chutiyan .admin-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '管理员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../../管理员.html' //iframe的url
+        });
+    });
+    $('#chutiyan .set-btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '奖励设置',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['1100px', '95%'],
+            content: '奖励设置.html' //iframe的url
+        });
+    });
+    $('#chutiyan .set-btn2').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '直播公告',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['800px', 'auto'],
+            skin: 'account-box',
+            content: $("#cont-sure1")
+        });
+    });
+    $('#chutiyan .set-btn3').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '加群/微信',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['800px', '488px'],
+            skin: 'account-box',
+            content: $("#cont-sure2")
+        });
+    });
+    $('#chutiyan .set-btn4').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '片头广告',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['800px', '456px'],
+            skin: 'account-box',
+            content: $("#cont-sure3")
+        });
+    });
+    $('#chutiyan .gk-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '观看人次',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '观看人次.html' //iframe的url
+        });
+    });
+    $('#chutiyan .sp-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '预备商品',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '选入商品.html' //iframe的url
+        });
+    });
+    $('#chutiyan .hj-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '获奖名单',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '获奖名单.html' //iframe的url
+        });
+    });
+    /* 表格中显示二维码样式 */
+    $('.m-doub-pic').on('click',function (e) {
+        e.stopPropagation();
+        console.log(e.pageX + '--' + e.pageY);
+        var html="";
+        html+=`<div class="table-eq">
+                <div class="show-pic">
+                    <em></em>
+                    <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    <div><input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx"><span>复制</span></div>
+                </div>
+            </div>`;
+        $('.table-eq').remove();
+        $('body').append(html);
+        $(".table-eq").css({
+            "left": e.pageX-180,
+            "top": e.pageY+20,
+        });
+        $('.show-pic').click(function (e) {
+            e.stopPropagation();
+            $(this).show();
+        });
+    });
+
+    $('#chutiyan .liveHf_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '直播公告',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['900px', 'auto'],
+            skin: 'account-box',
+            content: $("#cont-liveHf")
+        });
+    });
+
+    $('#chutiyan .concat_video').on('click', function(){
+        layer.confirm('是否确定合成以上全部视频？<p style="font-size: 12px;color: #999;margin-top: 10px;">您只有一次合成的机会</p> ', {
+            btn: ['取消','确定'],
+            area: '416px',
+            title:'提示',
+        }, function(index){
+            layer.close(index);
+        }, function(){
+
+        });
+    });
+
+</script>
+</body>
+</html>

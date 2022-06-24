@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>社群详情</title>
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan" style="min-width: auto">
+
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>群员</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span class="sort"><i class="fa fa-sort"></i>排序</span>
+            <span><i class="fa fa-download"></i>导出</span>
+            <div class="top_tit">
+                <a href="#"><i class="filter-icon"></i><span>全部</span><em class="fa fa-caret-down"></em></a>
+                <ul>
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">有效</a></li>
+                    <li><a href="#">无效</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="80px">头像</th>
+                    <th width="120px">昵称</th>
+                    <th width="80px">姓名</th>
+                    <th width="100px">手机</th>
+                    <th width="120px">本群昵称</th>
+                    <th width="140px">进群时间</th>
+                    <th width="80px">进群方式<i class="sort-icon"></i></th>
+                    <th width="100px">付费金额<i class="sort-icon"></i></th>
+                    <th width="120px">邀请人昵称</th>
+                    <th width="120px">锁定人昵称</th>
+                    <th width="120px">推荐人昵称</th>
+                    <th width="80px">访问记录<i class="sort-icon"></i></th>
+                    <th width="80px">状态</th>
+                    <th width="150px">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                    <td><a href="">啊啊啊</a></td>
+                    <td>蒋小花</td>
+                    <td>13350078952</td>
+                    <td>小土豆</td>
+                    <td>2019-08-22 10:00:00</td>
+                    <td>购买</td>
+                    <td>99.00</td>
+                    <td>-</td>
+                    <td><a href="">啊啊啊</a></td>
+                    <td><a href="">啊啊啊</a></td>
+                    <td class="statu invit-list">25</td>
+                    <td>有效</td>
+                    <td><button type="button" class="button1">加入黑名单</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                    <td><a href="">啊啊啊</a></td>
+                    <td>蒋小花</td>
+                    <td>13350078952</td>
+                    <td>小土豆</td>
+                    <td>2019-08-22 10:00:00</td>
+                    <td>邀请</td>
+                    <td>-</td>
+                    <td><a href="">小土豆</a></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td class="statu invit-list">2</td>
+                    <td>无效</td>
+                    <td><button type="button" class="button1 button2">移出黑名单</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</div>
+
+<script src="../../../../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<!-- iframe弹框 -->
+<script src="../../../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/index.js"></script>
+<script>
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加角色',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['100%', '100%'],
+            content: '添加角色.html' //iframe的url
+        });
+    });
+    $('#chutiyan .chenage-role').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '更换角色',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '400px'],
+            content: '更换角色.html' //iframe的url
+        });
+    });
+    $('#chutiyan .button1').on('click', function(){
+        var that=this;
+        if($(that).text()==='加入黑名单'){
+            layer.confirm('是否将该用户加入黑名单？', {
+                btn: ['确定','取消'] //按钮
+            }, function(){
+                $(that).removeClass('button1').addClass('button2').text('移出黑名单');
+                layer.msg('操作成功', {time: 500,});
+            }, function(){
+            });
+        }else{
+            layer.confirm('是否将该用户移出黑名单？', {
+                btn: ['确定','取消'] //按钮
+            }, function(){
+                $(that).removeClass('button2').addClass('button1').text('加入黑名单');
+                layer.msg('操作成功', {time: 500,});
+            }, function(){
+            });
+        }
+    });
+</script>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>忠诚度</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<section class="head-slide">
+    <div class="head-slide-item">
+        <span>时间：</span>
+        <div class="slide-span"><span class="active">最近15天</span><span>最近30天</span><span>最近60天</span><span>最近90天</span></div>
+        <div class="slide-input"><input type="text" class="demo-input" id="test1"></div>
+    </div>
+</section>
+<section>
+    <ul class="num-view">
+        <li>
+            <div>
+                <p>活跃用户<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="所选时间段内有过访问的用户（同一用户计数1，活跃用户=新增用户+老用户）。" data-original-title="1"></i></p>
+                <span>1,358</span>
+            </div>
+            <div class="view-item">
+                <em></em>
+                <div>
+                    <p>新增用户<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="所选时间段内，新增的访问用户。" data-original-title="1"></i></p>
+                    <span>1,358</span>
+                </div>
+                <div>
+                    <p>老用户<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="所选时间段内，不是首次访问的用户。" data-original-title="1"></i></p>
+                    <span>1,358</span>
+                </div>
+                <div class="line">
+                    <p>激活用户<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="所选时间段前的沉睡用户，在该时间段内被激活访问。" data-original-title="1"></i></p>
+                    <span>100</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>沉睡用户<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="连续超过30天未访问网站的用户</br>（以所选时间段截至日期作为统计时间点）。" data-original-title="1"></i></p>
+                <span>2,126</span>
+            </div>
+            <div class="view-item">
+                <em></em>
+                <div>
+                    <p>新增沉睡<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="在所选时间内，进入沉睡的用户</br>（0<新增沉睡用户的沉睡天数<=所选天数）。" data-original-title="1"></i></p>
+                    <span>100</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="charts">
+    <div class="nav-sibling">
+        <ul class="nav nav-pills nav-radio" role="tablist">
+            <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">沉睡|激活</a></li>
+            <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">活跃度</a></li>
+            <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">沉睡度</a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active " id="tab1">
+            <div id="main"  style="width: 100%;height:350%;"></div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab2">
+            <span class="charts-tit">连续活跃<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="通过连续活跃天数反应用户活跃度（活跃天数：用户有过访问的天数累计，沉睡将归0，激活后从1开始重新累计）。" data-original-title="1"></i></span>
+            <div id="main2" style="width: 100%;height:350%;"></div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab3">
+            <span class="charts-tit">沉睡天数<i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="通过沉睡天数反应用户沉睡度，沉睡天数越少激活可能越大（沉睡天数：用户沉睡后从1开始累计，激活后沉睡天数将归0）。" data-original-title="1"></i></span>
+            <div id="main3" style="width: 100%;height:350%;"></div>
+        </div>
+    </div>
+</section>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../../js/echarts.js"></script>
+<script src="../../../js/index.js"></script>
+<script src="../../../js/plugins/laydate/laydate.js"></script>
+<!-- 时间 -->
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        value: '2019-06-30 至 2019-08-15',
+        range: '至'
+    });
+</script>
+<script>
+    var charts=[];
+    var myChart = echarts.init(document.getElementById('main'));
+    var myChart2 = echarts.init(document.getElementById('main2'));
+    var myChart3 = echarts.init(document.getElementById('main3'));
+
+    var xData = ["2019/09/01","2019/09/02","2019/09/03","2019/09/04","2019/09/05","2019/09/06","2019/09/07","2019/09/08","2019/09/09","2019/09/10","2019/09/11","2019/09/12","2019/09/13","2019/09/14","2019/09/15","2019/09/16","2019/09/17","2019/09/18","2019/09/19","2019/09/20","2019/09/21","2019/09/22","2019/09/23","2019/09/24"];
+    var yData1 = [43,27,30,68,47,78,32,32,79,34,19,18,20,32,12,28,19,14,19,19,20,3,19,28];
+    var yData2 = [13,7,10,38,17,28,22,12,28,19,14,19,19,20,32,59,69,72,52,86,80,5,54,128];
+    option = {
+        // 提示框
+        tooltip: {
+            trigger: 'axis',
+            formatter:function (params) {
+                /*function timeNumer(t) {
+                    var t1=t,
+                        t2=t++,
+                        t3=t1+':00-'+t2+':59';
+                    console.log(t3);
+                    return t3;
+                }*/
+
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;"><span>'+ params[0].name + '</span>' + '用户数'+'</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 200px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;"><div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>' + '<span>'+params[i].value +'</span></div>';
+                }
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        /* 图例 */
+        legend: {
+            right: '10px',
+            y: '22px',
+            textStyle: {
+                color: '#999',
+                fontSize: 12,
+                rich:{
+                    a:{
+                        verticalAlign:'top',
+                        align:'center',
+                        lineHeight:10
+                    }
+                }
+            },
+            formatter:function (name) {
+                let arr = [
+                    '{a|'+name+'}'
+                ];
+                return  arr;
+            },
+            orient:'horizontal',
+            itemGap:40,
+            itemWidth:8,
+            itemHeight:8,
+            align:'auto',
+            icon: 'square',
+            data: ['进入沉睡','重新激活']
+        },
+
+        //  直角坐标系
+        grid: {
+            right: '20px',
+            bottom: '10%',
+            left: '2%',
+            top: '64px',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xData ,
+            nameTextStyle: {
+                color: '#999',
+            },
+            axisLine: {
+                show: false,
+                lineStyle: {
+                    color: 'transpartant',
+                    backgroundColor: "#fff",
+                }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                interval: 5,
+                textStyle: {
+                    color: "#999",
+                    fontSize: 12,
+                    backgroundColor: "#fff",
+                }
+            },
+            offset:10,
+            boundaryGap:false   // 是否从 0 刻度开始
+        }],
+        yAxis: [{
+            type: 'value',
+            nameTextStyle: {
+                color: '#999'
+            },
+            nameGap:20,
+            position: 'left',
+            axisLine: {
+                show:false,
+                lineStyle: {
+                    color: '#999'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: "#f0f2f3",
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                color: '#999',
+                fontSize: 12,
+            },
+            offset:10
+        }],
+        // 系列列表
+        series: [
+            {
+                name: '进入沉睡',
+                type: 'line',
+                yAxisIndex: 0,
+                symbolSize: 1,
+                itemStyle: {
+                    normal: {
+                        color: '#3699ff',
+                        borderWidth: 6,
+                    }
+                },
+                lineStyle:{
+                    width:1
+                },
+                data: yData1
+            },
+            {
+                name: '重新激活',
+                type: 'line',
+                yAxisIndex: 0,
+                symbolSize: 1,
+                itemStyle: {
+                    normal: {
+                        color: '#ff693b',
+                        borderWidth: 6,
+                    }
+                },
+                lineStyle:{
+                    width:1
+                },
+                data: yData2
+            }
+        ]
+    };
+
+
+    var data2=[709, 1917, 2455, 2610, 1719, 1433];
+    option2 = {
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                type: 'none'    // 移除悬浮时坐标系中的竖线
+            },
+            formatter: function (params) {
+                var sum=0;
+                for(let i=0;i<data2.length;i++){
+                    sum+=data2[i]
+                }
+                console.log(sum);
+                console.log(params);
+                let html='<div style="display: flex;justify-content: space-between;width: 200px;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;color:#666"><div></span>' + params[0].seriesName + params[0].name+ '</div></div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-top:7px;"><span>用户数</span>' + params[0].value + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-bottom:7px;"><span>占比</span>' + (params[0].value/sum*100).toFixed(2) + '%' + '</div>';
+                return html;
+            },
+            textStyle: {
+                color: '#666',
+                fontStyle: 'normal',
+                fontFamily: '微软雅黑',
+                fontSize: 12,
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        grid: {
+            borderWidth: 0,
+            top: 60,
+            bottom: 40,
+            left: '2%',
+            right: '20px',
+            calculable: true,
+        },
+        xAxis: [
+            {
+                type: "category",
+                nameTextStyle: {
+                    color: '#999',
+                },
+                axisLabel: { //坐标轴刻度标签的相关设置。
+                    show: true,
+                    interval: 0,//设置为 1，表示『隔一个标签显示一个标签』
+                    textStyle: {
+                        color: '#999',
+                        interval: 1,
+                        backgroundColor: "#fff",
+                        fontSize: 12,
+                    }
+                },
+                axisTick:{//坐标轴刻度相关设置。
+                    show: false,
+                },
+                axisLine:{//坐标轴轴线相关设置
+                    show: false,
+                    lineStyle:{
+                        color:'#fff',
+                    }
+                },
+                splitLine: { //坐标轴在 grid 区域中的分隔线。
+                    show: false,
+                },
+                offset:4,
+                data: ['1~3天','4~7天','8~15天','16~30天','31~60天','60天以上'],
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                nameTextStyle: {
+                    color: '#999'
+                },
+                nameGap:20,
+                position: 'left',
+                axisLine: {
+                    show:false,
+                    lineStyle: {
+                        color: '#f0f2f3'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: "#f0f2f3",
+                    }
+                },
+                axisTick:{
+                    show:false
+                },
+                axisLabel: {
+                    show:false,
+                    color: '#999',
+                    fontSize: 12,
+                },
+            }
+        ],
+        series: [
+            {
+                name: "连续活跃",
+                type: "bar",
+                stack:'总数',
+                barMaxWidth: 24,
+                barGap: "10%",
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 1, color: 'rgba(254, 124, 66, 1)'
+                        }, {
+                            offset: 0, color: 'rgba(255, 239, 101, 1)'
+                        }], false),
+                        label: {
+                            show: true,
+                            textStyle: {
+                                color: "#666",
+                                fontSize:12
+                            },
+                            position: "top",
+                            formatter: function(p) {
+                                return p.value > 0 ? (p.value) : '';
+                            }
+                        }
+                    }
+                },
+                data: data2,
+            }
+        ]
+    };
+
+    var data3=[109, 197, 255, 261, 119, 143];
+    option3 = {
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                type: 'none'    // 移除悬浮时坐标系中的竖线
+            },
+            formatter: function (params) {
+                var sum=0;
+                for(let i=0;i<data3.length;i++){
+                    sum+=data3[i]
+                }
+                console.log(sum);
+                console.log(params);
+                let html='<div style="display: flex;justify-content: space-between;width: 200px;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;color:#666"><div></span>' + params[0].seriesName + params[0].name+ '</div></div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-top:7px;"><span>用户数</span>' + params[0].value + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-bottom:7px;"><span>占比</span>' + (params[0].value/sum*100).toFixed(2) + '%' + '</div>';
+                return html;
+            },
+            textStyle: {
+                color: '#666',
+                fontStyle: 'normal',
+                fontFamily: '微软雅黑',
+                fontSize: 12,
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        grid: {
+            borderWidth: 0,
+            top: 60,
+            bottom: 40,
+            left: '2%',
+            right: '20px',
+            calculable: true,
+        },
+        xAxis: [
+            {
+                type: "category",
+                nameTextStyle: {
+                    color: '#999',
+                },
+                axisLabel: { //坐标轴刻度标签的相关设置。
+                    show: true,
+                    interval: 0,//设置为 1，表示『隔一个标签显示一个标签』
+                    textStyle: {
+                        color: '#999',
+                        interval: 1,
+                        backgroundColor: "#fff",
+                        fontSize: 12,
+                    }
+                },
+                axisTick:{//坐标轴刻度相关设置。
+                    show: false,
+                },
+                axisLine:{//坐标轴轴线相关设置
+                    show: false,
+                    lineStyle:{
+                        color:'#fff',
+                    }
+                },
+                splitLine: { //坐标轴在 grid 区域中的分隔线。
+                    show: false,
+                },
+                offset:4,
+                data: ['1~7天','8~15天','16~30天','31~60天','61~90天','91天以上'],
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                nameTextStyle: {
+                    color: '#999'
+                },
+                nameGap:20,
+                position: 'left',
+                axisLine: {
+                    show:false,
+                    lineStyle: {
+                        color: '#f0f2f3'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: "#f0f2f3",
+                    }
+                },
+                axisTick:{
+                    show:false
+                },
+                axisLabel: {
+                    show:false,
+                    color: '#999',
+                    fontSize: 12,
+                },
+            }
+        ],
+        series: [
+            {
+                name: "沉睡",
+                type: "bar",
+                stack:'总数',
+                barMaxWidth: 24,
+                barGap: "10%",
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 1, color: 'rgba(54, 153, 225, 1)'
+                        }, {
+                            offset: 0, color: 'rgba(116, 221, 255, 1)'
+                        }], false),
+                        label: {
+                            show: true,
+                            textStyle: {
+                                color: "#666",
+                                fontSize:12
+                            },
+                            position: "top",
+                            formatter: function(p) {
+                                return p.value > 0 ? (p.value) : '';
+                            }
+                        }
+                    }
+                },
+                data: data3,
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+    myChart2.setOption(option2);
+    myChart3.setOption(option3);
+
+    charts.push(myChart,myChart2,myChart3);
+
+    setTimeout(function (){
+        window.onresize = function () {
+            myChart.resize();
+            myChart2.resize();
+            myChart3.resize();
+        }
+    },200);
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+        for(var i = 0; i < charts.length; i++) {
+            charts[i].resize();
+        }
+    });
+
+
+</script>
+
+</body>
+</html>

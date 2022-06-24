@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渠道优惠价-编辑</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        .normal-table .checked{justify-content: center}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">课程动态信息</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">课程名称:</span>
+            <div class="a_list_r"><input type="text" value="课程测试八" disabled class="w-620"></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">报名金额:</span>
+                <div class="a_list_r"><input type="text" value="199.00" disabled class="m_width center" style="margin-right: 16px">元</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">优惠价格:</span>
+                <div class="a_list_r"><input type="text" value="0.00" disabled class="m_width center" style="margin-right: 16px">元</div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <span class="a_list_l r-title">渠道优惠信息</span>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">渠道优惠:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg1" checked class="toggle-button" name="switch">
+                            <label for="u-togg1" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">渠道商:</span>
+                <div class="a_list_r"><span class="set-user qd_chose" style="margin-right: 16px">小土豆</span></div>
+            </div>
+        </div>
+        <div class="qd-msg" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r" style="max-width: 640px;">
+                    <div class="normal-table">
+                        <table border="0">
+                            <thead>
+                            <tr>
+                                <th style="width: 60px">席位名称</th>
+                                <th style="width: 100px">原价</th>
+                                <th style="width: 100px">渠道优惠价</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="line-tr">黄金席位</td>
+                                <td class="line-tr"><input type="text" disabled class="center m_width" value="199.00"></td>
+                                <td><input type="text" class="center m_width" placeholder="无优惠"></td>
+                            </tr>
+                            <tr>
+                                <td class="line-tr">VIP席位</td>
+                                <td class="line-tr"><input type="text" disabled class="center m_width" value="199.00"></td>
+                                <td><input type="text" class="center m_width" placeholder="无优惠"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">课程原价<input type="number" value="199" disabled class="m_width m-height center" style="margin:0 8px;">元，渠道优惠价<input type="number" class="m_width m-height center" style="margin:0 8px;">元</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">每个渠道优惠码自生成开始有效时间为<input type="number" class="s_width m-height center" style="margin:0 8px;">分钟，过期即失效</div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">渠道网址:</span>
+            <div class="a_list_r">http://cswx.lkmsxy.com/kt/wd/qdyh__dlh.html?dpid=27&ywlx=3 <a class="copy-btn">复制</a></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+
+    $(function () {
+        if($('#u-togg1').is(':checked')){
+            $('.qd-msg').show()
+        }else{
+            $('.qd-msg').hide()
+        }
+    });
+    $('#u-togg1').click(function () {
+        $('.qd-msg').toggle()
+    });
+
+    $('#chutiyan .qd_chose').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '渠道优惠',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '渠道优惠价-选择.html' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

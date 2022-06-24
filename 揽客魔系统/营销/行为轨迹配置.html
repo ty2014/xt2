@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行为轨迹配置</title>
+    <link rel="stylesheet" href="../css/font-awesome.css" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">行为轨迹配置</div>
+<div class="activity_set activity_set3 w-4" style="margin-bottom: 15px">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">是否展示:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="statu-togg" checked="" class="toggle-button" name="switch">
+                    <label for="statu-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*个人中心是否展示“足迹”入口，注意“无权限”用户始终不展示</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">会员等级:</span>
+            <div class="a_list_r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="vip5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">首页网址:</span>
+            <div class="a_list_r">https://wx.lkmsxy.com/kt/xwgj/xwgj_index__dlh.html?dpid=27<span class="copy-btn">复制</span></div>
+        </div>
+        <div class="a_list flex-start">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">规则:</span>
+            <div class="a_list_r">
+                <textarea style="width: 720px;min-height: 400px;padding: 10px">此处放编辑器</textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-title">分享配置</div>
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">分享标题:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享描述:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享图片:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="tishi mgL-0">*建议宽度不超过80px，比例为1:1；大小不超过100KB</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../js/layui/layui.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/myjs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>分类管理</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>分类选择</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+        </div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="100px">分类图标</th>
+                    <th width="150px">分类名称</th>
+                    <th width="150px">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="squ-pic"><img src="../../images/head.jpg" alt=""></td>
+                    <td class="classifi start"><span class="bm-name"><i class="fa fa-minus"></i><em>企业采购</em></span></td>
+                    <td class="cz_btn">
+                        <button type="button">选择</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="squ-pic"><img src="../../images/head.jpg" alt=""></td>
+                    <td class="classifi classifi-two"><span class="bm-name"><i class="fa fa-minus"></i><em>促销礼品</em></span></td>
+                    <td class="cz_btn">
+                        <button type="button">选择</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="squ-pic"><img src="../../images/head.jpg" alt=""></td>
+                    <td class="classifi classifi-thr end"><span class="bm-name"><em>拓客赠品</em></span></td>
+                    <td class="cz_btn">
+                        <button type="button">选择</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="squ-pic"><img src="../../images/head.jpg" alt=""></td>
+                    <td class="classifi onlyOne"><span class="bm-name"><em>拓客赠品</em></span></td>
+                    <td class="cz_btn">
+                        <button type="button">选择</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="btm_page">
+            <div class="pages">
+                <div class="pages_num">
+                    <span>1</span>
+                    <span class="active">2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>99</span>
+                </div>
+                <div class="now_page">
+                    到第<input type="text" value="1">页<span class="sure">确定</span>
+                </div>
+                <select>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div>
+                <span><b>1 - 10</b></span>
+                <span>共<b>10</b>条</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+
+    $('#chutiyan .search').on('click', function(){
+        parent.layer.open({
+            type: 1,
+            skin: 'layui-layer-rim', //加上边框
+            area: ['420px', '240px'], //宽高
+            content: '搜索字段：分类名称'
+        });
+    });
+
+</script>
+</body>
+</html>

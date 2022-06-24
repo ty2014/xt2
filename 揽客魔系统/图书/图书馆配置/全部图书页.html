@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书馆配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .icon_chose li{padding: 4px;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="page-title">图书馆配置</div>
+<div class="activity_set activity_set3 w-6">
+
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">主页链接:</span>
+            <div class="a_list_r">http://cshtml.lkmsxy.com/<span class="copy-btn">复制</span></div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">模块入口:</div>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="statu-togg" checked="" class="toggle-button" name="switch">
+                    <label for="statu-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">展示</span>
+                        <span class="text off">不展示</span>
+                    </label>
+                </div>
+                <span class="tishi">*个人中心是否展示“电子书”的入口</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">模块命名:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" value="电子书" maxlength="6">
+                    <span class="num">0/6</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">页面标题:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" placeholder="页面的标题命名" maxlength="64" value="电子书列表" class="w-620">
+                    <span class="num">0/64</span>
+                </div>
+                <a class="tishi title_img_btn1" style="margin-left: 16px;">点击查看效果图</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享简介:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <textarea class="w-620" style="height: 80px;padding: 2px 4px;resize: none" placeholder="选填，摘要会在订阅号消息、转发链接等文章外的场景显露，帮助读者快速了解内容，如不填写则默认抓取正文前54字"></textarea>
+                    <span class="num">0/120</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享图标:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <span class="tishi mgL-0">*建议图片尺寸为80px*80px，比例1：1 ，JPG、PNG格式，图片小于50KB</span>
+            </div>
+        </div>
+    </div>
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <span class="a_list_l">首页功能区:</span>
+            <div class="a_list_r lqType">
+                <label for="lq1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="lq" id="lq1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">默认样式</span>
+                </label>
+                <label for="lq2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="lq" id="lq2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">自定义样式</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list lqType_cont1">
+            <span class="a_list_l"></span>
+            <div class="a_list_r layer-photos-demo1">
+                <img src="../images/img2.png" alt="" style="height: 250px">
+            </div>
+        </div>
+        <div class="a_list lqType_cont2" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <textarea class="w-620" style="height: 200px;">此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<img src="../images/img1.jpg" alt="" id="concat_img1" style="height: 520px;display: none;">
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .title_img_btn1').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img1")
+        });
+    });
+
+    $('.lqType label').on('click',function () {
+        let i = $(this).index();
+        if(i === 0){
+            $('.lqType_cont1').show();
+            $('.lqType_cont2').hide();
+        }else if(i === 1){
+            $('.lqType_cont2').show();
+            $('.lqType_cont1').hide();
+        }
+    })
+
+    layer.photos({
+        photos: '.layer-photos-demo1'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+</script>
+
+</body>
+</html>

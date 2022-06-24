@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>名额单独销售</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan">
+
+<!--
+    搜索字段：对应等级、名额数量、新增时间
+-->
+
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>名额单独销售</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+        <div class="tab_type_l"><span class="add_btn"><i class="fa fa-plus"></i>添加</span></div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="150px">标题</th>
+                    <th width="100px">价格</th>
+                    <th width="80pz">图片</th>
+                    <th width="80px">对应等级</th>
+                    <th width="80px">名额数量</th>
+                    <th width="80px">状态</th>
+                    <th width="140px">更新时间</th>
+                    <th width="100px">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>3000块钱10个名额，快来抢！</td>
+                    <td>3000.00</td>
+                    <td class="squ-pic"><img src="../../images/head.jpg" alt=""/></td>
+                    <td>VIP1</td>
+                    <td>5</td>
+                    <td>开启</td>
+                    <td class="date"><div>2020-03-26 14:20:41</div></td>
+                    <td><button type="button" class="edit">编辑</button><button type="button">删除</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="btm_page">
+            <div class="pages">
+                <div class="pages_num">
+                    <span>1</span>
+                    <span class="active">2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>99</span>
+                </div>
+                <div class="now_page">
+                    到第<input type="text" value="1">页<span class="sure">确定</span>
+                </div>
+                <select>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div>
+                <span><b>1 - 10</b></span>
+                <span>共<b>10</b>条</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+    $('#chutiyan .add_btn,#chutiyan .edit').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '名额单独销售添加',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['750px', '600px'],
+            content: '名额单独销售添加.html' //iframe的url
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>客流猫</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+    <!--<script src="https://kit.fontawesome.com/7f7b5fa9f2.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css">
+    <link rel="stylesheet" href="css/index2.css?v=1.0.0"/>
+    <style>
+        .shop-list-wrapper {
+            margin: 10px 30px;
+        }
+        .shop-list-wrapper .shop-list-title {
+            display: flex;
+            align-items: center;
+            padding-top: 16px;
+            margin-bottom: 24px;
+            color: #353535;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .shop-list-wrapper .shop-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .shop-list-wrapper .shop-list-item {
+            margin-right: 20px;
+            margin-bottom: 32px;
+            display: block;
+            position: relative;
+            width: 400px;
+            box-sizing: border-box;
+            transition: all ease 0.2s;
+            background: #fff;
+            box-shadow: 2px 5px 20px 0px rgba(0,0,0,.08);
+            border-radius: 8px;
+        }
+        .shop-list-wrapper .shop-list-item:hover{transform: translateY(-10px)}
+        .shop-list-wrapper .shop-list-item:last-child{margin-right: 0;}
+        .shop-list-wrapper .shop-list-item .top-change {
+            width: 100%;
+            height: 8px;
+            -webkit-border-top-right-radius: 8px;
+            border-top-right-radius: 8px;
+            -webkit-border-top-left-radius: 8px;
+            border-top-left-radius: 8px;
+
+        }
+        .shop-list-wrapper .shop-list-item .top-change.type1{
+            background: #0082ef;
+        }
+        .shop-list-wrapper .shop-list-item .top-change.type2{
+            background: #f76c27;
+        }
+
+        .shop-list-wrapper .shop-list-item .shop-item-content {
+            padding: 24px 24px 24px 24px;
+            cursor: pointer;
+        }
+        .shop-list-wrapper .shop-list-item .cont-top{display: flex;justify-content: space-between;align-items: flex-start;}
+        .shop-list-wrapper .shop-list-item .cont-box{flex: 1;display: flex;align-items: center;width: 0;}
+        .shop-list-wrapper .shop-list-item .shop-list__name {
+            color: #353535;
+            font-size: 18px;
+            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 80%;
+        }
+        .shop-list-wrapper .shop-list-item .tip{font-size: 12px;position: relative;top: -8px;left: 4px;}
+        .shop-list-wrapper .shop-list-item .tip.tip1{color: #0082ef}
+        .shop-list-wrapper .shop-list-item .tip.tip2{color: #f76c27}
+        .shop-list-wrapper .shop-list-item .shop-item-content .shop-img {
+            width: 64px;
+            min-width: 64px;
+            height: 64px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+        .shop-list-wrapper .shop-list-item .shop-item-content .beta-time {
+            display: flex;
+            font-size: 14px;
+            color: #999;
+            justify-content: space-between;
+            padding-top: 32px;
+        }
+        .shop-list-wrapper .shop-list-item .shop-list__time {
+            color: #999;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <!--顶部导航-->
+    <div class="header" style="">
+        <div class="index_nav_top2">
+            <div class="logo"><img src="images/LOGO4.png" alt=""/></div>
+
+            <div class="headR">
+                <a href="#" class="docx" title="帮助文档">
+                    <i class="layui-icon layui-icon-tips"></i>
+                </a>
+                <a href="#" class="docx kfBtn" title="联系客服">
+                    <i class="layui-icon layui-icon-service"></i>
+                    <div class="kfCont">
+                        <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    </div>
+                </a>
+                <a href="index4.html" class="admBtn">
+                    <i class="layui-icon layui-icon-template-1"></i>切换工具
+                </a>
+                <span class="line"></span>
+                <a href="#" class="user" title="个人信息">
+                    <div class="user_pic">
+                        <img src="images/34652363.png" alt="">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul class="user_msg">
+                        <li>个人设置</li>
+                        <li>修改密码</li>
+                        <li onclick="javaScript:window.location.href = 'index.html'">切换旧版</li>
+                        <li onclick="javaScript:window.location.href = 'login3.html'">退出登录</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--右侧内容-->
+    <div class="index_nav_right2 hideSlide">
+        <div class="shop-list-wrapper">
+            <div class="shop-wrapper">
+                <div class="shop-list-title">我的工具</div>
+                <div class="shop-list">
+                    <!--  shop-overdue ： 店铺过期添加类名  -->
+                    <div class="shop-list-item " onclick="javaScript:window.location.href = 'index3.html'">
+                        <div class="top-change type1"></div>
+                        <div class="shop-item-content">
+                            <div class="cont-top">
+                                <div class="cont-box">
+                                    <div class="shop-list__name">华厚研习社</div>
+                                    <span class="tip tip1">企业微信</span>
+                                </div>
+                                <!--  企微工具：这里为默认图片 ；  -->
+                                <img src="images/wechat_small.png" class="shop-img">
+                            </div>
+                            <div class="beta-time">
+                                <div>企微工具-旗舰版</div>
+                                <div class="shop-list__time">有效期至：2023-12-31 23:59:59</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop-list-item" onclick="javaScript:window.location.href = 'index5.html'">
+                        <div class="top-change type2"></div>
+                        <div class="shop-item-content">
+                            <div class="cont-top">
+                                <div class="cont-box">
+                                    <div class="shop-list__name">客流猫课堂</div>
+                                    <span class="tip tip2">公众号</span>
+                                </div>
+                                <!--  知识付费：这里为公众号头像 ，商家未设置，则显示该图片  -->
+                                <img src="images/icon.png" class="shop-img">
+                            </div>
+                            <div class="beta-time">
+                                <div>知识付费-旗舰版</div>
+                                <div class="shop-list__time">有效期至：已过期</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

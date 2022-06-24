@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板管理</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+</head>
+<body style="min-width: auto">
+
+<div class="account-cont w-150">
+    <div class="account-title"><span class="title">广告位信息</span></div>
+    <div class="account">
+        <span class="account-l">标题：</span>
+        <div class="account-r"><input type="text" class="max_width"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">推荐优先级：</span>
+        <div class="account-r"><input type="text" class="m_width" ></div>
+    </div>
+    <div class="account chose_item">
+        <span class="account-l">状态：</span>
+        <div class="account-r">
+            <label for="pu1" class="radio">
+                <div class="chose">
+                    <input type="radio" name="pic2" id="pu1" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">启用</span>
+            </label>
+            <label for="pu2" class="radio">
+                <div class="chose">
+                    <input type="radio" name="pic2" id="pu2" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">停用</span>
+            </label>
+        </div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">内容：</span>
+        <div class="account-r">
+            <div class="remin_end_txt max_width">
+                <div class="cont_label">
+                    <span class="kc_tit_btn" data-toggle="tooltip" data-placement="top" title="课程标题"></span>
+                    <span class="userPic_btn" data-toggle="tooltip" data-placement="top" title="用户头像"></span>
+                    <span class="person_btn" data-toggle="tooltip" data-placement="top" title="用户昵称"></span>
+                    <span class="eq_btn" data-toggle="tooltip" data-placement="top" title="公众号二维码"></span>
+                </div>
+                <div class="txt_cont" contenteditable="true"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="account flex-start">
+        <span class="account-l">分类图标：</span>
+        <div class="account-r">
+            <div>
+                <div class="file-cont">
+                    <div class="file-btn"><img src="../../images/file3.png" alt=""></div>
+                    <span class="file-change">替换</span>
+                </div>
+                <p class="tishi2">*建议宽度不超过800px；大小不超过1000KB</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="account_btn"><span class="btn btn-sure">确定</span></div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/index.js"></script>
+
+</body>
+</html>

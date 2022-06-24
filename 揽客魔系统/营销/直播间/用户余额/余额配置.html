@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>余额配置</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">余额配置</div>
+
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">提现配置</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">提现限制:</span>
+            <div class="a_list_r">
+                商户每<input type="text" class="center s_width m-height" value="1" style="margin:0 8px;">
+                天，可提现<input type="text" class="center s_width m-height" value="3" style="margin:0 8px;">次。
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">单次限制:</span>
+            <div class="a_list_r">
+                每次提现最低<input type="text" class="center m_width m-height" value="1" style="margin:0 8px;">元，
+                最高<input type="text" class="center m_width m-height" value="1000" style="margin:0 8px;">元。
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">服务费:</span>
+            <div class="a_list_r">
+                商户提现总金额在
+                <input type="text" class="center m_width m-height" value="0" style="margin:0 8px;">
+                元内，<span style="color: #52b91d">免收</span>服务费；超过部分按照
+                <input type="text" class="center s_width m-height" value="5" style="margin:0 8px;">%<span style="color: #fe6d44">收取</span>服务费。
+            </div>
+        </div>
+    </div>
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <span class="a_list_l r-title">充值配置</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 16px;">默认充值金额:</span>
+            <div class="a_list_r" style="align-items: flex-start">
+                <div>
+                    <div>
+                        <input type="number" class="s_width m-height" value="5">&nbsp;元，&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" class="s_width m-height" value="10">&nbsp;元，&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" class="s_width m-height" value="20">&nbsp;元&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <input type="number" class="s_width m-height" value="50">&nbsp;元，&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" class="s_width m-height" value="100">&nbsp;元，&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" class="s_width m-height" value="500">&nbsp;元
+                    </div>
+                </div>
+                <span class="tishi" style="padding-top: 3px"><a class="imgShow">查看示范</a></span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 12px;">充值协议:</span>
+            <div class="a_list_r">
+                <textarea style="width: 620px;height: 400px;">富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<img src="http://cshtml.lkmsxy.com/csimg/liveYp1.png" alt="" id="detail_img" style="height: 580px;display: none;">
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .imgShow').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#detail_img")
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

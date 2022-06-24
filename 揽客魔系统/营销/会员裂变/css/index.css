@@ -1,0 +1,37 @@
+
+/*  分步骤  */
+.eis-horizontal-steps .eis-form-steps .eis-form-step:nth-child(3){flex-grow: 0}
+
+/* 卡券设置 */
+.card-lists{margin-right: 30px;margin-bottom: 20px;}
+.card-lists .card-item{border: 1px solid #cfcfcf;border-radius: 12px;background: #fff;width: 315px;min-height: 182px;padding: 0 14px;position: relative;cursor: pointer}
+.card-item-add:after{content: "";display: block;width: 60px;height: 60px;background: url("../images/1.png")no-repeat center;background-size: contain;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%)}
+.card-item .list-head{display: flex;align-items: center;background: #fff;padding: 10px 0;}
+.card-item .list-pic{width: 68px;min-width: 68px;height: 68px;border-radius: 3px;overflow: hidden;margin-right: 20px;}
+.card-item .list-pic img{width: 100%}
+.card-item .list-txt{flex: 1}
+.card-item .list-txt .price{font-size: 24px;color: #ea5455;font-weight: bold;display: flex;align-items: center;}
+.card-item .list-txt .price span{font-size: 12px;background: #ea5455;color: #fff;display: inline-block;padding: 0 8px;border-radius: 14px 14px 14px 0;margin-left: 10px}
+.card-item .list-txt .tit1{font-size: 14px;color: #666;}
+.card-item  .list-text{border-top: 1px solid #cfcfcf;padding: 10px 0;}
+.card-item  .list-text .text-tit{font-size: 16px;color: #333;margin-bottom: 4px;}
+.card-item  .list-text .text-msg{font-size: 14px;color: #999;}
+.card-item  .list-text .text-msg div{display: flex;align-items: center;justify-content: space-between;padding: 2px 0}
+.card-item  .list-text .text-msg .rule{height: 23px;overflow: hidden;display: block;white-space: nowrap;}
+.card-item  .list-text .text-msg .rule p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.del-card{display: inline-block;width: 20px;height: 20px;border-radius: 50%;background: rgba(0,0,0,.4) url("../images/2.png")no-repeat center;background-size: 8px;position: absolute;right: -8px;top: -8px;cursor: pointer;z-index: 9}
+.card-hx-user{font-size: 14px;color: #333;margin-top: 8px;display: flex;}
+.card-hx-user span{color: #00818a;cursor: pointer}
+.card-item-toggle{display: flex;align-items: center;justify-content: space-between;margin-top: 10px;font-size: 12px}
+.card-item-toggle .htmleaf-content{display: flex;align-items: center}
+.card-item-toggle .checkbox2{margin-left: 6px!important;}
+.card-item-toggle .free-card-btn{color: #0c99e2;cursor: pointer}
+.chose-bg{display: flex;align-items: center;}
+
+
+@media (min-width: 980px){
+
+}
+@media (min-width: 1200px){
+
+}

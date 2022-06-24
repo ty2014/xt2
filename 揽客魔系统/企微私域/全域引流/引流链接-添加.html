@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引流链接添加</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="page-title">新增引流链接
+    <div class="notisTip">
+        <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="fa fa-file-word-o"></i>功能说明</a>
+    </div>
+</div>
+
+<div class="activity_set activity_set3 w-120">
+    <!--   右侧可视化区域     -->
+    <div id="Rview" style="position: absolute;left: 900px;top: 0px;z-index: 9;overflow: hidden;width: 375px;height: 667px;transform: scale(.7);">
+        <img src="../images/pz3.png" alt="" style="width: 100%;height: 100%">
+        <span class="page_title" style="position: absolute;left: 60px;right: 60px;top: 100px;text-align: center;font-size: 14px;color: #000;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">121</span>
+
+        <div style="display: flex;flex-direction: column;background: linear-gradient(180deg,rgb(254,104,3) 0%,rgb(246,244,247) 50%);padding: 15px;position: absolute;top: 126px;left: 25px;right: 25px;bottom: 74px;overflow: auto;">
+            <div style="position: relative;flex: 1;">
+                <div style="display: flex;flex-wrap: wrap;flex-direction: row;justify-content: flex-start;align-items: center;min-height: 100%;align-content: space-between;box-sizing: border-box;position: relative;">
+                    <div style="width: 100%;display: flex;flex-flow: column nowrap;justify-content: flex-start;box-sizing: border-box;position: relative;">
+                        <div style="display: flex;align-items: center;justify-content: center;padding: 7px 0;border-radius: 8px;background: #fff">
+                            <img src="https://img1.baidu.com/it/u=1979733100,1738655182&fm=26&fmt=auto" alt="" style="width: 28px;height: 28px;border-radius: 50%;object-fit: cover">
+                            <p style="font-size: 12px;color: #333;margin-left: 5px;">#<span>皮卡京</span>#31分钟前识别成功</p>
+                        </div>
+                        <div style="background: #fff;border-radius: 8px;margin-top: 10px;overflow: hidden;">
+                            <div class="top-tips3" style="font-size: 12px;color: #939497;height: 40px;padding: 0 10px;display: flex;align-items: center;justify-content: center;border-bottom: 1px solid #f5f5f5;">
+                                <img src="../images/topTip2.png" alt="" style="width: 13px;margin-right: 10px;">
+                                <p>此微信二维码经过安全认证，可放心识别！</p>
+                            </div>
+                            <div style="text-align: center;padding: 32px;position: relative;">
+                                <img src="http://cshtml.lkmsxy.com/csimg/copyRite_logo2.png" alt="" class="logoIcon" style="display: none;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 2;width: 30px;">
+                                <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="" style="width: 90%;vertical-align: middle;">
+                            </div>
+                            <p class="card_tip" style="text-align: center;font-size: 14px;color: #939497;padding: 10px;border-top: 1px solid #f5f5f5;">长按二维码，立即加我微信</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">链接名称:</span>
+            <div class="a_list_r">
+                <div class="showNumBox w-620">
+                    <input type="text" placeholder="" class="btnTypeVal" value="121" maxlength="15">
+                    <span class="num">0/15</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">引导语:</span>
+            <div class="a_list_r">
+                <div class="showNumBox w-620">
+                    <input type="text" class="btnTypeVal2" placeholder="" value="此微信二维码经过安全认证，可放心识别！" maxlength="20">
+                    <span class="num">0/20</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">引流方式:</span>
+            <div class="a_list_r ylTypeLabel">
+                <label for="type1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="type" id="type1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">链接加人</span>
+                </label>
+                <label for="type2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="type" id="type2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">链接进群</span>
+                </label>
+                <label for="type3" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="type" id="type3">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">链接网页</span>
+                </label>
+            </div>
+        </div>
+        <div class="ylCont">
+            <div class="ylCont1">
+                <div class="a_list">
+                    <span class="a_list_l">个人二维码:<br>(可上传活码)</span>
+                    <div class="a_list_r">
+                        <div class="normal-table" style="width: 660px">
+                            <table border="0">
+                                <thead>
+                                <tr>
+                                    <th style="width: 70px">个人二维码</th>
+                                    <th style="width: 70px">状态</th>
+                                    <th style="width: 100px">备注</th>
+                                    <th style="width: 70px">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="line-tr">
+                                        <ul class="FraUpload_imglist ">
+                                            <li class="img_item" style="display: none">
+                                                <img src="">
+                                                <span class="icon-delete img_del"></span>
+                                            </li>
+                                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                            <li class="file-btn"></li>
+                                        </ul>
+                                    </td>
+                                    <td class="line-tr">
+                                        <div class="flex justifyContentC">
+                                            <div class="button-label-s">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="togg1" class="toggle-button" name="switch">
+                                                    <label for="togg1" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">开启</span>
+                                                        <span class="text off">关闭</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="line-tr"><input type="text" class=""></td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="line-tr">
+                                        <ul class="FraUpload_imglist ">
+                                            <li class="img_item" style="display: none">
+                                                <img src="">
+                                                <span class="icon-delete img_del"></span>
+                                            </li>
+                                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                            <li class="file-btn"></li>
+                                        </ul>
+                                    </td>
+                                    <td class="line-tr">
+                                        <div class="flex justifyContentC">
+                                            <div class="button-label-s">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="togg2" class="toggle-button" name="switch">
+                                                    <label for="togg2" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">开启</span>
+                                                        <span class="text off">关闭</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="line-tr"><input type="text" class=""></td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="left"><span class="tishi mgL-0">*建议尺寸：360px * 360px（正方形），大小不超过500kb</span></td>
+                                    <td><button class="">新增</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">顺序切换:</span>
+                    <div class="a_list_r">
+                        每<input type="number" class="s_width m-height center mg-8" value="2">个用户打开将自动切换下一个二维码，重复循环切换
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">提示语:</span>
+                    <div class="a_list_r">
+                        <div class="showNumBox w-620">
+                            <input type="text" class="btnTypeVal3" placeholder="" value="长按二维码，立即加我微信" maxlength="15">
+                            <span class="num">0/15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ylCont2" style="display: none">
+                <div class="a_list">
+                    <span class="a_list_l">群二维码管理:</span>
+                    <div class="a_list_r">
+                        <div class="normal-table" style="width: 660px">
+                            <table border="0">
+                                <thead>
+                                <tr>
+                                    <th style="width: 70px">群二维码</th>
+                                    <th style="width: 160px">过期时间</th>
+                                    <th style="width: 80px">扫码上限<i class="tips tip2"></i></th>
+                                    <th style="width: 70px">状态</th>
+                                    <th style="width: 100px">备注</th>
+                                    <th style="width: 70px">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="line-tr">
+                                        <ul class="FraUpload_imglist ">
+                                            <li class="img_item" style="display: none">
+                                                <img src="">
+                                                <span class="icon-delete img_del"></span>
+                                            </li>
+                                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                            <li class="file-btn"></li>
+                                        </ul>
+                                    </td>
+                                    <td class="line-tr"><input type="text" placeholder="选择时间" class="layui-input" id="test1" lay-key="1"></td>
+                                    <td class="line-tr"><input type="number" class="s_width center"></td>
+                                    <td class="line-tr">
+                                        <div class="flex justifyContentC">
+                                            <div class="button-label-s">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="togg3" class="toggle-button" name="switch">
+                                                    <label for="togg3" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">开启</span>
+                                                        <span class="text off">关闭</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="line-tr"><input type="text" class=""></td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="line-tr">
+                                        <ul class="FraUpload_imglist ">
+                                            <li class="img_item" style="display: none">
+                                                <img src="">
+                                                <span class="icon-delete img_del"></span>
+                                            </li>
+                                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                            <li class="file-btn"></li>
+                                        </ul>
+                                    </td>
+                                    <td class="line-tr"><input type="text" placeholder="选择时间" class="layui-input" id="test1" lay-key="1"></td>
+                                    <td class="line-tr"><input type="number" class="s_width center"></td>
+                                    <td class="line-tr">
+                                        <div class="flex justifyContentC">
+                                            <div class="button-label-s">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="togg4" class="toggle-button" name="switch">
+                                                    <label for="togg4" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">开启</span>
+                                                        <span class="text off">关闭</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="line-tr"><input type="text" class=""></td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="left"><span class="tishi mgL-0">*建议尺寸：360px * 360px（正方形图片），大小不超过500kb</span></td>
+                                    <td><button class="">新增</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">顺序切换:</span>
+                    <div class="a_list_r">
+                        当二维码<b>达到</b>扫码上限后，<b>自动切换</b>到下一个二维码，直到全部二维码都达到扫码上限，将<b>停止</b>扫码加入
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">提示语:</span>
+                    <div class="a_list_r">
+                        <div class="showNumBox w-620">
+                            <input type="text" class="btnTypeVal4" placeholder="" value="长按二维码，立即进群" maxlength="15">
+                            <span class="num">0/15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ylCont3" style="display: none">
+                <div class="a_list">
+                    <span class="a_list_l">着陆链接:</span>
+                    <div class="a_list_r">
+                        <div class="normal-table" style="width: 800px">
+                            <table border="0">
+                                <thead>
+                                <tr>
+                                    <th style="width: 400px">链接</th>
+                                    <th style="width: 70px">状态</th>
+                                    <th style="width: 100px">备注</th>
+                                    <th style="width: 70px">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="line-tr">
+                                        <input type="text">
+                                    </td>
+                                    <td class="line-tr">
+                                        <div class="flex justifyContentC">
+                                            <div class="button-label-s">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="togg5" class="toggle-button" name="switch">
+                                                    <label for="togg5" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">开启</span>
+                                                        <span class="text off">关闭</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="line-tr"><input type="text" class=""></td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="line-tr">
+                                        <input type="text">
+                                    </td>
+                                    <td class="line-tr">
+                                        <div class="flex justifyContentC">
+                                            <div class="button-label-s">
+                                                <div class="toggle-button-wrapper">
+                                                    <input type="checkbox" id="togg6" class="toggle-button" name="switch">
+                                                    <label for="togg6" class="button-label">
+                                                        <span class="circle"></span>
+                                                        <span class="text on">开启</span>
+                                                        <span class="text off">关闭</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="line-tr"><input type="text" class=""></td>
+                                    <td><button class="del">删除</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="left"><span class="tishi mgL-0"></span></td>
+                                    <td><button class="">新增</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">顺序切换:</span>
+                    <div class="a_list_r">
+                        每<input type="number" class="s_width m-height center mg-8" value="5">个用户自动切换着陆链接，重复循环切换，如只填一个链接，所有打开都是同一个
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list logo">
+            <span class="a_list_l">品牌logo:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper ">
+                        <input type="checkbox" id="cont1-togg1" class="toggle-button" name="switch">
+                        <label for="cont1-togg1" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">显示</span>
+                            <span class="text off">隐藏</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/slideFixed.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#Rview').slideFixed();
+
+    $('.ylTypeLabel label').each(function () {
+        let index = $(this).index();
+        $(this).click(function () {
+            $('.ylCont').children().hide();
+            $('.ylCont'+(index+1)).show();
+        })
+    })
+    $('#type1').on('click',function () {
+        $('#Rview,.logo').show();
+        $('.card_tip').text($('.btnTypeVal3').val());
+    })
+    $('#type2').on('click',function () {
+        $('#Rview,.logo').show();
+        $('.card_tip').text($('.btnTypeVal4').val());
+    })
+    $('#type3').on('click',function () {
+        $('#Rview,.logo').hide();
+    })
+
+
+    $('#cont1-togg1').on('click',function () {
+        $('.logoIcon').toggle();
+    })
+
+    // 内容监听
+    var timer ='';
+    $(".btnTypeVal").bind("input propertychange",function(event){
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            let num = $(".btnTypeVal").val();
+            $('.page_title').text(num);
+        },200)
+    });
+    $(".btnTypeVal2").bind("input propertychange",function(event){
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            let num = $(".btnTypeVal2").val();
+            $('.top-tips3 p').text(num);
+        },200)
+    });
+    $(".btnTypeVal3").bind("input propertychange",function(event){
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            let num = $(".btnTypeVal3").val();
+            $('.card_tip').text(num);
+        },200)
+    });
+    $(".btnTypeVal4").bind("input propertychange",function(event){
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            let num = $(".btnTypeVal4").val();
+            $('.card_tip').text(num);
+        },200)
+    });
+
+
+
+    $('#chutiyan .tip2').on('mouseenter',function(){
+        this.index =layer.tips('扫码上限建议不超过200次', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:300
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+</script>
+</body>
+</html>

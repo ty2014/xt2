@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>调配记录</title>
+    <link rel="stylesheet" href="css/index.css?v=1.0.0"/>
+    <script src="js/rem.js"></script>
+</head>
+<body>
+
+<!--  当没有任何记录时显示，默认隐藏；有记录时，该内容隐藏 -->
+<div class="yg-msg-null" style="margin: 0;background: #fff;height: 100%;padding-top: 150px;display: none">
+    <img src="images/1.png" alt="">
+    <p>暂无调配记录</p>
+</div>
+
+<!--  当上面的‘暂无记录’显示时，该内容隐藏  -->
+<div class="content" style="">
+    <div class="zytd-head">
+        <img src="images/left2.png" alt="" onclick="window.history.back(-1)">
+        <!--  当前分公司名称  -->
+        <p class="head-txt">四川梦想科技</p>
+    </div>
+    <div class="scroll-cont">
+        <ul class="index-tab yj-cont index-tab-nhref" style="padding-bottom: 0.26rem">
+            <li class="yj-num">
+                <p>897,852.00</p>
+                <p>调配佣金</p>
+            </li>
+        </ul>
+        <!--  调入和调出 跟随搜索结果而变化  -->
+        <div class="tpyj-tips">调入￥1377.43&nbsp;&nbsp;&nbsp;调出￥189.65<span>全部</span>
+            <ul>
+                <li class="active">全部</li>
+                <li>佣金余额</li>
+                <li>提现被拒</li>
+                <li>预计分佣</li>
+            </ul>
+        </div>
+        <div class="tpyj-cont">
+            <div class="search">
+                <div><form action=""><input type="search" placeholder="昵称/姓名/公司名称"><span>搜索</span></form></div>
+            </div>
+            <div class="yg-msg-list zytd-list">
+                <div class="list-href">
+                    <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-20/f17accc9f9af9567129ac1d7b2495253.jpeg" alt=""></div>
+                    <div class="list-item">
+                        <div class="list-txt"><p class="item-tit">小土豆</p></div>
+                        <div class="list-txt" style="font-size: 0.14rem"><p class="item-tit">蒋雨</p><span class="name">18326487954</span></div>
+                    </div>
+                </div>
+                <ul class="tpyj-list">
+                    <li>原公司：<span>香港分公司</span></li>
+                    <li>现公司：<span>北京分公司</span></li>
+                    <li>调配佣金：<span class="in">+10.00</span></li>
+                    <li>佣金类型：<span>佣金余额</span></li>
+                    <li>调配时间：<span>2020:02:29 15:29:00</span></li>
+                </ul>
+            </div>
+            <div class="yg-msg-list zytd-list">
+                <div class="list-href">
+                    <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-20/f17accc9f9af9567129ac1d7b2495253.jpeg" alt=""></div>
+                    <div class="list-item">
+                        <div class="list-txt"><p class="item-tit">小土豆</p></div>
+                        <div class="list-txt" style="font-size: 0.14rem"><p class="item-tit">蒋雨</p><span class="name">18326487954</span></div>
+                    </div>
+                </div>
+                <ul class="tpyj-list">
+                    <li>原公司：<span>香港分公司</span></li>
+                    <li>现公司：<span>北京分公司</span></li>
+                    <li>调配佣金：<span class="in">+10.00</span></li>
+                    <li>佣金类型：<span>提现被拒</span></li>
+                    <li>调配时间：<span>2020:02:29 15:29:00</span></li>
+                </ul>
+            </div>
+            <div class="yg-msg-list zytd-list">
+                <div class="list-href">
+                    <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-20/f17accc9f9af9567129ac1d7b2495253.jpeg" alt=""></div>
+                    <div class="list-item">
+                        <div class="list-txt"><p class="item-tit">小土豆</p></div>
+                        <div class="list-txt" style="font-size: 0.14rem"><p class="item-tit">蒋雨</p><span class="name">18326487954</span></div>
+                    </div>
+                </div>
+                <ul class="tpyj-list">
+                    <li>原公司：<span>北京分公司</span></li>
+                    <li>现公司：<span>香港分公司</span></li>
+                    <li>调配佣金：<span class="out">-10.00</span></li>
+                    <li>佣金类型：<span>预计分佣</span></li>
+                    <li>调配时间：<span>2020:02:29 15:29:00</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.tpyj-tips > span').click(function (event) {
+            $('.tpyj-tips ul').slideToggle('fast');
+            event.stopPropagation();
+        });
+        $('.tpyj-tips ul li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+        $(document).click(function(event){
+            $(".tpyj-tips ul").hide();
+            event.stopPropagation();
+        });
+    })
+
+
+</script>
+
+</body>
+</html>

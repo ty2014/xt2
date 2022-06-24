@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会话内容存档接入</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .activity_set3 .b-line{margin: 0 24px;padding: 12px 0;}
+        .hwdList{margin-bottom: 50px;}
+        .hwdList .item{display: flex;align-items: center;justify-content: space-between;height: 102px;border-radius: 2px;border: 1px solid #e9e9e9;padding: 0 32px;margin-top: 24px;}
+        .hwdList .item div{flex: 1;}
+        .hwdList .item div p{font-size: 14px;color: #888;padding-right: 30px;margin-top: 10px;}
+        .hwdList .item div p:first-child{margin-top: 0;color: #333;font-weight: 500;}
+
+
+    </style>
+</head>
+<body id="chutiyan">
+
+
+<div class="activity_set activity_set3">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r">
+                <div class="docitem_cont">
+                    <img src="../images/hwd.png" alt="">
+                    <div>
+                        <p>会话内容存档接入</p>
+                        <p><span class="expired mgR-10">未接入</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hwdList">
+            <div class="item">
+                <div>
+                    <p>步骤一：配置可信IP地址</p>
+                    <p>登陆企业微信管理后台，将可信IP地址配置在企业微信后台：「管理工具」—「会话内容存档」—「可信IP地址」</p>
+                </div>
+                <button class="btn btn-type3">去配置</button>
+            </div>
+            <div class="item">
+                <div>
+                    <p>步骤二：填写接收事件服务器、消息加密公钥、版本号</p>
+                    <p>复制接收事件服务器、消息加密公钥，配置在企业微信后台：「管理工具」—「会话内容存档」—「接收事件服务器」、「设置消息加密公钥」处，获取版本号后，填写在版本号处</p>
+                </div>
+                <button class="btn btn-type3">去配置</button>
+            </div>
+            <div class="item">
+                <div>
+                    <p>步骤三：填写Secret</p>
+                    <p>在企业微信后台：「管理工具」—「会话内容存档」—「Secret」处获取，获取后，填写在Secret处</p>
+                </div>
+                <button class="btn btn-type3">去配置</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+
+</body>
+</html>

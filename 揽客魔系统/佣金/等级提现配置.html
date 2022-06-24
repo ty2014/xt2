@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改提现配置</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0;background: #fff">
+
+<div class="account-cont w-230" style="padding: 0">
+    <div class="account-title"><span class="title">基础信息</span></div>
+    <div class="account">
+        <span class="account-l">等级名称：</span>
+        <div class="account-r"><input type="text" disabled value="vip"></div>
+    </div>
+    <div class="account-title"><span class="title">提现设置</span></div>
+    <div class="account">
+        <span class="account-l">每日提现金额限制（元）：</span>
+        <div class="account-r"><input type="text" value="1000" class="m_width center">&nbsp;元<span class="tishi">*每日提现金额不得高于设定值</span></div>
+    </div>
+    <div class="account">
+        <span class="account-l">每日提现次数限制（次）：</span>
+        <div class="account-r"><input type="text" value="3" class="m_width center">&nbsp;元<span class="tishi">*每日提现次数不得超过设定值</span></div>
+    </div>
+    <div class="account">
+        <span class="account-l">单笔提现最低金额（元）：</span>
+        <div class="account-r"><input type="text" value="1" class="m_width center">&nbsp;元<span class="tishi">*单笔提现金额不得低于设定值</span></div>
+    </div>
+    <div class="account">
+        <span class="account-l">单笔提现最高金额（元）:</span>
+        <div class="account-r"><input type="text" value="1000" class="m_width center">&nbsp;元<span class="tishi">*单笔提现金额不得高于设定值</span></div>
+    </div>
+    <div class="account">
+        <span class="account-l">免服务费提现金额限制（元）:</span>
+        <div class="account-r"><input type="text" value="0" class="m_width center">&nbsp;元<span class="tishi">*提现总金额在设定值范围内不收取服务费，默认：0</span></div>
+    </div>
+    <div class="account">
+        <span class="account-l">收取服务费比例:</span>
+        <div class="account-r"><input type="text" value="0" class="m_width center">&nbsp;%<span class="tishi"> *按提现金额设定比例收取服务费，默认：5%</span></div>
+    </div>
+</div>
+<div class="btn-list"><span class="btn btn-sure">保存</span></div>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微信菜单设置添加</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<div class="activity_set activity_set2">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">启用状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="statu-togg" checked="" class="toggle-button" name="switch">
+                        <label for="statu-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">排序码:</span>
+            <div class="a_list_r">
+                <div class="select-text send-type" style="min-width: 80px;">
+                    <span class="select-txt"></span>
+                    <ul style="display: none;">
+                        <li>01</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">菜单名称:</span>
+            <div class="a_list_r">
+                <input type="text" placeholder="">
+                <span class="tishi">*仅支持中英文和数字，字数不超过4个汉字或8个字母</span>
+            </div>
+        </div>
+
+        <div class="a_list ">
+            <span class="a_list_l">菜单类型:</span>
+            <div class="a_list_r chose_item" id="cf_method">
+                <label for="pu1" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="pic2" id="pu1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">消息推送类栏目</span>
+                </label>
+                <label for="pu2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="pic2" id="pu2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">链接类栏目</span>
+                </label>
+                <label for="pu3" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="pic2" id="pu3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">特定类栏目</span>
+                </label>
+                <label for="pu4" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="pic2" id="pu4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">小程序栏目</span>
+                </label>
+                <span class="tishi"> 一级菜单如果有下级菜单时可不选择菜单类型</span>
+            </div>
+        </div>
+        <div class="cont_box">
+            <div class="box">
+                <div class="a_list ">
+                    <span class="a_list_l">菜单Key:</span>
+                    <div class="a_list_r">wxmenuclick_<input type="text"></div>
+                </div>
+                <div class="a_list ">
+                    <span class="a_list_l">推送消息内容:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt w-620">
+                            <ul class="nav nav-tabs rq-tab">
+                                <li class="active"><a><i class="tips_txt on"></i>文本</a></li>
+                                <li><a><i class="tips_picTxt "></i>图文</a></li>
+                                <li><a><i class="tips_bylb"></i>百业裂变</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active">
+                                    <div class="text_cont">
+                                        <textarea class="text"></textarea>
+                                    </div>
+                                    <div class="cont_label">
+                                        <span class="emoji_btn" data-toggle="tooltip" data-placement="top" title="表情"></span>
+                                        <p class="nums-tip">还可输入<span>600</span>字</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane table_cont">
+                                    <div class="text_cont">
+                                        <div class="table_list"></div>
+                                    </div>
+                                    <div class="text_btn"><span>选择素材</span></div>
+                                </div>
+                                <div class="tab-pane">
+                                    <div class="text_cont">
+                                        <div class="file_box">
+                                            <div>
+                                                <ul class="FraUpload_imglist layer-photos-demo2">
+                                                    <li class="img_item">
+                                                        <img src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1645549698,1396023243&fm=11&gp=0.jpg" layer-src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1645549698,1396023243&fm=11&gp=0.jpg">
+                                                        <span class="icon-delete img_del"></span>
+                                                    </li>
+                                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                                    <li class="file-btn bylb_chose" style="display: none"></li>
+                                                </ul>
+                                                <a class="bylb_chose">替换</a>
+                                            </div>
+                                            <p class="tishi" style="margin: 10px 0;">微信群裂变微信群裂变</p>
+                                            <div style="display: flex;align-items: center;margin: 10px 0;">
+                                                <p class="tishi" style="margin: 0 10px;">2019-04-26 14:20:41 至 2019-04-26 14:20:41</p>
+                                                <div class="statu statu1"><span>已完成</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="text_btn">
+                                            <p class="tishi">活动时间内将给触发用户推送“活动海报”，未在活动时间内将提醒“活动未开始/已结束”</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="a_list ">
+                    <span class="a_list_l">跳转Url:</span>
+                    <div class="a_list_r"><input type="text" class="w-620"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="a_list ">
+                    <span class="a_list_l">菜单Key:</span>
+                    <div class="a_list_r"><input type="text"><span class="tishi2">获取推广海报：click_tgewm</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="a_list ">
+                    <span class="a_list_l">appid:</span>
+                    <div class="a_list_r"><input type="text" style="width: 310px"></div>
+                </div>
+                <div class="a_list ">
+                    <span class="a_list_l">pagepath:</span>
+                    <div class="a_list_r"><input type="text" style="width: 310px"></div>
+                </div>
+                <div class="a_list ">
+                    <span class="a_list_l">跳转Url:</span>
+                    <div class="a_list_r"><input type="text" style="width: 310px"><span class="tishi2">*当微信客户端版本无法打开小程序时，将会跳转到 url</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2">
+        <span class="btn btn-cancel">取消</span>
+        <span class="btn btn-sure">保存</span>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $("#cf_method label input").on("click",function(){
+        var index=$(this).parents('#cf_method label').index();
+        $('.cont_box').find(".box").hide().eq(index).show();
+        $(this).parent().parent().siblings('.tishi').find('span').hide().eq(index).show();
+    });
+
+    $('#chutiyan .text_btn span').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择素材',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true,
+            area: ['90%', '90%'],
+            content: '选择素材.html'
+        });
+    });
+    $('#chutiyan .bylb_chose').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '选择',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true,
+            area: ['90%', '90%'],
+            content: '选择百业裂变.html'
+        });
+    });
+
+</script>
+</body>
+</html>

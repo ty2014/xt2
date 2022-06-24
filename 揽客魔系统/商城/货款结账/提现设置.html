@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>提现设置</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan" style="min-width: auto;">
+
+<div  class="gz-content">
+    <p class="title font20">快速建店</p>
+    <div class="activity_set">
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">提现方式：</span>
+                <div class="a_list_r checked_chose">
+                    <label for="ps1" class="radio active">
+                        <div class="chose">
+                            <input type="radio" checked name="ps" id="ps1" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">用户申请</span>
+                    </label>
+                    <label for="ps2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="ps" id="ps2" />
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">统一打款</span>
+                    </label>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="box">
+                    <div class="a_list">
+                        <span class="a_list_l"><span class="stips">*</span>提现手续费：</span>
+                        <div class="a_list_r"><input type="text" class="m_width">&nbsp;%oo（万分比）</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">免手续费额：</span>
+                        <div class="a_list_r r-tishi">
+                            <div class="slide-select">
+                                <select>
+                                    <option value="">总计</option>
+                                    <option value="">每年</option>
+                                </select>
+                                <img src="../../images/bottom-icon.jpg" alt="">
+                            </div>
+                            <input type="text" style="width: 100px"><span class="tishi">*超过该额度，将收取手续费；</span>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l"><span class="stips">*</span>预计到账时间：</span>
+                        <div class="a_list_r"><input type="text"></div>
+                    </div>
+                    <div class="a_list flex-start">
+                        <span class="a_list_l top5">提现规则：</span>
+                        <div class="a_list_r">
+                            <div class="r-list-txt">
+                                <p>每日最高提现总额：<input type="text" class="m_width m-height">元，每日做多可提现 <input type="text" class="m_width m-height">次；</p>
+                                <p>单笔提现金额条件：<input type="text" class="m_width m-height" placeholder="最低">~<input type="text" class="m_width m-height" placeholder="最高">元。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="a_list">
+                        <span class="a_list_l"><span class="stips">*</span>提现手续费：</span>
+                        <div class="a_list_r"><input type="text" class="m_width">&nbsp;%oo（万分比）</div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">免手续费额：</span>
+                        <div class="a_list_r r-tishi">
+                            <div class="slide-select">
+                                <select>
+                                    <option value="">总计</option>
+                                    <option value="">每年</option>
+                                </select>
+                                <img src="../../images/bottom-icon.jpg" alt="">
+                            </div>
+                            <input type="text" style="width: 100px"><span class="tishi">*超过该额度，将收取手续费；</span>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l"><span class="stips">*</span>预计到账时间：</span>
+                        <div class="a_list_r"><input type="text"></div>
+                    </div>
+                    <div class="a_list flex-start">
+                        <span class="a_list_l top5"><span class="stips">*</span>打款说明：</span>
+                        <div class="a_list_r"><textarea style="width: 720px;height: 80px;padding: 10px"></textarea></div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r tishi"><span class="stips">*为必填</span>，不填写即不限制，对应前端也将不展示</div>
+            </div>
+        </div>
+        <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script>
+    $(".activity_set label").each(function(index){
+        $(this).click(function(){
+            $(".activity_set label").removeClass("active");
+            $(".activity_set label").eq(index).addClass("active");
+            $(this).parent().parent().siblings('.box-content').children().eq($(this).index()).show().siblings().hide();
+        });
+        if($(this).hasClass('active')){
+            $(this).parent().parent().siblings('.box-content').children().eq($(this).index()).show().siblings().hide();
+        }
+    });
+</script>
+</body>
+</html>

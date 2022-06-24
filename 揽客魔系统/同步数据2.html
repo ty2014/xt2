@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css?2">
+    <style>
+
+    </style>
+</head>
+<body>
+
+
+<div style="width: 500px;margin: 50px auto;">
+    <div class="layui-progress layui-progress-big" lay-showpercent="true" lay-filter="demo" >
+        <div class="layui-progress-bar layui-bg-blue" lay-percent="0%"></div>
+    </div>
+    <p style="margin-top: 20px;">需同步<b style="margin: 0 4px;color: #333;font-size: 26px;">123</b>条</p>
+    <p style="margin-top: 20px;">已同步<b style="margin: 0 4px;color: #1e9fff;font-size: 26px;">12</b>条</p>
+    <div style="margin-top: 50px;">
+        <button type="button" class="layui-btn layui-btn-primary site-demo-active">关闭</button>
+        <button type="button" class="layui-btn site-demo-active" data-type="loading">开始更新</button>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/layui/lay/modules/layer.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/myjs.js"></script>
+<script>
+    layui.use('element', function(){
+        var $ = layui.jquery
+            ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+        var DISABLED = 'layui-btn-disabled';
+        if($('.layui-progress').hasClass(DISABLED)) return;
+
+        var active = {
+            setPercent: function(){
+                //设置50%进度
+                element.progress('demo', '50%')
+            }
+            ,loading: function(othis){
+                var DISABLED = 'layui-btn-disabled';
+                if(othis.hasClass(DISABLED)) return;
+
+                //模拟loading
+                var n = 0, timer = setInterval(function(){
+                    n = n + Math.random()*10|0;
+                    if(n>100){
+                        n = 100;
+                        clearInterval(timer);
+                        othis.removeClass(DISABLED);
+                        layer.msg('更新完成', {
+                            icon: 1,
+                            time: 2000
+                        }, function(){
+                            //do something
+
+                        });
+                    }
+                    element.progress('demo', n+'%');
+                }, 300+Math.random()*1000);
+
+                othis.addClass(DISABLED);
+            }
+        };
+
+        $('.site-demo-active').on('click', function(){
+            var othis = $(this), type = $(this).data('type');
+            active[type] ? active[type].call(this, othis) : '';
+        });
+    });
+
+</script>
+
+</body>
+</html>

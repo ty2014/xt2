@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>核销详情</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="head-tab2 head-tab3">
+    <li class="active current"><a href="#tab1">待核销</a></li>
+    <li><a href="#tab2">已核销</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content content2">
+    <div class="tab-pane active" id="tab1">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search dhx-search"><i class="search-tips"></i>搜索</span>
+                <div class="top_tit2">
+                    <a href="#"><span>装修款抵用金</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li><a href="#">全部卡券</a></li>
+                        <li class="active"><a href="#">装修款抵用金</a></li>
+                        <li><a href="#">xxx卡券名1</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">订单编号</th>
+                            <th width="150px">卡劵名称</th>
+                            <th width="140px">有效期至</th>
+                            <th width="80px">持有人头像</th>
+                            <th width="100pz">持有人昵称</th>
+                            <th width="80pz">预留姓名</th>
+                            <th width="100pz">预留电话</th>
+                            <th width="80pz">持有类型</th>
+                            <th width="140pz">录入时间</th>
+                            <th width="80pz">待核张数</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px"><a class="card-name">12345678910</a></td>
+                            <td width="150px" class="left">装修款抵用金</td>
+                            <td width="140px" class="date">2019-10-01 10:00:01</td>
+                            <td width="80px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="100px" class="left"><a href="">小土豆</a></td>
+                            <td width="80px">蒋雨</td>
+                            <td width="100px">13350021234</td>
+                            <td width="80px">购买</td>
+                            <td width="140px" class="date">2019-10-01 10:00:01</td>
+                            <td width="80px">2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a class="card-name">12345678910</a></td>
+                            <td class="left">装修款抵用金</td>
+                            <td class="date">2019-10-01 10:00:01</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">啊啊啊</a></td>
+                            <td>陈晨</td>
+                            <td>13350021234</td>
+                            <td>获赠</td>
+                            <td class="date">2019-10-01 10:00:01</td>
+                            <td>1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search yhx-search"><i class="search-tips"></i>搜索</span>
+                <div class="top_tit2">
+                    <a href="#"><span>装修款抵用金</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li><a href="#">全部卡券</a></li>
+                        <li class="active"><a href="#">装修款抵用金</a></li>
+                        <li><a href="#">xxx卡券名1</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">订单编号</th>
+                            <th width="150px">卡劵名称</th>
+                            <th width="80px">持有人头像</th>
+                            <th width="100pz">持有人昵称</th>
+                            <th width="80pz">预留姓名</th>
+                            <th width="100pz">预留电话</th>
+                            <th width="80pz">持有类型</th>
+                            <th width="140pz">录入时间</th>
+                            <th width="80px">核销人头像</th>
+                            <th width="100pz">核销人昵称</th>
+                            <th width="140pz">核销时间</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px"><a class="card-name">12345678910</a></td>
+                            <td width="150px" class="left">装修款抵用金</td>
+                            <td width="80px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="100px" class="left"><a href="">小土豆</a></td>
+                            <td width="80px">蒋雨</td>
+                            <td width="100px">13350021234</td>
+                            <td width="80px">购买</td>
+                            <!--  如果是购买，则为购买时间  -->
+                            <td width="140px" class="date">2019-10-01 10:00:01</td>
+                            <td width="80px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="100px" class="left"><a href="">小呀么小西几</a></td>
+                            <td width="140px" class="date">2019-10-01 10:00:01</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a class="card-name">12345678910</a></td>
+                            <td class="left">装修款抵用金</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">啊啊啊</a></td>
+                            <td>陈晨</td>
+                            <td>13350021234</td>
+                            <td>获赠</td>
+                            <!--  如果是获赠，则为领取时间  -->
+                            <td class="date">2019-10-01 10:00:01</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小呀么小西几</a></td>
+                            <td class="date">2019-10-01 10:00:01</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="dhx-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">订单编号：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">购买人昵称：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留电话：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留姓名：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">持有类型：</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">购买</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">获赠</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">录入时间：</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1"><span class="date-line"></span><input type="text" class="layui-input" id="test2"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="yhx-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">订单编号:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">购买人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留电话:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">预留姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">持有人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">核销人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">持有类型:</span>
+            <div class="account-r chose_item">
+                <label for="ly3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">购买</span>
+                </label>
+                <label for="ly4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">获赠</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">核销时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test3"><span class="date-line"></span><input type="text" class="layui-input" id="test4"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+        var hash = location.hash;//获取到跳转页面的参数
+        var tab = $('.head-tab2 li');
+        var con = $('.tab-content > .tab-pane');
+        for(var i=0;i<con.length;i++){
+            var mm = con[i];
+            var selectCon = "#"+ $(mm).attr('id');
+            if(hash == selectCon){
+                tab.siblings().removeClass('active current');
+                con.siblings().removeClass('active');
+                $(tab[i]).addClass('active current');
+                $(con[i]).addClass('active');
+            }
+        }
+
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#test1' //指定元素
+                ,type: 'datetime'
+                ,calendar: true
+                ,trigger: 'click'
+            });
+            laydate.render({
+                elem: '#test2' //指定元素
+                ,type: 'datetime'
+                ,calendar: true
+                ,trigger: 'click'
+            });
+            laydate.render({
+                elem: '#test3' //指定元素
+                ,type: 'datetime'
+                ,calendar: true
+                ,trigger: 'click'
+            });
+            laydate.render({
+                elem: '#test4' //指定元素
+                ,type: 'datetime'
+                ,calendar: true
+                ,trigger: 'click'
+            });
+        });
+
+        $('#chutiyan .dhx-search').on('click', function(){
+            parent.layer.open({
+                type: 1,
+                title: '搜索',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['700px', '506px'],       //  搜索(排序)弹框高度计算  m*60 + 146 ; m 为搜索项，有5个搜索项，则 m=5.
+                skin: 'account-box',
+                content: $("#dhx-account").html()
+            });
+        });
+        $('#chutiyan .yhx-search').on('click', function(){
+            parent.layer.open({
+                type: 1,
+                title: '搜索',
+                shadeClose: true,
+                shade: 0.3,
+                area: ['700px', '626px'],
+                skin: 'account-box',
+                content: $("#yhx-account").html()
+            });
+        });
+        $('#chutiyan .card-name').on('click', function(){
+            //iframe层
+            parent.layer.open({
+                type: 2,
+                title: '订单详情',        //  活动名称
+                shadeClose: true,
+                shade: 0.3,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['840px', '410px'],
+                content: '../预售活动/订单详情.html' //iframe的url
+            });
+        });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品规格-添加</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body style="min-width: auto;padding: 0;background: #fff">
+
+<div class="account-cont w-100">
+    <div class="account">
+        <span class="account-l">所属分类：</span>
+        <!--  所属分类，可以选择三级中任意一级  -->
+        <div class="account-r"><input type="text" placeholder="点击添加" readonly></div>
+    </div>
+    <div class="account">
+        <span class="account-l">规格名称：</span>
+        <div class="account-r"><input type="text"></div>
+    </div>
+    <div class="account flex-start top5">
+        <span class="account-l">规格值：</span>
+        <div class="account-r">
+            <!--  每次添加一个规格值，默认显示3个，前3个不能删除  -->
+            <div class="push-ggz">
+                <ul>
+                    <li><input type="text"></li>
+                    <li><input type="text"></li>
+                    <li><input type="text"></li>
+                    <li><input type="text"><span class="del-ggz">×</span></li>
+                    <li><input type="text"><span class="del-ggz">×</span></li>
+                </ul>
+                <span class="push-btn"></span>
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">排序码：</span>
+        <div class="account-r">
+            <div class="slide-select">
+                <select>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                    <option value="">03</option>
+                </select>
+                <img src="../../images/bottom-icon.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="account_btn"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+
+
+</body>
+</html>

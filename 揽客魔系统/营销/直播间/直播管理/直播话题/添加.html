@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>直播话题添加</title>
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../../css/style.css">
+</head>
+<body id="chutiyan" style="height: auto">
+
+
+<div class="page-title">直播话题</div>
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list ">
+                <span class="a_list_l">话题名称:</span>
+                <div class="a_list_r"><input type="text" style="width: 100%" placeholder="话题名称，建议15字以内"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">主讲人:</span>
+                <div class="a_list_r">
+                    <span class="set-user chose-user" style="margin-right: 16px">选择</span>
+                    <img src="../../../../images/head.jpg" alt="" class="user-pic">
+                    <a href="">小土豆</a>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list ">
+                <span class="a_list_l">话题简介:</span>
+                <div class="a_list_r"><input type="text" style="width: 100%" placeholder="话题简介，用于分享展示"></div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l">预计直播:</span>
+                <div class="a_list_r"><input type="number" class="s_width center" style="margin-right: 8px">场<span class="tishi">*预计该话题直播场数，最终以实际为准</span></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">话题主图:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi mgL-0">*建议像素宽高为 750px*750px 或比例 1:1 ，JPG、PNG格式，图片小于5M</p>
+            </div>
+        </div>
+        <div class="a_list" style="align-items: flex-start">
+            <span class="a_list_l" style="margin-top: 20px;">详情介绍:</span>
+            <div class="a_list_r"><textarea style="height: 200px;width: 620px;resize: none">此处放编辑器</textarea></div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">市场价格:</span>
+            <div class="a_list_r"><input type="number" class="m_width center"><span class="tishi">*选填，市场参考价值，以划线形式展示</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">观看权限:</span>
+            <div class="a_list_r">
+                <div class="space-toggle">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="qx-togg" class="toggle-button" name="switch">
+                        <label for="qx-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">付费/指定</span>
+                            <span class="text off">公开免费</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="qx-cont">
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <div>
+                        <div style="display: flex;align-items: flex-start;flex: 1;">
+                            <label for="qx1" class="checked" style="margin-top: 8px">
+                                <div class="chose">
+                                    <input type="checkbox" checked name="qx" id="qx1">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">付费观看:</span>
+                            </label>
+                            <div style="flex: 1">
+                                <div style="display: flex;align-items: center;">
+                                    付费<input type="text" class="m_width" style="margin: 0 8px"/>元；
+                                    <div class="button-label-s jtPay" style="margin-left: 40px">
+                                        <div class="toggle-button-wrapper">
+                                            <span class="switch_status" style="color: #666;margin-left: 0;margin-right: 18px">阶梯付费:</span>
+                                            <input type="checkbox" id="togglebtn3" class="toggle-button" name="switch">
+                                            <label for="togglebtn3" class="button-label">
+                                                <span class="circle"></span>
+                                                <span class="text on">开启</span>
+                                                <span class="text off">关闭</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jtPay_cont" style="display: none;align-items: center;flex-wrap: wrap;margin-top: 10px">
+                                    <input type="text" class="layui-input m-height" id="test1" style="margin-right: 8px"/>后，支付
+                                    <input type="text" class="m_width m-height" style="margin: 0 8px"/>元；
+                                    <span class="tishi">*选填，不同时间段报名需支付不同金额</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex;align-items: flex-start;flex: 1;margin-top: 20px">
+                            <label for="qx2" class="checked" style="margin-top: 8px">
+                                <div class="chose">
+                                    <input type="checkbox" name="qx" id="qx2">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">密码观看:</span>
+                            </label>
+                            <input type="text" placeholder="输入密码" disabled class="disabled"/>
+                        </div>
+                        <div style="display: flex;align-items: center;flex: 1;margin-top: 20px">
+                            <span style="display: inline-block;min-width: 87px;margin-right: 64px;">观看有效期:</span>
+                            <input type="text" class="s_width center" value="365" style="margin-right: 8px"/>天<span class="tishi">*付费/输入密码之后，可观看的时间期限</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r" style="border-top: 1px dashed #eee;">
+                    <div style="flex: 1">
+                        <div style="display: flex;align-items: center;margin-top: 10px"><span style="margin-right: 12px">报名指定系列课免费：</span><span class="set-user xlk_chose" style="margin-right: 16px">选择系列课</span><a class="xlk_chose">已选0个</a></div>
+                        <div style="display: flex;align-items: center;margin-top: 10px"><span style="margin-right: 54px">指定用户免费：</span><span class="set-user sq_user" style="margin-right: 16px">授权用户</span><a class="sq_user">累计授权10人</a></div>
+                        <div style="display: flex;align-items: center;margin-top: 10px">
+                            <span style="margin-right: 54px">排除指定人员：</span>
+                            <span class="set-user pc_user" style="margin-right: 16px">排除用户</span>
+                            <a class="pc_num">已排除0人</a>
+                            <span class="tishi">*排除人员不可观看该直播</span>
+                        </div>
+                        <div style="display: flex;align-items: flex-start;margin-top: 10px">
+                            <span style="margin-right: 54px;margin-top: 5px">指定会员免费：</span>
+                            <div>
+                                <div class="chose_item">
+                                    <label for="vip1" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="vip" id="vip1">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">VIP</span>
+                                    </label>
+                                    <label for="vip2" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" name="vip" id="vip2">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">导师</span>
+                                    </label>
+                                    <label for="vip3" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="vip" id="vip3">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">合伙人</span>
+                                    </label>
+                                    <label for="vip4" class="checked">
+                                        <div class="chose">
+                                            <input type="checkbox" checked name="vip" id="vip4">
+                                            <span class="checked-bg"></span>
+                                        </div>
+                                        <span class="msg_set_txt">联创人</span>
+                                    </label>
+                                </div>
+                                <div style="display: flex;align-items: center;margin-top: 10px">
+                                    同时引导去购买会员：
+                                    <div class="select-text">
+                                        <span class="select-txt">默认不引导</span>
+                                        <ul>
+                                            <li>默认不引导</li>
+                                            <li>合伙人</li>
+                                            <li>联创人</li>
+                                        </ul>
+                                    </div>
+                                    <span class="tishi">*仅对低于该等级的用户进行引导</span>
+                                </div>
+                                <div class="yd-cont" style="margin-top: 10px;display: none">
+                                    <p>引导价格：<input type="text" class="s_width center" style="margin-right: 8px">元；</p>
+                                    <p style="margin-top: 10px">引导话术：<input type="text" style="width: 300px;"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">启用状态:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="statu-togg" class="toggle-button" name="switch">
+                    <label for="statu-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*是否可访问该话题</span>
+            </div>
+        </div>
+        <div class="statu-cont">
+            <div class="a_list">
+                <span class="a_list_l">列表展示:</span>
+                <div class="a_list_r chose_item">
+                    <div class="radio_list">
+                        <label for="show1" class="radio">
+                            <div class="chose">
+                                <input type="radio" checked name="show" id="show1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">是</span>
+                        </label>
+                        <label for="show2" class="radio mgR-0">
+                            <div class="chose">
+                                <input type="radio" name="show" id="show2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">否</span>
+                        </label>
+                    </div>
+                    <span class="tishi">*是否将直播在列表上展示</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">优先级:</span>
+                <div class="a_list_r">
+                    <input type="text" class="s_width center">
+                    <span class="tishi">*数字越大，排序越前</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">话题链接:</span>
+                <div class="a_list_r">
+                    http://lkm.com <span class="copy-btn">复制</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../../../js/jquery.min.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $(function () {
+        if($('#qx-togg').is(':checked')){
+            $('.qx-cont').show()
+        }else{
+            $('.qx-cont').hide()
+        }
+        if($('#statu-togg').is(':checked')){
+            $('.statu-cont').show()
+        }else{
+            $('.statu-cont').hide()
+        }
+
+
+        $('.select-text li').click(function () {
+            if($(this).text() === '默认不引导'){
+                $('.yd-cont').hide()
+            }else{
+                $('.yd-cont').show()
+            }
+        })
+    });
+    $('#qx-togg').click(function () {
+        $('.qx-cont').toggle()
+    });
+    $('#statu-togg').click(function () {
+        $('.statu-cont').toggle()
+    });
+    $('#qx2').click(function () {
+        if($(this).is(':checked')){
+            $(this).parent().parent().siblings('input').removeAttr("disabled").removeClass('disabled');
+        }else{
+            $(this).parent().parent().siblings('input').attr('disabled','true').addClass('disabled');
+        }
+    });
+    $('.jtPay input').click(function () {
+        if($(this).is(':checked')){
+            $('.jtPay_cont').css('display','flex')
+        }else{
+            $('.jtPay_cont').css('display','none')
+        }
+    });
+    $('#chutiyan .chose-user').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '选择主持人',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../../选择对象.html' //iframe的url
+        });
+    });
+    $('#chutiyan .xlk_chose').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '指定系列课-报名人可免费观看',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../../选择系列课.html' //iframe的url
+        });
+    });
+    $('#chutiyan .pc_user').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '排除创建用户',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../../排除对象.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .pc_num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '排除创建用户',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../../排除对象.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .sq_user').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '授权用户-免费观看',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '../../授权用户时间.html' //iframe的url
+        });
+    });
+</script>
+
+
+</body>
+</html>

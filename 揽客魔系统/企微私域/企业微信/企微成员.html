@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="user-ment">
+    <div class="user-slide">
+        <p style="padding: 0 24px;text-align: right">
+            <span class="cursor break" style="font-size: 12px;color: #f00;">
+                <i class="layui-icon icon-refresh" style="font-size: 12px;margin-right: 4px"></i>刷新
+            </span>
+        </p>
+        <div class="treeMore">
+            <div class="tree_item tree_tit"><i class="layui-icon"></i><span>华厚研习社</span></div>
+            <div class="tree_main tree_pack">
+                <div class="tree_item"><span>技术部</span>
+                    <div class="tree_main tree_pack">
+                        <div class="tree_item"><span>技术部</span>
+                            <div class="tree_main tree_pack">
+                                <div class="tree_item"><span>技术部</span></div>
+                                <div class="tree_item"><span>财务行政部</span></div>
+                                <div class="tree_item"><span>销售部</span></div>
+                                <div class="tree_item"><span>宣传部</span></div>
+                                <div class="tree_item"><span>运营部</span></div>
+                                <div class="tree_item"><span>推广部</span></div>
+                            </div>
+                        </div>
+                        <div class="tree_item"><span>财务行政部</span></div>
+                        <div class="tree_item"><span>销售部</span></div>
+                        <div class="tree_item"><span>宣传部</span></div>
+                        <div class="tree_item"><span>运营部</span></div>
+                        <div class="tree_item"><span>推广部</span></div>
+                    </div>
+                </div>
+                <div class="tree_item"><span>财务行政部</span></div>
+                <div class="tree_item"><span>销售部</span></div>
+                <div class="tree_item"><span>宣传部</span></div>
+                <div class="tree_item"><span>运营部</span></div>
+                <div class="tree_item"><span>推广部</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="page-title">企微用户
+            <div class="notisTip">
+                <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="fa fa-file-word-o"></i>功能说明</a>
+                <a href="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" target="_blank"><i class="fa fa-file-movie-o"></i>视频教程</a>
+            </div>
+        </div>
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips update"><i class="update-tips"></i>同步</span>
+                <span class="tishi">*同步成员可能需要较长时间，请耐心等待</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="80px">头像</th>
+                            <th width="150px" class="left">姓名</th>
+                            <th width="100px">实名状态</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="80px" class="cover-pic">
+                                <img src="../../images/null.jpg" alt="">
+                            </td>
+                            <td width="150px" class="left">蒋宇工作号</td>
+                            <td width="100px"><span class="expired">未实名</span><i class="layui-icon icon-refresh"></i></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="cover-pic">
+                                <img src="../../images/null.jpg" alt="">
+                            </td>
+                            <td class="left">成都快乐生活</td>
+                            <td><span class="notExpired">已实名</span><i class="layui-icon icon-refresh"></i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('.tree_item > span').each(function () {
+        $(this).on('click',function () {
+            $(this).parents('.treeMore').find('span').removeClass('on');
+            $(this).addClass('on');
+        })
+    })
+    $('.tree_tit i').on('click',function () {
+        $(this).toggleClass('on');
+        $(this).parent().siblings('.tree_main').slideToggle('fast');
+
+    })
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $(".account-box")
+        });
+    });
+
+
+    var timer
+    function refresh(item) {
+        $('.'+item).on('click',function () {
+            clearInterval(timer);
+            var that = this;
+            $(that).addClass('on')
+            timer = setInterval(function () {
+                layer.msg('已同步', {
+                    icon: 1,
+                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                }, function(){
+                    //do something
+                });
+                $(that).removeClass('on');
+                clearInterval(timer);
+            },1000)
+        })
+    }
+    refresh('icon-refresh')
+    refresh('break i')
+
+</script>
+</body>
+</html>

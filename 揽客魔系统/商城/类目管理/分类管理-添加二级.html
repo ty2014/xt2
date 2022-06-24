@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分类管理-添加下级</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0;background: #fff">
+
+<div class="account-cont">
+    <div class="account">
+        <span class="account-l">分类名称：</span>
+        <div class="account-r"><input type="text" class="m-height"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">启用状态：</span>
+        <div class="account-r">
+            <div class="htmleaf-content">
+                <div class="checkbox">
+                    <input type="checkbox"/>
+                    <label></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">分类图标：</span>
+        <div class="account-r">
+            <div class="file-cont" style="display: flex;align-items: flex-end">
+                <!-- 给 file-btn 添加上传图片功能，  -->
+                <div class="file-btn" style="margin-bottom: 0;"></div>
+                <p class="tishi">*建议像素200*200，大小不超过50KB</p>
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">排序码：</span>
+        <div class="account-r">01&nbsp;&nbsp;
+            <div class="slide-select m-height" >
+                <select>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                    <option value="">03</option>
+                </select>
+                <img src="../../images/bottom-icon.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="account_btn"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+
+</body>
+</html>

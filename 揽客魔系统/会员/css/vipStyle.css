@@ -1,0 +1,131 @@
+.line1{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: left;min-width: 12px;}
+
+img,.sex_icon,.statu_vip,.lock_type{
+    /* 保持图片缩小后不模糊 */
+    image-rendering:-moz-crisp-edges;
+    image-rendering:-o-crisp-edges;
+    image-rendering:-webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode:nearest-neighbor;
+}
+.disFlex{display: flex;align-items: center;}
+.flex1{flex: 1}
+.flex2{flex: 2}
+.minw60{min-width: 60px;}
+.disNone{display: none}
+
+.activity_set2 input,.activity_set2 select, .activity_set2 textarea,.activity_set2 .layui-input{border: none;}
+.table_cont2 tbody tr:hover{background: unset;}
+.table_cont2 tbody tr:nth-child(2n),.table_cont2 tbody tr:nth-child(2n):hover{background: #f8f8f8;}
+
+.table_cont2 td.cz_btn button {outline:0;border:1px solid #d7d7d7;background:#fff;color:#333;border-radius:4px;padding:5px 7px;margin:0 4px;cursor:pointer;font-size:12px;line-height:initial}
+.table_cont2 td.cz_btn .btn-type1{color:#fff;border-color:#008089}
+.table_cont2 td.cz_btn .btn-type2{background:#fff;color:#fc8169;border-color:#fc8169}
+
+
+.newTable_cont{padding: 16px 0;}
+.newTable_cont,.newTable_cont .cont_box .cont_top,.newTable_cont .cont_box .cont_foot{display: flex;align-items: center;flex-wrap: nowrap;white-space: nowrap;}
+.newTable_cont .cont_box{flex: 1;overflow: hidden;}
+.newTable_cont .cont_box .cont_top{height: 24px;}
+.newTable_cont .cont_box .cont_foot{height: 24px;}
+.newTable_cont .cover-pic{margin: 0 17px 0 0;}
+.newTable_cont .cover-pic img{width: 40px;min-width: 40px;height: 40px;margin: 0;}
+.newTable_cont .cover-pic .sex_icon{position: absolute;bottom: 0;right: 0;margin: 0;}
+.newTable_cont .statu span{margin: 0 8px 0 0;}
+
+
+.sex_icon{width: 16px;min-width: 16px;height: 16px;display: inline-block;border-radius: 50%;background-repeat: no-repeat;background-size: contain;margin: 0 8px;}
+.sex_icon_woman{background-image: url("../../images/sex_woman.png");}
+.sex_icon_man{background-image: url("../../images/sex_man.png");}
+.statu_vip{background: #e2b565 url("../../images/vip_icon.png")no-repeat 2px/16px;font-size: 12px;color: #fff;border-radius: 10px;padding: 2px 6px 2px 20px;margin-right: 8px;cursor: pointer;}
+.statu_vip.un{background-color: #ccc;}
+.statu_id{font-size: 12px;color: #999;border: 1px solid #ccc;border-radius: 12px;padding: 0 9px;height: 24px;line-height: 23px;}
+.date_icon{display: inline-block;font-style: normal;width: 16px;min-width: 16px;height: 16px;border-radius: 50%;overflow: hidden;margin-right: 6px;position: relative;font-size: 12px;color: #fff;text-align: center;}
+.date_icon_start{background: #11d440;}
+.date_icon_start:after{content: "起";display: inline-block;transform: scale(.79) translateY(-1px);}
+.date_icon_end{background: #fc8169;}
+.date_icon_end:after{content: "止";display: inline-block;transform: scale(.79) translateY(-1px);}
+.edit_icon{font-size: 14px;color: #3d8fec;background: url('../../images/edit_icon.png')no-repeat left 4px/12px;padding-left: 18px;}
+
+.lock_type{background-repeat: no-repeat;background-position: right;background-size: 12px;padding-right: 16px;}
+.lock_type_1{background-image: url('../../images/lockType1.png');}
+.lock_type_2{background-image: url('../../images/lockType2.png');}
+
+.lock_type2_1,.lock_type2_2{width: 11px;height: 11px;margin: 0 6px;background-position: center;background-repeat: no-repeat;background-size: contain;}
+.lock_type2_1{background-image: url("../../images/lockType3.png")}
+.lock_type2_2{background-image: url("../../images/lockType4.png")}
+
+.edit_cont{flex: 1}
+
+/* 用户标签 */
+.userTips_cont{background: #f8fafc;border-radius: 8px;border: 1px solid #ebedf1;display: flex;margin-top: 24px;}
+.userTips_cont .contL{flex: 1.5;display: flex;align-items: center;height: 150px;position: relative;}
+.userTips_cont .contL:after{content: "";display: block;width: 1px;height: 56px;background: #dee0e4;position: absolute;right: 0;top: 50%;transform: translateY(-50%);}
+.userTips_cont .contL li{padding: 0 0 0 36px;flex: 1;}
+.userTips_cont .contL li:nth-child(1) .fa{color: #fd6e78;}
+.userTips_cont .contL li:nth-child(2) .fa{color: #67dbb4;}
+.userTips_cont .contL li:nth-child(3) .fa{color: #9390f9;}
+.userTips_cont .contL li .txt1{font-size: 16px;color: #333;display: flex;align-items: center;}
+.userTips_cont .contL li .txt1 .fa{margin-right: 10px;}
+.userTips_cont .contL li .txt1 .tips{margin-left: 8px;width: 14px;height: 14px;}
+.userTips_cont .contL li .txt2{font-size: 28px;color: #040917;margin-top: 9px;}
+.userTips_cont .contL li .txt2 em{font-size: 12px;color: #999;font-style: normal;margin-left: 6px;}
+.userTips_cont .contL li .txt3{font-size: 14px;color: #999;margin-top: 10px;}
+.userTips_cont .contR{flex: 1;display: flex;align-items: center;justify-content: space-around;}
+.userTips_cont .canvas_list{position: relative;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.userTips_cont .canvas_list span{position: absolute;top: 35%;left: 50%;transform: translate(-50%,-50%);font-size: 16px;color: #283a51;width: 52px;height: 52px;line-height: 52px;text-align: center;background: #edf3fb;border-radius: 50%;}
+.userTips_cont .canvas_list p{font-size: 14px;color: #283a51;margin-top: 13px;}
+.userTips_list{padding: 0 11px;margin-top: 40px;}
+.userTips_list .list_head{display: flex;align-items: center;margin: 0 5px;}
+.userTips_list .list_head img{width: 44px;min-width: 44px;height: 44px;margin-right: 16px;}
+.userTips_list .list_head div{flex: 1;}
+.userTips_list .list_head span{font-size: 18px;color: #333;}
+.userTips_list .list_head p{font-size: 12px;color: #999;margin-top: 6px;}
+.userTips_list .list_body{display: flex;flex-wrap: wrap;padding: 11px 0;margin-top: 6px;}
+.userTips_list .list_body li{font-size: 12px;color: #5f6d81;height: 32px;line-height: 30px;border: 1px solid #dee0e4;border-radius: 4px;padding: 0 8px;min-width: 40px;text-align: center;margin: 5px;position: relative}
+.userTips_list .list_body li.addTip{background: #f7b116;color: #fff;border-color: #f7b116;cursor: pointer;}
+.userTips_list .list_body li .close{display: inline-block;position: relative;width: 12px;height: 12px;background: #dee0e4;border-radius: 50%;top: 1px;margin-left: 7px;cursor: pointer;}
+.userTips_list .list_body li .close:before,.userTips_list .list_body li .close:after{content: "";display: inline-block;width: 1px;height: 8px;background: #fff;position: absolute;top: 2px;left: 50%;transform: translate(-50%,-50%)}
+.userTips_list .list_body li .close:before{transform: rotate(45deg);}
+.userTips_list .list_body li .close:after{transform: rotate(-45deg);}
+.userTips_list .list_body li .num{position: absolute;top: -8px;right: -8px;z-index: 2;line-height: 1;background: #f00;color: #fff;border-radius: 10px;padding: 1px 4px;}
+
+
+/* 阅读记录 */
+.yuedu_content{height: 75vh;overflow: auto;margin-top: 10px;}
+.yuedu_list{}
+.yuedu_list li{padding-left: 24px;position: relative;}
+.yuedu_list li:before{content: "";display: inline-block;width: 1px;height: 100%;background: #dfdfdf;position: absolute;left: 4px;top: 0;bottom: 0;z-index: 1;}
+.yuedu_list li.list_item:after{content: "";display: inline-block;width: 7px;height: 7px;background: #d5d5d5;border-radius: 50%;border: 3px solid #fff;position: absolute;left: -2px;top: 27px;z-index: 2;}
+.yuedu_list .list_year{position: sticky;top: 0;background: #fff;z-index: 9;padding: 28px 0 10px 24px;}
+.yuedu_list .list_year:before{top: 40px;}
+.yuedu_list .list_year em{position: absolute;left: -1px;top: 32px;width: 11px;height: 11px;background: #f7b116;border-radius: 50%;z-index: 2;border: 1px solid #fff;}
+.yuedu_list .list_year em:after{content: "";display: block;border-width: 3.5px;border-style: solid;border-color: #f7b116 #fff #fff #fff;position: absolute;bottom: -9px;left: 1px;}
+.yuedu_list .list_year p{font-size: 18px;color: #333;display: inline-block;cursor: pointer;}
+.yuedu_list .list_year p i{font-size: 22px;margin-left: 4px;}
+.yuedu_list .yearList{display: none;position: absolute;top: 60px;left: 24px;z-index: 9;width: 100px;background: #fff;box-shadow: 0 0 12px #ddd;border-radius: 6px;}
+.yuedu_list .yearList:before {content: "";display: block;width: 0;height: 0;border-width: 0 10px 10px 10px;border-style: solid;border-color: transparent transparent #fff transparent;position: absolute;top: -10px;right: 40px;}
+.yuedu_list .yearList p{display: block;text-align: center;font-size: 14px;padding: 10px;}
+.yuedu_list .yearList p:not(:last-child){border-bottom: 1px solid #eee;}
+.yuedu_list .yearList p.active{background: #f80;color: #fff;}
+.yuedu_list .yearList p:first-child{border-radius: 6px 6px 0 0;}
+.yuedu_list .yearList p:last-child{border-radius: 0 0 6px 6px;}
+.yuedu_list .list_item{font-size: 14px;color: #999;padding-top: 24px;}
+.yuedu_list .list_item .txt1{color: #3d8fec;}
+.yuedu_list .list_item .txt2{margin-top: 11px;}
+.yuedu_list .list_item .txt2 span{padding-left: 13px;margin-left: 13px;position: relative;}
+.yuedu_list .list_item .txt2 span:before{content: "";display: inline-block;width: 1px;height: 12px;background: #999;position: absolute;left: 0;top: 50%;transform: translateY(-50%);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邀请用户</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/style.css?v=1.0.0">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto;background: #fff;padding: 0">
+
+<div class="content">
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100pz">用户ID</th>
+                        <th width="100px">用户头像</th>
+                        <th width="150px">用户昵称</th>
+                        <th width="100px">访问二维码</th>
+                        <th width="150pz">二维码备注</th>
+                        <th width="150pz">访问时间</th>
+                        <th width="100pz">分享人ID</th>
+                        <th width="100pz">分享人头像</th>
+                        <th width="150pz">分享人昵称</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px">56879</td>
+                        <td width="100px" class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                        <td width="150px" class="left"><a href="">小土豆</a></td>
+                        <td width="100px" class="squ-pic layer-photos-demo2">
+                            <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                        </td>
+                        <td width="150px" class="left">辅导88群</td>
+                        <td width="150px" class="date"><div>2020-01-01 10:00:01</div></td>
+                        <td width="100px">56879</td>
+                        <td width="100px" class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                        <td width="150px" class="left"><a href="">小土豆</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>56879</td>
+                        <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                        <td class="left"><a href="">呀呀呀</a></td>
+                        <td class="squ-pic layer-photos-demo2">
+                            <img src="http://cshtml.lkmsxy.com/eq.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                        </td>
+                        <td class="left">辅导66群</td>
+                        <td class="date"><div>2020-01-01 10:00:01</div></td>
+                        <td>56879</td>
+                        <td class="cover-pic"><img src="../images/head.jpg" alt=""></td>
+                        <td class="left"><a href="">小土豆</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序 -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">访问时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1" placeholder="起"><span class="date-line"></span><input type="text" class="layui-input" id="test2" placeholder="止"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../js/layui/layui.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    layer.photos({
+        photos: '.layer-photos-demo2'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '316px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+
+</script>
+
+
+</body>
+</html>

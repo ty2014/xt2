@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上级代理</title>
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">上级代理</div>
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <span class="a_list_l">启用状态:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                    <label for="u-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*开启，即用户可在个人中心查看其上级联系方式等信息，<a class="rule">展示原则</a></span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">模块命名:</span>
+            <div class="a_list_r">
+                <input type="text" value="上级代理">
+                <span class="tishi">*在用户个人中心处，将显示该处设置的名称</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">指定等级:</span>
+            <div class="a_list_r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">VIP</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">合伙人</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip3">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">联创人</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip4">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r">
+                <span style="margin-right: 12px">*当未找到符合条件的“上级代理”时</span>
+                <div class="space-toggle">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" checked id="u-togg2" class="toggle-button" name="switch">
+                        <label for="u-togg2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">展示"默认代理"信息</span>
+                            <span class="text off">隐藏"上级代理"按钮</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hideCont" style="position: relative">
+            <div class="a_list">
+                <span class="a_list_l">头像:</span>
+                <div class="a_list_r">
+                    <div class="file-cont file-cont2 file_userImg">
+                        <!--  存放已上传图片，默认隐藏  -->
+                        <div class="file-pics"></div>
+                        <!--  上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                        <div class="file-btn"></div>
+                    </div>
+                    <p class="tishi mgL-0">*建议像素80*80或比例1:1 ，JPG、PNG格式，图片小于50KB</p>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">昵称:</span>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">电话号:</span>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">微信号:</span>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">身份标识:</span>
+                <div class="a_list_r">
+                    <input type="text">
+                    <span class="tishi">*将在用户昵称后展示</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">微信二维码:</span>
+                <div class="a_list_r">
+                    <div class="file-cont file-cont2">
+                        <!--  存放已上传图片，默认隐藏  -->
+                        <div class="file-pics file-preview"><ul class="FraUpload_imglist"></ul></div>
+                        <!--  上传图片按钮  -->
+                        <div class="file-btn"></div><input type="file" style="display:none">
+                    </div>
+                    <p class="tishi mgL-0">*建议像素200*200或比例1:1 ，JPG、PNG格式，图片小于100KB</p>
+                </div>
+            </div>
+            <img src="http://cshtml.lkmsxy.com/csimg/sjdl.png" alt="" style="width:250px;position: absolute;top: -20px;right: 0;">
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+    $('#chutiyan .rule').on('mouseenter',function(){
+        this.index =layer.tips('①从用户的直接上级向顶级找到的第一个符合条件的上级，即为其上级代理</br>' +
+            '②上级代理条件：会员等级高于该用户，并且会员等级符合以下指定等级', this, {
+            tips: [2, '#000'], time: -1 ,maxWidth:680
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+    $('#u-togg2').click(function () {
+        $('.hideCont').toggle()
+    })
+
+
+</script>
+
+</body>
+</html>

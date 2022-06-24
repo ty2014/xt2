@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>店招设置</title>
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan">
+
+<div class="activity_set">
+    <div class="a_list">
+        <span class="a_list_l"><p class="title font20" style="margin: 0">店铺介绍 </p></span>
+        <div class="a_list_r">
+            <a class="tishi view-dp">查看店铺主页</a>
+            <div class="show-pic">
+                <em></em>
+                <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                <div>
+                    <input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx"><span>复制</span>
+                    <p>*微信扫一扫，或复制链接打开</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="a_list flex-start product-gg">
+        <div class="a_list_r"><textarea style="width: 100%;height: 400px;max-width: 720px">富文本编辑器</textarea></div>
+    </div>
+    <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script>
+    var pop = $('.show-pic');
+    $('.view-dp').click(function (e) {
+        pop.fadeToggle();
+        e.stopPropagation();
+    })
+    $(document).click(function(e){
+        // 方法1
+        //    if($(':not(.pop)')){
+        //      pop.hide();
+        //    }
+        // 方法2
+        if(!pop.is(e.target) && pop.has(e.target).length === 0){
+            pop.fadeOut();
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

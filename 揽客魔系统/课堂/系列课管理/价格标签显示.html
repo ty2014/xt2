@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程价格显示设置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">课程价格显示设置
+        <div class="notisTip">
+            <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="fa fa-file-word-o"></i>功能说明</a>
+            <a href="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" target="_blank"><i class="fa fa-file-movie-o"></i>视频教程</a>
+        </div>
+    </div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="60px">序号</th>
+                        <th width="100px">操作</th>
+                        <th width="100px">系列课分类</th>
+                        <th width="300px" class="left">系列课标题</th>
+                        <th width="100px">价格</th>
+                        <th width="100px">优惠价</th>
+                        <th width="100px">显示价格</th>
+                        <th width="200px">价格位置内容</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="60px">1</td>
+                        <td width="100px" class="cz_btn">
+                            <button type="button" class="btn-type1 edit">编辑</button>
+                        </td>
+                        <td width="100px">引流</td>
+                        <td width="300px" class="left"><a class="wrap-noml">直播疯狂掘金</a></td>
+                        <td width="100px">0.01</td>
+                        <td width="100px"></td>
+                        <td width="100px" class="statu statu1"><span>显示</span></td>
+                        <td width="200px">0.1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1 edit">编辑</button>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td class="statu statu1"><span>显示</span></td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1 edit">编辑</button>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>0.01</td>
+                        <td></td>
+                        <td class="statu statu2"><span>不显示</span></td>
+                        <td>6.18秒杀</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1 edit">编辑</button>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td class="statu statu2"><span>不显示</span></td>
+                        <td>空</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">系列课分类:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">系列课标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">显示价格:</span>
+            <div class="account-r chose_item">
+                <label for="pay1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pay" id="pay1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">显示</span>
+                </label>
+                <label for="pay2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pay" id="pay2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">不显示</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-120" id="add-sure" style="display: none;padding-top: 0">
+    <div style="display: flex;">
+        <div style="flex: 1">
+            <div class="b-line" style="min-height: 166px;">
+                <div class="a_list">
+                    <div class="a_list_l">系列课标题:</div>
+                    <div class="a_list_r">直播疯狂掘金</div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">显示价格:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="togg" checked class="toggle-button" name="switch">
+                                <label for="togg" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">显示</span>
+                                    <span class="text off">不显示</span>
+                                </label>
+                            </div>
+                        </div>
+                        <span class="tishi">*列表页是否显示价格</span>
+                    </div>
+                </div>
+                <div class="a_list cont_togg" style="display: none">
+                    <span class="a_list_l">显示内容:</span>
+                    <div class="a_list_r">
+                        <div class="showNumBox">
+                            <input type="text" placeholder="选填，不填即为空">
+                            <span class="num">0/8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2 align-left"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+        </div>
+        <div id="Rview" style="border: 1px solid #ddd;overflow: hidden;margin: 10px;">
+            <img src="images/wx_16551920381623.png" alt="" style="height: 240px">
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .edit').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '列表页显示价格',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#add-sure")
+        });
+    });
+
+    $('#togg').click(function () {
+        $('.cont_togg').toggle()
+    })
+
+</script>
+</body>
+</html>

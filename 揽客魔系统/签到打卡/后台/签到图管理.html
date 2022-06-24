@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>签到图管理</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan" style="background: #fff;padding: 0">
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">分类:</span>
+            <div class="a_list_r">
+                <div class="select-text">
+                    <span class="select-txt">商战铁律</span>
+                    <ul style="display: none;">
+                        <li class="active">商战铁律</li>
+                        <li>商业哲学</li>
+                        <li>欲望激发</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">排序码:</span>
+            <div class="a_list_r"><input type="text"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">图片:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <p class="tishi2">*建议尺寸：750px * 1400px，大小不超过1000KB。</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">签到图扫码:</span>
+            <div class="a_list_r chose_item">
+                <label for="gz1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked name="gz" id="gz1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">直接关注</span>
+                </label>
+                <label for="gz2" class="radio">
+                    <div class="chose">
+                        <input type="radio"  name="gz" id="gz2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">去引导页</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list ydy" style="display: none">
+            <span class="a_list_l">引导页URL:</span>
+            <div class="a_list_r "><input type="text" style="width: 100%"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#gz1').click(function () {
+        $('.ydy').hide();
+    });
+    $('#gz2').click(function () {
+        $('.ydy').show();
+    });
+</script>
+
+</body>
+</html>

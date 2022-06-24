@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首次购买SOP</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .btn-m{display: none}
+        .b-line:hover .btn-m{display: block}
+        .activity_set3 .b-line:hover{background: rgba(216,231,247,.3);}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="activity_set activity_set3 w-7">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r">
+                <p class="tishi-bg mgL-0"><img src="images/3.jpg" alt="">回复内容请不要涉及广告营销、骚扰用户、违反法律法规及相关政策规定的信息，一经发现微信平台将严厉处罚</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r r-title mgB-0">首次购买SOP</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">启用状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg4" class="toggle-button" name="switch">
+                        <label for="u-togg4" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">触发方式:</span>
+            <div class="a_list_r chose_item">
+                <label for="pu10" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked name="pic2" id="pu10" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">首次购买</span>
+                </label>
+                <span class="tishi">用户第一次购买行为，触发浪潮发送</span>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r r-title">
+                <p class="slide-icon-btn">第 1 条信息<i class="layui-icon layui-icon-up mgL-10 slide-icon"></i></p>
+                <button class="btn btn-m btn-type2 "><i class="layui-icon layui-icon-add-circle-fine mgR-4"></i>新增消息队列</button>
+<!--                <button class="btn btn-m btn-type3 del_btn"><i class="layui-icon layui-icon-delete mgR-4"></i>删除该队列</button>-->
+            </div>
+        </div>
+        <div class="slide-cont">
+            <div class="a_list">
+                <div class="a_list_l">发送时间:</div>
+                <div class="a_list_r">
+                    <div class="select-text sendType" style="min-width: 150px;">
+                        <span class="select-txt">触发后，立即发送</span>
+                        <ul style="display: none;">
+                            <li>触发后，立即发送</li>
+                            <li>触发后，定时发送</li>
+                        </ul>
+                    </div>
+                    <div class="send_time mgL-20" style="display: none">触发
+                        <input type="number" class="s_width center">小时
+                        <div class="slide-select">
+                            <select>
+                                <option value="">0</option>
+                                <option value="">5</option>
+                                <option value="">10</option>
+                                <option value="">15</option>
+                                <option value="">20</option>
+                                <option value="">25</option>
+                                <option value="">30</option>
+                                <option value="">35</option>
+                                <option value="">40</option>
+                                <option value="">45</option>
+                                <option value="">50</option>
+                                <option value="">55</option>
+                            </select>
+                            <img src="../../images/bottom-icon.jpg" alt="">
+                        </div>
+                        分钟后，立即发送
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="a_list">
+                    <span class="a_list_l">消息类型:</span>
+                    <div class="a_list_r typeItem">
+                        <label for="type1" class="radio">
+                            <div class="chose">
+                                <input type="radio" checked="" name="type" id="type1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">文本</span>
+                        </label>
+                        <label for="type2" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="type" id="type2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">图片</span>
+                        </label>
+                        <label for="type3" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="type" id="type3">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">图文</span>
+                        </label>
+                        <label for="type4" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="type" id="type4">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">模板</span>
+                        </label>
+                        <label for="type5" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="type" id="type5">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">百业裂变</span>
+                        </label>
+                    </div>
+                </div>
+                <!--  文字消息  -->
+                <div class="a_list typeCont1">
+                    <span class="a_list_l" style="align-items: flex-start;padding-top: 25px;">文字消息:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt">
+                            <div class="cont_label">
+                                <div class="href_cont href_cont1">
+                                    <p>文本<input type="text" placeholder="链接名字"></p>
+                                    <p>链接<input type="text"><span>确定</span></p>
+                                </div>
+                                <span class="href_btn href_btn1" data-toggle="tooltip" data-placement="top" title="链接"></span>
+                                <span class="emoji_btn" data-toggle="tooltip" data-placement="top" title="表情"></span>
+                                <div class="faceDiv" style="display: none;"><img title="微笑" src="http://cshtml.lkmsxy.com/my/揽客魔系统/images/face/1.gif"><img title="撇嘴" src="http://cshtml.lkmsxy.com/my/揽客魔系统/images/face/2.gif"><img title="色" src="http://cshtml.lkmsxy.com/my/揽客魔系统/images/face/3.gif"><img title="发呆" src="http://cshtml.lkmsxy.com/my/揽客魔系统/images/face/4.gif"><img title="得意" src="http://cshtml.lkmsxy.com/my/揽客魔系统/images/face/5.gif"><img title="大哭" src="http://cshtml.lkmsxy.com/my/揽客魔系统/images/face/6.gif"><img title="害羞" src="http://cshtml.lkmsxy.com/my/揽客魔系统/images/face/7.gif"><img title="闭嘴" src="http://cshtml.lkmsxy.com/my/揽客魔系统/images/face/8.gif"><img title="困" src="http://cshtml.lkmsxy.com/my/揽客魔系统/images/face/9.gif"></div>
+                                <span class="line"></span>
+                                <em class="label-tips">[关注人]</em>
+                                <em class="label-tips">[会员等级]</em>
+                            </div>
+                            <div class="txt_cont Input_text into" contenteditable="true"></div>
+                            <p class="nums-tip2">还可输入<span>600</span>字</p>
+                        </div>
+                    </div>
+                </div>
+                <!--  图片消息  -->
+                <div class="a_list typeCont2" style="display: none">
+                    <span class="a_list_l">添加图片:</span>
+                    <div class="a_list_r">
+                        <!-- 图片宽高自适应：添加类名 auto -->
+                        <ul class="FraUpload_imglist auto layer-photos-demo">
+                            <li class="img_item">
+                                <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2220087570,1112216917&amp;fm=26&amp;gp=0.jpg" layer-src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2220087570,1112216917&amp;fm=26&amp;gp=0.jpg" layer-index="0">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn" style="display: none"></li>
+                        </ul>
+                        <div class="mgL-10">
+                            <a href="">替换</a>
+                            <p class="tishi mgL-0 mgT-10">*大小不超过500KB</p>
+                        </div>
+                    </div>
+                </div>
+                <!--  图文消息  -->
+                <div class="a_list typeCont3" style="display: none">
+                    <span class="a_list_l" style="align-items: flex-start;padding-top: 25px;">添加图文:</span>
+                    <div class="a_list_r">
+                        <div class="normal-table" style="width: 96%">
+                            <table border="0">
+                                <thead>
+                                <tr>
+                                    <th style="width: 300px" class="left">标题</th>
+                                    <th style="width: 100px">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="line-tr left">VIP1</td>
+                                    <td>
+                                        <button class="del">删除</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <span class="set-user mgT-20">选择素材</span>
+                    </div>
+                </div>
+                <!--  模板消息  -->
+                <div class="typeCont4" style="display: none">
+                    <div class="a_list">
+                        <span class="a_list_l">选择模板:</span>
+                        <div class="a_list_r">
+                            <div class="select-text mb-type">
+                                <span class="select-txt">请选择</span>
+                                <ul>
+                                    <li>模板一</li>
+                                    <li>模板二</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a_list ">
+                        <span class="a_list_l" style="align-items: flex-start;padding-top: 25px;">发送内容:</span>
+                        <div class="a_list_r flex-column">
+                            <div style="display: flex;align-items: center;">
+                                <div class="send-tips">
+                                    <span>提醒时间</span>
+                                    <span>推荐人</span>
+                                    <span>关注人</span>
+                                    <span>个人中心网址</span>
+                                </div>
+                                <span class="tishi"><img src="images/3.png" alt="">注意：单击左侧标签即可插入输入框光标位置</span>
+                            </div>
+                            <div class="qfmb_content">
+                                <div class="code-cont">
+                                    <ul class="code-demo">
+                                        <li>{{first.DATA}}</li>
+                                        <li><span>课程:</span>{{keyword1.DATA}}</li>
+                                        <li><span>地点:</span>{{keyword2.DATA}}</li>
+                                        <li><span>讲师:</span>{{keyword3.DATA}}</li>
+                                        <li><span>时间:</span>{{keyword4.DATA}}</li>
+                                        <li>{{remark.DATA}}</li>
+                                    </ul>
+                                    <p class="code-btn">查看详情<img src="images/right.png" alt=""></p>
+                                </div>
+                                <div class="code-cont">
+                                    <ul class="code-write">
+                                        <li><input type="text" value="123123"><div class="color"><input type="color" id="colortxt"></div></li>
+                                        <li><input type="text"><div class="color"><input type="color" id="colortxt" style="display: none;"></div></li>
+                                        <li><input type="text"><div class="color"><input type="color" id="colortxt" style="display: none;"></div></li>
+                                        <li><input type="text"><div class="color"><input type="color" id="colortxt" style="display: none;"></div></li>
+                                        <li><input type="text"><div class="color"><input type="color" id="colortxt" style="display: none;"></div></li>
+                                        <li><input type="text"><div class="color"><input type="color" id="colortxt" style="display: none;"></div></li>
+                                    </ul>
+                                    <p class="code-btn">
+                                        <input type="text" placeholder="用户点击详情后跳转的页面链接">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  百业裂变消息  -->
+                <div class="a_list typeCont5" style="display: none">
+                    <span class="a_list_l" style="align-items: flex-start;padding-top: 25px;">发送内容:</span>
+                    <div class="a_list_r">
+                        <div class="text_cont borderNormal" style="width: 96%">
+                            <div class="file_box">
+                                <div>
+                                    <ul class="FraUpload_imglist layer-photos-demo2">
+                                        <li class="img_item">
+                                            <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2220087570,1112216917&amp;fm=26&amp;gp=0.jpg" layer-src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2220087570,1112216917&amp;fm=26&amp;gp=0.jpg" layer-index="1">
+                                            <span class="icon-delete img_del"></span>
+                                        </li>
+                                        <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                        <li class="file-btn bylb_chose" style="display: none"></li>
+                                    </ul>
+                                    <a class="bylb_chose">替换</a>
+                                </div>
+                                <p class="tishi" style="margin: 10px 0;">微信群裂变微信群裂变</p>
+                                <div style="display: flex;align-items: center;margin: 10px 0;">
+                                    <p class="tishi" style="margin: 0 10px;">2019-04-26 14:20:41 至 2019-04-26 14:20:41</p>
+                                    <div class="statu statu1"><span>已完成</span></div>
+                                </div>
+                            </div>
+                            <div class="text_btn">
+                                <p class="tishi">活动时间内将给触发用户推送“活动海报”，未在活动时间内将提醒“活动未开始/已结束”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list"><span class="btn save-btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#chutiyan .text_btn span').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '选择素材',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true,
+            area: ['90%', '90%'],
+            content: '选择素材.html'
+        });
+    });
+
+    $('.typeItem label').each(function () {
+        let index = $(this).index();
+        $(this).click(function () {
+            $(this).parent().parent().siblings().hide();
+            $('.typeCont'+(index+1)).show();
+        })
+    })
+
+    $('.sendType li').click(function () {
+
+        if($(this).index() === 1){
+            $('.sendType').siblings('.send_time').show();
+        }else{
+            $('.sendType').siblings('.send_time').hide();
+        }
+    })
+
+    $('.slide-icon-btn').on('click',function () {
+        $(this).parents('.a_list').siblings().slideToggle('fast');
+        $(this).toggleClass('on');
+        if($(this).hasClass('on')){
+            $(this).find('.slide-icon').addClass('layui-icon-down').removeClass('layui-icon-up')
+        }else{
+            $(this).find('.slide-icon').addClass('layui-icon-up').removeClass('layui-icon-down')
+        }
+
+    })
+
+
+
+</script>
+</body>
+</html>

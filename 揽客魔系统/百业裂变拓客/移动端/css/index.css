@@ -1,0 +1,28 @@
+@charset "utf-8";
+*{box-sizing: border-box}
+html,body{height: 100%;}
+input,select,button{-webkit-appearance: none;outline: none}
+ul ,li{list-style: none}
+img{vertical-align: middle;width: 100%}
+input{border: none}
+body, div,p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textarea, blockquote, th, td { box-sizing: border-box;margin:0;padding:0;font-family:"Helvetica Neue", Helvetica, "PingFang SC", 微软雅黑, Tahoma, Arial, sans-serif;word-spacing:2}
+a{cursor: pointer;text-decoration: none;background-color: transparent;}
+a,a:hover,a:active,a:visited,a:link,a:focus{-webkit-tap-highlight-color: transparent;outline:none;text-decoration: none;}
+textarea{resize: none;overflow: hidden}
+body{background: #fff;max-width: 640px;min-width: 320px;margin: 0 auto}
+
+/*  填写信息  */
+#u_msg{margin:15px 15px;padding:20px 20px 20px;box-shadow: 0 0 24px #ddd;border-radius: 5px;}
+.msg_list{font-size: 15px;color: #333;display: flex;align-items: center;margin-bottom: 20px;overflow: hidden;}
+.msg_list label{text-align: right;padding-right: 10px;min-width: 55px;}
+.msg_list input{border: 1px solid #f2f2f2;background: #f2f2f2;border-radius: 4px;height:32px;padding: 0 8px;flex-grow: 1;}
+.submit{display: block;width: 100%;margin:40px auto 0;height: 36px;line-height: 36px;text-align: center;font-size: 16px;color: #fff;background: #f60;border-radius: 4px;}
+
+/*  填写成功  */
+.Complaint_succ{text-align: center;padding: 21px 20px 30px;border-bottom: 8px solid #f6f6f6;}
+.Complaint_succ img{width: 84px;}
+.Complaint_succ .succ_tit{font-size: 30px;color: #333;margin-top: 10px;}
+.must_tips{padding: 16px 20px 10px;}
+.must_tips p{font-size: 13px;color: #666;margin-bottom: 4px}
+
+

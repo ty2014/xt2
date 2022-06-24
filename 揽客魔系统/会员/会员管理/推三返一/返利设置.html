@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>返利设置</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css?v=1.0.0">
+</head>
+<body id="chutiyan" >
+
+<div class="page-title">返利设置</div>
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">商品名称:</span>
+                <div class="a_list_r">百万客流爆破营</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">价格:</span>
+                <div class="a_list_r">199.00（VIP：99.00，事业合伙人：20.00）</div>
+            </div>
+        </div>
+        <!--  没有则不展示  -->
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 13px;">分佣情况:</span>
+            <div class="a_list_r" style="display: block">
+                <p style="margin-bottom: 10px;">推荐分佣【开启】 VIP：10%； 联创人：20%</p>
+                <p>锁定分佣【开启】 VIP：10.00； 联创人：20.00</p>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">启用状态:</div>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="statu-togg" checked="" class="toggle-button" name="switch">
+                    <label for="statu-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*停用后不再进行返利</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">返利规则:</span>
+            <div class="a_list_r">每推荐成交<input type="number" class="s_width m-height center" style="margin: 0 8px;">笔订单，可返利<input type="number"  class="m_width m-height center" style="margin: 0 8px;">元</div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">参与资格:</span>
+            <div class="a_list_r chose_item">
+                <label for="vip2-0" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip2" id="vip2-0">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+                <label for="vip2-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip2" id="vip2-1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">VIP</span>
+                </label>
+                <label for="vip2-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip2" id="vip2-2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">合伙人</span>
+                </label>
+                <label for="vip2-3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip2" id="vip2-3">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">联创人</span>
+                </label>
+                <span class="tishi">*无参与权的用户，无法参加推单返利</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">指定参与:</span>
+            <div class="a_list_r">
+                <span class="set-user zd_person">选择人员</span>
+                <a class="zdyx_person" style="margin:0 10px;">已选择10人</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">无权参与:</span>
+            <div class="a_list_r">
+                <span class="set-user del_person">排除人员</span>
+                <a class="delyx_person" style="margin:0 10px;">已选择10人</a>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 16px;">次数限制:</span>
+            <div class="a_list_r" style="display: block">
+                <div style="display: flex;align-items: center;margin-bottom: 10px;">
+                    <p>该商品<span class="expired">无权限</span>的用户，可获得返利<input type="text" class="s_width center m-height" value="1" style="margin: 0 8px;">次</p>
+                    <span class="tishi">*无权限：没有购买该商品、未免费指定使用该商品的用户</span>
+                </div>
+                <div style="display: flex;align-items: center;">
+                    <p>该商品<span class="notExpired">有权限</span>的用户，可获得返利<input type="text" class="s_width center m-height" value="无数" style="margin: 0 8px;">次</p>
+                    <span class="tishi">*有权限：购买过该商品、有被免费指定使用该商品的用户</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line" style="border-bottom: 0;">
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">规则说明:</span>
+            <div class="a_list_r">
+                <textarea style="width: 620px;height: 200px;padding: 8px;">*向有资格参与的用户说明该活动规则</textarea>
+                <!--<img src="http://cshtml.lkmsxy.com/csimg/" alt="" style="height: 400px;margin-left: 40px;">-->
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .zd_person').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '指定参与',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '选择人员.html' //iframe的url
+        });
+    });
+    $('#chutiyan .zdyx_person').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '指定参与',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '选择人员.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .del_person').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '无权参与',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '排除人员.html' //iframe的url
+        });
+    });
+    $('#chutiyan .delyx_person').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '无权参与',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '排除人员.html#tab2' //iframe的url
+        });
+    });
+
+</script>
+
+</body>
+</html>

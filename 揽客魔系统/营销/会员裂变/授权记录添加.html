@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本信息</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.0">
+    <style>
+        .normal-table table td{overflow: unset;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!--
+
+注意：如果是从 ‘批量授权’点选择，则搜索项中新增搜索项‘会员等级’
+      如果是从 ‘单独授权’点选择，则搜索项不变
+-->
+
+
+<!-- Nav tabs -->
+<ul class="head-tab3">
+    <li class="active current3"><a href="#tab1">单独授权</a></li>
+    <li><a href="#tab2">批量授权</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content3 content2" style="min-width: auto">
+    <div class="tab-pane active"  id="tab1">
+        <div class="activity_set activity_set2 activity_set-normal">
+            <div class="b-line">
+                <div class="a_list">
+                    <span class="a_list_l">授权对象:</span>
+                    <div class="a_list_r">
+                        <span class="set-user set-person" style="margin-right: 16px;">选择</span>
+                        <img src="../../images/head.jpg" alt="" class="user-pic"><a href="">小土豆</a>
+                    </div>
+                </div>
+
+                <div class="a_list">
+                    <span class="a_list_l">授权活动:</span>
+                    <div class="a_list_r chose_item">
+                        <div>
+                            <div style="display: flex;flex-wrap: wrap">
+                                <label for="act1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" checked name="act" id="act1">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">分销</span>
+                                </label>
+                                <label for="act2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" checked name="act" id="act2">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">拼团</span>
+                                </label>
+                                <label for="act3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" checked name="act" id="act3">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">定金</span>
+                                </label>
+                            </div>
+                            <div style="margin-top: 15px">活动使用时间：2020-06-25 10:00:00 ~ 2020-07-25 10:00:00；<span class="notExpired mgL-10">*使用中</span><span class="expired mgL-10">*暂未使用</span></div>
+                            <div style="display: flex;align-items: center;margin-top: 15px">
+                                对已勾选活动
+                                <div class="select-text mg-8" style="min-width: 80px;width: 80px">
+                                    <span class="select-txt">增加</span>
+                                    <ul style="display: none;">
+                                        <li>增加</li>
+                                        <li>扣减</li>
+                                    </ul>
+                                </div>
+                                <input type="number" class="s_width center mgR-8">天
+                            </div>
+                            <span class="tishi2 mgL-0" style="margin-top: 10px">*注：若用户已在‘使用中’，将从‘截止时间’上累加使用天数；若用户已在‘未使用’，将默认从‘当前时间’可开始使用</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">操作说明:</span>
+                    <div class="a_list_r"><textarea style="width:500px;height: 80px;padding: 10px;resize: none" ></textarea></div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure sq-sure">确定</span></div>
+        </div>
+    </div>
+    <div class="tab-pane"  id="tab2">
+        <div class="activity_set activity_set2 activity_set-normal">
+            <div class="b-line">
+                <div class="a_list">
+                    <span class="a_list_l">授权对象:</span>
+                    <div class="a_list_r">
+                        <span class="set-user set-persons" style="margin-right: 16px;">选择</span>
+                        <a class="has-persons">已选择100人</a>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">授权活动:</span>
+                    <div class="a_list_r chose_item">
+                        <div>
+                            <div style="display: flex;flex-wrap: wrap">
+                                <label for="act1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" checked name="act" id="act1">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">分销</span>
+                                </label>
+                                <label for="act2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" checked name="act" id="act2">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">拼团</span>
+                                </label>
+                                <label for="act3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" checked name="act" id="act3">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">定金</span>
+                                </label>
+                            </div>
+                            <div style="margin-top: 15px">活动使用时间：2020-06-25 10:00:00 ~ 2020-07-25 10:00:00；</div>
+                            <div style="display: flex;align-items: center;margin-top: 15px">
+                                对已勾选活动
+                                <div class="select-text mg-8" style="min-width: 80px;width: 80px">
+                                    <span class="select-txt">增加</span>
+                                    <ul style="display: none;">
+                                        <li>增加</li>
+                                        <li>扣减</li>
+                                    </ul>
+                                </div>
+                                <input type="number" class="s_width center mgR-8">天
+                            </div>
+                            <span class="tishi2 mgL-0" style="margin-top: 10px">*注：若用户已在‘使用中’，将从‘截止时间’上累加使用天数；若用户已在‘未使用’，将默认从‘当前时间’可开始使用</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">操作说明:</span>
+                    <div class="a_list_r"><textarea style="width:500px;height: 80px;padding: 10px;resize: none" ></textarea></div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#chutiyan .set-person').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '商家授权',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '选择对象.html' //iframe的url
+        });
+    });
+    $('#chutiyan .set-persons').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '商家授权',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '选择对象-批量授权.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .has-persons').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '商家授权',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '选择对象-批量授权.html#tab2' //iframe的url
+        });
+    });
+
+    $('#chutiyan .sq-sure').on('click', function(){
+        layer.confirm('<div>扣减天数超过用户的剩余使用天数，是否确定扣减，将使用权限截止于此刻？</div>',{
+            btn: ['取消','确定'],
+            area: '416px',
+            title:'提示',
+        }, function(index){
+            layer.close(index);
+        }, function(index){
+            layer.msg('操作成功');
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

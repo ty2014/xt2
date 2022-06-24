@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加文章</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan" style="min-width: auto;padding: 0;background: #fff">
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">所属分类:</span>
+                <div class="a_list_r">
+                    <div class="select-text">
+                        <span class="select-txt">--请选择--</span>
+                        <ul>
+                            <li>营销干货</li>
+                            <li>学员案例</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">推荐:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="ds-fy" class="toggle-button" name="switch">
+                            <label for="ds-fy" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">启用状态:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg" checked class="toggle-button" name="switch">
+                            <label for="u-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">是否展示:</span>
+                <div class="a_list_r chose_item">
+                    <label for="show1" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="show" checked id="show1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">是</span>
+                    </label>
+                    <label for="show2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="show" id="show2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">否</span>
+                    </label>
+                    <span class="tishi">*不展示仅可通过直接访问链接查看</span>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">优先级:</span>
+                <div class="a_list_r"><input type="text" class="m_width center"><span class="tishi">*优先级越高，文章就越靠前</span></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">作者:</span>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">标题:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">点击量:</span>
+                <div class="a_list_r"><input type="text" class="m_width center"><span class="tishi">*文章点击量</span></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">标签:</span>
+                <div class="a_list_r">
+                    <input type="text" value="1,2,3,4,装"><span class="tishi">*多个标签用‘,’隔开</span>
+                    <div class="bq-items">
+                        <p>已有标签:</p>
+                        <ul>
+                            <li style="width: 92px">92</li>
+                            <li style="width: 92px">92</li>
+                            <li style="width: 92px">92</li>
+                            <li style="width: 143px">143</li>
+                            <li style="width: 143px">143</li>
+                            <li style="width: 143px">143</li>
+                            <li style="width: 144px">144</li>
+                            <li style="width: 44px">44</li>
+                            <li style="width: 243px">243</li>
+                            <li style="width: 243px">243</li>
+                            <li style="width: 43px">43</li>
+                            <li >装饰装修装饰装修装饰装修装饰装修装饰装修</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">封面图:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮  -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi">*建议宽高尺寸 500*500像素；大小不超过1000KB</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">描述:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">内容:</span>
+            <div class="a_list_r"><textarea style="width: 620px;min-height: 400px;">此处放富文本编辑器</textarea></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">阅读权限:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="is_vip" class="toggle-button" name="switch">
+                        <label for="is_vip" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*仅选中的会员等级，有阅读本文的权限。</span>
+            </div>
+        </div>
+        <div class="a_list vip-items" style="display: none">
+            <span class="a_list_l">会员等级:</span>
+            <div class="a_list_r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">学员</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" checked name="pic2" id="vip2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">VIP</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" checked name="pic2" id="vip3">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">合伙</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip4">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">联创</span>
+                </label>
+                <label for="vip5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip5">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">倒计时:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="is_time" class="toggle-button" name="switch">
+                        <label for="is_time" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*设置文章开放时间。</span>
+            </div>
+        </div>
+        <div class="a_list time-items" style="display: none">
+            <span class="a_list_l">阅读到期时间:</span>
+            <div class="a_list_r"><input type="text" class="layui-input" id="test1" placeholder="请选择"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">打赏赠品:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="dszp" class="toggle-button" name="switch">
+                        <label for="dszp" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*此处为单独配置，权限大于统一配置。</span>
+            </div>
+        </div>
+        <div class="a_list ds-items" style="display: none">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">打赏内容:</span>
+            <div class="a_list_r"><textarea style="width: 620px;height: 400px;">此处放富文本编辑器</textarea></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#is_vip').click(function () {
+        $('.vip-items').toggle();
+    });
+    $('#is_time').click(function () {
+        $('.time-items').toggle();
+    });
+    $('#dszp').click(function () {
+        $('.ds-items').toggle();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>补佣</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body style="min-width:auto;padding: 0;background: #fff">
+
+<div class="account-cont w-150">
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">头像：</span>
+            <div class="account-r"><img src="../images/head.jpg" alt="" class="user_pic"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称：</span>
+            <div class="account-r">小土豆</div>
+        </div>
+    </div>
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">姓名：</span>
+            <div class="account-r"><input type="text" class="m-height" disabled value="手机用户466941"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">电话：</span>
+            <div class="account-r"><input type="text" class="m-height" disabled></div>
+        </div>
+    </div>
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">累计获得佣金：</span>
+            <div class="account-r"><input type="text" disabled class="m_width m-height center">&nbsp;元</div>
+        </div>
+        <div class="account">
+            <span class="account-l">未结算佣金：</span>
+            <div class="account-r"><input type="text" disabled class="m_width m-height center">&nbsp;元</div>
+        </div>
+    </div>
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">已结算佣金：</span>
+            <div class="account-r"><input type="text" disabled class="m_width m-height center">&nbsp;元</div>
+        </div>
+        <div class="account">
+            <span class="account-l">补佣金额：</span>
+            <div class="account-r"><input type="text" class="m_width m-height center">&nbsp;元</div>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">到账时间：</span>
+        <div class="account-r checked_chose">
+            <label for="ps1" class="radio">
+                <div class="chose">
+                    <input type="radio" checked="" name="ps" id="ps1">
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">立即到账</span>
+            </label>
+            <label for="ps2" class="radio">
+                <div class="chose">
+                    <input type="radio" name="ps" id="ps2">
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">预计到账</span>
+            </label>
+        </div>
+    </div>
+    <div class="account dz-time" style="display: none">
+        <span class="account-l"></span>
+        <div class="account-r"><input type="text" class="s_width m-height center">&nbsp;&nbsp;天后，再到账</div>
+    </div>
+    <div class="account">
+        <span class="account-l">备注：</span>
+        <div class="account-r"><input type="text" class="w-620"></div>
+    </div>
+</div>
+
+<div class="account_btn"><span class="btn btn-sure">保存</span></div>
+
+<script src="../js/jquery.min.js"></script>
+<script>
+    $('#ps1').click(function () {$('.dz-time').hide()});
+    $('#ps2').click(function () {$('.dz-time').show()})
+
+</script>
+
+</body>
+</html>

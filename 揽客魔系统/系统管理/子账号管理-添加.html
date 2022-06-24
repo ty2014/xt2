@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子账号管理</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+        .zhList{display: flex;flex-wrap: wrap;margin: -8px;}
+        .zhList li{transition: all linear .2s;width: 320px;height: 150px;border-radius: 2px;padding: 24px;background: #fff;border: 1px solid #efefef;margin: 8px;cursor: pointer;font-size: 14px;color: #333;position: relative;}
+        .zhList.type1 li.active{border-color: #f00}
+        .zhList.type2 li.active{border-color: #f80}
+        .zhList li.active:after{content: "\e605";display: block;position: absolute;top: 0;right: 0;z-index: 2;padding: 2px 2px 14px 16px;background: #f80;color: #fff;}
+        .zhList li.active:before{content: "";display: block;position: absolute;top: 0;right: 0;z-index: 3;border-bottom: 32px solid #fff;border-right: 32px solid transparent;}
+        .zhList.type1 li.active:after{background: #f00}
+        .zhList.type2 li.active:after{background: #f80}
+
+        .zhList li i{font-size: 14px;margin-right: 10px;}
+        .zhList.type1 li i{color: #f00;}
+        .zhList.type2 li i{color: #f80;}
+        .zhList li p:last-child{margin-top: 20px;white-space: normal !important; display: -webkit-box !important; -webkit-line-clamp: 3; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical;}
+
+
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<div class="activity_set activity_set2 w-150">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r r-title">基本信息</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">账号:</span>
+            <div class="a_list_r">
+                <div class="flex1">
+                    <div class="showNumBox">
+                        <input type="number" class="w-620" maxlength="11" placeholder="请填写11位手机号">
+                        <span class="num">0/11</span>
+                    </div>
+                    <p class="tishi2 mgL-0 mgT-10">* 员工使用此手机号作为账号登录小裂变后台</p>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">验证码:</span>
+            <div class="a_list_r">
+                <input type="text" class="m_width" placeholder="请输入验证码">
+                <span class="set-user mgL-10">获取验证码</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">密码:</span>
+            <div class="a_list_r">
+                <input type="password" class="m_width" placeholder="请输入密码">
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">添加成员:</span>
+            <div class="a_list_r">
+                <span class="set-user addU ">添加成员</span>
+                <a class="tishi addU mgL-10">已添加2个</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">描述:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="number" class="w-620" maxlength="15" placeholder="请输入描述">
+                    <span class="num">0/15</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r r-title">角色管理</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">默认角色:</span>
+            <div class="a_list_r">
+                <ul class="zhList type1">
+                    <li class="layui-icon">
+                        <p><i class="layui-icon layui-icon-friends"></i>运营人员</p>
+                        <p>负责使用后台配置营销活动，生成获客、运营的营销策略，赋能一线销售员工</p>
+                    </li>
+                    <li class="layui-icon">
+                        <p><i class="layui-icon layui-icon-friends"></i> 销售管理员</p>
+                        <p>负责每天查看一线销售/导购/客服等角色的客户数据，更好的管理销售过程和客服服务质量</p>
+                    </li>
+                    <li class="layui-icon">
+                        <p><i class="layui-icon layui-icon-friends"></i>管理员</p>
+                        <p>管理员可以查看后台所有功能和数据，方便观察并调整客户运营及客服服务的私域策略，为决策提供数据参考</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">自定义角色:</span>
+            <div class="a_list_r">
+                <ul class="zhList type2">
+                    <li class="layui-icon">
+                        <p><i class="layui-icon layui-icon-friends"></i>管理员（子账号）</p>
+                        <p>全功能使用</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r r-title">权限设置</div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 32px;">功能权限:</span>
+            <div class="a_list_r" style="flex-wrap: nowrap;overflow: auto;">
+                <div class="powerItem">
+                    <div id="power1"></div>
+                    <div id="power1-2"></div>
+                    <div id="power1-3"></div>
+                    <div id="power1-4"></div>
+                    <div id="power1-5"></div>
+                    <div id="power1-6"></div>
+                    <div id="power1-7"></div>
+                    <div id="power1-8"></div>
+                    <div id="power1-9"></div>
+                    <div id="power1-10"></div>
+                    <div id="power1-11"></div>
+                    <div id="power1-12"></div>
+                </div>
+                <div class="powerItem">
+                    <div id="power2"></div>
+                </div>
+                <div class="powerItem">
+                    <div id="power3"></div>
+                </div>
+                <div class="powerItem">
+                    <div id="power4"></div>
+                </div>
+                <div class="powerItem">
+                    <div id="power5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    $('.zhList li').on('click',function () {
+        $(this).toggleClass('active')
+    })
+
+    $('#chutiyan .addU').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '添加成员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['990px', '650px'],
+            content: '../添加成员.html' //iframe的url
+        });
+    });
+
+
+    layui.use(['tree', 'util'], function(){
+        var tree = layui.tree
+            ,layer = layui.layer
+            ,util = layui.util
+            //模拟数据1
+            ,data1 = [
+                {
+                    title: '成都快乐生活'
+                    ,id: 1
+                    ,children: [
+                        {
+                            title: '测试'
+                            ,id: 1000
+                            ,children: [
+                                {
+                                    title: '测试'
+                                    ,id: 1000
+                                },{
+                                    title: '揽客魔'
+                                    ,id: 1001
+                                }
+                            ]
+                        },{
+                            title: '揽客魔'
+                            ,id: 1001
+                        }
+                    ]
+                }
+            ];
+
+        tree.render({
+            elem: '#power1,#power1-2,#power1-3,#power1-4,#power1-5,#power1-6,#power1-7,#power1-8,#power1-9,#power1-10,#power1-11,#power1-12'
+            ,data: data1
+            ,showLine: false  //是否开启连接线
+            ,showCheckbox: true  //是否显示复选框
+            ,onlyIconControl:true  // 仅允许节点左侧图标控制展开收缩
+        });
+        tree.render({
+            elem: '#power2'
+            ,data: data1
+            ,showLine: false  //是否开启连接线
+            ,showCheckbox: true  //是否显示复选框
+            ,onlyIconControl:true  // 仅允许节点左侧图标控制展开收缩
+        });
+        tree.render({
+            elem: '#power3'
+            ,data: data1
+            ,showLine: false  //是否开启连接线
+            ,showCheckbox: true  //是否显示复选框
+            ,onlyIconControl:true  // 仅允许节点左侧图标控制展开收缩
+        });
+        tree.render({
+            elem: '#power4'
+            ,data: data1
+            ,showLine: false  //是否开启连接线
+            ,showCheckbox: true  //是否显示复选框
+            ,onlyIconControl:true  // 仅允许节点左侧图标控制展开收缩
+        });
+        tree.render({
+            elem: '#power5'
+            ,data: data1
+            ,showLine: false  //是否开启连接线
+            ,showCheckbox: true  //是否显示复选框
+            ,onlyIconControl:true  // 仅允许节点左侧图标控制展开收缩
+        });
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>海报模板</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">海报模板</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">启用</a></li>
+                    <li><a href="#">停用</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_2">
+            <a class="hbSet" style="margin-right: 20px">分享海报-默认设置</a>
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="60px">序号</th>
+                        <th width="250px" class="left">标题</th>
+                        <th width="100px">优先级</th>
+                        <th width="100px">状态</th>
+                        <th width="150pz">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="60px">1</td>
+                        <td width="250px" class="left">模板1</td>
+                        <td width="100px">1</td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="150px" class="cz_btn">
+                            <button type="button" class="btn-type1 edit_btn">编辑</button>
+                            <button type="button" class="btn-type2 del_btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1 edit_btn">编辑</button>
+                            <button type="button" class="btn-type2 del_btn">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">海报标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="statu1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="statu2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-150" id="hb-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <!--   右侧可视化区域     -->
+        <!--   上传背景图后，在此处显示     -->
+        <div id="Rview" style="background-color: #f0f0f0;background-image: url(../images/img3.png);background-position: center;background-repeat: no-repeat;background-size:100% 100%;position: absolute;left: 630px;top: 20px;z-index: 9;border: 1px solid #ddd;overflow: hidden">
+            <img src="../images/img4.png" alt="" style="height: 400px">
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">分享页背景图</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <div>
+                    <p class="tishi mgL-0">*建议图片尺寸为750px*1500px，不超过500KB</p>
+                    <p class="tishi mgL-0">*可自定义分享页面的整个背景样式，参考右侧示例</p>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">选择默认模板:</span>
+            <div class="a_list_r ">
+                <span class="set-user choseHb mgR-8">选择模板</span>
+                <a class="choseNum">已选择 2 个</a>
+                <span class="tishi">* 选择后，分享海报时将会默认展示已选默认模板</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2 align-left" style="padding-left: 150px"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/slideFixed.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $(function() {
+        //
+        $('#Rview').slideFixed();
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $(".account-box")
+        });
+    });
+
+    $('#chutiyan .add_btn,.edit_btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加海报',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '90%'],
+            content: '海报添加.html' //iframe的url
+        });
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del_btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('您确定要删除该数据？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px',
+                title:'提醒'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+
+    $('#chutiyan .hbSet').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '海报设置',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set2 activity_set',
+            content: $("#hb-sure")
+        });
+    });
+
+    $('#chutiyan .choseHb').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '模板选择',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '海报模板选择.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .choseNum').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '模板选择',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '海报模板选择.html#tab2' //iframe的url
+        });
+    });
+
+</script>
+</body>
+</html>

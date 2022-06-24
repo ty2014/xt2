@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>付费干货-添加</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="padding: 0">
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">所属分类:</span>
+                <div class="a_list_r">
+                    <div class="select-text" style="min-width: 120px;">
+                        <span class="select-txt">分类一</span>
+                        <ul style="display: none;">
+                            <li>分类一</li>
+                            <li>分类二</li>
+                            <li>分类三</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">推荐:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox"  id="ds-fy" class="toggle-button" name="switch">
+                            <label for="ds-fy" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">是</span>
+                                <span class="text off">否</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">优先级:</span>
+                <div class="a_list_r"><input type="text" class="s_width center"><span class="tishi">*优先级越高，文章就越靠前</span></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">作者:</span>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">标题:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">跳转链接:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">点击量:</span>
+                <div class="a_list_r"><input type="text" class="m_width"><span class="tishi">*文章点击量</span></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">标签:</span>
+                <div class="a_list_r"><input type="text"><span class="tishi">*多个标签用‘,’隔开</span></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">封面图:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics"></div>
+                    <!--  上传图片按钮  -->
+                    <div class="file-btn"></div>
+                </div>
+                <p class="tishi mgL-0">*建议尺寸200px*200px；大小不超过100KB</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">描述:</span>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">公开内容:</span>
+            <div class="a_list_r">
+                <!-- 此处放编辑器 -->
+                <textarea style="width: 620px;height: 400px;padding: 10px">此处放编辑器</textarea>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">VIP内容:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox"  id="vip-btn" class="toggle-button" name="switch">
+                        <label for="vip-btn" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开</span>
+                            <span class="text off">关</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*打开后，以下内容仅选中等级可查看。</span>
+            </div>
+        </div>
+        <div class="vip-content" style="display: none">
+            <div class="a_list chose_item">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <label for="pu1" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="pu1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">VIP1</span>
+                    </label>
+                    <label for="pu2" class="checked">
+                        <div class="chose">
+                            <input type="checkbox" name="pic2" id="pu2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">VIP2</span>
+                    </label>
+                    <span class="tishi">*选中的会员，可免费看以下内容</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <!-- 此处放编辑器 -->
+                    <textarea style="width: 620px;height: 400px;padding: 10px">此处放编辑器</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">付费内容:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox"  id="pay-btn" class="toggle-button" name="switch">
+                        <label for="pay-btn" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开</span>
+                            <span class="text off">关</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*打开后，以下内容需付费可查看。</span>
+            </div>
+        </div>
+        <div class="pay-content" style="display: none">
+            <div class="a_list chose_item">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    付费<input type="number" class="m_width center" style="margin: 0 8px;">元，可有资格阅读以下内容；
+                    付费后同时赠送会员
+                    <div class="select-text send-vip" style="min-width: 120px;margin: 0 8px;text-align: center">
+                        <span class="select-txt">默认不赠送</span>
+                        <ul style="display: none;">
+                            <li>默认不赠送</li>
+                            <li>vip</li>
+                            <li>合伙人</li>
+                        </ul>
+                    </div>
+                    <div class="send-cont" style="display: flex;align-items: center;">
+                        <input type="number" class="s_width center" placeholder="7">
+                        <div class="select-text" style="min-width: 60px;margin: 0 8px;">
+                            <span class="select-txt">天</span>
+                            <ul style="display: none;text-align: center;">
+                                <li>天</li>
+                                <li>月</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <!-- 此处放编辑器 -->
+                    <textarea style="width: 620px;height: 400px;padding: 10px">此处放编辑器</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">打赏赠品:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox"  id="dszp" class="toggle-button" name="switch">
+                        <label for="dszp" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开</span>
+                            <span class="text off">关</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*此处为单独配置，权限大于统一配置。</span>
+            </div>
+        </div>
+        <div class="a_list ds-items" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r"><textarea style="width: 620px;height: 400px;padding: 10px;margin-bottom: 10px;">此处放编辑器</textarea></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $(function () {
+        if($('#vip-btn > input').is(':checked')){
+            $('.vip-content').show()
+        }else{
+            $('.vip-content').hide()
+        }
+        if($('#pay-btn > input').is(':checked')){
+            $('.pay-content').show()
+        }else{
+            $('.pay-content').hide()
+        }
+        $('#vip-btn').click(function () {
+            $('.vip-content').toggle()
+        });
+        $('#pay-btn').click(function () {
+            $('.pay-content').toggle()
+        });
+        $('#dszp').click(function () {
+            $('.ds-items').toggle();
+        });
+        $('.send-cont').hide();
+        $('.send-vip li').click(function () {
+            var txt = $(this).text();
+            if(txt === '默认不赠送'){
+                $('.send-cont').hide()
+            }else {
+                $('.send-cont').css('display','flex')
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

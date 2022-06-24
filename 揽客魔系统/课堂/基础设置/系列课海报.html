@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系列课海报配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">系列课海报配置</div>
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">海报背景:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/csimg/hb-bg.png" layer-src="http://cshtml.lkmsxy.com/csimg/hb-bg.png" layer-index="0">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn" style="display: none"></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="tishi mgL-0">
+                    *建议像素320*563，图片小于100KB；
+                    <a class="layer-photos-demo2" style="position: relative;">点击查看示例
+                        <img style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;opacity: 0;width: 100%" src="http://cshtml.lkmsxy.com/my/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E7%BB%9D%E6%B4%BB%E8%AF%BE%E5%A0%82/images/xlkImg.png" layer-src="http://cshtml.lkmsxy.com/my/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E7%BB%9D%E6%B4%BB%E8%AF%BE%E5%A0%82/images/xlkImg.png" layer-index="0"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layer.photos({
+        photos: '.layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+    layer.photos({
+        photos: '.layer-photos-demo2'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+    $('.lxTogg input').click(function () {
+        $('.hide_cont').toggle()
+    });
+    $("#pageTitle").bind("input propertychange",function(event){
+        //console.log($("#pageTitle").val())
+        $('.right_cont p').text($("#pageTitle").val())
+    });
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览量</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan">
+
+<!--
+访问次数    排序字段：访问时长、浏览量、访问深度
+浏览量    排序字段：浏览时长
+访问深度    排序字段：浏览量、累计浏览时长
+-->
+
+<section class="head-slide">
+    <div class="head-slide-item">
+        <img src="../../../images/head.jpg" alt="" class="u_img">
+        <span>小土豆的明细</span>
+    </div>
+    <div class="head-slide-item">
+        <span>时间：</span>
+        <div class="slide-input"><input type="text" class="demo-input w-128" id="test1"></div>至&nbsp;&nbsp;
+        <div class="slide-input"><input type="text" class="demo-input w-128" id="test2"></div>
+    </div>
+</section>
+<section class="table-content">
+    <div class="nav-sibling">
+        <ul class="nav nav-pills nav-radio" role="tablist">
+            <li role="presentation"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">访问次数</a></li>
+            <li role="presentation" class="active"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">浏览量</a></li>
+            <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">访问深度</a></li>
+        </ul>
+        <div class="tab_content">
+            <div class="tab_type_l">
+                <span><i class="fa fa-sort"></i>排序</span>
+                <span><i class="fa fa-download"></i>导出</span>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane" id="tab1">
+            <form action="" class="table_cont">
+                <table border="0" class="table_body">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="150px">访问时间</th>
+                        <th width="100px">访问地域</th>
+                        <th width="80px">访问入口</th>
+                        <th width="150px">分享人昵称</th>
+                        <th width="80px">分享人姓名</th>
+                        <th width="200px">入口页面</th>
+                        <th width="80px">访问时长<i class="sort-icon"></i></th>
+                        <th width="80px">浏览量<i class="sort-icon"></i></th>
+                        <th width="80px">访问深度<i class="sort-icon"></i></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td class="date"><div>2019-08-01 10:00:00</div></td>
+                        <td>四川省-成都市</td>
+                        <td>朋友圈</td>
+                        <td>郑传华【揽客魔】创始人4号</td>
+                        <td>皮卡京</td>
+                        <td><a href="#">https://wx.lkmsxy.com/dl/dl_index__dlh.html?dpid=27</a></td>
+                        <td>00:02:16</td>
+                        <td>10</td>
+                        <td>5</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane active" id="tab2">
+            <form action="" class="table_cont">
+                <table border="0" class="table_body">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">浏览时间</th>
+                        <th width="200px">浏览页面</th>
+                        <th width="100px">页面名称</th>
+                        <th width="100px">浏览时长<i class="sort-icon"></i></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td class="date"><div>2019-08-01 10:00:00</div></td>
+                        <td><a href="#">https://wx.lkmsxy.com/dl/dl_index__dlh.html?dpid=27</a></td>
+                        <td>百万客流爆破营（总裁研讨会）</td>
+                        <td>00:02:16</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab3">
+            <form action="" class="table_cont">
+                <table border="0" class="table_body">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="200px">浏览页面</th>
+                        <th width="100px">页面名称</th>
+                        <th width="100px">浏览量<i class="sort-icon"></i></th>
+                        <th width="100px">累计浏览时长<i class="sort-icon"></i></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td><a href="#">https://wx.lkmsxy.com/dl/dl_index__dlh.html?dpid=27</a></td>
+                        <td>百万客流爆破营（总裁研讨会）</td>
+                        <td>528</td>
+                        <td class="date"><div>10:00:00</div></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="btm_page">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span>1</span>
+                        <span class="active">2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>99</span>
+                    </div>
+                    <div class="now_page">
+                        到第<input type="text" value="1">页<span class="sure">确定</span>
+                    </div>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <div>
+                    <span><b>1 - 10</b></span>
+                    <span>共<b>10</b>条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../../js/plugins/laydate/laydate.js"></script>
+<script src="../../../js/index.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<!-- 时间 -->
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        value: '2019-06-30'
+    });
+    laydate.render({
+        elem: '#test2', //指定元素
+        value: '2019-06-30'
+    });
+</script>
+</body>
+</html>

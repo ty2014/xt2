@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>裂变管理</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan" style="height: auto;">
+
+<div class="page-title">裂变管理</div>
+
+<div class="activity_set activity_set3 w-7">
+    <div class="b-line num4">
+        <div class="a_list">
+            <span class="a_list_l r-title">基本信息</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">活动名称:</span>
+                <div class="a_list_r">装修服务联盟巨惠活动</div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l">负责人:</span>
+                <div class="a_list_r">小土豆</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">活动状态:</span>
+                <div class="a_list_r">进行中</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">活动时间:</span>
+                <div class="a_list_r">2019-12-01 10:00:00 至 2020-01-20 10:00:00</div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">活动价格:</span>
+                <div class="a_list_r">19.00</div>
+            </div>
+            <div class="a_list">
+                <!--  状态自动同步，以下有一种卡券可赠即为开启  -->
+                <span class="a_list_l">卡券转赠:</span>
+                <div class="a_list_r">开启</div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">赠券管理</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list" style="align-items: flex-start">
+            <span class="a_list_l" style="padding-top: 20px;">本店福利:</span>
+            <div class="a_list_r card-lists-cont flex-start">
+                <div class="card-lists">
+                    <!-- 点击可查看详情，不能编辑 -->
+                    <div class="card-item">
+                        <div class="list-head">
+                            <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-27/961c77c7-e8f3-4cc3-9248-d91cd5caecba.jpg" alt=""></div>
+                            <div class="list-txt">
+                                <p class="price">￥2000<span>1张</span></p>
+                                <p class="tit1">装修款抵用金</p>
+                            </div>
+                        </div>
+                        <div class="list-text">
+                            <!--   活动规则只显示一行，超出隐藏     -->
+                            <p class="text-tit">活动规则</p>
+                            <div class="text-msg">
+                                <div class="rule"><p>预定装修抵用，1户限用一张，不可转赠</p></div>
+                                <div>有效期至2019-12-27 12:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item-toggle">
+                        <div class="htmleaf-content">自费转赠
+                            <div class="checkbox2 success" id="card-btn">
+                                <input type="checkbox">
+                                <label></label>
+                            </div>
+                        </div>
+                        <!--  默认为0  -->
+                        <span class="free-card-btn">免赠张数：0</span>
+                    </div>
+                    <div class="card-item-toggle">
+                        <div class="htmleaf-content">激励裂变：<a class="set-none">未设置</a></div>
+                        <!--  默认为0 ,为0时不能点击 -->
+                        <span>达标人数：0</span>
+                    </div>
+                </div>
+                <div class="card-lists">
+                    <!-- 点击可查看详情，不能编辑 -->
+                    <div class="card-item">
+                        <div class="list-head">
+                            <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-27/961c77c7-e8f3-4cc3-9248-d91cd5caecba.jpg" alt=""></div>
+                            <div class="list-txt">
+                                <p class="price">￥2000<span>1张</span></p>
+                                <p class="tit1">装修款抵用金</p>
+                            </div>
+                        </div>
+                        <div class="list-text">
+                            <!--   活动规则只显示一行，超出隐藏     -->
+                            <p class="text-tit">活动规则</p>
+                            <div class="text-msg">
+                                <div class="rule"><p>预定装修抵用，1户限用一张，不可转赠</p></div>
+                                <div>有效期至2019-12-27 12:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item-toggle">
+                        <div class="htmleaf-content">自费转赠
+                            <div class="checkbox2 success" id="card-btn2">
+                                <input type="checkbox" checked>
+                                <label></label>
+                            </div>
+                        </div>
+                        <!--  默认为0  -->
+                        <span class="free-card-btn">免赠张数：0</span>
+                    </div>
+                    <div class="card-item-toggle">
+                        <div class="htmleaf-content">激励裂变：<a class="jllb-num">启用-5人领券</a></div>
+                        <!--  默认为0  -->
+                        <a class="db-num">达标人数：152</a>
+                    </div>
+                </div>
+                <div class="card-lists">
+                    <!-- 点击可查看详情，不能编辑 -->
+                    <div class="card-item">
+                        <div class="list-head">
+                            <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-27/961c77c7-e8f3-4cc3-9248-d91cd5caecba.jpg" alt=""></div>
+                            <div class="list-txt">
+                                <p class="price">￥2000<span>1张</span></p>
+                                <p class="tit1">装修款抵用金</p>
+                            </div>
+                        </div>
+                        <div class="list-text">
+                            <!--   活动规则只显示一行，超出隐藏     -->
+                            <p class="text-tit">活动规则</p>
+                            <div class="text-msg">
+                                <div class="rule"><p>预定装修抵用，1户限用一张，不可转赠</p></div>
+                                <div>有效期至2019-12-27 12:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item-toggle">
+                        <div class="htmleaf-content">自费转赠
+                            <div class="checkbox2 success" id="card-btn3">
+                                <input type="checkbox" checked>
+                                <label></label>
+                            </div>
+                        </div>
+                        <!--  默认为0  -->
+                        <span class="free-card-btn">免赠张数：2</span>
+                    </div>
+                    <div class="card-item-toggle">
+                        <div class="htmleaf-content">激励裂变：<a class="jllb-num">停用-3人领券</a></div>
+                        <!--  默认为0  -->
+                        <a class="db-num">达标人数：152</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list" style="align-items: flex-start">
+            <span class="a_list_l" style="padding-top: 20px;">分店/联盟福利:</span>
+            <div class="a_list_r card-lists-cont flex-start ">
+                <div class="card-lists">
+                    <!-- 点击可查看详情，不能编辑 -->
+                    <div class="card-item">
+                        <div class="list-head">
+                            <div class="list-pic"><img src="//t00img.yangkeduo.com/goods/images/2019-11-27/961c77c7-e8f3-4cc3-9248-d91cd5caecba.jpg" alt=""></div>
+                            <div class="list-txt">
+                                <p class="price">￥2000<span>1张</span></p>
+                                <p class="tit1">装修款抵用金</p>
+                            </div>
+                        </div>
+                        <div class="list-text">
+                            <!--   活动规则只显示一行，超出隐藏     -->
+                            <p class="text-tit">活动规则</p>
+                            <div class="text-msg">
+                                <div class="rule"><p>预定装修抵用，1户限用一张，不可转赠</p></div>
+                                <div>有效期至2019-12-27 12:00</div>
+                            </div>
+                        </div>
+                        <div class="list-text">
+                            <p class="text-tit">适用门店</p>
+                            <div class="text-msg">
+                                <div>美新家政服务有限公司<span>13350021245</span></div>
+                                <div>成都市武侯区花园街道22号</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item-toggle">
+                        <div class="htmleaf-content">自费转赠
+                            <div class="checkbox2 failure" id="fdcard-btn">
+                                <input type="checkbox">
+                                <label></label>
+                            </div>
+                        </div>
+                        <!--  默认为0  -->
+                        <span class="free-card-btn">免赠张数：0</span>
+                    </div>
+                    <div class="card-item-toggle">
+                        <div class="htmleaf-content">激励裂变：<a class="set-none">未设置</a></div>
+                        <!--  默认为0 ,为0时不能点击 -->
+                        <span>达标人数：0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script>
+
+    //  设置免费赠送张数
+    $('#chutiyan .free-card-btn').on('click', function(){
+        layer.confirm('<div>免赠张数：<input type="text" style="width: 80px;text-align: center;border-radius: 0;"/><p class="tishi" style="margin-top: 10px">*可免费赠送好友的卡券张数，赠送成功将不扣自己的卡券</p></div>', {
+            btn: ['取消','确定'], //按钮
+            area: '416px',
+            title:'提示',
+        }, function(index){
+            layer.close(index);
+        }, function(){
+
+        });
+    });
+
+    // 未设置
+    $('#chutiyan .set-none').on('click', function(){
+        layer.confirm('<div>开启卡券赠送，才可设置哦！<p class="tishi">*用好处激励他人为你推广、裂变、引流</p></div>',{
+            btn: ['确定'],
+            area: '416px',
+            title:'提示',
+        }, function(index){
+            layer.close(index);
+        }, function(){
+            //layer.msg('删除成功', {time: 1000});
+        });
+    });
+
+    // 开启失败
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('.failure input').on('click', function(){
+            var that=this;
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('<div>转赠开启失败！<p class="tishi">*当前卡券为1张，购买者需至少保留1张</p></div>',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px',
+                title:'提示'
+                ,yes: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.close(index);
+                }
+                ,btn2: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.close(index);
+                }
+                ,cancel: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.close(index);
+                }
+            });
+        });
+    });
+
+    // 开启成功
+    $('.success input').on('click', function(){
+        var that=this;
+        if($(this).is(':checked')){
+            layer.confirm('<div>是否确定开启该卡券转赠？<p class="tishi">*赠送成功将扣减自己的卡券张数，购买者只剩1张时不再可赠送好友</p></div>',{
+                btn: ['取消','确定'],
+                area: '416px',
+                title:'提示',
+                yes: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.close(index);
+                }
+                ,btn2: function(index, layero){
+                    $(that).prop('checked','true');
+                    layer.msg('开启成功', {time: 1000});
+                }
+                ,cancel: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.close(index);
+                }
+            });
+        }else{
+            layer.confirm('<div>是否确定关闭该卡券转赠？</div>',{
+                btn: ['取消','确定'],
+                area: '416px',
+                title:'提示',
+                yes: function(index, layero){
+                    $(that).prop('checked','true');
+                    layer.close(index);
+                }
+                ,btn2: function(index, layero){
+                    $(that).removeAttr('checked');
+                    layer.msg('开启成功', {time: 1000});
+                }
+                ,cancel: function(index, layero){
+                    $(that).prop('checked','true');
+                    layer.close(index);
+                }
+            });
+        }
+    });
+    $('#chutiyan .card-item').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '卡券详情',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['1100px', '97%'],
+            content: '../预售活动/编辑卡券.html' //iframe的url
+        });
+    });
+    $('#chutiyan .jllb-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '装修款抵用金',    //  标题为变量，为活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '激励裂变.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .db-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '装修款抵用金',    //  标题为变量，为活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '激励裂变.html#tab2' //iframe的url
+        });
+    });
+</script>
+
+
+</body>
+</html>

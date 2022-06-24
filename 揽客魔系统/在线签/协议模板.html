@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>协议模板</title>
+    <link rel="stylesheet" href="../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!--
+
+业务签，任意签：启用中的项目，有关联了协议，即代表协议“使用中”。
+
+注：停用的、指定签，不算入“使用中”
+
+默认按创建顺序排序
+
+-->
+
+<div class="content">
+    <div class="page-title">协议模板</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">使用中</a></li>
+                    <li><a href="#">未使用</a></li>
+                </ul>
+            </div>
+            <p class="tishi2">*请谨慎修改“使用中”的协议，其代表正有项目实时使用该模板；若协议修改较大，建议新建模板，再重新关联项目</p>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">协议ID</th>
+                        <th width="150px">协议名称</th>
+                        <th width="150px">备注说明</th>
+                        <th width="100px">更新人</th>
+                        <th width="150px">更新时间<i class="sort-icon"></i></th>
+                        <th width="100px">总签记录<i class="sort-icon"></i></th>
+                        <th width="100px">有效<i class="sort-icon"></i></th>
+                        <th width="100px">无效<i class="sort-icon"></i></th>
+                        <th width="100px">状态</th>
+                        <th width="100px">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px">11</td>
+                        <!--  pdf预览协议  -->
+                        <td width="150px"><a>3980联创-12期</a></td>
+                        <td width="150px" class="left">百万客流·12期补签</td>
+                        <td width="100px">lkm</td>
+                        <td width="150px" class="date"><div>2019-04-23 10:00:00</div></td>
+                        <td width="100px"><a class="zq-num">100</a></td>
+                        <td width="100px"><a class="yx-num">5</a></td>
+                        <td width="100px"><a class="wx-num">95</a></td>
+                        <!--  业务签，任意签：启用中的项目，有关联了协议，即代表协议“使用中。注：停用的、指定签，不算入“使用中”  -->
+                        <td width="100px" class="statu statu1"><span>使用中</span></td>
+                        <td width="100px" class="cz_btn"><button type="button" class="btn-type1">管理</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>10</td>
+                        <!--  pdf预览协议  -->
+                        <td><a>3980联创</a></td>
+                        <td class="left">百万客流.通用协议</td>
+                        <td>lkm</td>
+                        <td class="date"><div>2019-04-23 10:00:00</div></td>
+                        <td><a class="zq-num">500</a></td>
+                        <td><a class="yx-num">300</a></td>
+                        <td><a class="wx-num">200</a></td>
+                        <td class="statu statu2"><span>未使用</span></td>
+                        <td class="cz_btn"><button type="button" class="btn-type1">管理</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>
+                条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">协议ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">协议名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">使用中</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">未使用</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">更新时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1"><span class="date-line"></span><input type="text" class="layui-input" id="test2"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="sort-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">更新时间:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">总签记录:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">有效:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">无效:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<!--  添加  -->
+<div class="activity_set activity_set2 w-120" id="add-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">协议名称:</div>
+            <div class="a_list_r">
+                <input type="text">
+                <!--  2个状态二显一，提示语同步列表状态；
+                        例：列表中点的是‘使用中’管理进来，则这里就显示‘使用中’的提示
+                  -->
+                <span style="color: #fe6d44;margin-left: 16px;">未使用，暂无项目实时使用该模板~</span>
+                <span style="color: #52b91d;margin-left: 16px;display: none">使用中，有项目正实时使用该模板，请谨慎修改！</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">备注说明:</div>
+            <div class="a_list_r"><input type="text" class="w-620"></div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">到期时间:</div>
+            <div class="a_list_r">签署时间+<input type="text" class="s_width center" style="margin: 0 4px">天<span class="tishi">*设置协议有效天数，即[到期时间]为有效截止时间点</span></div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">协议上传:</div>
+            <div class="a_list_r">
+                <span class="set-user" style="margin-right: 16px;">点击上传word协议</span>
+                <a >已上传：3980联创.docx</a>
+            </div>
+        </div>
+        <!--
+            标签交互：
+            ①甲方需填勾选，甲方可用标签才展示
+            ②鼠标移入现提示语，点击即复制
+            ③[签署时间]，即：签署协议时的时间，展示格式为：2020年12月20日 08:00:00
+            ④[签署时间+365]，即：签署时间+365天的时间点。365可用其他数字替代。
+                例子：该协议自签署后30天内有效，即可用 [签署时间+30] 得到截止日期。
+        -->
+        <div class="a_list">
+            <div class="a_list_l">可用标签:</div>
+            <div class="a_list_r">
+                <div class="remin_end_txt" style="min-width: auto;width: 620px;">
+                    <div class="cont_label" style="display: block;">
+                        <em class="label-tips">[甲方姓名]</em>
+                        <em class="label-tips">[甲方手机号]</em>
+                        <em class="label-tips">[甲方身份证号]</em>
+                        <em class="label-tips">[甲方微信号]</em>
+                        <em class="label-tips">[甲方性别]</em>
+                        <em class="label-tips">[甲方年龄]</em>
+                        <em class="label-tips">[甲方出生日期]</em>
+                        <em class="label-tips">[甲方地址]</em>
+                        <em class="label-tips">[甲方公司]</em>
+                        <em class="label-tips">[甲方职位]</em>
+                        <em class="label-tips">[甲方公司地址]</em>
+                        <em class="label-tips">[甲方邮箱]</em>
+                        <em class="label-tips" data-toggle="tooltip" data-html="true" data-placement="top" title="签署协议时的时间，展示格式为：2020年12月20日 08:00:00" data-original-title="1">[签署时间]</em>
+                        <em class="label-tips" data-toggle="tooltip" data-html="true" data-placement="top" title="展示格式为：2020年12月20日 08:00:00" data-original-title="1">[到期时间]</em>
+                        <p class="tishi2" style="margin-top: 10px">*复制标签放入word协议中，签署协议时将自动生成相应数据，注意：</p>
+                        <p class="tishi2" style="margin-top: 0;">①批量签署，“甲方需填”项必须含有协议内使用的”标签“，否则标签无法正常展示。</p>
+                        <p class="tishi2" style="margin-top: 0;">②业务签署，购买会员/课程动态的可用甲方标签为[甲方姓名][甲方手机号]，系列课暂无可用甲方标签。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../js/dist/js/bootstrap.min.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['650px', '384px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .sort').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '排序',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '460px'],
+            skin: 'account-box',
+            content: $("#sort-account")
+        });
+    });
+
+    $('.label-tips').on('click', function(){
+        var that = this;
+        layer.tips('复制成功', that,{
+            tips: [1, '#0FA6D8'],
+            time: 1000
+        });
+    });
+    $('#chutiyan .add_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '协议模板',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['814px', '565px'],
+            skin: 'activity_set',
+            content: $("#add-sure")
+        });
+        $('.activity_set').css('padding-top','0')
+    });
+
+    $('#chutiyan .zq-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '百万客流爆破营',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '协议模板-详情.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .yx-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '百万客流爆破营',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '协议模板-详情.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .wx-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '百万客流爆破营',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '协议模板-详情.html#tab3' //iframe的url
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分享来源</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan">
+<!--
+    选择了不同的入口选项后，下面的数据都会发生变化
+
+    搜索字段：分享人昵称、分享人姓名
+    排序字段：带入浏览量、带入访客数、带入访问次数、跳出率、平均浏览量、平均访问时长
+-->
+<section class="head-slide">
+    <div class="head-slide-item">
+        <span>时间：</span>
+        <div class="slide-span"><span class="active">今天</span><span>昨天</span><span>最近7天</span><span>最近30天</span></div>
+        <div class="slide-input"><input type="text" class="demo-input" id="test1"></div>
+    </div>
+    <div class="head-slide-item">
+        <span>访客：</span>
+        <div class="slide-span"><span class="active">全部</span><span>新访客</span><span>老访客</span></div>
+    </div>
+</section>
+<section>
+    <ul class="num-view num-view-many">
+        <li>
+            <div>
+                <p>朋友圈</p>
+                <ul>
+                    <li>
+                        <div>
+                            <p>浏览量</p>
+                            <span>125</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>访客数</p>
+                            <span>1,245</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>跳出率</p>
+                            <span>10.8%</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>好友/群</p>
+                <ul>
+                    <li>
+                        <div>
+                            <p>浏览量</p>
+                            <span>2,525</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>访客数</p>
+                            <span>245</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>跳出率</p>
+                            <span>11.8%</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>公众号</p>
+                <ul>
+                    <li>
+                        <div>
+                            <p>浏览量</p>
+                            <span>4,225</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>访客数</p>
+                            <span>1,245</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>跳出率</p>
+                            <span>12.8%</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="table-content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <div class="top_tit">
+                <a href="#"><i class="fa filter-icon"></i><span>全部</span><em class="fa fa-caret-down"></em></a>
+                <ul>
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">朋友圈</a></li>
+                    <li><a href="#">好友/群</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_l">
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span class="sort"><i class="fa fa-sort"></i>排序</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+    </div>
+    <form action="" class="table_cont">
+        <table border="0" class="table_body">
+            <thead>
+            <tr>
+                <th width="50px">序号</th>
+                <th width="80px">分享人头像</th>
+                <th width="120px">分享人昵称</th>
+                <th width="80px">分享人姓名</th>
+                <th width="100px">带入浏览量<i class="sort-icon"></i></th>
+                <th width="100px">带入访客数<i class="sort-icon"></i></th>
+                <th width="100px">带入访问次数<i class="sort-icon"></i></th>
+                <th width="80px">跳出率<i class="sort-icon"></i></th>
+                <th width="80px">平均浏览量<i class="sort-icon"></i></th>
+                <th width="100px">平均访问时长<i class="sort-icon"></i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                <td>小西几</td>
+                <td>锦山</td>
+                <td>2,362</td>
+                <td>362</td>
+                <td>362</td>
+                <td>7.92%</td>
+                <td>2.62</td>
+                <td>00:01:36</td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</section>
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../../js/index.js"></script>
+<script src="../../../js/plugins/laydate/laydate.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<!-- 时间 -->
+<script>
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#test1', //指定元素
+        value: '2019-06-30 至 2019-08-15',
+        range: '至'
+    });
+</script>
+<script>
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['50%', '55%'],
+            content: '搜索.html' //iframe的url
+        });
+    });
+    $('#chutiyan .sort').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '排序',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['50%', '65%'],
+            content: '排序.html' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

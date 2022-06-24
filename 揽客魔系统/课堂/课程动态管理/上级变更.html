@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>上级变更</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+        .bgyz-cont{}
+        .bgyz-cont > img{width: 172px;margin-right: 14px;}
+        .bgyz-cont .texts{}
+        .bgyz-cont .texts div{margin-bottom: 13px;color: #999;}
+        .bgyz-cont .texts div:last-child{margin-bottom: 0;}
+        .bgyz-cont .texts p{font-size: 12px;line-height: 150%;padding-left: 20px;margin-bottom: 3px;}
+        .bgyz-cont .texts p:first-child{font-size: 14px;color: #666;margin-bottom: 4px;padding-left: 0;}
+        .bgyz-cont .texts p img{height: 14px;margin-right: 8px;vertical-align: middle;}
+        .space-toggle .button-label{background-color: #fe6d44;}
+        .space-toggle .toggle-button:checked + label.button-label{background-color: #f7b116;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">上级变更</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <!--  筛选的是上级变更状态  -->
+                <ul>
+                    <!--  筛选的是上级变更状态  -->
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">启用</a></li>
+                    <li><a href="#">停用</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="100px">操作</th>
+                        <th width="100px">上级变更状态</th>
+                        <th width="100px">上级变更记录</th>
+                        <th width="200px">课程动态名称</th>
+                        <th width="100px">课程状态</th>
+                        <th width="100px">优先级</th>
+                        <th width="100px">报名费用</th>
+                        <th width="100px">报名优惠价</th>
+                        <th width="100px">课程安排数量</th>
+                        <th width="100px">报名次数</th>
+                        <th width="100px">报名上课人数</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="100px" class="cz_btn">
+                            <button type="button" class="btn-type1 edit-btn">管理</button>
+                        </td>
+                        <td width="100px" class="statu statu2"><span>停用</span></td>
+                        <td width="100px"><a class="bgjl">2</a></td>
+                        <td width="200px">揽客魔.百万客流爆破营</td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="100px">1</td>
+                        <td width="100px">3980.00</td>
+                        <td width="100px">0.01</td>
+                        <td width="100px"><a >1</a></td>
+                        <td width="100px"><a >3</a></td>
+                        <td width="100px"><a class="bm-person">2</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="cz_btn">
+                            <button type="button" class="btn-type1 edit-btn">管理</button>
+                        </td>
+                        <td class="statu statu1"><span>启用</span></td>
+                        <td><a class="bgjl">2</a></td>
+                        <td>揽客魔.百万客流爆破营</td>
+                        <td class="statu statu1"><span>启用</span></td>
+                        <td>1</td>
+                        <td>3980.00</td>
+                        <td>0.01</td>
+                        <td><a >1</a></td>
+                        <td><a >3</a></td>
+                        <td><a class="bm-person">2</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  上级变更  -->
+<div class="activity_set activity_set2 w-120" id="edit-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">上级变更:</div>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg1" class="toggle-button" name="switch">
+                        <label for="u-togg1" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*开启即用户在报名/签到时，自动更改用户的“上级”，且关联影响至顶级；关闭即不启用功能。</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">变更条件:</div>
+            <div class="a_list_r">
+                <div class="button-label-m space-toggle">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                        <label for="u-togg2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">多次变更</span>
+                            <span class="text off">首次变更</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*首次变更，指所有课程动态中“第一次”触发上级变更。若用户多次触发，只有变更条件为多次变更，才满足可变更上级</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">变更时机:</span>
+            <div class="a_list_r chose_item">
+                <label for="radio2-1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked name="radio2" id="radio2-1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">报名-付款时</span>
+                </label>
+                <label for="radio2-2" class="radio">
+                    <div class="chose">
+                        <input type="radio"  name="radio2" id="radio2-2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">签到-二维码或身份证签到时</span>
+                </label>
+                <span class="tishi">*选择具体什么时候，修改用户的上级（锁定关系）</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">变更原则:</span>
+            <div class="a_list_r bgyz-cont">
+                <img src="images/1.jpg" alt="">
+                <div class="texts">
+                    <div>
+                        <p><img src="images/1.png" alt="">变更原则：</p>
+                        <p>①当推荐人D有分佣时，将A的上级改为D；</p>
+                        <p>②当推荐人D无分佣时，锁定有分佣时（含一人分佣情况），将锁定分佣对象改为A的上级；</p>
+                        <p>③当分佣规则执行完毕，推荐人、锁定人都无分佣时，A的上级将保持不变。</p>
+                    </div>
+                    <div style="color: #fe6d44;">
+                        <p style="color: #fe6d44;"><img src="images/2.png" alt="">注意：</p>
+                        <p>①分公司/代理商若代理该课程，其员工成交将算作“有分佣”来占位； </p>
+                        <p>②如果触发导致将A的“下级”变为其“上级”，系统将不执行上级变更；</p>
+                        <p>③用户上级变更，会关联影响到分佣对象，“新上级”从“下一订单”开始生效。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">课程动态名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">课程状态:</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">上级变更状态:</span>
+            <div class="account-r chose_item">
+                <label for="ly3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="ly4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', '316px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .edit-btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '百万客流爆破营',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['960px', '550px'],
+            skin: 'activity_set',
+            content: $("#edit-sure")
+        });
+        $('.activity_set').css('padding-top','0')
+    });
+
+    $('#chutiyan .bgjl').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '上级变更记录',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '上级变更记录.html' //iframe的url
+        });
+    });
+
+</script>
+</body>
+</html>

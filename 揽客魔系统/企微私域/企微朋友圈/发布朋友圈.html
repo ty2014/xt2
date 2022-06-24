@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布朋友圈</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+
+    </style>
+</head>
+<body id="">
+
+
+<div class="page-title">发布朋友圈</div>
+
+<div class="activity_set activity_set3 w-6">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r">
+                <p class="tishi-bg"><span>提示：</span>管理员可创建客户朋友圈发表任务，成员确认内容后即可发布到朋友圈中，每位客户的朋友圈每个月最多展示4条企业发表的内容，电脑上暂不支持发送企业朋友圈</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">朋友圈类型:</span>
+            <div class="a_list_r chose_item">
+                <label for="pyqtype1" class="radio ">
+                    <div class="chose">
+                        <input type="radio" checked="" name="pyqtype" id="pyqtype1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">企业发表</span>
+                </label>
+                <label for="pyqtype2" class="radio ">
+                    <div class="chose">
+                        <input type="radio" name="pyqtype" id="pyqtype2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">个人发表</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_r r-title">编辑朋友圈</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 18px">发表成员:</span>
+            <div class="a_list_r">
+                <div style="display: flex;flex-direction: column;align-items: flex-start;">
+                    <div class="select-text" style="min-width: 150px">
+                        <span class="select-txt">请选择账号</span>
+                        <ul style="display: none;">
+                            <li>
+                                <div class="null-msg">
+                                    <img src="../../images/null-msg.png" alt="">
+                                    <p>暂无数据</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="hasChoseList">
+                        <li><img src="../../images/null.jpg" alt="">若水【华厚】社群运营官<i></i></li>
+                        <li><img src="../../images/null.jpg" alt="">蒋宇工作号<i></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">可见的客户:</span>
+            <div class="a_list_r">
+                <label for="zh1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="zh" id="zh1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">全部客户</span>
+                </label>
+                <label for="zh2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="zh" id="zh2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">筛选客户</span>
+                </label>
+                <span class="tishi">*将发给已选成员的<b style="color: red">0</b>个客户朋友圈中</span>
+            </div>
+        </div>
+        <div class="a_list sortCont" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div class="activity_set activity_set3">
+                    <div class="a_list">
+                        <span class="a_list_l">性别:</span>
+                        <div class="a_list_r">
+                            <label for="sex1" class="checked">
+                                <div class="chose">
+                                    <input type="checkbox" name="sex" id="sex1">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">男</span>
+                            </label>
+                            <label for="sex2" class="checked">
+                                <div class="chose">
+                                    <input type="checkbox" name="sex" id="sex2">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">女</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">所在群聊:</span>
+                        <div class="a_list_r">
+                            <span class="set-user">添加群聊</span><a class="tishi">已选择2个</a>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">添加时间:</span>
+                        <div class="a_list_r">
+                            <input type="text" class="layui-input" id="test1" placeholder="开始时间">
+                            <span class="date-line"></span>
+                            <input type="text" class="layui-input" id="test1" placeholder="结束时间">
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">标签:</span>
+                        <div class="a_list_r">
+                            <span class="set-user addTip">选择标签</span><a class="tishi addTip">已选择2个</a>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">客户阶段:</span>
+                        <div class="a_list_r">
+                            <div class="select-text showType2" style="min-width: 200px;">
+                                <span class="select-txt"></span>
+                                <ul>
+                                    <li>客户认识阶段</li>
+                                    <li>客户了解阶段</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l" style="align-items: flex-start;padding-top: 18px;">排除客户:</span>
+                        <div class="a_list_r">
+                            <div>
+                                <div class="flex alignItemC">
+                                    <span class="set-user addTip">选择标签</span><a class="tishi addTip">已选择2个</a>
+                                </div>
+                                <p class="tishi mgL-0 mgT-10">* 可根据标签选择客户，群发时将不会发送给该标签内的客户。若选择了排除的客户，需较长时间创建本条群发消息哦~</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 16px;">消息内容1:</span>
+            <div class="a_list_r" style="align-items: flex-start">
+                <div class="remin_end_txt">
+                    <div class="cont_label">
+                        <span class="emoji_btn" data-toggle="tooltip" data-placement="top" title="表情"></span>
+                        <div class="faceDiv" style="display: none;"></div>
+                    </div>
+                    <textarea class="txt_cont Input_text" contenteditable="true" placeholder="请输入消息内容"></textarea>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="a_list">
+                <span class="a_list_l">消息内容2:</span>
+                <div class="a_list_r typeItem">
+                    <label for="type1" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked="" name="type" id="type1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">图片</span>
+                    </label>
+                    <label for="type2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="type" id="type2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">视频</span>
+                    </label>
+                    <label for="type3" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="type" id="type3">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">图文</span>
+                    </label>
+                </div>
+            </div>
+            <!--  图片消息  -->
+            <div class="typeCont1">
+                <div class="a_list ">
+                    <span class="a_list_l"></span>
+                    <div class="a_list_r">
+                        <!-- 图片宽高自适应：添加类名 auto -->
+                        <!--  可多张图片上传，最多9张  -->
+                        <ul class="FraUpload_imglist auto layer-photos-demo">
+                            <li class="img_item" style="display: none">
+                                <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2220087570,1112216917&amp;fm=26&amp;gp=0.jpg" layer-src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2220087570,1112216917&amp;fm=26&amp;gp=0.jpg" layer-index="0">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                        <p class="tishi">*因企业微信限制，图片长宽建议不超过1440x1080，大小不超过10M</p>
+                    </div>
+                </div>
+            </div>
+            <!--  视频消息  -->
+            <div class="typeCont2" style="display: none">
+                <div class="a_list">
+                    <span class="a_list_l"></span>
+                    <div class="a_list_r">
+                        <div class="file-video">
+                            <!--  上传视频按钮 ,上传视频成功后隐藏 -->
+                            <div class="file-video-btn"><input type="file"><img src="../../images/yjpz-6.png" alt="">点击上传视频</div>
+                            <!--  视频上传成功区域  -->
+                            <div class="file-video-cont">
+                                <span class="del-video">删除</span>
+                                <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%" poster="//puui.qpic.cn/qqvideo_ori/0/p0703okprqf_496_280/0" data-setup="{}">
+                                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="file-video-tips">
+                            <!--  视频上传三种状态  -->
+                            <span class="video-tips"><img src="../../images/video1.png" alt="">视频上传格式不支持</span>
+                            <span class="video-tips"><img src="../../images/video3.png" alt="">视频上中，请稍后</span>
+                            <span class="video-tips"><img src="../../images/video2.png" alt="">视频上传成功</span>
+                            <p class="tishi">*上传视频广告,请上传大小在10M以内、格式为mp4的视频，请勿上传违反法律法规的视频</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  图文消息  -->
+            <div class="typeCont3" style="display: none">
+                <div class="a_list ">
+                    <span class="a_list_l"></span>
+                    <div class="a_list_r">
+                        <div class="txtAndPic">
+                            <div>
+                                <ul class="FraUpload_imglist layer-photos-demo">
+                                    <li class="img_item" style="display: none;width: 116px;height: 116px;">
+                                        <img src="" layer-index="7">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                    <li class="file-btn" style="width: 116px;height: 116px;"></li>
+                                </ul>
+                                <div>
+                                    <div class="showNumBox">
+                                        <input type="text" placeholder="链接标题" maxlength="64" class="w-620">
+                                        <span class="num">0/64</span>
+                                    </div>
+                                    <div class="showNumBox" style="margin-top: 10px;">
+                                        <input type="text" placeholder="选填，摘要会在订阅号消息、转发链接等文章外的场景显露，帮助读者快速了解内容，如不填写则默认抓取正文前54字" maxlength="120" class="w-620">
+                                        <span class="num">0/120</span>
+                                    </div>
+                                    <div style="margin-top: 10px;">
+                                        <input type="text" placeholder="图文链接" class="w-620">
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tishi">*建议图片尺寸为200px*200px，比例1：1 ，JPG、PNG格式，图片小于50KB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <span class="a_list_r r-title">高级设置</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">自动打标签:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper ">
+                        <input type="checkbox" id="cont1-togg1" class="toggle-button" name="switch">
+                        <label for="cont1-togg1" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tip-cont" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                   <div style="display: flex;align-items: flex-start">
+                       <div style="display: flex;align-items: center;padding-top: 1px">
+                           <label for="tab1" class="checked mgR-10">
+                               <div class="chose">
+                                   <input type="checkbox" name="gz" id="tab1">
+                                   <span class="checked-bg"></span>
+                               </div>
+                           </label>
+                           <p>3天内点赞，</p>
+                           <a class="addTip">添加标签</a>
+                       </div>
+                       <div class="mgL-20">
+                           <div style="display: flex;align-items: flex-start;">
+                               <span class="mgR-10" style="padding-top: 6px;">[消费分类]:</span>
+                               <div class="qwTips">
+                                   <span class="tiem on">战略帮扶</span>
+                                   <span class="tiem on">联创帮扶</span>
+                               </div>
+                           </div>
+                           <div style="display: flex;align-items: flex-start;">
+                               <span class="mgR-10" style="padding-top: 6px;">[消费分类]:</span>
+                               <div class="qwTips">
+                                   <span class="tiem on">战略帮扶</span>
+                                   <span class="tiem on">联创帮扶</span>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <div style="display: flex;align-items: flex-start">
+                        <div style="display: flex;align-items: center;padding-top: 1px">
+                            <label for="tab2" class="checked mgR-10">
+                                <div class="chose">
+                                    <input type="checkbox" name="gz" id="tab2">
+                                    <span class="checked-bg"></span>
+                                </div>
+                            </label>
+                            <p>3天内评论，</p>
+                            <a class="addTip">添加标签</a>
+                        </div>
+                        <div class="mgL-20">
+                            <div style="display: flex;align-items: flex-start;">
+                                <span class="mgR-10" style="padding-top: 6px;">[消费分类]:</span>
+                                <div class="qwTips">
+                                    <span class="tiem on">战略帮扶</span>
+                                    <span class="tiem on">联创帮扶</span>
+                                </div>
+                            </div>
+                            <div style="display: flex;align-items: flex-start;">
+                                <span class="mgR-10" style="padding-top: 6px;">[消费分类]:</span>
+                                <div class="qwTips">
+                                    <span class="tiem on">战略帮扶</span>
+                                    <span class="tiem on">联创帮扶</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">发布方式:</span>
+            <div class="a_list_r">
+                <label for="time1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="time" id="time1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">立即发送</span>
+                </label>
+                <label for="time2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="time" id="time2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">定时发送</span>
+                </label>
+            </div>
+        </div>
+        <div class="a_list timeCont" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <input type="text" class="layui-input" id="test1" placeholder="请选择时间" lay-key="1">
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div class="msgTsCont">
+                    <p class="tit">企业发表朋友圈的操作流程<span class="showAll">展开</span></p>
+                    <ul>
+                        <li>1、创建完朋友圈后，员工将在企业微信上收到【客户朋友圈】新消息通知</li>
+                        <li>2、员工点击【客户朋友圈】，点击待发送的朋友圈，可一键将朋友圈内容发表</li>
+                        <li><img src="../images/wx_20220408154105.png" alt="" style="margin-top: 10px;"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">通知成员发送</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/emoji.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('.addTip').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '436px'],
+            content: '../添加标签.html' //iframe的url
+        });
+    });
+
+    $('#cont1-togg1').click(function () {
+        $('.tip-cont').toggle()
+    })
+    $('#zh1').click(function () {
+        $('.sortCont').hide()
+    })
+    $('#zh2').click(function () {
+        $('.sortCont').show()
+    })
+    $('#time1').click(function () {
+        $('.timeCont').hide()
+    })
+    $('#time2').click(function () {
+        $('.timeCont').show()
+    })
+
+    $('.typeItem label').each(function () {
+        let index = $(this).index();
+        $(this).click(function () {
+            $(this).parent().parent().siblings().hide();
+            $('.typeCont'+(index+1)).show();
+        })
+    })
+
+    $('.msgTsCont .showAll').on('click',function (){
+        $(this).toggleClass('on');
+
+        if($(this).hasClass('on')){
+            $(this).text('收起');
+            $(this).parent().siblings('ul').height('auto');
+        }else{
+            $(this).text('展开');
+            $(this).parent().siblings('ul').height('60px');
+        }
+    })
+
+
+
+</script>
+</body>
+</html>

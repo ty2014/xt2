@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天超时设置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="content">
+    <div class="page-title">企微朋友圈</div>
+
+    <div class="activity_set activity_set3 w-100">
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">自动打标签:</span>
+                <div class="a_list_r">
+                    <div class="toggle-button-wrapper ">
+                        <input type="checkbox" id="cont1-togg1" class="toggle-button" name="switch">
+                        <label for="cont1-togg1" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="tip-cont" style="display: none">
+                <div class="a_list">
+                    <span class="a_list_l"></span>
+                    <div class="a_list_r">
+                        <div style="display: flex;align-items: flex-start">
+                            <div style="display: flex;align-items: center;padding-top: 3px">
+                                <p>累计点赞<input type="number" class="s_width m-height center mg-4" value="2">次及以上，</p>
+                                <a class="addTip">添加标签</a>
+                            </div>
+                            <div class="mgL-20">
+                                <div style="display: flex;align-items: flex-start;">
+                                    <span class="mgR-10" style="padding-top: 6px;">[消费分类]:</span>
+                                    <div class="qwTips">
+                                        <span class="tiem on">战略帮扶</span>
+                                        <span class="tiem on">联创帮扶</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex;align-items: flex-start;">
+                                    <span class="mgR-10" style="padding-top: 6px;">[消费分类]:</span>
+                                    <div class="qwTips">
+                                        <span class="tiem on">战略帮扶</span>
+                                        <span class="tiem on">联创帮扶</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l"></span>
+                    <div class="a_list_r">
+                        <div style="display: flex;align-items: flex-start">
+                            <div style="display: flex;align-items: center;padding-top: 3px">
+                                <p>累计评论<input type="number" class="s_width m-height center mg-4" value="2">次及以上，</p>
+                                <a class="addTip">添加标签</a>
+                            </div>
+                            <div class="mgL-20">
+                                <div style="display: flex;align-items: flex-start;">
+                                    <span class="mgR-10" style="padding-top: 6px;">[消费分类]:</span>
+                                    <div class="qwTips">
+                                        <span class="tiem on">战略帮扶</span>
+                                        <span class="tiem on">联创帮扶</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex;align-items: flex-start;">
+                                    <span class="mgR-10" style="padding-top: 6px;">[消费分类]:</span>
+                                    <div class="qwTips">
+                                        <span class="tiem on">战略帮扶</span>
+                                        <span class="tiem on">联创帮扶</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('.addTip').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '436px'],
+            content: '../添加标签.html' //iframe的url
+        });
+    });
+
+
+    $('#cont1-togg1').click(function () {
+        $('.tip-cont').toggle()
+    })
+
+</script>
+</body>
+</html>

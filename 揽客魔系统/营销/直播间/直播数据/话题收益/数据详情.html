@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据详情</title>
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto">
+
+<!-- Nav tabs -->
+<ul class="head-tab3">
+    <li class="active current3"><a href="#tab1">直播场次</a></li>
+    <li><a href="#tab2">总访客</a></li>
+    <li><a href="#tab3">话题订单</a></li>
+    <li><a href="#tab4">主题订单</a></li>
+    <li><a href="#tab5">商品订单</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content3 content2">
+    <div class="tab-pane active" id="tab1">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search zbcc-search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">待播</a></li>
+                        <li><a href="#">在播</a></li>
+                        <li><a href="#">已播</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="150px">所属话题</th>
+                            <th width="100px">直播ID</th>
+                            <th width="80px">主图</th>
+                            <th width="150px">直播主题</th>
+                            <th width="150pz">预计开始<i class="sort-icon"></i></th>
+                            <th width="80px">主播头像</th>
+                            <th width="150px">主播昵称</th>
+                            <th width="100pz">管理员</th>
+                            <th width="100pz">直播回放</th>
+                            <th width="100pz">观看权限</th>
+                            <th width="100pz">预备商品</th>
+                            <th width="100pz">观看人次<i class="sort-icon"></i></th>
+                            <th width="100pz">状态</th>
+                            <th width="100pz">直播链接</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="150px" class="left"><a href="">职场形象包装</a></td>
+                            <td width="100px">100</td>
+                            <td width="80px" class="squ-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left">职场形象包装</td>
+                            <td width="150px" class="date notExpired"><div>2020-08-01 10:00:01</div></td>
+                            <td width="80px" class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px"><a class="admin-num">2</a></td>
+                            <td width="100px">是</td>
+                            <td width="100px">可免费试看</td>
+                            <td width="100px"><a class="sp-num">10</a></td>
+                            <td width="100px"><a class="gk-num">0</a></td>
+                            <td width="100px" class="statu statu1"><span>启用</span></td>
+                            <td width="100px" class="m-pic">
+                                <div class="m-doub-pic">
+                                    <img src="../../../../images/1.png" alt="">
+                                    <img src="../../../../images/2.png" alt="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left"><a href="">职场形象包装</a></td>
+                            <td></td>
+                            <td class="squ-pic"></td>
+                            <td class="left"></td>
+                            <td class="date"><div>2020-08-01 10:00:01</div></td>
+                            <td class="cover-pic"></td>
+                            <td class="left"></td>
+                            <td></td>
+                            <td></td>
+                            <td>试看：0.01</td>
+                            <td></td>
+                            <td></td>
+                            <td class="statu statu2"></td>
+                            <td class="m-pic"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="left"><a href="">职场形象包装</a></td>
+                            <td></td>
+                            <td class="squ-pic"></td>
+                            <td class="left"></td>
+                            <td class="date"></td>
+                            <td class="cover-pic"></td>
+                            <td class="left"></td>
+                            <td></td>
+                            <td></td>
+                            <td>购话题解锁</td>
+                            <td></td>
+                            <td></td>
+                            <td class="statu statu2"></td>
+                            <td class="m-pic"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search total-search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+                <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+                <span class="tishi">总访客：180人；新访客：100人；直播观众：80人；回看用户：42人</span>
+                <i class="tips" style="margin-left: 20px;"></i>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">用户ID</th>
+                            <th width="80px">头像</th>
+                            <th width="150px">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="100px">会员等级</th>
+                            <!--  新老访客：是否首次观看本场主播  -->
+                            <th width="100px">新老访客</th>
+                            <th width="120px">本场首观时间</th>
+                            <th width="120px">累计观看时长</th>
+                            <th width="100px">访问次数</th>
+                            <th width="100px">观看直播</th>
+                            <th width="100px">回看直播</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px">57487</td>
+                            <td width="80px" class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a href="">小西</a></td>
+                            <td width="100px">蒋雨</td>
+                            <td width="100px">VIP</td>
+                            <td width="100px">老访客</td>
+                            <td width="120px" class="date"><div>2020-07-31 10:01:00</div></td>
+                            <td width="120px">01:20:00</td>
+                            <td width="100px"><a >2</a></td>
+                            <td width="100px">是</td>
+                            <td width="100px">是</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="cover-pic"></td>
+                            <td class="left"></td>
+                            <td></td>
+                            <td></td>
+                            <td>新访客</td>
+                            <td class="date"></td>
+                            <td></td>
+                            <td></td>
+                            <td>否</td>
+                            <td>否</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab3">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search from-search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">未支付</a></li>
+                        <li><a href="#">已支付</a></li>
+                    </ul>
+                </div>
+                <!--  话题收入：只展示已支付的订单  -->
+                <p class="tishi">收入：100.00</p>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">用户ID</th>
+                            <th width="80px">头像</th>
+                            <th width="150px" class="left">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="100px">购买天数</th>
+                            <th width="100px">金额</th>
+                            <th width="100px">状态</th>
+                            <th width="150px">报名时间</th>
+                            <th width="150px">支付时间</th>
+                            <th width="150px">订单编号</th>
+                            <th width="100px">推荐人头像</th>
+                            <th width="150px" class="left">推荐人昵称</th>
+                            <th width="100px">推荐人姓名</th>
+                            <th width="100px">锁定人头像</th>
+                            <th width="150px" class="left">锁定人昵称</th>
+                            <th width="100px">锁定人姓名</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px">57487</td>
+                            <td width="80px" class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px">蒋雨</td>
+                            <td width="100px">10</td>
+                            <td width="100px">998.00</td>
+                            <td width="100px" class="statu statu2"><span>未支付</span></td>
+                            <td width="150px" class="date"><div>2020-07-31 10:01:00</div></td>
+                            <td width="150px">-</td>
+                            <td width="150px">2020083100001</td>
+                            <td width="100px">-</td>
+                            <td width="150px" class="left">-</td>
+                            <td width="100px">-</td>
+                            <td width="100px">-</td>
+                            <td width="150px" class="left">-</td>
+                            <td width="100px">-</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>45879</td>
+                            <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小呀么小西几</a></td>
+                            <td>唐唐</td>
+                            <td>10</td>
+                            <td>998.00</td>
+                            <td class="statu statu1"><span>已支付</span></td>
+                            <td class="date"><div>2020-07-31 10:01:00</div></td>
+                            <td class="date"><div>2020-07-31 10:01:00</div></td>
+                            <td>2020083100001</td>
+                            <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab4">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search from-search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">未支付</a></li>
+                        <li><a href="#">已支付</a></li>
+                    </ul>
+                </div>
+                <!--  主题收入：只展示已支付的订单  -->
+                <p class="tishi">收入：100.00</p>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="150px" class="left">直播主题</th>
+                            <th width="100px">用户ID</th>
+                            <th width="80px">头像</th>
+                            <th width="150px" class="left">昵称</th>
+                            <th width="100px">姓名</th>
+                            <th width="100px">金额</th>
+                            <th width="100px">状态</th>
+                            <th width="150px">报名时间</th>
+                            <th width="150px">支付时间</th>
+                            <th width="150px">订单编号</th>
+                            <th width="100px">推荐人头像</th>
+                            <th width="150px" class="left">推荐人昵称</th>
+                            <th width="100px">推荐人姓名</th>
+                            <th width="100px">锁定人头像</th>
+                            <th width="150px" class="left">锁定人昵称</th>
+                            <th width="100px">锁定人姓名</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="150px" class="left"><a href="">主题名称1111</a></td>
+                            <td width="100px">57487</td>
+                            <td width="80px" class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px">蒋雨</td>
+                            <td width="100px">998.00</td>
+                            <td width="100px" class="statu statu2"><span>未支付</span></td>
+                            <td width="150px" class="date"><div>2020-07-31 10:01:00</div></td>
+                            <td width="150px" class="date">-</td>
+                            <td width="150px">2020083100001</td>
+                            <td width="100px">-</td>
+                            <td width="150px" class="left">-</td>
+                            <td width="100px">-</td>
+                            <td width="100px">-</td>
+                            <td width="150px" class="left">-</td>
+                            <td width="100px">-</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left"><a href="">主题名称2222</a></td>
+                            <td>45879</td>
+                            <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小呀么小西几</a></td>
+                            <td>唐唐</td>
+                            <td>998.00</td>
+                            <td class="statu statu1"><span>已支付</span></td>
+                            <td class="date"><div>2020-07-31 10:01:00</div></td>
+                            <td class="date"><div>2020-07-31 10:01:00</div></td>
+                            <td>2020083100001</td>
+                            <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                            <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td>蒋雨</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab5">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search from-search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">未支付</a></li>
+                        <li><a href="#">已支付</a></li>
+                    </ul>
+                </div>
+                <!--  商品收入：只展示已支付的订单  -->
+                <p class="tishi">收入：100.00</p>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="150px" class="left">直播主题</th>
+                            <th width="100px">商品类型</th>
+                            <th width="150px" class="left">商品名称</th>
+                            <th width="100px">用户ID</th>
+                            <th width="80px">头像</th>
+                            <th width="150px" class="left">昵称</th>
+                            <th width="100px">预留信息</th>
+                            <th width="150px" class="left">说明</th>
+                            <th width="100px">支付金额</th>
+                            <th width="100px">状态</th>
+                            <th width="150px">报名时间</th>
+                            <th width="150px">支付时间</th>
+                            <th width="150px">订单编号</th>
+                            <th width="100px">推荐人头像</th>
+                            <th width="150px" class="left">推荐人昵称</th>
+                            <th width="100px">锁定人头像</th>
+                            <th width="150px" class="left">锁定人昵称</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="150px" class="left"><a href="">主题名称1111</a></td>
+                            <td width="100px">会员</td>
+                            <td width="150px" class="left"></td>
+                            <td width="100px">57487</td>
+                            <td width="80px" class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td width="150px" class="left"><a href="">小土豆</a></td>
+                            <td width="100px"><a class="ylmsg1">蒋雨</a></td>
+                            <td width="150px" class="left">买1月赠1月</td>
+                            <td width="100px">10.00</td>
+                            <td width="100px" class="statu statu2"><span>未支付</span></td>
+                            <td width="150px" class="date"><div>2020-07-31 10:01:00</div></td>
+                            <td width="150px" class="date">-</td>
+                            <td width="150px">2020083100001</td>
+                            <td width="100px">-</td>
+                            <td width="150px" class="left">-</td>
+                            <td width="100px">-</td>
+                            <td width="150px" class="left">-</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="left"><a href="">主题名称2222</a></td>
+                            <td>课程动态</td>
+                            <td class="left"></td>
+                            <td>45879</td>
+                            <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小呀么小西几</a></td>
+                            <td><a class="ylmsg2">唐唐</a></td>
+                            <td class="left">席位：黄金席位-1个</td>
+                            <td>10.00</td>
+                            <td class="statu statu1"><span>已支付</span></td>
+                            <td class="date"><div>2020-07-31 10:01:00</div></td>
+                            <td class="date"><div>2020-07-31 10:01:00</div></td>
+                            <td>2020083100001</td>
+                            <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                            <td class="cover-pic"><img src="../../../../images/head.jpg" alt=""></td>
+                            <td class="left"><a href="">小土豆</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="left"><a href=""></a></td>
+                            <td>系列课</td>
+                            <td class="left"></td>
+                            <td></td>
+                            <td class="cover-pic"></td>
+                            <td class="left"></td>
+                            <td><a href=""></a></td>
+                            <td class="left"></td>
+                            <td></td>
+                            <td class="statu statu1"></td>
+                            <td class="date"></td>
+                            <td class="date"></td>
+                            <td></td>
+                            <td class="cover-pic"></td>
+                            <td class="left"></td>
+                            <td class="cover-pic"></td>
+                            <td class="left"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  直播场次搜索  -->
+<div class="account-box" id="zbcc-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">直播ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">直播主题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">所属话题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">主播昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">观看权限:</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">公开免费</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">付费/指定</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="cj1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="cj2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="cj" id="cj2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">预计开始:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  总访客搜索  -->
+<div class="account-box" id="total-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">新老访客:</span>
+            <div class="account-r chose_item">
+                <label for="fk1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fk" id="fk1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">新访客</span>
+                </label>
+                <label for="fk2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fk" id="fk2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">老访客</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员等级:</span>
+            <div class="account-r chose_item">
+                <label for="vip2-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip2" id="vip2-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="vip2-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip2" id="vip2-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="vip2-3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip2" id="vip2-3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="vip2-4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip2" id="vip2-4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="vip2-5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip2" id="vip2-5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">观看直播:</span>
+            <div class="account-r chose_item">
+                <label for="gk1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gk" id="gk1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="gk2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gk" id="gk2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">回看直播:</span>
+            <div class="account-r chose_item">
+                <label for="hk1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="hk" id="hk1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="hk2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="hk" id="hk2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">本场首观时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test3" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test4" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  新访客搜索  -->
+<div class="account-box" id="new-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">推荐人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">新老访客:</span>
+            <div class="account-r chose_item">
+                <label for="fk2-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fk2" id="fk2-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">新访客</span>
+                </label>
+                <label for="fk2-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fk2" id="fk2-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">老访客</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员等级:</span>
+            <div class="account-r chose_item">
+                <label for="vip3-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip3" id="vip3-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="vip3-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip3" id="vip3-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="vip3-3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip3" id="vip3-3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="vip3-4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip3" id="vip3-4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="vip3-5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip3" id="vip3-5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">观看直播:</span>
+            <div class="account-r chose_item">
+                <label for="gk2-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gk" id="gk2-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="gk2-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gk" id="gk2-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">回看直播:</span>
+            <div class="account-r chose_item">
+                <label for="hk2-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="hk" id="hk2-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="hk2-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="hk" id="hk2-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">本场首观时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test5" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test6" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  访客来源搜索  -->
+<div class="account-box" id="from-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">推荐人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">新老访客:</span>
+            <div class="account-r chose_item">
+                <label for="fk4-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fk4" id="fk4-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">新访客</span>
+                </label>
+                <label for="fk4-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fk4" id="fk4-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">老访客</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员等级:</span>
+            <div class="account-r chose_item">
+                <label for="vip4-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip4" id="vip4-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="vip4-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip4" id="vip4-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="vip4-3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip4" id="vip4-3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="vip4-4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip4" id="vip4-4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="vip4-5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip4" id="vip4-5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">观看直播:</span>
+            <div class="account-r chose_item">
+                <label for="gk3-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gk" id="gk3-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="gk3-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gk" id="gk3-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">回看直播:</span>
+            <div class="account-r chose_item">
+                <label for="hk3-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="hk" id="hk3-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="hk3-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="hk" id="hk3-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">本场首观时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test7" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test8" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  分享搜索  -->
+<div class="account-box" id="share-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">用户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">推荐人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">新老观客:</span>
+            <div class="account-r chose_item">
+                <label for="fk5-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fk5" id="fk5-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">新观客</span>
+                </label>
+                <label for="fk5-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fk5" id="fk5-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">老观客</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员等级:</span>
+            <div class="account-r chose_item">
+                <label for="vip5-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip5" id="vip5-1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="vip5-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip5" id="vip5-2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="vip5-3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip5" id="vip5-3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="vip5-4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip5" id="vip5-4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="vip5-5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="vip5" id="vip5-5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">本场首观时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test9" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test10" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<!--  预留信息-会员  -->
+<div class="activity_set activity_set2" id="ylmsg1-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">姓名:</div>
+            <div class="a_list_r">蒋雨</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">手机:</div>
+            <div class="a_list_r">15935648795</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">备注:</div>
+            <div class="a_list_r">没有备注</div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  预留信息-课程动态  -->
+<div class="activity_set activity_set2" id="ylmsg2-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_l">姓名:</div>
+            <div class="a_list_r">蒋雨</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">手机:</div>
+            <div class="a_list_r">15935648795</div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../../../js/jquery.min.js"></script>
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/myjs.js"></script>
+<script>
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.head-tab3 li');
+    var con = $('.tab-content3 > .tab-pane');
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active current3');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active current3');
+            $(con[i]).addClass('active');
+        }
+    }
+
+    /* 表格中显示二维码样式 */
+    $('.m-doub-pic').on('click',function (e) {
+        e.stopPropagation();
+        console.log(e.pageX + '--' + e.pageY);
+        var html="";
+        html+=`<div class="table-eq">
+                <div class="show-pic">
+                    <em></em>
+                    <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                    <div><input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx"><span>复制</span></div>
+                </div>
+            </div>`;
+        $('.table-eq').remove();
+        $('body').append(html);
+        $(".table-eq").css({
+            "left": e.pageX-180,
+            "top": e.pageY+20,
+        });
+        $('.show-pic').click(function (e) {
+            e.stopPropagation();
+            $(this).show();
+        });
+    });
+
+    // 观看人次搜索
+    $('#chutiyan .zbcc-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '506px'],
+            skin: 'account-box',
+            content: $("#zbcc-account")
+        });
+    });
+    // 总访客搜索
+    $('#chutiyan .total-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '524px'],
+            skin: 'account-box',
+            content: $("#total-account")
+        });
+    });
+    // 总访客搜索
+    $('#chutiyan .new-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '524px'],
+            skin: 'account-box',
+            content: $("#new-account")
+        });
+    });
+    // 访客来源搜索
+    $('#chutiyan .from-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '524px'],
+            skin: 'account-box',
+            content: $("#from-account")
+        });
+    });
+    // 分享搜索
+    $('#chutiyan .share-search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '524px'],
+            skin: 'account-box',
+            content: $("#share-account")
+        });
+    });
+
+
+    $('#chutiyan .tips').on('mouseenter',function(){
+        this.index =layer.tips('① 总访客：访问过本场直播页面的用户</br>' +
+            '② 新访客：在店铺内从未观看、回看过直播的用户</br>' +
+            '③ 直播观众：在主播直播时进入观看的用户</br>' +
+            '④ 回看用户：直播结束后，有回看视频的用户', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:600
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+    $('#chutiyan .ylmsg1').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '预留信息',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', 'auto'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#ylmsg1-sure")
+        });
+    });
+    $('#chutiyan .ylmsg2').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '预留信息',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['500px', 'auto'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#ylmsg2-sure")
+        });
+    });
+</script>
+
+</body>
+</html>

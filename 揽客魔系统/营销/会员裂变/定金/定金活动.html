@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>拼团活动</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+
+<div class="content">
+    <div class="page-title">拼团活动</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+            <span class="tab-tips"><i class="del-tips2"></i>清空排序</span>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>添加</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="60px" >序号</th>
+                        <th width="100px" >商家ID</th>
+                        <th width="150px" class="left">商家名称</th>
+                        <th width="80px">主图</th>
+                        <th width="250px" class="left">活动名称</th>
+                        <th width="100px">负责人</th>
+                        <th width="150px">开始时间</th>
+                        <th width="150px">结束时间</th>
+                        <th width="100px">活动状态</th>
+                        <th width="100px">主页展示</th>
+                        <th width="120px">返佣比例</th>
+                        <th width="100px">预售价</th>
+                        <th width="100px">定金/抵扣金</th>
+                        <th width="100px">定金翻倍</th>
+                        <th width="80px">福利卡券</th>
+                        <th width="80px">剩余库存<i class="sort-icon"></i></th>
+                        <th width="80px">定金订单</th>
+                        <th width="80px">待支付</th>
+                        <th width="80px">创建来源</th>
+                        <th width="80px">创建人</th>
+                        <th width="150px">创建时间</th>
+                        <th width="200px" class="stickyHR shadow">操作</th>
+                        <!--  当表格出现竖向滚动条时，表头添加此 th ，用来占位，宽度等于表体的滚动条宽度（10px）  -->
+                        <th class="stickyHR table-patch"></th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="60px" >1</td>
+                        <td width="100px" >001</td>
+                        <td width="150px" class="left">爱达乐</td>
+                        <td width="80px" class="squ-pic"><img src="../../../images/null2.jpg" alt=""></td>
+                        <td width="250px" class="left"><a href="添加活动.html" class="wrap-noml">装修服务联盟巨惠活动</a></td>
+                        <!--  多个负责人，只展示第一个  -->
+                        <td width="100px"><a href="">小土豆</a></td>
+                        <td width="150px" class="date">2019-10-01 10:00:00</td>
+                        <td width="150px" class="date">2019-10-30 10:00:00</td>
+                        <td width="100px" class="statu statu1"><span>进行中</span></td>
+                        <td width="100px" class="statu statu1"><span>开启</span></td>
+                        <td width="120px" class="statu statu1"><span>比列（5%）</span></td>
+                        <td width="100px">299</td>
+                        <td width="100px">10/50</td>
+                        <td width="100px" class="notExpired">开启翻倍</td>
+                        <td width="80px"><a class="flkq">2</a></td>
+                        <td width="80px">10</td>
+                        <td width="80px"><a class="djlist">125</a></td>
+                        <td width="80px"><a class="djNulllist">10</a></td>
+                        <td width="80px">用户</td>
+                        <td width="80px">小土豆</td>
+                        <td width="150px" class="date">2019-10-01 10:00:00</td>
+                        <td width="200px" class="stickyBR shadow cz_btn">
+                            <button type="button" class="btn-type1 hbset">海报</button>
+                            <button type="button" class="edit-btn">编辑</button>
+                            <button type="button" class="flkq">数据</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >2</td>
+                        <td >002</td>
+                        <td class="left">爱达乐</td>
+                        <td class="squ-pic"><img src="../../../images/null2.jpg" alt=""></td>
+                        <td class="left"><a href="添加活动.html" class="wrap-noml">装修服务联盟巨惠活动</a></td>
+                        <!--  多个负责人，只展示第一个  -->
+                        <td><a href="">小土豆</a></td>
+                        <td class="date">2019-10-01 10:00:00</td>
+                        <td class="date">2019-10-20 10:00:00</td>
+                        <td class="statu statu3"><span>待开始</span></td>
+                        <td class="statu statu2"><span>关闭</span></td>
+                        <td class="expired">未开启</td>
+                        <td>299</td>
+                        <td>10/50</td>
+                        <td class="expired">关闭翻倍</td>
+                        <td><a class="flkq">2</a></td>
+                        <td>20</td>
+                        <td><a class="djlist">125</a></td>
+                        <td></td>
+                        <td>后台</td>
+                        <td>lkm</td>
+                        <td class="date"></td>
+                        <td class="stickyBR shadow cz_btn">
+                            <button type="button" class="btn-type1 hbset">海报</button>
+                            <button type="button" class="edit-btn">编辑</button>
+                            <button type="button" class="flkq">数据</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >3</td>
+                        <td >003</td>
+                        <td class="left">爱达乐</td>
+                        <td class="squ-pic"><img src="../../../images/null2.jpg" alt=""></td>
+                        <td class="left"><a href="添加活动.html" class="wrap-noml">装修服务联盟巨惠活动</a></td>
+                        <!--  多个负责人，只展示第一个  -->
+                        <td><a href="">小土豆</a></td>
+                        <td class="date">2019-10-01 10:00:00</td>
+                        <td class="date">2019-10-20 10:00:00</td>
+                        <td class="statu statu2"><span>已结束</span></td>
+                        <td class="statu statu1"><span>开启</span></td>
+                        <td class="expired">未开启</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="flkq">2</a></td>
+                        <td>30</td>
+                        <td><a class="djlist">125</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td class="stickyBR shadow cz_btn">
+                            <button type="button" class="btn-type1 hbset">海报</button>
+                            <button type="button" class="edit-btn">编辑</button>
+                            <button type="button" class="flkq">数据</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >4</td>
+                        <td >004</td>
+                        <td class="left">爱达乐</td>
+                        <td class="squ-pic"><img src="../../../images/null2.jpg" alt=""></td>
+                        <td class="left"><a href="添加活动.html" class="wrap-noml">装修服务联盟巨惠活动</a></td>
+                        <!--  多个负责人，只展示第一个  -->
+                        <td><a href="">小土豆</a></td>
+                        <td class="date">2019-10-01 10:00:00</td>
+                        <td class="date">2019-10-20 10:00:00</td>
+                        <td class="statu statu3"><span>需完善</span></td>
+                        <td class="statu statu2"><span>关闭</span></td>
+                        <td class="expired">未开启</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="flkq">2</a></td>
+                        <td>40</td>
+                        <td><a class="djlist">125</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td class="stickyBR shadow cz_btn">
+                            <button type="button" class="btn-type1 hbset">海报</button>
+                            <button type="button" class="edit-btn">编辑</button>
+                            <button type="button" class="flkq">数据</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">商户ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">商户名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">活动名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">负责人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">创建人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">剩余库存:</span>
+            <div class="account-r"><input type="text" class="s_width center"><span class="date-line"></span><input type="text" class="s_width center"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">创建时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1"><span class="date-line"></span><input type="text" class="layui-input" id="test2"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">活动状态:</span>
+            <div class="account-r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">进行中</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">待开始</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">已结束</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">需完善</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">定金翻倍:</span>
+            <div class="account-r chose_item">
+                <label for="mode1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="mode" id="mode1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">开启翻倍</span>
+                </label>
+                <label for="mode2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="mode" id="mode2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">关闭翻倍</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">创建来源:</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">用户</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">后台</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="sort-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">活动价格：</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">销量：</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">待支付：</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .sort').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '排序',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#sort-account")
+        });
+    });
+
+    $('#chutiyan .add_btn,.edit-btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '装修款抵用金',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '添加活动.html' //iframe的url
+        });
+    });
+
+
+    $('#chutiyan .flkq').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '装修服务联盟巨惠活动',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '定金订单.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .djlist').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '装修服务联盟巨惠活动',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '定金订单.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .djNulllist').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '装修服务联盟巨惠活动',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '定金订单.html#tab3' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

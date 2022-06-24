@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>名额初始化</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css?v=1.0.0">
+    <link rel="stylesheet" href="../../../商城/css/index.css?v=1.0.0"/>
+
+</head>
+<body>
+<div class="content gz-content">
+    <p class="title">名额初始化</p>
+    <div class="activity_set" style="padding-top: 20px">
+        <div class="a_list flex-start">
+            <span class="a_list_l" style="padding-top: 8px">等级明细：</span>
+            <div class="a_list_r gg-content href-title" style="max-width: 800px;">
+                <table border="0">
+                    <thead>
+                    <tr>
+                        <th style="width: 80px">等级</th>
+                        <th style="width: 200px">对应课程</th>
+                        <th style="width: 100px">有效个数</th>
+                        <th style="width: 100px">分佣比例(%)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="3" class="line-tr">联创人</td>
+                        <td class="line-tr left">3000块钱10个名额，快来抢！</td>
+                        <td><input type="text" class="center"></td>
+                        <td><input type="text" class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="line-tr left">5秒信任系统：瞬间成为行业专家，顾客首次接触，信任度就提</td>
+                        <td><input type="text" class="center"></td>
+                        <td><input type="text" class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="line-tr left">3000块钱10个名额，快来抢！</td>
+                        <td><input type="text" class="center"></td>
+                        <td><input type="text" class="center"></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" class="line-tr">合伙人</td>
+                        <td class="line-tr left">5秒信任系统：瞬间成为行业专家，顾客首次接触，信任度就提</td>
+                        <td><input type="text" class="center"></td>
+                        <td><input type="text" class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="line-tr left">3000块钱10个名额，快来抢！</td>
+                        <td><input type="text" class="center"></td>
+                        <td><input type="text" class="center"></td>
+                    </tr>
+                    <tr>
+                        <td class="line-tr left">5秒信任系统：瞬间成为行业专家，顾客首次接触，信任度就提</td>
+                        <td><input type="text" class="center"></td>
+                        <td><input type="text" class="center"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">老用户初始化：</span>
+            <div class="a_list_r">
+                <label for="fs1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="fs" id="fs1">
+                        <span class="checked-bg"></span>
+                    </div>
+                </label>
+                <span class="tishi">注意：勾选后，老用户就按照最新等级设置来执行,以前对应等级设置作废</span>
+            </div>
+        </div>
+        <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+    </div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/dist/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        $(".href-title tr td.line-tr").each(function () {
+            $(this).attr("title", $(this).text());
+        });
+    });
+
+
+</script>
+
+
+</body>
+</html>

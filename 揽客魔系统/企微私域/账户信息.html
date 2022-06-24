@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户详情</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/newStyle.css"/>
+    <style>
+        .userDetailCont{padding: 6px;}
+        .userDetailCont .contItem{background: #fff;padding: 24px 24px 15px;font-size: 12px;color: #333;margin: 6px;display: flex;flex-direction: column;}
+        .userDetailCont .contItem b{font-size: 16px;margin-right: 10px;color: #333;}
+        .userDetailCont .contItem .itemTit{background: #fff;}
+        .userDetailCont .uTip,.userDetailCont .uTip2{display: flex;flex-wrap: wrap;}
+        .userDetailCont .uTip span,.userDetailCont .uTip2 span{min-width: 70px;max-width: 260px;height: 30px;line-height: 28px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;padding: 0 14px;color: #666;cursor: pointer;font-size: 14px;border-radius: 4px;border: 1px solid #efefef;margin: 0 10px 5px 0;}
+        .userDetailCont .uTip span i{font-size: 14px;margin-right: 10px;}
+        .userDetailCont .uTip span.on{background-color: #fff6eb;color: #f80;}
+        .userDetailCont .uTip2 span{border-color: rgba(255,136,0,.6);color: #f80;font-size: 12px;background: #fafafa;}
+        .userDetailCont .uTip3{margin-top: 24px;}
+        .userDetailCont .uTip3 .tit{font-size: 14px;color: #666;}
+        .userDetailCont .uMsg{margin-top: 24px;}
+        .userDetailCont .uMsg .cont1{display: flex;align-items: center;font-size: 18px;font-weight: 600;}
+        .userDetailCont .uMsg .cont1 img{width: 70px;height: 70px;border-radius: 50%;margin-right: 10px;}
+        .userDetailCont .uMsg .cont1 span{font-size: 15px;}
+        .userDetailCont .uMsg ul{display: flex;margin-top: 24px;font-size: 13px;}
+        .userDetailCont .uMsg li{flex: 1;}
+        .userDetailCont .uMsg li span{padding: 4px;border-radius: 50%;margin: 0 4px;}
+        .userDetailCont .uMsg li span.succ{padding: 4px;border-radius: 50%;margin: 0 4px;background: #5eeaae;}
+        .userDetailCont .uMsg li span.fail{padding: 4px;border-radius: 50%;margin: 0 4px;background: #f00;}
+        .userDetailCont .u_step_tip{}
+        .userDetailCont .u_step_tip div{}
+        .userDetailCont .u_step_tip div span{font-size: 12px;padding: 0 6px;height: 22px;line-height: 20px;border-width: 1px;border-style: solid;margin-right: 10px;border-radius: 2px;min-width: 50px;text-align: center}
+        .userDetailCont .u_step_tip div .type1{color: #f80;border-color: #f80;}
+        .userDetailCont .u_step_tip div .type2{color: #5eeaae;border-color: #5eeaae;}
+        .userDetailCont .u_step_tip p{margin-top: 10px;}
+
+        .uTimeLine{padding-left: 90px;position: relative;margin-top: 24px;}
+        .uTimeLine:before{content: "";display: block;border-left: 2px solid #efefef;position: absolute;left: 70px;top: 10px;bottom: 0;}
+        .uTimeLine .item{position: relative;font-size: 14px;color: #999;}
+        .uTimeLine .item:not(:last-child){margin-bottom: 24px;}
+        .uTimeLine .item:before{content: "";display: block;padding: 6px;background: #f80;border-radius: 50%;position: absolute;left: -25px;top: 10%;}
+        .uTimeLine .item:first-child:before{top: 35%;}
+        .uTimeLine .item:last-child:before{top: 18%;}
+        .uTimeLine .step:before{background: #5eeaae;}
+        .uTimeLine .addIcon{width: 30px;height: 30px;line-height: 30px;border-radius: 50%;background: #f80;text-align: center;cursor: pointer;}
+        .uTimeLine .addIcon i{font-size: 20px;color: #fff;}
+        .uTimeLine .date{font-size: 12px;color: #999;position: absolute;left: -80px;top: 50%;transform: translateY(-50%);}
+        .uTimeLine .date em{display: block;font-style: normal;font-size: 10px;transform: scale(.85)}
+
+        .userDetailCont .null-msg{padding: 10px 0;font-size: 14px;color: #999;}
+        .userDetailCont .null-msg img{width: 130px;}
+    </style>
+</head>
+<body id="chutiyan" style="padding: 0;">
+
+    <div class="userDetailCont">
+        <div class="contItem">
+            <div class="itemTit"><b>所属成员</b>当前所属成员为：<span class="expired">若水【华厚】社群运营官</span></div>
+            <div class="uTip mgT-10">
+                <span class="on"><i class="layui-icon layui-icon-username"></i>若水【华厚】社群运营官</span>
+                <span><i class="layui-icon layui-icon-username"></i>郑传华</span>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="contItem" style="width: 70%">
+                <div class="itemTit"><b>基本信息</b></div>
+                <div class="uMsg">
+                    <div class="cont1">
+                        <img src="../images/null.jpg" alt="">
+                        <p class="mgR-8">醋留香</p>
+                        <span class="wxcolor mgR-8">@微信</span>
+                        <span class="expired">女</span>
+                    </div>
+                    <ul>
+                        <li>添加时间：2021-11-02 09:39:21</li>
+                        <li>流失状态：<span class="succ"></span>未流失<span class="fail"></span>已流失</li>
+                        <li>添加渠道：欢迎语</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contItem" style="width: 30%">
+                <div class="itemTit"><b>所属群聊</b></div>
+                <div class="uTip2 mgT-10">
+                    <span>激活粉丝 微信变现</span>
+                    <span>【讲师变现】1-3期</span>
+                </div>
+                <div class="null-msg">
+                    <img src="../images/null-msg.png" alt="">
+                    <p>该用户不在任何群聊内</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="contItem" style="width: 70%">
+                <div class="itemTit"><b>客户动态</b></div>
+                <div class="uTimeLine">
+                    <div class="item"><span class="addIcon"><i class="layui-icon layui-icon-add-1" style=""></i></span></div>
+                    <div class="item step">
+                        <span class="date">11-01<em>18:18</em></span>
+                        <div class="u_step_tip">
+                            <div><span class="type1 hide">客户认识阶段</span><span class="type2">企微</span></div>
+                            <p>111</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="date">11-01<em>18:18</em></span>
+                        <div class="flex alignItemC flexWrap">
+                            <div class="uTip">
+                                <span style="color: #333"><i class="layui-icon layui-icon-username"></i>她颜白石华</span>
+                            </div>
+                            删除跟进成员
+                            <div class="uTip mgL-10">
+                                <span style="color: #333"><i class="layui-icon layui-icon-username"></i>陈莹【华厚】</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="date">11-01<em>14:45</em></span>
+                        <div class="flex alignItemC flexWrap">
+                            <div class="uTip">
+                                <span style="color: #333"><i class="layui-icon layui-icon-username"></i>陈莹【华厚】</span>
+                            </div>
+                            添加企业客户
+                            <div class="uTip mgL-10">
+                                <span style="color: #333"><i class="layui-icon layui-icon-username"></i>她颜白石华</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item"><p style="font-size: 12px">没有更多动态了~</p></div>
+                </div>
+            </div>
+            <div class="contItem" style="width: 30%">
+                <div class="itemTit"><b>客户标签</b></div>
+                <div class="uTip3">
+                    <p class="tit">企业标签</p>
+                    <div class="mgT-20">
+                        <div class="qwTips">
+                            <span class="addTipBtn"><i class="layui-icon layui-icon-addition"></i>添加</span>
+                            <span class="tiem on">家装建材</span>
+                            <span class="tiem on">互联网营销</span>
+                            <span class="tiem on">抖音</span>
+                            <span class="tiem on">直播疯狂掘金</span>
+                            <span class="tiem on">裂变拓客</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="uTip3">
+                    <p class="tit">个人标签</p>
+                    <div class="null-msg">
+                        <img src="../images/null-msg.png" alt="">
+                        <p>暂无个人标签</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="activity_set activity_set2 w-120" id="tip-sure" style="display: none;padding-top: 0">
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">沟通方式:</span>
+                <div class="a_list_r typeItem">
+                    <label for="type1" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked="" name="type" id="type1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">企微</span>
+                    </label>
+                    <label for="type2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="type" id="type2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">电话</span>
+                    </label>
+                    <label for="type3" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="type" id="type3">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">面聊</span>
+                    </label>
+                    <label for="type4" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="type" id="type4">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">微信</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list" style="display: none">
+                <span class="a_list_l">客户旅程:</span>
+                <div class="a_list_r typeItem">
+                    <label for="statu1" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked="" name="statu" id="statu1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">客户认识阶段</span>
+                    </label>
+                    <label for="statu2" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="statu" id="statu2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">客户了解阶段</span>
+                    </label>
+                    <label for="statu3" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="statu" id="statu3">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt"> 客户认可阶段</span>
+                    </label>
+                    <label for="statu4" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="statu" id="statu4">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt"> 客户购买阶段</span>
+                    </label>
+                    <label for="statu5" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="statu" id="statu5">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt"> 客户复购阶段</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">跟进内容:</span>
+                <div class="a_list_r">
+                    <div class="showNumBox">
+                        <textarea class="w-620" style="height: 100px;padding: 10px;" placeholder="请输入跟进内容"></textarea>
+                        <span class="num">0/500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+    </div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .addTipBtn').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '添加标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '436px'],
+            content: '../添加标签.html' //iframe的url
+        });
+    });
+
+    $('#chutiyan .addIcon').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 1,
+            title: '新增客户状态',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#tip-sure").html()
+        });
+    });
+
+    $('.uTip span').on('click',function () {
+        $(this).addClass('on').siblings().removeClass('on');
+    })
+</script>
+
+</body>
+</html>

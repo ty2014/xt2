@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关键词回复</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+<!--
+    搜索字段：标题，匹配方式，回复类型。
+-->
+
+
+<div class="content">
+    <div class="page-title">关键词回复</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            <div class="top_tit2 center">
+                <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                <ul>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">启用</a></li>
+                    <li><a href="#">停用</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_type_2"><span class="tab-tips add_btn"><i class="fa fa-plus "></i>添加</span></div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="50px">序号</th>
+                        <th width="200px">操作</th>
+                        <th width="200px" class="left">标题</th>
+                        <th width="150px" class="left">关键字</th>
+                        <th width="100px">匹配方式</th>
+                        <th width="100px">回复类型</th>
+                        <th width="100px">状态</th>
+                        <th width="100px">回复量</th>
+                        <th width="150px">更新时间</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="50px">1</td>
+                        <td width="200px" class="cz_btn">
+                            <button class="btn-type1 edit_btn">编辑</button>
+                            <button class="btn-type2 del_btn">删除</button>
+                        </td>
+                        <td width="200px" class="left">规则名称规则名称规则名称规则名称规则名称</td>
+                        <td width="150px" class="left">关键词关键词关键词关键词关键词关键词</td>
+                        <td width="100px">半匹配</td>
+                        <td width="100px">文本</td>
+                        <td width="100px" class="statu statu1"><span>启用</span></td>
+                        <td width="100px"><a class="ts-num">26</a></td>
+                        <td width="150px" class="date"><div>2020-02-22 17:22:17</div></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="cz_btn">
+                            <button class="btn-type1 edit_btn">编辑</button>
+                            <button class="btn-type2 del_btn">删除</button>
+                        </td>
+                        <td class="left">规则名称规则名称规则名称规则名称规则名称</td>
+                        <td class="left">关键词关键词关键词关键词关键词关键词</td>
+                        <td>全匹配</td>
+                        <td>图片</td>
+                        <td class="statu statu2"><span>停用</span></td>
+                        <td><a class="ts-num">16</a></td>
+                        <td class="date"><div></div></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="cz_btn">
+                            <button class="btn-type1 edit_btn">编辑</button>
+                            <button class="btn-type2 del_btn">删除</button>
+                        </td>
+                        <td class="left">规则名称规则名称规则名称规则名称规则名称</td>
+                        <td class="left">关键词关键词关键词关键词关键词关键词</td>
+                        <td>半匹配</td>
+                        <td>图文</td>
+                        <td class="statu statu1"><span>启用</span></td>
+                        <td><a class="ts-num">2</a></td>
+                        <td class="date"><div></div></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  搜索/排序  -->
+<div class="account-box " id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">关键字:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">匹配方式:</span>
+            <div class="account-r chose_item">
+                <label for="pp1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pp" id="pp1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">半匹配</span>
+                </label>
+                <label for="pp2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pp" id="pp2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">全匹配</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">回复类型:</span>
+            <div class="account-r chose_item">
+                <label for="type1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">文本</span>
+                </label>
+                <label for="type2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">图片</span>
+                </label>
+                <label for="type3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type3">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">图文</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="statu1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="statu2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">更新时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" lay-key="1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" lay-key="2" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test3' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .edit_btn,.add_btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '关键词添加/编辑',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '关键词添加.html' //iframe的url
+        });
+    });
+
+
+    $('#chutiyan .ts-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '回复量',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true,
+            area: ['90%', '90%'],
+            content: '回复量明细.html'
+        });
+    });
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del_btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定删除该数据？',{
+                skin: 'failureskin ',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

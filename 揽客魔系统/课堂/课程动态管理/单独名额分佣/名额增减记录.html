@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>名额增减记录</title>
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../css/style.css"/>
+</head>
+<body id="chutiyan" style="background: #f8f8f8;">
+
+<!--
+    搜索字段：昵称、姓名、类型、时间
+-->
+
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>名额增减记录</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+            <span><i class="fa fa-download"></i>导出</span>
+        </div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">序号</th>
+                    <th width="80px">头像</th>
+                    <th width="100px">昵称</th>
+                    <th width="100px">姓名</th>
+                    <th width="200px">课程标题</th>
+                    <th width="100px">类型</th>
+                    <th width="100px">数量</th>
+                    <th width="200pz">备注</th>
+                    <th width="140pz">时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="cover-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                    <td><a class="user-nc">小呀么小西几</a></td>
+                    <td>唐</td>
+                    <td class="left">3000块钱10个名额，快来抢！</td>
+                    <td>购买</td>
+                    <td class="left">+10(VIP)</td>
+                    <td class="left">报名VIP课程获得10个VIP名额</td>
+                    <td class="date"><div>2020-03-26 22:20:41</div></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="cover-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                    <td><a class="user-nc">小呀么小西几</a></td>
+                    <td>唐</td>
+                    <td class="left">3000块钱10个名额，快来抢！</td>
+                    <td>购买</td>
+                    <td class="left">+10(VIP)</td>
+                    <td class="left">报名VIP课程获得10个VIP名额</td>
+                    <td class="date"><div>2020-03-26 22:20:41</div></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="cover-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                    <td><a class="user-nc">小呀么小西几</a></td>
+                    <td>唐</td>
+                    <td class="left">3000块钱10个名额，快来抢！</td>
+                    <td>购买</td>
+                    <td class="left">+10(VIP)</td>
+                    <td class="left">报名VIP课程获得10个VIP名额</td>
+                    <td class="date"><div>2020-03-26 22:20:41</div></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="cover-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                    <td><a class="user-nc">小呀么小西几</a></td>
+                    <td>唐</td>
+                    <td class="left">3000块钱10个名额，快来抢！</td>
+                    <td>购买</td>
+                    <td class="left">+10(VIP)</td>
+                    <td class="left">报名VIP课程获得10个VIP名额</td>
+                    <td class="date"><div>2020-03-26 22:20:41</div></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="cover-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                    <td><a class="user-nc">小呀么小西几</a></td>
+                    <td>唐</td>
+                    <td class="left">3000块钱10个名额，快来抢！</td>
+                    <td>赠送</td>
+                    <td class="left">+10(专题课)</td>
+                    <td class="left">xxx(系统)赠送15个专题课名额</td>
+                    <td class="date"><div>2020-04-23 15:20:41</div></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="cover-pic"><img src="../../../images/head.jpg" alt=""/></td>
+                    <td><a class="user-nc">小呀么小西几</a></td>
+                    <td>唐</td>
+                    <td class="left">3000块钱10个名额，快来抢！</td>
+                    <td>成交</td>
+                    <td class="left">-1(专题课)</td>
+                    <td class="left">用户昵称(姓名)报名xxx，消耗1个名额</td>
+                    <td class="date"><div>2020-04-22 08:20:41</div></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="btm_page">
+            <div class="pages">
+                <div class="pages_num">
+                    <span>1</span>
+                    <span class="active">2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>99</span>
+                </div>
+                <div class="now_page">
+                    到第<input type="text" value="1">页<span class="sure">确定</span>
+                </div>
+                <select>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div>
+                <span><b>1 - 10</b></span>
+                <span>共<b>10</b>条</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/index.js"></script>
+
+</body>
+</html>

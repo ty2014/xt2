@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../../../css/style.css"/>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan" style="min-width: auto;padding: 0;background: #fff">
+
+<div class="w-100" style="padding-top: 24px">
+    <div class="cont_list">
+        <span class="list_tit">社群名称：</span>
+        <div class="list_cont"><input type="text" class="w-620" placeholder="请输入社群名称，不超过20字"></div>
+    </div>
+    <div class="dub-list">
+        <div class="cont_list">
+            <span class="list_tit"><i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="关闭后任何人无法进入。"></i>
+            社群状态：</span>
+            <div class="list_cont">
+                <div class="htmleaf-content">
+                    <div class="checkbox">
+                        <input type="checkbox"/>
+                        <label></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont_list">
+            <span class="list_tit"><i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="如果开启，则前端相应列表页不会显示，只有群成员，才会显示入口。"></i>
+            内部社群：</span>
+            <div class="list_cont">
+                <div class="htmleaf-content">
+                    <div class="checkbox">
+                        <input type="checkbox"/>
+                        <label></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cont_list">
+        <span class="list_tit">群主：</span>
+        <div class="list_cont"><input type="text" readonly placeholder="点击选择（单选）" class="qz-chose"></div>
+    </div>
+
+    <div class="cont_list flex-start">
+        <span class="list_tit">logo图：</span>
+        <div class="list_cont">
+            <div class="file-cont">
+                <div class="file-btn"></div>
+                <p class="tishi">*图片为1：1比例效果；大小不超过1000KB</p>
+            </div>
+        </div>
+    </div>
+    <div class="cont_list flex-start">
+        <span class="list_tit">介绍主图：</span>
+        <div class="list_cont">
+            <div class="file-cont">
+                <div class="file-btn w1-5"></div>
+                <p class="tishi">*图片为1.5：1比例效果；大小不超过1000KB</p>
+            </div>
+        </div>
+    </div>
+    <div class="cont_list">
+        <span class="list_tit">社群简介：</span>
+        <div class="list_cont"><input type="text" class="w-620" placeholder="请输入社群简介"></div>
+    </div>
+    <div class="cont_list">
+        <span class="list_tit">优先级：</span>
+        <div class="list_cont"><input type="text" class="m_width center"><span class="tishi">*优先级越大，推荐社群展示越前</span></div>
+    </div>
+    <div class="dub-list">
+        <div class="cont_list">
+            <span class="list_tit">进群价格：</span>
+            <div class="list_cont"><input type="text" class="m_width center">&nbsp;元</div>
+        </div>
+        <div class="cont_list">
+            <span class="list_tit">优惠价格：</span>
+            <div class="list_cont"><input type="text" class="m_width center">&nbsp;元&nbsp;&nbsp;<span class="tishi">*选填，填写将按优惠价格实际收费</span></div>
+        </div>
+    </div>
+
+    <div class="cont_list">
+        <span class="list_tit">
+            <i class="tips" data-toggle="tooltip" data-html="true" data-placement="top" title="【免费邀请】可直接邀请用户免费加入社群。</br>老师（群主、管理员、主持人、讲师）不限邀请人数，群员/嘉宾可限制邀请人数。"></i>
+            免费邀请：
+        </span>
+        <div class="list_cont chose_item">
+            <label for="pu10" class="radio">
+                <div class="chose">
+                    <input type="radio" checked name="pic2" id="pu10" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">仅老师</span>
+            </label>
+            <label for="pu11" class="radio">
+                <div class="chose">
+                    <input type="radio" name="pic2" id="pu11" />
+                    <span class="checked-bg"></span>
+                </div>
+                <span class="msg_set_txt">所有成员（群员/嘉宾限邀人数&nbsp;&nbsp;<input type="text" placeholder="不限" class="s_width center">）</span>
+            </label>
+        </div>
+    </div>
+    <div class="cont_list flex-start">
+        <span class="list_tit">社群介绍：</span>
+        <div class="list_cont">
+            <textarea style="width: 720px;height: 200px;padding: 10px">此处放富文本编辑器</textarea>
+        </div>
+    </div>
+    <div class="btn-list"><span class="btn btn-sure">确定</span><span class="btn btn-cancel">取消</span></div>
+</div>
+
+
+<script src="../../../../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="../../../../js/dist/js/bootstrap.min.js"></script><!-- iframe弹框 -->
+<script src="../../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../../js/layui/layui.js"></script>
+<script src="../../../../js/index.js"></script>
+<script>
+    $('#chutiyan .qz-chose').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '选择群主',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['100%', '100%'],
+            content: '选择群主.html' //iframe的url
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

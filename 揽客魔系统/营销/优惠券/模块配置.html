@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模块配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .icon_chose li{padding: 4px;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="page-title">优惠券配置</div>
+<div class="activity_set activity_set3 w-6">
+    <!--   右侧可视化区域     -->
+    <div id="Rview" style="background-color: #f0f0f0;background-image: url(‘’);background-position: center;background-repeat: no-repeat;background-size:100% 100%;position: absolute;left: 800px;top: 16px;z-index: 9;border: 1px solid #ddd;overflow: hidden">
+        <img src="images/yhqImg2.png" alt="" class="type1_img" style="width: 228px;min-width: 228px">
+        <img src="images/yhqImg3.png" alt="" class="type2_img" style="width: 228px;min-width: 228px;display: none">
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">主页链接:</span>
+            <div class="a_list_r">http://cshtml.lkmsxy.com/<span class="copy-btn">复制</span></div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">模块入口:</div>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="statu-togg" checked="" class="toggle-button" name="switch">
+                    <label for="statu-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">展示</span>
+                        <span class="text off">不展示</span>
+                    </label>
+                </div>
+                <span class="tishi">*个人中心是否展示“优惠券”的入口</span>
+            </div>
+         </div>
+        <div class="a_list">
+            <span class="a_list_l">模块命名:</span>
+            <div class="a_list_r"><input type="text" value="优惠券"></div>
+        </div>
+    </div>
+
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">优惠券中心:</span>
+            <div class="a_list_r">
+                <label for="type1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="type" id="type1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">样式一</span>
+                </label>
+                <label for="type2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="type" id="type2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">样式二</span>
+                </label>
+            </div>
+        </div>
+        <!--   2个样式的背景单独控制     -->
+        <div class="a_list">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg4" class="toggle-button" name="switch">
+                    <label for="u-togg4" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">自定义背景</span>
+                        <span class="text off">不自定义背景</span>
+                    </label>
+                </div>
+                <span class="tishi"><a class="bg_img_btn">点击查看示例</a></span>
+                <div class="typeCont1" style="display: none;margin-left: 20px;">
+                    <div style="display: flex;align-items: center">
+                        <ul class="FraUpload_imglist layer-photos-demo1">
+                            <li class="img_item" style="display: none">
+                                <img src="">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                        <div class="tishi mgL-0">
+                            <p>建议尺寸750*1334，<br>大小不超过1000KB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--    优惠券中心页面顶部插入图片    -->
+        <div class="a_list">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg5" class="toggle-button" name="switch">
+                    <label for="u-togg5" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">自定义广告</span>
+                        <span class="text off">不自定义广告</span>
+                    </label>
+                </div>
+                <span class="tishi"><a class="bg_img_btn">点击查看示例</a></span>
+                <div class="typeCont2" style="display: none;margin-left: 20px;">
+                    <div style="display: flex;align-items: center;">
+                        <ul class="FraUpload_imglist layer-photos-demo1">
+                            <li class="img_item" style="display: none">
+                                <img src="">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="file-btn"></li>
+                        </ul>
+                        <div class="tishi mgL-0">
+                            <p>建议尺寸750*100，<br>大小不超过1000KB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-line" style="border-bottom: 0">
+        <div class="a_list">
+            <span class="a_list_l">内页样式:</span>
+            <div class="a_list_r lqType">
+                <label for="lq1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="lq" id="lq1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">默认模板</span>
+                </label>
+                <label for="lq2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="lq" id="lq2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">自定义内容</span>
+                </label>
+                <i class="tips"></i>
+            </div>
+        </div>
+        <div class="a_list lqType_cont1">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div>
+                    <div style="display: flex;align-items: center;">
+                        <ul class="icon_chose layer-photos-demo2">
+                            <li class="on"><img src="images/m1.jpg"></li>
+                            <li class=""><img src="images/m2.jpg"></li>
+                            <li class=""><img src="images/m3.jpg"></li>
+                            <li class=""><img src="images/m4.jpg"></li>
+                        </ul>
+                        <div style="display: flex;align-items: center;margin-left: 20px">
+                            点击内容后，直接
+                            <div class="select-text center mg-8" >
+                                <span class="select-txt">展示弹框</span>
+                                <ul>
+                                    <li class="active">展示弹框</li>
+                                    <li>跳转页面</li>
+                                </ul>
+                            </div>
+                            <a  class="title_img_btn showCont1">点击查看示例</a>
+                            <input type="text" class="w-620 showCont2" placeholder="*填写跳转页面地址" style="display: none">
+                        </div>
+                    </div>
+                    <span class="tishi mgL-0" style="margin-top: 10px">*点击图片可以放大查看，点击图片旁边空白区域可以选择该图片</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list lqType_cont2" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div>
+                    <div style="display: flex;align-items: center;">
+                        <ul class="FraUpload_imglist layer-photos-demo3">
+                            <li class="img_item" style="display: none">
+                                <img src="">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                        <div style="display: flex;align-items: center;margin-left: 20px">
+                            点击内容后，直接
+                            <div class="select-text center mg-8" >
+                                <span class="select-txt">展示弹框</span>
+                                <ul>
+                                    <li class="active">展示弹框</li>
+                                    <li>跳转页面</li>
+                                </ul>
+                            </div>
+                            <a class="title_img_btn showCont1">点击查看示例</a>
+                            <input type="text" class="w-620 showCont2" placeholder="*填写跳转页面地址" style="display: none">
+                        </div>
+                    </div>
+                    <span class="tishi mgL-0" style="margin-top: 10px">*建议尺寸750*100，大小不超过500KB</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<img src="images/yhqImg5.png" alt="" id="title_img" style="height: 580px;display: none;">
+<img src="images/yhqImg9.png" alt="" id="bg_img" style="height: 580px;display: none;">
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layer.photos({
+        photos: '.layer-photos-demo1'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+    layer.photos({
+        photos: '.layer-photos-demo2'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+    layer.photos({
+        photos: '.layer-photos-demo3'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+    $('#chutiyan .title_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#title_img")
+        });
+    });
+    $('#chutiyan .bg_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#bg_img")
+        });
+    });
+
+    $('#u-togg4').click(function () {
+        $('.typeCont1').toggle()
+    })
+    $('#u-togg5').click(function () {
+        $('.typeCont2').toggle()
+    })
+
+    $('.select-text li').on('click',function () {
+        let txt = $(this).text();
+        switch (txt) {
+            case '展示弹框':
+                $('.showCont1').show()
+                $('.showCont2').hide()
+                break;
+            case '跳转页面':
+                $('.showCont1').hide()
+                $('.showCont2').show()
+                break;
+        }
+    })
+
+    // 优惠券样式切换
+    $('#type1').click(function () {
+        $('.type1_img').show()
+        $('.type2_img').hide()
+    })
+    $('#type2').click(function () {
+        $('.type2_img').show()
+        $('.type1_img').hide()
+    })
+
+
+    $('.lqType label').on('click',function () {
+        let i = $(this).index();
+        if(i === 0){
+            $('.lqType_cont1').show();
+            $('.lqType_cont2').hide();
+        }else if(i === 1){
+            $('.lqType_cont2').show();
+            $('.lqType_cont1').hide();
+        }
+    })
+
+    $('.icon_chose li').click(function () {
+        $(this).addClass('on').siblings().removeClass('on')
+    })
+
+
+    $('#chutiyan .tips').on('mouseenter',function(){
+        this.index =layer.tips('内页样式：是指商品（课程、专栏、电子书、会员、活动、商品）详情页展示优惠券的样式。', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:600
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+</script>
+
+</body>
+</html>

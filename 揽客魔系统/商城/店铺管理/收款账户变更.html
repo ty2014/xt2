@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>收款账户变更</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body id="chutiyan" style="min-width: auto;padding: 0">
+
+
+    <div class="activity_set">
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">银行：</span>
+                <div class="a_list_r">
+                    <div class="slide-select">
+                        <select>
+                            <option value="">中国银行</option>
+                            <option value="">工商银行</option>
+                            <option value="">邮政银行</option>
+                            <option value="">农业银行</option>
+                            <option value="">建设银行</option>
+                            <option value="">招商银行</option>
+                            <option value="">交通银行</option>
+                        </select>
+                        <img src="../../images/bottom-icon.jpg" alt="">
+                    </div>
+                    <span class="tishi">*用于货款结算</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">卡号：</span>
+                <div class="a_list_r"><input type="text" class=""/></div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">持卡人：</span>
+                <div class="a_list_r"><input type="text"/></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">开户行名：</span>
+                <div class="a_list_r"><input type="text"/></div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">负责人手机：</span>
+                <!--    负责人的手机账号    -->
+                <div class="a_list_r">13546879654 <a>发送验证码</a></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">验证码：</span>
+                <div class="a_list_r"><input type="text" class="m_width"></div>
+            </div>
+        </div>
+        <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+    </div>
+
+
+<script src="../../js/layui/layui.js"></script>
+<script>
+    //配置插件目录
+    layui.config({
+        base: '../../js/mods/'
+        , version: '1.0'
+    });
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form', 'layarea'], function () {
+        var layer = layui.layer
+            , form = layui.form
+            , layarea = layui.layarea;
+
+        layarea.render({
+            elem: '#area-picker',
+            change: function (res) {
+                //选择结果
+                console.log(res);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

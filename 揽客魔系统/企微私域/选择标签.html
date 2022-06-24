@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择标签</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/newStyle.css"/>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<div class="activity_set activity_set3 w-100">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r chose_item">
+                <label for="tips1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked name="tips" id="tips1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">以下标签满足其中之一</span>
+                </label>
+                <label for="tips2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="tips" id="tips2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">以下标签同时满足</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="b-line" style="border-bottom: none">
+        <div class="a_list ">
+            <span class="a_list_l">[消费分类]:</span>
+            <div class="a_list_r">
+                <div class="qwTips">
+                    <span class="addTipBtn"><i class="layui-icon layui-icon-addition"></i>添加</span>
+                    <span class="tiem on">战略帮扶</span>
+                    <span class="tiem on">联创帮扶</span>
+                    <span class="tiem ">讲师变现</span>
+                    <span class="tiem ">合伙人</span>
+                    <span class="tiem ">百万客流</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    $('.qwTips .tiem').on('click',function () {
+        $(this).toggleClass('on')
+    })
+</script>
+</body>
+</html>

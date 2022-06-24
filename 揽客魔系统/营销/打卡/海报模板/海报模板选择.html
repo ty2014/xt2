@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日签模板</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+
+</head>
+<body id="chutiyan">
+
+<div id="app">
+    <div class="content">
+        <div class="page-title">日签模板</div>
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+                <span class="tishi">* 该处只展示已启用的模板</span>
+            </div>
+        </div>
+        <div class="hbPic-m layer-photos-demo1">
+            <div class="item" v-for="(item,index) in hbList" :key="index">
+                <div class="pic"><img :src='item.src' alt=""></div>
+                <div class="txt">
+                    <p>{{item.txt}}</p>
+                    <div>
+                        <a >选择</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  搜索/排序  -->
+<div class="account-box" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">海报标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态:</span>
+            <div class="account-r chose_item">
+                <label for="statu1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="statu2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="statu" id="statu2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+<script src="../../../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            hbList:[
+                {src:'https://img2.baidu.com/it/u=2462825304,3588288106&fm=253&fmt=auto&app=138&f=JPG?w=500&h=889',txt:'学习打卡'},
+                {src:'https://img2.baidu.com/it/u=3578025483,634727127&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享'},
+                {src:'https://img2.baidu.com/it/u=1925850077,613222639&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享'},
+                {src:'https://img2.baidu.com/it/u=2462825304,3588288106&fm=253&fmt=auto&app=138&f=JPG?w=500&h=889',txt:'学习打卡'},
+                {src:'https://img2.baidu.com/it/u=3578025483,634727127&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享'},
+                {src:'https://img2.baidu.com/it/u=1925850077,613222639&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享'},
+                {src:'https://img2.baidu.com/it/u=2462825304,3588288106&fm=253&fmt=auto&app=138&f=JPG?w=500&h=889',txt:'学习打卡'},
+                {src:'https://img2.baidu.com/it/u=3578025483,634727127&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享'},
+                {src:'https://img2.baidu.com/it/u=1925850077,613222639&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享'},
+                {src:'https://img2.baidu.com/it/u=2462825304,3588288106&fm=253&fmt=auto&app=138&f=JPG?w=500&h=889',txt:'学习打卡'},
+                {src:'https://img2.baidu.com/it/u=3578025483,634727127&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享'},
+                {src:'https://img2.baidu.com/it/u=1925850077,613222639&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',txt:'学习分享'},
+            ]
+        },
+    })
+</script>
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+
+    layer.photos({
+        photos: '.layer-photos-demo1'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $(".account-box")
+        });
+    });
+
+
+</script>
+</body>
+</html>

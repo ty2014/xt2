@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模块配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.0">
+</head>
+<body id="chutiyan" >
+
+<div class="page-title">模块配置</div>
+<div class="activity_set activity_set3">
+    <div class="b-line" style="border-bottom: 0;">
+        <div class="a_list">
+            <span class="a_list_l">分享码宣传语:</span>
+            <div class="a_list_r"><input type="text" value="分享干货  不装逼"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">主页URL:</span>
+            <div class="a_list_r">http://cshtml.lkmsxy.com/<span class="copy-btn">复制</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">联系方式:</span>
+            <div class="a_list_r">
+                <div class="live_demo">
+                    <div class="demo-cont">
+                        <div class="pic"><img src="images/mb1.png" alt="" style="width: 250px;border: 1px solid #ddd"></div>
+                    </div>
+                    <label for="demo1" class="radio" style="margin: 12px auto 0;justify-content: center;">
+                        <div class="chose">
+                            <input type="radio" checked name="demo" id="demo1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">样式一</span>
+                    </label>
+                </div>
+                <div class="live_demo" style="margin-left: 20px;">
+                    <div class="demo-cont">
+                        <div class="pic"><img src="images/mb2.png" alt="" style="width: 250px;border: 1px solid #ddd"></div>
+                    </div>
+                    <label for="demo2" class="radio" style="margin: 12px auto 0;justify-content: center;">
+                        <div class="chose">
+                            <input type="radio" name="demo" id="demo2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">样式二</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">底部菜单显示:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="u-togg" checked class="toggle-button" name="switch">
+                    <label for="u-togg" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*默认开启；关闭后，图文这一系列下的所有页面底部都不显示该菜单</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<img src="http://cshtml.lkmsxy.com/csimg/zlImg2.png" alt="" id="title_img" style="height: 580px;display: none;">
+
+<img src="http://cshtml.lkmsxy.com/csimg/ylkImg5.png" alt="" id="key_img" style="height: 580px;display: none;">
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('.toggle-button-wrapper input').click(function () {
+        $(this).parent().siblings('span').toggle()
+    });
+    $('#chutiyan .title_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#title_img")
+        });
+    });
+    $('#chutiyan .key_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#key_img")
+        });
+    });
+
+</script>
+
+</body>
+</html>

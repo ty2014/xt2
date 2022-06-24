@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>模块设置</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan" style="height: auto">
+
+
+<div class="page-title">模块设置</div>
+
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">活码状态:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg" checked class="toggle-button" name="switch">
+                        <label for="u-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">启用</span>
+                            <span class="text off">停用</span>
+                        </label>
+                    </div>
+                <span class="tishi">*停用后，活码平台将停用，用户访问都将提示“系统繁忙，请稍后再试”</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">活码主页:</span>
+            <div class="a_list_r">http：lkm.huoma.com<span class="copy-btn">复制</span></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">活码简介:</span>
+            <div class="a_list_r"><input type="text" placeholder="分享时展示" class="w-620"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">排除使用:</span>
+            <div class="a_list_r">
+                <span class="set-user pc-user" style="margin-right: 16px">排除指定用户</span>
+                <a class="pc-user2">已排除0人</a>
+                <span class="tishi">*指定的用户，不可使用活码，该模块黑名单用户</span>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;margin-top: 18px">免费试用:</span>
+            <div class="a_list_r chose_item">
+                <div>
+                    <div class="radio_list" style="display: flex;align-items: center;margin-bottom: 8px;">
+                        <label for="cj1" class="radio">
+                            <div class="chose">
+                                <input type="radio" checked="" name="cj" id="cj1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">否，需付费/授权使用</span>
+                        </label>
+                        <label for="cj2" class="radio mgR-0">
+                            <div class="chose">
+                                <input type="radio" name="cj" id="cj2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">是，可免费试用几个</span>
+                        </label>
+                    </div>
+                    <div class="free_cont" style="display: none;background: #efefef;padding: 10px 20px 10px 10px;">
+                        <div style="display: flex;margin-bottom: 10px;border-bottom: 1px solid #fff;padding-bottom: 10px">
+                            <span style="width: 80px;margin-top: 5px;margin-right: 20px;display: inline-block;text-align: right">可试用会员:</span>
+                            <div style="display: flex;">
+                                <label for="tp1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="tp1">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">非会员</span>
+                                </label>
+                                <label for="tp2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="tp2">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">VIP</span>
+                                </label>
+                                <label for="tp3" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="tp3">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">合伙人</span>
+                                </label>
+                                <label for="tp4" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="pic2" id="tp4">
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                    <span class="msg_set_txt">联创人</span>
+                                </label>
+                            </div>
+                        </div>
+                        <ul>
+                            <li style="padding: 6px 0">
+                                <span style="width: 80px;margin-right: 20px;display: inline-block;text-align: right">群码:</span>可试用<input type="text" style="width: 60px;height: 28px;text-align: center;margin: 0 8px;">
+                                个，限上传二维码<input type="text" style="width: 60px;height: 28px;text-align: center;margin: 0 8px;">个
+                            </li>
+                            <li style="padding: 6px 0">
+                                <span style="width: 80px;margin-right: 20px;display: inline-block;text-align: right">客服码:</span>可试用<input type="text" style="width: 60px;height: 28px;text-align: center;margin: 0 8px;">
+                                个，限上传二维码<input type="text" style="width: 60px;height: 28px;text-align: center;margin: 0 8px;">个
+                            </li>
+                            <li style="padding: 6px 0">
+                                <span style="width: 80px;margin-right: 20px;display: inline-block;text-align: right">分组群码:</span>可试用<input type="text" style="width: 60px;height: 28px;text-align: center;margin: 0 8px;">
+                                个，限上传二维码<input type="text" style="width: 60px;height: 28px;text-align: center;margin: 0 8px;">个
+                            </li>
+                            <li style="padding: 6px 0">
+                                <span style="width: 80px;margin-right: 20px;display: inline-block;text-align: right">分组客服码:</span>可试用<input type="text" style="width: 60px;height: 28px;text-align: center;margin: 0 8px;">
+                                个，限上传二维码<input type="text" style="width: 60px;height: 28px;text-align: center;margin: 0 8px;">个
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">付费使用:</span>
+            <div class="a_list_r">
+                <div class="space-toggle">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="pay-togg" class="toggle-button" name="switch">
+                        <label for="pay-togg" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">可购买使用</span>
+                            <span class="text off">仅授权使用</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pay_cont1" style="display: none">
+
+            <div class="a_list">
+                <span class="a_list_l">付费介绍:</span>
+                <div class="a_list_r">
+                    <span class="set-user zdy">付费页面-自定义</span><span class="tishi">*代码自定义页面，吸引用户购买使用活码</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">排除付费:</span>
+                <div class="a_list_r">
+                    <span class="set-user pc-user" style="margin-right: 16px">指定用户，不可付费使用</span>
+                    <a class="pc-user2">已排除0人</a>
+                    <span class="tishi">*被排除的用户，付费时始终提醒“系统繁忙，稍后再试”</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">续费提醒:</span>
+                <div class="a_list_r">
+                    距使用到期<input type="number" class="s_width center" style="margin: 0 8px">天，提醒用户续费<span class="tishi">*在用户使用过期前，引导续费使用</span>
+                </div>
+            </div>
+        </div>
+        <div class="pay_cont2">
+			<div class="a_list">
+			    <span class="a_list_l" style="align-items: flex-start;margin-top: 23px;">续用提醒:</span>
+			    <div class="a_list_r">
+					<!-- 此处放富文本编辑器 -->
+			        <textarea style="width: 620px;height: 200px;padding: 10px;resize: none;border-radius: 0;">请联系后台管理员，授权开通使用</textarea>
+			    </div>
+			</div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+<div class="activity_set activity_set2 w-120" id="zdy-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">页面标题:</span>
+            <div class="a_list_r">
+                <input type="text" class="w-620">
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享简介:</span>
+            <div class="a_list_r">
+                <input type="text" class="w-620">
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享图标:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <!--  存放已上传图片，默认隐藏  -->
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <li class="img_item">
+                                <img src="http://cshtml.lkmsxy.com/eq2.jpg" layer-src="http://cshtml.lkmsxy.com/eq.jpg" layer-index="1">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="tishi">*建议像素50*50，大小不超过10KB</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">介绍网址:</span>
+            <div class="a_list_r">
+                <div style="max-width: 80%">http://lkm.hm.lingyiliebian.com/web/active_code/web/active_code/?id=ooMO&show=1</div>
+                <span class="copy-btn">复制</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">付费网址:</span>
+            <div class="a_list_r">
+                <div class="normal-table">
+                    <table border="0">
+                        <thead>
+                        <tr>
+                            <th style="width: 100px">支付价格</th>
+                            <th style="width: 80px">使用天数</th>
+                            <th style="width: 150px">付费网址</th>
+                            <th style="width: 180px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="line-tr"><input type="number" class="m_width center"></td>
+                            <td class="line-tr"><input type="number" class="m_width center"></td>
+                            <td class="line-tr">保存后自动生成链接</td>
+                            <td class="line-tr"><button>添加</button></td>
+                        </tr>
+                        <tr>
+                            <td class="line-tr"><input type="number" class="m_width center"></td>
+                            <td class="line-tr"><input type="number" class="m_width center"></td>
+                            <td class="line-tr">http://cshtml.lkmsxy.com/</td>
+                            <td class="line-tr"><button style="margin-right: 8px;">复制</button><button class="del">删除</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 25px">付费介绍:</span>
+            <div class="a_list_r">
+                <textarea style="width: 620px;height: 200px;padding: 10px;resize: none">此处放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    $('#cj1').click(function () {
+        $('.free_cont').hide()
+    });
+    $('#cj2').click(function () {
+        $('.free_cont').show()
+    });
+
+    $('#pay-togg').click(function () {
+        if($('#pay-togg').is(':checked')){
+            $('.pay_cont2').hide();
+            $('.pay_cont1').show();
+        }else{
+            $('.pay_cont2').show();
+            $('.pay_cont1').hide();
+        }
+    });
+
+
+    $('#chutiyan .pc-user').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '选择用户',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '排除人员.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .pc-user2').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '选择用户',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '排除人员.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .zdy').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '付费页面-自定义',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#zdy-sure")
+        });
+    });
+</script>
+
+
+</body>
+</html>

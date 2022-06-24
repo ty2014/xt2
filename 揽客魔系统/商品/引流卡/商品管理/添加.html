@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加商品</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body id="chutiyan" style="height: auto;padding: 0;background: #fff">
+
+
+<div class="activity_set activity_set2 w-120">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">基本信息</span>
+            <div class="a_list_r"></div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">商品分类:</span>
+            <div class="a_list_r">
+                <div class="select-text">
+                    <span class="select-txt">请选择</span>
+                    <ul style="display: none;">
+                        <li>分类一</li>
+                        <li>分类二</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">商品主图:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="tishi mgL-0">*建议像素702*468，jpg、png格式，图片小于300kb</p>
+            </div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">商品名称:</span>
+            <div class="a_list_r"><input type="text" placeholder="分享活动展示该简介" class="w-620"></div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">商品简介:</span>
+            <div class="a_list_r"><input type="text" placeholder="商品简介，常用于分享展示" class="w-620"></div>
+        </div>
+        <div class="a_list ">
+            <span class="a_list_l">商品介绍:</span>
+            <div class="a_list_r">
+                <textarea style="width: 620px;height: 400px;">这里放富文本编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">价格库存</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">市场价:</span>
+            <div class="a_list_r"><input type="text" class="m_width center" style="margin-right: 8px;">元<span class="tishi">*选填，填写将在商品详情按画线形式展示</span></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">售价:</span>
+                <div class="a_list_r"><input type="text" class="m_width center" style="margin-right: 8px;">元</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">虚拟销量:</span>
+                <div class="a_list_r"><input type="text" class="m_width center" style="margin-right: 8px;"><span class="tishi">*虚拟销量+实际销量=总销量</span></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">库存:</span>
+            <div class="a_list_r"><input type="text" class="m_width center" style="margin-right: 8px;">已售：0<span class="tishi">*此处库存为商品的可售卖库存，可以直接修改，修改后，卖家看到的商品库存数量会进行变化</span></div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">其他信息</span>
+            <div class="a_list_r"></div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">配送方式:</span>
+                <div class="a_list_r">快递邮寄</div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">快递运费:</span>
+                <div class="a_list_r">
+                    <input type="text" class="m_width center" style="margin-right: 8px;">元/件
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">商品上架:</span>
+            <div class="a_list_r">
+                <label for="cj1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="cj" id="cj1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">立即上架</span>
+                </label>
+                <label for="cj2" class="radio mgR-0">
+                    <div class="chose">
+                        <input type="radio" name="cj" id="cj2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">暂不上架，放入仓库中</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+</script>
+
+</body>
+</html>

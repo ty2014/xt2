@@ -1,0 +1,8 @@
+
+.second-nav-tabs{border-bottom: 1px solid #ecedee;background: #f8f8f9;padding: 8px 15px;display: flex;font-size: 12px;}
+.second-nav-tabs li{margin-right: 8px;padding: 4px 9px;border-radius: 24px;color: #666;cursor: pointer}
+.second-nav-tabs li.active,.second-nav-tabs li.active:hover{background: #367ef2;color: #fff;}
+.second-nav-tabs li:hover{background: #eee}
+
+.tab-pane,.box{display: none}
+.tab-pane.active,.box.active{display: block}

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书管理</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+
+    </style>
+</head>
+<body id="chutiyan">
+
+<!--
+
+-->
+
+<div class="content">
+    <div class="page-title">待上架图书</div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="60px">序号</th>
+                        <th width="200px" class="left">图书名称</th>
+                        <th width="100px">作者</th>
+                        <th width="100px">分类</th>
+                        <th width="100px">图书格式</th>
+                        <th width="100px">价格</th>
+                        <th width="100px">阅读量</th>
+                        <th width="100pz">收藏</th>
+                        <th width="100pz">点赞</th>
+                        <th width="100pz">评论</th>
+                        <th width="100pz">购买</th>
+                        <th width="100px">分享</th>
+                        <th width="100px">赠送</th>
+                        <th width="100px">是否支持朗读</th>
+                        <th width="100pz">是否试读</th>
+                        <th width="100pz">分享海报</th>
+                        <th width="100pz">转赠海报</th>
+                        <th width="100pz">优先级</th>
+                        <th width="100pz">状态</th>
+                        <th width="150pz">下架时间</th>
+                        <th width="100pz">操作人</th>
+                        <th width="200pz" class="stickyHR shadow">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="60px">1</td>
+                        <td width="200px" class="left"><a class="listBtn">恩格斯与我们的时代</a></td>
+                        <td width="100px">恩格斯</td>
+                        <td width="100px">心灵</td>
+                        <td width="100px">PDF</td>
+                        <td width="100px">9.9</td>
+                        <td width="100px">50</td>
+                        <td width="100px"><a class="sc-num">40</a></td>
+                        <td width="100px"><a class="dz-num">35</a></td>
+                        <td width="100px"><a class="pl-num">15</a></td>
+                        <td width="100px"><a class="buy-num">10</a></td>
+                        <td width="100px"><a class="share-num">50</a></td>
+                        <td width="100px"><a class="send-num">8</a></td>
+                        <td width="100px">是</td>
+                        <td width="100px">是</td>
+                        <td width="100px"><a class="shareChose_num">2</a></td>
+                        <td width="100px"><a class="sendChose_num">2</a></td>
+                        <td width="100px">99</td>
+                        <td width="100px" class="statu statu2"><span>待上架</span></td>
+                        <td width="150px" class="date"><div>2019-08-04 10:47:01</div></td>
+                        <td width="100px">同创小课</td>
+                        <td width="200px" class="stickyBR shadow cz_btn">
+                            <button type="button" class="btn-type1 edit_btn">编辑</button>
+                            <button type="button" class="book_btn">电子书</button>
+                            <button type="button" class="btn-type2 del_btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left"></td>
+                        <td></td>
+                        <td></td>
+                        <td>epub</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>否</td>
+                        <td>否</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="statu statu2"><span>待上架</span></td>
+                        <td></td>
+                        <td></td>
+                        <td class="stickyBR shadow"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btm_page2">
+            <div class="pages">
+                <div class="pages_num">
+                    <span class="prev">上一页</span>
+                    <span>1</span>
+                    <span class="page-default">...</span>
+                    <span>50</span>
+                    <span class="active">51</span>
+                    <span>52</span>
+                    <span class="page-default">...</span>
+                    <span>100</span>
+                    <span class="next">下一页</span>
+                </div>
+                <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+            </div>
+            <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                <div class="select-text">
+                    <span class="select-txt">10</span>
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>50</li>
+                        <li>100</li>
+                    </ul>
+                </div>条
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">图书名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">作者:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">分类:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">操作人:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">支持朗读:</span>
+            <div class="account-r chose_item">
+                <label for="sld1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ld" id="sld1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">支持</span>
+                </label>
+                <label for="sld2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ld" id="sld2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">不支持</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">是否试读:</span>
+            <div class="account-r chose_item">
+                <label for="ssd1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="sd" id="ssd1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="ssd2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="sd" id="ssd2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">下架时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2">
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">图书格式:</span>
+            <div class="account-r chose_item">
+                <label for="gs1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gs" id="gs1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">PDF</span>
+                </label>
+                <label for="gs2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="gs" id="gs2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">epub</span>
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<div class="activity_set activity_set2 w-150" id="book-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">图书格式:</span>
+            <div class="a_list_r checked_chose">
+                <label for="book1" class="radio normal-cd">
+                    <div class="chose">
+                        <input type="radio" checked="" name="book" id="book1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">PDF格式</span>
+                </label>
+                <label for="book2" class="radio zdy-cd">
+                    <div class="chose">
+                        <input type="radio" name="book" id="book2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">epub格式</span>
+                </label>
+            </div>
+        </div>
+        <div class="setCont1">
+            <div class="a_list">
+                <span class="a_list_l">选择图书:</span>
+                <div class="a_list_r ">
+                    <span class="set-user">选择文件</span>
+                    <span class="tishi">* 仅支持 PDF 格式文件，为了电子书能在手机端给用户一个良好的展示效果，建议PDF页面大小设置为 210mm * 370mm</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r ">
+                    <img src="../../images/pdf.png" alt="">
+                    <span style="margin-left: 10px">恩格斯与我们的时代.pdf</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">是否加密:</span>
+                <div class="a_list_r checked_chose">
+                    <label for="jm1" class="radio normal-cd">
+                        <div class="chose">
+                            <input type="radio" checked="" name="jm" id="jm1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">加密</span>
+                    </label>
+                    <label for="jm2" class="radio zdy-cd">
+                        <div class="chose">
+                            <input type="radio" name="jm" id="jm2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">不加密</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">是否试读:</span>
+                <div class="a_list_r checked_chose">
+                    <label for="sd1" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="sd" id="sd1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">可以试读</span>
+                    </label>
+                    <label for="sd2" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked="" name="sd" id="sd2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">不能试读</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list sdCont" style="display: none">
+                <span class="a_list_l"></span>
+                <div class="a_list_r ">
+                    可免费试读前<input type="number" class="s_width center mg-8">页
+                    <span class="tishi">* 当前图书共<b class="notExpired mg-8">100</b>页</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">是否支持朗读:</span>
+                <div class="a_list_r checked_chose">
+                    <label for="ld1" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="ld" id="ld1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">支持</span>
+                    </label>
+                    <label for="ld2" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked="" name="ld" id="ld2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">不支持</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list ldCont" style="display: none">
+                <span class="a_list_l"></span>
+                <div class="a_list_r ">
+                    <div class="normal-table" style="width: 700px">
+                        <table border="0">
+                            <thead>
+                            <tr>
+                                <th style="width: 60px">序号</th>
+                                <th style="width: 200px">音频名称</th>
+                                <th style="width: 100px">时长</th>
+                                <th style="width: 80px">排序码</th>
+                                <th style="width: 100px">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="line-tr">1</td>
+                                <td class="line-tr">aaa1.mp3</td>
+                                <td class="line-tr">54:45</td>
+                                <td class="line-tr">01</td>
+                                <td>
+                                    <button class="edit">编辑</button>
+                                    <button class="del">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="line-tr" colspan="4" style="text-align: left">
+                                    <span class="tishi mgL-0">* 仅支持 MP3 格式文件，单个文件大小不超过50M，同一本图书可选择多段语音文件，按顺序播放</span>
+                                </td>
+                                <td>
+                                    <button>添加朗读文件</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">购买后转赠:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg1" class="toggle-button" name="switch">
+                            <label for="u-togg1" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">允许转赠</span>
+                                <span class="text off">不能转赠</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cont4 hide">最多允许转赠给<input type="number" class="s_width m-height center mg-8">人</div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">目录:</span>
+                <div class="a_list_r">
+                    <span class="set-user listSet">编辑目录</span>
+                </div>
+            </div>
+        </div>
+        <div class="setCont2" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l">选择图书:</span>
+                <div class="a_list_r ">
+                    <span class="set-user">选择文件</span>
+                    <span class="tishi">* 仅支持 epub 格式文件，为了保证良好的阅读效果，请严格遵循epub标准</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r ">
+                    <img src="../../images/epub.png" alt="">
+                    <span style="margin-left: 10px">恩格斯与我们的时代.epub</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">是否加密:</span>
+                <div class="a_list_r checked_chose">
+                    <label for="jm2-1" class="radio normal-cd">
+                        <div class="chose">
+                            <input type="radio" checked="" name="jm2" id="jm2-1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">加密</span>
+                    </label>
+                    <label for="jm2-2" class="radio zdy-cd">
+                        <div class="chose">
+                            <input type="radio" name="jm2" id="jm2-2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">不加密</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">是否试读:</span>
+                <div class="a_list_r checked_chose">
+                    <label for="sd2-1" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="sd2" id="sd2-1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">可以试读</span>
+                    </label>
+                    <label for="sd2-2" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked="" name="sd2" id="sd2-2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">不能试读</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list sdCont2" style="display: none">
+                <span class="a_list_l"></span>
+                <div class="a_list_r ">
+                    可免费试读前<input type="number" class="s_width center mg-8">章
+                    <span class="tishi">* 当前图书共<b class="notExpired mg-8">100</b>章</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">是否支持朗读:</span>
+                <div class="a_list_r checked_chose">
+                    <label for="ld2-1" class="radio">
+                        <div class="chose">
+                            <input type="radio" name="ld2" id="ld2-1">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">支持</span>
+                    </label>
+                    <label for="ld2-2" class="radio">
+                        <div class="chose">
+                            <input type="radio" checked="" name="ld2" id="ld2-2">
+                            <span class="checked-bg"></span>
+                        </div>
+                        <span class="msg_set_txt">不支持</span>
+                    </label>
+                </div>
+            </div>
+            <div class="a_list ldCont2" style="display: none">
+                <span class="a_list_l"></span>
+                <div class="a_list_r ">
+                    <div class="normal-table" style="width: 700px">
+                        <table border="0">
+                            <thead>
+                            <tr>
+                                <th style="width: 60px">序号</th>
+                                <th style="width: 200px">音频名称</th>
+                                <th style="width: 100px">时长</th>
+                                <th style="width: 80px">排序码</th>
+                                <th style="width: 100px">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="line-tr">1</td>
+                                <td class="line-tr">aaa1.mp3</td>
+                                <td class="line-tr">54:45</td>
+                                <td class="line-tr">01</td>
+                                <td>
+                                    <button class="edit">编辑</button>
+                                    <button class="del">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="line-tr" colspan="4" style="text-align: left">
+                                    <span class="tishi mgL-0">* 仅支持 MP3 格式文件，单个文件大小不超过50M，同一本图书可选择多段语音文件，按顺序播放</span>
+                                </td>
+                                <td>
+                                    <button>添加朗读文件</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">购买后转赠:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                            <label for="u-togg2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">允许转赠</span>
+                                <span class="text off">不能转赠</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cont5 hide">最多允许转赠给<input type="number" class="s_width m-height center mg-8">人</div>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">目录:</span>
+                <div class="a_list_r">epub格式下的图书目录由系统自动生成，暂不能修改</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<div class="activity_set activity_set2 w-100" id="sort-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">排序码:</span>
+            <div class="a_list_r ">
+                <input type="number" value="01" class="s_width center mgR-8">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .add_btn,.edit_btn,.listBtn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加',        //  活动名称
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '添加.html' //iframe的url
+        });
+    });
+
+
+    $('#chutiyan .sc-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '恩格斯与我们的时代',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '图书详情.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .dz-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '恩格斯与我们的时代',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '图书详情.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .pl-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '恩格斯与我们的时代',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '图书详情.html#tab3' //iframe的url
+        });
+    });
+    $('#chutiyan .buy-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '恩格斯与我们的时代',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '图书详情.html#tab4' //iframe的url
+        });
+    });
+    $('#chutiyan .share-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '恩格斯与我们的时代',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '图书详情.html#tab5' //iframe的url
+        });
+    });
+    $('#chutiyan .send-num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '恩格斯与我们的时代',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '图书详情.html#tab6' //iframe的url
+        });
+    });
+
+
+    $('#chutiyan .shareChose_num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '恩格斯与我们的时代',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '海报模板/海报模板选择.html#tab2' //iframe的url
+        });
+    });
+    $('#chutiyan .sendChose_num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '恩格斯与我们的时代',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '转赠模板/转赠模板选择.html#tab2' //iframe的url
+        });
+    });
+
+    $('#chutiyan .choseBook').on('click',function () {
+        layer.open({
+            type: 2,
+            title: '选择图书',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '选择图书.html' //iframe的url
+        });
+    })
+    $('#chutiyan .listSet').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '目录管理',        //
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '目录管理.html' //iframe的url
+        });
+    });
+
+    $('#chutiyan .book_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '恩格斯与我们的时代',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '90%'],
+            skin: 'activity_set2 activity_set',
+            content: $("#book-sure")
+        });
+    });
+    $('.ldCont .edit,.ldCont2 .edit').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '编辑',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['450px', '240px'],
+            skin: 'activity_set2 activity_set',
+            content: $("#sort-sure")
+        });
+    });
+
+
+    $('#book1').on('click',function () {
+        $('.setCont1').show();
+        $('.setCont2').hide()
+    })
+    $('#book2').on('click',function () {
+        $('.setCont1').hide();
+        $('.setCont2').show()
+    })
+
+    $('#ld1').on('click',function () {$('.ldCont').show()})
+    $('#ld2').on('click',function () {$('.ldCont').hide()})
+    $('#sd1').on('click',function () {$('.sdCont').show()})
+    $('#sd2').on('click',function () {$('.sdCont').hide()})
+    $('#u-togg1').on('click',function () {$('.cont4').toggle()})
+
+    $('#ld2-1').on('click',function () {$('.ldCont2').show()})
+    $('#ld2-2').on('click',function () {$('.ldCont2').hide()})
+    $('#sd2-1').on('click',function () {$('.sdCont2').show()})
+    $('#sd2-2').on('click',function () {$('.sdCont2').hide()})
+    $('#u-togg2').on('click',function () {$('.cont5').toggle()})
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del_btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定删除该条数据？',{
+                skin: 'failureskin',
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

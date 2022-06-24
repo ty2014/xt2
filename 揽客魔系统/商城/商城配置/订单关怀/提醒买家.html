@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提醒买家</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs head-tab" role="tablist">
+    <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">商家发货提醒</a></li>
+    <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">评价回复提醒</a></li>
+    <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">同意退货提醒</a></li>
+    <li role="presentation"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">退款到账提醒</a></li>
+    <li role="presentation"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab">拒绝退款提醒</a></li>
+</ul>
+
+
+<!--
+
+【商品名…】多件商品时，最多展示两个商品名+规格，其余用省略号代替。例：时尚女装368（XL、红色），保暖羊绒围巾.…
+-->
+<div class="tab-body-b">
+    <!-- Tab panes -->
+    <div class="tab-content gzh-cont num4">
+        <div role="tabpanel" class="tab-pane active" id="tab1">
+            <div class="cont_list">
+                <span class="list_tit">微信提醒：</span>
+                <div class="list_cont">
+                    <div class="htmleaf-content">
+                        <div class="checkbox2">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list flex-start">
+                <span class="list_tit">微信模板：</span>
+                <div class="list_cont">
+                    <div class="remin_end_txt">
+                        <div class="cont_label">
+                            <em class="label-tips">[购买人昵称]</em>
+                            <em class="label-tips">[店铺名]</em>
+                            <em class="label-tips">[商品名…]</em>
+                            <em class="label-tips">[商品件数]</em>
+                            <em class="label-tips">[发货时间]</em>
+                            <em class="label-tips">[订单编号]</em>
+                            <em class="label-tips">[订单详情网址]</em>
+                        </div>
+                        <div class="txt_cont" contenteditable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list">
+                <span class="list_tit">短信提醒：</span>
+                <div class="list_cont">
+                    <div class="htmleaf-content">
+                        <div class="checkbox2">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list flex-start">
+                <span class="list_tit">短信模板：</span>
+                <div class="list_cont">
+                    <div class="remin_end_txt">
+                        <div class="cont_label">
+                            <em class="label-tips">[购买人昵称]</em>
+                            <em class="label-tips">[店铺名]</em>
+                            <em class="label-tips">[商品名…]</em>
+                            <em class="label-tips">[商品件数]</em>
+                            <em class="label-tips">[发货时间]</em>
+                            <em class="label-tips">[订单编号]</em>
+                            <em class="label-tips">[订单详情网址]</em>
+                        </div>
+                        <div class="txt_cont" contenteditable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab2">
+            <div class="cont_list">
+                <span class="list_tit">微信提醒：</span>
+                <div class="list_cont">
+                    <div class="htmleaf-content">
+                        <div class="checkbox2">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list flex-start">
+                <span class="list_tit">微信模板：</span>
+                <div class="list_cont">
+                    <div class="remin_end_txt">
+                        <div class="cont_label">
+                            <em class="label-tips">[购买人昵称]</em>
+                            <em class="label-tips">[店铺名]</em>
+                            <em class="label-tips">[商品名]</em>
+                            <em class="label-tips">[评价时间]</em>
+                            <em class="label-tips">[评价内容]</em>
+                            <em class="label-tips">[回复时间]</em>
+                            <em class="label-tips">[回复内容]</em>
+                        </div>
+                        <div class="txt_cont" contenteditable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list">
+                <span class="list_tit">短信提醒：</span>
+                <div class="list_cont">
+                    <div class="htmleaf-content">
+                        <div class="checkbox2">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list flex-start">
+                <span class="list_tit">短信模板：</span>
+                <div class="list_cont">
+                    <div class="remin_end_txt">
+                        <div class="cont_label">
+                            <em class="label-tips">[购买人昵称]</em>
+                            <em class="label-tips">[店铺名]</em>
+                            <em class="label-tips">[商品名]</em>
+                            <em class="label-tips">[评价时间]</em>
+                            <em class="label-tips">[评价内容]</em>
+                            <em class="label-tips">[回复时间]</em>
+                            <em class="label-tips">[回复内容]</em>
+                        </div>
+                        <div class="txt_cont" contenteditable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab3">
+            <div class="cont_list">
+                <span class="list_tit">微信提醒：</span>
+                <div class="list_cont">
+                    <div class="htmleaf-content">
+                        <div class="checkbox2">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list flex-start">
+                <span class="list_tit">微信模板：</span>
+                <div class="list_cont">
+                    <div class="remin_end_txt">
+                        <div class="cont_label">
+                            <em class="label-tips">[购买人昵称]</em>
+                            <em class="label-tips">[店铺名]</em>
+                            <em class="label-tips">[退款商品]</em>
+                            <em class="label-tips">[退款数量]</em>
+                            <em class="label-tips">[退货地址]</em>
+                            <em class="label-tips">[退款金额]</em>
+                            <em class="label-tips">[退款详情网址]</em>
+                        </div>
+                        <div class="txt_cont" contenteditable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list">
+                <span class="list_tit">短信提醒：</span>
+                <div class="list_cont">
+                    <div class="htmleaf-content">
+                        <div class="checkbox2">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list flex-start">
+                <span class="list_tit">短信模板：</span>
+                <div class="list_cont">
+                    <div class="remin_end_txt">
+                        <div class="cont_label">
+                            <em class="label-tips">[购买人昵称]</em>
+                            <em class="label-tips">[店铺名]</em>
+                            <em class="label-tips">[退款商品]</em>
+                            <em class="label-tips">[退款数量]</em>
+                            <em class="label-tips">[退货地址]</em>
+                            <em class="label-tips">[退款金额]</em>
+                            <em class="label-tips">[退款详情网址]</em>
+                        </div>
+                        <div class="txt_cont" contenteditable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab4">
+            <div class="cont_list">
+                <span class="list_tit">微信提醒：</span>
+                <div class="list_cont">
+                    <div class="htmleaf-content">
+                        <div class="checkbox2">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list flex-start">
+                <span class="list_tit">微信模板：</span>
+                <div class="list_cont">
+                    <div class="remin_end_txt">
+                        <div class="cont_label">
+                            <em class="label-tips">[购买人昵称]</em>
+                            <em class="label-tips">[店铺名]</em>
+                            <em class="label-tips">[退款商品]</em>
+                            <em class="label-tips">[退款数量]</em>
+                            <em class="label-tips">[退款金额]</em>
+                            <em class="label-tips">[退款详情网址]</em>
+                        </div>
+                        <div class="txt_cont" contenteditable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list">
+                <span class="list_tit">短信提醒：</span>
+                <div class="list_cont">
+                    <div class="htmleaf-content">
+                        <div class="checkbox2">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list flex-start">
+                <span class="list_tit">短信模板：</span>
+                <div class="list_cont">
+                    <div class="remin_end_txt">
+                        <div class="cont_label">
+                            <em class="label-tips">[购买人昵称]</em>
+                            <em class="label-tips">[店铺名]</em>
+                            <em class="label-tips">[退款商品]</em>
+                            <em class="label-tips">[退款数量]</em>
+                            <em class="label-tips">[退款金额]</em>
+                            <em class="label-tips">[退款详情网址]</em>
+                        </div>
+                        <div class="txt_cont" contenteditable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab5">
+            <div class="cont_list">
+                <span class="list_tit">微信提醒：</span>
+                <div class="list_cont">
+                    <div class="htmleaf-content">
+                        <div class="checkbox2">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list flex-start">
+                <span class="list_tit">微信模板：</span>
+                <div class="list_cont">
+                    <div class="remin_end_txt">
+                        <div class="cont_label">
+                            <em class="label-tips">[购买人昵称]</em>
+                            <em class="label-tips">[店铺名]</em>
+                            <em class="label-tips">[退款商品]</em>
+                            <em class="label-tips">[退款数量]</em>
+                            <em class="label-tips">[拒绝理由]</em>
+                            <em class="label-tips">[退款详情网址]</em>
+                        </div>
+                        <div class="txt_cont" contenteditable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list">
+                <span class="list_tit">短信提醒：</span>
+                <div class="list_cont">
+                    <div class="htmleaf-content">
+                        <div class="checkbox2">
+                            <input type="checkbox"/>
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_list flex-start">
+                <span class="list_tit">短信模板：</span>
+                <div class="list_cont">
+                    <div class="remin_end_txt">
+                        <div class="cont_label">
+                            <em class="label-tips">[购买人昵称]</em>
+                            <em class="label-tips">[店铺名]</em>
+                            <em class="label-tips">[退款商品]</em>
+                            <em class="label-tips">[退款数量]</em>
+                            <em class="label-tips">[拒绝理由]</em>
+                            <em class="label-tips">[退款详情网址]</em>
+                        </div>
+                        <div class="txt_cont" contenteditable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+</div>
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../../js/index.js"></script>
+
+</body>
+</html>

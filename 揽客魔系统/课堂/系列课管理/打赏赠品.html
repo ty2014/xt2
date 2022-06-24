@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打赏赠品</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+
+
+<div class="page-title">打赏赠品</div>
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">统一配置:</span>
+            <div class="a_list_r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox" id="ds-fy" class="toggle-button" name="switch">
+                    <label for="ds-fy" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开启</span>
+                        <span class="text off">关闭</span>
+                    </label>
+                </div>
+                <span class="tishi">*开启后，用户打赏任意一笔，即打赏按钮下方会给用户展示“赠品内容”</span>
+            </div>
+        </div>
+        <div class="a_list fy-set">
+            <span class="a_list_l">赠品内容:</span>
+            <div class="a_list_r">
+                <textarea style="width: 620px;height: 400px;padding: 10px;margin-bottom: 10px;">此处放编辑器</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+    $(function () {
+        if($('#ds-fy').is(':checked')){
+            $('.fy-set').show()
+        }else{
+            $('.fy-set').hide()
+        }
+        $('#ds-fy').click(function () {
+            $('.fy-set').toggle()
+        });
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择专栏</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="head-tab3">
+    <li class="active current3"><a href="#tab1">未选专栏</a></li>
+    <li><a href="#tab2">已选专栏</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content3 content2">
+    <div class="tab-pane active" id="tab1">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            </div>
+            <div class="tab_type_2">
+                <span class="tab-tips add_btn"><i class="plus-tips"></i>完成选择</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="60px">序号</th>
+                            <th width="60px">
+                                <label for="chose0" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="chose" id="chose0" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </th>
+                            <th width="200px" class="left">专栏名称</th>
+                            <th width="100px">专栏主图</th>
+                            <th width="100px">专栏售价</th>
+                            <th width="100px">是否展示</th>
+                            <th width="100px">启用状态</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="60px">1</td>
+                            <td width="60px" class="cz_btn">
+                                <label for="chose1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="chose" id="chose1" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                            <td width="200px" class="left"><a href="">抖音引流</a></td>
+                            <td width="100px" class="squ-pic"><img src="../../images/null2.jpg" alt=""></td>
+                            <td width="100px">998.00</td>
+                            <td width="100px">是</td>
+                            <td width="100px" class="statu statu1"><span>启用</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="cz_btn">
+                                <label for="chose2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="chose" id="chose2" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                            <td class="left"><a href="">付费干货</a></td>
+                            <td class="squ-pic"><img src="../../images/null2.jpg" alt=""></td>
+                            <td>199.00</td>
+                            <td>否</td>
+                            <td class="statu statu2"><span>停用</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+            </div>
+            <div class="tab_type_2">
+                <span class="tab-tips add_btn"><i class="del-tips"></i>移除选择</span>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="60px">序号</th>
+                            <th width="60px">
+                                <label for="chose2-0" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="chose" id="chose2-0" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </th>
+                            <th width="200px" class="left">专栏名称</th>
+                            <th width="100px">专栏主图</th>
+                            <th width="100px">专栏售价</th>
+                            <th width="100px">是否展示</th>
+                            <th width="100px">启用状态</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="60px">1</td>
+                            <td width="60px" class="cz_btn">
+                                <label for="chose2-1" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="chose" id="chose2-1" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                            <td width="200px" class="left"><a href="">抖音引流</a></td>
+                            <td width="100px" class="squ-pic"><img src="../../images/null2.jpg" alt=""></td>
+                            <td width="100px">998.00</td>
+                            <td width="100px">是</td>
+                            <td width="100px" class="statu statu1"><span>启用</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="cz_btn">
+                                <label for="chose2-2" class="checked">
+                                    <div class="chose">
+                                        <input type="checkbox" name="chose" id="chose2-2" />
+                                        <span class="checked-bg"></span>
+                                    </div>
+                                </label>
+                            </td>
+                            <td class="left"><a href="">付费干货</a></td>
+                            <td class="squ-pic"><img src="../../images/null2.jpg" alt=""></td>
+                            <td>199.00</td>
+                            <td>否</td>
+                            <td class="statu statu2"><span>停用</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序 -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">专栏名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.head-tab3 li');
+    var con = $('.tab-content3 > .tab-pane');
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active current3');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active current3');
+            $(con[i]).addClass('active');
+        }
+    }
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+
+</script>
+</body>
+</html>

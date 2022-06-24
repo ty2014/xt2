@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>群聊记录</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <style>
+        html,body{height: 100%;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="flex flexColumn" style="height: 100%">
+    <div class="page-title" style="margin-bottom: 10px;">群聊记录</div>
+    <div class="chatContent flex flex1">
+        <!--  成员列表  -->
+        <div class="chatBox1 flex flexColumn">
+            <div class="head">
+                群聊列表
+                <a href=""><i class="layui-icon layui-icon-play"></i>视频演示</a>
+            </div>
+            <div class="search">
+                <div class="searchType1">
+                    <div class="searchBox">
+                        <input type="search" placeholder="请输入成员名称">
+                        <i class="layui-icon layui-icon-search"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="flex1 scrollBar" style="overflow: auto">
+                <div class="chatLists">
+                    <div class="chatItem">
+                        <div class="itemPic qlChat">
+                            <img src="https://img0.baidu.com/it/u=1079959710,2776870030&fm=26&fmt=auto" alt="">
+                            <img src="https://img1.baidu.com/it/u=3988894411,24839006&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500" alt="">
+                            <img src="https://img0.baidu.com/it/u=1429175118,2649084526&fm=26&fmt=auto" alt="">
+                            <img src="https://img2.baidu.com/it/u=1560188145,3975303613&fm=26&fmt=auto" alt="">
+                            <img src="https://img1.baidu.com/it/u=187222037,605864959&fm=26&fmt=auto" alt="">
+                            <img src="https://img1.baidu.com/it/u=19766716,3349517949&fm=26&fmt=auto" alt="">
+                            <img src="https://img0.baidu.com/it/u=1940408069,674091792&fm=26&fmt=auto" alt="">
+                            <img src="https://img2.baidu.com/it/u=2801519102,320030020&fm=26&fmt=auto" alt="">
+                            <img src="https://img0.baidu.com/it/u=2578159972,3391751657&fm=26&fmt=auto" alt="">
+                        </div>
+                        <div class="itemMsg">
+                            <div class="msg1">
+                                <p>[华厚·技术部]</p>
+                                <span>15:45</span>
+                            </div>
+                            <div class="msg2">
+                                <p>蒋土豆：[图片]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatItem">
+                        <div class="itemPic qlChat">
+                            <img src="https://img0.baidu.com/it/u=1079959710,2776870030&fm=26&fmt=auto" alt="">
+                            <img src="https://img1.baidu.com/it/u=3988894411,24839006&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500" alt="">
+                            <img src="https://img0.baidu.com/it/u=1429175118,2649084526&fm=26&fmt=auto" alt="">
+                            <img src="https://img2.baidu.com/it/u=1560188145,3975303613&fm=26&fmt=auto" alt="">
+                            <img src="https://img1.baidu.com/it/u=187222037,605864959&fm=26&fmt=auto" alt="">
+                            <img src="https://img1.baidu.com/it/u=19766716,3349517949&fm=26&fmt=auto" alt="">
+                            <img src="https://img0.baidu.com/it/u=1940408069,674091792&fm=26&fmt=auto" alt="">
+                            <img src="https://img2.baidu.com/it/u=2801519102,320030020&fm=26&fmt=auto" alt="">
+                            <img src="https://img0.baidu.com/it/u=2578159972,3391751657&fm=26&fmt=auto" alt="">
+                        </div>
+                        <div class="itemMsg">
+                            <div class="msg1">
+                                <p>[华厚·技术部]</p>
+                                <span>15:45</span>
+                            </div>
+                            <div class="msg2">
+                                <p>蒋土豆：[图片]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="null-msg">
+                    <img src="../../images/null-msg.png" alt="">
+                    <p>暂无数据</p>
+                </div>
+            </div>
+        </div>
+        <!--  消息详情  -->
+        <div class="chatBox3 flex1 flex flexColumn">
+            <div style="height: 49px;border-bottom: 1px solid #e8e8e8;"></div>
+            <div class="flex1 scrollBar" style="overflow: auto">
+                <div class="null-msg">
+                    <img src="../../images/null-msg.png" alt="">
+                    <p>暂无数据</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,range: '~'
+            ,trigger: 'click'
+        });
+    });
+
+    $('.chatItem').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+
+
+</script>
+</body>
+</html>

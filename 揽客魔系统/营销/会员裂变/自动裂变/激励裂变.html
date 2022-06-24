@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>激励裂变</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto">
+
+<!-- Nav tabs -->
+<ul class="head-tab3">
+    <li class="active current3"><a href="#tab1">激励裂变</a></li>
+    <li><a href="#tab2">达标人数</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content3 content2">
+    <div class="tab-pane active" id="tab1">
+        <div class="activity_set activity_set2 activity_set-normal">
+            <div class="b-line">
+                <div class="a_list">
+                    <span class="a_list_l">启用状态:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="u-togg" checked class="toggle-button" name="switch">
+                                <label for="u-togg" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">启用</span>
+                                    <span class="text off">停用</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">后台锁定:</span>
+                    <div class="a_list_r">
+                        <div>
+                            <p>否&nbsp;&nbsp;<span style="color: red;">*若后台修改内容，则将锁定，手机端无法再编辑此处内容</span></p>
+                            <p style="display: flex;align-items: center;margin-top: 10px">是&nbsp;&nbsp;<span style="color: #06c15f;">*当前后台锁定，此处手机端不可编辑，内容仅后台可修改</span><span class="set-user reset-btn" style="margin-left: 12px">内容重置，清除锁定</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">达标标准:</span>
+                    <div class="a_list_r checked_chose">
+                        <label for="cd1" class="radio db-type1" style="width: 84px;">
+                            <div class="chose">
+                                <input type="radio" checked="" name="cd" id="cd1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">领券人数</span>
+                        </label>
+                        <label for="cd2" class="radio db-type2" style="width: 84px;">
+                            <div class="chose">
+                                <input type="radio" name="cd" id="cd2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">用券人数</span>
+                        </label>
+                        <span class="tishi">*用户赠送卡券，选择以“领券人数”或“用券人数”作为奖励标准</span>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">达标人数:</span>
+                    <div class="a_list_r">
+                        <input type="text" class="s_width center">&nbsp;&nbsp;
+                        <span class="db-tishi">人领券，赠送人可获奖励</span>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">领取提醒:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m lq-toggle">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                                <label for="u-togg2" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">开启</span>
+                                    <span class="text off">关闭</span>
+                                </label>
+                            </div>
+                        </div>
+                        <span class="tishi">*好友领券提醒赠送人，此处开启，则”统一领取提醒"不推送，关闭即默认推送”统一领取提醒"</span>
+                    </div>
+                </div>
+                <div class="a_list lq-cont" style="display: none">
+                    <span class="a_list_l" style="padding-top: 20px">领取提醒:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt">
+                            <div class="cont_label">
+                                <div class="href_cont href_cont1">
+                                    <p>文本<input type="text" placeholder="链接名字"></p>
+                                    <p>链接<input type="text"><span>确定</span></p>
+                                </div>
+                                <span class="href_btn href_btn1" data-toggle="tooltip" data-placement="top" title="链接"></span>
+                                <span class="emoji_btn" data-toggle="tooltip" data-placement="top" title="表情"></span>
+                                <div class="faceDiv"></div>
+                                <span class="line"></span>
+                                <em class="label-tips">[赠送人]</em>
+                                <em class="label-tips">[领取人]</em>
+                                <em class="label-tips">[卡券名称]</em>
+                                <em class="label-tips">[领取时间]</em>
+                                <em class="label-tips">[好友领取数]</em>
+                                <div style="position: relative">
+                                    <em class="label-tips href_btn2">[订单链接]</em>
+                                    <div class="href_cont href_cont2" style="top: -122px">
+                                        <p>文本<input type="text" value="订单链接"></p>
+                                        <p>链接<input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx" disabled><span>确定</span></p>
+                                    </div>
+                                </div>
+                                <div style="position: relative">
+                                    <em class="label-tips href_btn2">[卡券链接]</em>
+                                    <div class="href_cont href_cont2" style="top: -122px">
+                                        <p>文本<input type="text" value="卡券链接"></p>
+                                        <p>链接<input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx" disabled><span>确定</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="txt_cont Input_text " contenteditable="true"><span>[赠送人]</span>，您好
+你的好友：<span>[领取人]</span>, 领取了您赠送的卡券！您已累计赠出：<span>[好友领取数]</span>张~
+卡券名称：<span>[卡券名称]</span>
+领取时间：<span>[领取时间]</span>
+成功赠送8个好友，即可0元获取价值998元厨具大礼包！！！
+
+>>>看看卡券详情：<span>卡券链接</span>
+>>>继续去赠送：<span>订单链接</span></div>
+                            <p class="nums-tip2">还可输入<span>600</span>字</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l" style="padding-top: 20px">达标提醒&nbsp;<span class="tips db-tips"></span>:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt" style="width: 724px">
+                            <div class="cont_label">
+                                <div class="href_cont href_cont1">
+                                    <p>文本<input type="text" placeholder="链接名字"></p>
+                                    <p>链接<input type="text"><span>确定</span></p>
+                                </div>
+                                <span class="href_btn href_btn1" data-toggle="tooltip" data-placement="top" title="链接"></span>
+                                <span class="emoji_btn" data-toggle="tooltip" data-placement="top" title="表情"></span>
+                                <div class="faceDiv"></div>
+                                <span class="line"></span>
+                                <em class="label-tips">[赠送人]</em>
+                                <em class="label-tips">[卡券名称]</em>
+                                <div style="position: relative">
+                                    <em class="label-tips href_btn2">[订单链接]</em>
+                                    <div class="href_cont href_cont2" style="top: -122px">
+                                        <p>文本<input type="text" value="订单链接"></p>
+                                        <p>链接<input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx" disabled><span>确定</span></p>
+                                    </div>
+                                </div>
+                                <div style="position: relative">
+                                    <em class="label-tips href_btn2">[卡券链接]</em>
+                                    <div class="href_cont href_cont2" style="top: -122px">
+                                        <p>文本<input type="text" value="卡券链接"></p>
+                                        <p>链接<input type="text" value="http://ht.lkmsxy.com/Main2/main.aspx" disabled><span>确定</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="txt_cont Input_text " contenteditable="true"><span>[赠送人]</span>，您好
+你已成功赠送给8个好友卡券，获得价值998元厨具大礼包!!!!
+卡券：<span>[卡券名称]</span><span>卡券链接</span>
+
+到xxx店领取奖励吧，地址为：xxxxxxx
+如有疑问加客服微信KF166888~
+                            </div>
+                            <p class="nums-tip2">还可输入<span>600</span>字</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+        </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+                <span class="tab-tips sort"><i class="sort-tips"></i>排序</span>
+                <span class="tab-tips download"><i class="download-tips"></i>导出</span>
+                <p class="tishi">*活动名称：装修服务联盟巨惠活动</p>
+            </div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="150px">卡券名称</th>
+                            <th width="100px">达标人ID</th>
+                            <th width="80px">达标人头像</th>
+                            <th width="150px">达标人昵称</th>
+                            <th width="100px">达标标准</th>
+                            <th width="100px">达标人数</th>
+                            <th width="150px">达标时间</th>
+                            <th width="100px">赠送人数<i class="sort-icon"></i></th>
+                            <th width="100px">使用人数<i class="sort-icon"></i></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="150px">装修款抵用金</td>
+                            <td width="100px">54812</td>
+                            <td width="80px" class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td width="150px"><a href="">小土豆</a></td>
+                            <td width="100px">领券</td>
+                            <td width="100px">5</td>
+                            <td width="150px" class="date"><div>2019-08-04 10:47:01</div></td>
+                            <td width="100px"><a class="total-num">8</a></td>
+                            <td width="100px"><a class="used-num">5</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>装修款抵用金</td>
+                            <td>54812</td>
+                            <td class="cover-pic"><img src="../../../images/head.jpg" alt=""></td>
+                            <td><a href="">小土豆</a></td>
+                            <td>用券</td>
+                            <td>5</td>
+                            <td class="date"><div>2019-08-04 10:47:01</div></td>
+                            <td><a class="total-num">8</a></td>
+                            <td><a class="used-num">5</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">达标人ID:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">达标人昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">达标标准:</span>
+            <div class="account-r chose_item">
+                <label for="ly1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">领券</span>
+                </label>
+                <label for="ly2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="ly" id="ly2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">用券</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">达标时间:</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1"><span class="date-line"></span><input type="text" class="layui-input" id="test2"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="sort-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">赠送人数:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">使用人数:</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>升序</li>
+                        <li>降序</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/emoji.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.head-tab3 li');
+    var con = $('.tab-content3 > .tab-pane');
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active current3');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active current3');
+            $(con[i]).addClass('active');
+        }
+    }
+
+    $('.lq-toggle label').click(function () {
+        $('.lq-cont').toggle()
+    });
+
+    $('.db-type1').click(function () {
+        $('.db-tishi').text('人领券，赠送人可获奖励');
+    });
+    $('.db-type2').click(function () {
+        $('.db-tishi').text('人用券，赠送人可获奖励');
+    });
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '374px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .sort').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '排序',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['450px', '336px'],
+            skin: 'account-box',
+            content: $("#sort-account")
+        });
+    });
+
+    $('#chutiyan .total-num').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '装修款抵用金',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '激励裂变-详情.html#tab1' //iframe的url
+        });
+    });
+    $('#chutiyan .used-num').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '装修款抵用金',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '激励裂变-详情.html#tab2' //iframe的url
+        });
+    });
+
+    $('#chutiyan .db-tips').on('mouseenter',function(){
+        this.index =layer.tips('送券/用券人数达标，即给赠送人推送该提醒', this, {
+            tips: [4, '#000'], time: -1 ,maxWidth:810
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+
+    $('#chutiyan .reset-btn').on('click', function(){
+        layer.confirm('<div>是否确定清除后台锁定？<p class="tishi">内容将全部清空，手机端将可编辑此处内容</p></div>',{
+            btn: ['取消','确定'],
+            area: '416px',
+            title:'提示'
+        }, function(index){
+            layer.close(index);
+        }, function(){
+            layer.msg('清除成功', {time: 1000});
+        });
+    });
+</script>
+
+</body>
+</html>

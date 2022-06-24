@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渠道优惠价-编辑</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan" style="min-width: auto;padding: 0;background: #fff">
+
+    <div class="activity_set activity_set2">
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l r-title">购买会员资格信息</span>
+                <div class="a_list_r"></div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">名称:</span>
+                <div class="a_list_r">
+                    <input type="text" value="揽客魔.百万客流爆破营" disabled class="max_width">
+                </div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">价格:</span>
+                    <div class="a_list_r"><input type="text" value="3980.00" disabled class="m_width center">&nbsp;元</div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">优惠价格:</span>
+                    <div class="a_list_r"><input type="text" disabled class="m_width center">&nbsp;元</div>
+                </div>
+            </div>
+        </div>
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l r-title">渠道优惠信息</span>
+                <div class="a_list_r"></div>
+            </div>
+            <div class="dub-list">
+                <div class="a_list">
+                    <span class="a_list_l">渠道优惠开关:</span>
+                    <div class="a_list_r">
+                        <div class="button-label-m">
+                            <div class="toggle-button-wrapper">
+                                <input type="checkbox" id="qd-switch" class="toggle-button" name="switch">
+                                <label for="qd-switch" class="button-label">
+                                    <span class="circle"></span>
+                                    <span class="text on">开启</span>
+                                    <span class="text off">关闭</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a_list">
+                    <span class="a_list_l">渠道商:</span>
+                    <div class="a_list_r"><input type="text" value="点击选择渠道商" class="qd_chose"></div>
+                </div>
+            </div>
+            <div class="qd-msg" style="display: none">
+                <div>
+                    <div class="dub-list">
+                        <div class="a_list">
+                            <span class="a_list_l">渠道优惠价:</span>
+                            <div class="a_list_r"><input type="text" class="m_width center">&nbsp;元，原价：<input type="text" class="m_width center">&nbsp;元</div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">时间:</span>
+                            <div class="a_list_r"><input type="text" class="m_width center">月 ，赠送：<input type="text" class="m_width center">月</div>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">渠道优惠有效时间（分）:</span>
+                        <div class="a_list_r"><input type="text" class="m_width center">分</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="a_list">
+                <span class="a_list_l">渠道优惠获取网址:</span>
+                <div class="a_list_r"><a href="#">https://wx.lkmsxy.com/kt/wd/qdyh__dlh.html?dpid=27&ywlx=2</a></div>
+            </div>
+        </div>
+        <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+    </div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script>
+    $(function () {
+        if($('#qd-switch > input').is(':checked')){
+            $('.qd-msg').show()
+        }else{
+            $('.qd-msg').hide()
+        }
+    });
+    $('#qd-switch').click(function () {
+        $('.qd-msg').toggle()
+    });
+
+    $('#chutiyan .qd_chose').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '渠道优惠',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['90%', '90%'],
+            content: '渠道优惠价-选择.html' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

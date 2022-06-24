@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作废提醒</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="head-tab2">
+    <li class="active current"><a>微信提醒</a></li>
+    <li><a>短信提醒</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-body-b" style="padding: 0">
+    <div class="tab-content activity_set activity_set3 w-4">
+        <div class="tab-pane active">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l">微信提醒:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg" class="toggle-button" name="switch">
+                            <label for="u-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*通过公众号发消息提醒签署人，若未关注公众号，将无法收到该消息</span>
+                    </div>
+                </div>
+                <div class="a_list" style="align-items: flex-start">
+                    <span class="a_list_l" style="padding-top: 20px">微信模板:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt">
+                            <div class="cont_label">
+                                <div class="href_cont href_cont1">
+                                    <p>文本<input type="text" placeholder="链接名字"></p>
+                                    <p>链接<input type="text"><span>确定</span></p>
+                                </div>
+                                <span class="href_btn href_btn1" data-toggle="tooltip" data-placement="top" title="链接"></span>
+                                <span class="emoji_btn" data-toggle="tooltip" data-placement="top" title="表情"></span>
+                                <div class="faceDiv"></div>
+                                <span class="line"></span>
+                                <em class="label-tips">[昵称]</em>
+                                <em class="label-tips">[签署姓名]</em>
+                                <em class="label-tips">[签署电话]</em>
+                                <em class="label-tips">[签署时间]</em>
+                                <em class="label-tips">[项目名称]</em>
+                                <em class="label-tips">[协议名称]</em>
+                                <em class="label-tips">[作废原因]</em>
+                                <em class="label-tips">[作废时间]</em>
+                            </div>
+                            <div class="txt_cont Input_text into" contenteditable="true"><span>[昵称]</span>你好，您于<span>[签署时间]</span>签署了一份《<span>[项目名称]</span>》协议，现已作废。
+作废原因：<span>[作废原因]</span>
+如有疑问，请咨询您的辅导老师，或直接致电028-45755888。</div>
+                            <p class="nums-tip2">还可输入<span>600</span>字</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+        <div class="tab-pane">
+            <div class="b-line" style="border-bottom: 0">
+                <div class="a_list">
+                    <span class="a_list_l">短信提醒:</span>
+                    <div class="a_list_r">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="u-togg2" class="toggle-button" name="switch">
+                            <label for="u-togg2" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                        <span class="tishi">*短信将发送给签署协议的甲方手机号</span>
+                    </div>
+                </div>
+                <div class="a_list" style="align-items: flex-start">
+                    <span class="a_list_l"  style="padding-top: 20px">短信模板:</span>
+                    <div class="a_list_r">
+                        <div class="remin_end_txt">
+                            <div class="cont_label">
+                                <em class="label-tips">[昵称]</em>
+                                <em class="label-tips">[签署姓名]</em>
+                                <em class="label-tips">[签署电话]</em>
+                                <em class="label-tips">[签署时间]</em>
+                                <em class="label-tips">[项目名称]</em>
+                                <em class="label-tips">[协议名称]</em>
+                                <em class="label-tips">[作废原因]</em>
+                                <em class="label-tips">[作废时间]</em>
+                            </div>
+                            <textarea class="txt_cont into Input_text" contenteditable="true">[昵称]你好，您于[签署时间]签署了一份《[项目名称]》协议，现已作废。
+作废原因：[作废原因]
+如有疑问，请咨询您的辅导老师，或直接致电028-45755888。</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/emoji.js"></script>
+<script src="../js/myjs.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>概况</title>
+    <script src="https://kit.fontawesome.com/7f7b5fa9f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/flipclock.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/gk.css"/>
+    <style>
+        .lkmui-alert{border-radius: 0}
+        ::-webkit-scrollbar {display: none}
+
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="lkmui-alert lkmui-alert--error is-light  ">
+    <div class="lkmui-alert_content">推荐使用以下浏览器：谷歌、搜狗、火狐、QQ、360安全浏览器，保证视图效果正常展示</div>
+    <i class="alert-closeBtn icon-remove"></i>
+</div>
+
+<!--<p class="tishi-bg tishi-bg-wram mgT-10"><img src="../images/3-2.png" alt="">您的后台使用权限将在8天后到期，到期后将无法正常使用后台功能，为避免影响您的正常使用，请联系客服及时续费。</p>-->
+
+<div class="general">
+    <div class="general_l">
+        <!--  产品入口  -->
+        <div class="content1" style="display: none">
+            <div class="product_rk borderRadius">
+                <p class="title"><img src="images/3.png" alt="">您可快速到达以下产品位置</p>
+                <!--  没有购买的产品，在a标签上添加类名 'noBuy'              -->
+                <div class="list" id="quickBar">
+                    <div>
+                        <a href="#" v-for="item in itemList" :key="item.id" :class="item.type">
+                            <div>
+                                <img :src="item.icon" alt="">
+                                <div>
+                                    <span>{{item.txt}}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="showAll"><span>收起全部<i class="fa-solid fa-angle-down"></i></span></div>
+            </div>
+        </div>
+
+        <!--  商城  -->
+        <div class="content2">
+            <div class="shop-cont1 borderRadius" style="display: none">
+                <div>
+                    <span>销售金额</span>
+                    <p>115,259.59</p>
+                </div>
+                <div>
+                    <span>分佣金额</span>
+                    <p>6,259.18</p>
+                </div>
+                <div>
+                    <span>商品销量</span>
+                    <p>3,215</p>
+                </div>
+                <div>
+                    <span>订单数量</span>
+                    <p>2,998</p>
+                </div>
+                <div>
+                    <span>累积客户</span>
+                    <p>1,120</p>
+                </div>
+            </div>
+            <div class="shop-cont2">
+                <a href="" class="cont2-item type1">
+                    <p class="txt1">12</p>
+                    <p class="txt2">待发货</p>
+                    <img src="images/shop_icon1.png" alt="" class="icon">
+                    <span class="txt3">查看详情<i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
+                <a href="" class="cont2-item type2">
+                    <p class="txt1">2</p>
+                    <p class="txt2">退款售后</p>
+                    <img src="images/shop_icon2.png" alt="" class="icon">
+                    <span class="txt3">查看详情<i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
+                <a href="" class="cont2-item type3">
+                    <p class="txt1">125</p>
+                    <p class="txt2">在售商品</p>
+                    <img src="images/shop_icon3.png" alt="" class="icon">
+                    <span class="txt3">查看详情<i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
+                <a href="" class="cont2-item type4">
+                    <p class="txt1">3</p>
+                    <p class="txt2">售罄商品</p>
+                    <img src="images/shop_icon4.png" alt="" class="icon">
+                    <span class="txt3">查看详情<i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
+                <a href="" class="cont2-item type5">
+                    <p class="txt1">15</p>
+                    <p class="txt2">分销商品</p>
+                    <img src="images/shop_icon5.png" alt="" class="icon">
+                    <span class="txt3">查看详情<i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
+            </div>
+        </div>
+
+        <!--  课堂  -->
+        <div class="content3">
+            <!--  图表  -->
+            <div class="finance_charts borderRadius">
+                <div class="tab_nav">
+                    <div>
+                        <p class="gen-title"><img src="images/titIcon1.png" alt=""></p>
+                    </div>
+                    <p>-- 表示数据仍在计算中，每日12点左右产出昨日数据</p>
+                </div>
+                <ul class="tab_nav_item">
+                    <li class="active">系列课</li>
+                    <li>干货文章</li>
+                    <li>干货专栏</li>
+                </ul>
+                <ul class="contentList">
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">总上传数量<i class="tips tip1"></i></p>
+                                <p class="num">24</p>
+                                <p class="text">与前日持平</p>
+                            </div>
+                            <img src="images/cardIcon1.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">总浏览量<i class="tips tip2"></i></p>
+                                <p class="num">124,46</p>
+                                <p class="text">较前日<span class="up">增加126</span></p>
+                            </div>
+                            <img src="images/cardIcon14.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日收藏量<i class="tips tip3"></i></p>
+                                <p class="num">114</p>
+                                <p class="text">较前日<span class="dowm">减少26</span></p>
+                            </div>
+                            <img src="images/cardIcon10.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日报名量<i class="tips tip4"></i></p>
+                                <p class="num">12</p>
+                                <p class="text">较前日<span class="dowm">减少3</span></p>
+                            </div>
+                            <img src="images/cardIcon12.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">笔记上传量<i class="tips tip5"></i></p>
+                                <p class="num">24</p>
+                                <p class="text">与前日持平</p>
+                            </div>
+                            <img src="images/cardIcon9.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日浏览量<i class="tips tip6"></i></p>
+                                <p class="num">24</p>
+                                <p class="text">与前日持平</p>
+                            </div>
+                            <img src="images/cardIcon14.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日留言量<i class="tips tip7"></i></p>
+                                <p class="num">--</p>
+                                <p class="text">与前日持平</p>
+                            </div>
+                            <img src="images/cardIcon17.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日转赠量<i class="tips tip8"></i></p>
+                                <p class="num">24</p>
+                                <p class="text">较前日<span class="up">增加12</span></p>
+                            </div>
+                            <img src="images/cardIcon13.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <div class="contentMain">
+                    <div class="content_date">
+                        <span>趋势图</span>
+                        <input type="text" class="layui-input" id="test1">
+                    </div>
+                    <div id="main-kt30" class="main chart3" style=""></div>
+                </div>
+            </div>
+        </div>
+
+        <!--  会员  -->
+        <div class="content3">
+            <!--  图表  -->
+            <div class="finance_charts borderRadius">
+                <div class="tab_nav">
+                    <div>
+                        <p class="gen-title"><img src="images/titIcon2.png" alt=""></p>
+                    </div>
+                    <p>-- 表示数据仍在计算中，每日12点左右产出昨日数据</p>
+                </div>
+                <ul class="tab_nav_item">
+                    <li class="active">基本信息</li>
+                    <li>用户来源</li>
+                </ul>
+                <ul class="contentList item1">
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">全部注册用户<i class="tips tip1"></i></p>
+                                <p class="num">123,256</p>
+                            </div>
+                            <img src="images/cardIcon8.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">全部会员<i class="tips tip2"></i></p>
+                                <p class="num">256</p>
+                            </div>
+                            <img src="images/cardIcon6.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日新增用户<i class="tips tip3"></i></p>
+                                <p class="num">18</p>
+                            </div>
+                            <img src="images/cardIcon4.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日新增会员<i class="tips tip4"></i></p>
+                                <p class="num">3</p>
+                            </div>
+                            <img src="images/cardIcon7.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">总黑名单用户<i class="tips tip6"></i></p>
+                                <p class="num">66</p>
+                            </div>
+                            <img src="images/cardIcon21.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日新增黑名单<i class="tips tip7"></i></p>
+                                <p class="num">--</p>
+                            </div>
+                            <img src="images/cardIcon2.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">待审核实名认证<i class="tips tip8"></i></p>
+                                <p class="num">0</p>
+                            </div>
+                            <img src="images/cardIcon3.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日取消关注<i class="tips tip5"></i></p>
+                                <p class="num">12</p>
+                            </div>
+                            <img src="images/cardIcon20.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="contentList item2" style="display: none">
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">公众号注册<i class="tips tip1"></i></p>
+                                <p class="num">123,256</p>
+                            </div>
+                            <img src="images/cardIcon25.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">小程序注册<i class="tips tip2"></i></p>
+                                <p class="num">256</p>
+                            </div>
+                            <img src="images/cardIcon24.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">APP注册<i class="tips tip3"></i></p>
+                                <p class="num">18</p>
+                            </div>
+                            <img src="images/cardIcon26.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">其他<i class="tips tip4"></i></p>
+                                <p class="num">3</p>
+                            </div>
+                            <img src="images/cardIcon27.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <div class="contentMain">
+                    <div class="content_date">
+                        <span>趋势图</span>
+                        <input type="text" class="layui-input" id="test2">
+                    </div>
+                    <div id="main-vip1" class="main chart3" style=""></div>
+                    <div id="main-vip2" class="main chart4" style="display: none"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--  财务  -->
+        <div class="content3">
+            <!--  图表  -->
+            <div class="finance_charts borderRadius">
+                <div class="tab_nav">
+                    <div>
+                        <p class="gen-title"><img src="images/titIcon3.png" alt=""></p>
+                    </div>
+                    <p>-- 表示数据仍在计算中，每日12点左右产出昨日数据</p>
+                </div>
+                <ul class="contentList">
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">累计收益<i class="tips tip1"></i></p>
+                                <p class="num">236,100,24</p>
+                            </div>
+                            <img src="images/cardIcon16.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日收益<i class="tips tip2"></i></p>
+                                <p class="num">123,00</p>
+                            </div>
+                            <img src="images/cardIcon18.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">累计支出<i class="tips tip3"></i></p>
+                                <p class="num">6,100,32</p>
+                            </div>
+                            <img src="images/cardIcon5.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">昨日支出<i class="tips tip4"></i></p>
+                                <p class="num">0</p>
+                            </div>
+                            <img src="images/cardIcon22.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">冻结用户提现数量<i class="tips tip5"></i></p>
+                                <p class="num">36</p>
+                            </div>
+                            <img src="images/cardIcon11.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">待确认佣金笔数<i class="tips tip6"></i></p>
+                                <p class="num">12</p>
+                            </div>
+                            <img src="images/cardIcon19.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_cont">
+                            <div>
+                                <p class="tit">用户提现申请<i class="tips tip7"></i></p>
+                                <p class="num">165</p>
+                            </div>
+                            <img src="images/cardIcon23.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <div class="contentMain">
+                    <div class="content_date">
+                        <span>趋势图</span>
+                        <input type="text" class="layui-input" id="test3">
+                    </div>
+                    <div id="main-cw30" class="main chart3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="general_r">
+        <div class="general_r_box sticky" style="top: 0">
+            <div class="borderRadius">
+                <div class="box_cont1">
+                    <p>早上好，欢迎登陆本系统！</p>
+                    <span>上次登录时间：2020/11/12 17:24:00</span>
+                </div>
+                <div class="box_cont2">
+                    <p class="title_tip">个人信息</p>
+                    <div class="user_msg">
+                        <div><span>用户</span>:<p>曾亮亮【揽客魔】联合</p></div>
+                        <div><span>公司</span>:<p>揽客魔互联网科技有限公司</p></div>
+                        <div><span>到期</span>:<p style="color: #3878fb">2020-08-24 10:53:00</p></div>
+                    </div>
+                    <div class="btn_list">
+                        <span class="umsg_Btn">基本信息</span>
+                        <span class="umsg_setBtn">个人设置</span>
+                        <span class="pwd_setBtn">修改密码</span>
+                    </div>
+                </div>
+            </div>
+            <div class="borderRadius mgTop16">
+                <div class="box_cont3">
+                    <p class="title_tip">联系客服</p>
+                    <div class="cont3_msg">
+                        <div class="msg_eq">
+                            <img src="images/eqPerch.jpg" alt="">
+                            <span class="lt"></span><span class="rt"></span><span class="rb"></span><span class="lb"></span>
+                            <p class="t"></p>
+                            <p class="r"></p>
+                            <p class="b"></p>
+                            <p class="l"></p>
+                        </div>
+                        <ul>
+                            <li class="kf">专属客服：小李</li>
+                            <li class="tel">客服热线：13540332389</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  基本信息  -->
+<div class="activity_set activity_set2 w-120" id="umsg-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">基本信息</span>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">姓名:</div>
+                <div class="a_list_r"><input type="text" readonly></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">用户账号:</div>
+                <div class="a_list_r"><input type="text" readonly></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">部门:</div>
+            <div class="a_list_r"><input type="text" readonly></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">关闭</span></div>
+</div>
+<!--  个人设置  -->
+<div class="activity_set activity_set2 w-120" id="umsgSet-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">联系方式</span>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                 <div class="a_list_l">手机:</div>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">电话:</div>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">Email:</div>
+                <div class="a_list_r"><input type="text"></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">绑定微信:</div>
+                <div class="a_list_r">
+                    <div style="position: relative;width: 40px;min-width: 40px;height: 40px;border-radius: 50%;margin-right: 16px;">
+                        <img src="../images/head.jpg" alt="" style="width: 100%;height: 100%;border-radius: 50%">
+                        <img src="../images/wx.png" alt="" style="position: absolute;width: 20px;height: 20px;border-radius: 50%;bottom: 0;right: 0;">
+                    </div>
+                    <p>小土豆</p>
+                    <a class="edit_icon mgL-auto changeWX">去更换</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+<!--  修改密码  -->
+<div class="activity_set activity_set2 w-120" id="pwd-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">基本信息</span>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <div class="a_list_l">姓名:</div>
+                <div class="a_list_r"><input type="text" readonly></div>
+            </div>
+            <div class="a_list">
+                <div class="a_list_l">用户账号:</div>
+                <div class="a_list_r"><input type="text" readonly></div>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">手机:</div>
+            <div class="a_list_r"><input type="text" readonly></div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l r-title">修改密码</span>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">验证码:</div>
+            <div class="a_list_r"><input type="text" placeholder="请输入验证码"><span class="set-user mgL-10">获取验证码</span></div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_l">新密码:</div>
+            <div class="a_list_r">
+                <input type="text" placeholder="请输入需要修改的新密码">
+                <span class="tishi">*密码支持 8-20位(字母、数字、符号)等类型组成</span>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+
+
+<script src="../js/vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el:'#quickBar',
+        data:{
+            itemList:[
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product1.png',txt:'会员',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product2.png',txt:'系列课',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product3.png',txt:'课程动态',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product4.png',txt:'群发',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product5.png',txt:'专栏',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product6.png',txt:'干货文章',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product7.png',txt:'图片活动',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product8.png',txt:'公众号回复',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product9.png',txt:'关键词回复',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product10.png',txt:'浪潮发售',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product11.png',txt:'在线签',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product12.png',txt:'浮动联系人',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product13.png',txt:'推广报表',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product14.png',txt:'深层挖掘系统',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product15.png',txt:'会员裂变',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product16.png',txt:'活码',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product17.png',txt:'归属活码',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product18.png',txt:'直播',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product19.png',txt:'百业裂变',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product20.png',txt:'社群培育',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product21.png',txt:'引流卡',type:''},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product22.png',txt:'行为轨迹',type:'noBuy'},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product23.png',txt:'签到打卡',type:'noBuy'},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product24.png',txt:'名额分佣',type:'noBuy'},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product25.png',txt:'上级代理',type:'noBuy'},
+                {icon:'http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%A6%82%E5%86%B5/images/product26.png',txt:'专题页面',type:'noBuy'},
+            ]
+        }
+    })
+
+
+</script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/echarts.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/plugins/laydate/laydate.js"></script>
+<script src="../js/myjs.js"></script>
+<script type="text/javascript">
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+            ,range: '~'
+            ,format: 'yyyy/MM/dd'
+            ,value: '2020/01/01 ~ 2020/01/31'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+            ,range: '~'
+            ,format: 'yyyy/MM/dd'
+            ,value: '2020/01/01 ~ 2020/01/31'
+        });
+        laydate.render({
+            elem: '#test3' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+            ,range: '~'
+            ,format: 'yyyy/MM/dd'
+            ,value: '2020/01/01 ~ 2020/01/31'
+        });
+    });
+
+    $('#chutiyan .umsg_Btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '基本信息',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-100',
+            content: $("#umsg-sure")
+        });
+    });
+    $('#chutiyan .umsg_setBtn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '个人设置',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-100',
+            content: $("#umsgSet-sure")
+        });
+    });
+    $('#chutiyan .pwd_setBtn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '修改密码',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['80%', '80%'],
+            skin: 'activity_set activity_set2 w-100',
+            content: $("#pwd-sure")
+        });
+    });
+
+    $('#chutiyan .changeWX').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: '绑定微信',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['700px', '540px'],
+            content: '重新绑定微信.html' //iframe的url
+        });
+    });
+
+    $('#chutiyan .contentList .tips').on('mouseenter',function(){
+        var arr = ['111','222','333','444','555','666','777','888'];
+        var index = $(this).parent().parent().index();
+
+        this.index =layer.tips(arr[index], this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:600
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+    $('#chutiyan .noBuy').on('click', function(){
+        layer.confirm('该功能暂未购买<p class="tishi">*联系客服获取购买资格</p>',{
+            btn: ['确定'],
+            area: '416px',
+            title:'提示',
+            icon:4
+        }, function(index){
+            layer.close(index);
+        }, function(){
+            //layer.msg('删除成功', {time: 1000});
+        });
+    });
+
+    function iconF(){
+        var iconH = $('.product_rk .list > div');   // 元素盒子总高度
+        var itemH = $('.product_rk .list a').outerHeight(true); // 元素单个高度
+        $(iconH).height(itemH*2);
+        $('.showAll span').html('展开全部'+ '<i class="fa-solid fa-angle-down"></i>');
+        if(iconH.height() > itemH){
+            $('.showAll').show()
+        }else{
+            $('.showAll').hide()
+        }
+        $('.showAll span').click(function () {
+            var txt = $(this).text();
+            if(txt === '收起全部'){
+                $(iconH).height(itemH*2);
+                $(this).html('展开全部'+ '<i class="fa-solid fa-angle-down"></i>');
+            }else{
+                $(iconH).height('auto');
+                $(this).html('收起全部'+ '<i class="fa-solid fa-angle-up"></i>');
+            }
+        });
+    }
+    $(function () {
+
+        $('.tab_nav_item li').click(function () {
+           $(this).addClass('active').siblings().removeClass('active');
+           var txt = $(this).text();
+           if(txt === '基本信息'){
+               $(this).parent().siblings('.item1').show();
+               $(this).parent().siblings('.item2').hide();
+               $('#main-vip1').show();
+               $('#main-vip2').hide();
+           }else if(txt === '用户来源'){
+               $(this).parent().siblings('.item1').hide();
+               $(this).parent().siblings('.item2').show();
+               $('#main-vip1').hide();
+               $('#main-vip2').show();
+           }
+
+            for(var i = 0; i < charts.length; i++) {
+                charts[i].resize();
+            }
+        });
+
+        $('.qwMsgCont .icon').click(function (){
+            $(this).toggleClass('on');
+            if($(this).hasClass('on')){
+                $(this).parents('.qwMsgCont').find('li .txt2-hide').show();
+                $(this).parents('.qwMsgCont').find('li .txt2').hide();
+            }else{
+                $(this).parents('.qwMsgCont').find('li .txt2-hide').hide();
+                $(this).parents('.qwMsgCont').find('li .txt2').show();
+            }
+        })
+
+        $('.qwMsgList li').click(function (){
+            $(this).find('.layui-badge-dot').remove();
+        })
+
+        setTimeout(function (){
+            endTime()
+            iconF()
+        },100)
+
+    });
+
+    function endTime() {
+        // 获取到指定日期天数，再换算成数字
+        var s1 = '2022-02-31 23:59:59';
+        s1 = new Date(s1.replace(/-/g, "/"));
+        s2 = new Date();//当前日期：
+        var days = s1.getTime() - s2.getTime();
+        var time = days/1000;
+        // 判断剩余天数是否大于100,小于0
+        if((time/60/60/24) < 0){
+            // top.layer.open({
+            //     type: 2,
+            //     title: false,
+            //     shadeClose: false,
+            //     shade: 0.25,
+            //     skin: 'gk-class',
+            //     maxmin: false, //开启最大化最小化按钮
+            //     area: ['512px', '444px'],
+            //     content: ['概况/到期提醒.html','no'] //iframe的url
+            // });
+        }else if((time/60/60/24) < 100){
+            // top.layer.open({
+            //     type: 2,
+            //     title: false,
+            //     shadeClose: false,
+            //     shade: 0.25,
+            //     skin: 'gk-class',
+            //     maxmin: false, //开启最大化最小化按钮
+            //     area: ['512px', '500px'],
+            //     content: ['概况/即将到期提醒.html','no'] //iframe的url
+            // });
+        }
+    }
+
+    var charts=[];
+    //  课堂图表
+    var myCharKt30 = echarts.init(document.getElementById('main-kt30'));
+
+    //  课堂图表
+    // 1月
+    var xktData30= ["2020/01/01","2020/01/02","2020/01/03","2020/01/04","2020/01/05","2020/01/06","2020/01/07","2020/01/08","2020/01/09","2020/01/10","2020/01/11","2020/01/12","2020/01/13","2020/01/14","2020/01/15","2020/01/16","2020/01/17","2020/01/18","2020/01/19","2020/01/20","2020/01/21","2020/01/22","2020/01/23","2020/01/24","2020/01/25","2020/01/26","2020/01/27","2020/01/28","2020/01/29","2020/01/30"];
+    var yktData30_1 = [10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150,155],
+        yktData30_2 = [30,25,40,35,50,45,60,55,70,65,10,15,20,25,30,35,10,105,110,15,10,55,60,65,70,55,40,45,30,35],
+        yktData30_3 = [50,35,60,45,70,55,80,65,90,75,20,25,30,35,40,45,50,45,105,25,30,15,20,25,30,35,40,45,50,55],
+        yktData30_4 = [70,45,80,55,90,65,100,75,110,85,30,35,40,45,50,55,30,15,120,45,80,125,130,135,140,145,150,155,155,155],
+        yktData30_5 = [90,55,100,65,120,75,120,85,130,95,40,45,50,55,60,65,70,55,50,55,50,95,110,115,120,125,130,35,130,145],
+        yktData30_6 = [110,65,120,75,140,85,140,95,150,105,50,55,60,65,70,75,90,15,80,65,40,45,60,65,30,75,58,45,10,85];
+    optionkt30 = {
+        // 提示框
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                ,lineStyle:{
+                    color:'#e6e6e6',
+                    type:'solid'    // solid、dashed、dotted
+                }
+            },
+            formatter:function (params) {
+                console.log(params);
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;"><span>'+ params[0].name + '</span>'+'</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 200px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;"><div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>' + '<span>'+params[i].value +'</span></div>';
+                }
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        /* 图例 */
+        legend: {
+            left: 'center',
+            //top: 'bottom',
+            bottom:20,
+            textStyle: {
+                color: '#333',
+                fontSize: 14,
+            },
+            itemGap:40,
+            itemWidth:12,
+            itemHeight:12,
+            align:'auto',
+            icon: 'circle',
+            data: ['浏览量','报名量','收藏量','笔记上传量','转赠量','留言量'],
+            selected: {
+                '报名量': false,
+                '收藏量': false,
+                '笔记上传量': false,
+                '转赠量': false,
+                '留言量': false,
+            }
+        },
+
+        //  直角坐标系
+        grid: {
+            right: '20px',
+            bottom: '80px',
+            left: '20px',
+            top: '80px',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xktData30 ,
+            nameTextStyle: {
+                color: '#999',
+            },
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#157bfb',
+                    backgroundColor: "#333",
+                }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                interval: 3,    //  隔多少个显示下一个
+                textStyle: {
+                    color: "#999",
+                    fontSize: 13,
+                    backgroundColor: "#fff",
+                }
+            },
+            offset:15,  // x 轴文字距离轴的距离
+            boundaryGap:false   // 是否从 0 刻度开始
+        }],
+        yAxis: [{
+            type: 'value',
+            name:'',
+            nameGap:30,
+            nameTextStyle: {
+                color: '#777',
+                fontSize: 12,
+                align: 'left',
+            },
+            position: 'left',
+            axisLine: {
+                show:false,
+                lineStyle: {
+                    color: '#999'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: "#f0f2f3",
+                    type:"dashed"
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                show:true,
+                color: '#999',
+                fontSize: 12,
+            },
+            offset:10
+        }],
+        // 系列列表
+        series: [
+            {
+                name: '浏览量',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#157bfb',
+                        lineStyle: {
+                            color: "#157bfb",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(21,123,251,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(21,123,251,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yktData30_1
+            },
+            {
+                name: '报名量',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#1fc7c5',
+                        lineStyle: {
+                            color: "#1fc7c5",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(31,199,197,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(31,199,197,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yktData30_2
+            },
+            {
+                name: '收藏量',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#fd8d56',
+                        lineStyle: {
+                            color: "#fd8d56",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(253,141,86,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(253,141,86,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yktData30_3
+            },
+            {
+                name: '笔记上传量',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#90cc39',
+                        lineStyle: {
+                            color: "#90cc39",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(144,204,57,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(144,204,57,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yktData30_4
+            },
+            {
+                name: '转赠量',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#fbd231',
+                        lineStyle: {
+                            color: "#fbd231",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(251,210,49,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(251,210,49,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yktData30_5
+            },
+            {
+                name: '留言量',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#6755fb',
+                        lineStyle: {
+                            color: "#6755fb",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(103,85,251,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(103,85,251,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yktData30_6
+            },
+        ]
+    };
+
+
+    // 会员图表
+    var myCharVip1 = echarts.init(document.getElementById('main-vip1'));
+    var myCharVip2 = echarts.init(document.getElementById('main-vip2'));
+
+    //  会员图表
+    // 1月
+    var xvipData30= ["2020/01/01","2020/01/02","2020/01/03","2020/01/04","2020/01/05","2020/01/06","2020/01/07","2020/01/08","2020/01/09","2020/01/10","2020/01/11","2020/01/12","2020/01/13","2020/01/14","2020/01/15","2020/01/16","2020/01/17","2020/01/18","2020/01/19","2020/01/20","2020/01/21","2020/01/22","2020/01/23","2020/01/24","2020/01/25","2020/01/26","2020/01/27","2020/01/28","2020/01/29","2020/01/30"];
+    var yvipData30_1 = [10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150,155],
+        yvipData30_2 = [30,25,40,35,50,45,60,55,70,65,10,15,20,25,30,35,10,105,110,15,10,55,60,65,70,55,40,45,30,35],
+        yvipData30_3 = [50,35,60,45,70,55,80,65,90,75,20,25,30,35,40,45,50,45,105,25,30,15,20,25,30,35,40,45,50,55],
+        yvipData30_4 = [70,45,80,55,90,65,100,75,110,85,30,35,40,45,50,55,30,15,120,45,80,125,130,135,140,145,150,155,155,155],
+        yvipData30_5 = [90,55,100,65,120,75,120,85,130,95,40,45,50,55,60,65,70,55,50,55,50,95,110,115,120,125,130,35,130,145];
+    optionVip1 = {
+        // 提示框
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                ,lineStyle:{
+                    color:'#e6e6e6',
+                    type:'solid'    // solid、dashed、dotted
+                }
+            },
+            formatter:function (params) {
+                console.log(params);
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;"><span>'+ params[0].name + '</span>'+'</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 200px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;"><div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>' + '<span>'+params[i].value +'</span></div>';
+                }
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        /* 图例 */
+        legend: {
+            left: 'center',
+            //top: 'bottom',
+            bottom:20,
+            textStyle: {
+                color: '#333',
+                fontSize: 14,
+            },
+            itemGap:40,
+            itemWidth:12,
+            itemHeight:12,
+            align:'auto',
+            icon: 'circle',
+            data: ['新增用户','新增会员','取消关注','新增黑名单','待审核'],
+            selected: {
+                '新增会员': false,
+                '取消关注': false,
+                '新增黑名单': false,
+                '待审核': false,
+            }
+        },
+
+        //  直角坐标系
+        grid: {
+            right: '20px',
+            bottom: '80px',
+            left: '20px',
+            top: '80px',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xvipData30 ,
+            nameTextStyle: {
+                color: '#999',
+            },
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#157bfb',
+                    backgroundColor: "#333",
+                }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                interval: 3,    //  隔多少个显示下一个
+                textStyle: {
+                    color: "#999",
+                    fontSize: 13,
+                    backgroundColor: "#fff",
+                }
+            },
+            offset:15,  // x 轴文字距离轴的距离
+            boundaryGap:false   // 是否从 0 刻度开始
+        }],
+        yAxis: [{
+            type: 'value',
+            name:'',
+            nameGap:30,
+            nameTextStyle: {
+                color: '#777',
+                fontSize: 12,
+                align: 'left',
+            },
+            position: 'left',
+            axisLine: {
+                show:false,
+                lineStyle: {
+                    color: '#999'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: "#f0f2f3",
+                    type:"dashed"
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                show:true,
+                color: '#999',
+                fontSize: 12,
+            },
+            offset:10
+        }],
+        // 系列列表
+        series: [
+            {
+                name: '新增用户',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#157bfb',
+                        lineStyle: {
+                            color: "#157bfb",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(21,123,251,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(21,123,251,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yvipData30_1
+            },
+            {
+                name: '新增会员',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#1fc7c5',
+                        lineStyle: {
+                            color: "#1fc7c5",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(31,199,197,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(31,199,197,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yvipData30_2
+            },
+            {
+                name: '取消关注',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#fd8d56',
+                        lineStyle: {
+                            color: "#fd8d56",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(253,141,86,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(253,141,86,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yvipData30_3
+            },
+            {
+                name: '新增黑名单',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#90cc39',
+                        lineStyle: {
+                            color: "#90cc39",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(144,204,57,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(144,204,57,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yvipData30_4
+            },
+            {
+                name: '待审核',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#fbd231',
+                        lineStyle: {
+                            color: "#fbd231",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(251,210,49,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(251,210,49,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: yvipData30_5
+            },
+        ]
+    };
+
+    // 用户来源
+    optionVip2 = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                ,lineStyle:{
+                    color:'#e6e6e6',
+                    type:'solid'    // solid、dashed、dotted
+                }
+            },
+            formatter:function (params) {
+                console.log(params);
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;"><span>'+ params[0].name + '</span>'+'</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 200px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;"><div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>' + '<span>'+params[i].value +'</span></div>';
+                }
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        legend: {
+            left: 'center',
+            //top: 'bottom',
+            bottom:20,
+            textStyle: {
+                color: '#333',
+                fontSize: 14,
+            },
+            itemGap:40,
+            itemWidth:12,
+            itemHeight:12,
+            align:'auto',
+            icon: 'circle',
+            data: ['公众号注册', '小程序注册', 'APP注册', '其他'],
+
+        },
+        grid: {
+            right: '20px',
+            bottom: '80px',
+            left: '20px',
+            top: '80px',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: xvipData30,
+                nameTextStyle: {
+                    color: '#999',
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#157bfb',
+                        backgroundColor: "#333",
+                    }
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    show: true,
+                    interval: 3,    //  隔多少个显示下一个
+                    textStyle: {
+                        color: "#999",
+                        fontSize: 13,
+                        backgroundColor: "#fff",
+                    }
+                },
+                offset:15,  // x 轴文字距离轴的距离
+                boundaryGap:true   // 是否从 0 刻度开始
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name:'',
+                nameGap:30,
+                nameTextStyle: {
+                    color: '#777',
+                    fontSize: 12,
+                    align: 'left',
+                },
+                position: 'left',
+                axisLine: {
+                    show:false,
+                    lineStyle: {
+                        color: '#999'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: "#f0f2f3",
+                        type:"dashed"
+                    }
+                },
+                axisTick:{
+                    show:false
+                },
+                axisLabel: {
+                    show:true,
+                    color: '#999',
+                    fontSize: 12,
+                },
+                offset:10
+            }
+        ],
+        series: [
+            {
+                name: '公众号注册',
+                type: 'bar',
+                barWidth: 5,
+                stack: '用户来源',
+                emphasis: {
+                    focus: 'series'
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#f6a241',
+                    }
+                },
+                data: yvipData30_1
+            },
+            {
+                name: '小程序注册',
+                type: 'bar',
+                barWidth: 5,
+                stack: '用户来源',
+                emphasis: {
+                    focus: 'series'
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#3878fb',
+                    }
+                },
+                data: yvipData30_2
+            },
+            {
+                name: 'APP注册',
+                type: 'bar',
+                barWidth: 5,
+                stack: '用户来源',
+                emphasis: {
+                    focus: 'series'
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#844add',
+                    }
+                },
+                data: yvipData30_3
+            },
+            {
+                name: '其他',
+                type: 'bar',
+                barWidth: 5,
+                stack: '用户来源',
+                emphasis: {
+                    focus: 'series'
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#34c0bf',
+                    }
+                },
+                data: yvipData30_4
+            },
+        ]
+    };
+
+    // 财务图表
+    var myCharCw30 = echarts.init(document.getElementById('main-cw30'));
+
+    //  财务图表
+    // 1月
+    var xcwData30= ["2020/01/01","2020/01/02","2020/01/03","2020/01/04","2020/01/05","2020/01/06","2020/01/07","2020/01/08","2020/01/09","2020/01/10","2020/01/11","2020/01/12","2020/01/13","2020/01/14","2020/01/15","2020/01/16","2020/01/17","2020/01/18","2020/01/19","2020/01/20","2020/01/21","2020/01/22","2020/01/23","2020/01/24","2020/01/25","2020/01/26","2020/01/27","2020/01/28","2020/01/29","2020/01/30"];
+    var ycwData30_1 = [10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150,155],
+        ycwData30_2 = [30,25,40,35,50,45,60,55,70,65,10,15,20,25,30,35,10,105,110,15,10,55,60,65,70,55,40,45,30,35],
+        ycwData30_3 = [50,35,60,45,70,55,80,65,90,75,20,25,30,35,40,45,50,45,105,25,30,15,20,25,30,35,40,45,50,55],
+        ycwData30_4 = [70,45,80,55,90,65,100,75,110,85,30,35,40,45,50,55,30,15,120,45,80,125,130,135,140,145,150,155,155,155],
+        ycwData30_5 = [90,55,100,65,120,75,120,85,130,95,40,45,50,55,60,65,70,55,50,55,50,95,110,115,120,125,130,35,130,145];
+    optionCw30 = {
+        // 提示框
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                ,lineStyle:{
+                    color:'#e6e6e6',
+                    type:'solid'    // solid、dashed、dotted
+                }
+            },
+            formatter:function (params) {
+                console.log(params);
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;"><span>'+ params[0].name + '</span>'+'</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 200px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;"><div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>' + '<span>'+params[i].value +'</span></div>';
+                }
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        /* 图例 */
+        legend: {
+            left: 'center',
+            //top: 'bottom',
+            bottom:20,
+            textStyle: {
+                color: '#333',
+                fontSize: 14,
+            },
+            itemGap:40,
+            itemWidth:12,
+            itemHeight:12,
+            align:'auto',
+            icon: 'circle',
+            data: ['昨日收益','昨日支出','提现申请','冻结用户提现','待确认佣金笔数'],
+            selected: {
+                '昨日支出': false,
+                '提现申请': false,
+                '冻结用户提现': false,
+                '待确认佣金笔数': false,
+            }
+        },
+
+        //  直角坐标系
+        grid: {
+            right: '20px',
+            bottom: '80px',
+            left: '20px',
+            top: '80px',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xcwData30 ,
+            nameTextStyle: {
+                color: '#999',
+            },
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#157bfb',
+                    backgroundColor: "#333",
+                }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                interval: 3,    //  隔多少个显示下一个
+                textStyle: {
+                    color: "#999",
+                    fontSize: 13,
+                    backgroundColor: "#fff",
+                }
+            },
+            offset:15,  // x 轴文字距离轴的距离
+            boundaryGap:false   // 是否从 0 刻度开始
+        }],
+        yAxis: [{
+            type: 'value',
+            name:'',
+            nameGap:30,
+            nameTextStyle: {
+                color: '#777',
+                fontSize: 12,
+                align: 'left',
+            },
+            position: 'left',
+            axisLine: {
+                show:false,
+                lineStyle: {
+                    color: '#999'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: "#f0f2f3",
+                    type:"dashed"
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                show:true,
+                color: '#999',
+                fontSize: 12,
+            },
+            offset:10
+        }],
+        // 系列列表
+        series: [
+            {
+                name: '昨日收益',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#157bfb',
+                        lineStyle: {
+                            color: "#157bfb",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(21,123,251,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(21,123,251,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ycwData30_1
+            },
+            {
+                name: '昨日支出',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#1fc7c5',
+                        lineStyle: {
+                            color: "#1fc7c5",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(31,199,197,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(31,199,197,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ycwData30_2
+            },
+            {
+                name: '提现申请',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#fd8d56',
+                        lineStyle: {
+                            color: "#fd8d56",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(253,141,86,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(253,141,86,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ycwData30_3
+            },
+            {
+                name: '冻结用户提现',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#90cc39',
+                        lineStyle: {
+                            color: "#90cc39",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(144,204,57,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(144,204,57,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ycwData30_4
+            },
+            {
+                name: '待确认佣金笔数',
+                type: 'line',
+                symbolSize: 3,
+                itemStyle: {
+                    normal: {
+                        color: '#fbd231',
+                        lineStyle: {
+                            color: "#fbd231",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(251,210,49,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(251,210,49,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ycwData30_5
+            },
+        ]
+    };
+
+
+    //  课堂图表
+    myCharKt30.setOption(optionkt30);
+    myCharVip1.setOption(optionVip1);
+    myCharVip2.setOption(optionVip2);
+    myCharCw30.setOption(optionCw30);
+
+
+    charts.push(myCharKt30,myCharVip1,myCharVip2,myCharCw30);
+
+    // 重载图表
+    setTimeout(function (){
+        window.onresize = function () {
+            myCharKt30.resize();
+            myCharVip1.resize();
+            myCharVip2.resize();
+            myCharCw30.resize();
+        }
+    },200);
+
+    // 限制图表最后一个不能隐藏
+    for(var i = 0; i < charts.length; i++) {
+        charts[i].on('legendselectchanged', function (params) {
+
+            let option = this.getOption();
+            let select_key = Object.keys(params.selected);
+            let select_value = Object.values(params.selected);
+            var n = 0;
+            select_value.map(res => {
+                if(!res){
+                    n++;
+                }
+            });
+            if( n ===select_value.length){
+                option.legend[0].selected[params.name] = true;
+            }
+
+            this.setOption(option);
+        });
+    }
+
+
+
+
+</script>
+</body>
+</html>

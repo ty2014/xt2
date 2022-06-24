@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>企微标签</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .tab_content2{padding: 0 56px;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="page-title">标签管理
+    <div class="notisTip">
+        <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="fa fa-file-word-o"></i>功能说明</a>
+        <a href="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" target="_blank"><i class="fa fa-file-movie-o"></i>视频教程</a>
+    </div>
+</div>
+<div class="content">
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips update"><i class="update-tips"></i>同步</span>
+            <span class="tishi2">客流猫会自动同步企业微信后台的企业标签，如果没有及时同步，点击【同步】按钮后手动同步数据</span>
+        </div>
+    </div>
+</div>
+<div class="activity_set activity_set3 w-7">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r r-title">
+                企业客户标签<span class="tishi">（企业标签由管理员统一配置，配置后企业全部成员可使用)</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r">
+                <span class="set-user addTipg"><i class="layui-icon layui-icon-addition"></i>添加标签组</span>
+
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">【消费分类】:</span>
+            <div class="a_list_r">
+                <div class="flex flex1 alignItemS">
+                    <a class="delTipg expired mgR-20">删除标签组</a>
+                    <div class="qwTips mgR-20">
+                        <span class="addTipBtn"><i class="layui-icon layui-icon-addition"></i>添加</span>
+                        <div class="showNumBox hide">
+                            <input type="text" placeholder="输入后回车确认" maxlength="10">
+                            <span class="num">0/10</span>
+                        </div>
+                        <span class="tiem ">根据对话内容</span>
+                        <span class="tiem ">根据企微群</span>
+                        <span class="tiem ">一客一码</span>
+                        <span class="tiem ">渠道活码</span>
+                    </div>
+                    <span class="editTipg">编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r r-title">素材标签</div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r">
+                <span class="set-user addSCTipg"><i class="layui-icon layui-icon-addition"></i>添加标签</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <div class="a_list_r">
+                <div class="flex flex1 alignItemS">
+                    <div class="qwTips mgR-20">
+                        <span class="addTipBtn"><i class="layui-icon layui-icon-addition"></i>添加</span>
+                        <div class="showNumBox hide">
+                            <input type="text" placeholder="输入后回车确认" maxlength="10">
+                            <span class="num">0/10</span>
+                        </div>
+                        <span class="tiem ">根据对话内容</span>
+                        <span class="tiem ">根据企微群</span>
+                        <span class="tiem ">一客一码</span>
+                        <span class="tiem ">渠道活码</span>
+                    </div>
+                    <span class="editSCTipg cursor">编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('.addTipBtn').click(function (e) {
+        e.stopPropagation();
+        $(this).siblings('.showNumBox').show();
+        $(this).siblings('.showNumBox').find('input').focus();
+        $(this).hide();
+    })
+    $('body').click(function () {
+        $('.addTipBtn').show().siblings('.showNumBox').hide();
+    })
+
+
+
+    $('#chutiyan .editTipg,#chutiyan .addTipg').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '编辑标签组',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['600px', '80%'],
+            content: '../添加标签组.html' //iframe的url
+        });
+    });
+    $('#chutiyan .editSCTipg,#chutiyan .addSCTipg').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '编辑标签',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['600px', '80%'],
+            content: '../素材标签管理.html' //iframe的url
+        });
+    });
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .delTipg').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定删除该标签组？',{
+                skin: 'failureskin',
+                icon:2,
+                title:'提示',
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>代理类型配置</title>
+
+    <link rel="stylesheet" href="../../js/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan">
+<div class="content">
+    <div class="tab_content">
+        <div class="tab_type_l">
+            <span class="on"><i class="fa fa-list"></i>代理类型</span>
+            <span class="search"><i class="fa fa-search"></i>搜索</span>
+        </div>
+    </div>
+    <div class="edit_table">
+        <form action="" class="table_cont">
+            <table border="0" class="table_body">
+                <thead>
+                <tr>
+                    <th width="50px">
+                        <label for="c1" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="c1" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </th>
+                    <th width="50px">序号</th>
+                    <th width="100px">等级名称</th>
+                    <th width="150px">代理类型名称</th>
+                    <th width="80px">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label for="c2" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="c2" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </td>
+                    <td>1</td>
+                    <td>一级</td>
+                    <td></td>
+                    <td class="cz_btn">
+                        <span class="config_tips" data-toggle="tooltip" data-placement="top" title="配置"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="c3" class="checked">
+                            <div class="chose">
+                                <input type="checkbox" name="pic2" id="c3" />
+                                <span class="checked-bg"></span>
+                            </div>
+                        </label>
+                    </td>
+                    <td>2</td>
+                    <td>一级</td>
+                    <td></td>
+                    <td class="cz_btn">
+                        <span class="config_tips" data-toggle="tooltip" data-placement="top" title="配置"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="btm_page">
+        <div class="pages">
+            <div class="pages_num">
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>99</span>
+            </div>
+            <div class="now_page">
+                到第<input type="text" value="1">页<span class="sure">确定</span>
+            </div>
+            <select>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div>
+            <span><b>1 - 10</b></span>
+            <span>共<b>10</b>条</span>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/dist/js/bootstrap.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+
+    $('#chutiyan .config_tips').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '代理管理',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['600px', '60%'],
+            content: '代理类型-配置.html' //iframe的url
+        });
+    });
+</script>
+</body>
+</html>

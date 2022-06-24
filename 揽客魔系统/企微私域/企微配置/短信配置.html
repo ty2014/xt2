@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>短信配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan">
+
+
+<div class="content">
+    <div class="page-title">短信配置
+        <div class="notisTip">
+            <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="fa fa-file-word-o"></i>功能说明</a>
+            <a href="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" target="_blank"><i class="fa fa-file-movie-o"></i>视频教程</a>
+        </div>
+    </div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>新增签名</span>
+        </div>
+    </div>
+    <div class="edit_table2">
+        <div class="table_cont2">
+            <div class="table-thead">
+                <table border="0" class="table_body2">
+                    <thead>
+                    <tr>
+                        <th width="200px" class="left">签名内容</th>
+                        <th width="150px">创建时间</th>
+                        <th width="100px">审核状态</th>
+                        <th width="200px">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-tbody">
+                <table border="0" class="table_body2">
+                    <tbody>
+                    <tr>
+                        <td width="200px" class="left">客流猫</td>
+                        <td width="150px" class="date">
+                            <div>2020-12-20 14:45:25</div>
+                        </td>
+                        <td width="100px" class="statu statu3">
+                            <span>待审核</span>
+                        </td>
+                        <td width="200px" class="cz_btn">
+                            <button type="button" class=" ">编辑</button>
+                            <button type="button" class="btn-type2 del_tips">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">敏感词:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-150" id="tip-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">签名内容:</span>
+            <div class="a_list_r">
+                <div class="flex1">
+                    <div class="flex alignItemC">
+                        <div class="showNumBox">
+                            <input type="text" class="w-620" maxlength="12" minlength="2" placeholder="请填写签名内容">
+                            <span class="num">0/12</span>
+                        </div>
+                        <i class="tips tip1 mgL-10"></i>
+                    </div>
+                    <p class="tishi mgL-0 mgT-10">内容要求2~12个字，由中英文数字组成，内容不包含【】，例如 小裂变</p>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">申请说明:</span>
+            <div class="a_list_r">
+                <div class="flex alignItemC">
+                    <div class="showNumBox">
+                        <textarea class="w-620" style="height: 80px;padding: 10px;" placeholder="请填写申请说明"></textarea>
+                        <span class="num">0/200</span>
+                    </div>
+                    <i class="tips tip2 mgL-10"></i>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">企业营业执照:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist auto layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2220087570,1112216917&amp;fm=26&amp;gp=0.jpg" layer-src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2220087570,1112216917&amp;fm=26&amp;gp=0.jpg" layer-index="0">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <div class="tishi">申请签名需要提供企业营业执照<br>支持png、jpg、jpeg格式图片, 大小不超过2MB</div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">授权委托书:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist auto layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2220087570,1112216917&amp;fm=26&amp;gp=0.jpg" layer-src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2220087570,1112216917&amp;fm=26&amp;gp=0.jpg" layer-index="0">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <li class="file-btn"></li>
+                </ul>
+                <div class="tishi">
+                    客流猫代企业申请签名，涉及第三方权益上传授权委托书<br>
+                    1.下载<a href="">委托书模板</a><br>
+                    2.请填写相关信息，盖章后拍照上传<br>
+                    3.支持png、jpg、jpeg格式图片
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .add_btn').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '新增签名',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['90%', '90%'],
+            skin: 'activity_set activity_set2',
+            content: $("#tip-sure")
+        });
+    });
+
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del_tips').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('删除该条数据？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+    $('#chutiyan .tip1').on('mouseenter',function(){
+        this.index =layer.tips('1.短信签名作为短信发送者属性的一种标识，签名必须用于标识公司、产品或业务，禁止发送涉及：色情、赌博、毒品、党政、法律维权、众筹、慈善募捐、宗教、迷信、股票、留学移民、面试招聘、博彩、贷款、催款还款、信用卡提额、投资理财、中奖、抽奖、一元夺宝、一元秒杀、一元云购、二类电商、A货、烟酒、交友、暴力、恐吓、皮草、返现返利、代开发票、运营商禁止发送的信息、代理注册、代办证件、加群、加QQ或者加微信、贩卖个人信息、运营商业务、流量营销、违反广告法用语、殡葬、刷单、做任务、空包网、邀请好评、转店类、拉新、众包业务等内容的短信。<br><br>'
+        +'2. 短信签名必须具有实际意义。不支持含义模糊的中性签名，如“客服通知”、“客户您好”等 <br><br>'+
+        '3. 请直接填写签名内容，无需添加【】、()、[]等符号。发送短信时，会自动为您的签名增加括号。', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:300
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+    $('#chutiyan .tip2').on('mouseenter',function(){
+        this.index =layer.tips('此信息是签名审核的参考信息之一，请详细描述签名的用途、场景等信息。信息完善的申请说明会提高签名的审核效率', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:300
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+</script>
+</body>
+</html>

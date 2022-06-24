@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图文分类-添加</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0;background: #fff">
+
+<div class="account-cont w-100">
+    <div class="account">
+        <span class="account-l">分类名称：</span>
+        <div class="account-r"><input type="text"></div>
+    </div>
+    <div class="dub-list">
+        <div class="account">
+            <span class="account-l">状态：</span>
+            <div class="account-r">
+                <div class="toggle-button-wrapper">
+                    <input type="checkbox"  id="is_time" class="toggle-button" name="switch">
+                    <label for="is_time" class="button-label">
+                        <span class="circle"></span>
+                        <span class="text on">开</span>
+                        <span class="text off">关</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">排序码：</span>
+            <div class="account-r">
+                <div class="slide-select">
+                    <select>
+                        <option value="">01</option>
+                        <option value="">02</option>
+                    </select>
+                    <img src="../../images/bottom-icon.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="account">
+        <span class="account-l">描述：</span>
+        <div class="account-r"><input type="text" class="w-620"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">链接：</span>
+        <div class="account-r"><input type="text" class="w-620"></div>
+    </div>
+    <div class="account flex-start">
+        <span class="account-l">分类图标：</span>
+        <div class="account-r">
+            <div class="file-cont">
+                <div class="file-btn"></div>
+                <p class="tishi2">*建议宽高尺寸 200*200像素；大小不超过100KB</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="account_btn"><span class="btn btn-sure">确定</span></div>
+
+</body>
+</html>

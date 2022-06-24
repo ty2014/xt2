@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff;">
+
+<div class="activity_set activity_set2">
+    <div class="b-line" style="border-bottom: none">
+        <div class="a_list">
+            <span class="a_list_l">雷达标题:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" placeholder="只在后台显示" maxlength="64" value="" class="w-620">
+                    <span class="num">0/64</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">链接信息:</span>
+            <div class="a_list_r">
+                <div class="txtAndPic">
+                    <div>
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <li class="img_item" style="display: none;width: 116px;height: 116px;">
+                                <img src="" layer-index="3">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn" style="width: 116px;height: 116px;"></li>
+                        </ul>
+                        <div>
+                            <div class="showNumBox">
+                                <input type="text" placeholder="链接标题" maxlength="64" class="w-620">
+                                <span class="num">0/64</span>
+                            </div>
+                            <div class="showNumBox" style="margin-top: 10px;">
+                                <input type="text" placeholder="选填，摘要会在订阅号消息、转发链接等文章外的场景显露，帮助读者快速了解内容，如不填写则默认抓取正文前54字" maxlength="120" class="w-620">
+                                <span class="num">0/120</span>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <input type="text" placeholder="图文链接" class="w-620">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="tishi">*建议图片尺寸为200px*200px，比例1：1 ，JPG、PNG格式，图片小于50KB</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">预览:</span>
+            <div class="a_list_r">
+                <div class="cont_href">
+                    <p class="href_tit line1">重要通知！黄码人员核酸检测定点医院公布</p>
+                    <div>
+                        <p class="txt line4">为切实做好疫情防控工作，方便黄码人员及时、就近进行核酸检测。</p>
+                        <img src="https://img2.baidu.com/it/u=2317629700,1848281201&amp;fm=26&amp;fmt=auto" alt="" class="icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l r-title">链接追踪设置</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">行为通知:</span>
+            <div class="a_list_r">
+                <div class="button-label-m ">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="togg1" checked class="toggle-button" name="switch">
+                        <label for="togg1" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <p class="tishi">*开启后当客户点击雷达链接时，客服人员将会收到客流猫助手的提醒</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">动态通知:</span>
+            <div class="a_list_r">
+                <div class="button-label-m ">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="togg2" checked class="toggle-button" name="switch">
+                        <label for="togg2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <p class="tishi">*开启后会将客户的打卡方式记录在客户动态</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">自动打标签:</span>
+            <div class="a_list_r">
+                <div class="button-label-m ">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="togg3" class="toggle-button" name="switch">
+                        <label for="togg3" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+                <p class="tishi">*给点击雷达链接的客户打上选中的标签</p>
+            </div>
+        </div>
+        <div class="tipCont" style="display: none">
+            <div class="a_list">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <a class="addTip">已选择2个</a>
+                </div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l"></span>
+                <div class="a_list_r">
+                    <span class="mgR-10">[消费分类]:</span>
+                    <div class="qwTips">
+                        <span class="tiem on">战略帮扶</span>
+                        <span class="tiem on">联创帮扶</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#togg3').click(function (e) {
+        $('.tipCont').toggle();
+    })
+
+</script>
+</body>
+</html>

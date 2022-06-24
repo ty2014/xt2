@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模块配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body id="chutiyan">
+
+<div class="page-title">模块配置</div>
+<div class="activity_set activity_set3 w-4">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">首页链接:</span>
+            <div class="a_list_r">http://cshtml.lkmsxy.com/<span class="copy-btn">复制</span></div>
+        </div>
+        <!--<div class="a_list">-->
+            <!--<div class="a_list_l">模块入口:</div>-->
+            <!--<div class="a_list_r">-->
+                <!--<div class="toggle-button-wrapper">-->
+                    <!--<input type="checkbox" id="statu-togg" checked="" class="toggle-button" name="switch">-->
+                    <!--<label for="statu-togg" class="button-label">-->
+                        <!--<span class="circle"></span>-->
+                        <!--<span class="text on">开启</span>-->
+                        <!--<span class="text off">关闭</span>-->
+                    <!--</label>-->
+                <!--</div>-->
+                <!--<span class="tishi">*个人中心是否展示该模块的入口</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="a_list">-->
+            <!--<span class="a_list_l">模块命名:</span>-->
+            <!--<div class="a_list_r"><input type="text" value="引流卡"><span class="tishi">*在用户个人中心处，将显示该处设置的名称</span></div>-->
+        <!--</div>-->
+        <div class="a_list">
+            <span class="a_list_l">首页标题:</span>
+            <div class="a_list_r">
+                <input type="text" placeholder="首页的标题命名" style="width: 620px;"><a class="title_img_btn" style="margin-left: 16px;">点击查看效果图</a>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享简介:</span>
+            <div class="a_list_r"><input type="text" class="w-620" placeholder="用于分享时展示"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">分享图标:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="tishi mgL-0">*建议图片尺寸为80px*80px，比例1：1 ，JPG、PNG格式，图片小于50KB</span>
+            </div>
+        </div>
+    </div>
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">充值默认图:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="tishi mgL-0">*当用户直接访问充值界面时，默认展示该封面图。<a class="cz_img_btn">点击查看效果图</a>
+                    <br>建议图片尺寸为702px*468px，比例为 1.5：1，jpg、png格式，图片小于5M。
+                </span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">海报扫码:</span>
+            <div class="a_list_r">
+                <label for="cj1" class="radio">
+                    <div class="chose">
+                        <input type="radio" checked="" name="cj" id="cj1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">直接跳转“商品详情”</span>
+                </label>
+                <label for="cj2" class="radio mgR-0">
+                    <div class="chose">
+                        <input type="radio" name="cj" id="cj2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">先关注公众号，再到“商品详情”</span>
+                </label>
+                <span class="tishi">*扫描海报二维码的跳转路径</span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">搜索标签:</span>
+            <div class="a_list_r">
+                <div>
+                    <input type="text" style="display: block;width: 620px">
+                    <span class="tishi" style="margin-left: 0;margin-top: 10px;display: block">*选填，不填将不展示。输入引导用户搜索的关键词，多个关键词用英文逗号“,”隔开。<a class="key_img_btn" style="margin-left: 16px;">点击查看效果图</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-line" style="border-bottom: 0;">
+        <div class="a_list">
+            <span class="a_list_l">客服二维码:</span>
+            <div class="a_list_r">
+                <div class="file-cont file-cont2">
+                    <div class="file-pics">
+                        <ul class="FraUpload_imglist layer-photos-demo">
+                            <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                            <li class="file-btn"></li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="tishi mgL-0">*选填，用户对订单有疑问时，可加微信咨询。<a class="concat_img_btn">点击查看效果图</a>
+                    <br>建议图片尺寸为80px*80px，比例1：1 ，JPG、PNG格式，图片小于5M
+                </span>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">客服微信号:</span>
+            <div class="a_list_r"><input type="text" placeholder="选填"></div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">客服电话号:</span>
+            <div class="a_list_r"><input type="text" placeholder="选填"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+</div>
+
+
+
+<img src="http://cshtml.lkmsxy.com/csimg/ylkImg3.png" alt="" id="title_img" style="height: 580px;display: none;">
+
+<img src="http://cshtml.lkmsxy.com/csimg/ylkImg5.png" alt="" id="key_img" style="height: 580px;display: none;">
+
+<img src="http://cshtml.lkmsxy.com/csimg/ylkImg6.png" alt="" id="concat_img" style="height: 580px;display: none;">
+
+<img src="http://cshtml.lkmsxy.com/csimg/ylkImg2.png" alt="" id="cz_img" style="width: 320px;display: none">
+
+
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $('#chutiyan .title_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#title_img")
+        });
+    });
+    $('#chutiyan .key_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#key_img")
+        });
+    });
+    $('#chutiyan .concat_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img")
+        });
+    });
+    $('#chutiyan .cz_img_btn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#cz_img")
+        });
+    });
+</script>
+
+</body>
+</html>

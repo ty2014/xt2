@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>投屏</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <!--<link rel="stylesheet" href="css/swiper.min.css">-->
+    <script src="js/echarts.js"></script>
+</head>
+<body>
+    <div class="top_tit"><span>揽客魔【百万客流爆破营】第7期裂变数据</span></div>
+    <div class="section">
+        <div class="section_l">
+            <span class="s_tit">小组排名</span>
+            <div class="team_top10">
+                <!--  只显示前10名  -->
+                <div id="main" style="width:100%;height:100%"></div>
+            </div>
+        </div>
+        <div class="section_c">
+            <img src="images/9.png" alt=""/>
+            <span class="active_tit">裂变总量</span>
+            <div id="main2" style="width:70%;height:74%;position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);display: flex;justify-content: center;align-items: center;"></div>
+        </div>
+        <div class="section_r">
+            <span class="s_tit">任务已达成用户</span>
+            <div class="reach_user">
+                <span class="lines top_l"></span><span class="lines top_r"></span>
+                <span class="lines bottom_r"></span><span class="lines bottom_l"></span>
+                <div class="reach_cont">
+                    <!--  默认显示10个，超过10个就垂直滚动播放，每屏10个  -->
+                    <div class="reach_list">
+                        <span class="reach_id">1</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">2</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">3</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">4</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">5</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">6</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">7</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">8</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">9</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">10</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">11</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                    <div class="reach_list">
+                        <span class="reach_id">12</span>
+                        <div class="reach_msg">
+                            <span class="u_pic"></span>
+                            <p class="u_name">郑传华【揽客魔】创始人4号</p>
+                            <span class="u_num">15人</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+        <span class="s_tit">小组情况</span>
+        <div class="group_msg swiper-container">
+            <span class="lines top_l"></span><span class="lines top_r"></span>
+            <span class="lines bottom_r"></span><span class="lines bottom_l"></span>
+            <div class="group_cont swiper-wrapper">
+                <!--  默认显示8个，超过8个就水平滚动播放，每屏8个  -->
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_1">01</span></p>    <!--  id_1 到 id_8 为一个轮换，从第9个开始就又从 id_1 开始  -->
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <!--  默认显示6个，超出隐藏  -->
+                        <li><img src="images/1.jpg" alt=""/></li>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_2">02</span></p>
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_3">03</span></p>
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_4">04</span></p>
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_5">05</span></p>
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_6">06</span></p>
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_7">07</span></p>
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_8">08</span></p>
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_1">09</span></p>
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_2">10</span></p>
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+                <div class="g_list swiper-slide">
+                    <p class="g_id"><span class="id_3">11</span></p>
+                    <div class="g_person"><span>230</span>人</div>
+                    <ul>
+                        <li><img src="images/1.jpg" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween:'3.8%',
+            autoplay:true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            }
+        });
+    </script>
+
+    <script>
+        var fWidth=$('.reach_user').outerWidth();
+        $('.reach_user').css('height',fWidth);
+        $('.team_top10').css('height',fWidth);
+
+        // 上下数据滚动
+        function getRandom(min, max){
+            var r = (max - min);
+            var re =(r + min);
+            //re = Math.max(Math.min(re, max), min);
+            return re;
+        }
+        $(function(){
+
+            setInterval(function(){
+                var parent = $(".reach_cont");
+                if(getRandom(0,1)==1){
+                    //向上滚动特效
+                    var son = parent.find('.reach_list:first');
+                    var height = son.height();
+                    son.animate({
+                        marginTop: -height + 'px'
+                    }, 1000, function() {
+                        son.css('marginTop', 0).appendTo(parent);
+                    });
+                }else{
+                    //向下滚
+                    var sonHeight = parent.find(".reach_list:last").height();//计算最后一个元素的高度
+                    parent.animate({marginTop : sonHeight +"px"},500,function(){
+                        parent.find(".reach_list:last").prependTo(parent);/*不要写成prepend*/
+                        parent.find(".reach_list:first").hide();
+                        parent.css({marginTop:0});
+                        parent.find(".reach_list:first").fadeIn(1000);
+                    });
+                }
+            },2000);
+        });
+    </script>
+
+    <script>
+        myChart = echarts.init(document.getElementById('main'));    // 左边条形数据图
+        myChart2 = echarts.init(document.getElementById('main2'));  // 中间环形进度图
+        var dataAll = [389, 259, 262, 324, 232, 176, 196, 214, 133, 370];
+        var yAxisData = ['第一组','第二组','第三组','第四组','第五组','第六组','第七组','第八组','第九组','第十组'];
+        var option = {
+            grid: [
+                {x: '16%', y: '5%', width: '65%', height: '90%'}
+            ],
+            tooltip: {
+                formatter: '{b} ({c})'
+            },
+            xAxis: [
+                {   gridIndex: 0,
+                    axisTick: {show:false},
+                    axisLabel: {show:false},
+                    splitLine: {show:false},
+                    axisLine: {show:false }
+                }
+            ],
+            yAxis: [
+                {   gridIndex: 0,
+                    interval:0,
+                    data:yAxisData.reverse(),
+                    axisTick: {show:false},     //刻度
+                    axisLabel: {show:true},
+                    splitLine: {show:false},    //每块的边框
+                    axisLine: {show:true,lineStyle:{color:"#00fcf9"}}
+                }, {
+                    show: true,         // 右边固定位置数字
+                    inverse: false,
+                    data: dataAll,
+                    axisLabel: {
+                        formatter: function(e) {
+                            var t = +e;
+                            return t + "人"
+                        },
+                        textStyle: {
+                            color: function(data) {
+                                if (data > 300)                //  判断前三名，
+                                    return "#fe991a";
+                                if (data < 300)
+                                    return "#00a3a1"
+                                }
+                        }
+                    },
+                    axisTick: {show:false},     //刻度
+                    axisLine: {show:true,lineStyle:{color:"#00fcf9"}}
+                }
+            ],
+            series: [{
+                    name: 'TOP10',
+                    type: 'bar',
+                    xAxisIndex: 0,
+                    yAxisIndex: 0,
+                    barWidth:'40%',
+                    itemStyle:{
+                        normal:{
+                            color: {
+                                type: 'bar',
+                                colorStops: [{
+                                    offset: 0,
+                                    color: '#e56639' // 0% 处的颜色
+                                }, {
+                                    offset: 1,
+                                    color: '#feb018' // 100% 处的颜色
+                                }],
+                                globalCoord: false // 缺省为 false
+                            }
+                        }
+                    },
+                    label:{
+                        normal:{
+                            show:false,
+                            position: 'right',
+                            textStyle:{color:"#00a3a1"}
+                        }
+                    },
+                    data: dataAll.sort()
+                }
+            ]
+        };
+        option2 = {
+            title: {
+                text: "12345",
+                textStyle: {
+                    color: '#fff',
+                    fontSize: 62,
+                    fontWeight: 'bold'
+                },
+                left: 'center',
+                bottom: '40%',
+                itemGap: 10
+            },
+            tooltip: {
+                show: false
+            },
+
+            series: [
+                {
+                    name: '数据',
+                    type: 'pie',
+                    startAngle: 315,
+                    center:['50%','50%'],
+                    radius: ['72%', '77%'],
+                    legendHoverLink: false,
+                    hoverAnimation: false,
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '30',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [{
+                        value: 34,
+                        itemStyle: {
+                            normal: {
+                                color: "rgba(0,0,0,0)"
+                            }
+                        }
+                    },
+                        {
+                            value:25,
+                            itemStyle: {
+                                normal: {
+                                    color:{
+                                        colorStops: [{
+                                            offset: 0,
+                                            color: '#4987ff' // 结束 处的颜色
+                                        }, {
+                                            offset: 1,
+                                            color: '#da1bff' // 开始 处的颜色
+                                        }]
+                                    }
+                                }
+                            }
+
+                        },
+                        {
+                            value: 75,
+                            itemStyle: {
+                                normal: {
+                                    color: "rgba(71,200,255,1)"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    name: '外圈',
+                    type: 'pie',
+                    startAngle: 315,
+                    hoverAnimation: false,
+                    radius: ["82%", "83%"],
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '10',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [{
+                        value: 25,
+                        itemStyle: {
+                            normal: {
+                                color: "rgba(0,0,0,0)"
+                            }
+                        }
+                    },
+                        {
+                            value: 75,
+                            itemStyle: {
+                                normal: {
+                                    color: "rgba(38,182,231,6)"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+        myChart2.setOption(option2);
+
+        setTimeout(function (){
+            window.onresize = function () {
+                myChart.resize();
+                myChart2.resize();
+            }
+        },200)
+    </script>
+</body>
+</html>

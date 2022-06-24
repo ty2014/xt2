@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <link rel="stylesheet" href="js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        body,html{height: 100%;padding: 0;background: #fff;}
+    </style>
+</head>
+<body>
+
+<div class="account-box">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">昵称：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名：</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">有效时间：</span>
+            <div class="account-r"><input type="text" class="layui-input" id="test1"><span style="color: #999;margin: 0 10px;">—</span><input type="text" class="layui-input" id="test2"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">状态：</span>
+            <div class="account-r">
+                <div class="select-text">
+                    <span class="select-txt"></span>
+                    <ul>
+                        <li>无效</li>
+                        <li>有效</li>
+                        <li>待审核</li>
+                        <li>无效</li>
+                        <li>有效</li>
+                        <li>待审核</li>
+                        <li>无效</li>
+                        <li>有效</li>
+                        <li>待审核</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">会员等级：</span>
+            <div class="account-r chose_item">
+                <label for="vip1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">普通会员</span>
+                </label>
+                <label for="vip2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">白银会员</span>
+                </label>
+                <label for="vip3" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip3" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">铂金会员</span>
+                </label>
+                <label for="vip4" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip4" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">钻石会员</span>
+                </label>
+                <label for="vip5" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="pic2" id="vip5" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">非会员</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">性别：</span>
+            <div class="account-r chose_item">
+                <label for="fix1" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="fix" id="fix1" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">女</span>
+                </label>
+                <label for="fix2" class="radio">
+                    <div class="chose">
+                        <input type="radio" name="fix" id="fix2" />
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">男</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="account_btn btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/layui/lay/modules/layer.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/myjs.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

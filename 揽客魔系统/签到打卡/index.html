@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>签到打卡</title>
+    <link rel="stylesheet" href="css/swiper.min.css?v=1.0.2"/>
+    <link rel="stylesheet" href="css/style.css?v=1.0.4"/>
+    <script src="js/rem.js"></script>
+</head>
+<body>
+
+<div class="content">
+    <div class="cont1"><div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide lock"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide lock"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide lock"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide lock"><img src="images/1.jpg" alt=""></div>
+        </div>
+        <div class="card-parent"><img src="images/2.jpg?v=1.0.0" alt=""></div>
+        <div class="tishi">长按图片，保存或发送给朋友</div>
+    </div></div>
+    <div class="swiper-foot">
+        <span class="tj-txt">推荐语</span>
+        <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide checkIn"><img src="images/1.jpg" alt=""></div>
+                <div class="swiper-slide checkIn"><img src="images/1.jpg" alt=""></div>
+                <div class="swiper-slide checkIn"><img src="images/1.jpg" alt=""></div>
+                <div class="swiper-slide lock"><img src="images/1.jpg" alt=""></div>
+                <div class="swiper-slide lock"><img src="images/1.jpg" alt=""></div>
+                <div class="swiper-slide lock"><img src="images/1.jpg" alt=""></div>
+                <div class="swiper-slide lock"><img src="images/1.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="tj-model">
+    <div class="model-head"><span class="tit">推荐语</span><span class="next-txt">换一条</span></div>
+    <pre class="model-txt" id="clone">
+忙，不重要；
+忙什么，才重要。
+
+忙什么，涉及核心价值观和核心竞争力，
+围绕这两个，量变才会产生质变。
+
+——揽客魔商学院</pre>
+    <div class="copy-btn">一键复制文案</div>
+</div>
+
+<div class="model unclock-model">
+    <div class="clockModel clock-error">
+        <p class="clockM-txt">是否确认解锁本图？</p>
+        <div class="clockM-btn"><span>取消</span><span class="sure">确定</span></div>
+    </div>
+</div>
+<div class="model repeat-model">
+    <div class="clockModel clock-error">
+        <p class="clockM-txt">您已提前解锁一张，明天再来哦</p>
+        <div class="clockM-btn"><span class="ok">好的</span></div>
+    </div>
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/swiper.min.js?v=1.0.2"></script>
+<script>
+
+
+
+    /* 禁止底层滚动 */
+    var item=$('body');
+    function stopScrollLong() {
+        var top = -$(window).scrollTop();
+        item.css({
+            'position': 'fixed',
+            'width':'100%',
+            'left':'50%',
+            'bottom':'0',
+            'transform':'translateX(-50%)',
+            'max-width':'640px'
+        });
+        setTimeout(function () {
+            item.css({
+                'top': top + 'px'
+            });
+        }, 10);
+    }
+    function recoverScrollLong() {
+        var top = parseInt(-item.css('top').replace('px', ''));
+        item.css({
+            position: 'static'
+        });
+        $(window).scrollTop(top);
+    }
+    function stopScroll() {
+        // 弹出时
+        item.on('touchmove', preventDefaultFn);
+        item.css({
+            'overflow': 'hidden'
+        });
+    }
+    function recoverScroll() {
+        // 隐藏时
+        item.off('touchmove', preventDefaultFn);
+        item.css({
+            'overflow': 'auto',
+            'left':'auto',
+            'transform':'unset'
+        });
+    }
+    function preventDefaultFn(e) {
+        e.preventDefault();
+    }
+
+
+    $(document).on('click', ".copy-btn", function () {
+        var Url2=document.getElementById("clone").innerText;
+        const input = document.createElement("input");
+        input.readOnly = 'readonly';
+        input.value = Url2;
+        document.body.appendChild(input);
+        input.select();
+        input.setSelectionRange(0, input.value.length);
+        document.execCommand('Copy');
+        document.body.removeChild(input);
+        alert('复制文字成功');
+    });
+    $(function () {
+        $('.repeat-model .clockM-btn .ok').click(function () {
+            $('.repeat-model').hide();
+        });
+        $('.gallery-thumbs .lock').click(function () {
+           $(this).addClass('unlock').siblings().removeClass('unlock');
+        });
+        $('.tj-txt').click(function (e) {
+            e.stopPropagation();
+            $('.tj-model').fadeIn();
+        });
+        $('.tj-model').click(function () {
+            $(this).show();
+        });
+        $('.content').click(function () {
+            $('.tj-model').slideUp('fast');
+        });
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            slidesPerView: 'auto',
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            initialSlide: 0, // 一开始就放到所有中间的位置
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,  //slide做3d旋转时Y轴的旋转角度。默认50
+                stretch: 0,     //每个slide之间的拉伸值，越大slide靠得越紧。 默认0。
+                depth: 160,     //slide的位置深度。值越大z轴距离越远，看起来越小。 默认100。
+                modifier: 1,    //depth和rotate和stretch的倍率
+                slideShadows : false,
+            },
+            thumbs: {
+                swiper: galleryThumbs
+            },
+            on:{
+                slideChangeTransitionEnd: function () {
+                    //alert(this.activeIndex);
+                    function a(){
+                        $('.tishi').text("长按图片，保存或发送给朋友");
+                        $('.msg-txt').show();
+                        $('.msg-txt2').hide();
+                        $('.card-parent').removeClass('lock-icon');
+                        $('.card-parent').unbind();
+                    }
+                    function b(){
+                        $('.tishi').text("可点击图片，提前解锁一张哦");
+                        $('.msg-txt').hide();
+                        $('.msg-txt2').show();
+                        $('.card-parent').addClass('lock-icon');
+                        $('.lock-icon').removeClass('off');
+                    }
+                    function f() {
+                        $('.gallery-top .lock').addClass('unclock');
+                        $('.gallery-top .swiper-slide-active').removeClass('lock filter unclock');
+                        $('.msg-txt').show();
+                        $('.msg-txt2').hide();
+                        $('.tishi').text("长按图片，保存或发送给朋友");
+                        $('.lock-icon').addClass('off');
+                        $('.card-parent,.lock-icon').unbind();
+                        $('.gallery-thumbs .lock.swiper-slide-thumb-active').addClass('checkIn').removeClass('lock');
+
+                        return true;
+                    }
+
+                    let index=$('.gallery-top .lock').index();
+                    if (this.realIndex < index){
+                        a();
+                    } else if (this.realIndex >=index){
+                        b();
+                        $('.gallery-thumbs .lock').addClass('unlock').siblings().removeClass('unlock');
+                        if(!$('.gallery-top .swiper-slide-active').hasClass('lock')){
+                            a();
+                        }
+
+                        // 点击解锁
+                        $('.lock-icon').bind('click',function (e) {
+                            stopScrollLong();
+                            stopScroll();
+                            if(!e.isPropagationStopped()){      //  防止点击一次触发2次问题
+                                if($('.gallery-top .lock').hasClass('unclock')){
+                                    $('.unclock-model').hide();
+                                    $('.repeat-model').show();
+                                }else{
+                                    $('.unclock-model').show();
+                                    $('.repeat-model').hide();
+                                }
+                            }
+                            e.stopPropagation();    //必须要，不然e.isPropagationStopped()无法判断stopPropagation是否调用过
+                        });
+                        $('.unclock-model .clockM-btn span').click(function () {
+                            $('.unclock-model').hide();
+                            recoverScrollLong();
+                            recoverScroll();
+                        });
+                        $('.unclock-model .clockM-btn .sure').click(function () {
+                            f();
+                        })
+                    }
+                }
+            },
+        });
+    })
+
+</script>
+
+</body>
+</html>

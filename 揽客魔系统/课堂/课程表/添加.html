@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全部系列课-添加</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body id="chutiyan" style="padding: 0;background: #fff">
+
+<div class="activity_set activity_set2">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l">状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="u-togg4" class="toggle-button" name="switch">
+                        <label for="u-togg4" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">开启</span>
+                            <span class="text off">关闭</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">课程表名称:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" class="w-620">
+                    <span class="num">0/25</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">课程表介绍:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <textarea placeholder="" class="w-620" style="height: 80px;padding: 10px;resize: none"></textarea>
+                    <span class="num">0/68</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">课程表类型:</span>
+            <div class="a_list_r">
+                <div class="select-text selectType" style="min-width: 120px">
+                    <span class="select-txt">请选择</span>
+                    <ul>
+                        <li>课程</li>
+                        <li>专栏</li>
+                        <li>课程+专栏</li>
+                    </ul>
+                </div>
+                <div class="flex kcCont" style="margin-left: 40px;display: none"><span class="set-user mgR-8">选择课程</span><a >已选择0个</a></div>
+                <div class="flex zlCont" style="margin-left: 40px;display: none"><span class="set-user mgR-8">选择专栏</span><a >已选择0个</a></div>
+            </div>
+        </div>
+        <div class="a_list kcType" style="display: none">
+            <span class="a_list_l">课程展示样式:</span>
+            <div class="a_list_r checked_chose">
+                <label for="cd1" class="radio normal-cd">
+                    <div class="chose">
+                        <input type="radio" checked="" name="cd" id="cd1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">样式一</span>
+                </label>
+                <label for="cd2" class="radio zdy-cd">
+                    <div class="chose">
+                        <input type="radio" name="cd" id="cd2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">样式二</span>
+                </label>
+                <a class="showImg3">点击查看示例</a>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">套餐价格:</span>
+            <div class="a_list_r">
+                <input type="number" class="m_width mgR-8" placeholder="￥">
+                该处填写用户购买时的价格，原价为：￥4000
+                <!--  原价：所有选择课程、专栏的划线价总计  -->
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">学习有效期:</span>
+            <div class="a_list_r">
+                <div class="select-text selectDate" style="min-width: 150px;margin-right: 20px;">
+                    <span class="select-txt">长期有效</span>
+                    <ul style="display: none;">
+                        <li class="active">长期有效</li>
+                        <li>按购买时间到期</li>
+                        <li>固定时间到期</li>
+                    </ul>
+                </div>
+                <div class="date-togg-cont1 flex alignItemC" style="display: none">
+                    用户支付时间 + <input type="number" class="mg-8 s_width center">天后到期
+                    <p class="tishi">* 以用户支付时间+指定时间周期为到期时间；</p>
+                </div>
+                <div class="date-togg-cont2 flex alignItemC" style="display: none">
+                    固定<input type="text" class="layui-input mg-8" id="test1" placeholder="选择时间">后到期
+                    <p class="tishi">* 用户无论什么时间购买，都是指定时间到期；</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="a_list">
+            <span class="a_list_l">课程封面图:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <p class="tishi">*建议尺寸231px*154px；大小不超过500KB；<a class="showImg1">点击查看示例</a></p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">课程表主图:</span>
+            <div class="a_list_r">
+                <ul class="FraUpload_imglist layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <p class="tishi">*建议尺寸140px*184px；大小不超过500KB；<a class="showImg2">点击查看示例</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<img src="images/img1.png" alt="" id="concat_img" style="height: 520px;display: none;">
+<img src="images/img2.png" alt="" id="concat_img2" style="height: 520px;display: none;">
+<img src="images/img3.png" alt="" id="concat_img3" style="height: 520px;display: none;">
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('.selectDate li').click(function (){
+        var ind = $(this).index();
+        switch (ind) {
+            case 0:
+                $('.date-togg-cont1,.date-togg-cont2').hide();
+                break;
+            case 1:
+                $('.date-togg-cont1').show();
+                $('.date-togg-cont2').hide();
+                break;
+            case 2:
+                $('.date-togg-cont1').hide();
+                $('.date-togg-cont2').show();
+                break;
+        }
+    })
+
+    $('#chutiyan .showImg1').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img")
+        });
+    });
+    $('#chutiyan .showImg2').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img2")
+        });
+    });
+    $('#chutiyan .showImg3').on('click', function(){
+        layer.open({
+            type: 1,
+            title: false,
+            shadeClose: true,
+            shade: 0.3,
+            area: ['auto', 'auto'], //宽高
+            content: $("#concat_img3")
+        });
+    });
+
+    $('.selectType li').click(function () {
+        let ind = $(this).index();
+        if(ind === 0 ){
+            $('.kcCont,.kcType').show()
+            $('.zlCont').hide()
+        }else if(ind === 1){
+            $('.kcCont,.kcType').hide()
+            $('.zlCont').show()
+        }else if(ind === 2){
+            $('.kcCont,.kcType').show()
+            $('.zlCont').show()
+        }
+    })
+    $('.kcCont .set-user').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '课程选择',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '选择课程.html' //iframe的url
+        });
+    });
+    $('.kcCont a').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '课程详情',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '课程详情.html#tab1' //iframe的url
+        });
+    });
+    $('.zlCont .set-user').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '专栏选择',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '选择专栏.html' //iframe的url
+        });
+    });
+    $('.zlCont a').on('click', function(){
+        //iframe层
+        parent.layer.open({
+            type: 2,
+            title: '专栏详情',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '课程详情.html#tab2' //iframe的url
+        });
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择文章</title>
+    <link rel="stylesheet" href="../../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../../css/style.css?v=1.0.0">
+    <style>
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+    </style>
+</head>
+<body id="chutiyan" style="height: auto;">
+
+<ul class="head-tab2 head-tab3">
+    <li class="active current"><a href="#tab1">未选文章</a></li>
+    <li><a href="#tab2">已选文章</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content content2">
+    <div class="tab-pane active"  id="tab1">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">付费干货</a></li>
+                        <li><a href="#">免费干货</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab_type_2"><span class="tab-tips add_btn"><i class="plus-tips"></i>完成选择</span></div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">操作</th>
+                            <th width="80px">封面图</th>
+                            <th width="300px" class="left">标题</th>
+                            <th width="150px">付费金额</th>
+                            <th width="100px">文章排序<i class="sort-icon"></i></th>
+                            <th width="100px">分类</th>
+                            <th width="100px">作者</th>
+                            <th width="150px">更新时间</th>
+                            <th width="100px">点击量</th>
+                            <th width="100px">标签</th>
+                            <th width="100px">启用状态</th>
+                            <th width="100px">是否展示</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px" class="cz_btn">
+                                <button type="button" class="btn-type1">选入</button>
+                            </td>
+                            <td width="80px" class="squ-pic"><img src="../../../images/null2.jpg" alt=""></td>
+                            <td width="300px" class="left"><a>头条号如何提高粉丝粘性？实现快速变现？你必须要了解的两个点？</a></td>
+                            <td width="150px">29.99</td>
+                            <td width="100px">100</td>
+                            <td width="100px">营销干货</td>
+                            <td width="100px">小聪</td>
+                            <td width="150px">2019-08-13 16:59:49</td>
+                            <td width="100px">2368</td>
+                            <td width="100px">营销</td>
+                            <td width="100px" class="statu statu1"><span>启用</span></td>
+                            <td width="100px">是</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="cz_btn">已选入</td>
+                            <td class="squ-pic"><img src="../../../images/null2.jpg" alt=""></td>
+                            <td class="left"><a>头条号如何提高粉丝粘性？实现快速变现？你必须要了解的两个点？</a></td>
+                            <td></td>
+                            <td>99</td>
+                            <td>营销干货</td>
+                            <td>小土豆</td>
+                            <td>2020-08-13 16:59:49</td>
+                            <td>368</td>
+                            <td>营销</td>
+                            <td class="statu statu2"><span>停用</span></td>
+                            <td>否</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane"  id="tab2">
+        <div class="tab_content2">
+            <div class="tab_type_2">
+                <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+                <div class="top_tit2 center">
+                    <a href="#"><span>全部</span><em class="fa fa-angle-down"></em></a>
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">付费干货</a></li>
+                        <li><a href="#">免费干货</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab_type_2"><span class="tab-tips add_btn"><i class="del-tips"></i>完成排除</span></div>
+        </div>
+        <div class="edit_table2">
+            <div class="table_cont2">
+                <div class="table-thead">
+                    <table border="0" class="table_body2">
+                        <thead>
+                        <tr>
+                            <th width="50px">序号</th>
+                            <th width="100px">操作</th>
+                            <th width="80px">封面图</th>
+                            <th width="300px" class="left">标题</th>
+                            <th width="150px">付费金额</th>
+                            <th width="100px">文章排序<i class="sort-icon"></i></th>
+                            <th width="100px">分类</th>
+                            <th width="100px">作者</th>
+                            <th width="150px">更新时间</th>
+                            <th width="100px">点击量</th>
+                            <th width="100px">标签</th>
+                            <th width="100px">启用状态</th>
+                            <th width="100px">是否展示</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table border="0" class="table_body2">
+                        <tbody>
+                        <tr>
+                            <td width="50px">1</td>
+                            <td width="100px" class="cz_btn">
+                                <button type="button" class="btn-type2">排出</button>
+                            </td>
+                            <td width="80px" class="squ-pic"><img src="../../../images/null2.jpg" alt=""></td>
+                            <td width="300px" class="left"><a>头条号如何提高粉丝粘性？实现快速变现？你必须要了解的两个点？</a></td>
+                            <td width="150px">29.99</td>
+                            <td width="100px"><a class="edit_num">100</a></td>
+                            <td width="100px">营销干货</td>
+                            <td width="100px">小聪</td>
+                            <td width="150px">2019-08-13 16:59:49</td>
+                            <td width="100px">2368</td>
+                            <td width="100px">营销</td>
+                            <td width="100px" class="statu statu1"><span>启用</span></td>
+                            <td width="100px">是</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btm_page2">
+                <div class="pages">
+                    <div class="pages_num">
+                        <span class="prev">上一页</span>
+                        <span>1</span>
+                        <span class="page-default">...</span>
+                        <span>50</span>
+                        <span class="active">51</span>
+                        <span>52</span>
+                        <span class="page-default">...</span>
+                        <span>100</span>
+                        <span class="next">下一页</span>
+                    </div>
+                    <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                    <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                </div>
+                <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                    <div class="select-text">
+                        <span class="select-txt">10</span>
+                        <ul>
+                            <li>10</li>
+                            <li>20</li>
+                            <li>50</li>
+                            <li>100</li>
+                        </ul>
+                    </div>条
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序 -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">分类:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">作者:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">标签:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">启用状态:</span>
+            <div class="account-r chose_item">
+                <label for="type1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">启用</span>
+                </label>
+                <label for="type2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="type" id="type2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">停用</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">是否展示:</span>
+            <div class="account-r chose_item">
+                <label for="show2-1" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="show2" id="show2-1">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">是</span>
+                </label>
+                <label for="show2-2" class="checked">
+                    <div class="chose">
+                        <input type="checkbox" name="show2" id="show2-2">
+                        <span class="checked-bg"></span>
+                    </div>
+                    <span class="msg_set_txt">否</span>
+                </label>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">更新时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" lay-key="1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test2" lay-key="2" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../../js/layui/layui.js"></script>
+<script src="../../../js/layui/lay/modules/layer.js"></script>
+<script src="../../../js/myjs.js"></script>
+<script>
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.head-tab2 li');
+    var con = $('.tab-content > .tab-pane');
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active current');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active current');
+            $(con[i]).addClass('active');
+        }
+    }
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: '#test2' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', 'auto'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+
+    $('#chutiyan .edit_num').on('click', function(){
+        layer.confirm('<div style="display: flex;align-items: center;white-space: nowrap;font-size: 14px;color: #666;"><input type="text" style="width: 100%;border-radius: 0;" value="100" placeholder="填写数字，数字越大越靠前"/></div>', {
+            btn: ['取消','保存'],
+            area: '416px',
+            title:'修改排序',
+        }, function(index){
+            layer.close(index);
+        }, function(){
+
+        });
+    });
+</script>
+
+</body>
+</html>

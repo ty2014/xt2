@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页广告图</title>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <link href="../../商城前端/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/index.css?v=1.0.0">
+    <style>
+        body, html {width: 100%;height: 100%;overflow-y: hidden;overflow-x: auto;min-width: 1247px;}
+        .foot-icon a{cursor: default;}
+    </style>
+</head>
+<body id="chutiyan">
+
+<div class="scpz-top">
+    <p class="title font20">商城首页-广告<span class="tishi">广告图建议尺寸：375px*675px，大小不超过100kb</span></p>
+</div>
+
+<style>
+    .scpz-form .foot-icon{position: relative;}
+    .scpz-form .foot-icon input{position: absolute;top:0;left: 0;right: 0;bottom: 0;width: 100%;opacity: 0;}
+</style>
+<div class="scpz-body">
+    <div class="scpz-body-l">
+        <img src="../images/pz2.png" alt="">
+        <!--   轮播图片 为 右侧‘在播’的广告图；右侧鼠标放在已设置好的广告图上时，此处就显示那张图     -->
+        <div class="swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper">
+                <!--    没有一张 ‘在播’ 图片时 显示 ；  -->
+                <!--<div class="swiper-slide swiper-slide-prev null-banner">-->
+                    <!--<p>暂无在播广告</p>-->
+                    <!--快在右侧添加广告吧-->
+                <!--</div>-->
+
+                <div class="swiper-slide swiper-slide-prev"><img src="https://img.alicdn.com/simba/img/TB1wXMaU3DqK1RjSZSySuuxEVXa.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="scpz-body-r">
+        <div class="scpz-form foot-banner">
+            <form action="">
+                <table>
+                    <thead>
+                    <tr>
+                        <th width="40px">序号</th>
+                        <th width="60px">状态</th>
+                        <th width="150px">广告图</th>
+                        <th width="280px">跳转链接</th>
+                        <th width="180px">播放时间</th>
+                        <th width="80px">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="statu1">待播</td>
+                        <td>
+                            <!--  点击可以编辑  -->
+                            <div class="foot-icon ">
+                                <!--   图片比例 1:1.8     -->
+                                <div><img src="https://img.alicdn.com/imgextra/i1/1076641572/O1CN01zCaEQa1NU1BnyVPa4_!!1076641572-0-pixelsss.jpg_430x430q90.jpg" alt=""></div>
+                                <p>修改</p>
+                                <input type="file">
+                            </div>
+                        </td>
+                        <td>
+                            <textarea class="href-addr">http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E5%95%86%E5%9F%8E%E5%89%8D%E7%AB%AF/%E9%A6%96%E9%A1%B5.html</textarea>
+                        </td>
+                        <td class="date">
+                            <input type="text" value="2019-12-24 13:00:00" class="layui-input" id="test1">至
+                            <input type="text" value="2020-12-24 13:00:00" class="layui-input" id="test2">
+                        </td>
+                        <td class="scpz_cz_btn">
+                            <!--  删除提示  -->
+                            <p class="del">删除</p>
+                            <p>上移一层</p>
+                            <p class="on">下移一层</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="statu2">在播</td>
+                        <td>
+                            <!--  点击可以编辑  -->
+                            <div class="foot-icon ">
+                                <!--   图片比例 1:1.8     -->
+                                <div><img src="https://img.alicdn.com/simba/img/TB1wXMaU3DqK1RjSZSySuuxEVXa.jpg" alt=""></div>
+                                <p>修改</p>
+                                <input type="file">
+                            </div>
+                        </td>
+                        <td>
+                            <textarea class="href-addr">http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E5%95%86%E5%9F%8E%E5%89%8D%E7%AB%AF/%E9%A6%96%E9%A1%B5.html</textarea>
+                        </td>
+                        <td class="date">
+                            <input type="text" value="2019-12-24 13:00:00" class="layui-input" id="test3">至
+                            <input type="text" value="2020-12-24 13:00:00" class="layui-input" id="test4">
+                        </td>
+                        <td class="scpz_cz_btn">
+                            <!--  删除提示  -->
+                            <p class="del">删除</p>
+                            <p class="on">上移一层</p>
+                            <p class="on">下移一层</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>过期</td>
+                        <td>
+                            <!--  点击可以编辑  -->
+                            <div class="foot-icon ">
+                                <!--   图片比例 1:1.8     -->
+                                <div><img src="https://img.alicdn.com/simba/img/TB1wXMaU3DqK1RjSZSySuuxEVXa.jpg" alt=""></div>
+                                <p>修改</p>
+                                <input type="file">
+                            </div>
+                        </td>
+                        <td>
+                            <textarea class="href-addr">http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E5%95%86%E5%9F%8E%E5%89%8D%E7%AB%AF/%E9%A6%96%E9%A1%B5.html</textarea>
+                        </td>
+                        <td class="date">
+                            <input type="text" value="2019-12-24 13:00:00" class="layui-input" id="test5">至
+                            <input type="text" value="2020-12-24 13:00:00" class="layui-input" id="test6">
+                        </td>
+                        <td class="scpz_cz_btn">
+                            <!--  删除提示  -->
+                            <p class="del">删除</p>
+                            <p class="on">上移一层</p>
+                            <p class="on">下移一层</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>未知</td>
+                        <td>
+                            <!--  点击添加  -->
+                            <div class="foot-icon ">
+                                <!--   图片比例 1:1.8     -->
+                                <div><img src="../images/2.jpg" alt=""></div>
+                                <p>添加</p>
+                                <input type="file">
+                            </div>
+                        </td>
+                        <td>
+                            <textarea class="href-addr"></textarea>
+                        </td>
+                        <td class="date">
+                            <input type="text" value="请选择开始时间" class="layui-input" id="test7">至
+                            <input type="text" value="请选择结束时间" class="layui-input" id="test8">
+                        </td>
+                        <td class="scpz_cz_btn">
+                            <!--  删除提示  -->
+                            <p class="del">删除</p>
+                            <p class="on">上移一层</p>
+                            <p>下移一层</p>
+                        </td>
+                    </tr>
+                    <tr class="scpz-foot">
+                        <td class="left" colspan="5"><span class="scpz-btn">添加广告</span></td>
+                        <td><span class="scpz-save-btn">保存</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../商城前端/js/swiper.min.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1'
+            ,type: 'datetime'
+        });
+        laydate.render({
+            elem: '#test2'
+            ,type: 'datetime'
+        });
+        laydate.render({
+            elem: '#test3'
+            ,type: 'datetime'
+        });
+        laydate.render({
+            elem: '#test4'
+            ,type: 'datetime'
+        });
+        laydate.render({
+            elem: '#test5'
+            ,type: 'datetime'
+        });
+        laydate.render({
+            elem: '#test6'
+            ,type: 'datetime'
+        });
+        laydate.render({
+            elem: '#test7'
+            ,type: 'datetime'
+        });
+        laydate.render({
+            elem: '#test8'
+            ,type: 'datetime'
+        });
+    });
+</script>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container',{
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable :true,
+            },
+        });
+
+        $('#chutiyan .scpz_cz_btn .del').on('click', function(){
+            layer.confirm('确定要删除此条数据？', {
+                btn: ['确定','取消'] //按钮
+            }, function(){}, function(){});
+        });
+        $('#chutiyan .scpz-save-btn').on('click', function(){
+            layer.confirm('<div style="text-align: center">是否确定保存？</br> 保存后将同步到前端展示</div>', {
+                btn: ['确定','取消'] //按钮
+            }, function(){}, function(){});
+        });
+
+
+        var src2=$('.swiper-slide-active img').attr('src');
+        $('.scpz-form .foot-icon div img').hover(function () {
+            var src=$(this).attr('src');
+            $('.swiper-slide-active img').attr('src',src);
+        },function () {
+            $('.swiper-slide-active img').attr('src',src2);
+        });
+    })
+
+
+</script>
+
+</body>
+</html>

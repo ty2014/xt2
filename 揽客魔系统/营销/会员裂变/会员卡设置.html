@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>会员卡设置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css?2">
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body id="chutiyan" style="height: auto">
+
+<div class="gz-content">
+    <p class="title">会员卡设置</p>
+    <div class="activity_set">
+        <p class="title">基本信息</p>
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">客户端网址：</span>
+                <div class="a_list_r">http：//lankemo.com<span class="copy-btn">复制</span></div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l">核销端网址：</span>
+                <div class="a_list_r">http：//lankemo.com<span class="copy-btn">复制</span></div>
+            </div>
+            <div class="a_list ">
+                <span class="a_list_l">活动申请网址：</span>
+                <div class="a_list_r">http：//lankemo.com<span class="copy-btn">复制</span></div>
+            </div>
+        </div>
+
+        <p class="title">活动申请</p>
+        <div class="b-line">
+            <div class="a_list">
+                <span class="a_list_l">活动申请状态：</span>
+                <div class="a_list_r">
+                    <div class="htmleaf-content">
+                        <div class="checkbox" id="card-btn">
+                            <input checked type="checkbox">
+                            <label></label>
+                        </div>
+                    </div>
+                    <span class="tishi">*关闭后，前端“创建活动”入口将关闭，无法发起活动申请</span>
+                </div>
+            </div>
+            <div class="a_list flex-start">
+                <span class="a_list_l">活动申请背景图：</span>
+                <div class="a_list_r flex-start checked_chose flex-column" style="padding-top: 2px">
+                    <!--  选择默认图时，不展示  图片上传  -->
+                    <div class="chose-bg">
+                        <label for="ps1" class="radio active">
+                            <div class="chose">
+                                <input type="radio" checked name="ps" id="ps1">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">默认图</span>
+                        </label>
+                        <label for="ps2" class="radio">
+                            <div class="chose">
+                                <input type="radio" name="ps" id="ps2">
+                                <span class="checked-bg"></span>
+                            </div>
+                            <span class="msg_set_txt">自定义</span>
+                        </label>
+                    </div>
+                    <div class="flex-column" style="display: none">
+                        <div class="file-cont">
+                            <div class="file-btn"></div>
+                            <p class="tishi2">*建议尺寸:750px*297px</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_list flex-start">
+                <span class="a_list_l">活动申请提示语：</span>
+                <div class="a_list_r">
+                    <textarea name="" id="" style="height: 200px;width: 720px;padding: 10px" placeholder="活动申请提交成功后，将展示该提示语给用户"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-list"><span class="btn btn-sure">保存</span></div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script>
+    $('#chutiyan .free-card-btn').on('click', function(){
+        layer.confirm('<div style="text-align: center">免赠张数：<input type="text" class="m_width"/><p class="tishi">*可免费赠送好友的卡券张数<br>赠送成功将不扣自己的卡券</p></div>', {
+            btn: ['取消','确定'] //按钮
+        }, function(index){
+            layer.close(index);
+        }, function(){
+
+        });
+    });
+
+    $("#ps1").on("click",function(){
+        $('.chose-bg').siblings('.flex-column').hide();
+    });
+    $("#ps2").on("click",function(){
+        $('.chose-bg').siblings('.flex-column').show();
+    });
+
+
+</script>
+
+
+</body>
+</html>

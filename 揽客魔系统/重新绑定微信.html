@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="js/layui/css/layer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/layui/lay/steps/step.css">
+    <style>
+        .eis-horizontal-steps .eis-form-steps .eis-form-step:nth-child(2) {
+            flex-grow: 0;
+        }
+        .eis-horizontal-steps .eis-form-steps .eis-form-step:nth-child(2) .eis-step-head{justify-content: center}
+
+        .msg_eq{position: relative;padding: 5px;}
+        .msg_eq img{width: 100px;}
+        .msg_eq span{border-style: solid;border-color: #3878fb;width: 14px;height: 14px;position: absolute;}
+        .msg_eq .lt{border-width: 2px 0 0 2px;left: 0;top: 0;}
+        .msg_eq .rt{border-width: 2px 2px 0 0;right: 0;top: 0;}
+        .msg_eq .rb{border-width: 0 2px 2px 0;right: 0;bottom: 0;}
+        .msg_eq .lb{border-width: 0 0 2px 2px;left: 0;bottom: 0;}
+        .msg_eq p{position: absolute;}
+        .msg_eq .t{top: 0;left: 0;height: 1px;width: 100%;background: linear-gradient(90deg,#fff 10%,#3878fb 50%,#fff 90%);}
+        .msg_eq .r{right: 0;top: 0;height: 100%;width: 1px;background: linear-gradient(0deg,#fff 10%,#3878fb 50%,#fff 90%);}
+        .msg_eq .b{bottom: 0;left: 0;height: 1px;width: 100%;background: linear-gradient(90deg,#fff 10%,#3878fb 50%,#fff 90%);}
+        .msg_eq .l{left: 0;top: 0;height: 100%;width: 1px;background: linear-gradient(0deg,#fff 10%,#3878fb 50%,#fff 90%);}
+        
+    </style>
+</head>
+<body>
+
+<div class="content" style="padding-bottom: 100px">
+    <div class="step-box">
+        <div class="eis-stepContents">
+            <div class="eis-stepContent">
+                <div class="activity_set activity_set3 w-4">
+                    <div class="b-line">
+                        <div class="a_list">
+                            <span class="a_list_l">手机号:</span>
+                            <div class="a_list_r">13564897845</div>
+                        </div>
+                        <div class="a_list">
+                            <span class="a_list_l">验证码:</span>
+                            <div class="a_list_r">
+                                <input type="text" placeholder="请输入验证码">
+                                <span class="set-user mgL-10">获取验证码</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eis-stepContent">
+                <div class="activity_set activity_set3">
+                    <div class="b-line">
+                        <div class="a_list">
+                            <div class="a_list_r" style="justify-content: center">
+                                <div>
+                                    <div class="msg_eq">
+                                        <img src="http://cshtml.lkmsxy.com/eq.jpg" alt="">
+                                        <span class="lt"></span><span class="rt"></span><span class="rb"></span><span class="lb"></span>
+                                        <p class="t"></p>
+                                        <p class="r"></p>
+                                        <p class="b"></p>
+                                        <p class="l"></p>
+                                    </div>
+                                    <p class="tishi center mgT-10 mgL-0">使用微信扫一扫登录<br>‘客流猫’</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/layui/lay/modules/layer.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/step.js"></script>
+<script>
+
+    $('.step-box').step({
+        stepDirection:'x',
+        showStepButton:true,
+        stepCount:2,
+        stepTitles:['身份验证','微信扫码绑定']
+    });
+
+</script>
+
+
+</body>
+</html>

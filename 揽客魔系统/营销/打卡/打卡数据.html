@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打卡数据</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../js/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../../css/style.css?v=1.0.0">
+    <link rel="stylesheet" href="css/handl.css">
+    <style>
+        html,body,.tab-content3{height: 100%;}
+        #app{height: calc(100% - 50px)}
+        .table_cont2 .table_body2{width:100%;table-layout:fixed;}
+
+
+    </style>
+</head>
+<body id="chutiyan">
+
+<!-- Nav tabs -->
+<ul class="head-tab3">
+    <li class="active current3"><a href="#tab1">日记管理</a></li>
+    <li><a href="#tab2">作业管理</a></li>
+    <li><a href="#tab3">学员管理</a></li>
+    <li><a href="#tab4">分组管理</a></li>
+    <li><a href="#tab5">助教管理</a></li>
+    <li><a href="#tab6">运营设置</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div id="app">
+    <div class="tab-content3 content2">
+        <div class="tab-pane active" id="tab1">
+            <!--     打卡日记列表       -->
+            <div class="handl_lists">
+                <!--  用户列表  -->
+                <div class="listU">
+                    <div class="u_title">
+                        <p>日记总数：1</p>
+                        <div>
+                            <span class="searchBtn mgR-4"><i class="fa fa-search mgR-4"></i>搜索</span>
+                            <!--        fa-sort-amount-desc            -->
+                            <span class="sortBtn"><i class="fa fa-sort-amount-desc mgR-4"></i>排序</span>
+                        </div>
+                    </div>
+                    <ul class="u_item scrollBar">
+                        <li class="item" v-for="(item,index) in 10" :key="index">
+                            <label for="check1" class="checked">
+                                <div class="chose">
+                                    <input type="checkbox" name="check" id="check1">
+                                    <span class="checked-bg"></span>
+                                </div>
+                            </label>
+                            <div class="u_msg">
+                                <div class="msg_name">
+                                    <p class="line1">momo</p>
+                                    <span>2022-02-23</span>
+                                </div>
+                                <div class="msg_tip"><span>已评</span>完成打卡</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="u_foot">
+                        <div>
+                            <label for="subrAll" class="checked">
+                                <div class="chose">
+                                    <input type="checkbox" name="check" id="subrAll">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="txt">全选</span>
+                            </label>
+                            <span class="txt">已选0条</span>
+                        </div>
+                        <span class="subBtn disabled">批量点评</span>
+                    </div>
+                </div>
+                <!--  日记内容  -->
+                <div class="listC scrollBar">
+                    <div class="user_ment">
+                        <div class="user_pic"><img src="../../images/head2.jpg" alt=""></div>
+                        <div class="user_msg">
+                            <p class="line1">momo</p>
+                            <span>提交于2022-02-23 11:42:03</span>
+                        </div>
+                    </div>
+                    <div class="handl_msg">
+                        <pre class="cont">完成打卡</pre>
+                        <p class="date">#2-23日打卡</p>
+                        <div class="cz_icons">
+                            <span class="plBtn on"><i class="layui-icon layui-icon-dialogue"></i>评论(2)<i class="layui-icon layui-icon-up mgL-4" style="font-size: 12px"></i></span>
+                            <span><i class="layui-icon layui-icon-praise"></i>已赞(1)</span>
+                            <span><i class="layui-icon layui-icon-top"></i>置顶</span>
+                            <span><i class="layui-icon layui-icon-delete"></i>删除</span>
+                        </div>
+                        <div class="plContent">
+                            <div class="anser_cont">
+                                <div class="showNumBox w-620">
+                                    <textarea name="" id="" placeholder="请输入点评内容" style="height: 80px;"></textarea>
+                                    <span class="num">0/2000</span>
+                                </div>
+                                <div class="file_icons mgT-20">
+                                    <i class="layui-icon layui-icon-picture"></i>
+                                    <i class="layui-icon layui-icon-upload"></i>
+                                </div>
+                                <ul class="FraUpload_imglist layer-photos-demo mgT-20">
+                                    <li class="img_item">
+                                        <img src="https://img1.baidu.com/it/u=2702611587,2162384966&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=281" layer-index="0">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                    <li class="img_item">
+                                        <img src="https://img1.baidu.com/it/u=931545919,4030748642&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=306&amp;h=459" layer-index="1">
+                                        <span class="icon-delete img_del"></span>
+                                    </li>
+                                </ul>
+                                <div class="msg_files">
+                                    <div>
+                                        <p>后台统一规范.docx</p>
+                                        <span>1.37M</span>
+                                    </div>
+                                    <img src="../../images/word.png" alt="">
+                                    <span class="close_tip"></span>
+                                </div>
+                                <button type="submit">提交点评</button>
+                            </div>
+                            <ul class="anser_list">
+                                <li v-for="(item,index) in 4" :key="index">
+                                    <div class="">
+                                        <div class="user_ment">
+                                            <div class="user_pic"><img src="../../images/head2.jpg" alt=""></div>
+                                            <div class="user_msg">
+                                                <p class="line1">momo</p>
+                                                <span>提交于2022-02-23 11:42:03</span>
+                                            </div>
+                                        </div>
+                                        <div class="anser_txt">好的好的</div>
+                                        <ul class="FraUpload_imglist layer-photos-demo">
+                                            <li class="img_item">
+                                                <img src="https://img1.baidu.com/it/u=2702611587,2162384966&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=281" layer-index="0">
+                                            </li>
+                                            <li class="img_item">
+                                                <img src="https://img1.baidu.com/it/u=931545919,4030748642&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=306&amp;h=459" layer-index="1">
+                                            </li>
+                                        </ul>
+                                        <div class="msg_files">
+                                            <div>
+                                                <p>后台统一规范.docx</p>
+                                                <span>1.37M</span>
+                                            </div>
+                                            <img src="../../images/word.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="anser_comment">
+                                        <div class="user_ment">
+                                            <div class="user_pic"><img src="../../images/head2.jpg" alt=""></div>
+                                            <div class="user_msg">
+                                                <p class="line1">momo<span class="mg-4">回复</span>momo</p>
+                                                <span>提交于2022-02-23 11:42:03</span>
+                                            </div>
+                                        </div>
+                                        <div class="anser_txt">好的好的</div>
+                                        <ul class="FraUpload_imglist layer-photos-demo">
+                                            <li class="img_item">
+                                                <img src="https://img1.baidu.com/it/u=2702611587,2162384966&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=281" layer-index="0">
+                                            </li>
+                                            <li class="img_item">
+                                                <img src="https://img1.baidu.com/it/u=931545919,4030748642&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=306&amp;h=459" layer-index="1">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="moreBtn"><span>点击查看更多<i class="layui-icon layui-icon-down"></i></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane " id="tab2">
+            <div class="tab_content2">
+                <div class="tab_type_2">
+                    <span class="tab-tips search zy-search"><i class="search-tips"></i>搜索</span>
+                    <span class="tab-tips export"><i class="export-tips"></i>导出</span>
+                    <span class="tab-tips download"><i class="download-tips"></i>下载附件</span>
+                </div>
+                <div class="tab_type_2">
+                    <span class="tab-tips add_btn addZyBtn"><i class="plus-tips"></i>添加作业</span>
+                </div>
+            </div>
+            <div class="edit_table2">
+                <div class="table_cont2">
+                    <div class="table-thead">
+                        <table border="0" class="table_body2">
+                            <thead>
+                            <tr>
+                                <th width="60px">序号</th>
+                                <th width="200px" class="left">作业标题</th>
+                                <th width="150px">开始时间</th>
+                                <th width="150px">结束时间</th>
+                                <th width="100px">打卡次数</th>
+                                <th width="100px">点赞数</th>
+                                <th width="100px">评论数</th>
+                                <th width="100px">点评数</th>
+                                <th width="100px">链接</th>
+                                <th width="200px" class="stickyHR shadow">操作</th>
+                                <th class="stickyHR table-patch"></th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table-tbody">
+                        <table border="0" class="table_body2">
+                            <tbody>
+                            <tr>
+                                <td width="60px">1</td>
+                                <td width="200px" class="left"><a href="">《裂变引流》训练营作业</a></td>
+                                <td width="150px">2022-02-23 00:00:00</td>
+                                <td width="150px">2022-02-24 00:00:00</td>
+                                <td width="100px"><a href="打卡成员.html">5</a></td>
+                                <td width="100px">2</td>
+                                <td width="100px">1</td>
+                                <td width="100px">1</td>
+                                <td width="100px" class="m-pic">
+                                    <div class="m-doub-pic">
+                                        <img src="../../images/1.png" alt="">
+                                        <img src="../../images/2.png" alt="">
+                                    </div>
+                                </td>
+                                <td width="200px" class="stickyBR shadow cz_btn">
+                                    <button type="button" class="edit-btn">编辑</button>
+                                    <button type="button" class="copy-btn">复制</button>
+                                    <button type="button" class="del-btn">删除</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btm_page2">
+                    <div class="pages">
+                        <div class="pages_num">
+                            <span class="prev">上一页</span>
+                            <span>1</span>
+                            <span class="page-default">...</span>
+                            <span>50</span>
+                            <span class="active">51</span>
+                            <span>52</span>
+                            <span class="page-default">...</span>
+                            <span>100</span>
+                            <span class="next">下一页</span>
+                        </div>
+                        <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                        <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                    </div>
+                    <div class="page-nums">每页显示:
+                        <div class="select-text">
+                            <span class="select-txt">10</span>
+                            <ul>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>50</li>
+                                <li>100</li>
+                            </ul>
+                        </div>
+                        条
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane " id="tab3">
+            <div>
+                <div class="tab_content2">
+                    <div class="tab_type_2">
+                        <span class="tab-tips search xy-search1"><i class="search-tips"></i>搜索</span>
+                        <span class="tab-tips export"><i class="export-tips"></i>导出</span>
+                        <div class="top_tit2 center">
+                            <a href="#"><span>已加入</span><em class="fa fa-angle-down"></em></a>
+                            <ul>
+                                <li class="active"><a href="#">已加入</a></li>
+                                <li><a href="#">待审核</a></li>
+                                <li><a href="#">已拒绝</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit_table2">
+                    <div class="table_cont2">
+                        <div class="table-thead">
+                            <table border="0" class="table_body2">
+                                <thead>
+                                <tr>
+                                    <th width="60px">序号</th>
+                                    <th width="200px" class="left">昵称</th>
+                                    <th width="150px" class="left">姓名</th>
+                                    <th width="100px">分组</th>
+                                    <th width="100px">完成作业数</th>
+                                    <th width="100px">被评论数</th>
+                                    <th width="100px">被点赞数</th>
+                                    <th width="100px">被点评数</th>
+                                    <th width="100px">剩余补卡次数</th>
+                                    <th width="150px">首次提交时间</th>
+                                    <th width="200px" class="stickyHR shadow">操作</th>
+                                    <th class="stickyHR table-patch"></th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="table-tbody">
+                            <table border="0" class="table_body2">
+                                <tbody>
+                                <tr>
+                                    <td width="60px">1</td>
+                                    <td width="200px" class="cover-pic">
+                                        <div class="user_picName">
+                                            <img src="../../images/null.jpg" alt="">
+                                            <a class="wrap-noml">小土豆</a>
+                                        </div>
+                                    </td>
+                                    <td width="150px" class="left">蒋土豆</td>
+                                    <td width="100px">分组1</td>
+                                    <td width="100px"><a href="完成作业详情.html">2</a></td>
+                                    <td width="100px">1</td>
+                                    <td width="100px">0</td>
+                                    <td width="100px">0</td>
+                                    <td width="100px">0</td>
+                                    <td width="150px" class="date"><div>2022-01-02 12:00:00</div></td>
+                                    <td width="200px" class="stickyBR shadow cz_btn">
+                                        <a href="完成作业详情.html">详情</a>
+                                        <button type="button" class="stop-btn">暂停打卡</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="btm_page2">
+                        <div class="pages">
+                            <div class="pages_num">
+                                <span class="prev">上一页</span>
+                                <span>1</span>
+                                <span class="page-default">...</span>
+                                <span>50</span>
+                                <span class="active">51</span>
+                                <span>52</span>
+                                <span class="page-default">...</span>
+                                <span>100</span>
+                                <span class="next">下一页</span>
+                            </div>
+                            <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                            <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                        </div>
+                        <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                            <div class="select-text">
+                                <span class="select-txt">10</span>
+                                <ul>
+                                    <li>10</li>
+                                    <li>20</li>
+                                    <li>50</li>
+                                    <li>100</li>
+                                </ul>
+                            </div>条
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="tab_content2">
+                    <div class="tab_type_2">
+                        <span class="tab-tips search xy-search2"><i class="search-tips"></i>搜索</span>
+                        <span class="tab-tips export"><i class="export-tips"></i>导出</span>
+                        <div class="top_tit2 center">
+                            <a href="#"><span>待审核</span><em class="fa fa-angle-down"></em></a>
+                            <ul>
+                                <li><a href="#">已加入</a></li>
+                                <li class="active"><a href="#">待审核</a></li>
+                                <li><a href="#">已拒绝</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit_table2">
+                    <div class="table_cont2">
+                        <div class="table-thead">
+                            <table border="0" class="table_body2">
+                                <thead>
+                                <tr>
+                                    <th width="60px">序号</th>
+                                    <th width="200px" class="left">昵称</th>
+                                    <th width="150px" class="left">姓名</th>
+                                    <th width="150px">申请时间</th>
+                                    <th width="200px">申请理由</th>
+                                    <th width="200px">操作</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="table-tbody">
+                            <table border="0" class="table_body2">
+                                <tbody>
+                                <tr>
+                                    <td width="60px">1</td>
+                                    <td width="200px" class="cover-pic">
+                                        <div class="user_picName">
+                                            <img src="../../images/null.jpg" alt="">
+                                            <a class="wrap-noml">小土豆</a>
+                                        </div>
+                                    </td>
+                                    <td width="150px" class="left">蒋土豆</td>
+                                    <td width="150px" class="date"><div>2022-01-02 12:00:00</div></td>
+                                    <td width="200px"></td>
+                                    <td width="200px" class="cz_btn">
+                                        <button type="button" class="">拒绝</button>
+                                        <button type="button" class="">通过</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="btm_page2">
+                        <div class="pages">
+                            <div class="pages_num">
+                                <span class="prev">上一页</span>
+                                <span>1</span>
+                                <span class="page-default">...</span>
+                                <span>50</span>
+                                <span class="active">51</span>
+                                <span>52</span>
+                                <span class="page-default">...</span>
+                                <span>100</span>
+                                <span class="next">下一页</span>
+                            </div>
+                            <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                            <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                        </div>
+                        <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                            <div class="select-text">
+                                <span class="select-txt">10</span>
+                                <ul>
+                                    <li>10</li>
+                                    <li>20</li>
+                                    <li>50</li>
+                                    <li>100</li>
+                                </ul>
+                            </div>条
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="tab_content2">
+                    <div class="tab_type_2">
+                        <span class="tab-tips search xy-search3"><i class="search-tips"></i>搜索</span>
+                        <span class="tab-tips export"><i class="export-tips"></i>导出</span>
+                        <div class="top_tit2 center">
+                            <a href="#"><span>已拒绝</span><em class="fa fa-angle-down"></em></a>
+                            <ul>
+                                <li><a href="#">已加入</a></li>
+                                <li><a href="#">待审核</a></li>
+                                <li class="active"><a href="#">已拒绝</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit_table2">
+                    <div class="table_cont2">
+                        <div class="table-thead">
+                            <table border="0" class="table_body2">
+                                <thead>
+                                <tr>
+                                    <th width="60px">序号</th>
+                                    <th width="200px" class="left">昵称</th>
+                                    <th width="150px" class="left">姓名</th>
+                                    <th width="150px">申请时间</th>
+                                    <th width="150px">拒绝时间</th>
+                                    <th width="200px">拒绝理由</th>
+                                    <th width="200px">操作</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="table-tbody">
+                            <table border="0" class="table_body2">
+                                <tbody>
+                                <tr>
+                                    <td width="60px">1</td>
+                                    <td width="200px" class="cover-pic">
+                                        <div class="user_picName">
+                                            <img src="../../images/null.jpg" alt="">
+                                            <a class="wrap-noml">小土豆</a>
+                                        </div>
+                                    </td>
+                                    <td width="150px" class="left">蒋土豆</td>
+                                    <td width="150px" class="date"><div>2022-01-02 12:00:00</div></td>
+                                    <td width="150px" class="date"><div>2022-01-02 12:00:00</div></td>
+                                    <td width="200px"></td>
+                                    <td width="200px" class="cz_btn">
+                                        <button type="button" class="stop-btn">通过</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="btm_page2">
+                        <div class="pages">
+                            <div class="pages_num">
+                                <span class="prev">上一页</span>
+                                <span>1</span>
+                                <span class="page-default">...</span>
+                                <span>50</span>
+                                <span class="active">51</span>
+                                <span>52</span>
+                                <span class="page-default">...</span>
+                                <span>100</span>
+                                <span class="next">下一页</span>
+                            </div>
+                            <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                            <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                        </div>
+                        <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                            <div class="select-text">
+                                <span class="select-txt">10</span>
+                                <ul>
+                                    <li>10</li>
+                                    <li>20</li>
+                                    <li>50</li>
+                                    <li>100</li>
+                                </ul>
+                            </div>条
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane " id="tab4">
+            <div class="tab_content2">
+                <div class="tab_type_2">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="dkr-togg" class="toggle-button" name="switch">
+                            <label for="dkr-togg" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">开启</span>
+                                <span class="text off">关闭</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="">分组隔离模式</span>
+                    <i class="tips tip1 mgL-4"></i>
+                </div>
+                <div class="tab_type_2">
+                    <span class="tab-tips add_btn addGroupBtn"><i class="plus-tips"></i>新增分组</span>
+                </div>
+            </div>
+            <div class="edit_table2">
+                <div class="table_cont2">
+                    <div class="table-thead">
+                        <table border="0" class="table_body2">
+                            <thead>
+                            <tr>
+                                <th width="200px" class="left">分组名称</th>
+                                <th width="100px">分组人数</th>
+                                <th width="200px">操作</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table-tbody">
+                        <table border="0" class="table_body2">
+                            <tbody>
+                            <tr>
+                                <td width="200px" class="left">分组1</td>
+                                <td width="100px">10</td>
+                                <td width="200px" class="cz_btn">
+                                    <button type="button" class="edit-btn">编辑</button>
+                                    <button type="button" class="del-btn">删除</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btm_page2">
+                    <div class="pages">
+                        <div class="pages_num">
+                            <span class="prev">上一页</span>
+                            <span>1</span>
+                            <span class="page-default">...</span>
+                            <span>50</span>
+                            <span class="active">51</span>
+                            <span>52</span>
+                            <span class="page-default">...</span>
+                            <span>100</span>
+                            <span class="next">下一页</span>
+                        </div>
+                        <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                        <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                    </div>
+                    <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                        <div class="select-text">
+                            <span class="select-txt">10</span>
+                            <ul>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>50</li>
+                                <li>100</li>
+                            </ul>
+                        </div>条
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane " id="tab5">
+            <div class="tab_content2">
+                <div class="tab_type_2">
+                    <span class="tab-tips search zj-search"><i class="search-tips"></i>搜索</span>
+                    <span class="tab-tips export"><i class="export-tips"></i>导出</span>
+                    <span class="tishi">*助教可在该打卡活动进行点评、删除的操作</span>
+                </div>
+                <div class="tab_type_2">
+                    <span class="tab-tips add_btn addTeachBtn"><i class="plus-tips"></i>添加助教</span>
+                </div>
+            </div>
+            <div class="edit_table2">
+                <div class="table_cont2">
+                    <div class="table-thead">
+                        <table border="0" class="table_body2">
+                            <thead>
+                            <tr>
+                                <th width="60px">序号</th>
+                                <th width="200px" class="left">助教</th>
+                                <th width="100px">点赞数</th>
+                                <th width="100px">点评数</th>
+                                <th width="100px" class="left">标签设置</th>
+                                <th width="100px">操作</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table-tbody">
+                        <table border="0" class="table_body2">
+                            <tbody>
+                            <tr>
+                                <td width="60px">1</td>
+                                <td width="200px" class="cover-pic">
+                                    <div class="user_picName">
+                                        <img src="../../images/null.jpg" alt="">
+                                        <a class="wrap-noml">小土豆</a>
+                                    </div>
+                                </td>
+                                <td width="100px">22</td>
+                                <td width="100px">12</td>
+                                <td width="100px" class="left">
+                                    <div class="flex alignItemC">
+                                        <div class="edit_cont">
+                                            <input type="text" class="m_width" value="助教" readonly>
+                                        </div>
+                                        <i class="layui-icon layui-icon-edit mgL-4 cursor edit_icon"></i>
+                                    </div>
+                                </td>
+                                <td width="100px" class="cz_btn">
+                                    <button type="button" class="del-btn">删除</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btm_page2">
+                    <div class="pages">
+                        <div class="pages_num">
+                            <span class="prev">上一页</span>
+                            <span>1</span>
+                            <span class="page-default">...</span>
+                            <span>50</span>
+                            <span class="active">51</span>
+                            <span>52</span>
+                            <span class="page-default">...</span>
+                            <span>100</span>
+                            <span class="next">下一页</span>
+                        </div>
+                        <!--  当输入好多页后，确定按钮才添加类名 active  -->
+                        <div class="now_page">当前所在<span class="total-msg">52</span>/100页，跳转到<input type="number" value="">页<span class="sure">确定</span></div>
+                    </div>
+                    <div class="page-nums">共<span class="total-msg">150</span>条，每页显示:
+                        <div class="select-text">
+                            <span class="select-txt">10</span>
+                            <ul>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>50</li>
+                                <li>100</li>
+                            </ul>
+                        </div>条
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane " id="tab6">
+            <div class="activity_set activity_set3 w-6">
+                <!--   右侧可视化区域     -->
+                <div id="Rview" style="width: 320px;height: 569px;border:1px solid #d5d5d5;overflow: hidden;left: 770px;top: 10px;z-index: 9;position: absolute">
+                    <div id='poster'>
+                        <img src="images/knwlczsj0juc.jpg" class='bg' id="Img" style="width:100%;height: 100%;z-index:0;" alt="背景图"/>
+                        <div class="drag u_pic" type="head" index="3" style="z-index:3;left:26px;top:389px;width:32px;height: 32px;position: absolute">
+                            <img src="../../images/head.jpg" alt="头像" style="width:100%;height: 100%;border-radius: 50%;vertical-align: top"/>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag u_name" type="realname" index="4" style="z-index:4;left:74px;top:394px;position: absolute;cursor: default">
+                            <div class="text" style="color: #fff">昵称</div>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag" type="qr" index="3" style="z-index:3;left:227px;top:462px;width:52px;height:52px;position: absolute;cursor: default">
+                            <img src="../../images/1.png" alt="二维码" style="width:100%;height: 100%;"/>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag u_date" type="date" index="2" style="z-index:2;left:26px;top:29px;position: absolute;width: 32px;cursor: default">
+                            <div class="rqCardCont1">
+                                <div class="rqdateCont">
+                                    <div class="date" style="font-size: 26px;">
+                                        <span>03</span>
+                                        <span class="line"></span>
+                                        <span>03</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag u_week" type="week" index="2" style="z-index:2;left:78px;top:29px;position: absolute;width: 20px;cursor: default">
+                            <div class="rqCardCont1">
+                                <div class="rqdateCont">
+                                    <span class="week" style="font-size: 12px;">周四</span>
+                                </div>
+                            </div>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag u_txt" type="txt" index="3" style="z-index:3;left:26px;top:176px;position: absolute;width: 263px;cursor: default">
+                            <div class="rqCardCont2">
+                                <div class="rqtxtCont">
+                                    <textarea rows="4" style="font-size: 15px;">好设计让产品可用好设计让产品用</textarea>
+                                </div>
+                            </div>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag u_classNum" type="classNum" index="2" style="z-index:2;left:26px;top:313px;position: absolute;cursor: default">
+                            <span class="num" style="color: #fff">10</span>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag u_personNum" type="personNum" index="2" style="z-index:2;left:66px;top:313px;position: absolute;cursor: default">
+                            <span class="num" style="color: #fff">10</span>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                        <div class="drag u_finishNum" type="finishNum" index="2" style="z-index:2;left:106px;top:313px;position: absolute;cursor: default">
+                            <span class="num" style="color: #fff">10<em style="font-style: normal;margin-left: 4px;">%</em></span>
+                            <div class="rRightDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;right:-4px;bottom:-4px;"></div>
+                            <div class="rLeftDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;left:-4px;bottom:-4px;"></div>
+                            <div class="rRightUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:ne-resize;right:-4px;top:-4px;"></div>
+                            <div class="rLeftUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:nw-resize;left:-4px;top:-4px;"></div>
+                            <div class="rRight" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;right:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rLeft" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:e-resize;left:-4px;top:50%;margin-top:-4px;"></div>
+                            <div class="rUp" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;top:-4px;left:50%;margin-left:-4px;"></div>
+                            <div class="rDown" style="position:absolute;background: #00cc19;width:7px;height:7px;z-index:1;font-size:0;cursor:n-resize;bottom:-4px;left:50%;margin-left:-4px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-line">
+                    <div class="a_list">
+                        <span class="a_list_l" style="align-items: flex-start;padding-top: 15px;">是否开启日签:</span>
+                        <div class="a_list_r">
+                            <div>
+                                <div class="button-label-m">
+                                    <div class="toggle-button-wrapper ">
+                                        <input type="checkbox" id="kqrq" checked class="toggle-button" name="switch">
+                                        <label for="kqrq" class="button-label">
+                                            <span class="circle"></span>
+                                            <span class="text on">开启</span>
+                                            <span class="text off">关闭</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <p class="tishi mgL-0 mgT-10 w-620">*开启后，学员能在完成打卡后领取日签。 个性化和精美的日签不仅可以体现机构品牌和活动特色，还能增加学员收藏欲望，通过学员自传播来拉新引流效果。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">日签模板:</span>
+                        <div class="a_list_r">
+                            <div class="set_user_box">
+                                <span class="set-user2">模板一</span>
+                                <em class="clear_icon"></em>
+                            </div>
+                            <a href="海报模板/海报模板选择.html" class="set-user2 mgL-20">选择</a>
+                            <span class="tishi2">*选填，若不选择模板，将调用系统默认模板随机生成</span>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">日签图片:</span>
+                        <div class="a_list_r">
+                            <div>
+                                <span class="set-user">添加图片</span>
+                                <p class="tishi2 mgL-0 mgT-10">*选填；生成的日签将随机选取下列图片作为背景图，若不添加将默认使用系统图库</p>
+                                <p class="tishi mgL-0 mgT-10">*建议尺寸750*1334px或9:16，png/jpg/jpeg格式，大小不超过2MB</p>
+                                <div class="rqPicBox">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="images/knwlczsj0juc.jpg" alt="">
+                                                <i class="layui-icon layui-icon-ok"></i>
+                                                <i class="layui-icon layui-icon-delete"></i>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/knwld0t60vrs.jpg" alt="">
+                                                <i class="layui-icon layui-icon-ok"></i>
+                                                <i class="layui-icon layui-icon-delete"></i>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-prev swiper-button-white"></div>
+                                        <div class="swiper-button-next swiper-button-white"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l" style="align-items: flex-start;padding-top: 15px;">日签文本:</span>
+                        <div class="a_list_r">
+                            <!--  若创建的是长期打卡，则只能选择金句，不能选择标题  -->
+                            <div>
+                                <div class="flex">
+                                    <div class="button-label-m">
+                                        <div class="toggle-button-wrapper space-toggle">
+                                            <input type="checkbox" id="rqtxt" checked class="toggle-button" name="switch">
+                                            <label for="rqtxt" class="button-label">
+                                                <span class="circle"></span>
+                                                <span class="text on">日签金句</span>
+                                                <span class="text off">作业标题</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <span class="tishi rqtxtTip">*生成的日签将随机选取金句库中的文案进行展示</span>
+                                </div>
+                                <div class="mgT-20 rqtxtBox">
+                                    <div class="select-text">
+                                        <span class="select-txt">系统金句库</span>
+                                        <ul style="display: none;">
+                                            <li class="active">系统金句库</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">打卡日期:</span>
+                        <div class="a_list_r">
+                            <div class="button-label-m">
+                                <div class="toggle-button-wrapper ">
+                                    <input type="checkbox" id="rqdate" checked class="toggle-button" name="switch">
+                                    <label for="rqdate" class="button-label">
+                                        <span class="circle"></span>
+                                        <span class="text on">显示</span>
+                                        <span class="text off">隐藏</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a_list">
+                        <span class="a_list_l">二维码:</span>
+                        <div class="a_list_r">
+                            <label for="eq1" class="radio">
+                                <div class="chose">
+                                    <input type="radio" checked="" name="eq" id="eq1">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">二维码</span>
+                            </label>
+                            <label for="eq2" class="radio">
+                                <div class="chose">
+                                    <input type="radio" name="eq" id="eq2">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">自定义二维码</span>
+                            </label>
+                            <label for="eq3" class="radio">
+                                <div class="chose">
+                                    <input type="radio" name="eq" id="eq3">
+                                    <span class="checked-bg"></span>
+                                </div>
+                                <span class="msg_set_txt">自定义链接</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="a_list eqCont1">
+                        <span class="a_list_l"></span>
+                        <div class="a_list_r">
+                            <span class="tishi mgL-0">*用户扫码后进入到日签页面</span>
+                        </div>
+                    </div>
+                    <div class="a_list eqCont2" style="display: none">
+                        <span class="a_list_l"></span>
+                        <div class="a_list_r">
+                            <ul class="FraUpload_imglist layer-photos-demo3">
+                                <li class="img_item" style="display: none">
+                                    <img src="" layer-index="0">
+                                    <span class="icon-delete img_del"></span>
+                                </li>
+                                <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                                <li class="file-btn"></li>
+                            </ul>
+                            <div>
+                                <p class="tishi">*建议尺寸：1:1，小于1M，支持jpg、png、jpeg格式</p>
+                                <p class="tishi">*用户扫码后进入到该处上传二维码跳转的页面</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a_list eqCont3" style="display: none">
+                        <span class="a_list_l"></span>
+                        <div class="a_list_r">
+                            <input type="text" class="w-620" placeholder="*输入链接地址，自动生成二维码">
+                            <span class="tishi">*用户扫码后进入到该链接跳转的页面</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-list2"><span class="btn btn-sure">保存</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  日记搜索 -->
+<div class="account-box" id="rj-account" style="display: none">
+    <div class="account-cont account-cont2 w-150">
+        <div class="account">
+            <span class="account-l">用户昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">作业标题:</span>
+            <div class="account-r">
+                <div class="select-text lq_user" style="min-width: 430px">
+                    <span class="select-txt"></span>
+                    <ul style="display: none;">
+                        <li>作业标题1</li>
+                        <li>作业标题2</li>
+                        <li>作业标题3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">作业开始时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test1" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  作业搜索 -->
+<div class="account-box" id="zy-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">作业标题:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">开始时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test1" placeholder="止">
+            </div>
+        </div>
+        <div class="account">
+            <span class="account-l">结束时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test1" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  学员搜索 -->
+<div class="account-box" id="xy-account1" style="display: none">
+    <div class="account-cont account-cont2 w-150">
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">分组:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">首次提交时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test1" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="xy-account2" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">申请时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test1" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<div class="account-box" id="xy-account3" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">姓名:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">拒绝时间:</span>
+            <div class="account-r">
+                <input type="text" class="layui-input" id="test1" placeholder="起">
+                <span class="date-line"></span>
+                <input type="text" class="layui-input" id="test1" placeholder="止">
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+<!--  助教搜索 -->
+<div class="account-box" id="zj-account" style="display: none">
+    <div class="account-cont account-cont2 w-120">
+        <div class="account">
+            <span class="account-l">昵称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+        <div class="account">
+            <span class="account-l">标签:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<!--  添加作业  -->
+
+<!--  添加分组  -->
+
+<!--  批量点评  -->
+<div class="activity_set activity_set2 w-120" id="pldp-sure" style="display: none">
+    <div class="b-line">
+        <div class="a_list">
+            <div class="a_list_r">
+                <div class="handl_lists max_width">
+                    <div class="anser_cont max_width">
+                        <div class="showNumBox max_width">
+                            <textarea placeholder="请输入点评内容" style="height: 120px;"></textarea>
+                            <span class="num">0/2000</span>
+                        </div>
+                        <div class="file_icons mgT-20">
+                            <i class="layui-icon layui-icon-picture"></i>
+                        </div>
+                        <ul class="FraUpload_imglist layer-photos-demo mgT-20">
+                            <li class="img_item">
+                                <img src="https://img1.baidu.com/it/u=2702611587,2162384966&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=281" layer-index="0">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                            <li class="img_item">
+                                <img src="https://img1.baidu.com/it/u=931545919,4030748642&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=306&amp;h=459" layer-index="1">
+                                <span class="icon-delete img_del"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+
+        },
+    })
+</script>
+<script src="../../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/slideFixed.js"></script>
+<script src="../../js/swiper/swiper.min.js"></script>
+<script src="../../js/designer.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+    $(function() {
+        //
+        $('#Rview').slideFixed();
+
+        // 为了让 swiper 正常加载成功，先显示再隐藏
+        $('#tab6').show();
+        setTimeout(()=>{
+            $('#tab6').hide()
+        },0)
+        var mySwiper = new Swiper('.swiper-container',{
+            slidesPerView: 7,
+            spaceBetween: 15,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'datetime'
+            ,calendar: true
+            ,trigger: 'click'
+        });
+    });
+
+    var hash = location.hash;//获取到跳转页面的参数
+    var tab = $('.head-tab3 li');
+    var con = $('.tab-content3 > .tab-pane');
+    for(var i=0;i<con.length;i++){
+        var mm = con[i];
+        var selectCon = "#"+ $(mm).attr('id');
+        if(hash == selectCon){
+            tab.siblings().removeClass('active current3');
+            con.siblings().removeClass('active');
+            $(tab[i]).addClass('active current3');
+            $(con[i]).addClass('active');
+        }
+    }
+
+    layer.photos({
+        photos: '.layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+    });
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del-btn').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('是否确定移除该条数据？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px',
+                title:'提醒'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('移除成功', {time: 1000});
+            });
+        });
+    });
+
+
+
+    $('#chutiyan .tip1').on('mouseenter',function(){
+        this.index =layer.tips('开启后学员仅可查看本组学员的日记', this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:600
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+    $('#chutiyan .zy-search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#zy-account")
+        });
+    });
+    $('#chutiyan .xy-search1').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#xy-account1")
+        });
+    });
+    $('#chutiyan .xy-search2').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#xy-account2")
+        });
+    });
+    $('#chutiyan .xy-search3').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#xy-account3")
+        });
+    });
+    $('#chutiyan .zj-search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#zj-account")
+        });
+    });
+    $('#chutiyan .searchBtn').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#rj-account")
+        });
+    });
+
+
+    // 添加作业
+    $('.u_foot .subBtn').on('click',function (e) {
+        layer.open({
+            type: 1,
+            title: '批量点评',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'activity_set activity_set2 w-120',
+            content: $("#pldp-sure")
+        });
+    });
+    // 添加作业
+    $('.addZyBtn').on('click',function (e) {
+        top.layer.open({
+            type: 2,
+            title: '添加作业',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['990px', '80%'],
+            content: '营销/打卡/添加作业.html' //iframe的url
+        });
+    });
+    // 添加分组
+    $('.addGroupBtn').on('click',function (e) {
+        top.layer.open({
+            type: 2,
+            title: '添加分组',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['990px', '80%'],
+            content: '营销/打卡/添加分组.html' //iframe的url
+        });
+    });
+    //  添加成员
+    $('#chutiyan .addU').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '添加成员',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['990px', '650px'],
+            content: '添加成员.html' //iframe的url
+        });
+    });
+    // 添加助教
+    $('#chutiyan .addTeachBtn').on('click', function(){
+        //iframe层
+        top.layer.open({
+            type: 2,
+            title: '添加助教',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['990px', '650px'],
+            content: '营销/打卡/添加成员.html' //iframe的url
+        });
+    });
+
+
+
+    // 日记展示
+    var item = $('.handl_lists .handl_msg .anser_list');
+    var len = item.children().length;
+    var more = item.siblings('.moreBtn');
+    if( len >= 2){
+        item.addClass('shadow');
+        more.show();
+    }else{
+        item.removeClass('shadow');
+        more.hide();
+    }
+    $(more).on('click',function (){
+        $(this).siblings('.anser_list').removeClass('shadow');
+        $(this).hide();
+    })
+    // 日记 展开、收起评论
+    $('.plBtn').on('click',function (){
+        $(this).toggleClass('on');
+        if($(this).hasClass('on')){
+            $('.plContent').show();
+            $(this).find('i:nth-child(2)').removeClass('layui-icon-down').addClass('layui-icon-up');
+        }else{
+            $('.plContent').hide();
+            $(this).find('i:nth-child(2)').removeClass('layui-icon-up').addClass('layui-icon-down');
+        }
+    })
+    // 日记排序
+    $('.sortBtn').on('click',function (){
+        $(this).toggleClass('on');
+        if($(this).hasClass('on')){
+            $(this).find('i').removeClass('fa-sort-amount-desc').addClass('fa-sort-amount-asc');
+        }else{
+            $(this).find('i').removeClass('fa-sort-amount-asc').addClass('fa-sort-amount-desc');
+        }
+    })
+
+
+    // 日记 批量点评按钮
+    $('.listU label input').on('click',function (){
+        if($(this).is(':checked')){
+            $('.u_foot .subBtn').removeClass('disabled')
+        }else{
+            $('.u_foot .subBtn').addClass('disabled')
+        }
+    })
+
+    // 日签金句 显隐
+    $('#rqtxt').click(function (){
+        $('.rqtxtBox').toggle();
+        if($(this).is(':checked')){
+            $('.rqtxtTip').text('*生成的日签将随机选取金句库中的文案进行展示');
+        }else{
+            $('.rqtxtTip').text('*生成的日签将以作业标题进行展示');
+        }
+
+    })
+    // 打卡日期 显隐
+    $('#rqdate').click(function (){
+        $('.u_date,.u_week').toggle();
+    })
+    // 二维码 显隐
+    $('#eq1').click(function (){
+        $('.eqCont1').show();
+        $('.eqCont2,.eqCont3').hide();
+        $('.eqContImg').attr('src','http://cshtml.lkmsxy.com/eq.jpg')
+    })
+    $('#eq2').click(function (){
+        $('.eqCont1,.eqCont3').hide();
+        $('.eqCont2').show();
+        $('.eqContImg').attr('src','../../images/file2.png')
+    })
+    $('#eq3').click(function (){
+        $('.eqCont1,.eqCont2').hide();
+        $('.eqCont3').show();
+        $('.eqContImg').attr('src','http://cshtml.lkmsxy.com/eq.jpg')
+    })
+    // 切换日签图背景
+    $('.rqPicBox .swiper-slide').click(function (){
+        var src = $(this).find('img').attr('src');
+        $(this).find('.layui-icon-ok').show();
+        $(this).siblings().find('.layui-icon-ok').hide();
+        $('#poster #Img').attr('src',src)
+    })
+
+
+    // 链接展示
+    mDoubPic('.m-doub-pic','http://cshtml.lkmsxy.com/eq.jpg','http://cshtml.lkmsxy.com/404.html')
+
+</script>
+<!-- 拖动缩放 -->
+<script>
+    function bindEvents(obj){
+        var index = obj.attr('index');
+        var rs = new Resize(obj, { Max: true, mxContainer: "#poster" });
+        rs.Set($(".rRightDown",obj), "right-down");
+        rs.Set($(".rLeftDown",obj), "left-down");
+        rs.Set($(".rRightUp",obj), "right-up");
+        rs.Set($(".rLeftUp",obj), "left-up");
+        rs.Set($(".rRight",obj), "right");
+        rs.Set($(".rLeft",obj), "left");
+        rs.Set($(".rUp",obj), "up");
+        rs.Set($(".rDown",obj), "down");
+        rs.Scale = true;
+        var type = obj.attr('type');
+        if(type=='date' || type=='txt' || type=='realname' || type=='classNum' || type=='week' || type=='personNum' || type=='finishNum'){
+            // 关闭等比缩放
+            rs.Scale = false;
+        }
+        new Drag(obj, { Limit: true, mxContainer: "#poster" });
+        $('.drag .remove').unbind('click').click(function(){
+            $(this).parent().remove();
+        })
+
+        obj.unbind('click').click(function(){
+            //bind($(this));
+        })
+    }
+
+    $(function(){
+        $('.drag').each(function(){
+            bindEvents($(this));
+        });
+    })
+</script>
+</body>
+</html>

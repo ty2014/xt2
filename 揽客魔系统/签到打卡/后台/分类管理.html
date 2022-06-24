@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分类管理</title>
+    <!-- 公用css -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body style="min-width: auto;padding: 0">
+
+<div class="account-cont w-100">
+    <div class="account">
+        <span class="account-l">分类名称：</span>
+        <div class="account-r"><input type="text"></div>
+    </div>
+    <div class="account">
+        <span class="account-l">展示图数：</span>
+        <div class="account-r">
+            <input type="text" class="m_width">
+            <span class="tishi">*按分类顺序、展示图数，排序签到图, <br>例：共A、B、C三个分类，其展示图数分别为2、1、1；则前端签到图按“AABC”循环展示</span>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">排序码：</span>
+        <div class="account-r">
+            <div class="slide-select">
+                <select>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                    <option value="">03</option>
+                </select>
+                <img src="../../images/bottom-icon.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <span class="account-l">状态：</span>
+        <div class="account-r">
+            <div class="htmleaf-content">
+                <div class="checkbox" id="vip-btn">
+                    <input type="checkbox"/>
+                    <label></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="account_btn"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+
+
+</body>
+</html>

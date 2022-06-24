@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅程配置</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/newStyle.css"/>
+</head>
+<body id="chutiyan">
+
+<div class="contentAuto">
+    <div class="page-title">旅程配置
+        <div class="notisTip">
+            <a href="http://cshtml.lkmsxy.com/my/%E6%8F%BD%E5%AE%A2%E9%AD%94%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3%E8%AF%A6%E6%83%85.html" target="_blank"><i class="fa fa-file-word-o"></i>功能说明</a>
+            <a href="https://v.qq.com/txp/iframe/player.html?vid=d0040cqqgtz" target="_blank"><i class="fa fa-file-movie-o"></i>视频教程</a>
+        </div>
+    </div>
+    <div class="tab_content2">
+        <div class="tab_type_2">
+            <span class="tab-tips search"><i class="search-tips"></i>搜索</span>
+        </div>
+        <div class="tab_type_2">
+            <span class="tab-tips add_btn"><i class="plus-tips"></i>新增旅程</span>
+        </div>
+    </div>
+    <div class="pz_content">
+        <div class="step_tit">
+            <div class="null-msg"><img src="../../images/null-msg.png" alt=""><p>暂无旅程，<a class="add_btn">去添加</a></p></div>
+        </div>
+        <div class="pz_item">
+            <div class="pz_title">旅程名称1
+                <div class="btns">
+                    <span class="del"><i class="layui-icon layui-icon-delete"></i></span>
+                    <span class="edit"><i class="layui-icon layui-icon-edit"></i></span>
+                </div>
+            </div>
+            <div class="step_tit">
+                <span>客户认识阶段</span>
+                <span>客户了解阶段</span>
+                <span>客户认可阶段</span>
+                <span>客户购买阶段</span>
+                <span>客户复购阶段</span>
+            </div>
+        </div>
+        <div class="pz_item">
+            <div class="pz_title">旅程名称2
+                <div class="btns">
+                    <span class="del"><i class="layui-icon layui-icon-delete"></i></span>
+                    <span class="edit"><i class="layui-icon layui-icon-edit"></i></span>
+                </div>
+            </div>
+            <div class="step_tit">
+                <span>进程1</span>
+                <span>进程2</span>
+                <span>进程3</span>
+            </div>
+        </div>
+        <div class="pz_item">
+            <div class="pz_title">自定义旅程名称
+                <div class="btns">
+                    <span class="del"><i class="layui-icon layui-icon-delete"></i></span>
+                    <span class="edit"><i class="layui-icon layui-icon-edit"></i></span>
+                </div>
+            </div>
+            <div class="step_tit">
+                <div class="null-msg"><img src="../../images/null-msg.png" alt=""><p>暂无旅程阶段，<a class="tip_btn">去添加</a></p></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  搜索/排序  -->
+<div class="account-box" id="search-account" style="display: none">
+    <div class="account-cont account-cont2">
+        <div class="account">
+            <span class="account-l">旅程名称:</span>
+            <div class="account-r"><input type="text"></div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn ">清除所有</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+<div class="activity_set activity_set2 w-150" id="tip-sure" style="display: none;padding-top: 0">
+    <div class="b-line">
+        <div class="a_list">
+            <span class="a_list_l" style="align-items: flex-start;padding-top: 20px;">旅程名称:</span>
+            <div class="a_list_r">
+                <div class="showNumBox">
+                    <input type="text" class="w-620" maxlength="10">
+                    <span class="num">0/10</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">旅程模板:</span>
+            <div class="a_list_r">
+                <div class="select-text lc-select w-620">
+                    <span class="select-txt">请选择</span>
+                    <ul style="display: none;">
+                        <li class="active">自定义</li>
+                        <li class="">旅程阶段1</li>
+                        <li class="">旅程阶段2</li>
+                    </ul>
+                </div>
+                <span class="tishi">*已有模板可选择使用，选择后可以编辑内容，也可自定义内容</span>
+            </div>
+        </div>
+        <div class="a_list lc-select-cont" style="display: none">
+            <span class="a_list_l"></span>
+            <div class="a_list_r">
+                <div class="pz_content">
+                    <div class="pz_item">
+                        <div class="step_tit">
+                            <span>客户认识阶段</span>
+                            <span>客户了解阶段</span>
+                            <span>客户认可阶段</span>
+                            <span>客户购买阶段</span>
+                            <span>客户复购阶段</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script>
+
+    $('#chutiyan .search').on('click', function(){
+        layer.open({
+            type: 1,
+            title: '搜索',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['700px', '436px'],
+            skin: 'account-box',
+            content: $("#search-account")
+        });
+    });
+    $('#chutiyan .add_btn,.pz_title .edit').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 1,
+            title: '新增旅程',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['90%', '90%'],
+            skin: 'activity_set activity_set2',
+            content: $("#tip-sure")
+        });
+    });
+
+    $('.step_tit span,.null-msg .tip_btn').on('click', function(){
+        window.location.href = '旅程编辑.html'
+
+    });
+
+    $('.lc-select li').on('click',function (){
+        var txt = $(this).text();
+        if(txt === '自定义'){
+            $('.lc-select-cont').hide()
+        }else {
+            $('.lc-select-cont').show()
+        }
+    })
+    layui.use(['layer','jquery'], function () {
+        var layer=layui.layer;
+        var $=layui.jquery;
+        $('#chutiyan .del').on('click', function(){
+            layer.config({
+                extend: 'myskin/failure.css' //同样需要加载新皮肤
+            });
+            layer.confirm('删除该条数据？',{
+                skin: 'failureskin',    //类名
+                icon:2,
+                btn: ['取消','确定'],
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+            }, function(){
+                layer.msg('删除成功', {time: 1000});
+            });
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

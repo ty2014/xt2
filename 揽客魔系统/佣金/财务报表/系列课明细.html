@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>系列课明细</title>
+    <link rel="stylesheet" href="../../css/font-awesome.css"/>
+    <link rel="stylesheet" href="../../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/cwbb.css"/>
+    <style>
+        body{padding: 8px;background: #f2f2f2;}
+    </style>
+</head>
+<body id="chutiyan" style="">
+
+
+<section>
+    <div class="topBar">
+        <div class="contL">
+            <span>时间:</span>
+            <div class="slide-span"><span>今天</span><span class="active">昨天</span><span>最近7天</span><span>最近30天</span></div>
+            <div class="slide-input"><input type="text" class="layui-input" id="test1"></div>
+        </div>
+        <div class="contR"><span>更新时间：2021-03-11 10:00:00</span></div>
+    </div>
+</section>
+
+<section>
+    <div class="mxContent">
+        <div class="headBar">
+            <span>系列课收支明细数据总览</span>
+        </div>
+        <ul class="topSlide2">
+            <li>
+                <p class="txt1">累计收入笔数（笔）<i class="tips"></i></p>
+                <p class="txt2">624</p>
+                <p class="txt3">前一日：32</p>
+            </li>
+            <li>
+                <p class="txt1">累计收入金额（元）<i class="tips"></i></p>
+                <p class="txt2">12,456.00</p>
+                <p class="txt3">前一日：7,960.00</p>
+            </li>
+            <li>
+                <p class="txt1">累积分佣支出笔数（笔）<i class="tips"></i></p>
+                <p class="txt2">1248</p>
+                <p class="txt3">前一日：64</p>
+            </li>
+            <li>
+                <p class="txt1">累积分佣支出金额（元）<i class="tips"></i></p>
+                <p class="txt2">2,456.00</p>
+                <p class="txt3">前一日：960.00</p>
+            </li>
+            <li>
+                <p class="txt1">累计收益金额（元）<i class="tips"></i></p>
+                <p class="txt2">10,000.00</p>
+                <p class="txt3">前一日：7,000.00</p>
+            </li>
+            <li>
+                <p class="txt1">客单价（元）<i class="tips"></i></p>
+                <p class="txt2">3,980.00</p>
+                <p class="txt3">前一日：3,980.00</p>
+            </li>
+        </ul>
+        <div class="headBar">
+            <span>系列课收支数据走势</span>
+            <a href="数据明细.html">查看数据明细<i class="fa fa-angle-right"></i></a>
+        </div>
+        <div id="mainLine1" class="main" style="height: 556px;"></div>
+        <div class="headBar">
+            <span>访客分析诊断</span>
+        </div>
+        <div class="fx_content">
+            <img src="images/1.png" alt="" class="icon">
+            <ul>
+                <li>
+                    <p class="txt1"><i class="fa fa-exclamation-circle"></i>浏览量<i class="tips"></i></p>
+                    <p class="txt2">169</p>
+                    <p class="txt3">较前一日下降3.4%</p>
+                </li>
+                <li>
+                    <p class="txt1"><i class="fa fa-exclamation-circle"></i>访客数<i class="tips"></i></p>
+                    <p class="txt2">23</p>
+                    <p class="txt3">较前一日下降3.4%</p>
+                </li>
+                <li>
+                    <p class="txt1"><i class="fa fa-exclamation-circle"></i>平均浏览量<i class="tips"></i></p>
+                    <p class="txt2">7.3</p>
+                    <p class="txt3">较前一日下降3.4%</p>
+                </li>
+                <li>
+                    <p class="txt1"><i class="fa fa-exclamation-circle"></i>下单用户数<i class="tips"></i></p>
+                    <p class="txt2">11</p>
+                    <p class="txt3">较前一日下降3.4%</p>
+                </li>
+                <li>
+                    <p class="txt1"><i class="fa fa-exclamation-circle"></i>购买转化率<i class="tips"></i></p>
+                    <p class="txt2">47.8%</p>
+                    <p class="txt3">较前一日下降3.4%</p>
+                </li>
+            </ul>
+        </div>
+        <div class="dub-cont2">
+            <div class="contL">
+                <div class="top_content">
+                    <div class="headBar2">
+                        <p class="tit">客单价</p>
+                    </div>
+                    <p class="date">当前时间段：4月15日  23:00-23:59</p>
+                    <div class="msg_cont">
+                        <span class="total_num">3980<em>元</em></span>
+                        <ul class="list_num">
+                            <li>
+                                <p>环比<span class="up">6.12%</span></p>
+                                <p>同比<span class="down">57.58%</span></p>
+                            </li>
+                            <li>
+                                <p>合计<span>31,840</span>元</p>
+                                <p>均值<span>3,980</span>元</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="mainLine2" class="main" style="height: 443px;"></div>
+            </div>
+            <div class="contR">
+                <div class="top_content">
+                    <div class="headBar2">
+                        <p class="tit mb12">男/女用户成交额的变化趋势</p>
+                    </div>
+                    <p class="date">当前时间段：4月15日  23:00-23:59</p>
+                    <div class="msg_cont">
+                        <ul class="sex_num">
+                            <li>
+                                <span>女</span>
+                                <p><span>00.00</span>元</p>
+                            </li>
+                            <li>
+                                <span>男</span>
+                                <p><span>00.00</span>元</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="mainLine3" class="main" style="height: 443px;"></div>
+            </div>
+        </div>
+        <div class="dub-cont2">
+            <div class="contL">
+                <div class="headBar2">
+                    <p class="tit">地域分析</p>
+                </div>
+                <div id="mainMap" class="main" style="height: 445px;"></div>
+            </div>
+            <div class="contR">
+                <div class="tab_cont">
+                    <div class="normal-table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th style="width: 100px">排名</th>
+                                <th style="width: 100px">省份</th>
+                                <th style="width: 100px">购买金额</th>
+                                <th style="width: 100px">占比</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr style="background: #fff">
+                                <td colspan="4"><div class="null-msg"><img src="../../images/null-msg.png" alt="">暂无数据</div></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>四川</td>
+                                <td>27,860.00</td>
+                                <td>25%</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>北京</td>
+                                <td>27,860.00</td>
+                                <td>21.4%</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>上海</td>
+                                <td>27,860.00</td>
+                                <td>17.9%</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>广东</td>
+                                <td>27,860.00</td>
+                                <td>14.2%</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>重庆</td>
+                                <td>27,860.00</td>
+                                <td>10.7%</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>广西</td>
+                                <td>27,860.00</td>
+                                <td>7.1%</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>海南</td>
+                                <td>27,860.00</td>
+                                <td>3.6%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dub-cont2">
+            <div class="contL">
+                <div class="headBar2">
+                    <p class="tit">访问入口分析</p>
+                    <ul>
+                        <li class="active">趋势图</li>
+                        <li>占比图</li>
+                    </ul>
+                </div>
+                <div id="mainLine4" class="main" style="height: 445px;"></div>
+                <div id="mainpie1" class="main" style="height: 445px;display: none"></div>
+            </div>
+            <div class="contR">
+                <div class="headBar2">
+                    <p class="tit">访问时间段分析</p>
+                </div>
+                <div class="tab_cont">
+                    <div class="normal-table nobg">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th style="width: 100px">时间段</th>
+                                <th style="width: 100px">图示</th>
+                                <th style="width: 100px">数量</th>
+                                <th style="width: 100px">占比</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>00:00-02:59</td>
+                                <td>
+                                    <div class="layui-progress">
+                                        <div class="layui-progress-bar layui-bg-blue" lay-percent="4%"></div>
+                                    </div>
+                                </td>
+                                <td>4</td>
+                                <td>25%</td>
+                            </tr>
+                            <tr>
+                                <td>03:00-05:59</td>
+                                <td>
+                                    <div class="layui-progress">
+                                        <div class="layui-progress-bar layui-bg-blue" lay-percent="2%"></div>
+                                    </div>
+                                </td>
+                                <td>2</td>
+                                <td>21.4%</td>
+                            </tr>
+                            <tr>
+                                <td>06:00-08:59</td>
+                                <td>
+                                    <div class="layui-progress">
+                                        <div class="layui-progress-bar layui-bg-blue" lay-percent="3%"></div>
+                                    </div>
+                                </td>
+                                <td>3</td>
+                                <td>17.9%</td>
+                            </tr>
+                            <tr>
+                                <td>09:00-11:59</td>
+                                <td>
+                                    <div class="layui-progress">
+                                        <div class="layui-progress-bar layui-bg-blue" lay-percent="10%"></div>
+                                    </div>
+                                </td>
+                                <td>10</td>
+                                <td>14.2%</td>
+                            </tr>
+                            <tr>
+                                <td>12:00-14:59</td>
+                                <td>
+                                    <div class="layui-progress">
+                                        <div class="layui-progress-bar layui-bg-blue" lay-percent="27%"></div>
+                                    </div>
+                                </td>
+                                <td>27</td>
+                                <td>10.7%</td>
+                            </tr>
+                            <tr>
+                                <td>15:00-17:59</td>
+                                <td>
+                                    <div class="layui-progress">
+                                        <div class="layui-progress-bar layui-bg-blue" lay-percent="6%"></div>
+                                    </div>
+                                </td>
+                                <td>6</td>
+                                <td>7.1%</td>
+                            </tr>
+                            <tr>
+                                <td>18:00-20:59</td>
+                                <td>
+                                    <div class="layui-progress">
+                                        <div class="layui-progress-bar layui-bg-blue" lay-percent="3%"></div>
+                                    </div>
+                                </td>
+                                <td>3</td>
+                                <td>3.6%</td>
+                            </tr>
+                            <tr>
+                                <td>21:00-00:00</td>
+                                <td>
+                                    <div class="layui-progress">
+                                        <div class="layui-progress-bar layui-bg-blue" lay-percent="8%"></div>
+                                    </div>
+                                </td>
+                                <td>8</td>
+                                <td>3.6%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/echarts.js"></script>
+<script src="../../js/china.js"></script>
+<script src="../../js/layui/lay/modules/layer.js"></script>
+<script src="../../js/layui/layui.js"></script>
+<script src="../../js/myjs.js"></script>
+<script type="text/javascript">
+    layui.use('element', function(){
+        var element = layui.element;
+    });
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test1' //指定元素
+            ,type: 'date'
+            ,calendar: true
+            ,trigger: 'click'
+            ,range: '至'
+            ,format: 'yyyy-MM-dd'
+            ,value: '2021-05-01 至 2021-05-31'
+        });
+    });
+
+    $('#chutiyan .topSlide2 .tips2').on('mouseenter',function(){
+        var arr = ['111','222','333','444','555','666','777','888'];
+        var index = $(this).parent().parent().index();
+
+        this.index =layer.tips(arr[index], this, {
+            tips: [1, '#000'], time: -1 ,maxWidth:600
+        });
+    }).on('mouseleave',function(){
+        layer.close(this.index);
+    });
+
+    $('.headBar ul li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+
+    var charts=[];
+    //
+    var mainLine1 = echarts.init(document.getElementById('mainLine1'));
+    var mainLine2 = echarts.init(document.getElementById('mainLine2'));
+    var mainLine3 = echarts.init(document.getElementById('mainLine3'));
+    var mainLine4 = echarts.init(document.getElementById('mainLine4'));
+    var mainMap = echarts.init(document.getElementById('mainMap'));
+    var mainpie1 = echarts.init(document.getElementById('mainpie1'));
+
+
+    //
+    var xlineData = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+    var ylineData = ["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","50"];
+    var ylineData2 = ["10","20","40","30","70","50","100","150","240","340","150","100","450","700","800","850","900","850","950","430","200","150","50"];
+    var ylineData3 = ["50","40","100","200","150","200","250","300","350","300","450","400","500","550","450","300","600","800","700","650","750","850","50"];
+    var ylineData4_1 = ["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"];
+    var ylineData4_2 = ["10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10","10"];
+    var ylineData4_3 = ["20","20","20","20","20","20","20","20","20","20","20","20","20","20","20","20","20","20","20","20","20","20","20"];
+    var ylineData4_4 = ["30","30","30","30","30","30","30","30","30","30","30","30","30","30","30","30","30","30","30","30","30","30","30"];
+    var ylineData4_5 = ["40","40","40","40","40","40","40","40","40","40","40","40","40","40","40","40","40","40","40","40","40","40","40"];
+    var ylineData4_6 = ["50","50","50","50","50","50","50","50","50","50","50","50","50","50","50","50","50","50","50","50","50","50","50"];
+    optionLine1 = {
+        // 提示框
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                ,lineStyle:{
+                    color:'#e6e6e6',
+                    type:'solid'    // solid、dashed、dotted
+                }
+            },
+            formatter:function (params) {
+
+                function timeNumer(t) {
+                    var t1=t,
+                        t2=t++,
+                        t3=t1+':00-'+t2+':59';
+                    return t3;
+                }
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;"><span>'+ timeNumer(params[0].name) + '</span>'+'</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 200px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;"><div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>' + '<span>'+params[i].value +'</span></div>';
+                }
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        legend: {
+            left: 'center',
+            bottom:20,
+            textStyle: {
+                color: '#333',
+                fontSize: 14,
+            },
+            itemGap:40,
+            itemWidth:10,
+            itemHeight:10,
+            align:'auto',
+            icon: 'circle', //'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow', 'none'
+            data: ['收入','支出','净收益'],
+            selected: { // false 代表不选中
+                // '报名量': false,
+            }
+        },
+        grid: {
+            right: '50px',
+            bottom: '90px',
+            left: '40px',
+            top: '37px',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xlineData ,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#d5d5d5',
+                    backgroundColor: "#d5d5d5",
+                    width:'2',
+                }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                interval: 1,    //  隔多少个显示下一个
+                textStyle: {
+                    color: "#333",
+                    fontSize: 16,
+                    backgroundColor: "#fff",
+                },
+            },
+            offset:15,  // x 轴文字距离轴的距离
+            boundaryGap:true   // 是否从 0 刻度开始
+
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLine: {
+                show:false,
+                lineStyle: {
+                    color: '#999'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: "#f1f1f1",
+                    //type:"dashed"    // 虚线
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                show:true,
+                color: '#999',
+                fontSize: 16,
+            },
+
+        }],
+        // 系列列表
+        series: [
+            {
+                name: '收入',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#157bfb',
+                        lineStyle: {
+                            color: "#157bfb",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(21,123,251,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(21,123,251,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData
+            },
+            {
+                name: '支出',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#f2cf24',
+                        lineStyle: {
+                            color: "#f2cf24",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(242,207,36,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(242,207,36,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData2
+            },
+            {
+                name: '净收益',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#ff8533',
+                        lineStyle: {
+                            color: "#ff8533",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(255,133,51,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(255,133,51,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData3
+            },
+        ]
+    };
+    optionLine2 = {
+        // 提示框
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                ,lineStyle:{
+                    color:'#e6e6e6',
+                    type:'solid'    // solid、dashed、dotted
+                }
+            },
+            formatter:function (params) {
+
+                function timeNumer(t) {
+                    var t1=t,
+                        t2=t++,
+                        t3=t1+':00-'+t2+':59';
+                    return t3;
+                }
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;"><span>'+ timeNumer(params[0].name) + '</span>'+'</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 200px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;"><div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>' + '<span>'+params[i].value +'</span></div>';
+                }
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+
+        grid: {
+            right: '50px',
+            bottom: '50px',
+            left: '40px',
+            top: '10px',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xlineData ,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#d5d5d5',
+                    backgroundColor: "#d5d5d5",
+                    width:'2',
+                }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                interval: 1,    //  隔多少个显示下一个
+                textStyle: {
+                    color: "#333",
+                    fontSize: 16,
+                    backgroundColor: "#fff",
+                },
+            },
+            offset:15,  // x 轴文字距离轴的距离
+            boundaryGap:true   // 是否从 0 刻度开始
+
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLine: {
+                show:false,
+                lineStyle: {
+                    color: '#999'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: "#f1f1f1",
+                    //type:"dashed"    // 虚线
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                show:true,
+                color: '#999',
+                fontSize: 16,
+            },
+
+        }],
+        // 系列列表
+        series: [
+            {
+                name: '浏览量',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#157bfb',
+                        lineStyle: {
+                            color: "#157bfb",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(21,123,251,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(21,123,251,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData
+            },
+        ]
+    };
+    optionLine3 = {
+        // 提示框
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                ,lineStyle:{
+                    color:'#e6e6e6',
+                    type:'solid'    // solid、dashed、dotted
+                }
+            },
+            formatter:function (params) {
+
+                function timeNumer(t) {
+                    var t1=t,
+                        t2=t++,
+                        t3=t1+':00-'+t2+':59';
+                    return t3;
+                }
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;"><span>'+ timeNumer(params[0].name) + '</span>'+'</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 200px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;"><div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>' + '<span>'+params[i].value +'</span></div>';
+                }
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+
+        grid: {
+            right: '50px',
+            bottom: '50px',
+            left: '40px',
+            top: '10px',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xlineData ,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#d5d5d5',
+                    backgroundColor: "#d5d5d5",
+                    width:'2',
+                }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                interval: 1,    //  隔多少个显示下一个
+                textStyle: {
+                    color: "#333",
+                    fontSize: 16,
+                    backgroundColor: "#fff",
+                },
+            },
+            offset:15,  // x 轴文字距离轴的距离
+            boundaryGap:true   // 是否从 0 刻度开始
+
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLine: {
+                show:false,
+                lineStyle: {
+                    color: '#999'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: "#f1f1f1",
+                    //type:"dashed"    // 虚线
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                show:true,
+                color: '#999',
+                fontSize: 16,
+            },
+
+        }],
+        // 系列列表
+        series: [
+            {
+                name: '浏览量',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#157bfb',
+                        lineStyle: {
+                            color: "#157bfb",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(21,123,251,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(21,123,251,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData
+            },
+        ]
+    };
+    optionLine4 = {
+        // 提示框
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                ,lineStyle:{
+                    color:'#e6e6e6',
+                    type:'solid'    // solid、dashed、dotted
+                }
+            },
+            formatter:function (params) {
+
+                function timeNumer(t) {
+                    var t1=t,
+                        t2=t++,
+                        t3=t1+':00-'+t2+':59';
+                    return t3;
+                }
+                let res ='<div style="display: flex;justify-content: space-between;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding: 8px 10px;"><span>'+ timeNumer(params[0].name) + '</span>'+'</div>';
+
+                for (let i = 0, l = params.length; i < l; i++) {
+                    res += '<div style="width: 200px;display: flex;justify-content: space-between;padding: 4px 10px;margin:5px 0;"><div><span style="margin-right: 2px;">'+params[i].marker +'</span>' + '<span>'+ params[i].seriesName +'</span></div>' + '<span>'+params[i].value +'</span></div>';
+                }
+                return res
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)',
+        },
+        legend: {
+            left: 40,
+            top:30,
+            textStyle: {
+                color: '#333',
+                fontSize: 14,
+            },
+            itemGap:40,
+            itemWidth:10,
+            itemHeight:10,
+            align:'auto',
+            icon: 'circle', //'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow', 'none'
+            data: ['公众号','朋友圈','好友/群','小程序','海报','其他',],
+            selected: { // false 代表不选中
+                // '报名量': false,
+            }
+        },
+        grid: {
+            right: '20px',
+            bottom: '15px',
+            left: '40px',
+            top: '90px',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xlineData ,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#d5d5d5',
+                    backgroundColor: "#d5d5d5",
+                    width:'2',
+                }
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                interval: 1,    //  隔多少个显示下一个
+                textStyle: {
+                    color: "#333",
+                    fontSize: 16,
+                    backgroundColor: "#fff",
+                },
+            },
+            offset:15,  // x 轴文字距离轴的距离
+            boundaryGap:true   // 是否从 0 刻度开始
+
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLine: {
+                show:false,
+                lineStyle: {
+                    color: '#999'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: "#f1f1f1",
+                    //type:"dashed"    // 虚线
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLabel: {
+                show:true,
+                color: '#999',
+                fontSize: 16,
+            },
+
+        }],
+        // 系列列表
+        series: [
+            {
+                name: '公众号',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#157bfb',
+                        lineStyle: {
+                            color: "#157bfb",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(21,123,251,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(21,123,251,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData4_1
+            },
+            {
+                name: '朋友圈',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#f2cf24',
+                        lineStyle: {
+                            color: "#f2cf24",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(242,207,36,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(242,207,36,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData4_2
+            },
+            {
+                name: '好友/群',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#ff8533',
+                        lineStyle: {
+                            color: "#ff8533",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(255,133,51,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(255,133,51,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData4_3
+            },
+            {
+                name: '小程序',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#4db5ff',
+                        lineStyle: {
+                            color: "#4db5ff",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(77,181,255,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(77,181,255,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData4_4
+            },
+            {
+                name: '海报',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#bc65e5',
+                        lineStyle: {
+                            color: "#bc65e5",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(188,101,229,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(188,101,229,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData4_5
+            },
+            {
+                name: '其他',
+                type: 'line',
+                symbolSize: 6,
+                itemStyle: {
+                    normal: {
+                        color: '#04c8a7',
+                        lineStyle: {
+                            color: "#04c8a7",
+                            width:2
+                        },
+                        areaStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                                offset: 0,
+                                color: 'rgba(4,200,167,0)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(4,200,167,.1)'
+                            }]),
+                        }
+                    }
+                },
+                data: ylineData4_6
+            },
+        ]
+    };
+
+    var data = [
+        {
+            name: '北京',
+            value: 3
+        },
+        {
+            name: '天津',
+            value: 3
+        },
+        {
+            name: '上海',
+            value: 4
+        },
+        {
+            name: '重庆',
+            value: 4
+        },
+        {
+            name: '河北',
+            value: 2
+        },
+        {
+            name: '河南',
+            value: 3
+        },
+        {
+            name: '云南',
+            value: 1
+        },
+        {
+            name: '辽宁',
+            value: 3
+        },
+        {
+            name: '黑龙江',
+            value: 2
+        },
+        {
+            name: '湖南',
+            value: 4
+        },
+        {
+            name: '安徽',
+            value: 3
+        },
+        {
+            name: '山东',
+            value: 3
+        },
+        {
+            name: '新疆',
+            value: 12
+        },
+        {
+            name: '江苏',
+            value: 3
+        },
+        {
+            name: '浙江',
+            value: 3
+        },
+        {
+            name: '江西',
+            value: 2
+        },
+        {
+            name: '湖北',
+            value: 11
+        },
+        {
+            name: '广西',
+            value: 3
+        },
+        {
+            name: '甘肃',
+            value: 2
+        },
+        {
+            name: '山西',
+            value: 3
+        },
+        {
+            name: '内蒙古',
+            value: 5
+        },
+        {
+            name: '陕西',
+            value: 5
+        },
+        {
+            name: '吉林',
+            value: 4
+        },
+        {
+            name: '福建',
+            value: 5
+        },
+        {
+            name: '贵州',
+            value: 8
+        },
+        {
+            name: '广东',
+            value: 4
+        },
+        {
+            name: '青海',
+            value: 6
+        },
+        {
+            name: '西藏',
+            value: 4
+        },
+        {
+            name: '四川',
+            value: 3
+        },
+        {
+            name: '宁夏',
+            value: 8
+        },
+        {
+            name: '海南',
+            value: 9
+        },
+        {
+            name: '台湾',
+            value: 1
+        },
+        {
+            name: '香港',
+            value: 1
+        },
+        {
+            name: '澳门',
+            value: 1
+        }
+    ];
+    var optionMap = {
+        tooltip: {
+            show: true,
+            formatter: function(params) {
+                let sum =0;
+                for(var i = 0;i<data.length;i++){
+                    sum +=data[i]['value'];
+                }
+                let html='<div style="width: 200px;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding:8px 10px;border-radius:5px 5px 0 0"><span display: inline-block;margin-right: 8px;width: 8px;height: 8px;>' + params.marker + '</span>' + params.name + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-top: 7px"><span>浏览量</span>' + params.data['value'] + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-bottom: 7px"><span>占比</span>' + (params.data['value']/sum*100).toFixed(2) + '%' + '</div>';
+                return html;
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)'
+        },
+        visualMap: {
+            type: 'continuous',
+            orient: 'horizontal',
+            text: ['高', '低'],
+            itemWidth:17,
+            itemHeight:50,
+            showLabel: true,
+            seriesIndex: [0],
+            inverse:true,
+            min: 0,
+            max: 5,
+            inRange: {
+                color: ['#e8effb', '#d6e3fa', '#bcd4fb', '#6ba0f5', '#367ef2', ]
+            },
+            textStyle: {
+                color: '#000'
+            },
+            bottom: 60,
+            left: 40,
+        },
+        geo: {
+            roam: true,
+            map: 'china',
+            label: {
+                emphasis: {
+                    show: false
+                }
+            },
+            itemStyle: {
+                emphasis: {
+                    areaColor: '#fff464'
+                }
+            },
+            regions: [{
+                name: '南海诸岛',
+                value: 0,
+                itemStyle: {
+                    normal: {
+                        opacity: 0,
+                        label: {
+                            show: false
+                        }
+                    }
+                }
+            }],
+        },
+        series: [{
+            name: 'mapSer',
+            type: 'map',
+            geoIndex: 0,
+            label: {
+                show: false,
+            },
+            data: data
+        }]
+    };
+
+
+    optionpie1 = {
+        color:["#89fd79","#21ad95","#364bce","#53aaf7","#fdce2e","#fc903e","#dd5ff7","#9333f1","#29e567"],
+        tooltip: {
+            trigger: 'item',
+            formatter: function(param){
+                let res ='<div style="width: 200px;background: #f7f8fa;border-bottom: 1px solid #e8ebee;padding:8px 10px;border-radius:5px 5px 0 0"><span style="display: inline-block;margin-right: 8px;width: 8px;height: 8px;">'+ param.marker + '</span>' + param.name +'</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-top: 7px"><span>收入金额</span>' + param.value + '</div>' +
+                    '<div style="display: flex;justify-content: space-between;padding: 7px 10px;margin-bottom: 7px"><span>占总比</span>' + param.percent.toFixed(1)+ '%</div>';
+                return res;
+            },
+            confine:true,        //是否将 tooltip 框限制在图表的区域内。
+            backgroundColor:'#fff',
+            borderColor:'#e7eaed',
+            borderRadius:5,
+            padding:0,
+            textStyle:{
+                color:'#666',
+                fontSize:12
+            },
+            extraCssText:'box-shadow: 0px 0px 20px 0px rgba(86, 96, 118, 0.2)'
+        },
+        legend: {
+            textStyle: {
+                color: '#333',
+                fontSize: 14,
+            },
+            itemGap:30,
+            itemWidth:10,
+            itemHeight:10,
+            top: 400,
+            left:'center',
+            align: 'auto',
+            icon: 'circle',
+            data: ['公众号','朋友圈','好友/群','小程序','海报','其他',],
+        },
+        series: [
+            {
+                type:'pie',
+                center: ['50%', '50%'],
+                radius: ['50%', '60%'],
+                avoidLabelOverlap: true,   //防止标签重叠策略
+                hoverOffset:10,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'outter',
+                        formatter: "{d}%",
+                        color:'#666'
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: true,
+                        lineStyle:{
+                            color:'#c9cfd8'
+                        }
+                    }
+                },
+                itemStyle: {
+                    borderRadius: 0,
+                    borderColor: '#fff',
+                    borderWidth: 4
+                },
+                data:[
+                    {value:0, name:'公众号'},
+                    {value:10, name:'朋友圈'},
+                    {value:20, name:'好友/群'},
+                    {value:30, name:'小程序'},
+                    {value:40, name:'海报'},
+                    {value:50, name:'其他'}
+                ]
+            }
+        ]
+    };
+
+    //
+    mainLine1.setOption(optionLine1);
+    mainLine2.setOption(optionLine2);
+    mainLine3.setOption(optionLine3);
+    mainLine4.setOption(optionLine4);
+    mainMap.setOption(optionMap);
+    mainpie1.setOption(optionpie1);
+
+
+    charts.push(mainLine1,mainLine2,mainLine3,mainLine4,mainMap,mainpie1);
+
+    // 重载图表
+    setTimeout(function (){
+        window.onresize = function () {
+            mainLine1.resize();
+            mainLine2.resize();
+            mainLine3.resize();
+            mainLine4.resize();
+            mainMap.resize();
+            mainpie1.resize();
+
+        }
+    },200);
+
+    $('.headBar2 li').click(function (){
+        $(this).addClass('active').siblings().removeClass('active');
+        var txt = $(this).text()
+        if(txt === '趋势图'){
+            $('#mainLine4').show();
+            $('#mainpie1').hide();
+        }else{
+            $('#mainLine4').hide();
+            $('#mainpie1').show();
+        }
+        for(var i = 0; i < charts.length; i++) {
+            charts[i].resize();
+        }
+    });
+
+
+
+    // 限制图表最后一个不能隐藏
+    for(var i = 0; i < charts.length; i++) {
+        charts[i].on('legendselectchanged', function (params) {
+
+            let option = this.getOption();
+            let select_key = Object.keys(params.selected);
+            let select_value = Object.values(params.selected);
+            var n = 0;
+            select_value.map(res => {
+                if(!res){
+                    n++;
+                }
+            });
+            if( n ===select_value.length){
+                option.legend[0].selected[params.name] = true;
+            }
+
+            this.setOption(option);
+        });
+    }
+
+
+
+
+</script>
+</body>
+</html>
