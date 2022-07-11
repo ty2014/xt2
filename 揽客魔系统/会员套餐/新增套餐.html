@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1" >
+    <link rel="stylesheet" href="../js/layui/css/layui.css?2" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css?2">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/newStyle.css"/>
+</head>
+<body id="chutiyan">
+
+<div class="activity_set activity_set3 w-5">
+    <div class="b-line" style="border-bottom: none">
+        <div class="a_list">
+            <span class="a_list_l r-title">套餐设置</span>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">套餐类型:</span>
+            <div class="a_list_r">
+                <div class="select-text" style="min-width: 118px">
+                    <span class="select-txt">版本服务</span>
+                    <ul>
+                        <li>版本服务</li>
+                        <li>功能服务</li>
+                        <li>增值服务</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">套餐名称:</span>
+            <div class="a_list_r">
+                <div class="showNumBox w-620">
+                    <input type="text" maxlength="20">
+                    <span class="num">0/20</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">套餐划线价:</span>
+            <div class="a_list_r">
+                <input type="text" class="m_width center mgR-8">元
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">套餐售价:</span>
+            <div class="a_list_r">
+                <div class="button-label-m">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="togg0" class="toggle-button" name="switch">
+                        <label for="togg0" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">付费</span>
+                            <span class="text off">免费</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="togg0-cont flex alignItemC mgL-10" style="display: none">
+                    <input type="text" class="m_width center mgR-8">元 /
+
+                    <div class="togg1-cont flex alignItemC mgL-10" style="display: none">
+                        人 /
+                    </div>
+                    <div class="select-text mgL-10" style="min-width: 60px">
+                        <span class="select-txt">年</span>
+                        <ul>
+                            <li>次</li>
+                            <li>场</li>
+                            <li>天</li>
+                            <li>月</li>
+                            <li>年</li>
+                        </ul>
+                    </div>
+                    <div class="button-label-s mgL-10">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="togg1" class="toggle-button" name="switch">
+                            <label for="togg1" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">限制人数</span>
+                                <span class="text off">不限制人数</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">定制套餐:</span>
+            <div class="a_list_r">
+                <div class="button-label-m space-toggle">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="toggdz" class="toggle-button" name="switch">
+                        <label for="toggdz" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">定制</span>
+                            <span class="text off">不定制</span>
+                        </label>
+                    </div>
+                </div>
+                <span class="tishi">*若开启定制套餐，则不显示价格，只能通过咨询指定客服来购买</span>
+            </div>
+        </div>
+        <div class="dub-list">
+            <div class="a_list">
+                <span class="a_list_l">是否推荐:</span>
+                <div class="a_list_r">
+                    <div class="button-label-m">
+                        <div class="toggle-button-wrapper">
+                            <input type="checkbox" id="toggtj" class="toggle-button" name="switch">
+                            <label for="toggtj" class="button-label">
+                                <span class="circle"></span>
+                                <span class="text on">是</span>
+                                <span class="text off">否</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="tishi">*同时只能推荐一个套餐</span>
+                </div>
+            </div>
+            <div class="a_list">
+                <span class="a_list_l">排序:</span>
+                <div class="a_list_r">
+                    <input type="number" value="100" class="s_width center"><span class="tishi">*数字越大，排序越前</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="a_list">
+            <span class="a_list_l">套餐描述:</span>
+            <div class="a_list_r">
+                <div class="showNumBox w-620">
+                    <textarea rows="5"></textarea>
+                    <span class="num">0/500</span>
+                </div>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">套餐图标:</span>
+            <div class="a_list_r">
+                <!-- 图片宽高自适应：添加类名 auto -->
+                <!--  可多张图片上传，最多9张  -->
+                <ul class="FraUpload_imglist auto layer-photos-demo">
+                    <li class="img_item" style="display: none">
+                        <img src="../images/20220629171956.png" layer-index="0">
+                        <span class="icon-delete img_del"></span>
+                    </li>
+                    <!--  可批量上传图片;上传图片按钮 ,上传图片后，上传按钮隐藏；当图片删掉时就显示 -->
+                    <li class="file-btn"></li>
+                </ul>
+                <p class="tishi">*选填，图片大小不超过50KB</p>
+            </div>
+        </div>
+        <div class="a_list">
+            <span class="a_list_l">状态:</span>
+            <div class="a_list_r">
+                <div class="button-label-m ">
+                    <div class="toggle-button-wrapper">
+                        <input type="checkbox" id="togg2" checked class="toggle-button" name="switch">
+                        <label for="togg2" class="button-label">
+                            <span class="circle"></span>
+                            <span class="text on">已上架</span>
+                            <span class="text off">未上架</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-list2"><span class="btn btn-cancel">取消</span><span class="btn btn-sure">确定</span></div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/layui.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+    $('#togg0').click(function (e) {
+        $('.togg0-cont').toggle();
+    })
+    $('#togg1').click(function (e) {
+        $('.togg1-cont').toggle();
+    })
+
+    $('#toggtj').click(function (e) {
+        let that = this;
+        if($(this).is(':checked')){
+            layer.confirm('已有其它套餐设置为默认，是否确定取消其默认，设该套餐为默认',{
+                title:'提醒',
+                btn: ['取消','确定'],
+                icon:7,
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+                $(that).removeAttr('checked');
+            }, function(){
+                $(that).prop('checked','true');
+            });
+        }else{
+            layer.confirm('是否确定取消该套餐为默认？',{
+                title:'提醒',
+                btn: ['取消','确定'],
+                icon:7,
+                area: '416px'
+            }, function(index){
+                layer.close(index);
+                $(that).prop('checked','true');
+            }, function(){
+                $(that).removeAttr('checked');
+            });
+        }
+
+
+    })
+
+</script>
+</body>
+</html>

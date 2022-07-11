@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色管理</title>
+    <link rel="stylesheet" href="../css/font-awesome.css?v=4.4.1">
+    <link rel="stylesheet" href="../js/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../js/layui/css/layer.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html,body{height: 100%;background: #f3f3f3;}
+    </style>
+</head>
+<body>
+
+    <div style="display: flex;flex-direction: column;height: 100%">
+        <div class="contBlock">
+            <div class="msg">
+                <div class="msgL">
+                    <i class="layui-icon layui-icon-template-1"></i>专业版
+                    <!--  只有在自定义角色中展示该操作按钮  -->
+                    <div class="icons" style="display: none">
+                        <i class="layui-icon layui-icon-edit"></i>
+                        <i class="layui-icon layui-icon-delete"></i>
+                    </div>
+                </div>
+                <div class="msgR num">
+                    <i class="layui-icon layui-icon-user"></i>包含10人
+                </div>
+            </div>
+            <p class="txt">适合刚开始用企业微信做私域的品牌商家，满足基本的【引流获客-运营留存-客户管理】的企业微信私域运营需求</p>
+        </div>
+
+        <form class="layui-form" action="">
+            <div class="headForm">
+                <span>基本模块</span>
+                <div class="flex alignItemC">
+                    <span>功能权限</span>
+                    <input type="radio" name="totle" value="totle1" title="无权">
+                    <input type="radio" name="totle" value="totle2" title="免费用">
+                    <input type="radio" name="totle" value="totle3" title="付费用">
+                </div>
+            </div>
+            <div id="treeOrganContainer">
+
+            </div>
+        </form>
+        <div class="btn-list2"><span class="btn ">取消</span><span class="btn btn-sure">保存</span></div>
+    </div>
+
+
+<script src="../js/jquery.min.js"></script>
+<!-- iframe弹框 -->
+<script src="../js/layui/lay/modules/layer.js"></script>
+<script src="../js/layui/dist/layui.js"></script>
+<script src="../js/myjs.js"></script>
+<script>
+
+    layui.use(['form', 'tree', 'layer'], function(){
+        let form = layui.form;
+        let tree = layui.tree;
+        let layer = layui.layer;
+
+        tree.render({
+            elem: "#treeOrganContainer",
+            id: "treeOrgan",
+            data: [
+                {
+                    id: "a1",
+                    title: 'A层级组织1',
+                    children: [
+                        {
+                            id: "b1",
+                            title: 'B层级组织1'
+                        },
+                        {
+                            id: "b2",
+                            title: "B层级组织2",
+                            children: [
+                                {
+                                    id: "c1",
+                                    title: "C层级组织1"
+                                },
+                                {
+                                    id: "c2",
+                                    title: "C层级组织2"
+                                }
+                            ],
+                            spread: true
+                        }
+                    ],
+                    spread: true
+                },
+                {
+                    id: "a2",
+                    title: "A层级组织2",
+                    children: [
+                        {
+                            id: "b3",
+                            title: 'B层级组织3'
+                        }
+                    ]
+                },
+                {
+                    id: "a3",
+                    title: "A层级组织3",
+                    children: [
+                        {
+                            id: "b4",
+                            title: 'B层级组织4'
+                        }
+                    ]
+                },
+                {
+                    id: "a4",
+                    title: "A层级组织4",
+                    children: [
+                        {
+                            id: "b5",
+                            title: 'B层级组织5'
+                        }
+                    ]
+                },
+                {
+                    id: "a5",
+                    title: "A层级组织5",
+                    children: [
+                        {
+                            id: "b6",
+                            title: 'B层级组织6'
+                        }
+                    ]
+                },
+                {
+                    id: "a5",
+                    title: "A层级组织5",
+                    children: [
+                        {
+                            id: "b6",
+                            title: 'B层级组织6'
+                        }
+                    ]
+                },
+                {
+                    id: "a5",
+                    title: "A层级组织5",
+                    children: [
+                        {
+                            id: "b6",
+                            title: 'B层级组织6'
+                        }
+                    ]
+                },
+                {
+                    id: "a5",
+                    title: "A层级组织5",
+                    children: [
+                        {
+                            id: "b6",
+                            title: 'B层级组织6'
+                        }
+                    ]
+                },
+                {
+                    id: "a5",
+                    title: "A层级组织5",
+                    children: [
+                        {
+                            id: "b6",
+                            title: 'B层级组织6'
+                        }
+                    ]
+                },
+                {
+                    id: "a5",
+                    title: "A层级组织5",
+                    children: [
+                        {
+                            id: "b6",
+                            title: 'B层级组织6'
+                        }
+                    ]
+                },
+                {
+                    id: "a5",
+                    title: "A层级组织5",
+                    children: [
+                        {
+                            id: "b6",
+                            title: 'B层级组织6'
+                        }
+                    ]
+                },
+                {
+                    id: "a5",
+                    title: "A层级组织5",
+                    children: [
+                        {
+                            id: "b6",
+                            title: 'B层级组织6'
+                        }
+                    ]
+                },
+                {
+                    id: "a5",
+                    title: "A层级组织5",
+                    children: [
+                        {
+                            id: "b6",
+                            title: 'B层级组织6'
+                        }
+                    ]
+                }
+            ],
+            edit: ['power0', 'power1', 'power2'],
+        });
+
+        $('.layui-tree-entry').each(function (index,item) {
+            let btn = $(item).find('.layui-tree-btnGroup').children();
+
+            btn.eq(0).append('<input type="radio" name="power_'+ index +'" value="无权_'+ index +'" title="无权">');
+            btn.eq(1).append('<input type="radio" name="power_'+ index +'" value="免费用_'+ index +'" title="免费用">');
+            btn.eq(2).append('<input type="radio" name="power_'+ index +'" value="付费用_'+ index +'" title="付费用">');
+        })
+        form.render();
+    });
+
+    $(function () {
+        $("#treeOrganContainer").find(".layui-tree-set").each(function(index,element){
+            let pack = $(this).children(".layui-tree-pack");
+            let main = $(this).children(".layui-tree-entry").children(".layui-tree-main");
+            let icon = main.find(".layui-tree-icon").children(".layui-icon");
+
+            let spread = "layui-tree-spread";
+            // 如果是折叠状态就展开
+            if(pack.length > 0 && (!$(this).hasClass(spread))){
+                $(this).addClass(spread);
+                pack.slideDown(200);
+                icon.addClass("layui-icon-subtraction").removeClass("layui-icon-addition");
+            }
+        })
+    })
+
+    $('.num').on('click', function(){
+        //iframe层
+        layer.open({
+            type: 2,
+            title: '专业版-商家',
+            shadeClose: true,
+            shade: 0.3,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['95%', '95%'],
+            content: '使用对象.html' //iframe的url
+        });
+    });
+
+</script>
+</body>
+</html>
